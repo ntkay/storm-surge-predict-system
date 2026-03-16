@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 function App() {
   const [now, setNow] = useState(new Date());
+  const [search, setSearch] = useState("");
+  const [selectedYear, setSelectedYear] = useState("全部");
+  const [selectedLocation, setSelectedLocation] = useState("全部");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -10,20 +13,6 @@ function App() {
 
     return () => clearInterval(timer);
   }, []);
-
-  const windData = [
-    { time: "01/14 00:00", value: 28 },
-    { time: "01/14 06:00", value: 30 },
-    { time: "01/14 12:00", value: 33 },
-    { time: "01/14 18:00", value: 35 },
-  ];
-
-  const pressureData = [
-    { time: "01/14 00:00", value: 980 },
-    { time: "01/14 06:00", value: 975 },
-    { time: "01/14 12:00", value: 970 },
-    { time: "01/14 18:00", value: 965 },
-  ];
 
   const typhoonData = [
     {
@@ -62,19 +51,77 @@ function App() {
       pressure: 915,
       surge: 2.1,
     },
+    {
+      id: 5,
+      name: "天鵝",
+      year: 2015,
+      location: "台南",
+      wind: 42,
+      pressure: 950,
+      surge: 1.4,
+    },
+    {
+      id: 6,
+      name: "尼伯特",
+      year: 2016,
+      location: "花蓮",
+      wind: 48,
+      pressure: 935,
+      surge: 1.7,
+    },
   ];
 
-  const averageWind = Math.round(
-    typhoonData.reduce((sum, item) => sum + item.wind, 0) / typhoonData.length
-  );
+  const years = ["全部", ...new Set(typhoonData.map((item) => item.year))];
+  const locations = ["全部", ...new Set(typhoonData.map((item) => item.location))];
 
-  const averagePressure = Math.round(
-    typhoonData.reduce((sum, item) => sum + item.pressure, 0) / typhoonData.length
-  );
+  const filteredTyphoonData = useMemo(() => {
+    return typhoonData.filter((item) => {
+      const matchSearch = item.name.includes(search.trim());
+      const matchYear =
+        selectedYear === "全部" || item.year.toString() === selectedYear.toString();
+      const matchLocation =
+        selectedLocation === "全部" || item.location === selectedLocation;
 
-  const maxSurge = Math.max(...typhoonData.map((item) => item.surge));
+      return matchSearch && matchYear && matchLocation;
+    });
+  }, [search, selectedYear, selectedLocation]);
+
+  const averageWind =
+    filteredTyphoonData.length > 0
+      ? Math.round(
+          filteredTyphoonData.reduce((sum, item) => sum + item.wind, 0) /
+            filteredTyphoonData.length
+        )
+      : 0;
+
+  const averagePressure =
+    filteredTyphoonData.length > 0
+      ? Math.round(
+          filteredTyphoonData.reduce((sum, item) => sum + item.pressure, 0) /
+            filteredTyphoonData.length
+        )
+      : 0;
+
+  const maxSurge =
+    filteredTyphoonData.length > 0
+      ? Math.max(...filteredTyphoonData.map((item) => item.surge))
+      : 0;
 
   const overallRisk = getOverallRisk(averageWind, averagePressure);
+
+  const windChartData = filteredTyphoonData.map((item) => ({
+    time: `${item.name}-${item.year}`,
+    value: item.wind,
+  }));
+
+  const pressureChartData = filteredTyphoonData.map((item) => ({
+    time: `${item.name}-${item.year}`,
+    value: item.pressure,
+  }));
+
+  const surgeRanking = [...filteredTyphoonData]
+    .sort((a, b) => b.surge - a.surge)
+    .slice(0, 5);
 
   return (
     <div
@@ -87,7 +134,7 @@ function App() {
         color: "#1e2a3a",
       }}
     >
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+      <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
         <header
           style={{
             background: "linear-gradient(135deg, #123c66, #1f5f9c)",
@@ -108,7 +155,6 @@ function App() {
           >
             暴潮預測系統
           </h1>
-
           <p
             style={{
               margin: "12px 0 0",
@@ -141,14 +187,84 @@ function App() {
           <InfoCard
             title="預測狀態"
             value={overallRisk.label}
-            sub="依歷史颱風特徵評估"
+            sub="依篩選後資料評估"
             accent={overallRisk.color}
           />
           <InfoCard
             title="最大暴潮值"
-            value={`${maxSurge} m`}
-            sub="歷史資料統計"
+            value={`${maxSurge || 0} m`}
+            sub="目前篩選資料中的最大值"
           />
+        </section>
+
+        <section
+          style={{
+            background: "#fff",
+            borderRadius: "24px",
+            padding: "24px",
+            boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)",
+            marginBottom: "28px",
+          }}
+        >
+          <h2
+            style={{
+              marginTop: 0,
+              marginBottom: "18px",
+              fontSize: "26px",
+              color: "#123c66",
+            }}
+          >
+            資料篩選
+          </h2>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+              gap: "16px",
+            }}
+          >
+            <div>
+              <label style={labelStyle}>搜尋颱風名稱</label>
+              <input
+                type="text"
+                placeholder="例如：海葵"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                style={inputStyle}
+              />
+            </div>
+
+            <div>
+              <label style={labelStyle}>篩選年份</label>
+              <select
+                value={selectedYear}
+                onChange={(e) => setSelectedYear(e.target.value)}
+                style={inputStyle}
+              >
+                {years.map((year) => (
+                  <option key={year} value={year}>
+                    {year}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label style={labelStyle}>篩選地區</label>
+              <select
+                value={selectedLocation}
+                onChange={(e) => setSelectedLocation(e.target.value)}
+                style={inputStyle}
+              >
+                {locations.map((location) => (
+                  <option key={location} value={location}>
+                    {location}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
         </section>
 
         <section
@@ -163,7 +279,7 @@ function App() {
             title="最大風速變化"
             subtitle="Maximum Wind Speed"
             unit="m/s"
-            data={windData}
+            data={windChartData}
             lineColor="#2f80ed"
           />
 
@@ -171,7 +287,7 @@ function App() {
             title="中心氣壓變化"
             subtitle="Central Pressure"
             unit="hPa"
-            data={pressureData}
+            data={pressureChartData}
             lineColor="#27ae60"
           />
         </section>
@@ -179,7 +295,7 @@ function App() {
         <section
           style={{
             display: "grid",
-            gridTemplateColumns: "1.4fr 1fr",
+            gridTemplateColumns: "1.5fr 1fr",
             gap: "22px",
           }}
         >
@@ -200,7 +316,7 @@ function App() {
                 fontSize: "26px",
               }}
             >
-              歷史颱風資料
+              歷史颱風資料表
             </h2>
             <p
               style={{
@@ -210,14 +326,14 @@ function App() {
                 fontSize: "14px",
               }}
             >
-              可作為暴潮預測分析的基礎資料
+              顯示目前搜尋與篩選後的結果
             </p>
 
             <table
               style={{
                 width: "100%",
                 borderCollapse: "collapse",
-                minWidth: "700px",
+                minWidth: "760px",
               }}
             >
               <thead>
@@ -232,60 +348,69 @@ function App() {
                 </tr>
               </thead>
               <tbody>
-                {typhoonData.map((item) => {
-                  const risk = getRisk(item.wind, item.pressure);
+                {filteredTyphoonData.length === 0 ? (
+                  <tr>
+                    <td
+                      colSpan="7"
+                      style={{
+                        padding: "24px",
+                        textAlign: "center",
+                        color: "#64748b",
+                      }}
+                    >
+                      查無符合條件的資料
+                    </td>
+                  </tr>
+                ) : (
+                  filteredTyphoonData.map((item) => {
+                    const risk = getRisk(item.wind, item.pressure);
 
-                  return (
-                    <tr key={item.id} style={{ borderBottom: "1px solid #e5e7eb" }}>
-                      <TableCell>{item.name}</TableCell>
-                      <TableCell>{item.year}</TableCell>
-                      <TableCell>{item.location}</TableCell>
-                      <TableCell>{item.wind} m/s</TableCell>
-                      <TableCell>{item.pressure} hPa</TableCell>
-                      <TableCell>{item.surge} m</TableCell>
-                      <TableCell>
-                        <span
-                          style={{
-                            display: "inline-block",
-                            padding: "6px 12px",
-                            borderRadius: "999px",
-                            fontSize: "13px",
-                            fontWeight: "700",
-                            color: risk.textColor,
-                            background: risk.bgColor,
-                          }}
-                        >
-                          {risk.label}
-                        </span>
-                      </TableCell>
-                    </tr>
-                  );
-                })}
+                    return (
+                      <tr
+                        key={item.id}
+                        style={{ borderBottom: "1px solid #e5e7eb" }}
+                      >
+                        <TableCell>{item.name}</TableCell>
+                        <TableCell>{item.year}</TableCell>
+                        <TableCell>{item.location}</TableCell>
+                        <TableCell>{item.wind} m/s</TableCell>
+                        <TableCell>{item.pressure} hPa</TableCell>
+                        <TableCell>{item.surge} m</TableCell>
+                        <TableCell>
+                          <span
+                            style={{
+                              display: "inline-block",
+                              padding: "6px 12px",
+                              borderRadius: "999px",
+                              fontSize: "13px",
+                              fontWeight: "700",
+                              color: risk.textColor,
+                              background: risk.bgColor,
+                            }}
+                          >
+                            {risk.label}
+                          </span>
+                        </TableCell>
+                      </tr>
+                    );
+                  })
+                )}
               </tbody>
             </table>
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gap: "22px",
-            }}
-          >
+          <div style={{ display: "grid", gap: "22px" }}>
             <SummaryCard
               title="平均最大風速"
               value={`${averageWind} m/s`}
-              desc="依目前歷史颱風資料計算"
+              desc="依目前篩選資料計算"
             />
             <SummaryCard
               title="平均中心氣壓"
               value={`${averagePressure} hPa`}
               desc="數值越低代表颱風越強"
             />
-            <SummaryCard
-              title="系統判斷邏輯"
-              value="風速高 + 氣壓低"
-              desc="代表較高的暴潮潛勢"
-            />
+            <RankingCard ranking={surgeRanking} />
           </div>
         </section>
       </div>
@@ -415,6 +540,65 @@ function SummaryCard({ title, value, desc }) {
   );
 }
 
+function RankingCard({ ranking }) {
+  return (
+    <div
+      style={{
+        background: "#fff",
+        borderRadius: "24px",
+        padding: "24px",
+        boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)",
+      }}
+    >
+      <h3
+        style={{
+          marginTop: 0,
+          marginBottom: "16px",
+          color: "#123c66",
+          fontSize: "22px",
+        }}
+      >
+        暴潮排行榜
+      </h3>
+
+      {ranking.length === 0 ? (
+        <div style={{ color: "#64748b" }}>目前沒有資料</div>
+      ) : (
+        ranking.map((item, index) => (
+          <div
+            key={item.id}
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              padding: "12px 0",
+              borderBottom:
+                index !== ranking.length - 1 ? "1px solid #e5e7eb" : "none",
+            }}
+          >
+            <div>
+              <div style={{ fontWeight: "700", color: "#1e293b" }}>
+                {index + 1}. {item.name}
+              </div>
+              <div style={{ fontSize: "13px", color: "#64748b" }}>
+                {item.location} / {item.year}
+              </div>
+            </div>
+            <div
+              style={{
+                fontWeight: "800",
+                color: "#0f766e",
+              }}
+            >
+              {item.surge} m
+            </div>
+          </div>
+        ))
+      )}
+    </div>
+  );
+}
+
 function TableHead({ children }) {
   return (
     <th
@@ -445,6 +629,25 @@ function TableCell({ children }) {
 }
 
 function ChartCard({ title, subtitle, unit, data, lineColor }) {
+  if (data.length === 0) {
+    return (
+      <div
+        style={{
+          background: "#fff",
+          borderRadius: "24px",
+          padding: "24px",
+          boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)",
+        }}
+      >
+        <h2 style={{ margin: 0, fontSize: "24px", color: "#123c66" }}>
+          {title}
+        </h2>
+        <p style={{ color: "#64748b", fontSize: "14px" }}>{subtitle}</p>
+        <div style={{ color: "#94a3b8", paddingTop: "24px" }}>目前沒有資料可顯示</div>
+      </div>
+    );
+  }
+
   const values = data.map((item) => item.value);
   const min = Math.min(...values);
   const max = Math.max(...values);
@@ -576,5 +779,23 @@ function ChartCard({ title, subtitle, unit, data, lineColor }) {
     </div>
   );
 }
+
+const labelStyle = {
+  display: "block",
+  marginBottom: "8px",
+  fontSize: "14px",
+  fontWeight: "700",
+  color: "#475569",
+};
+
+const inputStyle = {
+  width: "100%",
+  padding: "12px 14px",
+  borderRadius: "12px",
+  border: "1px solid #cbd5e1",
+  fontSize: "14px",
+  outline: "none",
+  background: "#fff",
+};
 
 export default App;
