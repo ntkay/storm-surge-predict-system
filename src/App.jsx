@@ -15,60 +15,12 @@ function App() {
   }, []);
 
   const typhoonData = [
-    {
-      id: 1,
-      name: "杜蘇芮",
-      year: 2023,
-      location: "高雄",
-      wind: 50,
-      pressure: 930,
-      surge: 1.8,
-    },
-    {
-      id: 2,
-      name: "海葵",
-      year: 2023,
-      location: "台東",
-      wind: 45,
-      pressure: 940,
-      surge: 1.5,
-    },
-    {
-      id: 3,
-      name: "梅姬",
-      year: 2016,
-      location: "基隆",
-      wind: 38,
-      pressure: 960,
-      surge: 1.2,
-    },
-    {
-      id: 4,
-      name: "莫蘭蒂",
-      year: 2016,
-      location: "屏東",
-      wind: 55,
-      pressure: 915,
-      surge: 2.1,
-    },
-    {
-      id: 5,
-      name: "天鵝",
-      year: 2015,
-      location: "台南",
-      wind: 42,
-      pressure: 950,
-      surge: 1.4,
-    },
-    {
-      id: 6,
-      name: "尼伯特",
-      year: 2016,
-      location: "花蓮",
-      wind: 48,
-      pressure: 935,
-      surge: 1.7,
-    },
+    { id: 1, name: "杜蘇芮", year: 2023, location: "高雄", wind: 50, pressure: 930, surge: 1.8 },
+    { id: 2, name: "海葵", year: 2023, location: "台東", wind: 45, pressure: 940, surge: 1.5 },
+    { id: 3, name: "梅姬", year: 2016, location: "基隆", wind: 38, pressure: 960, surge: 1.2 },
+    { id: 4, name: "莫蘭蒂", year: 2016, location: "屏東", wind: 55, pressure: 915, surge: 2.1 },
+    { id: 5, name: "天鵝", year: 2015, location: "台南", wind: 42, pressure: 950, surge: 1.4 },
+    { id: 6, name: "尼伯特", year: 2016, location: "花蓮", wind: 48, pressure: 935, surge: 1.7 },
   ];
 
   const years = ["全部", ...new Set(typhoonData.map((item) => item.year))];
@@ -88,18 +40,12 @@ function App() {
 
   const averageWind =
     filteredTyphoonData.length > 0
-      ? Math.round(
-          filteredTyphoonData.reduce((sum, item) => sum + item.wind, 0) /
-            filteredTyphoonData.length
-        )
+      ? Math.round(filteredTyphoonData.reduce((sum, item) => sum + item.wind, 0) / filteredTyphoonData.length)
       : 0;
 
   const averagePressure =
     filteredTyphoonData.length > 0
-      ? Math.round(
-          filteredTyphoonData.reduce((sum, item) => sum + item.pressure, 0) /
-            filteredTyphoonData.length
-        )
+      ? Math.round(filteredTyphoonData.reduce((sum, item) => sum + item.pressure, 0) / filteredTyphoonData.length)
       : 0;
 
   const maxSurge =
@@ -129,8 +75,7 @@ function App() {
         minHeight: "100vh",
         background: "#f3f6fb",
         padding: "32px 20px",
-        fontFamily:
-          "'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif",
+        fontFamily: "'Noto Sans TC', 'Microsoft JhengHei', Arial, sans-serif",
         color: "#1e2a3a",
       }}
     >
@@ -145,23 +90,10 @@ function App() {
             marginBottom: "28px",
           }}
         >
-          <h1
-            style={{
-              margin: 0,
-              fontSize: "42px",
-              fontWeight: "800",
-              letterSpacing: "1px",
-            }}
-          >
+          <h1 style={{ margin: 0, fontSize: "42px", fontWeight: "800", letterSpacing: "1px" }}>
             暴潮預測系統
           </h1>
-          <p
-            style={{
-              margin: "12px 0 0",
-              fontSize: "18px",
-              opacity: 0.92,
-            }}
-          >
+          <p style={{ margin: "12px 0 0", fontSize: "18px", opacity: 0.92 }}>
             以歷史颱風資料分析沿海暴潮風險與變化趨勢
           </p>
         </header>
@@ -174,28 +106,13 @@ function App() {
             marginBottom: "28px",
           }}
         >
-          <InfoCard
-            title="今日日期"
-            value={now.toLocaleDateString("zh-TW")}
-            sub="系統即時更新"
-          />
-          <InfoCard
-            title="目前時間"
-            value={now.toLocaleTimeString("zh-TW")}
-            sub="每秒自動刷新"
-          />
-          <InfoCard
-            title="預測狀態"
-            value={overallRisk.label}
-            sub="依篩選後資料評估"
-            accent={overallRisk.color}
-          />
-          <InfoCard
-            title="最大暴潮值"
-            value={`${maxSurge || 0} m`}
-            sub="目前篩選資料中的最大值"
-          />
+          <InfoCard title="今日日期" value={now.toLocaleDateString("zh-TW")} sub="系統即時更新" />
+          <InfoCard title="目前時間" value={now.toLocaleTimeString("zh-TW")} sub="每秒自動刷新" />
+          <InfoCard title="預測狀態" value={overallRisk.label} sub="依篩選後資料評估" accent={overallRisk.color} />
+          <InfoCard title="最大暴潮值" value={`${maxSurge || 0} m`} sub="目前篩選資料中的最大值" />
         </section>
+
+        <LiveTyphoonPanel />
 
         <section
           style={{
@@ -206,14 +123,7 @@ function App() {
             marginBottom: "28px",
           }}
         >
-          <h2
-            style={{
-              marginTop: 0,
-              marginBottom: "18px",
-              fontSize: "26px",
-              color: "#123c66",
-            }}
-          >
+          <h2 style={{ marginTop: 0, marginBottom: "18px", fontSize: "26px", color: "#123c66" }}>
             資料篩選
           </h2>
 
@@ -275,21 +185,8 @@ function App() {
             marginBottom: "28px",
           }}
         >
-          <ChartCard
-            title="最大風速變化"
-            subtitle="Maximum Wind Speed"
-            unit="m/s"
-            data={windChartData}
-            lineColor="#2f80ed"
-          />
-
-          <ChartCard
-            title="中心氣壓變化"
-            subtitle="Central Pressure"
-            unit="hPa"
-            data={pressureChartData}
-            lineColor="#27ae60"
-          />
+          <ChartCard title="最大風速變化" subtitle="Maximum Wind Speed" unit="m/s" data={windChartData} lineColor="#2f80ed" />
+          <ChartCard title="中心氣壓變化" subtitle="Central Pressure" unit="hPa" data={pressureChartData} lineColor="#27ae60" />
         </section>
 
         <section
@@ -308,34 +205,14 @@ function App() {
               overflowX: "auto",
             }}
           >
-            <h2
-              style={{
-                marginTop: 0,
-                marginBottom: "8px",
-                color: "#123c66",
-                fontSize: "26px",
-              }}
-            >
+            <h2 style={{ marginTop: 0, marginBottom: "8px", color: "#123c66", fontSize: "26px" }}>
               歷史颱風資料表
             </h2>
-            <p
-              style={{
-                marginTop: 0,
-                marginBottom: "20px",
-                color: "#64748b",
-                fontSize: "14px",
-              }}
-            >
+            <p style={{ marginTop: 0, marginBottom: "20px", color: "#64748b", fontSize: "14px" }}>
               顯示目前搜尋與篩選後的結果
             </p>
 
-            <table
-              style={{
-                width: "100%",
-                borderCollapse: "collapse",
-                minWidth: "760px",
-              }}
-            >
+            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "760px" }}>
               <thead>
                 <tr style={{ background: "#eff6ff" }}>
                   <TableHead>颱風名稱</TableHead>
@@ -350,14 +227,7 @@ function App() {
               <tbody>
                 {filteredTyphoonData.length === 0 ? (
                   <tr>
-                    <td
-                      colSpan="7"
-                      style={{
-                        padding: "24px",
-                        textAlign: "center",
-                        color: "#64748b",
-                      }}
-                    >
+                    <td colSpan="7" style={{ padding: "24px", textAlign: "center", color: "#64748b" }}>
                       查無符合條件的資料
                     </td>
                   </tr>
@@ -366,10 +236,7 @@ function App() {
                     const risk = getRisk(item.wind, item.pressure);
 
                     return (
-                      <tr
-                        key={item.id}
-                        style={{ borderBottom: "1px solid #e5e7eb" }}
-                      >
+                      <tr key={item.id} style={{ borderBottom: "1px solid #e5e7eb" }}>
                         <TableCell>{item.name}</TableCell>
                         <TableCell>{item.year}</TableCell>
                         <TableCell>{item.location}</TableCell>
@@ -400,16 +267,8 @@ function App() {
           </div>
 
           <div style={{ display: "grid", gap: "22px" }}>
-            <SummaryCard
-              title="平均最大風速"
-              value={`${averageWind} m/s`}
-              desc="依目前篩選資料計算"
-            />
-            <SummaryCard
-              title="平均中心氣壓"
-              value={`${averagePressure} hPa`}
-              desc="數值越低代表颱風越強"
-            />
+            <SummaryCard title="平均最大風速" value={`${averageWind} m/s`} desc="依目前篩選資料計算" />
+            <SummaryCard title="平均中心氣壓" value={`${averagePressure} hPa`} desc="數值越低代表颱風越強" />
             <RankingCard ranking={surgeRanking} />
           </div>
         </section>
@@ -418,28 +277,104 @@ function App() {
   );
 }
 
+function LiveTyphoonPanel() {
+  const liveTyphoon = {
+    name: "海葵颱風",
+    position: "台灣東南方海域",
+    direction: "向西北移動",
+    wind: 45,
+    pressure: 940,
+  };
+
+  const predictedSurge = calculatePredictedSurge(liveTyphoon.wind, liveTyphoon.pressure);
+  const risk = getRisk(liveTyphoon.wind, liveTyphoon.pressure);
+
+  return (
+    <section
+      style={{
+        background: "#fff",
+        borderRadius: "24px",
+        padding: "28px",
+        boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)",
+        marginBottom: "28px",
+      }}
+    >
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          gap: "24px",
+          alignItems: "center",
+        }}
+      >
+        <div>
+          <div style={{ fontSize: "14px", fontWeight: "700", color: "#64748b", marginBottom: "10px" }}>
+            即時颱風資訊
+          </div>
+
+          <h2 style={{ margin: 0, fontSize: "36px", color: "#123c66" }}>
+            {liveTyphoon.name}
+          </h2>
+
+          <p style={{ marginTop: "12px", color: "#475569", fontSize: "16px", lineHeight: 1.6 }}>
+            目前位於 {liveTyphoon.position}，持續{liveTyphoon.direction}。
+          </p>
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
+            gap: "16px",
+          }}
+        >
+          <LiveInfoCard title="最大風速" value={`${liveTyphoon.wind} m/s`} color="#2563eb" />
+          <LiveInfoCard title="中心氣壓" value={`${liveTyphoon.pressure} hPa`} color="#16a34a" />
+          <LiveInfoCard title="預測暴潮" value={`${predictedSurge} m`} color="#dc2626" />
+          <LiveInfoCard title="風險等級" value={risk.label} color={risk.textColor} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function LiveInfoCard({ title, value, color }) {
+  return (
+    <div
+      style={{
+        background: "#f8fafc",
+        borderRadius: "18px",
+        padding: "20px",
+        borderLeft: `6px solid ${color}`,
+      }}
+    >
+      <div style={{ fontSize: "14px", color: "#64748b", marginBottom: "10px", fontWeight: "700" }}>
+        {title}
+      </div>
+
+      <div style={{ fontSize: "26px", fontWeight: "800", color }}>
+        {value}
+      </div>
+    </div>
+  );
+}
+
+function calculatePredictedSurge(wind, pressure) {
+  const pressureEffect = Math.max(0, 1010 - pressure) * 0.01;
+  const windEffect = wind * 0.03;
+  return (pressureEffect + windEffect).toFixed(2);
+}
+
 function getRisk(wind, pressure) {
   if (wind >= 45 || pressure <= 940) {
-    return {
-      label: "高風險",
-      bgColor: "#fee2e2",
-      textColor: "#b91c1c",
-    };
+    return { label: "高風險", bgColor: "#fee2e2", textColor: "#b91c1c" };
   }
 
   if (wind >= 35 || pressure <= 960) {
-    return {
-      label: "中風險",
-      bgColor: "#fef3c7",
-      textColor: "#b45309",
-    };
+    return { label: "中風險", bgColor: "#fef3c7", textColor: "#b45309" };
   }
 
-  return {
-    label: "低風險",
-    bgColor: "#dcfce7",
-    textColor: "#166534",
-  };
+  return { label: "低風險", bgColor: "#dcfce7", textColor: "#166534" };
 }
 
 function getOverallRisk(avgWind, avgPressure) {
@@ -456,42 +391,16 @@ function getOverallRisk(avgWind, avgPressure) {
 
 function InfoCard({ title, value, sub, accent }) {
   return (
-    <div
-      style={{
-        background: "#fff",
-        borderRadius: "20px",
-        padding: "22px",
-        boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)",
-      }}
-    >
-      <div
-        style={{
-          fontSize: "15px",
-          color: "#6b7280",
-          marginBottom: "10px",
-          fontWeight: "600",
-        }}
-      >
+    <div style={{ background: "#fff", borderRadius: "20px", padding: "22px", boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)" }}>
+      <div style={{ fontSize: "15px", color: "#6b7280", marginBottom: "10px", fontWeight: "600" }}>
         {title}
       </div>
 
-      <div
-        style={{
-          fontSize: "30px",
-          fontWeight: "800",
-          color: accent || "#123c66",
-          marginBottom: "8px",
-        }}
-      >
+      <div style={{ fontSize: "30px", fontWeight: "800", color: accent || "#123c66", marginBottom: "8px" }}>
         {value}
       </div>
 
-      <div
-        style={{
-          fontSize: "14px",
-          color: "#94a3b8",
-        }}
-      >
+      <div style={{ fontSize: "14px", color: "#94a3b8" }}>
         {sub}
       </div>
     </div>
@@ -500,40 +409,14 @@ function InfoCard({ title, value, sub, accent }) {
 
 function SummaryCard({ title, value, desc }) {
   return (
-    <div
-      style={{
-        background: "#fff",
-        borderRadius: "24px",
-        padding: "24px",
-        boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)",
-      }}
-    >
-      <div
-        style={{
-          color: "#64748b",
-          fontSize: "14px",
-          marginBottom: "10px",
-          fontWeight: "600",
-        }}
-      >
+    <div style={{ background: "#fff", borderRadius: "24px", padding: "24px", boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)" }}>
+      <div style={{ color: "#64748b", fontSize: "14px", marginBottom: "10px", fontWeight: "600" }}>
         {title}
       </div>
-      <div
-        style={{
-          color: "#123c66",
-          fontSize: "28px",
-          fontWeight: "800",
-          marginBottom: "10px",
-        }}
-      >
+      <div style={{ color: "#123c66", fontSize: "28px", fontWeight: "800", marginBottom: "10px" }}>
         {value}
       </div>
-      <div
-        style={{
-          color: "#94a3b8",
-          fontSize: "14px",
-        }}
-      >
+      <div style={{ color: "#94a3b8", fontSize: "14px" }}>
         {desc}
       </div>
     </div>
@@ -542,22 +425,8 @@ function SummaryCard({ title, value, desc }) {
 
 function RankingCard({ ranking }) {
   return (
-    <div
-      style={{
-        background: "#fff",
-        borderRadius: "24px",
-        padding: "24px",
-        boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)",
-      }}
-    >
-      <h3
-        style={{
-          marginTop: 0,
-          marginBottom: "16px",
-          color: "#123c66",
-          fontSize: "22px",
-        }}
-      >
+    <div style={{ background: "#fff", borderRadius: "24px", padding: "24px", boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)" }}>
+      <h3 style={{ marginTop: 0, marginBottom: "16px", color: "#123c66", fontSize: "22px" }}>
         暴潮排行榜
       </h3>
 
@@ -572,8 +441,7 @@ function RankingCard({ ranking }) {
               justifyContent: "space-between",
               alignItems: "center",
               padding: "12px 0",
-              borderBottom:
-                index !== ranking.length - 1 ? "1px solid #e5e7eb" : "none",
+              borderBottom: index !== ranking.length - 1 ? "1px solid #e5e7eb" : "none",
             }}
           >
             <div>
@@ -584,12 +452,7 @@ function RankingCard({ ranking }) {
                 {item.location} / {item.year}
               </div>
             </div>
-            <div
-              style={{
-                fontWeight: "800",
-                color: "#0f766e",
-              }}
-            >
+            <div style={{ fontWeight: "800", color: "#0f766e" }}>
               {item.surge} m
             </div>
           </div>
@@ -601,14 +464,7 @@ function RankingCard({ ranking }) {
 
 function TableHead({ children }) {
   return (
-    <th
-      style={{
-        textAlign: "left",
-        padding: "14px 16px",
-        color: "#123c66",
-        fontSize: "14px",
-      }}
-    >
+    <th style={{ textAlign: "left", padding: "14px 16px", color: "#123c66", fontSize: "14px" }}>
       {children}
     </th>
   );
@@ -616,13 +472,7 @@ function TableHead({ children }) {
 
 function TableCell({ children }) {
   return (
-    <td
-      style={{
-        padding: "14px 16px",
-        fontSize: "14px",
-        color: "#334155",
-      }}
-    >
+    <td style={{ padding: "14px 16px", fontSize: "14px", color: "#334155" }}>
       {children}
     </td>
   );
@@ -631,17 +481,8 @@ function TableCell({ children }) {
 function ChartCard({ title, subtitle, unit, data, lineColor }) {
   if (data.length === 0) {
     return (
-      <div
-        style={{
-          background: "#fff",
-          borderRadius: "24px",
-          padding: "24px",
-          boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)",
-        }}
-      >
-        <h2 style={{ margin: 0, fontSize: "24px", color: "#123c66" }}>
-          {title}
-        </h2>
+      <div style={{ background: "#fff", borderRadius: "24px", padding: "24px", boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)" }}>
+        <h2 style={{ margin: 0, fontSize: "24px", color: "#123c66" }}>{title}</h2>
         <p style={{ color: "#64748b", fontSize: "14px" }}>{subtitle}</p>
         <div style={{ color: "#94a3b8", paddingTop: "24px" }}>目前沒有資料可顯示</div>
       </div>
@@ -658,44 +499,17 @@ function ChartCard({ title, subtitle, unit, data, lineColor }) {
 
   const points = data
     .map((item, index) => {
-      const x =
-        padding + (index * (width - padding * 2)) / (data.length - 1 || 1);
-      const y =
-        height -
-        padding -
-        ((item.value - min) / (max - min || 1)) * (height - padding * 2);
+      const x = padding + (index * (width - padding * 2)) / (data.length - 1 || 1);
+      const y = height - padding - ((item.value - min) / (max - min || 1)) * (height - padding * 2);
       return `${x},${y}`;
     })
     .join(" ");
 
   return (
-    <div
-      style={{
-        background: "#fff",
-        borderRadius: "24px",
-        padding: "24px",
-        boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)",
-      }}
-    >
+    <div style={{ background: "#fff", borderRadius: "24px", padding: "24px", boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)" }}>
       <div style={{ marginBottom: "18px" }}>
-        <h2
-          style={{
-            margin: 0,
-            fontSize: "24px",
-            color: "#123c66",
-          }}
-        >
-          {title}
-        </h2>
-        <p
-          style={{
-            margin: "8px 0 0",
-            color: "#64748b",
-            fontSize: "14px",
-          }}
-        >
-          {subtitle}
-        </p>
+        <h2 style={{ margin: 0, fontSize: "24px", color: "#123c66" }}>{title}</h2>
+        <p style={{ margin: "8px 0 0", color: "#64748b", fontSize: "14px" }}>{subtitle}</p>
       </div>
 
       <svg
@@ -710,62 +524,24 @@ function ChartCard({ title, subtitle, unit, data, lineColor }) {
       >
         {[0, 1, 2, 3].map((i) => {
           const y = padding + (i * (height - padding * 2)) / 3;
-          return (
-            <line
-              key={i}
-              x1={padding}
-              y1={y}
-              x2={width - padding}
-              y2={y}
-              stroke="#dbeafe"
-              strokeWidth="1"
-            />
-          );
+          return <line key={i} x1={padding} y1={y} x2={width - padding} y2={y} stroke="#dbeafe" strokeWidth="1" />;
         })}
 
         {data.map((item, index) => {
-          const x =
-            padding + (index * (width - padding * 2)) / (data.length - 1 || 1);
-          return (
-            <line
-              key={item.time}
-              x1={x}
-              y1={padding}
-              x2={x}
-              y2={height - padding}
-              stroke="#e5e7eb"
-              strokeWidth="1"
-            />
-          );
+          const x = padding + (index * (width - padding * 2)) / (data.length - 1 || 1);
+          return <line key={item.time} x1={x} y1={padding} x2={x} y2={height - padding} stroke="#e5e7eb" strokeWidth="1" />;
         })}
 
-        <polyline
-          fill="none"
-          stroke={lineColor}
-          strokeWidth="4"
-          points={points}
-          strokeLinejoin="round"
-          strokeLinecap="round"
-        />
+        <polyline fill="none" stroke={lineColor} strokeWidth="4" points={points} strokeLinejoin="round" strokeLinecap="round" />
 
         {data.map((item, index) => {
-          const x =
-            padding + (index * (width - padding * 2)) / (data.length - 1 || 1);
-          const y =
-            height -
-            padding -
-            ((item.value - min) / (max - min || 1)) * (height - padding * 2);
+          const x = padding + (index * (width - padding * 2)) / (data.length - 1 || 1);
+          const y = height - padding - ((item.value - min) / (max - min || 1)) * (height - padding * 2);
 
           return (
             <g key={item.time}>
               <circle cx={x} cy={y} r="5" fill={lineColor} />
-              <text
-                x={x}
-                y={height - 14}
-                textAnchor="middle"
-                fontSize="12"
-                fill="#475569"
-              >
+              <text x={x} y={height - 14} textAnchor="middle" fontSize="12" fill="#475569">
                 {item.time}
               </text>
             </g>
