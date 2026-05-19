@@ -1,5 +1,28 @@
 import { useEffect, useMemo, useState } from "react";
 
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  Polyline,
+} from "react-leaflet";
+
+import L from "leaflet";
+
+delete L.Icon.Default.prototype._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl:
+    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+
+  iconUrl:
+    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+
+  shadowUrl:
+    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+});
+
 function App() {
   const [now, setNow] = useState(new Date());
   const [search, setSearch] = useState("");
@@ -22,6 +45,14 @@ function App() {
     { id: 5, name: "天鵝", year: 2015, location: "台南", wind: 42, pressure: 950, surge: 1.4 },
     { id: 6, name: "尼伯特", year: 2016, location: "花蓮", wind: 48, pressure: 935, surge: 1.7 },
   ];
+
+  const typhoonPath = [
+  [21.5, 125.0],
+  [22.3, 123.8],
+  [23.1, 122.5],
+  [24.0, 121.3],
+  [25.2, 120.2],
+];
 
   const years = ["全部", ...new Set(typhoonData.map((item) => item.year))];
   const locations = ["全部", ...new Set(typhoonData.map((item) => item.location))];
@@ -113,6 +144,8 @@ function App() {
         </section>
 
         <LiveTyphoonPanel />
+
+        <TyphoonMap typhoonPath={typhoonPath} />
 
         <section
           style={{
@@ -573,5 +606,65 @@ const inputStyle = {
   outline: "none",
   background: "#fff",
 };
+
+function TyphoonMap({ typhoonPath }) {
+  return (
+    <section
+      style={{
+        background: "#fff",
+        borderRadius: "24px",
+        padding: "24px",
+        marginBottom: "28px",
+        boxShadow: "0 8px 24px rgba(15,23,42,0.08)",
+      }}
+    >
+      <h2
+        style={{
+          marginTop: 0,
+          marginBottom: "18px",
+          color: "#123c66",
+          fontSize: "28px",
+        }}
+      >
+        🌀 颱風路徑追蹤
+      </h2>
+
+      <MapContainer
+        center={[23.7, 121]}
+        zoom={6}
+        style={{
+          height: "500px",
+          width: "100%",
+          borderRadius: "20px",
+        }}
+      >
+        <TileLayer
+          attribution="&copy; OpenStreetMap contributors"
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+
+        <Polyline
+          positions={typhoonPath}
+          pathOptions={{
+            color: "#2563eb",
+            weight: 5,
+          }}
+        />
+
+        {typhoonPath.map((position, index) => (
+          <Marker key={index} position={position}>
+            <Popup>
+              路徑點 {index + 1}
+              <br />
+              緯度：{position[0]}
+              <br />
+              經度：{position[1]}
+            </Popup>
+          </Marker>
+        ))}
+      </MapContainer>
+    </section>
+  );
+}
 
 export default App;
