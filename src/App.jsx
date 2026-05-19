@@ -616,6 +616,7 @@ function TyphoonMap({ typhoonPath }) {
         padding: "24px",
         marginBottom: "28px",
         boxShadow: "0 8px 24px rgba(15,23,42,0.08)",
+        overflow: "hidden",
       }}
     >
       <h2
@@ -632,12 +633,24 @@ function TyphoonMap({ typhoonPath }) {
       <MapContainer
         center={[23.7, 121]}
         zoom={6}
+        scrollWheelZoom={true}
         style={{
           height: "500px",
           width: "100%",
           borderRadius: "20px",
+          zIndex: 1,
         }}
-      >
+  whenReady={(map) => {
+    setTimeout(() => {
+      map.target.invalidateSize();
+    }, 100);
+  }}
+>
+  whenReady={(map) => {
+    setTimeout(() => {
+      map.target.invalidateSize();
+    }, 100);
+  }}
         <TileLayer
           attribution="&copy; OpenStreetMap contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
