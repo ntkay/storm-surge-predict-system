@@ -607,6 +607,61 @@ const inputStyle = {
   background: "#fff",
 };
 
+const taiwanCounties = [
+  { name: "基隆市", position: [25.1276, 121.7392] },
+  { name: "臺北市", position: [25.0375, 121.5637] },
+  { name: "新北市", position: [25.0169, 121.4628] },
+  { name: "桃園市", position: [24.9936, 121.301] },
+  { name: "新竹市", position: [24.8138, 120.9675] },
+  { name: "新竹縣", position: [24.839, 121.002] },
+  { name: "苗栗縣", position: [24.5602, 120.8214] },
+  { name: "臺中市", position: [24.1477, 120.6736] },
+  { name: "彰化縣", position: [24.0685, 120.5575] },
+  { name: "南投縣", position: [23.9609, 120.9719] },
+  { name: "雲林縣", position: [23.7092, 120.4313] },
+  { name: "嘉義市", position: [23.4801, 120.4491] },
+  { name: "嘉義縣", position: [23.4518, 120.2555] },
+  { name: "臺南市", position: [22.9999, 120.227] },
+  { name: "高雄市", position: [22.6273, 120.3014] },
+  { name: "屏東縣", position: [22.5519, 120.5487] },
+  { name: "宜蘭縣", position: [24.7021, 121.7378] },
+  { name: "花蓮縣", position: [23.9911, 121.6015] },
+  { name: "臺東縣", position: [22.7972, 121.0714] },
+  { name: "澎湖縣", position: [23.5712, 119.5793] },
+  { name: "金門縣", position: [24.4321, 118.3171] },
+  { name: "連江縣", position: [26.1605, 119.9517] },
+];
+
+const nearbyCities = [
+  { name: "福州", position: [26.0745, 119.2965] },
+  { name: "廈門", position: [24.4798, 118.0894] },
+  { name: "香港", position: [22.3193, 114.1694] },
+  { name: "沖繩", position: [26.2124, 127.6792] },
+];
+
+function createTextIcon(text, type = "county") {
+  return L.divIcon({
+    className: "",
+    html: `
+      <div style="
+        background: ${type === "county" ? "#ffffff" : "#f1f5f9"};
+        color: ${type === "county" ? "#0f172a" : "#475569"};
+        border: 1px solid ${type === "county" ? "#2563eb" : "#94a3b8"};
+        border-radius: 999px;
+        padding: 4px 8px;
+        font-size: ${type === "county" ? "13px" : "12px"};
+        font-weight: 700;
+        white-space: nowrap;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      ">
+        ${text}
+      </div>
+    `,
+    iconSize: [80, 24],
+    iconAnchor: [40, 12],
+  });
+}
+
 function TyphoonMap({ typhoonPath }) {
   return (
     <section
@@ -627,30 +682,32 @@ function TyphoonMap({ typhoonPath }) {
           fontSize: "28px",
         }}
       >
-        🌀 颱風路徑追蹤
+        🌀 台灣颱風路徑追蹤
       </h2>
 
       <MapContainer
-        center={[23.7, 121]}
-        zoom={6}
+        center={[23.8, 121]}
+        zoom={7}
+        minZoom={6}
+        maxZoom={10}
         scrollWheelZoom={true}
+        maxBounds={[
+          [20.5, 117.5],
+          [27.5, 124.5],
+        ]}
+        maxBoundsViscosity={1.0}
         style={{
-          height: "500px",
+          height: "560px",
           width: "100%",
           borderRadius: "20px",
           zIndex: 1,
         }}
-  whenReady={(map) => {
-    setTimeout(() => {
-      map.target.invalidateSize();
-    }, 100);
-  }}
->
-  whenReady={(map) => {
-    setTimeout(() => {
-      map.target.invalidateSize();
-    }, 100);
-  }}
+        whenReady={() => {
+          setTimeout(() => {
+            window.dispatchEvent(new Event("resize"));
+          }, 100);
+        }}
+      >
         <TileLayer
           attribution="&copy; OpenStreetMap contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -667,13 +724,31 @@ function TyphoonMap({ typhoonPath }) {
         {typhoonPath.map((position, index) => (
           <Marker key={index} position={position}>
             <Popup>
-              路徑點 {index + 1}
+              颱風路徑點 {index + 1}
               <br />
               緯度：{position[0]}
               <br />
               經度：{position[1]}
             </Popup>
           </Marker>
+        ))}
+
+        {taiwanCounties.map((county) => (
+          <Marker
+            key={county.name}
+            position={county.position}
+            icon={createTextIcon(county.name, "county")}
+            interactive={false}
+          />
+        ))}
+
+        {nearbyCities.map((city) => (
+          <Marker
+            key={city.name}
+            position={city.position}
+            icon={createTextIcon(city.name, "city")}
+            interactive={false}
+          />
         ))}
       </MapContainer>
     </section>
