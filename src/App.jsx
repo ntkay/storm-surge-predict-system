@@ -6,6 +6,7 @@ import {
   Marker,
   Popup,
   Polyline,
+  Tooltip,
 } from "react-leaflet";
 
 import L from "leaflet";
@@ -736,9 +737,16 @@ function TyphoonMap({ typhoonPath }) {
           <Marker
             key={county.name}
             position={county.position}
-            icon={createTextIcon(county.name, "county")}
-            interactive={false}
-          />
+            opacity={0}
+          >
+            <Tooltip
+              permanent
+              direction="center"
+              className="county-label"
+            >
+              {county.name}
+            </Tooltip>
+          </Marker>
         ))}
 
         {nearbyCities.map((city) => (
