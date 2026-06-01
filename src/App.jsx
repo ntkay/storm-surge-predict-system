@@ -635,30 +635,29 @@ const taiwanCounties = [
 const nearbyCities = [
   { name: "福州", position: [26.0745, 119.2965] },
   { name: "廈門", position: [24.4798, 118.0894] },
-  { name: "香港", position: [22.3193, 114.1694] },
   { name: "沖繩", position: [26.2124, 127.6792] },
 ];
 
 function createTextIcon(text, type = "county") {
   return L.divIcon({
-    className: "",
+    className: "map-text-label",
     html: `
       <div style="
-        background: ${type === "county" ? "#ffffff" : "#f1f5f9"};
-        color: ${type === "county" ? "#0f172a" : "#475569"};
-        border: 1px solid ${type === "county" ? "#2563eb" : "#94a3b8"};
-        border-radius: 999px;
-        padding: 4px 8px;
-        font-size: ${type === "county" ? "13px" : "12px"};
-        font-weight: 700;
+        color: #111827;
+        font-size: ${type === "county" ? "14px" : "12px"};
+        font-weight: ${type === "county" ? "700" : "500"};
         white-space: nowrap;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        text-shadow:
+          -1px -1px 0 #fff,
+           1px -1px 0 #fff,
+          -1px  1px 0 #fff,
+           1px  1px 0 #fff;
       ">
         ${text}
       </div>
     `,
-    iconSize: [80, 24],
-    iconAnchor: [40, 12],
+    iconSize: [80, 20],
+    iconAnchor: [40, 10],
   });
 }
 
@@ -709,8 +708,8 @@ function TyphoonMap({ typhoonPath }) {
         }}
       >
         <TileLayer
-          attribution="&copy; OpenStreetMap contributors"
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; OpenStreetMap contributors &copy; CARTO'
+            url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
         />
 
         <Polyline
