@@ -709,9 +709,9 @@ function TyphoonMap({ typhoonPath }) {
         }}
       >
         <TileLayer
-            attribution='&copy; OpenStreetMap contributors &copy; CARTO'
-            url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
-        />
+          attribution="&copy; OpenStreetMap contributors"
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
 
         <Polyline
           positions={typhoonPath}
@@ -750,12 +750,16 @@ function TyphoonMap({ typhoonPath }) {
         ))}
 
         {nearbyCities.map((city) => (
-          <Marker
-            key={city.name}
-            position={city.position}
-            icon={createTextIcon(city.name, "city")}
-            interactive={false}
-          />
+          <Marker key={city.name} position={city.position} opacity={0}>
+            <Tooltip
+              permanent
+              direction="center"
+              offset={[0, 0]}
+              className="county-label"
+            >
+              {city.name}
+            </Tooltip>
+          </Marker>
         ))}
       </MapContainer>
     </section>
