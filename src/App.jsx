@@ -29,6 +29,9 @@ function App() {
   const [search, setSearch] = useState("");
   const [selectedYear, setSelectedYear] = useState("全部");
   const [selectedLocation, setSelectedLocation] = useState("全部");
+  const [cwaTyphoon, setCwaTyphoon] = useState(null);
+  const [cwaLoading, setCwaLoading] = useState(true);
+  const [cwaError, setCwaError] = useState("");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -36,6 +39,30 @@ function App() {
     }, 1000);
 
     return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+  const API_KEY = "你的API_KEY";
+
+  fetch(
+    `https://opendata.cwa.gov.tw/api/v1/rest/datastore/W-C0034-005?Authorization=${API_KEY}&format=JSON`
+  )
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("中央氣象署颱風資料連線失敗");
+      }
+      return res.json();
+    })
+    .then((data) => {
+      console.log("中央氣象署颱風資料：", data);
+      setCwaTyphoon(data);
+      setCwaLoading(false);
+    })
+    .catch((error) => {
+      console.error(error);
+      setCwaError(error.message);
+      setCwaLoading(false);
+    });
   }, []);
 
   const typhoonData = [
@@ -145,6 +172,12 @@ function App() {
         </section>
 
         <LiveTyphoonPanel />
+
+        <CwaTyphoonPanel
+          data={cwaTyphoon}
+          loading={cwaLoading}
+          error={cwaError}
+        />
 
         <TyphoonMap typhoonPath={typhoonPath} />
 
@@ -762,6 +795,71 @@ function TyphoonMap({ typhoonPath }) {
           </Marker>
         ))}
       </MapContainer>
+    </section>
+  );
+}
+
+function CwaTyphoonPanel({ data, loading, error }) {
+  const datasetDescription =
+    data?.records?.datasetDescription ||
+    data?.records?.dataid ||
+    "颱風路徑資料";
+
+  return (
+    <section
+      style={{
+        background: "#fff",
+        borderRadius: "24px",
+        padding: "24px",
+        marginBottom: "28px",
+        boxShadow: "0 8px 24px rgba(15,23,42,0.08)",
+      }}
+    >
+      <h2
+        style={{
+          marginTop: 0,
+          marginBottom: "12px",
+          color: "#123c66",
+          fontSize: "26px",
+        }}
+      >
+        中央氣象署颱風資料
+      </h2>
+
+      {loading && <p style={{ color: "#64748b" }}>資料讀取中...</p>}
+
+      {error && (
+        <p style={{ color: "#b91c1c", fontWeight: "700" }}>
+          {error}
+        </p>
+      )}
+
+      {!loading && !error && (
+        <div
+          style={{
+            background: "#f8fafc",
+            borderRadius: "18px",
+            padding: "18px",
+            color: "#334155",
+            lineHeight: 1.7,
+          }}
+        >
+          <p>
+            <strong>資料集：</strong>
+            {datasetDescription}
+          </p>
+
+          <p>
+            <strong>狀態：</strong>
+            已成功連接中央氣象署 API
+          </p>
+
+          <p style={{ color: "#64748b" }}>
+            目前先確認 API 連線成功，下一步再把回傳資料解析成颱風名稱、
+            中心氣壓、最大風速與路徑點。
+          </p>
+        </div>
+      )}
     </section>
   );
 }
