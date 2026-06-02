@@ -74,13 +74,22 @@ function App() {
     { id: 6, name: "尼伯特", year: 2016, location: "花蓮", wind: 48, pressure: 935, surge: 1.7 },
   ];
 
-  const typhoonPath = [
-  [21.5, 125.0],
-  [22.3, 123.8],
-  [23.1, 122.5],
-  [24.0, 121.3],
-  [25.2, 120.2],
-];
+  const typhoonPath = useMemo(() => {
+  if (!cwaTyphoon?.records?.TropicalCyclones?.TropicalCyclone) {
+    return [];
+  }
+
+  const cyclone =
+    cwaTyphoon.records.TropicalCyclones.TropicalCyclone[0];
+
+  const analysisData =
+    cyclone.AnalysisData?.Fix || [];
+
+  return analysisData.map((item) => [
+    parseFloat(item.CoordinateLatitude),
+    parseFloat(item.CoordinateLongitude),
+  ]);
+}, [cwaTyphoon]);
 
   const years = ["全部", ...new Set(typhoonData.map((item) => item.year))];
   const locations = ["全部", ...new Set(typhoonData.map((item) => item.location))];
@@ -171,7 +180,7 @@ function App() {
           <InfoCard title="最大暴潮值" value={`${maxSurge || 0} m`} sub="目前篩選資料中的最大值" />
         </section>
 
-        <LiveTyphoonPanel />
+        <LiveTyphoonPanel cwaTyphoon={cwaTyphoon} />
 
         <CwaTyphoonPanel
           data={cwaTyphoon}
@@ -344,14 +353,35 @@ function App() {
   );
 }
 
-function LiveTyphoonPanel() {
-  const liveTyphoon = {
-    name: "海葵颱風",
-    position: "台灣東南方海域",
-    direction: "向西北移動",
-    wind: 45,
-    pressure: 940,
-  };
+const currentTyphoon =
+  cwaTyphoon?.records?.TropicalCyclones?.TropicalCyclone?.[0];
+
+if (!currentTyphoon) {
+  return null;
+}
+const latestFix =
+  currentTyphoon.AnalysisData?.Fix?.[
+    currentTyphoon.AnalysisData.Fix.length - 1
+  ];
+const wind =
+  Number(latestFix?.MaxWindSpeed || 0);
+
+const pressure =
+  Number(latestFix?.Pressure || 0);
+const wind =
+  Number(latestFix?.MaxWindSpeed || 0);
+
+const pressure =
+  Number(latestFix?.Pressure || 0);
+const predictedSurge =
+  calculatePredictedSurge(wind, pressure);
+
+const risk =
+  getRisk(wind, pressure);
+
+function LiveTyphoonPanel({ cwaTyphoon }) {
+  const currentTyphoon =
+    cwaTyphoon?.records?.TropicalCyclones?.TropicalCyclone?.[0];
 
   const predictedSurge = calculatePredictedSurge(liveTyphoon.wind, liveTyphoon.pressure);
   const risk = getRisk(liveTyphoon.wind, liveTyphoon.pressure);
@@ -380,7 +410,7 @@ function LiveTyphoonPanel() {
           </div>
 
           <h2 style={{ margin: 0, fontSize: "36px", color: "#123c66" }}>
-            {liveTyphoon.name}
+            {currentTyphoon.CwaTyphoonName}
           </h2>
 
           <p style={{ marginTop: "12px", color: "#475569", fontSize: "16px", lineHeight: 1.6 }}>
@@ -395,8 +425,8 @@ function LiveTyphoonPanel() {
             gap: "16px",
           }}
         >
-          <LiveInfoCard title="最大風速" value={`${liveTyphoon.wind} m/s`} color="#2563eb" />
-          <LiveInfoCard title="中心氣壓" value={`${liveTyphoon.pressure} hPa`} color="#16a34a" />
+          <LiveInfoCard title="最大風速" value={`${wind} m/s`} color="#2563eb" />
+          <LiveInfoCard title="中心氣壓" value={`${pressure}yp hPa`} color="#16a34a" />
           <LiveInfoCard title="預測暴潮" value={`${predictedSurge} m`} color="#dc2626" />
           <LiveInfoCard title="風險等級" value={risk.label} color={risk.textColor} />
         </div>
