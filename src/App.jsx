@@ -42,10 +42,10 @@ function App() {
   }, []);
 
   useEffect(() => {
-  const API_KEY = "你的API_KEY";
+  const API_KEY = "CWA-F1CCC8EC-0DF3-46DB-9A48-5194FCF84C53";
 
   fetch(
-    `https://opendata.cwa.gov.tw/api/v1/rest/datastore/W-C0034-005?Authorization=${API_KEY}&format=JSON`
+    `https://opendata.cwa.gov.tw/api/v1/rest/datastore/W-C0034-005?Authorization=CWA-F1CCC8EC-0DF3-46DB-9A48-5194FCF84C53&format=JSON`
   )
     .then((res) => {
       if (!res.ok) {
