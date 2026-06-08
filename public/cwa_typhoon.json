@@ -1,0 +1,1362 @@
+{
+  "success": "true",
+  "result": {
+    "resource_id": "W-C0034-005",
+    "fields": [
+      {
+        "id": "Year",
+        "type": "String"
+      },
+      {
+        "id": "TyphoonName",
+        "type": "String"
+      },
+      {
+        "id": "CwaTyphoonName",
+        "type": "String"
+      },
+      {
+        "id": "CwaTdNo",
+        "type": "String"
+      },
+      {
+        "id": "CwaTyNo",
+        "type": "String"
+      },
+      {
+        "id": "DateTime",
+        "type": "String"
+      },
+      {
+        "id": "CoordinateLongitude",
+        "type": "String"
+      },
+      {
+        "id": "CoordinateLatitude",
+        "type": "String"
+      },
+      {
+        "id": "MaxWindSpeed",
+        "type": "String"
+      },
+      {
+        "id": "MaxGustSpeed",
+        "type": "String"
+      },
+      {
+        "id": "Pressure",
+        "type": "String"
+      },
+      {
+        "id": "MovingSpeed",
+        "type": "String"
+      },
+      {
+        "id": "MovingDirection",
+        "type": "String"
+      },
+      {
+        "id": "value",
+        "type": "String"
+      },
+      {
+        "id": "Radius",
+        "type": "String"
+      },
+      {
+        "id": "InitialTime",
+        "type": "String"
+      },
+      {
+        "id": "ForecastHour",
+        "type": "String"
+      },
+      {
+        "id": "Radius70PercentProbability",
+        "type": "String"
+      }
+    ]
+  },
+  "records": {
+    "dataid": "C0034-005",
+    "note": "西北太平洋地區及南海目前所有活動中熱帶氣旋之資訊-熱帶性低氣壓及颱風過去、現在及未來預報之資訊",
+    "TropicalCyclones": {
+      "TropicalCyclone": [
+        {
+          "Year": "2026",
+          "TyphoonName": "JANGMI",
+          "CwaTyphoonName": "薔蜜",
+          "CwaTdNo": "06",
+          "CwaTyNo": "06",
+          "AnalysisData": {
+            "Fix": [
+              {
+                "DateTime": "2026-05-26T08:00:00+08:00",
+                "CoordinateLongitude": "141.0",
+                "CoordinateLatitude": "8.0",
+                "MaxWindSpeed": "15",
+                "MaxGustSpeed": "23",
+                "Pressure": "1004",
+                "MovingSpeed": "11",
+                "MovingDirection": "W"
+              },
+              {
+                "DateTime": "2026-05-26T14:00:00+08:00",
+                "CoordinateLongitude": "140.0",
+                "CoordinateLatitude": "8.0",
+                "MaxWindSpeed": "15",
+                "MaxGustSpeed": "23",
+                "Pressure": "1004",
+                "MovingSpeed": "18",
+                "MovingDirection": "W"
+              },
+              {
+                "DateTime": "2026-05-26T20:00:00+08:00",
+                "CoordinateLongitude": "139.5",
+                "CoordinateLatitude": "8.0",
+                "MaxWindSpeed": "15",
+                "MaxGustSpeed": "23",
+                "Pressure": "1004",
+                "MovingSpeed": "9",
+                "MovingDirection": "W"
+              },
+              {
+                "DateTime": "2026-05-27T02:00:00+08:00",
+                "CoordinateLongitude": "138.5",
+                "CoordinateLatitude": "8.1",
+                "MaxWindSpeed": "15",
+                "MaxGustSpeed": "23",
+                "Pressure": "1002",
+                "MovingSpeed": "18",
+                "MovingDirection": "W"
+              },
+              {
+                "DateTime": "2026-05-27T08:00:00+08:00",
+                "CoordinateLongitude": "138.0",
+                "CoordinateLatitude": "9.5",
+                "MaxWindSpeed": "18",
+                "MaxGustSpeed": "25",
+                "Pressure": "998",
+                "MovingSpeed": "27",
+                "MovingDirection": "NNW",
+                "Circle15ms": {
+                  "Radius": "100",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "70",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "120",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "120",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "70",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-27T14:00:00+08:00",
+                "CoordinateLongitude": "137.6",
+                "CoordinateLatitude": "10.0",
+                "MaxWindSpeed": "18",
+                "MaxGustSpeed": "25",
+                "Pressure": "998",
+                "MovingSpeed": "12",
+                "MovingDirection": "NW",
+                "Circle15ms": {
+                  "Radius": "100",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "70",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "120",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "120",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "70",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-27T20:00:00+08:00",
+                "CoordinateLongitude": "137.3",
+                "CoordinateLatitude": "10.2",
+                "MaxWindSpeed": "18",
+                "MaxGustSpeed": "25",
+                "Pressure": "998",
+                "MovingSpeed": "7",
+                "MovingDirection": "WNW",
+                "Circle15ms": {
+                  "Radius": "100",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "70",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "120",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "120",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "70",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-28T02:00:00+08:00",
+                "CoordinateLongitude": "136.7",
+                "CoordinateLatitude": "11.3",
+                "MaxWindSpeed": "18",
+                "MaxGustSpeed": "25",
+                "Pressure": "998",
+                "MovingSpeed": "23",
+                "MovingDirection": "NNW",
+                "Circle15ms": {
+                  "Radius": "100",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "70",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "120",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "120",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "70",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-28T08:00:00+08:00",
+                "CoordinateLongitude": "136.2",
+                "CoordinateLatitude": "12.1",
+                "MaxWindSpeed": "18",
+                "MaxGustSpeed": "25",
+                "Pressure": "998",
+                "MovingSpeed": "17",
+                "MovingDirection": "NNW",
+                "Circle15ms": {
+                  "Radius": "100",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "70",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "120",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "120",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "70",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-28T14:00:00+08:00",
+                "CoordinateLongitude": "135.9",
+                "CoordinateLatitude": "12.9",
+                "MaxWindSpeed": "20",
+                "MaxGustSpeed": "28",
+                "Pressure": "995",
+                "MovingSpeed": "16",
+                "MovingDirection": "NNW",
+                "Circle15ms": {
+                  "Radius": "100",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "70",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "120",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "120",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "70",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-28T20:00:00+08:00",
+                "CoordinateLongitude": "135.5",
+                "CoordinateLatitude": "13.7",
+                "MaxWindSpeed": "20",
+                "MaxGustSpeed": "28",
+                "Pressure": "995",
+                "MovingSpeed": "16",
+                "MovingDirection": "NNW",
+                "Circle15ms": {
+                  "Radius": "100",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "110",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "60",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "90",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "120",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-29T02:00:00+08:00",
+                "CoordinateLongitude": "134.7",
+                "CoordinateLatitude": "14.8",
+                "MaxWindSpeed": "20",
+                "MaxGustSpeed": "28",
+                "Pressure": "995",
+                "MovingSpeed": "25",
+                "MovingDirection": "NW",
+                "Circle15ms": {
+                  "Radius": "100",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "150",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "60",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "60",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "110",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-29T08:00:00+08:00",
+                "CoordinateLongitude": "133.7",
+                "CoordinateLatitude": "15.2",
+                "MaxWindSpeed": "23",
+                "MaxGustSpeed": "30",
+                "Pressure": "990",
+                "MovingSpeed": "19",
+                "MovingDirection": "WNW",
+                "Circle15ms": {
+                  "Radius": "120",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "90",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "150",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "150",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "100",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-29T14:00:00+08:00",
+                "CoordinateLongitude": "132.5",
+                "CoordinateLatitude": "15.6",
+                "MaxWindSpeed": "25",
+                "MaxGustSpeed": "33",
+                "Pressure": "985",
+                "MovingSpeed": "23",
+                "MovingDirection": "WNW",
+                "Circle15ms": {
+                  "Radius": "150",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "100",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "180",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "180",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "150",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-29T20:00:00+08:00",
+                "CoordinateLongitude": "131.6",
+                "CoordinateLatitude": "15.8",
+                "MaxWindSpeed": "28",
+                "MaxGustSpeed": "35",
+                "Pressure": "980",
+                "MovingSpeed": "16",
+                "MovingDirection": "WNW",
+                "Circle15ms": {
+                  "Radius": "180",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "130",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "180",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-30T02:00:00+08:00",
+                "CoordinateLongitude": "131.3",
+                "CoordinateLatitude": "16.3",
+                "MaxWindSpeed": "28",
+                "MaxGustSpeed": "35",
+                "Pressure": "980",
+                "MovingSpeed": "11",
+                "MovingDirection": "NNW",
+                "Circle15ms": {
+                  "Radius": "180",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "130",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "180",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-30T08:00:00+08:00",
+                "CoordinateLongitude": "130.4",
+                "CoordinateLatitude": "17.5",
+                "MaxWindSpeed": "28",
+                "MaxGustSpeed": "35",
+                "Pressure": "980",
+                "MovingSpeed": "27",
+                "MovingDirection": "NW",
+                "Circle15ms": {
+                  "Radius": "180",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "130",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "180",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-30T14:00:00+08:00",
+                "CoordinateLongitude": "129.6",
+                "CoordinateLatitude": "18.1",
+                "MaxWindSpeed": "28",
+                "MaxGustSpeed": "35",
+                "Pressure": "980",
+                "MovingSpeed": "18",
+                "MovingDirection": "NW",
+                "Circle15ms": {
+                  "Radius": "180",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "130",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "180",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-30T20:00:00+08:00",
+                "CoordinateLongitude": "129.0",
+                "CoordinateLatitude": "19.0",
+                "MaxWindSpeed": "28",
+                "MaxGustSpeed": "35",
+                "Pressure": "980",
+                "MovingSpeed": "20",
+                "MovingDirection": "NNW",
+                "Circle15ms": {
+                  "Radius": "180",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "130",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "180",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-31T02:00:00+08:00",
+                "CoordinateLongitude": "128.3",
+                "CoordinateLatitude": "20.1",
+                "MaxWindSpeed": "30",
+                "MaxGustSpeed": "38",
+                "Pressure": "975",
+                "MovingSpeed": "24",
+                "MovingDirection": "NNW",
+                "Circle15ms": {
+                  "Radius": "200",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "150",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "230",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "230",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "200",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                },
+                "Circle25ms": {
+                  "Radius": "70",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "50",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "80",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "80",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "70",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-31T08:00:00+08:00",
+                "CoordinateLongitude": "128.1",
+                "CoordinateLatitude": "21.0",
+                "MaxWindSpeed": "33",
+                "MaxGustSpeed": "43",
+                "Pressure": "970",
+                "MovingSpeed": "17",
+                "MovingDirection": "NNW",
+                "Circle15ms": {
+                  "Radius": "220",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "250",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "220",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "180",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "220",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                },
+                "Circle25ms": {
+                  "Radius": "70",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "80",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "70",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "60",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "70",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-31T14:00:00+08:00",
+                "CoordinateLongitude": "127.9",
+                "CoordinateLatitude": "21.9",
+                "MaxWindSpeed": "33",
+                "MaxGustSpeed": "43",
+                "Pressure": "970",
+                "MovingSpeed": "17",
+                "MovingDirection": "NNW",
+                "Circle15ms": {
+                  "Radius": "220",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "250",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "220",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "180",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "220",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                },
+                "Circle25ms": {
+                  "Radius": "70",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "80",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "70",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "60",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "70",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-05-31T20:00:00+08:00",
+                "CoordinateLongitude": "127.5",
+                "CoordinateLatitude": "22.8",
+                "MaxWindSpeed": "33",
+                "MaxGustSpeed": "43",
+                "Pressure": "970",
+                "MovingSpeed": "18",
+                "MovingDirection": "NNW",
+                "Circle15ms": {
+                  "Radius": "220",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "250",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "220",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "180",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "220",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                },
+                "Circle25ms": {
+                  "Radius": "70",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "80",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "70",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "60",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "70",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-06-01T02:00:00+08:00",
+                "CoordinateLongitude": "127.3",
+                "CoordinateLatitude": "23.4",
+                "MaxWindSpeed": "35",
+                "MaxGustSpeed": "45",
+                "Pressure": "965",
+                "MovingSpeed": "12",
+                "MovingDirection": "NNW",
+                "Circle15ms": {
+                  "Radius": "250",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "260",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "260",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "240",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "240",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                },
+                "Circle25ms": {
+                  "Radius": "80",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "90",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "90",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "60",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "80",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-06-01T08:00:00+08:00",
+                "CoordinateLongitude": "127.3",
+                "CoordinateLatitude": "24.5",
+                "MaxWindSpeed": "33",
+                "MaxGustSpeed": "43",
+                "Pressure": "970",
+                "MovingSpeed": "20",
+                "MovingDirection": "N",
+                "Circle15ms": {
+                  "Radius": "250",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "280",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "280",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "220",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "220",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                },
+                "Circle25ms": {
+                  "Radius": "80",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "100",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "100",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "50",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "50",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-06-01T14:00:00+08:00",
+                "CoordinateLongitude": "127.3",
+                "CoordinateLatitude": "25.5",
+                "MaxWindSpeed": "30",
+                "MaxGustSpeed": "38",
+                "Pressure": "975",
+                "MovingSpeed": "18",
+                "MovingDirection": "N",
+                "Circle15ms": {
+                  "Radius": "220",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "250",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "250",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "180",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "180",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                },
+                "Circle25ms": {
+                  "Radius": "80",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "100",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "100",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "50",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "50",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-06-01T20:00:00+08:00",
+                "CoordinateLongitude": "127.6",
+                "CoordinateLatitude": "26.5",
+                "MaxWindSpeed": "30",
+                "MaxGustSpeed": "38",
+                "Pressure": "975",
+                "MovingSpeed": "19",
+                "MovingDirection": "NNE",
+                "Circle15ms": {
+                  "Radius": "220",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "280",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "280",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "140",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "190",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                },
+                "Circle25ms": {
+                  "Radius": "70",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "90",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "90",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "50",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "60",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-06-02T02:00:00+08:00",
+                "CoordinateLongitude": "128.3",
+                "CoordinateLatitude": "28.0",
+                "MaxWindSpeed": "28",
+                "MaxGustSpeed": "35",
+                "Pressure": "980",
+                "MovingSpeed": "30",
+                "MovingDirection": "NNE",
+                "Circle15ms": {
+                  "Radius": "220",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "240",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "250",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "230",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "170",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-06-02T08:00:00+08:00",
+                "CoordinateLongitude": "129.3",
+                "CoordinateLatitude": "29.2",
+                "MaxWindSpeed": "25",
+                "MaxGustSpeed": "33",
+                "Pressure": "985",
+                "MovingSpeed": "28",
+                "MovingDirection": "NE",
+                "Circle15ms": {
+                  "Radius": "220",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "240",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "250",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "170",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-06-02T14:00:00+08:00",
+                "CoordinateLongitude": "130.5",
+                "CoordinateLatitude": "30.6",
+                "MaxWindSpeed": "23",
+                "MaxGustSpeed": "30",
+                "Pressure": "988",
+                "MovingSpeed": "32",
+                "MovingDirection": "NE",
+                "Circle15ms": {
+                  "Radius": "220",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "240",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "250",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "170",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-06-02T20:00:00+08:00",
+                "CoordinateLongitude": "133.0",
+                "CoordinateLatitude": "32.2",
+                "MaxWindSpeed": "23",
+                "MaxGustSpeed": "30",
+                "Pressure": "988",
+                "MovingSpeed": "49",
+                "MovingDirection": "NE",
+                "Circle15ms": {
+                  "Radius": "220",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "240",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "250",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "170",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-06-03T02:00:00+08:00",
+                "CoordinateLongitude": "135.1",
+                "CoordinateLatitude": "33.3",
+                "MaxWindSpeed": "23",
+                "MaxGustSpeed": "30",
+                "Pressure": "988",
+                "MovingSpeed": "39",
+                "MovingDirection": "ENE",
+                "Circle15ms": {
+                  "Radius": "220",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "240",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "250",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "170",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-06-03T08:00:00+08:00",
+                "CoordinateLongitude": "137.7",
+                "CoordinateLatitude": "34.1",
+                "MaxWindSpeed": "20",
+                "MaxGustSpeed": "28",
+                "Pressure": "990",
+                "MovingSpeed": "43",
+                "MovingDirection": "ENE",
+                "Circle15ms": {
+                  "Radius": "180",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "140",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "140",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "DateTime": "2026-06-03T14:00:00+08:00",
+                "CoordinateLongitude": "141.0",
+                "CoordinateLatitude": "35.0",
+                "MaxWindSpeed": "20",
+                "MaxGustSpeed": "28",
+                "Pressure": "990",
+                "MovingSpeed": "53",
+                "MovingDirection": "ENE",
+                "MovingPrediction": [
+                  {
+                    "value": "以每小時30公里速度，向東北東進行",
+                    "lang": "zh-hant"
+                  },
+                  {
+                    "value": "ENE 30 KM/HR",
+                    "lang": "en-us"
+                  }
+                ],
+                "Circle15ms": {
+                  "Radius": "180",
+                  "QuadrantRadii": {
+                    "Radius": [
+                      {
+                        "value": "140",
+                        "dir": "NE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SE"
+                      },
+                      {
+                        "value": "210",
+                        "dir": "SW"
+                      },
+                      {
+                        "value": "140",
+                        "dir": "NW"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "ForecastData": {
+            "Fix": [
+              {
+                "InitialTime": "2026-06-03T14:00:00+08:00",
+                "ForecastHour": "6",
+                "CoordinateLongitude": "143.4",
+                "CoordinateLatitude": "35.8",
+                "MaxWindSpeed": "20",
+                "MaxGustSpeed": "28",
+                "Pressure": "990",
+                "MovingSpeed": "39",
+                "MovingDirection": "ENE",
+                "Circle15ms": {
+                  "Radius": "180"
+                },
+                "Radius70PercentProbability": "40"
+              },
+              {
+                "InitialTime": "2026-06-03T14:00:00+08:00",
+                "ForecastHour": "12",
+                "CoordinateLongitude": "145.3",
+                "CoordinateLatitude": "36.3",
+                "Pressure": "990",
+                "MovingSpeed": "30",
+                "MovingDirection": "ENE",
+                "Radius70PercentProbability": "50",
+                "StateTransfer": [
+                  {
+                    "value": "變性為溫帶氣旋",
+                    "lang": "zh-hant"
+                  },
+                  {
+                    "value": "BECOMING EXTRATROPICAL LOW",
+                    "lang": "en-us"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

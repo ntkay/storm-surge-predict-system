@@ -42,28 +42,19 @@ function App() {
   }, []);
 
   useEffect(() => {
-  const API_KEY = "CWA-F1CCC8EC-0DF3-46DB-9A48-5194FCF84C53";
-
-  fetch(
-    `https://opendata.cwa.gov.tw/api/v1/rest/datastore/W-C0034-005?Authorization=CWA-F1CCC8EC-0DF3-46DB-9A48-5194FCF84C53&format=JSON`
-  )
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error("中央氣象署颱風資料連線失敗");
-      }
-      return res.json();
-    })
+  fetch("/data/cwa_typhoon.json")
+    .then((res) => res.json())
     .then((data) => {
       console.log("中央氣象署颱風資料：", data);
       setCwaTyphoon(data);
       setCwaLoading(false);
     })
     .catch((error) => {
-      console.error(error);
-      setCwaError(error.message);
+      console.error("讀取錯誤：", error);
+      setCwaError("讀取本地中央氣象署資料失敗");
       setCwaLoading(false);
     });
-  }, []);
+}, []);
 
   const typhoonData = [
     { id: 1, name: "杜蘇芮", year: 2023, location: "高雄", wind: 50, pressure: 930, surge: 1.8 },
