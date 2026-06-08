@@ -344,38 +344,22 @@ function App() {
   );
 }
 
-const currentTyphoon =
-  cwaTyphoon?.records?.TropicalCyclones?.TropicalCyclone?.[0];
-
-if (!currentTyphoon) {
-  return null;
-}
-const latestFix =
-  currentTyphoon.AnalysisData?.Fix?.[
-    currentTyphoon.AnalysisData.Fix.length - 1
-  ];
-const wind =
-  Number(latestFix?.MaxWindSpeed || 0);
-
-const pressure =
-  Number(latestFix?.Pressure || 0);
-const wind =
-  Number(latestFix?.MaxWindSpeed || 0);
-
-const pressure =
-  Number(latestFix?.Pressure || 0);
-const predictedSurge =
-  calculatePredictedSurge(wind, pressure);
-
-const risk =
-  getRisk(wind, pressure);
-
 function LiveTyphoonPanel({ cwaTyphoon }) {
   const currentTyphoon =
     cwaTyphoon?.records?.TropicalCyclones?.TropicalCyclone?.[0];
 
-  const predictedSurge = calculatePredictedSurge(liveTyphoon.wind, liveTyphoon.pressure);
-  const risk = getRisk(liveTyphoon.wind, liveTyphoon.pressure);
+  if (!currentTyphoon) {
+    return null;
+  }
+
+  const fixes = currentTyphoon.AnalysisData?.Fix || [];
+  const latestFix = fixes[fixes.length - 1];
+
+  const wind = Number(latestFix?.MaxWindSpeed || 0);
+  const pressure = Number(latestFix?.Pressure || 0);
+
+  const predictedSurge = calculatePredictedSurge(wind, pressure);
+  const risk = getRisk(wind, pressure);
 
   return (
     <section
@@ -387,45 +371,29 @@ function LiveTyphoonPanel({ cwaTyphoon }) {
         marginBottom: "28px",
       }}
     >
+      <h2 style={{ marginTop: 0, color: "#123c66" }}>
+        中央氣象署颱風資料
+      </h2>
+
+      <h3 style={{ fontSize: "32px", color: "#123c66" }}>
+        {currentTyphoon.CwaTyphoonName || currentTyphoon.TyphoonName}颱風
+      </h3>
+
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-          gap: "24px",
-          alignItems: "center",
+          gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+          gap: "16px",
         }}
       >
-        <div>
-          <div style={{ fontSize: "14px", fontWeight: "700", color: "#64748b", marginBottom: "10px" }}>
-            即時颱風資訊
-          </div>
-
-          <h2 style={{ margin: 0, fontSize: "36px", color: "#123c66" }}>
-            {currentTyphoon.CwaTyphoonName}
-          </h2>
-
-          <p style={{ marginTop: "12px", color: "#475569", fontSize: "16px", lineHeight: 1.6 }}>
-            目前位於 {liveTyphoon.position}，持續{liveTyphoon.direction}。
-          </p>
-        </div>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
-            gap: "16px",
-          }}
-        >
-          <LiveInfoCard title="最大風速" value={`${wind} m/s`} color="#2563eb" />
-          <LiveInfoCard title="中心氣壓" value={`${pressure}yp hPa`} color="#16a34a" />
-          <LiveInfoCard title="預測暴潮" value={`${predictedSurge} m`} color="#dc2626" />
-          <LiveInfoCard title="風險等級" value={risk.label} color={risk.textColor} />
-        </div>
+        <LiveInfoCard title="最大風速" value={`${wind} m/s`} color="#2563eb" />
+        <LiveInfoCard title="中心氣壓" value={`${pressure} hPa`} color="#16a34a" />
+        <LiveInfoCard title="預測暴潮" value={`${predictedSurge} m`} color="#dc2626" />
+        <LiveInfoCard title="風險等級" value={risk.label} color={risk.textColor} />
       </div>
     </section>
   );
 }
-
 function LiveInfoCard({ title, value, color }) {
   return (
     <div
