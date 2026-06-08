@@ -42,7 +42,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-  fetch("/data/cwa_typhoon.json")
+  fetch("/cwa_typhoon.json")
     .then((res) => res.json())
     .then((data) => {
       console.log("中央氣象署颱風資料：", data);
