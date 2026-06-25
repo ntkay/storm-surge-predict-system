@@ -708,7 +708,7 @@ function TyphoonMap({ typhoonPath }) {
       </h2>
 
         <MapContainer
-          center={[23.9, 122.35]}
+          center={[23.9, 122.6]}
           zoom={7}
           minZoom={7}
           maxZoom={9}
