@@ -709,12 +709,12 @@ function TyphoonMap({ typhoonPath }) {
 
       <MapContainer
         center={[23.8, 121]}
-        zoom={7}
+        zoom={7.3}
         minZoom={6}
         maxZoom={10}
         maxBounds={[
-          [20.5, 118.0], // 西南角
-          [27.5, 124.8], // 東北角
+          [20.5, 119.3], // 西南角
+          [27.2, 124.8], // 東北角
         ]}
         maxBoundsViscosity={1.0}
         scrollWheelZoom={true}
