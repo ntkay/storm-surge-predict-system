@@ -730,6 +730,10 @@ function TyphoonMap({ typhoonPath }) {
             }, 100);
           }}
         >
+        <TileLayer
+          attribution='&copy; OpenStreetMap contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
 
         <Polyline
           positions={typhoonPath}
