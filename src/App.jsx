@@ -707,32 +707,29 @@ function TyphoonMap({ typhoonPath }) {
         🌀 台灣颱風路徑追蹤
       </h2>
 
-      <MapContainer
-        center={[23.8, 121]}
-        zoom={7.3}
-        minZoom={6}
-        maxZoom={10}
-        maxBounds={[
-          [20.5, 119.3], // 西南角
-          [27.2, 124.8], // 東北角
-        ]}
-        maxBoundsViscosity={1.0}
-        scrollWheelZoom={true}
-        style={{
-          height: "500px",
-          width: "100%",
-          borderRadius: "20px",
-        }}
-        whenReady={() => {
-          setTimeout(() => {
-            window.dispatchEvent(new Event("resize"));
-          }, 100);
-        }}
-      >
-        <TileLayer
-          attribution="&copy; OpenStreetMap contributors"
-          url="https://tile.openstreetmap.de/{z}/{x}/{y}.png"
-      />
+        <MapContainer
+          center={[23.9, 122.35]}
+          zoom={7}
+          minZoom={7}
+          maxZoom={9}
+          scrollWheelZoom={true}
+          maxBounds={[
+            [20.7, 119.2],
+            [26.6, 125.0],
+          ]}
+          maxBoundsViscosity={1.0}
+          style={{
+            height: "560px",
+            width: "100%",
+            borderRadius: "20px",
+            zIndex: 1,
+          }}
+          whenReady={() => {
+            setTimeout(() => {
+              window.dispatchEvent(new Event("resize"));
+            }, 100);
+          }}
+        >
 
         <Polyline
           positions={typhoonPath}
