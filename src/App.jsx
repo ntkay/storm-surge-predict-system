@@ -712,17 +712,16 @@ function TyphoonMap({ typhoonPath }) {
         zoom={7}
         minZoom={6}
         maxZoom={10}
-        scrollWheelZoom={true}
         maxBounds={[
-          [20.5, 117.5],
-          [27.5, 124.5],
+          [20.5, 118.0], // 西南角
+          [27.5, 124.8], // 東北角
         ]}
         maxBoundsViscosity={1.0}
+        scrollWheelZoom={true}
         style={{
-          height: "560px",
+          height: "500px",
           width: "100%",
           borderRadius: "20px",
-          zIndex: 1,
         }}
         whenReady={() => {
           setTimeout(() => {
@@ -789,6 +788,7 @@ function TyphoonMap({ typhoonPath }) {
 }
 
 function CwaTyphoonPanel({ data, loading, error }) {
+  
   const datasetDescription =
     data?.records?.datasetDescription ||
     data?.records?.dataid ||
