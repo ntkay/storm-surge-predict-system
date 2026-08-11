@@ -71,22 +71,29 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("/data/cwa_typhoon.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`即時資料 HTTP ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setCwaTyphoon(data);
-        setCwaLoading(false);
-      })
-      .catch((error) => {
-        console.error("讀取中央氣象署資料失敗：", error);
-        setCwaError("讀取中央氣象署即時資料失敗");
-        setCwaLoading(false);
-      });
+    const fetchCwaData = () => {
+      fetch(`/data/cwa_typhoon.json?t=${Date.now()}`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`即時資料 HTTP ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setCwaTyphoon(data);
+          setCwaLoading(false);
+          setCwaError("");
+        })
+        .catch((error) => {
+          console.error("讀取中央氣象署資料失敗：", error);
+          setCwaError("讀取中央氣象署即時資料失敗");
+          setCwaLoading(false);
+        });
+    };
+
+    fetchCwaData();
+    const timer = window.setInterval(fetchCwaData, 5 * 60 * 1000);
+    return () => window.clearInterval(timer);
   }, []);
 
   useEffect(() => {
@@ -124,6 +131,26 @@ function App() {
           Number(fix.CoordinateLongitude),
         ])
         .filter(([lat, lon]) => Number.isFinite(lat) && Number.isFinite(lon)),
+    [liveFixes]
+  );
+
+  const liveTrackPoints = useMemo(
+    () =>
+      liveFixes
+        .map((fix) => ({
+          position: [
+            Number(fix.CoordinateLatitude),
+            Number(fix.CoordinateLongitude),
+          ],
+          time: fix.DateTime ?? "—",
+          wind: fix.MaxWindSpeed ?? null,
+          pressure: fix.Pressure ?? null,
+        }))
+        .filter(
+          (point) =>
+            Number.isFinite(point.position[0]) &&
+            Number.isFinite(point.position[1])
+        ),
     [liveFixes]
   );
 
@@ -175,6 +202,23 @@ function App() {
       selectedTrack
         .map((point) => [Number(point.lat), Number(point.lon)])
         .filter(([lat, lon]) => Number.isFinite(lat) && Number.isFinite(lon)),
+    [selectedTrack]
+  );
+
+  const selectedTrackPoints = useMemo(
+    () =>
+      selectedTrack
+        .map((point) => ({
+          position: [Number(point.lat), Number(point.lon)],
+          time: point.time ?? "—",
+          wind: point.wind ?? null,
+          pressure: point.pressure ?? null,
+        }))
+        .filter(
+          (point) =>
+            Number.isFinite(point.position[0]) &&
+            Number.isFinite(point.position[1])
+        ),
     [selectedTrack]
   );
 
@@ -259,8 +303,10 @@ function App() {
         <TyphoonMap
           title="中央氣象署即時颱風路徑"
           path={livePath}
+          trackPoints={liveTrackPoints}
           emptyText="目前沒有可顯示的即時颱風路徑"
-          latestPoint={livePath.at(-1)}
+          windUnit="m/s"
+          showAllPoints
         />
 
         <section style={cardStyle}>
@@ -396,14 +442,16 @@ function App() {
         </section>
 
         <TyphoonMap
+          key={selectedTyphoon?.sid || "history-empty"}
           title={
             selectedTyphoon
               ? `${selectedTyphoon.name}（${selectedTyphoon.year}）歷史路徑`
               : "歷史颱風路徑"
           }
           path={selectedPath}
+          trackPoints={selectedTrackPoints}
           emptyText="請先選擇一筆歷史颱風"
-          latestPoint={selectedPath.at(-1)}
+          windUnit="kt"
           showAllPoints={false}
         />
 
@@ -531,19 +579,56 @@ function LiveTyphoonPanel({
 function TyphoonMap({
   title,
   path,
+  trackPoints = [],
   emptyText,
-  latestPoint,
+  windUnit = "",
   showAllPoints = true,
 }) {
   const validPath = Array.isArray(path) ? path : [];
+  const [playIndex, setPlayIndex] = useState(validPath.length || 0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [speed, setSpeed] = useState(1);
+
+  useEffect(() => {
+    setIsPlaying(false);
+    setPlayIndex(validPath.length || 0);
+  }, [validPath]);
+
+  useEffect(() => {
+    if (!isPlaying || validPath.length === 0) return;
+
+    const timer = window.setInterval(() => {
+      setPlayIndex((prev) => {
+        if (prev >= validPath.length) {
+          setIsPlaying(false);
+          return validPath.length;
+        }
+        return prev + 1;
+      });
+    }, Math.max(80, 600 / speed));
+
+    return () => window.clearInterval(timer);
+  }, [isPlaying, speed, validPath.length]);
+
+  const visibleCount = Math.max(0, Math.min(playIndex, validPath.length));
+  const animatedPath = validPath.slice(0, visibleCount);
+  const currentPoint = visibleCount > 0 ? validPath[visibleCount - 1] : null;
+  const currentInfo = visibleCount > 0 ? trackPoints[visibleCount - 1] ?? null : null;
+
   const displayMarkers = showAllPoints
-    ? validPath
-    : validPath.filter(
+    ? animatedPath
+    : animatedPath.filter(
         (_, index) =>
           index === 0 ||
-          index === validPath.length - 1 ||
-          index % Math.max(1, Math.floor(validPath.length / 20)) === 0
+          index === animatedPath.length - 1 ||
+          index % Math.max(1, Math.floor(Math.max(animatedPath.length, 1) / 20)) === 0
       );
+
+  const startPlayback = () => {
+    if (!validPath.length) return;
+    if (playIndex >= validPath.length) setPlayIndex(1);
+    setIsPlaying(true);
+  };
 
   return (
     <section style={{ ...cardStyle, overflow: "hidden" }}>
@@ -552,73 +637,179 @@ function TyphoonMap({
       {validPath.length === 0 ? (
         <div style={emptyStyle}>{emptyText}</div>
       ) : (
-        <MapContainer
-          center={[23.8, 122.2]}
-          zoom={6}
-          minZoom={3}
-          maxZoom={10}
-          scrollWheelZoom
-          style={{
-            height: "560px",
-            width: "100%",
-            borderRadius: "20px",
-            zIndex: 1,
-          }}
-        >
-          <TileLayer
-            attribution="&copy; OpenStreetMap contributors"
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
+        <>
+          <div style={animationPanelStyle}>
+            <div style={animationButtonRowStyle}>
+              <button
+                type="button"
+                onClick={() => (isPlaying ? setIsPlaying(false) : startPlayback())}
+                style={primaryButtonStyle}
+              >
+                {isPlaying ? "⏸ 暫停" : "▶ 播放"}
+              </button>
 
-          <FitMapToPath path={validPath} />
+              <button
+                type="button"
+                onClick={() => {
+                  setIsPlaying(false);
+                  setPlayIndex(1);
+                }}
+                style={secondaryButtonStyle}
+              >
+                ↺ 重新播放
+              </button>
 
-          <Polyline
-            positions={validPath}
-            pathOptions={{ color: "#2563eb", weight: 4 }}
-          />
+              <button
+                type="button"
+                onClick={() => {
+                  setIsPlaying(false);
+                  setPlayIndex(validPath.length);
+                }}
+                style={secondaryButtonStyle}
+              >
+                顯示完整路徑
+              </button>
 
-          {displayMarkers.map((position, index) => (
-            <Marker key={`${position[0]}-${position[1]}-${index}`} position={position}>
-              <Popup>
-                緯度：{position[0]}
-                <br />
-                經度：{position[1]}
-              </Popup>
-            </Marker>
-          ))}
+              <label style={speedLabelStyle}>
+                播放速度
+                <select
+                  value={speed}
+                  onChange={(event) => setSpeed(Number(event.target.value))}
+                  style={speedSelectStyle}
+                >
+                  <option value={0.5}>0.5×</option>
+                  <option value={1}>1×</option>
+                  <option value={2}>2×</option>
+                  <option value={4}>4×</option>
+                </select>
+              </label>
+            </div>
 
-          {latestPoint && (
-            <Marker position={latestPoint}>
-              <Popup>最新／最後位置</Popup>
-            </Marker>
-          )}
+            <div style={progressRowStyle}>
+              <input
+                type="range"
+                min="1"
+                max={validPath.length}
+                value={Math.max(1, visibleCount)}
+                onChange={(event) => {
+                  setIsPlaying(false);
+                  setPlayIndex(Number(event.target.value));
+                }}
+                style={{ width: "100%" }}
+              />
+              <span style={progressTextStyle}>
+                {visibleCount} / {validPath.length}
+              </span>
+            </div>
 
-          {TAIWAN_COUNTIES.map((county) => (
-            <Marker
-              key={county.name}
-              position={county.position}
-              opacity={0}
-              interactive={false}
-            >
-              <Tooltip permanent direction="center" className="county-label">
-                {county.name}
-              </Tooltip>
-            </Marker>
-          ))}
+            {currentInfo && (
+              <div style={currentInfoGridStyle}>
+                <MiniInfo title="時間" value={formatDateTime(currentInfo.time)} />
+                <MiniInfo
+                  title="風速"
+                  value={
+                    currentInfo.wind == null
+                      ? "—"
+                      : `${currentInfo.wind} ${windUnit}`
+                  }
+                />
+                <MiniInfo
+                  title="氣壓"
+                  value={
+                    currentInfo.pressure == null
+                      ? "—"
+                      : `${currentInfo.pressure} hPa`
+                  }
+                />
+                <MiniInfo
+                  title="位置"
+                  value={
+                    currentPoint
+                      ? `${currentPoint[0].toFixed(2)}, ${currentPoint[1].toFixed(2)}`
+                      : "—"
+                  }
+                />
+              </div>
+            )}
+          </div>
 
-          {NEARBY_CITIES.map((city) => (
-            <Marker
-              key={city.name}
-              position={city.position}
-              opacity={0}
-              interactive={false}
-            >
-              <Tooltip permanent direction="center" className="county-label">
-                {city.name}
-              </Tooltip>
-            </Marker>
-          ))}
-        </MapContainer>
+          <MapContainer
+            center={[23.8, 122.2]}
+            zoom={6}
+            minZoom={3}
+            maxZoom={10}
+            scrollWheelZoom
+            style={{
+              height: "560px",
+              width: "100%",
+              borderRadius: "20px",
+              zIndex: 1,
+            }}
+          >
+            <TileLayer
+              attribution="&copy; OpenStreetMap contributors"
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+
+            <FitMapToPath path={validPath} />
+
+            <Polyline
+              positions={animatedPath}
+              pathOptions={{ color: "#2563eb", weight: 4 }}
+            />
+
+            {displayMarkers.map((position, index) => (
+              <Marker key={`${position[0]}-${position[1]}-${index}`} position={position}>
+                <Popup>
+                  緯度：{position[0]}
+                  <br />
+                  經度：{position[1]}
+                </Popup>
+              </Marker>
+            ))}
+
+            {currentPoint && (
+              <Marker position={currentPoint}>
+                <Popup>
+                  <strong>目前播放位置</strong>
+                  <br />
+                  路徑點：{visibleCount} / {validPath.length}
+                  {currentInfo?.time && <><br />時間：{formatDateTime(currentInfo.time)}</>}
+                  {currentInfo?.wind != null && <><br />風速：{currentInfo.wind} {windUnit}</>}
+                  {currentInfo?.pressure != null && <><br />氣壓：{currentInfo.pressure} hPa</>}
+                </Popup>
+              </Marker>
+            )}
+
+            <FollowAnimatedPoint point={currentPoint} isPlaying={isPlaying} />
+
+            {TAIWAN_COUNTIES.map((county) => (
+              <Marker
+                key={county.name}
+                position={county.position}
+                opacity={0}
+                interactive={false}
+              >
+                <Tooltip permanent direction="center" className="county-label">
+                  {county.name}
+                </Tooltip>
+              </Marker>
+            ))}
+
+            {NEARBY_CITIES.map((city) => (
+              <Marker
+                key={city.name}
+                position={city.position}
+                opacity={0}
+                interactive={false}
+              >
+                <Tooltip permanent direction="center" className="county-label">
+                  {city.name}
+                </Tooltip>
+              </Marker>
+            ))}
+          </MapContainer>
+        </>
       )}
     </section>
   );
@@ -642,6 +833,30 @@ function FitMapToPath({ path }) {
   }, [map, path]);
 
   return null;
+}
+
+function FollowAnimatedPoint({ point, isPlaying }) {
+  const map = useMap();
+
+  useEffect(() => {
+    if (!isPlaying || !point) return;
+    map.panTo(point, { animate: true, duration: 0.35 });
+  }, [map, point, isPlaying]);
+
+  return null;
+}
+
+function MiniInfo({ title, value }) {
+  return (
+    <div style={miniInfoStyle}>
+      <div style={{ color: "#64748b", fontSize: "12px", fontWeight: 700 }}>
+        {title}
+      </div>
+      <div style={{ color: "#123c66", fontSize: "15px", fontWeight: 800, marginTop: "5px" }}>
+        {value}
+      </div>
+    </div>
+  );
 }
 
 function InfoCard({ title, value, sub, accent }) {
@@ -934,6 +1149,87 @@ const tableStyle = {
   width: "100%",
   minWidth: "720px",
   borderCollapse: "collapse",
+};
+
+const animationPanelStyle = {
+  background: "#f8fafc",
+  border: "1px solid #e2e8f0",
+  borderRadius: "18px",
+  padding: "16px",
+  margin: "14px 0 18px",
+};
+
+const animationButtonRowStyle = {
+  display: "flex",
+  alignItems: "center",
+  flexWrap: "wrap",
+  gap: "10px",
+};
+
+const primaryButtonStyle = {
+  border: "none",
+  borderRadius: "10px",
+  padding: "10px 16px",
+  background: "#2563eb",
+  color: "#fff",
+  fontWeight: 800,
+  cursor: "pointer",
+};
+
+const secondaryButtonStyle = {
+  border: "1px solid #cbd5e1",
+  borderRadius: "10px",
+  padding: "10px 16px",
+  background: "#fff",
+  color: "#334155",
+  fontWeight: 700,
+  cursor: "pointer",
+};
+
+const speedLabelStyle = {
+  display: "flex",
+  alignItems: "center",
+  gap: "8px",
+  color: "#475569",
+  fontSize: "14px",
+  fontWeight: 700,
+};
+
+const speedSelectStyle = {
+  border: "1px solid #cbd5e1",
+  borderRadius: "8px",
+  padding: "8px 10px",
+  background: "#fff",
+};
+
+const progressRowStyle = {
+  display: "grid",
+  gridTemplateColumns: "1fr auto",
+  alignItems: "center",
+  gap: "12px",
+  marginTop: "14px",
+};
+
+const progressTextStyle = {
+  minWidth: "72px",
+  color: "#475569",
+  fontSize: "13px",
+  fontWeight: 800,
+  textAlign: "right",
+};
+
+const currentInfoGridStyle = {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+  gap: "10px",
+  marginTop: "14px",
+};
+
+const miniInfoStyle = {
+  background: "#fff",
+  border: "1px solid #e2e8f0",
+  borderRadius: "12px",
+  padding: "10px 12px",
 };
 
 export default App;
