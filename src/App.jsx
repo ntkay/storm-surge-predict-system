@@ -584,19 +584,24 @@ function TyphoonMap({
   windUnit = "",
   showAllPoints = true,
 }) {
+  const validPath = Array.isArray(path) ? path : [];
+
   const [playIndex, setPlayIndex] = useState(1);
   const [isPlaying, setIsPlaying] = useState(true);
   const [speed, setSpeed] = useState(1);
 
   useEffect(() => {
-  if (validPath.length > 0) {
-    setPlayIndex(1);
-    setIsPlaying(true);
-  }
-}, [validPath]);
+    if (validPath.length > 0) {
+      setPlayIndex(1);
+      setIsPlaying(true);
+    }
+  }, [path]);
 
   useEffect(() => {
     if (!isPlaying || validPath.length === 0) return;
+
+    const baseInterval = 600;
+    const interval = Math.max(80, baseInterval / speed);
 
     const timer = window.setInterval(() => {
       setPlayIndex((prev) => {
@@ -604,13 +609,13 @@ function TyphoonMap({
           setIsPlaying(false);
           return validPath.length;
         }
+
         return prev + 1;
       });
-    }, Math.max(80, 600 / speed));
+    }, interval);
 
     return () => window.clearInterval(timer);
   }, [isPlaying, speed, validPath.length]);
-
   const visibleCount = Math.max(0, Math.min(playIndex, validPath.length));
   const animatedPath = validPath.slice(0, visibleCount);
   const currentPoint = visibleCount > 0 ? validPath[visibleCount - 1] : null;
