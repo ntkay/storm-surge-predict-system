@@ -584,15 +584,16 @@ function TyphoonMap({
   windUnit = "",
   showAllPoints = true,
 }) {
-  const validPath = Array.isArray(path) ? path : [];
-  const [playIndex, setPlayIndex] = useState(validPath.length || 0);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [playIndex, setPlayIndex] = useState(1);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [speed, setSpeed] = useState(1);
 
   useEffect(() => {
-    setIsPlaying(false);
-    setPlayIndex(validPath.length || 0);
-  }, [validPath]);
+  if (validPath.length > 0) {
+    setPlayIndex(1);
+    setIsPlaying(true);
+  }
+}, [validPath]);
 
   useEffect(() => {
     if (!isPlaying || validPath.length === 0) return;
