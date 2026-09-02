@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+
 import {
   MapContainer,
   Marker,
@@ -6,9 +7,9 @@ import {
   Popup,
   TileLayer,
   Tooltip,
+  ImageOverlay,
   useMap,
 } from "react-leaflet";
-import L from "leaflet";
 
 delete L.Icon.Default.prototype._getIconUrl;
 
@@ -97,7 +98,8 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("/data/typhoons.json")
+  const fetchHistory = () => {
+    fetch(`/data/typhoons.json?t=${Date.now()}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`歷史資料 HTTP ${response.status}`);
@@ -106,16 +108,44 @@ function App() {
       })
       .then((data) => {
         const validData = Array.isArray(data) ? data : [];
+
         setHistoryTyphoons(validData);
-        setSelectedSid(validData[0]?.sid ?? "");
         setHistoryLoading(false);
+        setHistoryError("");
+
+        // 第一次沒有選擇颱風時，預設選最新年份最後一筆
+        setSelectedSid((currentSid) => {
+          if (
+            currentSid &&
+            validData.some((item) => item.sid === currentSid)
+          ) {
+            return currentSid;
+          }
+
+          const newest = [...validData].sort((a, b) => {
+            if (b.year !== a.year) return b.year - a.year;
+            return String(b.sid).localeCompare(String(a.sid));
+          })[0];
+
+          return newest?.sid ?? "";
+        });
       })
       .catch((error) => {
         console.error("讀取歷史颱風資料失敗：", error);
         setHistoryError("讀取歷史颱風資料失敗");
         setHistoryLoading(false);
       });
-  }, []);
+  };
+
+  fetchHistory();
+
+  const timer = window.setInterval(
+    fetchHistory,
+    5 * 60 * 1000
+  );
+
+  return () => window.clearInterval(timer);
+}, []);
 
   const liveCyclone =
     cwaTyphoon?.records?.TropicalCyclones?.TropicalCyclone?.[0] ?? null;
@@ -165,9 +195,10 @@ function App() {
   );
 
   const filteredHistory = useMemo(() => {
-    const keyword = historySearch.trim().toUpperCase();
+  const keyword = historySearch.trim().toUpperCase();
 
-    return historyTyphoons.filter((item) => {
+  return historyTyphoons
+    .filter((item) => {
       const matchName =
         !keyword ||
         item.name?.toUpperCase().includes(keyword) ||
@@ -178,18 +209,49 @@ function App() {
         String(item.year) === String(historyYear);
 
       return matchName && matchYear;
+    })
+    .sort((a, b) => {
+      // 即時同步進來的颱風優先
+      if (a.source === "CWA-live" && b.source !== "CWA-live") {
+        return -1;
+      }
+
+      if (b.source === "CWA-live" && a.source !== "CWA-live") {
+        return 1;
+      }
+
+      // 再依年份由新到舊
+      if (b.year !== a.year) {
+        return b.year - a.year;
+      }
+
+      // 同年份再依 SID
+      return String(b.sid).localeCompare(String(a.sid));
     });
-  }, [historyTyphoons, historySearch, historyYear]);
+}, [historyTyphoons, historySearch, historyYear]);
 
   useEffect(() => {
-    if (
-      filteredHistory.length > 0 &&
-      !filteredHistory.some((item) => item.sid === selectedSid)
-    ) {
-      setSelectedSid(filteredHistory[0].sid);
-    }
-  }, [filteredHistory, selectedSid]);
+  if (filteredHistory.length === 0) {
+    setSelectedSid("");
+    return;
+  }
 
+  const liveTyphoon = filteredHistory.find(
+    (item) => item.source === "CWA-live"
+  );
+
+  if (liveTyphoon) {
+    setSelectedSid(liveTyphoon.sid);
+    return;
+  }
+
+  if (
+    !selectedSid ||
+    !filteredHistory.some((item) => item.sid === selectedSid)
+  ) {
+    setSelectedSid(filteredHistory[0].sid);
+  }
+}, [filteredHistory]);
   const selectedTyphoon =
     historyTyphoons.find((item) => item.sid === selectedSid) ??
     filteredHistory[0] ??
@@ -756,6 +818,15 @@ function TyphoonMap({
               attribution="&copy; OpenStreetMap contributors"
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
+
+            <ImageOverlay
+            url="/data/satellite.png"
+            bounds={[
+              [5, 105],
+              [40, 150],
+            ]}
+            opacity={0.55}
+          />
 
             <FitMapToPath path={validPath} />
 
