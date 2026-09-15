@@ -1,15 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
-
 import {
   MapContainer,
+  TileLayer,
   Marker,
   Polyline,
   Popup,
-  TileLayer,
   Tooltip,
-  ImageOverlay,
-  useMap,
 } from "react-leaflet";
+import L from "leaflet";
 
 delete L.Icon.Default.prototype._getIconUrl;
 
@@ -22,34 +20,40 @@ L.Icon.Default.mergeOptions({
     "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
 });
 
-const TAIWAN_COUNTIES = [
-  { name: "基隆市", position: [25.1276, 121.7392] },
-  { name: "臺北市", position: [25.0375, 121.5637] },
-  { name: "新北市", position: [25.0169, 121.4628] },
-  { name: "桃園市", position: [24.9936, 121.301] },
-  { name: "新竹市", position: [24.8138, 120.9675] },
-  { name: "新竹縣", position: [24.839, 121.002] },
-  { name: "苗栗縣", position: [24.5602, 120.8214] },
-  { name: "臺中市", position: [24.1477, 120.6736] },
-  { name: "彰化縣", position: [24.0685, 120.5575] },
-  { name: "南投縣", position: [23.9609, 120.9719] },
-  { name: "雲林縣", position: [23.7092, 120.4313] },
-  { name: "嘉義市", position: [23.4801, 120.4491] },
-  { name: "嘉義縣", position: [23.4518, 120.2555] },
-  { name: "臺南市", position: [22.9999, 120.227] },
-  { name: "高雄市", position: [22.6273, 120.3014] },
-  { name: "屏東縣", position: [22.5519, 120.5487] },
-  { name: "宜蘭縣", position: [24.7021, 121.7378] },
-  { name: "花蓮縣", position: [23.9911, 121.6015] },
-  { name: "臺東縣", position: [22.7972, 121.0714] },
-  { name: "澎湖縣", position: [23.5712, 119.5793] },
+const BASE_URL = import.meta.env.BASE_URL;
+
+const MAP_LABELS = [
+  { name: "台灣", position: [23.7, 121.0] },
+  { name: "沖繩", position: [26.2124, 127.6792] },
+  { name: "日本", position: [35.2, 139.7] },
+  { name: "菲律賓", position: [14.6, 121.0] },
+  { name: "關島", position: [13.44, 144.79] },
+  // 用 0～360 經度，讓夏威夷出現在西太平洋畫面的右側。
+  { name: "夏威夷", position: [21.31, 202.15] },
 ];
 
-const NEARBY_CITIES = [
-  { name: "福州", position: [26.0745, 119.2965] },
-  { name: "廈門", position: [24.4798, 118.0894] },
-  { name: "沖繩", position: [26.2124, 127.6792] },
-];
+// 固定平面西太平洋視角：東亞 → 關島 → 夏威夷。
+const PACIFIC_MAP_CENTER = [21.5, 158.0];
+const PACIFIC_MAP_ZOOM = 4;
+
+// NASA GIBS 的 VIIRS 真彩色圖是平面的 Web Mercator tiles。
+// 使用前一天 UTC 日期，避免當天影像尚未完整產生而出現缺圖。
+function getGibsDate() {
+  const date = new Date(Date.now() - 24 * 60 * 60 * 1000);
+  return date.toISOString().slice(0, 10);
+}
+
+function normalizePacificLongitude(value) {
+  const lon = Number(value);
+  if (!Number.isFinite(lon)) return lon;
+  return lon < 0 ? lon + 360 : lon;
+}
+
+const GIBS_DATE = getGibsDate();
+const PACIFIC_SATELLITE_URL =
+  `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/` +
+  `VIIRS_SNPP_CorrectedReflectance_TrueColor/default/${GIBS_DATE}/` +
+  `GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg`;
 
 function App() {
   const [now, setNow] = useState(new Date());
@@ -73,7 +77,7 @@ function App() {
 
   useEffect(() => {
     const fetchCwaData = () => {
-      fetch(`/data/cwa_typhoon.json?t=${Date.now()}`)
+      fetch(`${BASE_URL}data/cwa_typhoon.json?t=${Date.now()}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error(`即時資料 HTTP ${response.status}`);
@@ -98,8 +102,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-  const fetchHistory = () => {
-    fetch(`/data/typhoons.json?t=${Date.now()}`)
+    fetch(`${BASE_URL}data/typhoons.json?t=${Date.now()}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`歷史資料 HTTP ${response.status}`);
@@ -108,44 +111,16 @@ function App() {
       })
       .then((data) => {
         const validData = Array.isArray(data) ? data : [];
-
         setHistoryTyphoons(validData);
+        setSelectedSid("");
         setHistoryLoading(false);
-        setHistoryError("");
-
-        // 第一次沒有選擇颱風時，預設選最新年份最後一筆
-        setSelectedSid((currentSid) => {
-          if (
-            currentSid &&
-            validData.some((item) => item.sid === currentSid)
-          ) {
-            return currentSid;
-          }
-
-          const newest = [...validData].sort((a, b) => {
-            if (b.year !== a.year) return b.year - a.year;
-            return String(b.sid).localeCompare(String(a.sid));
-          })[0];
-
-          return newest?.sid ?? "";
-        });
       })
       .catch((error) => {
         console.error("讀取歷史颱風資料失敗：", error);
         setHistoryError("讀取歷史颱風資料失敗");
         setHistoryLoading(false);
       });
-  };
-
-  fetchHistory();
-
-  const timer = window.setInterval(
-    fetchHistory,
-    5 * 60 * 1000
-  );
-
-  return () => window.clearInterval(timer);
-}, []);
+  }, []);
 
   const liveCyclone =
     cwaTyphoon?.records?.TropicalCyclones?.TropicalCyclone?.[0] ?? null;
@@ -158,7 +133,7 @@ function App() {
       liveFixes
         .map((fix) => [
           Number(fix.CoordinateLatitude),
-          Number(fix.CoordinateLongitude),
+          normalizePacificLongitude(fix.CoordinateLongitude),
         ])
         .filter(([lat, lon]) => Number.isFinite(lat) && Number.isFinite(lon)),
     [liveFixes]
@@ -170,7 +145,7 @@ function App() {
         .map((fix) => ({
           position: [
             Number(fix.CoordinateLatitude),
-            Number(fix.CoordinateLongitude),
+            normalizePacificLongitude(fix.CoordinateLongitude),
           ],
           time: fix.DateTime ?? "—",
           wind: fix.MaxWindSpeed ?? null,
@@ -195,63 +170,54 @@ function App() {
   );
 
   const filteredHistory = useMemo(() => {
-  const keyword = historySearch.trim().toUpperCase();
+    const keyword = historySearch.trim().toUpperCase();
 
-  return historyTyphoons
-    .filter((item) => {
-      const matchName =
-        !keyword ||
-        item.name?.toUpperCase().includes(keyword) ||
-        item.sid?.toUpperCase().includes(keyword);
+    return historyTyphoons
+      .filter((item) => {
+        const matchName =
+          !keyword ||
+          item.name?.toUpperCase().includes(keyword) ||
+          item.sid?.toUpperCase().includes(keyword);
 
-      const matchYear =
-        historyYear === "全部" ||
-        String(item.year) === String(historyYear);
+        const matchYear =
+          historyYear === "全部" ||
+          String(item.year) === String(historyYear);
 
-      return matchName && matchYear;
-    })
-    .sort((a, b) => {
-      // 即時同步進來的颱風優先
-      if (a.source === "CWA-live" && b.source !== "CWA-live") {
-        return -1;
-      }
+        return matchName && matchYear;
+      })
+      .sort((a, b) => {
+        if (a.source === "CWA-live" && b.source !== "CWA-live") return -1;
+        if (b.source === "CWA-live" && a.source !== "CWA-live") return 1;
 
-      if (b.source === "CWA-live" && a.source !== "CWA-live") {
-        return 1;
-      }
+        if (Number(b.year) !== Number(a.year)) {
+          return Number(b.year) - Number(a.year);
+        }
 
-      // 再依年份由新到舊
-      if (b.year !== a.year) {
-        return b.year - a.year;
-      }
-
-      // 同年份再依 SID
-      return String(b.sid).localeCompare(String(a.sid));
-    });
-}, [historyTyphoons, historySearch, historyYear]);
+        return String(b.sid ?? "").localeCompare(String(a.sid ?? ""));
+      });
+  }, [historyTyphoons, historySearch, historyYear]);
 
   useEffect(() => {
-  if (filteredHistory.length === 0) {
-    setSelectedSid("");
-    return;
-  }
+    if (filteredHistory.length === 0) {
+      setSelectedSid("");
+      return;
+    }
 
-  const liveTyphoon = filteredHistory.find(
-    (item) => item.source === "CWA-live"
-  );
+    const selectedStillVisible =
+      selectedSid &&
+      filteredHistory.some((item) => item.sid === selectedSid);
 
-  if (liveTyphoon) {
-    setSelectedSid(liveTyphoon.sid);
-    return;
-  }
+    if (selectedStillVisible) return;
 
-  if (
-    !selectedSid ||
-    !filteredHistory.some((item) => item.sid === selectedSid)
-  ) {
-    setSelectedSid(filteredHistory[0].sid);
-  }
-}, [filteredHistory]);
+    const liveTyphoon = filteredHistory.find(
+      (item) => item.source === "CWA-live"
+    );
+
+    setSelectedSid(
+      liveTyphoon?.sid ?? filteredHistory[0].sid
+    );
+  }, [filteredHistory, selectedSid]);
+
   const selectedTyphoon =
     historyTyphoons.find((item) => item.sid === selectedSid) ??
     filteredHistory[0] ??
@@ -262,7 +228,10 @@ function App() {
   const selectedPath = useMemo(
     () =>
       selectedTrack
-        .map((point) => [Number(point.lat), Number(point.lon)])
+        .map((point) => [
+          Number(point.lat),
+          normalizePacificLongitude(point.lon),
+        ])
         .filter(([lat, lon]) => Number.isFinite(lat) && Number.isFinite(lon)),
     [selectedTrack]
   );
@@ -271,7 +240,10 @@ function App() {
     () =>
       selectedTrack
         .map((point) => ({
-          position: [Number(point.lat), Number(point.lon)],
+          position: [
+            Number(point.lat),
+            normalizePacificLongitude(point.lon),
+          ],
           time: point.time ?? "—",
           wind: point.wind ?? null,
           pressure: point.pressure ?? null,
@@ -648,22 +620,24 @@ function TyphoonMap({
 }) {
   const validPath = Array.isArray(path) ? path : [];
 
-  const [playIndex, setPlayIndex] = useState(1);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [playIndex, setPlayIndex] = useState(
+    validPath.length > 0 ? 1 : 0
+  );
+  const [isPlaying, setIsPlaying] = useState(validPath.length > 0);
   const [speed, setSpeed] = useState(1);
 
   useEffect(() => {
     if (validPath.length > 0) {
       setPlayIndex(1);
       setIsPlaying(true);
+    } else {
+      setPlayIndex(0);
+      setIsPlaying(false);
     }
   }, [path]);
 
   useEffect(() => {
     if (!isPlaying || validPath.length === 0) return;
-
-    const baseInterval = 600;
-    const interval = Math.max(80, baseInterval / speed);
 
     const timer = window.setInterval(() => {
       setPlayIndex((prev) => {
@@ -674,14 +648,24 @@ function TyphoonMap({
 
         return prev + 1;
       });
-    }, interval);
+    }, Math.max(100, 700 / speed));
 
     return () => window.clearInterval(timer);
   }, [isPlaying, speed, validPath.length]);
-  const visibleCount = Math.max(0, Math.min(playIndex, validPath.length));
+
+  const visibleCount = Math.max(
+    0,
+    Math.min(playIndex, validPath.length)
+  );
+
   const animatedPath = validPath.slice(0, visibleCount);
-  const currentPoint = visibleCount > 0 ? validPath[visibleCount - 1] : null;
-  const currentInfo = visibleCount > 0 ? trackPoints[visibleCount - 1] ?? null : null;
+  const currentPoint =
+    visibleCount > 0 ? validPath[visibleCount - 1] : null;
+
+  const currentInfo =
+    visibleCount > 0
+      ? trackPoints[visibleCount - 1] ?? null
+      : null;
 
   const displayMarkers = showAllPoints
     ? animatedPath
@@ -689,12 +673,23 @@ function TyphoonMap({
         (_, index) =>
           index === 0 ||
           index === animatedPath.length - 1 ||
-          index % Math.max(1, Math.floor(Math.max(animatedPath.length, 1) / 20)) === 0
+          index %
+            Math.max(
+              1,
+              Math.floor(
+                Math.max(animatedPath.length, 1) / 20
+              )
+            ) ===
+            0
       );
 
   const startPlayback = () => {
     if (!validPath.length) return;
-    if (playIndex >= validPath.length) setPlayIndex(1);
+
+    if (playIndex >= validPath.length) {
+      setPlayIndex(1);
+    }
+
     setIsPlaying(true);
   };
 
@@ -702,225 +697,251 @@ function TyphoonMap({
     <section style={{ ...cardStyle, overflow: "hidden" }}>
       <h2 style={sectionTitleStyle}>🌀 {title}</h2>
 
-      {validPath.length === 0 ? (
-        <div style={emptyStyle}>{emptyText}</div>
-      ) : (
-        <>
-          <div style={animationPanelStyle}>
-            <div style={animationButtonRowStyle}>
-              <button
-                type="button"
-                onClick={() => (isPlaying ? setIsPlaying(false) : startPlayback())}
-                style={primaryButtonStyle}
+      <div style={satelliteStatusStyle}>
+        <span>🛰 NASA GIBS VIIRS 真彩色平面衛星圖</span>
+        <span>{GIBS_DATE} · 固定西太平洋視角（含夏威夷）</span>
+      </div>
+
+      {validPath.length > 0 ? (
+        <div style={animationPanelStyle}>
+          <div style={animationButtonRowStyle}>
+            <button
+              type="button"
+              onClick={() =>
+                isPlaying
+                  ? setIsPlaying(false)
+                  : startPlayback()
+              }
+              style={primaryButtonStyle}
+            >
+              {isPlaying ? "⏸ 暫停" : "▶ 播放"}
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                setPlayIndex(1);
+                setIsPlaying(true);
+              }}
+              style={secondaryButtonStyle}
+            >
+              ↺ 重新播放
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                setIsPlaying(false);
+                setPlayIndex(validPath.length);
+              }}
+              style={secondaryButtonStyle}
+            >
+              顯示完整路徑
+            </button>
+
+            <label style={speedLabelStyle}>
+              播放速度
+              <select
+                value={speed}
+                onChange={(event) =>
+                  setSpeed(Number(event.target.value))
+                }
+                style={speedSelectStyle}
               >
-                {isPlaying ? "⏸ 暫停" : "▶ 播放"}
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  setIsPlaying(false);
-                  setPlayIndex(1);
-                }}
-                style={secondaryButtonStyle}
-              >
-                ↺ 重新播放
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  setIsPlaying(false);
-                  setPlayIndex(validPath.length);
-                }}
-                style={secondaryButtonStyle}
-              >
-                顯示完整路徑
-              </button>
-
-              <label style={speedLabelStyle}>
-                播放速度
-                <select
-                  value={speed}
-                  onChange={(event) => setSpeed(Number(event.target.value))}
-                  style={speedSelectStyle}
-                >
-                  <option value={0.5}>0.5×</option>
-                  <option value={1}>1×</option>
-                  <option value={2}>2×</option>
-                  <option value={4}>4×</option>
-                </select>
-              </label>
-            </div>
-
-            <div style={progressRowStyle}>
-              <input
-                type="range"
-                min="1"
-                max={validPath.length}
-                value={Math.max(1, visibleCount)}
-                onChange={(event) => {
-                  setIsPlaying(false);
-                  setPlayIndex(Number(event.target.value));
-                }}
-                style={{ width: "100%" }}
-              />
-              <span style={progressTextStyle}>
-                {visibleCount} / {validPath.length}
-              </span>
-            </div>
-
-            {currentInfo && (
-              <div style={currentInfoGridStyle}>
-                <MiniInfo title="時間" value={formatDateTime(currentInfo.time)} />
-                <MiniInfo
-                  title="風速"
-                  value={
-                    currentInfo.wind == null
-                      ? "—"
-                      : `${currentInfo.wind} ${windUnit}`
-                  }
-                />
-                <MiniInfo
-                  title="氣壓"
-                  value={
-                    currentInfo.pressure == null
-                      ? "—"
-                      : `${currentInfo.pressure} hPa`
-                  }
-                />
-                <MiniInfo
-                  title="位置"
-                  value={
-                    currentPoint
-                      ? `${currentPoint[0].toFixed(2)}, ${currentPoint[1].toFixed(2)}`
-                      : "—"
-                  }
-                />
-              </div>
-            )}
+                <option value={0.5}>0.5×</option>
+                <option value={1}>1×</option>
+                <option value={2}>2×</option>
+                <option value={4}>4×</option>
+              </select>
+            </label>
           </div>
 
-          <MapContainer
-            center={[23.8, 122.2]}
-            zoom={6}
-            minZoom={3}
-            maxZoom={10}
-            scrollWheelZoom
-            style={{
-              height: "560px",
-              width: "100%",
-              borderRadius: "20px",
-              zIndex: 1,
-            }}
-          >
-            <TileLayer
-              attribution="&copy; OpenStreetMap contributors"
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          <div style={progressRowStyle}>
+            <input
+              type="range"
+              min="1"
+              max={validPath.length}
+              value={Math.max(1, visibleCount)}
+              onChange={(event) => {
+                setIsPlaying(false);
+                setPlayIndex(Number(event.target.value));
+              }}
+              style={{ width: "100%" }}
             />
 
-            <ImageOverlay
-            url="/data/satellite.png"
-            bounds={[
-              [5, 105],
-              [40, 150],
-            ]}
-            opacity={0.55}
-          />
+            <span style={progressTextStyle}>
+              {visibleCount} / {validPath.length}
+            </span>
+          </div>
 
-            <FitMapToPath path={validPath} />
+          {currentInfo && (
+            <div style={currentInfoGridStyle}>
+              <MiniInfo
+                title="時間"
+                value={formatDateTime(currentInfo.time)}
+              />
 
-            <Polyline
-              positions={animatedPath}
-              pathOptions={{ color: "#2563eb", weight: 4 }}
-            />
+              <MiniInfo
+                title="風速"
+                value={
+                  currentInfo.wind == null
+                    ? "—"
+                    : `${currentInfo.wind} ${windUnit}`
+                }
+              />
 
-            {displayMarkers.map((position, index) => (
-              <Marker key={`${position[0]}-${position[1]}-${index}`} position={position}>
-                <Popup>
-                  緯度：{position[0]}
-                  <br />
-                  經度：{position[1]}
-                </Popup>
-              </Marker>
-            ))}
+              <MiniInfo
+                title="氣壓"
+                value={
+                  currentInfo.pressure == null
+                    ? "—"
+                    : `${currentInfo.pressure} hPa`
+                }
+              />
 
-            {currentPoint && (
-              <Marker position={currentPoint}>
-                <Popup>
-                  <strong>目前播放位置</strong>
-                  <br />
-                  路徑點：{visibleCount} / {validPath.length}
-                  {currentInfo?.time && <><br />時間：{formatDateTime(currentInfo.time)}</>}
-                  {currentInfo?.wind != null && <><br />風速：{currentInfo.wind} {windUnit}</>}
-                  {currentInfo?.pressure != null && <><br />氣壓：{currentInfo.pressure} hPa</>}
-                </Popup>
-              </Marker>
-            )}
-
-            <FollowAnimatedPoint point={currentPoint} isPlaying={isPlaying} />
-
-            {TAIWAN_COUNTIES.map((county) => (
-              <Marker
-                key={county.name}
-                position={county.position}
-                opacity={0}
-                interactive={false}
-              >
-                <Tooltip permanent direction="center" className="county-label">
-                  {county.name}
-                </Tooltip>
-              </Marker>
-            ))}
-
-            {NEARBY_CITIES.map((city) => (
-              <Marker
-                key={city.name}
-                position={city.position}
-                opacity={0}
-                interactive={false}
-              >
-                <Tooltip permanent direction="center" className="county-label">
-                  {city.name}
-                </Tooltip>
-              </Marker>
-            ))}
-          </MapContainer>
-        </>
+              <MiniInfo
+                title="位置"
+                value={
+                  currentPoint
+                    ? `${currentPoint[0].toFixed(
+                        2
+                      )}, ${currentPoint[1].toFixed(2)}`
+                    : "—"
+                }
+              />
+            </div>
+          )}
+        </div>
+      ) : (
+        <div style={{ ...emptyStyle, marginBottom: "18px" }}>
+          {emptyText}
+        </div>
       )}
+
+      <MapContainer
+        center={PACIFIC_MAP_CENTER}
+        zoom={PACIFIC_MAP_ZOOM}
+        minZoom={PACIFIC_MAP_ZOOM}
+        maxZoom={PACIFIC_MAP_ZOOM}
+        dragging={false}
+        scrollWheelZoom={false}
+        doubleClickZoom={false}
+        boxZoom={false}
+        keyboard={false}
+        touchZoom={false}
+        zoomControl={false}
+        attributionControl={true}
+        worldCopyJump={false}
+        style={{
+          height: "560px",
+          width: "100%",
+          borderRadius: "20px",
+          zIndex: 1,
+          background: "#071c35",
+        }}
+      >
+        <TileLayer
+          attribution="NASA GIBS / VIIRS"
+          url={PACIFIC_SATELLITE_URL}
+          tileSize={256}
+          minZoom={PACIFIC_MAP_ZOOM}
+          maxZoom={PACIFIC_MAP_ZOOM}
+          noWrap={false}
+          keepBuffer={4}
+        />
+
+        {/* 完整路徑會固定顯示，動畫路徑再疊在上面。 */}
+        {validPath.length >= 2 && (
+          <Polyline
+            positions={validPath}
+            pathOptions={{
+              color: "#ff8aa0",
+              weight: 4,
+              opacity: 0.55,
+              dashArray: "8 8",
+            }}
+          />
+        )}
+
+        {animatedPath.length >= 2 && (
+          <Polyline
+            positions={animatedPath}
+            pathOptions={{
+              color: "#ff1744",
+              weight: 6,
+              opacity: 1,
+            }}
+          />
+        )}
+
+        {displayMarkers.map((position, index) => (
+          <Marker
+            key={`${position[0]}-${position[1]}-${index}`}
+            position={position}
+          >
+            <Popup>
+              路徑點 {index + 1}
+              <br />
+              緯度：{position[0]}
+              <br />
+              經度：{position[1]}
+            </Popup>
+          </Marker>
+        ))}
+
+        {currentPoint && (
+          <Marker
+            position={currentPoint}
+            zIndexOffset={1000}
+          >
+            <Popup>
+              <strong>目前播放位置</strong>
+              <br />
+              路徑點：{visibleCount} / {validPath.length}
+
+              {currentInfo?.time && (
+                <>
+                  <br />
+                  時間：{formatDateTime(currentInfo.time)}
+                </>
+              )}
+
+              {currentInfo?.wind != null && (
+                <>
+                  <br />
+                  風速：{currentInfo.wind} {windUnit}
+                </>
+              )}
+
+              {currentInfo?.pressure != null && (
+                <>
+                  <br />
+                  氣壓：{currentInfo.pressure} hPa
+                </>
+              )}
+            </Popup>
+          </Marker>
+        )}
+
+        {MAP_LABELS.map((item) => (
+          <Marker
+            key={item.name}
+            position={item.position}
+            opacity={0}
+            interactive={false}
+          >
+            <Tooltip
+              permanent
+              direction="center"
+              className="county-label"
+            >
+              {item.name}
+            </Tooltip>
+          </Marker>
+        ))}
+      </MapContainer>
     </section>
   );
-}
-
-function FitMapToPath({ path }) {
-  const map = useMap();
-
-  useEffect(() => {
-    if (!path?.length) return;
-
-    const bounds = L.latLngBounds(path);
-    if (bounds.isValid()) {
-      map.fitBounds(bounds, {
-        padding: [30, 30],
-        maxZoom: 7,
-      });
-    }
-
-    window.setTimeout(() => map.invalidateSize(), 100);
-  }, [map, path]);
-
-  return null;
-}
-
-function FollowAnimatedPoint({ point, isPlaying }) {
-  const map = useMap();
-
-  useEffect(() => {
-    if (!isPlaying || !point) return;
-    map.panTo(point, { animate: true, duration: 0.35 });
-  }, [map, point, isPlaying]);
-
-  return null;
 }
 
 function MiniInfo({ title, value }) {
@@ -1226,6 +1247,21 @@ const tableStyle = {
   width: "100%",
   minWidth: "720px",
   borderCollapse: "collapse",
+};
+
+const satelliteStatusStyle = {
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  gap: "12px",
+  flexWrap: "wrap",
+  margin: "4px 0 14px",
+  padding: "10px 12px",
+  borderRadius: "12px",
+  background: "#eef6ff",
+  color: "#315b7d",
+  fontSize: "13px",
+  fontWeight: 700,
 };
 
 const animationPanelStyle = {
