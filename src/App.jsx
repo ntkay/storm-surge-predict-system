@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import {
   MapContainer,
-  TileLayer,
+  Pane,
+  WMSTileLayer,
   Marker,
   Polyline,
   Popup,
@@ -25,35 +26,27 @@ const BASE_URL = import.meta.env.BASE_URL;
 const MAP_LABELS = [
   { name: "台灣", position: [23.7, 121.0] },
   { name: "沖繩", position: [26.2124, 127.6792] },
-  { name: "日本", position: [35.2, 139.7] },
+  { name: "日本", position: [34.8, 139.3] },
   { name: "菲律賓", position: [14.6, 121.0] },
   { name: "關島", position: [13.44, 144.79] },
-  // 用 0～360 經度，讓夏威夷出現在西太平洋畫面的右側。
-  { name: "夏威夷", position: [21.31, 202.15] },
 ];
 
-// 固定平面西太平洋視角：東亞 → 關島 → 夏威夷。
-const PACIFIC_MAP_CENTER = [21.5, 158.0];
-const PACIFIC_MAP_ZOOM = 4;
+// 固定平面視角：用 center + zoom 鎖定畫面，而不是 fitBounds。
+// 這樣寬螢幕不會因為 bounds 長寬比不同而在右側露出衛星圖外的深藍空白。
+// 範圍主要保留：台灣、沖繩、菲律賓、關島與目前颱風路徑。
+const FIXED_MAP_CENTER = [20.5, 134.2];
+const FIXED_MAP_ZOOM = 5.2;
 
-// NASA GIBS 的 VIIRS 真彩色圖是平面的 Web Mercator tiles。
-// 使用前一天 UTC 日期，避免當天影像尚未完整產生而出現缺圖。
-function getGibsDate() {
-  const date = new Date(Date.now() - 24 * 60 * 60 * 1000);
-  return date.toISOString().slice(0, 10);
-}
+// 改用 NASA GIBS 的 Himawari AHI 地球同步衛星 WMS。
+// 它不是單張固定範圍 JPG，因此縮到 5.2 時不會因為超出圖片邊界而露出深藍空白。
+const HIMAWARI_WMS_URL =
+  "https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi";
 
 function normalizePacificLongitude(value) {
   const lon = Number(value);
   if (!Number.isFinite(lon)) return lon;
   return lon < 0 ? lon + 360 : lon;
 }
-
-const GIBS_DATE = getGibsDate();
-const PACIFIC_SATELLITE_URL =
-  `https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/` +
-  `VIIRS_SNPP_CorrectedReflectance_TrueColor/default/${GIBS_DATE}/` +
-  `GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg`;
 
 function App() {
   const [now, setNow] = useState(new Date());
@@ -693,13 +686,16 @@ function TyphoonMap({
     setIsPlaying(true);
   };
 
+  // 每 10 分鐘換一次 cache key；TyphoonMap 播放時本來就會持續重繪，
+  // 所以跨過 10 分鐘邊界後會自動抓 CWA 最新雲圖。
+
   return (
     <section style={{ ...cardStyle, overflow: "hidden" }}>
       <h2 style={sectionTitleStyle}>🌀 {title}</h2>
 
       <div style={satelliteStatusStyle}>
-        <span>🛰 NASA GIBS VIIRS 真彩色平面衛星圖</span>
-        <span>{GIBS_DATE} · 固定西太平洋視角（含夏威夷）</span>
+        <span>🛰 NASA Blue Marble + Himawari AHI（去灰霧混色）</span>
+        <span>固定視角：台灣／沖繩／菲律賓／關島／颱風活動區</span>
       </div>
 
       {validPath.length > 0 ? (
@@ -819,10 +815,12 @@ function TyphoonMap({
       )}
 
       <MapContainer
-        center={PACIFIC_MAP_CENTER}
-        zoom={PACIFIC_MAP_ZOOM}
-        minZoom={PACIFIC_MAP_ZOOM}
-        maxZoom={PACIFIC_MAP_ZOOM}
+        center={FIXED_MAP_CENTER}
+        zoom={FIXED_MAP_ZOOM}
+        minZoom={FIXED_MAP_ZOOM}
+        maxZoom={FIXED_MAP_ZOOM}
+        zoomSnap={0.25}
+        zoomDelta={0.25}
         dragging={false}
         scrollWheelZoom={false}
         doubleClickZoom={false}
@@ -830,25 +828,54 @@ function TyphoonMap({
         keyboard={false}
         touchZoom={false}
         zoomControl={false}
-        attributionControl={true}
+        attributionControl={false}
         worldCopyJump={false}
         style={{
           height: "560px",
           width: "100%",
           borderRadius: "20px",
           zIndex: 1,
-          background: "#071c35",
+          background: "#0b3a67",
         }}
       >
-        <TileLayer
-          attribution="NASA GIBS / VIIRS"
-          url={PACIFIC_SATELLITE_URL}
-          tileSize={256}
-          minZoom={PACIFIC_MAP_ZOOM}
-          maxZoom={PACIFIC_MAP_ZOOM}
-          noWrap={false}
-          keepBuffer={4}
+        {/* 彩色地表／海洋底圖：把原本灰色底改成藍海綠地。 */}
+        <WMSTileLayer
+          url={HIMAWARI_WMS_URL}
+          layers="BlueMarble_ShadedRelief_Bathymetry"
+          styles="default"
+          format="image/jpeg"
+          transparent={false}
+          version="1.3.0"
+          opacity={1}
+          attribution="NASA GIBS / Blue Marble"
         />
+
+        {/*
+          Himawari 紅外線本身是一整張灰階影像。
+          如果只調 opacity，灰色仍會像一層霧蓋住 Blue Marble。
+          改用 overlay 混色：保留底圖的藍海／綠地色彩，
+          同時讓白雲與強對流的紅黃綠訊號顯示出來。
+        */}
+        <Pane
+          name="himawari-cloud-pane"
+          style={{
+            zIndex: 250,
+            mixBlendMode: "overlay",
+            filter: "contrast(1.18) saturate(1.15)",
+            pointerEvents: "none",
+          }}
+        >
+          <WMSTileLayer
+            url={HIMAWARI_WMS_URL}
+            layers="Himawari_AHI_Band13_Clean_Infrared"
+            styles="default"
+            format="image/png"
+            transparent={true}
+            version="1.3.0"
+            opacity={0.82}
+            attribution="NASA GIBS / Himawari AHI"
+          />
+        </Pane>
 
         {/* 完整路徑會固定顯示，動畫路徑再疊在上面。 */}
         {validPath.length >= 2 && (
