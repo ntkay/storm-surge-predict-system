@@ -4,6 +4,15 @@ const MAX_HISTORY_POINTS = 72;
 const MAX_INTERPOLATION_GAP_MS = 2 * 60 * 60 * 1000;
 const MAX_NEAREST_DIFF_MS = 45 * 60 * 1000;
 
+const STATION_ID_ALIASES = {
+  // CWA 即時海象站碼 -> 潮汐預報/歷史潮位站碼
+  // 龍洞潮位站：目前海象站碼 C4A02；潮位預報/歷史站碼 1226
+  C4A02: "1226",
+
+  // 蘇澳潮位站：目前海象站碼 C4U01；潮位預報/歷史站碼 1246
+  C4U01: "1246",
+};
+
 function normalizeKey(key) {
   return String(key || "").replace(/[^a-z0-9]/gi, "").toLowerCase();
 }
@@ -609,6 +618,27 @@ function findForecastStation(obsStation, forecasts) {
         exactId.longitude
       ),
     };
+  }
+
+  // 部分 CWA 即時海象站碼與潮汐預報站碼不同。
+  // 對已確認的潮位站先使用明確對照，避免因名稱格式差異而漏站。
+  const aliasForecastId = STATION_ID_ALIASES[obsStation.stationId];
+
+  if (aliasForecastId) {
+    const aliasedStation = forecasts.get(aliasForecastId);
+
+    if (aliasedStation) {
+      return {
+        station: aliasedStation,
+        matchedBy: "stationIdAlias",
+        distanceKm: distanceKm(
+          obsStation.latitude,
+          obsStation.longitude,
+          aliasedStation.latitude,
+          aliasedStation.longitude
+        ),
+      };
+    }
   }
 
   let bestName = null;
