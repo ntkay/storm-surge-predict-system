@@ -1032,7 +1032,7 @@ function SurgePanel({
             🌊 即時暴潮偏差監測
           </h2>
           <p style={{ ...sectionSubStyle, marginBottom: 0 }}>
-            暴潮偏差＝實測潮高－同一海圖基準的天文潮高。正值表示實際海面高於天文潮預期。
+            暴潮偏差＝實測潮高－同一基準面的天文潮高。程式會依測站使用 TWVD 或當地平均海平面（Local MSL）配對；正值表示實際海面高於天文潮預期。
           </p>
         </div>
 
@@ -1106,6 +1106,14 @@ function SurgePanel({
               ).toFixed(4)}`}
         </div>
         <div>
+          <strong>潮位基準：</strong>
+          {station.datumLabel || station.datum || "—"}
+        </div>
+        <div>
+          <strong>配對方式：</strong>
+          {station.matchedBy || "—"}
+        </div>
+        <div>
           <strong>資料來源：</strong>O-B0075-001 ＋ F-C0036-001
         </div>
       </div>
@@ -1158,8 +1166,7 @@ function SurgePanel({
       </div>
 
       <p style={{ color: "#64748b", fontSize: "13px", marginBottom: 0 }}>
-        此區顯示的是「暴潮偏差（Surge Anomaly）」：中央氣象署資料標準定義為實測水位減去估算天文潮位。
-        潮高使用海圖基準；觀測與預報必須是同一測站且時間相近才會配對。
+        此區顯示的是「暴潮偏差（Surge Anomaly）」：實測水位減去估算天文潮位。程式會以同一測站、同一潮位基準配對，並將逐時天文潮線性內插到實測時間。
       </p>
     </section>
   );
