@@ -22,6 +22,7 @@ L.Icon.Default.mergeOptions({
 });
 
 const BASE_URL = import.meta.env.BASE_URL;
+const LIVE_POLL_MS = 15 * 60 * 1000;
 
 const MAP_LABELS = [
   { name: "台灣", position: [23.7, 121.0] },
@@ -48,12 +49,43 @@ function normalizePacificLongitude(value) {
   return lon < 0 ? lon + 360 : lon;
 }
 
+function getCwaTimeValue(value) {
+  if (!value) return 0;
+
+  const normalized = String(value).trim().replace(" ", "T");
+  const timestamp = Date.parse(normalized);
+
+  return Number.isFinite(timestamp) ? timestamp : 0;
+}
+
+function getLiveSystemDisplayName(cyclone) {
+  if (!cyclone) return "未命名熱帶系統";
+
+  const name =
+    cyclone.CwaTyphoonName ||
+    cyclone.TyphoonName ||
+    "未命名";
+
+  if (cyclone.CwaTyNo) {
+    return `${name}颱風`;
+  }
+
+  if (cyclone.CwaTdNo) {
+    return `${name}（熱帶性低氣壓）`;
+  }
+
+  return `${name}（熱帶系統）`;
+}
+
 function App() {
   const [now, setNow] = useState(new Date());
 
   const [cwaTyphoon, setCwaTyphoon] = useState(null);
   const [cwaLoading, setCwaLoading] = useState(true);
   const [cwaError, setCwaError] = useState("");
+  const [selectedLiveKey, setSelectedLiveKey] = useState("");
+  const [liveSelectionMode, setLiveSelectionMode] = useState("auto");
+  const [lastCwaFetchAt, setLastCwaFetchAt] = useState(null);
 
   const [historyTyphoons, setHistoryTyphoons] = useState([]);
   const [historyLoading, setHistoryLoading] = useState(true);
@@ -69,41 +101,69 @@ function App() {
   }, []);
 
   useEffect(() => {
+    let cancelled = false;
+
     const fetchCwaData = async () => {
       try {
         const liveUrl = `/api/typhoon?t=${Date.now()}`;
-        let response = await fetch(liveUrl, { cache: "no-store" });
-
-        // Vite 的 npm run dev 不會自動提供 Vercel /api。
-        // 本機開發時若 /api 不存在，就退回 public/data/cwa_typhoon.json。
-        if (!response.ok && import.meta.env.DEV) {
-          response = await fetch(
-            `${BASE_URL}data/cwa_typhoon.json?t=${Date.now()}`,
-            { cache: "no-store" }
-          );
-        }
+        const response = await fetch(liveUrl, { cache: "no-store" });
 
         if (!response.ok) {
           throw new Error(`即時資料 HTTP ${response.status}`);
         }
 
+        const contentType = response.headers.get("content-type") || "";
+
+        if (!contentType.includes("application/json")) {
+          const rawText = await response.text();
+          throw new Error(
+            `即時資料不是 JSON：${rawText.slice(0, 100)}`
+          );
+        }
+
         const data = await response.json();
+
+        if (cancelled) return;
+
         setCwaTyphoon(data);
-        setCwaLoading(false);
         setCwaError("");
+        setLastCwaFetchAt(new Date());
       } catch (error) {
+        if (cancelled) return;
+
         console.error("讀取中央氣象署資料失敗：", error);
         setCwaError("讀取中央氣象署即時資料失敗");
-        setCwaLoading(false);
+      } finally {
+        if (!cancelled) {
+          setCwaLoading(false);
+        }
       }
     };
 
+    // 開啟網站立即檢查一次。
     fetchCwaData();
 
-    // 網頁開著時每 5 分鐘重新向 CWA 取得一次最新資料，
-    // 不需要再 git commit / push JSON。
-    const timer = window.setInterval(fetchCwaData, 5 * 60 * 1000);
-    return () => window.clearInterval(timer);
+    // CWA 原始觀測大約每 6 小時更新；網站每 15 分鐘檢查一次即可。
+    // 一旦 CWA 發布新資料，最晚約下一次輪詢就會抓到。
+    const timer = window.setInterval(fetchCwaData, LIVE_POLL_MS);
+
+    // 使用者切回分頁時再立即檢查一次，避免長時間背景分頁顯示舊資料。
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        fetchCwaData();
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      cancelled = true;
+      window.clearInterval(timer);
+      document.removeEventListener(
+        "visibilitychange",
+        handleVisibilityChange
+      );
+    };
   }, []);
 
   useEffect(() => {
@@ -127,11 +187,90 @@ function App() {
       });
   }, []);
 
-  const liveCyclone =
-    cwaTyphoon?.records?.TropicalCyclones?.TropicalCyclone?.[0] ?? null;
+  const liveCyclones = useMemo(() => {
+    const raw =
+      cwaTyphoon?.records?.TropicalCyclones?.TropicalCyclone;
 
-  const liveFixes = liveCyclone?.AnalysisData?.Fix ?? [];
-  const latestLiveFix = liveFixes.at(-1) ?? null;
+    const cyclones = Array.isArray(raw)
+      ? raw
+      : raw
+        ? [raw]
+        : [];
+
+    return cyclones
+      .map((cyclone, index) => {
+        const rawFixes = cyclone?.AnalysisData?.Fix;
+
+        const fixes = Array.isArray(rawFixes)
+          ? rawFixes
+          : rawFixes
+            ? [rawFixes]
+            : [];
+
+        const sortedFixes = [...fixes].sort(
+          (a, b) =>
+            getCwaTimeValue(a?.DateTime) -
+            getCwaTimeValue(b?.DateTime)
+        );
+
+        const latestFix = sortedFixes.at(-1) ?? null;
+        const latestTime = getCwaTimeValue(latestFix?.DateTime);
+
+        const identity =
+          cyclone?.CwaTyNo ||
+          cyclone?.CwaTdNo ||
+          cyclone?.TyphoonName ||
+          cyclone?.CwaTyphoonName ||
+          `system-${index}`;
+
+        return {
+          key: `${identity}-${index}`,
+          cyclone,
+          fixes: sortedFixes,
+          latestFix,
+          latestTime,
+        };
+      })
+      .filter((item) => item.latestFix)
+      .sort((a, b) => {
+        if (b.latestTime !== a.latestTime) {
+          return b.latestTime - a.latestTime;
+        }
+
+        return a.key.localeCompare(b.key);
+      });
+  }, [cwaTyphoon]);
+
+  useEffect(() => {
+    if (liveCyclones.length === 0) {
+      setSelectedLiveKey("");
+      setLiveSelectionMode("auto");
+      return;
+    }
+
+    const selectedStillExists =
+      selectedLiveKey &&
+      liveCyclones.some((item) => item.key === selectedLiveKey);
+
+    if (liveSelectionMode === "auto") {
+      setSelectedLiveKey(liveCyclones[0].key);
+      return;
+    }
+
+    if (!selectedStillExists) {
+      setLiveSelectionMode("auto");
+      setSelectedLiveKey(liveCyclones[0].key);
+    }
+  }, [liveCyclones, selectedLiveKey, liveSelectionMode]);
+
+  const selectedLive =
+    liveCyclones.find((item) => item.key === selectedLiveKey) ??
+    liveCyclones[0] ??
+    null;
+
+  const liveCyclone = selectedLive?.cyclone ?? null;
+  const liveFixes = selectedLive?.fixes ?? [];
+  const latestLiveFix = selectedLive?.latestFix ?? null;
 
   const livePath = useMemo(
     () =>
@@ -337,10 +476,24 @@ function App() {
           error={cwaError}
           surge={liveSurge}
           risk={liveRisk}
+          cyclones={liveCyclones}
+          selectedLiveKey={selectedLiveKey}
+          liveSelectionMode={liveSelectionMode}
+          onSelectLive={(value) => {
+            if (value === "__AUTO__") {
+              setLiveSelectionMode("auto");
+              setSelectedLiveKey(liveCyclones[0]?.key ?? "");
+              return;
+            }
+
+            setLiveSelectionMode("manual");
+            setSelectedLiveKey(value);
+          }}
+          lastFetchAt={lastCwaFetchAt}
         />
 
         <TyphoonMap
-          title="中央氣象署即時颱風路徑"
+          title="中央氣象署即時熱帶系統路徑"
           path={livePath}
           trackPoints={liveTrackPoints}
           emptyText="目前沒有可顯示的即時颱風路徑"
@@ -548,6 +701,11 @@ function LiveTyphoonPanel({
   error,
   surge,
   risk,
+  cyclones = [],
+  selectedLiveKey,
+  liveSelectionMode,
+  onSelectLive,
+  lastFetchAt,
 }) {
   if (loading) {
     return (
@@ -571,7 +729,13 @@ function LiveTyphoonPanel({
     return (
       <section style={cardStyle}>
         <h2 style={sectionTitleStyle}>中央氣象署即時資料</h2>
-        <p style={{ color: "#64748b" }}>目前沒有活動中的熱帶氣旋資料。</p>
+        <p style={{ color: "#64748b" }}>
+          目前沒有活動中的熱帶氣旋資料。
+        </p>
+
+        <p style={{ color: "#94a3b8", fontSize: "13px" }}>
+          網站仍會每 15 分鐘重新檢查中央氣象署資料。
+        </p>
       </section>
     );
   }
@@ -581,19 +745,59 @@ function LiveTyphoonPanel({
 
   return (
     <section style={cardStyle}>
+      {cyclones.length > 1 && (
+        <div
+          style={{
+            marginBottom: "20px",
+            maxWidth: "520px",
+          }}
+        >
+          <label style={labelStyle}>活動中的熱帶系統</label>
+
+          <select
+            value={
+              liveSelectionMode === "auto"
+                ? "__AUTO__"
+                : selectedLiveKey
+            }
+            onChange={(event) => onSelectLive(event.target.value)}
+            style={inputStyle}
+          >
+            <option value="__AUTO__">
+              自動選擇最新更新的熱帶系統
+            </option>
+
+            {cyclones.map((item) => (
+              <option key={item.key} value={item.key}>
+                {getLiveSystemDisplayName(item.cyclone)}
+                {" · "}
+                {item.cyclone.CwaTyNo ||
+                  item.cyclone.CwaTdNo ||
+                  "無編號"}
+                {" · "}
+                {formatDateTime(item.latestFix?.DateTime)}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
+
       <div style={selectedHeaderStyle}>
         <div>
           <div style={{ color: "#64748b", fontSize: "14px" }}>
-            中央氣象署即時颱風
+            中央氣象署活動熱帶系統
           </div>
+
           <h2 style={{ margin: "6px 0 0", color: "#123c66" }}>
-            {cyclone.CwaTyphoonName || cyclone.TyphoonName || "未命名"}颱風
+            {getLiveSystemDisplayName(cyclone)}
           </h2>
+
           <p style={{ color: "#64748b", marginBottom: 0 }}>
             國際名稱：{cyclone.TyphoonName || "—"}　編號：
             {cyclone.CwaTyNo || cyclone.CwaTdNo || "—"}
           </p>
         </div>
+
         <span style={sidBadgeStyle}>
           {formatDateTime(latestFix.DateTime)}
         </span>
@@ -602,13 +806,58 @@ function LiveTyphoonPanel({
       <div style={statsGridStyle}>
         <StatCard title="最大風速" value={`${wind} m/s`} />
         <StatCard title="中心氣壓" value={`${pressure} hPa`} />
-        <StatCard title="移動速度" value={`${latestFix.MovingSpeed || 0} km/h`} />
-        <StatCard title="移動方向" value={latestFix.MovingDirection || "—"} />
+        <StatCard
+          title="移動速度"
+          value={`${latestFix.MovingSpeed || 0} km/h`}
+        />
+        <StatCard
+          title="移動方向"
+          value={latestFix.MovingDirection || "—"}
+        />
         <StatCard title="示範暴潮估算" value={`${surge} m`} />
         <StatCard title="風險等級" value={risk.label} />
       </div>
 
-      <p style={{ color: "#64748b", fontSize: "13px", marginBottom: 0 }}>
+      <div
+        style={{
+          marginTop: "16px",
+          padding: "12px 14px",
+          borderRadius: "12px",
+          background: "#f8fafc",
+          color: "#64748b",
+          fontSize: "13px",
+          lineHeight: 1.8,
+        }}
+      >
+        <div>
+          CWA 最新觀測：
+          <strong style={{ color: "#334155" }}>
+            {formatDateTime(latestFix.DateTime)}
+          </strong>
+        </div>
+
+        <div>
+          網站最後檢查：
+          <strong style={{ color: "#334155" }}>
+            {lastFetchAt
+              ? lastFetchAt.toLocaleString("zh-TW")
+              : "—"}
+          </strong>
+        </div>
+
+        <div>
+          網站每 15 分鐘檢查一次。中央氣象署原始熱帶氣旋資料通常約
+          6 小時更新一次，因此兩次檢查之間可能仍是同一筆觀測。
+        </div>
+      </div>
+
+      <p
+        style={{
+          color: "#64748b",
+          fontSize: "13px",
+          marginBottom: 0,
+        }}
+      >
         暴潮數值目前僅為介面示範公式，不應作為正式預報或防災依據。
       </p>
     </section>
