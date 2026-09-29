@@ -1,3 +1,5 @@
+// 按需提供颱風暴潮與天文潮配對資料；前端不定時輪詢。
+// generatedAt 是回應產生時間，各站 observationTime 才是資料時間。
 const OBS_DATA_ID = "O-B0075-001";
 const FORECAST_DATA_ID = "F-C0036-001";
 const MAX_HISTORY_POINTS = 72;

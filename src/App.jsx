@@ -91,7 +91,6 @@ function App() {
   const [surgeLoading, setSurgeLoading] = useState(true);
   const [surgeError, setSurgeError] = useState("");
   const [selectedSurgeStationId, setSelectedSurgeStationId] = useState("");
-  const [lastSurgeFetchAt, setLastSurgeFetchAt] = useState(null);
 
   const [historyTyphoons, setHistoryTyphoons] = useState([]);
   const [historyLoading, setHistoryLoading] = useState(true);
@@ -177,7 +176,7 @@ function App() {
 
     const fetchSurgeData = async () => {
       try {
-        const response = await fetch("/api/surge", { cache: "no-store" });
+        const response = await fetch("/api/surge");
 
         if (!response.ok) {
           throw new Error(`暴潮資料 HTTP ${response.status}`);
@@ -202,7 +201,6 @@ function App() {
 
         setSurgeData(data);
         setSurgeError("");
-        setLastSurgeFetchAt(new Date());
       } catch (error) {
         if (cancelled) return;
 
@@ -221,23 +219,9 @@ function App() {
 
     fetchSurgeData();
 
-    const timer = window.setInterval(fetchSurgeData, LIVE_POLL_MS);
-
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === "visible") {
-        fetchSurgeData();
-      }
-    };
-
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-
+    // 保留本次載入資料，不定時重抓或於切回分頁時更新。
     return () => {
       cancelled = true;
-      window.clearInterval(timer);
-      document.removeEventListener(
-        "visibilitychange",
-        handleVisibilityChange
-      );
     };
   }, []);
 
@@ -614,7 +598,6 @@ function App() {
           onSelectStation={setSelectedSurgeStationId}
           loading={surgeLoading}
           error={surgeError}
-          lastFetchAt={lastSurgeFetchAt}
         />
 
         <section style={cardStyle}>
@@ -978,12 +961,11 @@ function SurgePanel({
   onSelectStation,
   loading,
   error,
-  lastFetchAt,
 }) {
   if (loading) {
     return (
       <section style={cardStyle}>
-        <h2 style={sectionTitleStyle}>🌊 即時暴潮／潮位監測</h2>
+        <h2 style={sectionTitleStyle}>🌊 颱風暴潮與天文潮</h2>
         <p style={{ color: "#64748b" }}>正在讀取潮位與天文潮預報...</p>
       </section>
     );
@@ -992,7 +974,7 @@ function SurgePanel({
   if (error) {
     return (
       <section style={cardStyle}>
-        <h2 style={sectionTitleStyle}>🌊 即時暴潮／潮位監測</h2>
+        <h2 style={sectionTitleStyle}>🌊 颱風暴潮與天文潮</h2>
         <ErrorMessage>{error}</ErrorMessage>
         <p style={{ color: "#64748b", fontSize: "13px" }}>
           請先確認 Vercel 已部署 api/surge.js，且 CWA_API_KEY 環境變數有效。
@@ -1004,7 +986,7 @@ function SurgePanel({
   if (!station || stations.length === 0) {
     return (
       <section style={cardStyle}>
-        <h2 style={sectionTitleStyle}>🌊 即時暴潮／潮位監測</h2>
+        <h2 style={sectionTitleStyle}>🌊 颱風暴潮與天文潮</h2>
         <p style={{ color: "#64748b" }}>
           目前找不到可同時配對「實測潮高」與「天文潮高」的潮位站。
         </p>
@@ -1029,16 +1011,16 @@ function SurgePanel({
             中央氣象署潮位觀測 × 逐時天文潮預報
           </div>
           <h2 style={{ ...sectionTitleStyle, marginTop: "6px" }}>
-            🌊 即時暴潮偏差監測
+            🌊 颱風暴潮與天文潮
           </h2>
           <p style={{ ...sectionSubStyle, marginBottom: 0 }}>
-            暴潮偏差＝實測潮高－同一基準面的天文潮高。程式會依測站使用 TWVD 或當地平均海平面（Local MSL）配對；正值表示實際海面高於天文潮預期。
+            展示測站的颱風暴潮（Surge Anomaly）與天文潮（Predicted Tide）資料。資料於開啟頁面時載入，測站切換使用同一批資料；資料時段以各站標示時間為準。
           </p>
         </div>
 
         <span style={sidBadgeStyle}>
-          API 最後檢查：
-          {lastFetchAt ? lastFetchAt.toLocaleString("zh-TW") : "—"}
+          資料時間：
+          {formatDateTime(station.observationTime)}
         </span>
       </div>
 
@@ -1066,12 +1048,12 @@ function SurgePanel({
           value={`${formatNumber(station.observedTide, 2)} m`}
         />
         <StatCard
-          title="天文潮高"
+          title="天文潮（Predicted Tide）"
           value={`${formatNumber(station.predictedTide, 2)} m`}
         />
         <div style={statCardStyle}>
           <div style={{ color: "#64748b", fontSize: "14px", fontWeight: 700 }}>
-            暴潮偏差
+            颱風暴潮（Surge Anomaly）
           </div>
           <div
             style={{
@@ -1126,8 +1108,8 @@ function SurgePanel({
             <tr style={{ background: "#eff6ff" }}>
               <TableHead>時間</TableHead>
               <TableHead>實測潮高</TableHead>
-              <TableHead>天文潮高</TableHead>
-              <TableHead>暴潮偏差</TableHead>
+              <TableHead>天文潮</TableHead>
+              <TableHead>颱風暴潮（偏差）</TableHead>
             </tr>
           </thead>
           <tbody>
@@ -1166,7 +1148,7 @@ function SurgePanel({
       </div>
 
       <p style={{ color: "#64748b", fontSize: "13px", marginBottom: 0 }}>
-        此區顯示的是「暴潮偏差（Surge Anomaly）」：實測水位減去估算天文潮位。程式會以同一測站、同一潮位基準配對，並將逐時天文潮線性內插到實測時間。
+        此區以實測潮高減去配對的天文潮高估算暴潮偏差，正值表示高於天文潮；偏差也可能包含其他因素，並非 MATLAB 模型預測或特定颱風事件的歷史資料。潮位基準與配對方式沿用資料來源設定。
       </p>
     </section>
   );
@@ -1220,7 +1202,7 @@ function SurgeChart({ history }) {
   return (
     <div style={surgeChartWrapStyle}>
       <div style={{ color: "#123c66", fontWeight: 800, marginBottom: "8px" }}>
-        最近配對資料的暴潮偏差趨勢
+        資料時段內的颱風暴潮偏差曲線
       </div>
       <svg
         viewBox={`0 0 ${width} ${height}`}
