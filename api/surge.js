@@ -2,9 +2,7 @@
 // generatedAt 是回應產生時間，各站 observationTime 才是資料時間。
 const OBS_DATA_ID = "O-B0075-001";
 const FORECAST_DATA_ID = "F-C0036-001";
-const MAX_HISTORY_POINTS = 72;
 const MAX_INTERPOLATION_GAP_MS = 2 * 60 * 60 * 1000;
-const MAX_NEAREST_DIFF_MS = 45 * 60 * 1000;
 
 const STATION_ID_ALIASES = {
   // CWA 即時海象站碼 -> 潮汐預報/歷史潮位站碼
@@ -68,7 +66,7 @@ function timeValue(value) {
 
   const raw = String(value).trim();
   const normalized = raw.includes("T") ? raw : raw.replace(" ", "T");
-  const timestamp = Date.parse(normalized);
+  const timestamp = Date.parse(/(?:Z|[+-]\d{2}:?\d{2})$/i.test(normalized) ? normalized : `${normalized}+08:00`);
 
   return Number.isFinite(timestamp) ? timestamp : 0;
 }
@@ -167,6 +165,7 @@ async function fetchJsonDataset(dataId, apiKey) {
   const response = await fetch(url, {
     headers: { Accept: "application/json" },
     cache: "no-store",
+    signal: AbortSignal.timeout(12000),
   });
 
   return parseJsonResponse(response);
@@ -184,6 +183,7 @@ async function fetchText(url) {
     headers: { Accept: "application/xml,text/xml,text/plain,*/*" },
     redirect: "follow",
     cache: "no-store",
+    signal: AbortSignal.timeout(12000),
   });
 
   const text = await response.text();
@@ -658,7 +658,7 @@ function findForecastStation(obsStation, forecasts) {
     }
   }
 
-  if (bestName && bestNameScore >= 80) {
+  if (bestName && bestNameScore === 100) {
     return {
       station: bestName,
       matchedBy: "stationName",
@@ -668,31 +668,6 @@ function findForecastStation(obsStation, forecasts) {
         bestName.latitude,
         bestName.longitude
       ),
-    };
-  }
-
-  let nearest = null;
-  let nearestDistance = Infinity;
-
-  for (const station of forecasts.values()) {
-    const distance = distanceKm(
-      obsStation.latitude,
-      obsStation.longitude,
-      station.latitude,
-      station.longitude
-    );
-
-    if (distance < nearestDistance) {
-      nearest = station;
-      nearestDistance = distance;
-    }
-  }
-
-  if (nearest && nearestDistance <= 5) {
-    return {
-      station: nearest,
-      matchedBy: "coordinates",
-      distanceKm: nearestDistance,
     };
   }
 
@@ -787,8 +762,7 @@ function forecastAtTime(records, targetTime, datumKey) {
       v2 != null &&
       t1 <= targetTime &&
       targetTime <= t2 &&
-      targetTime - t1 <= MAX_INTERPOLATION_GAP_MS &&
-      t2 - targetTime <= MAX_INTERPOLATION_GAP_MS &&
+      t2 - t1 <= MAX_INTERPOLATION_GAP_MS &&
       t2 > t1
     ) {
       const ratio = (targetTime - t1) / (t2 - t1);
@@ -802,145 +776,11 @@ function forecastAtTime(records, targetTime, datumKey) {
     }
   }
 
-  const candidates = [before, after].filter(Boolean);
-  let nearest = null;
-  let nearestDiff = Infinity;
-
-  for (const candidate of candidates) {
-    const value = recordValue(candidate, datumKey);
-    if (value == null) continue;
-
-    const diff = Math.abs(timeValue(candidate.time) - targetTime);
-
-    if (diff < nearestDiff) {
-      nearest = { candidate, value };
-      nearestDiff = diff;
-    }
-  }
-
-  if (nearest && nearestDiff <= MAX_NEAREST_DIFF_MS) {
-    return {
-      value: nearest.value,
-      time: nearest.candidate.time,
-      method: "nearest",
-      diffMs: nearestDiff,
-    };
-  }
-
   return null;
 }
 
 function round3(value) {
   return Math.round((Number(value) + Number.EPSILON) * 1000) / 1000;
-}
-
-function buildStations(observations, forecasts) {
-  const stations = [];
-  const unmatchedObservations = [];
-
-  for (const obsStation of observations.values()) {
-    const match = findForecastStation(obsStation, forecasts);
-
-    if (!match) {
-      unmatchedObservations.push({
-        stationId: obsStation.stationId,
-        stationName: obsStation.stationName,
-      });
-      continue;
-    }
-
-    const datum = datumForStation(obsStation);
-    const forecastStation = match.station;
-    const matched = [];
-
-    for (const observation of obsStation.records) {
-      const observationTime = timeValue(observation.time);
-      if (!observationTime) continue;
-
-      let prediction = forecastAtTime(
-        forecastStation.records,
-        observationTime,
-        datum.key
-      );
-
-      // 少數站可能缺 TWVD；若有此情況，退回 Local MSL，但把實際使用基準標出。
-      let effectiveDatum = datum;
-
-      if (!prediction && datum.key === "aboveTWVD") {
-        prediction = forecastAtTime(
-          forecastStation.records,
-          observationTime,
-          "aboveLocalMSL"
-        );
-
-        if (prediction) {
-          effectiveDatum = {
-            key: "aboveLocalMSL",
-            code: "LOCAL_MSL_FALLBACK",
-            label: "當地平均海平面（Local MSL，TWVD 缺值時退回）",
-          };
-        }
-      }
-
-      if (!prediction) continue;
-
-      matched.push({
-        time: observation.time,
-        forecastTime: prediction.time,
-        forecastSourceTimes: prediction.sourceTimes || null,
-        forecastMethod: prediction.method,
-        observedTide: round3(observation.tideHeight),
-        predictedTide: round3(prediction.value),
-        surgeAnomaly: round3(
-          observation.tideHeight - prediction.value
-        ),
-        datum: effectiveDatum.code,
-        datumLabel: effectiveDatum.label,
-      });
-    }
-
-    if (matched.length === 0) continue;
-
-    matched.sort((a, b) => timeValue(a.time) - timeValue(b.time));
-    const history = matched.slice(-MAX_HISTORY_POINTS);
-    const latest = history.at(-1);
-
-    stations.push({
-      stationId: obsStation.stationId,
-      forecastStationId: forecastStation.stationId,
-      stationName:
-        forecastStation.stationName ||
-        obsStation.stationName ||
-        obsStation.stationId,
-      latitude:
-        forecastStation.latitude ?? obsStation.latitude ?? null,
-      longitude:
-        forecastStation.longitude ?? obsStation.longitude ?? null,
-      matchedBy: match.matchedBy,
-      matchDistanceKm:
-        Number.isFinite(match.distanceKm)
-          ? round3(match.distanceKm)
-          : null,
-      datum: latest.datum,
-      datumLabel: latest.datumLabel,
-      observationTime: latest.time,
-      forecastTime: latest.forecastTime,
-      observedTide: latest.observedTide,
-      predictedTide: latest.predictedTide,
-      surgeAnomaly: latest.surgeAnomaly,
-      history,
-    });
-  }
-
-  return {
-    stations: stations.sort((a, b) =>
-      String(a.stationName).localeCompare(
-        String(b.stationName),
-        "zh-Hant"
-      )
-    ),
-    unmatchedObservations,
-  };
 }
 
 async function loadObservationStations(apiKey) {
@@ -1005,94 +845,109 @@ async function loadForecastStations(apiKey) {
   return { stations, diagnostics };
 }
 
+function rangeOf(records) {
+  const times = records.map((r) => timeValue(r.time)).filter(Boolean).sort((a,b) => a-b);
+  return times.length ? { start: new Date(times[0]).toISOString(), end: new Date(times.at(-1)).toISOString(), count: times.length } : null;
+}
+
+function parseQuery(req) {
+  const params = new URL(req.url || '/', 'http://localhost').searchParams;
+  const get = (name) => req.query?.[name] ?? params.get(name);
+  const start = get('start'), end = get('end'), station = get('station');
+  const explicitTime = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d{1,3})?)?(?:Z|[+-]\d{2}:\d{2})$/i;
+  if (typeof start !== 'string' || typeof end !== 'string' || !explicitTime.test(start) || !explicitTime.test(end)) {
+    throw Error('start/end 必須是含時區的 ISO 時間，例如 2023-07-24T00:00:00+08:00。');
+  }
+  const from = Date.parse(start), to = Date.parse(end);
+  if (!Number.isFinite(from) || !Number.isFinite(to) || to <= from || to-from > 120*86400000) {
+    throw Error('日期區間無效；end 必須晚於 start，最長 120 天。');
+  }
+  if (typeof station !== 'string' || !/^[A-Za-z0-9_-]{1,24}$/.test(station)) throw Error('請提供有效的 station 站碼。');
+  const stationId = Object.keys(STATION_ID_ALIASES).find((id) => STATION_ID_ALIASES[id] === station) || station;
+  return { from, to, stationId, start: new Date(from).toISOString(), end: new Date(to).toISOString() };
+}
+
 export default async function handler(req, res) {
-  if (req.method !== "GET") {
-    res.setHeader("Allow", "GET");
-
-    return res.status(405).json({
-      success: false,
-      message: "Method Not Allowed",
-    });
+  res.setHeader('Cache-Control', 'no-store');
+  if (req.method !== 'GET') {
+    res.setHeader('Allow','GET');
+    return res.status(405).json({ success:false, message:'Method Not Allowed' });
   }
-
+  let query;
+  try { query = parseQuery(req); }
+  catch (error) { return res.status(400).json({ success:false, message:error.message }); }
   const apiKey = process.env.CWA_API_KEY;
-
-  if (!apiKey) {
-    return res.status(500).json({
-      success: false,
-      message: "CWA_API_KEY is not configured on Vercel",
-    });
-  }
-
+  if (!apiKey) return res.status(503).json({ success:false, message:'伺服器尚未設定 CWA_API_KEY；無法確認來源資料可用期間。' });
   try {
-    const [observationResult, forecastResult] = await Promise.all([
-      loadObservationStations(apiKey),
-      loadForecastStations(apiKey),
+    // These endpoints supply their currently published snapshot. Query dates filter
+    // that snapshot; they do not turn it into a historical archive.
+    const results = await Promise.allSettled([loadObservationStations(apiKey),loadForecastStations(apiKey)]);
+    const observations = results[0].status === 'fulfilled' ? results[0].value.stations : new Map();
+    const forecasts = results[1].status === 'fulfilled' ? results[1].value.stations : new Map();
+    const warnings = [];
+    if (results[0].status === 'rejected') warnings.push('實測潮位來源暫時讀取失敗；可用期間未知。');
+    if (results[1].status === 'rejected') warnings.push('天文潮來源暫時讀取失敗；可用期間未知。');
+    if (results.every((r) => r.status === 'rejected')) return res.status(502).json({success:false,message:'CWA 潮位來源暫時無法讀取，請稍後重試。'});
+
+    const catalog = new Map([
+      ['C4A02',{stationId:'C4A02',forecastStationId:'1226',stationName:'龍洞'}],
+      ['C4U01',{stationId:'C4U01',forecastStationId:'1246',stationName:'蘇澳'}],
     ]);
-
-    const observations = observationResult.stations;
-    const forecasts = forecastResult.stations;
-
-    const { stations, unmatchedObservations } = buildStations(
-      observations,
-      forecasts
-    );
-
-    const positiveStations = stations
-      .filter((station) => Number(station.surgeAnomaly) > 0)
-      .sort((a, b) => b.surgeAnomaly - a.surgeAnomaly);
-
-    const maxPositive = positiveStations[0] || null;
-
-    res.setHeader(
-      "Cache-Control",
-      "public, s-maxage=900, stale-while-revalidate=3600"
-    );
-
+    for (const obs of observations.values()) {
+      const match = findForecastStation(obs,forecasts);
+      catalog.set(obs.stationId,{stationId:obs.stationId,stationName:obs.stationName || obs.stationId,forecastStationId:match?.station.stationId || STATION_ID_ALIASES[obs.stationId] || null});
+    }
+    for (const forecast of forecasts.values()) {
+      if (![...catalog.values()].some((s) => s.forecastStationId === forecast.stationId)) {
+        catalog.set(forecast.stationId,{stationId:forecast.stationId,forecastStationId:forecast.stationId,stationName:forecast.stationName || forecast.stationId});
+      }
+    }
+    const selected = catalog.get(query.stationId);
+    const stations = [...catalog.values()].sort((a,b) => a.stationName.localeCompare(b.stationName,'zh-Hant'));
+    if (!selected) return res.status(404).json({success:false,message:'找不到指定測站，請重新選擇。',stations});
+    const obs = observations.get(selected.stationId);
+    const forecast = forecasts.get(selected.forecastStationId);
+    const datum = datumForStation(obs || forecast || selected);
+    const obsRecords = obs?.records || [];
+    const forecastRecords = (forecast?.records || []).filter((r) => recordValue(r,datum.key) != null);
+    const inWindow = (r) => timeValue(r.time) >= query.from && timeValue(r.time) <= query.to;
+    const points = new Map();
+    for (const r of forecastRecords.filter(inWindow)) {
+      const t = timeValue(r.time);
+      points.set(t,{time:new Date(t).toISOString(),observedTide:null,predictedTide:round3(recordValue(r,datum.key)),surgeAnomaly:null,forecastMethod:'exact'});
+    }
+    for (const r of obsRecords.filter(inWindow)) {
+      const t = timeValue(r.time);
+      const prediction = forecastAtTime(forecastRecords,t,datum.key);
+      points.set(t,{
+        time:new Date(t).toISOString(), observedTide:round3(r.tideHeight),
+        predictedTide:prediction ? round3(prediction.value) : null,
+        surgeAnomaly:prediction ? round3(r.tideHeight-prediction.value) : null,
+        forecastMethod:prediction?.method || null,
+        forecastSourceTimes:prediction?.sourceTimes || (prediction ? [prediction.time] : null),
+      });
+    }
+    const history = [...points.values()].sort((a,b) => timeValue(a.time)-timeValue(b.time));
+    const paired = history.filter((r) => r.surgeAnomaly != null);
+    const allPaired = obsRecords.filter((r) => forecastAtTime(forecastRecords,timeValue(r.time),datum.key));
+    const observationRange = rangeOf(obsRecords);
+    const predictionRange = rangeOf(forecastRecords);
+    const status = !history.length ? 'unavailable' : !paired.length ? 'unpaired' : 'available_subset';
     return res.status(200).json({
-      success: true,
-      generatedAt: new Date().toISOString(),
-      definition:
-        "暴潮偏差 = 實測潮高 - 同測站、同潮位基準的天文潮高",
-      method:
-        "逐時天文潮先線性內插到實測時間；本島優先 TWVD，離島優先 Local MSL。",
-      units: "m",
-      sources: {
-        observation: OBS_DATA_ID,
-        astronomicalTide: FORECAST_DATA_ID,
-      },
-      summary: {
-        stationCount: stations.length,
-        maxPositiveStationId: maxPositive?.stationId ?? null,
-        maxPositiveStationName: maxPositive?.stationName ?? null,
-        maxPositiveSurgeAnomaly:
-          maxPositive?.surgeAnomaly ?? null,
-      },
-      diagnostics: {
-        observationStations: observations.size,
-        forecastStations: forecasts.size,
-        matchedStations: stations.length,
-        observationLoader: observationResult.diagnostics,
-        forecastLoader: forecastResult.diagnostics,
-        unmatchedObservationCount: unmatchedObservations.length,
-        unmatchedObservations: unmatchedObservations.slice(0, 20),
-      },
-      stations,
+      success:true,generatedAt:new Date().toISOString(),mode:'typhoon-event',
+      requested:{start:query.start,end:query.end,station:query.stationId},
+      status, units:'m', stations,
+      station:{...selected,datum:datum.code,datumLabel:datum.label,history},
+      availability:{observation:observationRange,astronomicalTide:predictionRange,paired:rangeOf(allPaired)},
+      counts:{observed:history.filter((r)=>r.observedTide!=null).length,astronomical:history.filter((r)=>r.predictedTide!=null).length,paired:paired.length},
+      fallback:{type:'published-snapshot-only',historicalArchiveConnected:false,
+        message:'目前僅連接 CWA 已發布的潮位觀測與天文潮預報資料，未接歷史潮位庫；只顯示與所選事件重疊的資料。缺少資料時保留空值，不用近期資料替代歷史事件。',
+        historicalDataUrl:'https://ocean.cwa.gov.tw/V2/data_interface/datasets'},
+      method:'同測站、同基準相減；天文潮以原始時刻或跨度不超過 2 小時的線性內插配對，不外插、不跨基準退回。可用期間為資料首末時間，不保證其中每一時刻都有資料。',
+      definition:'暴潮增水 = 實測潮位 − 天文潮；此殘差也可能包含非颱風因素。',
+      sources:{observation:OBS_DATA_ID,astronomicalTide:FORECAST_DATA_ID},warnings,
     });
-  } catch (error) {
-    console.error("surge API failed:", error);
-
-    return res.status(502).json({
-      success: false,
-      message: "Failed to build CWA surge data",
-      error:
-        error instanceof Error
-          ? error.message
-          : String(error),
-      sources: {
-        observation: OBS_DATA_ID,
-        astronomicalTide: FORECAST_DATA_ID,
-      },
-    });
+  } catch {
+    return res.status(502).json({success:false,message:'潮位資料處理失敗，請稍後重試。'});
   }
 }

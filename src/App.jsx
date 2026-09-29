@@ -1,3 +1,4 @@
+import EventSurgePanel from "./EventSurgePanel.jsx";
 import { useEffect, useMemo, useState } from "react";
 import {
   MapContainer,
@@ -87,11 +88,6 @@ function App() {
   const [liveSelectionMode, setLiveSelectionMode] = useState("auto");
   const [lastCwaFetchAt, setLastCwaFetchAt] = useState(null);
 
-  const [surgeData, setSurgeData] = useState(null);
-  const [surgeLoading, setSurgeLoading] = useState(true);
-  const [surgeError, setSurgeError] = useState("");
-  const [selectedSurgeStationId, setSelectedSurgeStationId] = useState("");
-
   const [historyTyphoons, setHistoryTyphoons] = useState([]);
   const [historyLoading, setHistoryLoading] = useState(true);
   const [historyError, setHistoryError] = useState("");
@@ -168,60 +164,6 @@ function App() {
         "visibilitychange",
         handleVisibilityChange
       );
-    };
-  }, []);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    const fetchSurgeData = async () => {
-      try {
-        const response = await fetch("/api/surge");
-
-        if (!response.ok) {
-          throw new Error(`暴潮資料 HTTP ${response.status}`);
-        }
-
-        const contentType = response.headers.get("content-type") || "";
-
-        if (!contentType.includes("application/json")) {
-          const rawText = await response.text();
-          throw new Error(
-            `暴潮資料不是 JSON：${rawText.slice(0, 100)}`
-          );
-        }
-
-        const data = await response.json();
-
-        if (cancelled) return;
-
-        if (data?.success === false) {
-          throw new Error(data?.message || "中央氣象署暴潮資料處理失敗");
-        }
-
-        setSurgeData(data);
-        setSurgeError("");
-      } catch (error) {
-        if (cancelled) return;
-
-        console.error("讀取暴潮／潮位資料失敗：", error);
-        setSurgeError(
-          error instanceof Error
-            ? error.message
-            : "讀取中央氣象署暴潮資料失敗"
-        );
-      } finally {
-        if (!cancelled) {
-          setSurgeLoading(false);
-        }
-      }
-    };
-
-    fetchSurgeData();
-
-    // 保留本次載入資料，不定時重抓或於切回分頁時更新。
-    return () => {
-      cancelled = true;
     };
   }, []);
 
@@ -487,38 +429,6 @@ function App() {
     };
   }, [selectedTyphoon, selectedTrack]);
 
-  const surgeStations = useMemo(
-    () => (Array.isArray(surgeData?.stations) ? surgeData.stations : []),
-    [surgeData]
-  );
-
-  useEffect(() => {
-    if (surgeStations.length === 0) {
-      setSelectedSurgeStationId("");
-      return;
-    }
-
-    const selectedStillExists =
-      selectedSurgeStationId &&
-      surgeStations.some(
-        (station) => station.stationId === selectedSurgeStationId
-      );
-
-    if (selectedStillExists) return;
-
-    setSelectedSurgeStationId(
-      surgeData?.summary?.maxPositiveStationId ||
-        surgeStations[0].stationId
-    );
-  }, [surgeStations, selectedSurgeStationId, surgeData]);
-
-  const selectedSurgeStation =
-    surgeStations.find(
-      (station) => station.stationId === selectedSurgeStationId
-    ) ??
-    surgeStations[0] ??
-    null;
-
   const liveWind = Number(latestLiveFix?.MaxWindSpeed ?? 0);
   const livePressure = Number(latestLiveFix?.Pressure ?? 0);
   const liveRisk = getRisk(liveWind, livePressure);
@@ -590,15 +500,7 @@ function App() {
           showAllPoints
         />
 
-        <SurgePanel
-          data={surgeData}
-          stations={surgeStations}
-          station={selectedSurgeStation}
-          selectedStationId={selectedSurgeStationId}
-          onSelectStation={setSelectedSurgeStationId}
-          loading={surgeLoading}
-          error={surgeError}
-        />
+        <EventSurgePanel typhoons={historyTyphoons} historyLoading={historyLoading} historyError={historyError} />
 
         <section style={cardStyle}>
           <div style={{ marginBottom: "20px" }}>
@@ -952,302 +854,6 @@ function LiveTyphoonPanel({
   );
 }
 
-
-function SurgePanel({
-  data,
-  stations,
-  station,
-  selectedStationId,
-  onSelectStation,
-  loading,
-  error,
-}) {
-  if (loading) {
-    return (
-      <section style={cardStyle}>
-        <h2 style={sectionTitleStyle}>🌊 颱風暴潮與天文潮</h2>
-        <p style={{ color: "#64748b" }}>正在讀取潮位與天文潮預報...</p>
-      </section>
-    );
-  }
-
-  if (error) {
-    return (
-      <section style={cardStyle}>
-        <h2 style={sectionTitleStyle}>🌊 颱風暴潮與天文潮</h2>
-        <ErrorMessage>{error}</ErrorMessage>
-        <p style={{ color: "#64748b", fontSize: "13px" }}>
-          請先確認 Vercel 已部署 api/surge.js，且 CWA_API_KEY 環境變數有效。
-        </p>
-      </section>
-    );
-  }
-
-  if (!station || stations.length === 0) {
-    return (
-      <section style={cardStyle}>
-        <h2 style={sectionTitleStyle}>🌊 颱風暴潮與天文潮</h2>
-        <p style={{ color: "#64748b" }}>
-          目前找不到可同時配對「實測潮高」與「天文潮高」的潮位站。
-        </p>
-        {data?.diagnostics && (
-          <pre style={diagnosticStyle}>
-            {JSON.stringify(data.diagnostics, null, 2)}
-          </pre>
-        )}
-      </section>
-    );
-  }
-
-  const anomaly = Number(station.surgeAnomaly);
-  const anomalyColor =
-    anomaly > 0.3 ? "#b91c1c" : anomaly > 0 ? "#b45309" : "#0369a1";
-
-  return (
-    <section style={cardStyle}>
-      <div style={selectedHeaderStyle}>
-        <div>
-          <div style={{ color: "#64748b", fontSize: "14px" }}>
-            中央氣象署潮位觀測 × 逐時天文潮預報
-          </div>
-          <h2 style={{ ...sectionTitleStyle, marginTop: "6px" }}>
-            🌊 颱風暴潮與天文潮
-          </h2>
-          <p style={{ ...sectionSubStyle, marginBottom: 0 }}>
-            展示測站的颱風暴潮（Surge Anomaly）與天文潮（Predicted Tide）資料。資料於開啟頁面時載入，測站切換使用同一批資料；資料時段以各站標示時間為準。
-          </p>
-        </div>
-
-        <span style={sidBadgeStyle}>
-          資料時間：
-          {formatDateTime(station.observationTime)}
-        </span>
-      </div>
-
-      <div style={{ maxWidth: "520px", marginBottom: "20px" }}>
-        <label style={labelStyle}>潮位站</label>
-        <select
-          value={selectedStationId}
-          onChange={(event) => onSelectStation(event.target.value)}
-          style={inputStyle}
-        >
-          {stations.map((item) => (
-            <option key={item.stationId} value={item.stationId}>
-              {item.stationName || item.stationId} · {item.stationId}
-              {Number.isFinite(Number(item.surgeAnomaly))
-                ? ` · ${formatSigned(Number(item.surgeAnomaly))} m`
-                : ""}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <div style={statsGridStyle}>
-        <StatCard
-          title="實測潮高"
-          value={`${formatNumber(station.observedTide, 2)} m`}
-        />
-        <StatCard
-          title="天文潮（Predicted Tide）"
-          value={`${formatNumber(station.predictedTide, 2)} m`}
-        />
-        <div style={statCardStyle}>
-          <div style={{ color: "#64748b", fontSize: "14px", fontWeight: 700 }}>
-            颱風暴潮（Surge Anomaly）
-          </div>
-          <div
-            style={{
-              color: anomalyColor,
-              fontSize: "28px",
-              lineHeight: 1.5,
-              fontWeight: 900,
-              marginTop: "8px",
-            }}
-          >
-            {formatSigned(anomaly)} m
-          </div>
-        </div>
-        <StatCard
-          title="觀測時間"
-          value={formatDateTime(station.observationTime)}
-          small
-        />
-      </div>
-
-      <div style={surgeMetaGridStyle}>
-        <div>
-          <strong>預報配對時間：</strong>
-          {formatDateTime(station.forecastTime)}
-        </div>
-        <div>
-          <strong>測站位置：</strong>
-          {station.latitude == null || station.longitude == null
-            ? "—"
-            : `${Number(station.latitude).toFixed(4)}, ${Number(
-                station.longitude
-              ).toFixed(4)}`}
-        </div>
-        <div>
-          <strong>潮位基準：</strong>
-          {station.datumLabel || station.datum || "—"}
-        </div>
-        <div>
-          <strong>配對方式：</strong>
-          {station.matchedBy || "—"}
-        </div>
-        <div>
-          <strong>資料來源：</strong>O-B0075-001 ＋ F-C0036-001
-        </div>
-      </div>
-
-      <SurgeChart history={station.history || []} />
-
-      <div style={{ overflowX: "auto", marginTop: "18px" }}>
-        <table style={tableStyle}>
-          <thead>
-            <tr style={{ background: "#eff6ff" }}>
-              <TableHead>時間</TableHead>
-              <TableHead>實測潮高</TableHead>
-              <TableHead>天文潮</TableHead>
-              <TableHead>颱風暴潮（偏差）</TableHead>
-            </tr>
-          </thead>
-          <tbody>
-            {(station.history || [])
-              .slice(-10)
-              .reverse()
-              .map((point, index) => (
-                <tr
-                  key={`${station.stationId}-${point.time}-${index}`}
-                  style={{ borderBottom: "1px solid #e5e7eb" }}
-                >
-                  <TableCell>{formatDateTime(point.time)}</TableCell>
-                  <TableCell>
-                    {formatNumber(point.observedTide, 2)} m
-                  </TableCell>
-                  <TableCell>
-                    {formatNumber(point.predictedTide, 2)} m
-                  </TableCell>
-                  <TableCell>
-                    <span
-                      style={{
-                        fontWeight: 800,
-                        color:
-                          Number(point.surgeAnomaly) > 0
-                            ? "#b45309"
-                            : "#0369a1",
-                      }}
-                    >
-                      {formatSigned(Number(point.surgeAnomaly))} m
-                    </span>
-                  </TableCell>
-                </tr>
-              ))}
-          </tbody>
-        </table>
-      </div>
-
-      <p style={{ color: "#64748b", fontSize: "13px", marginBottom: 0 }}>
-        此區以實測潮高減去配對的天文潮高估算暴潮偏差，正值表示高於天文潮；偏差也可能包含其他因素，並非 MATLAB 模型預測或特定颱風事件的歷史資料。潮位基準與配對方式沿用資料來源設定。
-      </p>
-    </section>
-  );
-}
-
-function SurgeChart({ history }) {
-  const points = Array.isArray(history) ? history.slice(-24) : [];
-
-  if (points.length < 2) {
-    return (
-      <div style={{ ...emptyStyle, marginTop: "18px" }}>
-        暫時沒有足夠的配對資料可繪製趨勢。
-      </div>
-    );
-  }
-
-  const values = points
-    .map((point) => Number(point.surgeAnomaly))
-    .filter(Number.isFinite);
-
-  if (values.length < 2) return null;
-
-  const width = 1000;
-  const height = 260;
-  const paddingX = 52;
-  const paddingY = 28;
-  const minValue = Math.min(0, ...values);
-  const maxValue = Math.max(0, ...values);
-  const span = Math.max(0.1, maxValue - minValue);
-
-  const xFor = (index) =>
-    paddingX +
-    (index * (width - paddingX * 2)) / Math.max(1, points.length - 1);
-
-  const yFor = (value) =>
-    paddingY +
-    ((maxValue - value) / span) * (height - paddingY * 2);
-
-  const linePoints = points
-    .map((point, index) => {
-      const value = Number(point.surgeAnomaly);
-      return Number.isFinite(value)
-        ? `${xFor(index)},${yFor(value)}`
-        : null;
-    })
-    .filter(Boolean)
-    .join(" ");
-
-  const zeroY = yFor(0);
-
-  return (
-    <div style={surgeChartWrapStyle}>
-      <div style={{ color: "#123c66", fontWeight: 800, marginBottom: "8px" }}>
-        資料時段內的颱風暴潮偏差曲線
-      </div>
-      <svg
-        viewBox={`0 0 ${width} ${height}`}
-        role="img"
-        aria-label="暴潮偏差趨勢圖"
-        style={{ width: "100%", height: "auto", display: "block" }}
-      >
-        <line
-          x1={paddingX}
-          y1={zeroY}
-          x2={width - paddingX}
-          y2={zeroY}
-          stroke="#94a3b8"
-          strokeWidth="2"
-          strokeDasharray="8 8"
-        />
-        <polyline
-          points={linePoints}
-          fill="none"
-          stroke="#0f6fb8"
-          strokeWidth="5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        {points.map((point, index) => {
-          const value = Number(point.surgeAnomaly);
-          if (!Number.isFinite(value)) return null;
-
-          return (
-            <circle
-              key={`${point.time}-${index}`}
-              cx={xFor(index)}
-              cy={yFor(value)}
-              r="5"
-              fill={value > 0 ? "#f59e0b" : "#0f6fb8"}
-            />
-          );
-        })}
-        <text x="8" y={Math.max(16, zeroY - 8)} fontSize="18" fill="#64748b">
-          0 m
-        </text>
-      </svg>
-    </div>
-  );
-}
 
 function TyphoonMap({
   title,
@@ -1755,13 +1361,6 @@ function formatNumber(value, digits = 2) {
   return Number.isFinite(number) ? number.toFixed(digits) : "—";
 }
 
-function formatSigned(value) {
-  const number = Number(value);
-  if (!Number.isFinite(number)) return "—";
-  const fixed = number.toFixed(2);
-  return number > 0 ? `+${fixed}` : fixed;
-}
-
 function formatDateTime(value) {
   if (!value || value === "—") return "—";
   return String(value).replace("T", " ").replace("+08:00", "");
@@ -1851,37 +1450,6 @@ const countBoxStyle = {
   background: "#eff6ff",
   color: "#123c66",
   fontWeight: 800,
-};
-
-const surgeMetaGridStyle = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-  gap: "10px",
-  marginTop: "16px",
-  padding: "14px 16px",
-  borderRadius: "14px",
-  background: "#f8fafc",
-  color: "#475569",
-  fontSize: "13px",
-  lineHeight: 1.7,
-};
-
-const surgeChartWrapStyle = {
-  marginTop: "20px",
-  padding: "16px",
-  borderRadius: "16px",
-  border: "1px solid #dbeafe",
-  background: "#f8fbff",
-};
-
-const diagnosticStyle = {
-  marginTop: "16px",
-  padding: "14px",
-  borderRadius: "12px",
-  background: "#0f172a",
-  color: "#e2e8f0",
-  overflowX: "auto",
-  fontSize: "12px",
 };
 
 const historyLayoutStyle = {
