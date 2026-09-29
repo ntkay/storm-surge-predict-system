@@ -1,17 +1,11 @@
+import { tideStations, stationAliases, canonicalStationId, chineseStationName, chineseCatalog } from '../shared/tideStations.js';
 // 按需提供颱風暴潮與天文潮配對資料；前端不定時輪詢。
 // generatedAt 是回應產生時間，各站 observationTime 才是資料時間。
 const OBS_DATA_ID = "O-B0075-001";
 const FORECAST_DATA_ID = "F-C0036-001";
 const MAX_INTERPOLATION_GAP_MS = 2 * 60 * 60 * 1000;
 
-const STATION_ID_ALIASES = {
-  // CWA 即時海象站碼 -> 潮汐預報/歷史潮位站碼
-  // 龍洞潮位站：目前海象站碼 C4A02；潮位預報/歷史站碼 1226
-  C4A02: "1226",
-
-  // 蘇澳潮位站：目前海象站碼 C4U01；潮位預報/歷史站碼 1246
-  C4U01: "1246",
-};
+const STATION_ID_ALIASES = stationAliases;
 
 function normalizeKey(key) {
   return String(key || "").replace(/[^a-z0-9]/gi, "").toLowerCase();
@@ -882,17 +876,18 @@ export default async function handler(req, res) {
     // These endpoints supply their currently published snapshot. Query dates filter
     // that snapshot; they do not turn it into a historical archive.
     const results = await Promise.allSettled([loadObservationStations(apiKey),loadForecastStations(apiKey)]);
-    const observations = results[0].status === 'fulfilled' ? results[0].value.stations : new Map();
+    const rawObservations = results[0].status === 'fulfilled' ? results[0].value.stations : new Map();
+    const observations = new Map([...rawObservations.values()].map((s) => {
+      const stationId = canonicalStationId(s.stationId);
+      return [stationId, {...s, stationId, stationName: chineseStationName(stationId,s.stationName) || s.stationName}];
+    }));
     const forecasts = results[1].status === 'fulfilled' ? results[1].value.stations : new Map();
     const warnings = [];
     if (results[0].status === 'rejected') warnings.push('實測潮位來源暫時讀取失敗；可用期間未知。');
     if (results[1].status === 'rejected') warnings.push('天文潮來源暫時讀取失敗；可用期間未知。');
     if (results.every((r) => r.status === 'rejected')) return res.status(502).json({success:false,message:'CWA 潮位來源暫時無法讀取，請稍後重試。'});
 
-    const catalog = new Map([
-      ['C4A02',{stationId:'C4A02',forecastStationId:'1226',stationName:'龍洞'}],
-      ['C4U01',{stationId:'C4U01',forecastStationId:'1246',stationName:'蘇澳'}],
-    ]);
+    const catalog = new Map(tideStations.map((s) => [s.stationId, s]));
     for (const obs of observations.values()) {
       const match = findForecastStation(obs,forecasts);
       catalog.set(obs.stationId,{stationId:obs.stationId,stationName:obs.stationName || obs.stationId,forecastStationId:match?.station.stationId || STATION_ID_ALIASES[obs.stationId] || null});
@@ -902,11 +897,12 @@ export default async function handler(req, res) {
         catalog.set(forecast.stationId,{stationId:forecast.stationId,forecastStationId:forecast.stationId,stationName:forecast.stationName || forecast.stationId});
       }
     }
-    const selected = catalog.get(query.stationId);
-    const stations = [...catalog.values()].sort((a,b) => a.stationName.localeCompare(b.stationName,'zh-Hant'));
+    const selectedRaw = catalog.get(query.stationId);
+    const selected = selectedRaw ? {...selectedRaw,stationName:chineseStationName(query.stationId,selectedRaw.stationName) || selectedRaw.stationName} : null;
+    const stations = chineseCatalog([...catalog.values()]);
     if (!selected) return res.status(404).json({success:false,message:'找不到指定測站，請重新選擇。',stations});
     const obs = observations.get(selected.stationId);
-    const forecast = forecasts.get(selected.forecastStationId);
+    const forecast = forecasts.get(selected.forecastStationId) || forecasts.get(selected.stationId);
     const datum = datumForStation(obs || forecast || selected);
     const obsRecords = obs?.records || [];
     const forecastRecords = (forecast?.records || []).filter((r) => recordValue(r,datum.key) != null);

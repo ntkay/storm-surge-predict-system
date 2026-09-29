@@ -1,9 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 
-const knownStations = [
-  { stationId: 'C4A02', forecastStationId: '1226', stationName: '龍洞' },
-  { stationId: 'C4U01', forecastStationId: '1246', stationName: '蘇澳' },
-];
+import { chineseCatalog } from '../shared/tideStations.js';
+import { recentTyphoons, trackTime, latestTrackTime } from './eventCatalog.js';
 const series = [
   { key: 'observedTide', label: '實測潮位', color: '#0369a1' },
   { key: 'predictedTide', label: '天文潮', color: '#7c3aed' },
@@ -19,30 +17,24 @@ const number = (value) => hasNumber(value) ? `${value > 0 ? '+' : ''}${value.toF
 const date = (value) => value ? new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Taipei', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date(value)) : '—';
 const range = (value) => value ? `${date(value.start)} ～ ${date(value.end)}（${value.count} 筆）` : '無可用資料／來源未取得';
 
-// The existing importer copies IBTrACS ISO_TIME (UTC) without its zone suffix.
-function trackTime(value) {
-  if (!value || typeof value !== 'string') return NaN;
-  const text = value.trim().replace(' ', 'T');
-  return Date.parse(/(?:Z|[+-]\d{2}:?\d{2})$/i.test(text) ? text : `${text}Z`);
-}
 function eventWindow(typhoon, extend) {
   if (!typhoon) return null;
-  const times = (typhoon.track || []).map((p) => trackTime(p.time)).filter(Number.isFinite).sort((a,b) => a-b);
+  const times = (typhoon.track || []).map((p) => trackTime(p.time, typhoon.source)).filter(Number.isFinite).sort((a,b) => a-b);
   if (!times.length) return null;
   return { start: new Date(times[0] - extend * 86400000).toISOString(), end: new Date(times.at(-1) + extend * 86400000).toISOString() };
 }
 
-export default function EventSurgePanel({ typhoons, historyLoading, historyError }) {
+export default function EventSurgePanel({ typhoons, historyLoading, historyError, catalogStatus }) {
   const [year, setYear] = useState('');
   const [sid, setSid] = useState('');
   const [stationId, setStationId] = useState('');
   const [extend, setExtend] = useState(true);
-  const [catalog, setCatalog] = useState(knownStations);
+  const [catalog, setCatalog] = useState(() => chineseCatalog([]));
   const [result, setResult] = useState(null);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [retry, setRetry] = useState(0);
-  const events = useMemo(() => typhoons.filter((t) => t.source !== 'CWA-live').slice().sort((a,b) => Number(b.year)-Number(a.year) || String(a.name).localeCompare(String(b.name))), [typhoons]);
+  const events = useMemo(() => recentTyphoons(typhoons), [typhoons]);
   const years = [...new Set(events.map((t) => String(t.year)))];
   const choices = events.filter((t) => !year || String(t.year) === year);
   const selected = events.find((t) => t.sid === sid);
@@ -68,7 +60,7 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
         if (payload.mode !== 'typhoon-event') throw Error('潮位 API 仍是舊版，請一併部署 api/surge.js。');
         if (cancelled) return;
         setResult({ key, data: payload });
-        if (payload.stations?.length) setCatalog(payload.stations);
+        if (payload.stations?.length) setCatalog(chineseCatalog(payload.stations));
       } catch (err) {
         if (!cancelled) { setResult(null); setError(err.message); }
       } finally { if (!cancelled) setLoading(false); }
@@ -87,15 +79,17 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
     {historyLoading && <p role="status">歷史颱風清單讀取中…</p>}
     {historyError && <p role="alert">{historyError}</p>}
     {!historyLoading && !historyError && !events.length && <p>歷史颱風清單沒有資料，請確認 public/data/typhoons.json。</p>}
+    <p>僅列含今年在內近 10 年，按路徑時間由新到舊排列。清單最新路徑時間：{events.length ? date(new Date(latestTrackTime(events[0])).toISOString()) : "—"}。僅顯示來源已收錄路徑，不代表完整涵蓋今天。</p>
+    <p role="status">{catalogStatus}</p>
     <div style={grid}>
       <label>年份<select style={control} value={year} onChange={(e) => {setYear(e.target.value);setSid('');setStationId('');clear();}}>
-        <option value="">全部年份</option>{years.map((y) => <option key={y}>{y}</option>)}
+        <option value="">近 10 年全部年份</option>{years.map((y) => <option key={y}>{y}</option>)}
       </select></label>
       <label>1. 選擇颱風<select style={control} value={sid} disabled={historyLoading || !events.length} onChange={(e) => {setSid(e.target.value);setStationId('');clear();}}>
-        <option value="">請選擇颱風</option>{choices.map((t) => <option key={t.sid} value={t.sid}>{t.year} · {t.name || '未命名'} · {t.sid}</option>)}
+        <option value="">請選擇颱風</option>{choices.map((t) => <option key={t.sid} value={t.sid}>{t.year} · {t.nameZh || t.name || '未命名'} · {date(new Date(latestTrackTime(t)).toISOString())}</option>)}
       </select></label>
       <label>2. 選擇潮位站<select style={control} value={stationId} disabled={!window} onChange={(e) => {setStationId(e.target.value);clear();}}>
-        <option value="">請選擇潮位站</option>{catalog.map((s) => <option key={s.stationId} value={s.stationId}>{s.stationName}（{s.stationId}{s.forecastStationId ? ` / ${s.forecastStationId}` : ''}）</option>)}
+        <option value="">請選擇潮位站</option>{catalog.map((s) => <option key={s.stationId} value={s.stationId}>{s.stationName}</option>)}
       </select></label>
     </div>
     <p><label><input type="checkbox" checked={extend} onChange={(e) => {setExtend(e.target.checked);clear();}} /> 路徑起訖時間前後各延伸 24 小時</label></p>

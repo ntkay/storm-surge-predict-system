@@ -1,3 +1,4 @@
+import { recentTyphoons, mergeTyphoons, cwaEvents } from "./eventCatalog.js";
 import EventSurgePanel from "./EventSurgePanel.jsx";
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -88,7 +89,10 @@ function App() {
   const [liveSelectionMode, setLiveSelectionMode] = useState("auto");
   const [lastCwaFetchAt, setLastCwaFetchAt] = useState(null);
 
-  const [historyTyphoons, setHistoryTyphoons] = useState([]);
+  const [storedTyphoons, setHistoryTyphoons] = useState([]);
+  const [updatedTyphoons, setUpdatedTyphoons] = useState([]);
+  const [catalogStatus, setCatalogStatus] = useState('正在確認最新 NOAA 路徑資料…');
+  const historyTyphoons = useMemo(() => mergeTyphoons(storedTyphoons, updatedTyphoons, cwaEvents(cwaTyphoon)), [storedTyphoons, updatedTyphoons, cwaTyphoon]);
   const [historyLoading, setHistoryLoading] = useState(true);
   const [historyError, setHistoryError] = useState("");
 
@@ -176,7 +180,7 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        const validData = Array.isArray(data) ? data : [];
+        const validData = recentTyphoons(data);
         setHistoryTyphoons(validData);
         setSelectedSid("");
         setHistoryLoading(false);
@@ -186,6 +190,22 @@ function App() {
         setHistoryError("讀取歷史颱風資料失敗");
         setHistoryLoading(false);
       });
+  }, []);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    let cancelled = false;
+    fetch('/api/typhoon-history', { signal: controller.signal })
+      .then(async (response) => {
+        const data = await response.json();
+        if (!response.ok || !data.success || !Array.isArray(data.typhoons)) throw Error('unavailable');
+        if (cancelled) return;
+        setUpdatedTyphoons(recentTyphoons(data.typhoons));
+        setCatalogStatus('已取得最新 NOAA 發布批次，並合併上方 CWA 分析路徑。來源資料仍可能落後今天，請以清單最新路徑時間為準。');
+      }).catch(() => {
+        if (!cancelled) setCatalogStatus('最新 NOAA 資料讀取失敗：目前使用已儲存資料及 CWA 已取得路徑，無法保證完整更新至今天。');
+      });
+    return () => { cancelled = true; controller.abort(); };
   }, []);
 
   const liveCyclones = useMemo(() => {
@@ -330,16 +350,7 @@ function App() {
 
         return matchName && matchYear;
       })
-      .sort((a, b) => {
-        if (a.source === "CWA-live" && b.source !== "CWA-live") return -1;
-        if (b.source === "CWA-live" && a.source !== "CWA-live") return 1;
-
-        if (Number(b.year) !== Number(a.year)) {
-          return Number(b.year) - Number(a.year);
-        }
-
-        return String(b.sid ?? "").localeCompare(String(a.sid ?? ""));
-      });
+      ;
   }, [historyTyphoons, historySearch, historyYear]);
 
   useEffect(() => {
@@ -441,7 +452,7 @@ function App() {
             暴潮預測與颱風資料系統
           </h1>
           <p style={{ margin: "12px 0 0", fontSize: "18px", opacity: 0.92 }}>
-            整合中央氣象署即時資料與 2000 年至今的 IBTrACS 歷史路徑資料
+            整合中央氣象署即時資料與 近 10 年的 IBTrACS 與已儲存 CWA 路徑資料
           </p>
         </header>
 
@@ -459,7 +470,7 @@ function App() {
           <InfoCard
             title="歷史颱風數量"
             value={historyLoading ? "讀取中" : historyTyphoons.length}
-            sub="2000 年至今的西北太平洋資料"
+            sub="含今年在內近 10 年的西北太平洋資料"
           />
           <InfoCard
             title="目前風險"
@@ -500,7 +511,7 @@ function App() {
           showAllPoints
         />
 
-        <EventSurgePanel typhoons={historyTyphoons} historyLoading={historyLoading} historyError={historyError} />
+        <EventSurgePanel catalogStatus={catalogStatus} typhoons={historyTyphoons} historyLoading={historyLoading} historyError={historyError} />
 
         <section style={cardStyle}>
           <div style={{ marginBottom: "20px" }}>
