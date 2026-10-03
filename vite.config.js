@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import surgeHandler from './api/surge.js';
+import modelHandler from './api/model-surge.js';
 import historyHandler from './api/typhoon-history.js';
 
 export default defineConfig(({ mode }) => {
@@ -11,7 +12,7 @@ export default defineConfig(({ mode }) => {
       name: 'local-event-surge-api',
       configureServer(server) {
         server.middlewares.use(async (req, res, next) => {
-          const handlers = { '/api/surge': surgeHandler, '/api/typhoon-history': historyHandler };
+          const handlers = { '/api/surge': surgeHandler, '/api/model-surge': modelHandler, '/api/typhoon-history': historyHandler };
           const handler = handlers[req.url?.split('?')[0]];
           if (!handler) return next();
           res.status = (code) => { res.statusCode = code; return res; };

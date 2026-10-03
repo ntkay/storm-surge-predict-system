@@ -1,4 +1,4 @@
-import { tideStations, stationAliases, canonicalStationId, chineseStationName, chineseCatalog } from '../shared/tideStations.js';
+import { tideStations, stationAliases, canonicalStationId, chineseStationName, surgeStations } from '../shared/tideStations.js';
 // 按需提供颱風暴潮與天文潮配對資料；前端不定時輪詢。
 // generatedAt 是回應產生時間，各站 observationTime 才是資料時間。
 const OBS_DATA_ID = "O-B0075-001";
@@ -858,6 +858,7 @@ function parseQuery(req) {
   }
   if (typeof station !== 'string' || !/^[A-Za-z0-9_-]{1,24}$/.test(station)) throw Error('請提供有效的 station 站碼。');
   const stationId = Object.keys(STATION_ID_ALIASES).find((id) => STATION_ID_ALIASES[id] === station) || station;
+  if (!surgeStations.some(s => s.stationId === stationId)) throw Error("僅支援龍洞潮位站與蘇澳潮位站。");
   return { from, to, stationId, start: new Date(from).toISOString(), end: new Date(to).toISOString() };
 }
 
@@ -898,8 +899,8 @@ export default async function handler(req, res) {
       }
     }
     const selectedRaw = catalog.get(query.stationId);
-    const selected = selectedRaw ? {...selectedRaw,stationName:chineseStationName(query.stationId,selectedRaw.stationName) || selectedRaw.stationName} : null;
-    const stations = chineseCatalog([...catalog.values()]);
+    const selected = selectedRaw ? {...selectedRaw,stationName:surgeStations.find(s => s.stationId === query.stationId).stationName} : null;
+    const stations = surgeStations;
     if (!selected) return res.status(404).json({success:false,message:'找不到指定測站，請重新選擇。',stations});
     const obs = observations.get(selected.stationId);
     const forecast = forecasts.get(selected.forecastStationId) || forecasts.get(selected.stationId);

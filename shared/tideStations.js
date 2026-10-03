@@ -34,3 +34,6 @@ export function chineseCatalog(stations) {
   }
   return [...merged.values()].sort((a,b)=>a.stationName.localeCompare(b.stationName,'zh-Hant'));
 }
+
+// Analysis and model interfaces support these two gauges only.
+export const surgeStations = tideStations.filter(s => ['C4A02','C4U01'].includes(s.stationId)).map(s => ({...s, stationName: s.stationName+'潮位站'}));

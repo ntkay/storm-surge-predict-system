@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 
-import { chineseCatalog } from '../shared/tideStations.js';
+import ModelSurgePanel from './ModelSurgePanel.jsx';
+import { surgeStations } from '../shared/tideStations.js';
 import { recentTyphoons, trackTime, latestTrackTime } from './eventCatalog.js';
 const series = [
   { key: 'observedTide', label: '實測潮位', color: '#0369a1' },
@@ -29,7 +30,7 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
   const [sid, setSid] = useState('');
   const [stationId, setStationId] = useState('');
   const [extend, setExtend] = useState(true);
-  const [catalog, setCatalog] = useState(() => chineseCatalog([]));
+  const catalog = surgeStations;
   const [result, setResult] = useState(null);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -60,7 +61,7 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
         if (payload.mode !== 'typhoon-event') throw Error('潮位 API 仍是舊版，請一併部署 api/surge.js。');
         if (cancelled) return;
         setResult({ key, data: payload });
-        if (payload.stations?.length) setCatalog(chineseCatalog(payload.stations));
+
       } catch (err) {
         if (!cancelled) { setResult(null); setError(err.message); }
       } finally { if (!cancelled) setLoading(false); }
@@ -74,7 +75,9 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
   const latest = paired.at(-1) || points.filter((p) => hasNumber(p.observedTide)).at(-1) || points.at(-1);
   function clear() { setResult(null); setError(''); setLoading(false); }
   return <section style={box} aria-labelledby="event-surge-title">
-    <h2 id="event-surge-title" style={{ color: '#123c66', marginTop: 0 }}>🌊 颱風事件潮位與暴潮增水分析</h2>
+    <h2 id="event-surge-title" style={{ color: '#123c66', marginTop: 0 }}>🌊 颱風潮位與暴潮預測</h2>
+    <section aria-labelledby="tide-section-title" style={{ padding: '20px 0' }}>
+    <h3 id="tide-section-title" style={{ color: '#0369a1', fontSize: 24 }}>颱風潮位</h3>
     <p>先選歷史颱風，再選潮位站，查看該事件期間的實測潮位、天文潮與暴潮增水。所有顯示時間為臺灣時間（UTC+8）。</p>
     {historyLoading && <p role="status">歷史颱風清單讀取中…</p>}
     {historyError && <p role="alert">{historyError}</p>}
@@ -120,6 +123,11 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
         </table></div>
       </details>
     </>}
+    </section>
+    <section aria-labelledby="model-section-title" style={{ borderTop: '3px solid #cbd5e1', padding: 24, borderRadius: 16, background: '#f5f3ff', marginTop: 24 }}>
+      <h3 id="model-section-title" style={{ color: '#6d28d9', fontSize: 24, marginTop: 0 }}>暴潮預測</h3>
+      <ModelSurgePanel stationId={stationId} start={start} end={end} eventName={selected?.nameZh || selected?.name} />
+    </section>
   </section>;
 }
 
