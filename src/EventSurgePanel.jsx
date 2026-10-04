@@ -45,6 +45,7 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
   const years = [...new Set(events.map((t) => String(t.year)))];
   const choices = events.filter((t) => !year || String(t.year) === year);
   const selected = events.find((t) => t.sid === sid);
+  const isStaticBpnnDemo = Number(selected?.year) === 2008 && String(selected?.name || '').toLowerCase() === 'sinlaku';
   const window = eventWindow(selected, extend ? 1 : 0);
   const start = window?.start, end = window?.end;
   const key = start && end && stationId ? `${sid}|${start}|${end}|${stationId}|${retry}` : '';
@@ -52,7 +53,7 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
   const data = result?.key === key ? result.data : null;
 
   useEffect(() => {
-    if (!key) return;
+    if (!key || isStaticBpnnDemo) return;
     const controller = new AbortController();
     let cancelled = false;
     async function load() {
@@ -74,7 +75,7 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
     }
     load();
     return () => { cancelled = true; controller.abort(); };
-  }, [key, start, end, stationId]);
+  }, [key, start, end, stationId, isStaticBpnnDemo]);
 
   const points = data?.station?.history || [];
   const paired = points.filter((p) => hasNumber(p.surgeAnomaly));
@@ -106,11 +107,12 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
     {sid && !window && <p role="alert">此颱風沒有有效路徑時間，無法建立事件期間。</p>}
     {window && <p><strong>事件資料期間：</strong>{date(start)} ～ {date(end)}</p>}
     <div style={note}>歷史路徑有資料，不代表潮位來源也涵蓋同一年代。目前採用來源已發布資料的事件交集；未連接歷史潮位庫時，舊颱風可能完全沒有潮位資料。可至 <a href="https://ocean.cwa.gov.tw/V2/data_interface/datasets" target="_blank" rel="noreferrer">中央氣象署海象資料下載</a> 取得歷史觀測，並另備同期間、同基準的天文潮資料。</div>
-    {key && loading && <p role="status">正在查詢所選事件與測站…</p>}
-    {key && error && <p role="alert" style={{ color: '#b91c1c' }}>{error}</p>}
-    {key && <button type="button" style={{ ...control, width: 'auto' }} disabled={loading} onClick={() => {clear();setRetry((n) => n+1);}}>重新查詢此事件</button>}
-    {data && !hasTideValues && <p role="status" style={{ ...note, marginTop: 16 }}>此事件期間沒有可用的歷史潮位資料，已隱藏空白摘要卡與曲線。</p>}
-    {data && hasTideValues && <>
+    {isStaticBpnnDemo && stationId && <p role="status">辛樂克 BPNN 示範直接顯示曲線，不查詢此處的潮位資料。</p>}
+    {!isStaticBpnnDemo && key && loading && <p role="status">正在查詢所選事件與測站…</p>}
+    {!isStaticBpnnDemo && key && error && <p role="alert" style={{ color: '#b91c1c' }}>{error}</p>}
+    {!isStaticBpnnDemo && key && <button type="button" style={{ ...control, width: 'auto' }} disabled={loading} onClick={() => {clear();setRetry((n) => n+1);}}>重新查詢此事件</button>}
+    {!isStaticBpnnDemo && data && !hasTideValues && <p role="status" style={{ ...note, marginTop: 16 }}>此事件期間沒有可用的歷史潮位資料，已隱藏空白摘要卡與曲線。</p>}
+    {!isStaticBpnnDemo && data && hasTideValues && <>
       <div style={note}>
         <strong>{data.station.stationName} · {data.station.datumLabel} · 單位：m</strong><br />
         來源實測可用期間：{range(data.availability.observation)}<br />
