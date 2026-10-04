@@ -79,6 +79,7 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
   const points = data?.station?.history || [];
   const paired = points.filter((p) => hasNumber(p.surgeAnomaly));
   const latest = paired.at(-1) || points.filter((p) => hasNumber(p.observedTide)).at(-1) || points.at(-1);
+  const hasTideValues = points.some((point) => series.some((item) => hasNumber(point[item.key])));
   function clear() { setResult(null); setError(''); setLoading(false); }
   return <section style={box} aria-labelledby="event-surge-title">
     <h2 id="event-surge-title" style={{ color: '#123c66', marginTop: 0 }}>🌊 颱風潮位與暴潮預測</h2>
@@ -108,7 +109,8 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
     {key && loading && <p role="status">正在查詢所選事件與測站…</p>}
     {key && error && <p role="alert" style={{ color: '#b91c1c' }}>{error}</p>}
     {key && <button type="button" style={{ ...control, width: 'auto' }} disabled={loading} onClick={() => {clear();setRetry((n) => n+1);}}>重新查詢此事件</button>}
-    {data && <>
+    {data && !hasTideValues && <p role="status" style={{ ...note, marginTop: 16 }}>此事件期間沒有可用的歷史潮位資料，已隱藏空白摘要卡與曲線。</p>}
+    {data && hasTideValues && <>
       <div style={note}>
         <strong>{data.station.stationName} · {data.station.datumLabel} · 單位：m</strong><br />
         來源實測可用期間：{range(data.availability.observation)}<br />
