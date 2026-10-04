@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { surgeStations } from '../shared/tideStations.js';
+import LongdongBpnnDemo from './LongdongBpnnDemo.jsx';
 
 const date = time => new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Taipei', dateStyle: 'short', timeStyle: 'short' }).format(new Date(time));
 export default function ModelSurgePanel({ stationId, start, end, eventName }) {
@@ -26,6 +27,7 @@ export default function ModelSurgePanel({ stationId, start, end, eventName }) {
   }, [key, stationId, start, end]);
   const points = current?.payload?.points || [];
   return <>
+    <LongdongBpnnDemo stationId={stationId} />
     <p>MATLAB 模型預測的暴潮增水，與上方實測潮位減天文潮所得的暴潮增水分開呈現。</p>
     <p>使用上方所選颱風、潮位站及事件期間。</p>
     {key && <p>{eventName} · {surgeStations.find(s => s.stationId === stationId)?.stationName}<br />{date(start)} ～ {date(end)}</p>}

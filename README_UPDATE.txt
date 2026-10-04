@@ -1,4 +1,16 @@
-颱風潮位／暴潮預測更新 — 2026/10/03
+龍洞 BPNN 示範更新 — 2026/10/04
+
+已套用 Downloads/BPNN_Model_Export_20261004.zip 的原始匯出內容至 models/longdong-bpnn/。
+shared/longdongBpnnSummary.json 保存同一份摘要供 src/LongdongBpnnDemo.jsx 顯示。
+暴潮預測區新增龍洞 BPNN 架構、+1/+3/+6 小時集成測試指標及測試事件。
+示範表格是匯出模型的固定測試結果，不隨上方颱風期間改變；蘇澳不套用龍洞模型。
+匯出包未包含逐時特徵與預測序列，尚未執行推論，不生成示意預測數字。
+權重維持原始 NPZ 格式；MATLAB loadModelRows 接口與既有 API 回傳格式保留。
+輸入為連續 24 小時 x 8 特徵，依包內 README 順序；目標 surgeC_cm 為 cm，
+接入 predicted_surge 時須除以 100 換為 m，時間需包含時區。
+測試 RMSE/MAE 依目標標示 cm；peak_error_m 欄名與目標單位存在疑義，未展示。
+
+以下為既有颱風潮位／MATLAB 接口說明。
 
 基於 C:\Users\User\projects\web-app 目前已套用的事件分析最新版。
 同一個外層 card，內含「颱風潮位」與「暴潮預測」兩個 section。

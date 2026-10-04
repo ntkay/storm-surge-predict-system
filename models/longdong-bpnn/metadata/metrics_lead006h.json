@@ -1,0 +1,138 @@
+{
+  "lead_hours": 6,
+  "model": "plain_feedforward_bpnn",
+  "attention": "none",
+  "optimizer": "momentum_sgd",
+  "target_column": "surgeC_cm",
+  "target_mode": "direct",
+  "skip_first_hours": 0,
+  "input_hours": 24,
+  "resample_hours": 1.0,
+  "fill_method": "causal",
+  "max_forward_fill_hours": 0.0,
+  "require_observed_target": true,
+  "feature_columns": [
+    "surgeC_cm",
+    "pressure_hpa",
+    "wind_m_s",
+    "distance_km",
+    "track_dx_deg",
+    "track_dy_deg",
+    "water_cm",
+    "tide_cm"
+  ],
+  "input_feature_count": 8,
+  "sequence_length": 24,
+  "flattened_input_size": 192,
+  "hidden_layers": [
+    8
+  ],
+  "layer_sizes": [
+    192,
+    8,
+    1
+  ],
+  "loss": "mse",
+  "huber_delta": 1.0,
+  "momentum": 0.9,
+  "validation_fraction": 0.0,
+  "patience": 0,
+  "validation_events": [],
+  "epochs": 800,
+  "learning_rate": 0.001,
+  "batch_size": 32,
+  "runs": 5,
+  "early_sample_weight": 1.0,
+  "early_window_hours": 48.0,
+  "recent_hours": 6.0,
+  "recent_step_weight": 1.0,
+  "delta_calibration": "none",
+  "delta_calibration_alpha": 1.0,
+  "ensemble_weights": "wave_bpnn_ensemble_lead006h.npz",
+  "train_events": [
+    "200513",
+    "200519",
+    "200605",
+    "200708",
+    "200715",
+    "200807",
+    "200808",
+    "200908",
+    "201209",
+    "201315",
+    "201410",
+    "201521",
+    "201709",
+    "202403",
+    "202421"
+  ],
+  "fit_events": [
+    "200513",
+    "200519",
+    "200605",
+    "200708",
+    "200715",
+    "200807",
+    "200808",
+    "200908",
+    "201209",
+    "201315",
+    "201410",
+    "201521",
+    "201709",
+    "202403",
+    "202421"
+  ],
+  "test_events": [
+    "200505",
+    "200813",
+    "200815"
+  ],
+  "sample_counts": {
+    "all": 672,
+    "train": 477,
+    "fit": 477,
+    "validation": 0,
+    "test": 195
+  },
+  "metrics": {
+    "ensemble": {
+      "rmse": 26.659264916687967,
+      "mae": 22.236203857589032,
+      "r2": 0.021631111413956128,
+      "peak_error_m": -42.848490671745765
+    },
+    "runs": [
+      {
+        "rmse": 33.62411256016397,
+        "mae": 27.041139335573398,
+        "r2": -0.5563524549106595,
+        "peak_error_m": -25.85206446875509
+      },
+      {
+        "rmse": 26.259235240273103,
+        "mae": 20.642080291889943,
+        "r2": 0.050772217434575384,
+        "peak_error_m": -27.674155834452975
+      },
+      {
+        "rmse": 29.92941821412923,
+        "mae": 24.145661074906666,
+        "r2": -0.2331129056223007,
+        "peak_error_m": -34.616857982888405
+      },
+      {
+        "rmse": 43.35016504043959,
+        "mae": 34.45124363014503,
+        "r2": -1.5869486239317578,
+        "peak_error_m": 3.855574866714065
+      },
+      {
+        "rmse": 26.956319455412213,
+        "mae": 21.10422416109661,
+        "r2": -0.0002935820263501032,
+        "peak_error_m": -51.13094213761548
+      }
+    ]
+  }
+}
