@@ -88,7 +88,7 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
     {historyLoading && <p role="status">歷史颱風清單讀取中…</p>}
     {historyError && <p role="alert">{historyError}</p>}
     {!historyLoading && !historyError && !events.length && <p>歷史颱風清單沒有資料，請確認 public/data/typhoons.json。</p>}
-    <p>僅列含今年在內近 10 年，按路徑時間由新到舊排列。清單最新路徑時間：{events.length ? date(new Date(latestTrackTime(events[0])).toISOString()) : "—"}。僅顯示來源已收錄路徑，不代表完整涵蓋今天。</p>
+    <p>清單列出含今年在內近 10 年的颱風，並加入 BPNN 示範用的 2008 辛樂克。按路徑時間由新到舊排列；最新路徑時間：{events.length ? date(new Date(latestTrackTime(events[0])).toISOString()) : "—"}。僅顯示來源已收錄路徑，不代表完整涵蓋今天。</p>
     <p role="status">{catalogStatus}</p>
     <div style={grid}>
       <label>年份<select style={control} value={year} onChange={(e) => {setYear(e.target.value);setSid('');setStationId('');clear();}}>

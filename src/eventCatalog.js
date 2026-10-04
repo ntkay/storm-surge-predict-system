@@ -36,7 +36,14 @@ export function mergeTyphoons(...lists) {
     }
     merged.set(key,{...old,nameZh:event.nameZh || old.nameZh,windUnit:unit,track:[...points.entries()].sort((a,b)=>a[0]-b[0]).map(([,p])=>p)});
   }
-  return recentTyphoons([...merged.values()]);
+  const allEvents = [...merged.values()];
+  const recent = recentTyphoons(allEvents);
+  const sinlaku = allEvents.find((event) => Number(event.year) === 2008 && String(event.name || '').toLowerCase() === 'sinlaku');
+  if (sinlaku && !recent.some((event) => event.sid === sinlaku.sid)) {
+    recent.push({ ...sinlaku, nameZh: '辛樂克' });
+    recent.sort((a, b) => latestTrackTime(b) - latestTrackTime(a));
+  }
+  return recent;
 }
 
 export function cwaEvents(payload) {
