@@ -181,6 +181,10 @@ function App() {
       })
       .then((data) => {
         const validData = recentTyphoons(data);
+        const sinlaku = data.find((event) => Number(event.year) === 2008 && String(event.name || '').toLowerCase() === 'sinlaku');
+        if (sinlaku && !validData.some((event) => event.sid === sinlaku.sid)) {
+          validData.push({ ...sinlaku, nameZh: '辛樂克' });
+        }
         setHistoryTyphoons(validData);
         setSelectedSid("");
         setHistoryLoading(false);
