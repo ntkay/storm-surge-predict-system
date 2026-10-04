@@ -35,7 +35,13 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [retry, setRetry] = useState(0);
-  const events = useMemo(() => recentTyphoons(typhoons), [typhoons]);
+  const events = useMemo(() => {
+    const recent = recentTyphoons(typhoons);
+    const sinlaku = typhoons.find((t) => Number(t.year) === 2008 && String(t.name || '').toLowerCase() === 'sinlaku');
+    return sinlaku && !recent.some((t) => t.sid === sinlaku.sid)
+      ? [...recent, { ...sinlaku, nameZh: '辛樂克' }].sort((a,b) => latestTrackTime(b)-latestTrackTime(a))
+      : recent;
+  }, [typhoons]);
   const years = [...new Set(events.map((t) => String(t.year)))];
   const choices = events.filter((t) => !year || String(t.year) === year);
   const selected = events.find((t) => t.sid === sid);
