@@ -1,4 +1,4 @@
-import { recentTyphoons, mergeTyphoons, cwaEvents } from "./eventCatalog.js";
+import { recentTyphoons, mergeTyphoons, cwaEvents, modelTestTyphoons } from "./eventCatalog.js";
 import EventSurgePanel from "./EventSurgePanel.jsx";
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -181,11 +181,9 @@ function App() {
       })
       .then((data) => {
         const validData = recentTyphoons(data);
-        const sinlaku = data.find((event) => Number(event.year) === 2008 && String(event.name || '').toLowerCase() === 'sinlaku');
-        if (sinlaku && !validData.some((event) => event.sid === sinlaku.sid)) {
-          validData.push({ ...sinlaku, nameZh: '辛樂克' });
-        }
-        setHistoryTyphoons(validData);
+        const historicalModelStorms = modelTestTyphoons(data);
+        const combined = new Map([...validData, ...historicalModelStorms].map((event) => [event.sid, event]));
+        setHistoryTyphoons([...combined.values()]);
         setSelectedSid("");
         setHistoryLoading(false);
       })

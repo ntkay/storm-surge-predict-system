@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 import ModelSurgePanel from './ModelSurgePanel.jsx';
 import { surgeStations } from '../shared/tideStations.js';
-import { recentTyphoons, trackTime, latestTrackTime } from './eventCatalog.js';
+import { recentTyphoons, modelTestTyphoons, trackTime, latestTrackTime } from './eventCatalog.js';
 const series = [
   { key: 'observedTide', label: '實測潮位', color: '#0369a1' },
   { key: 'predictedTide', label: '天文潮', color: '#7c3aed' },
@@ -37,10 +37,8 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
   const [retry, setRetry] = useState(0);
   const events = useMemo(() => {
     const recent = recentTyphoons(typhoons);
-    const sinlaku = typhoons.find((t) => Number(t.year) === 2008 && String(t.name || '').toLowerCase() === 'sinlaku');
-    return sinlaku && !recent.some((t) => t.sid === sinlaku.sid)
-      ? [...recent, { ...sinlaku, nameZh: '辛樂克' }].sort((a,b) => latestTrackTime(b)-latestTrackTime(a))
-      : recent;
+    const combined = new Map([...recent, ...modelTestTyphoons(typhoons)].map((event) => [event.sid, event]));
+    return [...combined.values()].sort((a,b) => latestTrackTime(b)-latestTrackTime(a));
   }, [typhoons]);
   const years = [...new Set(events.map((t) => String(t.year)))];
   const choices = events.filter((t) => !year || String(t.year) === year);
@@ -90,11 +88,11 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
     {historyLoading && <p role="status">歷史颱風清單讀取中…</p>}
     {historyError && <p role="alert">{historyError}</p>}
     {!historyLoading && !historyError && !events.length && <p>歷史颱風清單沒有資料，請確認 public/data/typhoons.json。</p>}
-    <p>清單列出含今年在內近 10 年的颱風，並加入 BPNN 示範用的 2008 辛樂克。按路徑時間由新到舊排列；最新路徑時間：{events.length ? date(new Date(latestTrackTime(events[0])).toISOString()) : "—"}。僅顯示來源已收錄路徑，不代表完整涵蓋今天。</p>
+    <p>清單列出含今年在內近 10 年的颱風，以及模型測試集用到的歷史颱風（2005 海棠、潭美；2006 凱米；2008 辛樂克、薔蜜；2013 康芮）。按路徑時間由新到舊排列；最新路徑時間：{events.length ? date(new Date(latestTrackTime(events[0])).toISOString()) : "—"}。僅顯示來源已收錄路徑，不代表完整涵蓋今天。</p>
     <p role="status">{catalogStatus}</p>
     <div style={grid}>
       <label>年份<select style={control} value={year} onChange={(e) => {setYear(e.target.value);setSid('');setStationId('');clear();}}>
-        <option value="">近 10 年全部年份</option>{years.map((y) => <option key={y}>{y}</option>)}
+        <option value="">近 10 年＋模型測試颱風</option>{years.map((y) => <option key={y}>{y}</option>)}
       </select></label>
       <label>1. 選擇颱風<select style={control} value={sid} disabled={historyLoading || !events.length} onChange={(e) => {setSid(e.target.value);setStationId('');clear();}}>
         <option value="">請選擇颱風</option>{choices.map((t) => <option key={t.sid} value={t.sid}>{t.year} · {t.nameZh || t.name || '未命名'} · {date(new Date(latestTrackTime(t)).toISOString())}</option>)}

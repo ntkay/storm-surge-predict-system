@@ -13,6 +13,21 @@ export function recentTyphoons(data, currentYear = Number(new Intl.DateTimeForma
     .sort((a,b)=>latestTrackTime(b)-latestTrackTime(a) || String(a.sid).localeCompare(String(b.sid)));
 }
 
+const modelTestStorms = new Set([
+  '2005:HAITANG', '2005:TALIM', '2006:KAEMI',
+  '2008:SINLAKU', '2008:JANGMI', '2013:KONG-REY',
+]);
+const modelTestChineseNames = {
+  HAITANG: '海棠', TALIM: '潭美', KAEMI: '凱米',
+  SINLAKU: '辛樂克', JANGMI: '薔蜜', 'KONG-REY': '康芮',
+};
+
+export function modelTestTyphoons(data) {
+  return (Array.isArray(data) ? data : [])
+    .filter((event) => modelTestStorms.has(`${event.year}:${String(event.name || '').toUpperCase()}`))
+    .map((event) => ({ ...event, nameZh: modelTestChineseNames[String(event.name || '').toUpperCase()] }));
+}
+
 export function mergeTyphoons(...lists) {
   const merged = new Map();
   for (const event of lists.flat()) {
@@ -38,12 +53,8 @@ export function mergeTyphoons(...lists) {
   }
   const allEvents = [...merged.values()];
   const recent = recentTyphoons(allEvents);
-  const sinlaku = allEvents.find((event) => Number(event.year) === 2008 && String(event.name || '').toLowerCase() === 'sinlaku');
-  if (sinlaku && !recent.some((event) => event.sid === sinlaku.sid)) {
-    recent.push({ ...sinlaku, nameZh: '辛樂克' });
-    recent.sort((a, b) => latestTrackTime(b) - latestTrackTime(a));
-  }
-  return recent;
+  const selected = new Map([...recent, ...modelTestTyphoons(allEvents)].map((event) => [event.sid, event]));
+  return [...selected.values()].sort((a, b) => latestTrackTime(b) - latestTrackTime(a));
 }
 
 export function cwaEvents(payload) {
