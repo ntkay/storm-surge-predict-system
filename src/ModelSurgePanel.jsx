@@ -29,8 +29,8 @@ export default function ModelSurgePanel({ stationId, start, end, eventName }) {
   }, [key, stationId, start, end, isStaticBpnnDemo]);
   const points = current?.payload?.points || [];
   return <>
-    <LongdongBpnnDemo stationId={stationId} eventName={eventName} />
     <StormLstmDemo stationId={stationId} eventName={eventName} />
+    <LongdongBpnnDemo stationId={stationId} eventName={eventName} />
     {!isStaticBpnnDemo && <>
     <p>MATLAB 模型預測的暴潮增水，與上方實測潮位減天文潮所得的暴潮增水分開呈現。</p>
     <p>使用上方所選颱風、潮位站及事件期間。</p>
