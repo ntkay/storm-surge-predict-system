@@ -1,4 +1,4 @@
-"""Rebuild both provided 2CNN-LSTM event-split models from public inputs.
+"""Rebuild both provided CNN-LSTM event-split models from public inputs.
 
 Input archives are intentionally ignored under data/lstm-training. The script
 uses the supplied notebooks' architecture, lookback, feature set, fixed event
@@ -35,7 +35,7 @@ DATA = ROOT / "data/lstm-training"
 ARCHIVE = DATA / "cwa"
 IBTRACS = ROOT / "data/bpnn-source/ibtracs.WP.csv"
 OUTPUT = ROOT / "public/data/lstm"
-MODEL_OUTPUT = ROOT / "models/2cnn-lstm"
+MODEL_OUTPUT = ROOT / "models/cnn-lstm"
 LOOKBACK = 24
 EPOCHS = 100
 # Larger minibatches preserve the full 100 epochs while keeping CPU-only
@@ -59,7 +59,7 @@ STATIONS = {
         "dropout": {1: .1, 3: .1, 6: .2}, "lr": {1: .003, 3: .003, 6: .001},
         "loss": {1: "huber", 3: "mse", 6: "mse"},
         "tests": ["2005Talim s", "2006Kaemi s", "2013KONG-REY s"],
-        "events": {"talim": (2005, "TALIM"), "kaemi": (2006, "KAEMI"), "kong-rey": (2013, "KONG-REY")},
+        "events": {"talim": (2005, "TALIM"), "kaemi": (2006, "KAEMI"), "kong-rey": (2013, "KONG-REY"), "sinlaku": (2008, "SINLAKU")},
         "name": "蘇澳",
     },
 }
@@ -299,8 +299,8 @@ def main():
                 df = pd.DataFrame(subset)
                 plt.figure(figsize=(11, 4.2))
                 plt.plot(df.time, df.actual_cm, color="#1d70b7", lw=1.8, label="Actual")
-                plt.plot(df.time, df.prediction_cm, color="#df4d33", lw=1.8, ls="--", label="2CNN-LSTM prediction")
-                plt.title(f"{station['name']} | {event} | +{horizon}h 2CNN-LSTM")
+                plt.plot(df.time, df.prediction_cm, color="#df4d33", lw=1.8, ls="--", label="CNN-LSTM prediction")
+                plt.title(f"{station['name']} | {event} | +{horizon}h CNN-LSTM")
                 plt.ylabel("Residual surge (cm)"); plt.xlabel("Evaluation time (Taiwan time)")
                 plt.grid(True, alpha=.28); plt.legend(); plt.xticks(rotation=25); plt.tight_layout()
                 filename = f"{key}-{event[:6]}-{event.split(' ', 1)[0][6:].lower()}-{horizon}h-retrained.png".replace("--", "-")
@@ -312,7 +312,7 @@ def main():
             outputs.append({"lead_hours": horizon, "metrics": metrics, "test_events": test_names, "points": points,
                             "training_samples": int(len(window["X_train"])), "architecture": {"conv1_filters": station["filters"] if isinstance(station["filters"], tuple) else station["filters"][horizon][0], "conv2_filters": station["filters"] if isinstance(station["filters"], tuple) else station["filters"][horizon][1], "lstm_units": station["units"][horizon], "lookback_hours": LOOKBACK, "epochs": EPOCHS, "batch_size": BATCH, "notebook_batch_size": 8}})
             print(f"{station['name']} +{horizon}h metrics: {metrics}", flush=True)
-        payload = {"station": station["station"], "station_name": station["name"], "units": "cm", "model": "2CNN-LSTM", "training_status": "retrained", "data_sources": {"tide": "CWA historical station archives (minute-00 hourly records)", "track": "NOAA IBTrACS best-track, interpolated hourly with PCHIP"}, "tide_method": "UTide annual harmonic separation fitted to each calendar year; output is observed water level minus astronomical tide.", "split_method": "Held-out storm-event split matching the supplied notebook; no event appears in both train and test.", "tide_years": years, "results": outputs}
+        payload = {"station": station["station"], "station_name": station["name"], "units": "cm", "model": "CNN-LSTM", "training_status": "retrained", "data_sources": {"tide": "CWA historical station archives (minute-00 hourly records)", "track": "NOAA IBTrACS best-track, interpolated hourly with PCHIP"}, "tide_method": "UTide annual harmonic separation fitted to each calendar year; output is observed water level minus astronomical tide.", "split_method": "Held-out storm-event split; no event appears in both train and test.", "tide_years": years, "results": outputs}
         (OUTPUT / f"{key}-retrained.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print("TRAINING_COMPLETE", flush=True)
 

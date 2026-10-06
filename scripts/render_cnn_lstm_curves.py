@@ -1,4 +1,4 @@
-"""Render the saved retrained 2CNN-LSTM test predictions as readable figures."""
+"""Render saved CNN-LSTM test predictions as readable figures."""
 from __future__ import annotations
 
 import json
@@ -15,13 +15,14 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "public/data/lstm"
 SLUGS = {
-    "longdong": {"200505Haitang s": "haitang", "200813Sinlaku s": "sinlaku", "200815Jangmi s": "jangmi"},
-    "suao": {"200513Talim s": "talim", "200605Kaemi s": "kaemi", "201315KONG-REY s": "kong-rey"},
+    "longdong": {"200813Sinlaku s": "sinlaku"},
+    "suao": {"200813Sinlaku s": "sinlaku"},
 }
 NAMES = {"longdong": "Longdong", "suao": "Suao"}
 
 
 def main():
+    rendered = 0
     for station, mapping in SLUGS.items():
         payload = json.loads((OUT / f"{station}-retrained.json").read_text(encoding="utf-8"))
         for result in payload["results"]:
@@ -39,7 +40,7 @@ def main():
 
                 fig, ax = plt.subplots(figsize=(11, 4.2))
                 ax.plot(frame.time, actual, color="#1d70b7", lw=1.8, label="Actual")
-                ax.plot(frame.time, prediction, color="#df4d33", lw=1.8, ls="--", label="2CNN-LSTM prediction")
+                ax.plot(frame.time, prediction, color="#df4d33", lw=1.8, ls="--", label="CNN-LSTM prediction")
                 short_event = event.split(" ")[0]
                 ax.set_title(f"{NAMES[station]} | {short_event} TEST | +{result['lead_hours']}h | RMSE={rmse:.2f} cm | MAE={mae:.2f} cm | R²={r2:.3f}")
                 ax.set_ylabel("Residual surge (cm)")
@@ -52,7 +53,8 @@ def main():
                 fig.tight_layout()
                 fig.savefig(OUT / f"{station}-{slug}-{result['lead_hours']}h.png", dpi=160)
                 plt.close(fig)
-    print("Rendered 18 retrained test curves")
+                rendered += 1
+    print(f"Rendered {rendered} retrained test curves")
 
 
 if __name__ == "__main__":
