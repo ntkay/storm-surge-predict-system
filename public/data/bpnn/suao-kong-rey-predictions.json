@@ -1,0 +1,2207 @@
+{
+  "event_id": "2013KONG-REY",
+  "event_name": "2013 Kong-Rey",
+  "station": "C4U01",
+  "station_id": "1246",
+  "units": "mm",
+  "mode": "suao-bpnn-retrained-historical-test",
+  "validation": "held-out-event; station-specific retraining, not exported Longdong weights",
+  "training_samples": 2000,
+  "training_events": 271,
+  "test_event": "2013Kong-Rey s",
+  "architecture": {
+    "input_hours": 24,
+    "features": [
+      "surgeC_cm",
+      "pressure_hpa",
+      "wind_m_s",
+      "distance_km",
+      "track_dx_deg",
+      "track_dy_deg",
+      "water_cm",
+      "tide_cm"
+    ],
+    "layer_sizes": [
+      192,
+      8,
+      1
+    ],
+    "ensemble_runs": 5,
+    "epochs": 800,
+    "optimizer": "SGD with momentum 0.9"
+  },
+  "results": [
+    {
+      "lead_hours": 1,
+      "model_sha256": "bcd46950092017d10c47da166e2b969640941a5f7e6e4b82543bb307311034a8",
+      "metrics": {
+        "rmse_mm": 18.780292881893004,
+        "mae_mm": 15.032402643477635,
+        "r2": 0.8126225937467672,
+        "count": 121
+      },
+      "points": [
+        {
+          "issued_at": "2013-08-26T07:00:00",
+          "valid_at": "2013-08-26T08:00:00",
+          "actual_surge_mm": 44.146,
+          "predicted_surge_mm": 40.481
+        },
+        {
+          "issued_at": "2013-08-26T08:00:00",
+          "valid_at": "2013-08-26T09:00:00",
+          "actual_surge_mm": 30.199,
+          "predicted_surge_mm": 36.116
+        },
+        {
+          "issued_at": "2013-08-26T09:00:00",
+          "valid_at": "2013-08-26T10:00:00",
+          "actual_surge_mm": 36.896,
+          "predicted_surge_mm": 29.729
+        },
+        {
+          "issued_at": "2013-08-26T10:00:00",
+          "valid_at": "2013-08-26T11:00:00",
+          "actual_surge_mm": 61.671,
+          "predicted_surge_mm": 34.985
+        },
+        {
+          "issued_at": "2013-08-26T11:00:00",
+          "valid_at": "2013-08-26T12:00:00",
+          "actual_surge_mm": 70.19,
+          "predicted_surge_mm": 61.993
+        },
+        {
+          "issued_at": "2013-08-26T12:00:00",
+          "valid_at": "2013-08-26T13:00:00",
+          "actual_surge_mm": 81.056,
+          "predicted_surge_mm": 80.735
+        },
+        {
+          "issued_at": "2013-08-26T13:00:00",
+          "valid_at": "2013-08-26T14:00:00",
+          "actual_surge_mm": 79.439,
+          "predicted_surge_mm": 94.141
+        },
+        {
+          "issued_at": "2013-08-26T14:00:00",
+          "valid_at": "2013-08-26T15:00:00",
+          "actual_surge_mm": 65.062,
+          "predicted_surge_mm": 94.957
+        },
+        {
+          "issued_at": "2013-08-26T15:00:00",
+          "valid_at": "2013-08-26T16:00:00",
+          "actual_surge_mm": 68.787,
+          "predicted_surge_mm": 78.748
+        },
+        {
+          "issued_at": "2013-08-26T16:00:00",
+          "valid_at": "2013-08-26T17:00:00",
+          "actual_surge_mm": 98.151,
+          "predicted_surge_mm": 70.392
+        },
+        {
+          "issued_at": "2013-08-26T17:00:00",
+          "valid_at": "2013-08-26T18:00:00",
+          "actual_surge_mm": 114.908,
+          "predicted_surge_mm": 81.993
+        },
+        {
+          "issued_at": "2013-08-26T18:00:00",
+          "valid_at": "2013-08-26T19:00:00",
+          "actual_surge_mm": 128.238,
+          "predicted_surge_mm": 89.973
+        },
+        {
+          "issued_at": "2013-08-26T19:00:00",
+          "valid_at": "2013-08-26T20:00:00",
+          "actual_surge_mm": 100.106,
+          "predicted_surge_mm": 106.177
+        },
+        {
+          "issued_at": "2013-08-26T20:00:00",
+          "valid_at": "2013-08-26T21:00:00",
+          "actual_surge_mm": 80.645,
+          "predicted_surge_mm": 91.875
+        },
+        {
+          "issued_at": "2013-08-26T21:00:00",
+          "valid_at": "2013-08-26T22:00:00",
+          "actual_surge_mm": 71.389,
+          "predicted_surge_mm": 79.744
+        },
+        {
+          "issued_at": "2013-08-26T22:00:00",
+          "valid_at": "2013-08-26T23:00:00",
+          "actual_surge_mm": 66.149,
+          "predicted_surge_mm": 78.641
+        },
+        {
+          "issued_at": "2013-08-26T23:00:00",
+          "valid_at": "2013-08-27T00:00:00",
+          "actual_surge_mm": 46.306,
+          "predicted_surge_mm": 74.555
+        },
+        {
+          "issued_at": "2013-08-27T00:00:00",
+          "valid_at": "2013-08-27T01:00:00",
+          "actual_surge_mm": 54.011,
+          "predicted_surge_mm": 56.001
+        },
+        {
+          "issued_at": "2013-08-27T01:00:00",
+          "valid_at": "2013-08-27T02:00:00",
+          "actual_surge_mm": 45.089,
+          "predicted_surge_mm": 58.718
+        },
+        {
+          "issued_at": "2013-08-27T02:00:00",
+          "valid_at": "2013-08-27T03:00:00",
+          "actual_surge_mm": 46.052,
+          "predicted_surge_mm": 55.319
+        },
+        {
+          "issued_at": "2013-08-27T03:00:00",
+          "valid_at": "2013-08-27T04:00:00",
+          "actual_surge_mm": 72.445,
+          "predicted_surge_mm": 59.867
+        },
+        {
+          "issued_at": "2013-08-27T04:00:00",
+          "valid_at": "2013-08-27T05:00:00",
+          "actual_surge_mm": 83.061,
+          "predicted_surge_mm": 78.439
+        },
+        {
+          "issued_at": "2013-08-27T05:00:00",
+          "valid_at": "2013-08-27T06:00:00",
+          "actual_surge_mm": 96.699,
+          "predicted_surge_mm": 84.785
+        },
+        {
+          "issued_at": "2013-08-27T06:00:00",
+          "valid_at": "2013-08-27T07:00:00",
+          "actual_surge_mm": 89.773,
+          "predicted_surge_mm": 83.229
+        },
+        {
+          "issued_at": "2013-08-27T07:00:00",
+          "valid_at": "2013-08-27T08:00:00",
+          "actual_surge_mm": 81.225,
+          "predicted_surge_mm": 74.203
+        },
+        {
+          "issued_at": "2013-08-27T08:00:00",
+          "valid_at": "2013-08-27T09:00:00",
+          "actual_surge_mm": 68.945,
+          "predicted_surge_mm": 69.963
+        },
+        {
+          "issued_at": "2013-08-27T09:00:00",
+          "valid_at": "2013-08-27T10:00:00",
+          "actual_surge_mm": 49.013,
+          "predicted_surge_mm": 66.179
+        },
+        {
+          "issued_at": "2013-08-27T10:00:00",
+          "valid_at": "2013-08-27T11:00:00",
+          "actual_surge_mm": 68.358,
+          "predicted_surge_mm": 51.591
+        },
+        {
+          "issued_at": "2013-08-27T11:00:00",
+          "valid_at": "2013-08-27T12:00:00",
+          "actual_surge_mm": 76.493,
+          "predicted_surge_mm": 65.937
+        },
+        {
+          "issued_at": "2013-08-27T12:00:00",
+          "valid_at": "2013-08-27T13:00:00",
+          "actual_surge_mm": 74.655,
+          "predicted_surge_mm": 78.825
+        },
+        {
+          "issued_at": "2013-08-27T13:00:00",
+          "valid_at": "2013-08-27T14:00:00",
+          "actual_surge_mm": 66.739,
+          "predicted_surge_mm": 80.987
+        },
+        {
+          "issued_at": "2013-08-27T14:00:00",
+          "valid_at": "2013-08-27T15:00:00",
+          "actual_surge_mm": 65.749,
+          "predicted_surge_mm": 75.328
+        },
+        {
+          "issued_at": "2013-08-27T15:00:00",
+          "valid_at": "2013-08-27T16:00:00",
+          "actual_surge_mm": 67.799,
+          "predicted_surge_mm": 77.322
+        },
+        {
+          "issued_at": "2013-08-27T16:00:00",
+          "valid_at": "2013-08-27T17:00:00",
+          "actual_surge_mm": 89.275,
+          "predicted_surge_mm": 81.593
+        },
+        {
+          "issued_at": "2013-08-27T17:00:00",
+          "valid_at": "2013-08-27T18:00:00",
+          "actual_surge_mm": 138.7,
+          "predicted_surge_mm": 99.044
+        },
+        {
+          "issued_at": "2013-08-27T18:00:00",
+          "valid_at": "2013-08-27T19:00:00",
+          "actual_surge_mm": 171.462,
+          "predicted_surge_mm": 129.813
+        },
+        {
+          "issued_at": "2013-08-27T19:00:00",
+          "valid_at": "2013-08-27T20:00:00",
+          "actual_surge_mm": 168.39,
+          "predicted_surge_mm": 161.397
+        },
+        {
+          "issued_at": "2013-08-27T20:00:00",
+          "valid_at": "2013-08-27T21:00:00",
+          "actual_surge_mm": 146.636,
+          "predicted_surge_mm": 158.56
+        },
+        {
+          "issued_at": "2013-08-27T21:00:00",
+          "valid_at": "2013-08-27T22:00:00",
+          "actual_surge_mm": 133.128,
+          "predicted_surge_mm": 140.165
+        },
+        {
+          "issued_at": "2013-08-27T22:00:00",
+          "valid_at": "2013-08-27T23:00:00",
+          "actual_surge_mm": 133.18,
+          "predicted_surge_mm": 128.655
+        },
+        {
+          "issued_at": "2013-08-27T23:00:00",
+          "valid_at": "2013-08-28T00:00:00",
+          "actual_surge_mm": 98.954,
+          "predicted_surge_mm": 128.342
+        },
+        {
+          "issued_at": "2013-08-28T00:00:00",
+          "valid_at": "2013-08-28T01:00:00",
+          "actual_surge_mm": 79.647,
+          "predicted_surge_mm": 101.198
+        },
+        {
+          "issued_at": "2013-08-28T01:00:00",
+          "valid_at": "2013-08-28T02:00:00",
+          "actual_surge_mm": 68.624,
+          "predicted_surge_mm": 77.151
+        },
+        {
+          "issued_at": "2013-08-28T02:00:00",
+          "valid_at": "2013-08-28T03:00:00",
+          "actual_surge_mm": 82.736,
+          "predicted_surge_mm": 68.667
+        },
+        {
+          "issued_at": "2013-08-28T03:00:00",
+          "valid_at": "2013-08-28T04:00:00",
+          "actual_surge_mm": 80.346,
+          "predicted_surge_mm": 90.247
+        },
+        {
+          "issued_at": "2013-08-28T04:00:00",
+          "valid_at": "2013-08-28T05:00:00",
+          "actual_surge_mm": 111.145,
+          "predicted_surge_mm": 98.443
+        },
+        {
+          "issued_at": "2013-08-28T05:00:00",
+          "valid_at": "2013-08-28T06:00:00",
+          "actual_surge_mm": 120.903,
+          "predicted_surge_mm": 129.987
+        },
+        {
+          "issued_at": "2013-08-28T06:00:00",
+          "valid_at": "2013-08-28T07:00:00",
+          "actual_surge_mm": 127.134,
+          "predicted_surge_mm": 134.031
+        },
+        {
+          "issued_at": "2013-08-28T07:00:00",
+          "valid_at": "2013-08-28T08:00:00",
+          "actual_surge_mm": 131.24,
+          "predicted_surge_mm": 126.779
+        },
+        {
+          "issued_at": "2013-08-28T08:00:00",
+          "valid_at": "2013-08-28T09:00:00",
+          "actual_surge_mm": 128.149,
+          "predicted_surge_mm": 121.742
+        },
+        {
+          "issued_at": "2013-08-28T09:00:00",
+          "valid_at": "2013-08-28T10:00:00",
+          "actual_surge_mm": 112.905,
+          "predicted_surge_mm": 117.607
+        },
+        {
+          "issued_at": "2013-08-28T10:00:00",
+          "valid_at": "2013-08-28T11:00:00",
+          "actual_surge_mm": 80.384,
+          "predicted_surge_mm": 103.755
+        },
+        {
+          "issued_at": "2013-08-28T11:00:00",
+          "valid_at": "2013-08-28T12:00:00",
+          "actual_surge_mm": 78.643,
+          "predicted_surge_mm": 78.401
+        },
+        {
+          "issued_at": "2013-08-28T12:00:00",
+          "valid_at": "2013-08-28T13:00:00",
+          "actual_surge_mm": 52.672,
+          "predicted_surge_mm": 69.319
+        },
+        {
+          "issued_at": "2013-08-28T13:00:00",
+          "valid_at": "2013-08-28T14:00:00",
+          "actual_surge_mm": 62.783,
+          "predicted_surge_mm": 50.13
+        },
+        {
+          "issued_at": "2013-08-28T14:00:00",
+          "valid_at": "2013-08-28T15:00:00",
+          "actual_surge_mm": 80.1,
+          "predicted_surge_mm": 63.175
+        },
+        {
+          "issued_at": "2013-08-28T15:00:00",
+          "valid_at": "2013-08-28T16:00:00",
+          "actual_surge_mm": 97.792,
+          "predicted_surge_mm": 93.978
+        },
+        {
+          "issued_at": "2013-08-28T16:00:00",
+          "valid_at": "2013-08-28T17:00:00",
+          "actual_surge_mm": 117.561,
+          "predicted_surge_mm": 111.525
+        },
+        {
+          "issued_at": "2013-08-28T17:00:00",
+          "valid_at": "2013-08-28T18:00:00",
+          "actual_surge_mm": 121.918,
+          "predicted_surge_mm": 139.17
+        },
+        {
+          "issued_at": "2013-08-28T18:00:00",
+          "valid_at": "2013-08-28T19:00:00",
+          "actual_surge_mm": 136.416,
+          "predicted_surge_mm": 136.011
+        },
+        {
+          "issued_at": "2013-08-28T19:00:00",
+          "valid_at": "2013-08-28T20:00:00",
+          "actual_surge_mm": 153.311,
+          "predicted_surge_mm": 139.279
+        },
+        {
+          "issued_at": "2013-08-28T20:00:00",
+          "valid_at": "2013-08-28T21:00:00",
+          "actual_surge_mm": 151.847,
+          "predicted_surge_mm": 145.359
+        },
+        {
+          "issued_at": "2013-08-28T21:00:00",
+          "valid_at": "2013-08-28T22:00:00",
+          "actual_surge_mm": 126.463,
+          "predicted_surge_mm": 145.042
+        },
+        {
+          "issued_at": "2013-08-28T22:00:00",
+          "valid_at": "2013-08-28T23:00:00",
+          "actual_surge_mm": 92.494,
+          "predicted_surge_mm": 119.14
+        },
+        {
+          "issued_at": "2013-08-28T23:00:00",
+          "valid_at": "2013-08-29T00:00:00",
+          "actual_surge_mm": 98.804,
+          "predicted_surge_mm": 84.777
+        },
+        {
+          "issued_at": "2013-08-29T00:00:00",
+          "valid_at": "2013-08-29T01:00:00",
+          "actual_surge_mm": 114.529,
+          "predicted_surge_mm": 92.9
+        },
+        {
+          "issued_at": "2013-08-29T01:00:00",
+          "valid_at": "2013-08-29T02:00:00",
+          "actual_surge_mm": 106.973,
+          "predicted_surge_mm": 117.244
+        },
+        {
+          "issued_at": "2013-08-29T02:00:00",
+          "valid_at": "2013-08-29T03:00:00",
+          "actual_surge_mm": 109.625,
+          "predicted_surge_mm": 117.373
+        },
+        {
+          "issued_at": "2013-08-29T03:00:00",
+          "valid_at": "2013-08-29T04:00:00",
+          "actual_surge_mm": 113.497,
+          "predicted_surge_mm": 124.792
+        },
+        {
+          "issued_at": "2013-08-29T04:00:00",
+          "valid_at": "2013-08-29T05:00:00",
+          "actual_surge_mm": 66.646,
+          "predicted_surge_mm": 132.984
+        },
+        {
+          "issued_at": "2013-08-29T05:00:00",
+          "valid_at": "2013-08-29T06:00:00",
+          "actual_surge_mm": 112.703,
+          "predicted_surge_mm": 88.072
+        },
+        {
+          "issued_at": "2013-08-29T06:00:00",
+          "valid_at": "2013-08-29T07:00:00",
+          "actual_surge_mm": 108.835,
+          "predicted_surge_mm": 123.429
+        },
+        {
+          "issued_at": "2013-08-29T07:00:00",
+          "valid_at": "2013-08-29T08:00:00",
+          "actual_surge_mm": 147.044,
+          "predicted_surge_mm": 113.672
+        },
+        {
+          "issued_at": "2013-08-29T08:00:00",
+          "valid_at": "2013-08-29T09:00:00",
+          "actual_surge_mm": 162.208,
+          "predicted_surge_mm": 143.032
+        },
+        {
+          "issued_at": "2013-08-29T09:00:00",
+          "valid_at": "2013-08-29T10:00:00",
+          "actual_surge_mm": 120.495,
+          "predicted_surge_mm": 149.047
+        },
+        {
+          "issued_at": "2013-08-29T10:00:00",
+          "valid_at": "2013-08-29T11:00:00",
+          "actual_surge_mm": 88.234,
+          "predicted_surge_mm": 113.836
+        },
+        {
+          "issued_at": "2013-08-29T11:00:00",
+          "valid_at": "2013-08-29T12:00:00",
+          "actual_surge_mm": 39.421,
+          "predicted_surge_mm": 85.335
+        },
+        {
+          "issued_at": "2013-08-29T12:00:00",
+          "valid_at": "2013-08-29T13:00:00",
+          "actual_surge_mm": 44.995,
+          "predicted_surge_mm": 40.191
+        },
+        {
+          "issued_at": "2013-08-29T13:00:00",
+          "valid_at": "2013-08-29T14:00:00",
+          "actual_surge_mm": 47.879,
+          "predicted_surge_mm": 35.355
+        },
+        {
+          "issued_at": "2013-08-29T14:00:00",
+          "valid_at": "2013-08-29T15:00:00",
+          "actual_surge_mm": 30.8,
+          "predicted_surge_mm": 45.487
+        },
+        {
+          "issued_at": "2013-08-29T15:00:00",
+          "valid_at": "2013-08-29T16:00:00",
+          "actual_surge_mm": 12.014,
+          "predicted_surge_mm": 24.307
+        },
+        {
+          "issued_at": "2013-08-29T16:00:00",
+          "valid_at": "2013-08-29T17:00:00",
+          "actual_surge_mm": 2.759,
+          "predicted_surge_mm": 15.25
+        },
+        {
+          "issued_at": "2013-08-29T17:00:00",
+          "valid_at": "2013-08-29T18:00:00",
+          "actual_surge_mm": 6.924,
+          "predicted_surge_mm": 3.695
+        },
+        {
+          "issued_at": "2013-08-29T18:00:00",
+          "valid_at": "2013-08-29T19:00:00",
+          "actual_surge_mm": 24.751,
+          "predicted_surge_mm": 16.405
+        },
+        {
+          "issued_at": "2013-08-29T19:00:00",
+          "valid_at": "2013-08-29T20:00:00",
+          "actual_surge_mm": 56.045,
+          "predicted_surge_mm": 36.352
+        },
+        {
+          "issued_at": "2013-08-29T20:00:00",
+          "valid_at": "2013-08-29T21:00:00",
+          "actual_surge_mm": 88.016,
+          "predicted_surge_mm": 55.533
+        },
+        {
+          "issued_at": "2013-08-29T21:00:00",
+          "valid_at": "2013-08-29T22:00:00",
+          "actual_surge_mm": 112.018,
+          "predicted_surge_mm": 72.882
+        },
+        {
+          "issued_at": "2013-08-29T22:00:00",
+          "valid_at": "2013-08-29T23:00:00",
+          "actual_surge_mm": 101.628,
+          "predicted_surge_mm": 91.171
+        },
+        {
+          "issued_at": "2013-08-29T23:00:00",
+          "valid_at": "2013-08-30T00:00:00",
+          "actual_surge_mm": 57.966,
+          "predicted_surge_mm": 81.381
+        },
+        {
+          "issued_at": "2013-08-30T00:00:00",
+          "valid_at": "2013-08-30T01:00:00",
+          "actual_surge_mm": 62.325,
+          "predicted_surge_mm": 53.033
+        },
+        {
+          "issued_at": "2013-08-30T01:00:00",
+          "valid_at": "2013-08-30T02:00:00",
+          "actual_surge_mm": 65.488,
+          "predicted_surge_mm": 45.528
+        },
+        {
+          "issued_at": "2013-08-30T02:00:00",
+          "valid_at": "2013-08-30T03:00:00",
+          "actual_surge_mm": 30.174,
+          "predicted_surge_mm": 56.5
+        },
+        {
+          "issued_at": "2013-08-30T03:00:00",
+          "valid_at": "2013-08-30T04:00:00",
+          "actual_surge_mm": 5.597,
+          "predicted_surge_mm": 29.382
+        },
+        {
+          "issued_at": "2013-08-30T04:00:00",
+          "valid_at": "2013-08-30T05:00:00",
+          "actual_surge_mm": 3.316,
+          "predicted_surge_mm": 9.596
+        },
+        {
+          "issued_at": "2013-08-30T05:00:00",
+          "valid_at": "2013-08-30T06:00:00",
+          "actual_surge_mm": -41.454,
+          "predicted_surge_mm": 8.592
+        },
+        {
+          "issued_at": "2013-08-30T06:00:00",
+          "valid_at": "2013-08-30T07:00:00",
+          "actual_surge_mm": -36.551,
+          "predicted_surge_mm": -18.117
+        },
+        {
+          "issued_at": "2013-08-30T07:00:00",
+          "valid_at": "2013-08-30T08:00:00",
+          "actual_surge_mm": -17.672,
+          "predicted_surge_mm": -9.239
+        },
+        {
+          "issued_at": "2013-08-30T08:00:00",
+          "valid_at": "2013-08-30T09:00:00",
+          "actual_surge_mm": 13.633,
+          "predicted_surge_mm": -1.819
+        },
+        {
+          "issued_at": "2013-08-30T09:00:00",
+          "valid_at": "2013-08-30T10:00:00",
+          "actual_surge_mm": 27.165,
+          "predicted_surge_mm": 22.841
+        },
+        {
+          "issued_at": "2013-08-30T10:00:00",
+          "valid_at": "2013-08-30T11:00:00",
+          "actual_surge_mm": 54.756,
+          "predicted_surge_mm": 32.224
+        },
+        {
+          "issued_at": "2013-08-30T11:00:00",
+          "valid_at": "2013-08-30T12:00:00",
+          "actual_surge_mm": 64.304,
+          "predicted_surge_mm": 51.529
+        },
+        {
+          "issued_at": "2013-08-30T12:00:00",
+          "valid_at": "2013-08-30T13:00:00",
+          "actual_surge_mm": 46.372,
+          "predicted_surge_mm": 57.78
+        },
+        {
+          "issued_at": "2013-08-30T13:00:00",
+          "valid_at": "2013-08-30T14:00:00",
+          "actual_surge_mm": 31.204,
+          "predicted_surge_mm": 40.784
+        },
+        {
+          "issued_at": "2013-08-30T14:00:00",
+          "valid_at": "2013-08-30T15:00:00",
+          "actual_surge_mm": 30.194,
+          "predicted_surge_mm": 18.604
+        },
+        {
+          "issued_at": "2013-08-30T15:00:00",
+          "valid_at": "2013-08-30T16:00:00",
+          "actual_surge_mm": 33.053,
+          "predicted_surge_mm": 18.459
+        },
+        {
+          "issued_at": "2013-08-30T16:00:00",
+          "valid_at": "2013-08-30T17:00:00",
+          "actual_surge_mm": 17.779,
+          "predicted_surge_mm": 22.761
+        },
+        {
+          "issued_at": "2013-08-30T17:00:00",
+          "valid_at": "2013-08-30T18:00:00",
+          "actual_surge_mm": 6.246,
+          "predicted_surge_mm": 13.953
+        },
+        {
+          "issued_at": "2013-08-30T18:00:00",
+          "valid_at": "2013-08-30T19:00:00",
+          "actual_surge_mm": 1.207,
+          "predicted_surge_mm": 7.021
+        },
+        {
+          "issued_at": "2013-08-30T19:00:00",
+          "valid_at": "2013-08-30T20:00:00",
+          "actual_surge_mm": 6.128,
+          "predicted_surge_mm": 12.271
+        },
+        {
+          "issued_at": "2013-08-30T20:00:00",
+          "valid_at": "2013-08-30T21:00:00",
+          "actual_surge_mm": 12.018,
+          "predicted_surge_mm": 20.808
+        },
+        {
+          "issued_at": "2013-08-30T21:00:00",
+          "valid_at": "2013-08-30T22:00:00",
+          "actual_surge_mm": 32.27,
+          "predicted_surge_mm": 26.755
+        },
+        {
+          "issued_at": "2013-08-30T22:00:00",
+          "valid_at": "2013-08-30T23:00:00",
+          "actual_surge_mm": 64.838,
+          "predicted_surge_mm": 40.165
+        },
+        {
+          "issued_at": "2013-08-30T23:00:00",
+          "valid_at": "2013-08-31T00:00:00",
+          "actual_surge_mm": 103.929,
+          "predicted_surge_mm": 68.012
+        },
+        {
+          "issued_at": "2013-08-31T00:00:00",
+          "valid_at": "2013-08-31T01:00:00",
+          "actual_surge_mm": 107.883,
+          "predicted_surge_mm": 96.645
+        },
+        {
+          "issued_at": "2013-08-31T01:00:00",
+          "valid_at": "2013-08-31T02:00:00",
+          "actual_surge_mm": 89.064,
+          "predicted_surge_mm": 101.379
+        },
+        {
+          "issued_at": "2013-08-31T02:00:00",
+          "valid_at": "2013-08-31T03:00:00",
+          "actual_surge_mm": 68.167,
+          "predicted_surge_mm": 77.341
+        },
+        {
+          "issued_at": "2013-08-31T03:00:00",
+          "valid_at": "2013-08-31T04:00:00",
+          "actual_surge_mm": 73.527,
+          "predicted_surge_mm": 55.484
+        },
+        {
+          "issued_at": "2013-08-31T04:00:00",
+          "valid_at": "2013-08-31T05:00:00",
+          "actual_surge_mm": 45.564,
+          "predicted_surge_mm": 55.641
+        },
+        {
+          "issued_at": "2013-08-31T05:00:00",
+          "valid_at": "2013-08-31T06:00:00",
+          "actual_surge_mm": 43.488,
+          "predicted_surge_mm": 41.198
+        },
+        {
+          "issued_at": "2013-08-31T06:00:00",
+          "valid_at": "2013-08-31T07:00:00",
+          "actual_surge_mm": 16.673,
+          "predicted_surge_mm": 38.607
+        },
+        {
+          "issued_at": "2013-08-31T07:00:00",
+          "valid_at": "2013-08-31T08:00:00",
+          "actual_surge_mm": 39.776,
+          "predicted_surge_mm": 19.67
+        }
+      ]
+    },
+    {
+      "lead_hours": 3,
+      "model_sha256": "d5bce2e4475b5795f07292259c8456ab9bfd751e37e6cdbedfc28df98b3cbbc6",
+      "metrics": {
+        "rmse_mm": 32.16701588108521,
+        "mae_mm": 25.079924779038265,
+        "r2": 0.45267444693511627,
+        "count": 119
+      },
+      "points": [
+        {
+          "issued_at": "2013-08-26T07:00:00",
+          "valid_at": "2013-08-26T10:00:00",
+          "actual_surge_mm": 36.896,
+          "predicted_surge_mm": 26.55
+        },
+        {
+          "issued_at": "2013-08-26T08:00:00",
+          "valid_at": "2013-08-26T11:00:00",
+          "actual_surge_mm": 61.671,
+          "predicted_surge_mm": 30.524
+        },
+        {
+          "issued_at": "2013-08-26T09:00:00",
+          "valid_at": "2013-08-26T12:00:00",
+          "actual_surge_mm": 70.19,
+          "predicted_surge_mm": 36.942
+        },
+        {
+          "issued_at": "2013-08-26T10:00:00",
+          "valid_at": "2013-08-26T13:00:00",
+          "actual_surge_mm": 81.056,
+          "predicted_surge_mm": 58.051
+        },
+        {
+          "issued_at": "2013-08-26T11:00:00",
+          "valid_at": "2013-08-26T14:00:00",
+          "actual_surge_mm": 79.439,
+          "predicted_surge_mm": 78.52
+        },
+        {
+          "issued_at": "2013-08-26T12:00:00",
+          "valid_at": "2013-08-26T15:00:00",
+          "actual_surge_mm": 65.062,
+          "predicted_surge_mm": 89.353
+        },
+        {
+          "issued_at": "2013-08-26T13:00:00",
+          "valid_at": "2013-08-26T16:00:00",
+          "actual_surge_mm": 68.787,
+          "predicted_surge_mm": 111.089
+        },
+        {
+          "issued_at": "2013-08-26T14:00:00",
+          "valid_at": "2013-08-26T17:00:00",
+          "actual_surge_mm": 98.151,
+          "predicted_surge_mm": 105.328
+        },
+        {
+          "issued_at": "2013-08-26T15:00:00",
+          "valid_at": "2013-08-26T18:00:00",
+          "actual_surge_mm": 114.908,
+          "predicted_surge_mm": 78.773
+        },
+        {
+          "issued_at": "2013-08-26T16:00:00",
+          "valid_at": "2013-08-26T19:00:00",
+          "actual_surge_mm": 128.238,
+          "predicted_surge_mm": 50.878
+        },
+        {
+          "issued_at": "2013-08-26T17:00:00",
+          "valid_at": "2013-08-26T20:00:00",
+          "actual_surge_mm": 100.106,
+          "predicted_surge_mm": 59.204
+        },
+        {
+          "issued_at": "2013-08-26T18:00:00",
+          "valid_at": "2013-08-26T21:00:00",
+          "actual_surge_mm": 80.645,
+          "predicted_surge_mm": 73.57
+        },
+        {
+          "issued_at": "2013-08-26T19:00:00",
+          "valid_at": "2013-08-26T22:00:00",
+          "actual_surge_mm": 71.389,
+          "predicted_surge_mm": 96.073
+        },
+        {
+          "issued_at": "2013-08-26T20:00:00",
+          "valid_at": "2013-08-26T23:00:00",
+          "actual_surge_mm": 66.149,
+          "predicted_surge_mm": 97.683
+        },
+        {
+          "issued_at": "2013-08-26T21:00:00",
+          "valid_at": "2013-08-27T00:00:00",
+          "actual_surge_mm": 46.306,
+          "predicted_surge_mm": 96.1
+        },
+        {
+          "issued_at": "2013-08-26T22:00:00",
+          "valid_at": "2013-08-27T01:00:00",
+          "actual_surge_mm": 54.011,
+          "predicted_surge_mm": 85.397
+        },
+        {
+          "issued_at": "2013-08-26T23:00:00",
+          "valid_at": "2013-08-27T02:00:00",
+          "actual_surge_mm": 45.089,
+          "predicted_surge_mm": 75.074
+        },
+        {
+          "issued_at": "2013-08-27T00:00:00",
+          "valid_at": "2013-08-27T03:00:00",
+          "actual_surge_mm": 46.052,
+          "predicted_surge_mm": 63.35
+        },
+        {
+          "issued_at": "2013-08-27T01:00:00",
+          "valid_at": "2013-08-27T04:00:00",
+          "actual_surge_mm": 72.445,
+          "predicted_surge_mm": 75.828
+        },
+        {
+          "issued_at": "2013-08-27T02:00:00",
+          "valid_at": "2013-08-27T05:00:00",
+          "actual_surge_mm": 83.061,
+          "predicted_surge_mm": 72.453
+        },
+        {
+          "issued_at": "2013-08-27T03:00:00",
+          "valid_at": "2013-08-27T06:00:00",
+          "actual_surge_mm": 96.699,
+          "predicted_surge_mm": 67.996
+        },
+        {
+          "issued_at": "2013-08-27T04:00:00",
+          "valid_at": "2013-08-27T07:00:00",
+          "actual_surge_mm": 89.773,
+          "predicted_surge_mm": 78.359
+        },
+        {
+          "issued_at": "2013-08-27T05:00:00",
+          "valid_at": "2013-08-27T08:00:00",
+          "actual_surge_mm": 81.225,
+          "predicted_surge_mm": 81.603
+        },
+        {
+          "issued_at": "2013-08-27T06:00:00",
+          "valid_at": "2013-08-27T09:00:00",
+          "actual_surge_mm": 68.945,
+          "predicted_surge_mm": 82.001
+        },
+        {
+          "issued_at": "2013-08-27T07:00:00",
+          "valid_at": "2013-08-27T10:00:00",
+          "actual_surge_mm": 49.013,
+          "predicted_surge_mm": 67.308
+        },
+        {
+          "issued_at": "2013-08-27T08:00:00",
+          "valid_at": "2013-08-27T11:00:00",
+          "actual_surge_mm": 68.358,
+          "predicted_surge_mm": 60.697
+        },
+        {
+          "issued_at": "2013-08-27T09:00:00",
+          "valid_at": "2013-08-27T12:00:00",
+          "actual_surge_mm": 76.493,
+          "predicted_surge_mm": 53.599
+        },
+        {
+          "issued_at": "2013-08-27T10:00:00",
+          "valid_at": "2013-08-27T13:00:00",
+          "actual_surge_mm": 74.655,
+          "predicted_surge_mm": 42.623
+        },
+        {
+          "issued_at": "2013-08-27T11:00:00",
+          "valid_at": "2013-08-27T14:00:00",
+          "actual_surge_mm": 66.739,
+          "predicted_surge_mm": 66.247
+        },
+        {
+          "issued_at": "2013-08-27T12:00:00",
+          "valid_at": "2013-08-27T15:00:00",
+          "actual_surge_mm": 65.749,
+          "predicted_surge_mm": 76.053
+        },
+        {
+          "issued_at": "2013-08-27T13:00:00",
+          "valid_at": "2013-08-27T16:00:00",
+          "actual_surge_mm": 67.799,
+          "predicted_surge_mm": 82.351
+        },
+        {
+          "issued_at": "2013-08-27T14:00:00",
+          "valid_at": "2013-08-27T17:00:00",
+          "actual_surge_mm": 89.275,
+          "predicted_surge_mm": 92.939
+        },
+        {
+          "issued_at": "2013-08-27T15:00:00",
+          "valid_at": "2013-08-27T18:00:00",
+          "actual_surge_mm": 138.7,
+          "predicted_surge_mm": 92.471
+        },
+        {
+          "issued_at": "2013-08-27T16:00:00",
+          "valid_at": "2013-08-27T19:00:00",
+          "actual_surge_mm": 171.462,
+          "predicted_surge_mm": 90.651
+        },
+        {
+          "issued_at": "2013-08-27T17:00:00",
+          "valid_at": "2013-08-27T20:00:00",
+          "actual_surge_mm": 168.39,
+          "predicted_surge_mm": 82.144
+        },
+        {
+          "issued_at": "2013-08-27T18:00:00",
+          "valid_at": "2013-08-27T21:00:00",
+          "actual_surge_mm": 146.636,
+          "predicted_surge_mm": 101.19
+        },
+        {
+          "issued_at": "2013-08-27T19:00:00",
+          "valid_at": "2013-08-27T22:00:00",
+          "actual_surge_mm": 133.128,
+          "predicted_surge_mm": 119.954
+        },
+        {
+          "issued_at": "2013-08-27T20:00:00",
+          "valid_at": "2013-08-27T23:00:00",
+          "actual_surge_mm": 133.18,
+          "predicted_surge_mm": 128.198
+        },
+        {
+          "issued_at": "2013-08-27T21:00:00",
+          "valid_at": "2013-08-28T00:00:00",
+          "actual_surge_mm": 98.954,
+          "predicted_surge_mm": 117.097
+        },
+        {
+          "issued_at": "2013-08-27T22:00:00",
+          "valid_at": "2013-08-28T01:00:00",
+          "actual_surge_mm": 79.647,
+          "predicted_surge_mm": 106.484
+        },
+        {
+          "issued_at": "2013-08-27T23:00:00",
+          "valid_at": "2013-08-28T02:00:00",
+          "actual_surge_mm": 68.624,
+          "predicted_surge_mm": 98.741
+        },
+        {
+          "issued_at": "2013-08-28T00:00:00",
+          "valid_at": "2013-08-28T03:00:00",
+          "actual_surge_mm": 82.736,
+          "predicted_surge_mm": 72.701
+        },
+        {
+          "issued_at": "2013-08-28T01:00:00",
+          "valid_at": "2013-08-28T04:00:00",
+          "actual_surge_mm": 80.346,
+          "predicted_surge_mm": 78.865
+        },
+        {
+          "issued_at": "2013-08-28T02:00:00",
+          "valid_at": "2013-08-28T05:00:00",
+          "actual_surge_mm": 111.145,
+          "predicted_surge_mm": 84.32
+        },
+        {
+          "issued_at": "2013-08-28T03:00:00",
+          "valid_at": "2013-08-28T06:00:00",
+          "actual_surge_mm": 120.903,
+          "predicted_surge_mm": 101.572
+        },
+        {
+          "issued_at": "2013-08-28T04:00:00",
+          "valid_at": "2013-08-28T07:00:00",
+          "actual_surge_mm": 127.134,
+          "predicted_surge_mm": 107.16
+        },
+        {
+          "issued_at": "2013-08-28T05:00:00",
+          "valid_at": "2013-08-28T08:00:00",
+          "actual_surge_mm": 131.24,
+          "predicted_surge_mm": 124.204
+        },
+        {
+          "issued_at": "2013-08-28T06:00:00",
+          "valid_at": "2013-08-28T09:00:00",
+          "actual_surge_mm": 128.149,
+          "predicted_surge_mm": 124.697
+        },
+        {
+          "issued_at": "2013-08-28T07:00:00",
+          "valid_at": "2013-08-28T10:00:00",
+          "actual_surge_mm": 112.905,
+          "predicted_surge_mm": 107.75
+        },
+        {
+          "issued_at": "2013-08-28T08:00:00",
+          "valid_at": "2013-08-28T11:00:00",
+          "actual_surge_mm": 80.384,
+          "predicted_surge_mm": 104.949
+        },
+        {
+          "issued_at": "2013-08-28T09:00:00",
+          "valid_at": "2013-08-28T12:00:00",
+          "actual_surge_mm": 78.643,
+          "predicted_surge_mm": 100.131
+        },
+        {
+          "issued_at": "2013-08-28T10:00:00",
+          "valid_at": "2013-08-28T13:00:00",
+          "actual_surge_mm": 52.672,
+          "predicted_surge_mm": 83.85
+        },
+        {
+          "issued_at": "2013-08-28T11:00:00",
+          "valid_at": "2013-08-28T14:00:00",
+          "actual_surge_mm": 62.783,
+          "predicted_surge_mm": 57.018
+        },
+        {
+          "issued_at": "2013-08-28T12:00:00",
+          "valid_at": "2013-08-28T15:00:00",
+          "actual_surge_mm": 80.1,
+          "predicted_surge_mm": 68.192
+        },
+        {
+          "issued_at": "2013-08-28T13:00:00",
+          "valid_at": "2013-08-28T16:00:00",
+          "actual_surge_mm": 97.792,
+          "predicted_surge_mm": 65.26
+        },
+        {
+          "issued_at": "2013-08-28T14:00:00",
+          "valid_at": "2013-08-28T17:00:00",
+          "actual_surge_mm": 117.561,
+          "predicted_surge_mm": 84.96
+        },
+        {
+          "issued_at": "2013-08-28T15:00:00",
+          "valid_at": "2013-08-28T18:00:00",
+          "actual_surge_mm": 121.918,
+          "predicted_surge_mm": 122.455
+        },
+        {
+          "issued_at": "2013-08-28T16:00:00",
+          "valid_at": "2013-08-28T19:00:00",
+          "actual_surge_mm": 136.416,
+          "predicted_surge_mm": 140.623
+        },
+        {
+          "issued_at": "2013-08-28T17:00:00",
+          "valid_at": "2013-08-28T20:00:00",
+          "actual_surge_mm": 153.311,
+          "predicted_surge_mm": 144.223
+        },
+        {
+          "issued_at": "2013-08-28T18:00:00",
+          "valid_at": "2013-08-28T21:00:00",
+          "actual_surge_mm": 151.847,
+          "predicted_surge_mm": 123.615
+        },
+        {
+          "issued_at": "2013-08-28T19:00:00",
+          "valid_at": "2013-08-28T22:00:00",
+          "actual_surge_mm": 126.463,
+          "predicted_surge_mm": 113.116
+        },
+        {
+          "issued_at": "2013-08-28T20:00:00",
+          "valid_at": "2013-08-28T23:00:00",
+          "actual_surge_mm": 92.494,
+          "predicted_surge_mm": 125.479
+        },
+        {
+          "issued_at": "2013-08-28T21:00:00",
+          "valid_at": "2013-08-29T00:00:00",
+          "actual_surge_mm": 98.804,
+          "predicted_surge_mm": 113.335
+        },
+        {
+          "issued_at": "2013-08-28T22:00:00",
+          "valid_at": "2013-08-29T01:00:00",
+          "actual_surge_mm": 114.529,
+          "predicted_surge_mm": 103.505
+        },
+        {
+          "issued_at": "2013-08-28T23:00:00",
+          "valid_at": "2013-08-29T02:00:00",
+          "actual_surge_mm": 106.973,
+          "predicted_surge_mm": 80.904
+        },
+        {
+          "issued_at": "2013-08-29T00:00:00",
+          "valid_at": "2013-08-29T03:00:00",
+          "actual_surge_mm": 109.625,
+          "predicted_surge_mm": 102.322
+        },
+        {
+          "issued_at": "2013-08-29T01:00:00",
+          "valid_at": "2013-08-29T04:00:00",
+          "actual_surge_mm": 113.497,
+          "predicted_surge_mm": 115.929
+        },
+        {
+          "issued_at": "2013-08-29T02:00:00",
+          "valid_at": "2013-08-29T05:00:00",
+          "actual_surge_mm": 66.646,
+          "predicted_surge_mm": 123.77
+        },
+        {
+          "issued_at": "2013-08-29T03:00:00",
+          "valid_at": "2013-08-29T06:00:00",
+          "actual_surge_mm": 112.703,
+          "predicted_surge_mm": 137.302
+        },
+        {
+          "issued_at": "2013-08-29T04:00:00",
+          "valid_at": "2013-08-29T07:00:00",
+          "actual_surge_mm": 108.835,
+          "predicted_surge_mm": 135.712
+        },
+        {
+          "issued_at": "2013-08-29T05:00:00",
+          "valid_at": "2013-08-29T08:00:00",
+          "actual_surge_mm": 147.044,
+          "predicted_surge_mm": 93.32
+        },
+        {
+          "issued_at": "2013-08-29T06:00:00",
+          "valid_at": "2013-08-29T09:00:00",
+          "actual_surge_mm": 162.208,
+          "predicted_surge_mm": 105.37
+        },
+        {
+          "issued_at": "2013-08-29T07:00:00",
+          "valid_at": "2013-08-29T10:00:00",
+          "actual_surge_mm": 120.495,
+          "predicted_surge_mm": 97.94
+        },
+        {
+          "issued_at": "2013-08-29T08:00:00",
+          "valid_at": "2013-08-29T11:00:00",
+          "actual_surge_mm": 88.234,
+          "predicted_surge_mm": 105.77
+        },
+        {
+          "issued_at": "2013-08-29T09:00:00",
+          "valid_at": "2013-08-29T12:00:00",
+          "actual_surge_mm": 39.421,
+          "predicted_surge_mm": 127.353
+        },
+        {
+          "issued_at": "2013-08-29T10:00:00",
+          "valid_at": "2013-08-29T13:00:00",
+          "actual_surge_mm": 44.995,
+          "predicted_surge_mm": 88.566
+        },
+        {
+          "issued_at": "2013-08-29T11:00:00",
+          "valid_at": "2013-08-29T14:00:00",
+          "actual_surge_mm": 47.879,
+          "predicted_surge_mm": 61.753
+        },
+        {
+          "issued_at": "2013-08-29T12:00:00",
+          "valid_at": "2013-08-29T15:00:00",
+          "actual_surge_mm": 30.8,
+          "predicted_surge_mm": 21.331
+        },
+        {
+          "issued_at": "2013-08-29T13:00:00",
+          "valid_at": "2013-08-29T16:00:00",
+          "actual_surge_mm": 12.014,
+          "predicted_surge_mm": 25.774
+        },
+        {
+          "issued_at": "2013-08-29T14:00:00",
+          "valid_at": "2013-08-29T17:00:00",
+          "actual_surge_mm": 2.759,
+          "predicted_surge_mm": 34.225
+        },
+        {
+          "issued_at": "2013-08-29T15:00:00",
+          "valid_at": "2013-08-29T18:00:00",
+          "actual_surge_mm": 6.924,
+          "predicted_surge_mm": 31.818
+        },
+        {
+          "issued_at": "2013-08-29T16:00:00",
+          "valid_at": "2013-08-29T19:00:00",
+          "actual_surge_mm": 24.751,
+          "predicted_surge_mm": 31.752
+        },
+        {
+          "issued_at": "2013-08-29T17:00:00",
+          "valid_at": "2013-08-29T20:00:00",
+          "actual_surge_mm": 56.045,
+          "predicted_surge_mm": 21.188
+        },
+        {
+          "issued_at": "2013-08-29T18:00:00",
+          "valid_at": "2013-08-29T21:00:00",
+          "actual_surge_mm": 88.016,
+          "predicted_surge_mm": 32.277
+        },
+        {
+          "issued_at": "2013-08-29T19:00:00",
+          "valid_at": "2013-08-29T22:00:00",
+          "actual_surge_mm": 112.018,
+          "predicted_surge_mm": 31.197
+        },
+        {
+          "issued_at": "2013-08-29T20:00:00",
+          "valid_at": "2013-08-29T23:00:00",
+          "actual_surge_mm": 101.628,
+          "predicted_surge_mm": 43.307
+        },
+        {
+          "issued_at": "2013-08-29T21:00:00",
+          "valid_at": "2013-08-30T00:00:00",
+          "actual_surge_mm": 57.966,
+          "predicted_surge_mm": 70.887
+        },
+        {
+          "issued_at": "2013-08-29T22:00:00",
+          "valid_at": "2013-08-30T01:00:00",
+          "actual_surge_mm": 62.325,
+          "predicted_surge_mm": 81.598
+        },
+        {
+          "issued_at": "2013-08-29T23:00:00",
+          "valid_at": "2013-08-30T02:00:00",
+          "actual_surge_mm": 65.488,
+          "predicted_surge_mm": 85.805
+        },
+        {
+          "issued_at": "2013-08-30T00:00:00",
+          "valid_at": "2013-08-30T03:00:00",
+          "actual_surge_mm": 30.174,
+          "predicted_surge_mm": 34.218
+        },
+        {
+          "issued_at": "2013-08-30T01:00:00",
+          "valid_at": "2013-08-30T04:00:00",
+          "actual_surge_mm": 5.597,
+          "predicted_surge_mm": 37.651
+        },
+        {
+          "issued_at": "2013-08-30T02:00:00",
+          "valid_at": "2013-08-30T05:00:00",
+          "actual_surge_mm": 3.316,
+          "predicted_surge_mm": 40.046
+        },
+        {
+          "issued_at": "2013-08-30T03:00:00",
+          "valid_at": "2013-08-30T06:00:00",
+          "actual_surge_mm": -41.454,
+          "predicted_surge_mm": 19.2
+        },
+        {
+          "issued_at": "2013-08-30T04:00:00",
+          "valid_at": "2013-08-30T07:00:00",
+          "actual_surge_mm": -36.551,
+          "predicted_surge_mm": 19.275
+        },
+        {
+          "issued_at": "2013-08-30T05:00:00",
+          "valid_at": "2013-08-30T08:00:00",
+          "actual_surge_mm": -17.672,
+          "predicted_surge_mm": 21.598
+        },
+        {
+          "issued_at": "2013-08-30T06:00:00",
+          "valid_at": "2013-08-30T09:00:00",
+          "actual_surge_mm": 13.633,
+          "predicted_surge_mm": 0.402
+        },
+        {
+          "issued_at": "2013-08-30T07:00:00",
+          "valid_at": "2013-08-30T10:00:00",
+          "actual_surge_mm": 27.165,
+          "predicted_surge_mm": 0.721
+        },
+        {
+          "issued_at": "2013-08-30T08:00:00",
+          "valid_at": "2013-08-30T11:00:00",
+          "actual_surge_mm": 54.756,
+          "predicted_surge_mm": 9.919
+        },
+        {
+          "issued_at": "2013-08-30T09:00:00",
+          "valid_at": "2013-08-30T12:00:00",
+          "actual_surge_mm": 64.304,
+          "predicted_surge_mm": 19.62
+        },
+        {
+          "issued_at": "2013-08-30T10:00:00",
+          "valid_at": "2013-08-30T13:00:00",
+          "actual_surge_mm": 46.372,
+          "predicted_surge_mm": 17.03
+        },
+        {
+          "issued_at": "2013-08-30T11:00:00",
+          "valid_at": "2013-08-30T14:00:00",
+          "actual_surge_mm": 31.204,
+          "predicted_surge_mm": 33.6
+        },
+        {
+          "issued_at": "2013-08-30T12:00:00",
+          "valid_at": "2013-08-30T15:00:00",
+          "actual_surge_mm": 30.194,
+          "predicted_surge_mm": 35.283
+        },
+        {
+          "issued_at": "2013-08-30T13:00:00",
+          "valid_at": "2013-08-30T16:00:00",
+          "actual_surge_mm": 33.053,
+          "predicted_surge_mm": 10.65
+        },
+        {
+          "issued_at": "2013-08-30T14:00:00",
+          "valid_at": "2013-08-30T17:00:00",
+          "actual_surge_mm": 17.779,
+          "predicted_surge_mm": -11.528
+        },
+        {
+          "issued_at": "2013-08-30T15:00:00",
+          "valid_at": "2013-08-30T18:00:00",
+          "actual_surge_mm": 6.246,
+          "predicted_surge_mm": -3.604
+        },
+        {
+          "issued_at": "2013-08-30T16:00:00",
+          "valid_at": "2013-08-30T19:00:00",
+          "actual_surge_mm": 1.207,
+          "predicted_surge_mm": 16.226
+        },
+        {
+          "issued_at": "2013-08-30T17:00:00",
+          "valid_at": "2013-08-30T20:00:00",
+          "actual_surge_mm": 6.128,
+          "predicted_surge_mm": 15.238
+        },
+        {
+          "issued_at": "2013-08-30T18:00:00",
+          "valid_at": "2013-08-30T21:00:00",
+          "actual_surge_mm": 12.018,
+          "predicted_surge_mm": 21.536
+        },
+        {
+          "issued_at": "2013-08-30T19:00:00",
+          "valid_at": "2013-08-30T22:00:00",
+          "actual_surge_mm": 32.27,
+          "predicted_surge_mm": 37.765
+        },
+        {
+          "issued_at": "2013-08-30T20:00:00",
+          "valid_at": "2013-08-30T23:00:00",
+          "actual_surge_mm": 64.838,
+          "predicted_surge_mm": 33.317
+        },
+        {
+          "issued_at": "2013-08-30T21:00:00",
+          "valid_at": "2013-08-31T00:00:00",
+          "actual_surge_mm": 103.929,
+          "predicted_surge_mm": 31.805
+        },
+        {
+          "issued_at": "2013-08-30T22:00:00",
+          "valid_at": "2013-08-31T01:00:00",
+          "actual_surge_mm": 107.883,
+          "predicted_surge_mm": 44.317
+        },
+        {
+          "issued_at": "2013-08-30T23:00:00",
+          "valid_at": "2013-08-31T02:00:00",
+          "actual_surge_mm": 89.064,
+          "predicted_surge_mm": 57.804
+        },
+        {
+          "issued_at": "2013-08-31T00:00:00",
+          "valid_at": "2013-08-31T03:00:00",
+          "actual_surge_mm": 68.167,
+          "predicted_surge_mm": 69.127
+        },
+        {
+          "issued_at": "2013-08-31T01:00:00",
+          "valid_at": "2013-08-31T04:00:00",
+          "actual_surge_mm": 73.527,
+          "predicted_surge_mm": 63.028
+        },
+        {
+          "issued_at": "2013-08-31T02:00:00",
+          "valid_at": "2013-08-31T05:00:00",
+          "actual_surge_mm": 45.564,
+          "predicted_surge_mm": 47.218
+        },
+        {
+          "issued_at": "2013-08-31T03:00:00",
+          "valid_at": "2013-08-31T06:00:00",
+          "actual_surge_mm": 43.488,
+          "predicted_surge_mm": 18.218
+        },
+        {
+          "issued_at": "2013-08-31T04:00:00",
+          "valid_at": "2013-08-31T07:00:00",
+          "actual_surge_mm": 16.673,
+          "predicted_surge_mm": 16.947
+        },
+        {
+          "issued_at": "2013-08-31T05:00:00",
+          "valid_at": "2013-08-31T08:00:00",
+          "actual_surge_mm": 39.776,
+          "predicted_surge_mm": 12.256
+        }
+      ]
+    },
+    {
+      "lead_hours": 6,
+      "model_sha256": "f14479428af965ae116966c20a533a5cb5f5c7b651c19607f78556d817fb8a57",
+      "metrics": {
+        "rmse_mm": 42.69299615177965,
+        "mae_mm": 35.50284810187064,
+        "r2": 0.053501288151129756,
+        "count": 116
+      },
+      "points": [
+        {
+          "issued_at": "2013-08-26T07:00:00",
+          "valid_at": "2013-08-26T13:00:00",
+          "actual_surge_mm": 81.056,
+          "predicted_surge_mm": 57.1
+        },
+        {
+          "issued_at": "2013-08-26T08:00:00",
+          "valid_at": "2013-08-26T14:00:00",
+          "actual_surge_mm": 79.439,
+          "predicted_surge_mm": 55.86
+        },
+        {
+          "issued_at": "2013-08-26T09:00:00",
+          "valid_at": "2013-08-26T15:00:00",
+          "actual_surge_mm": 65.062,
+          "predicted_surge_mm": 53.836
+        },
+        {
+          "issued_at": "2013-08-26T10:00:00",
+          "valid_at": "2013-08-26T16:00:00",
+          "actual_surge_mm": 68.787,
+          "predicted_surge_mm": 89.204
+        },
+        {
+          "issued_at": "2013-08-26T11:00:00",
+          "valid_at": "2013-08-26T17:00:00",
+          "actual_surge_mm": 98.151,
+          "predicted_surge_mm": 103.254
+        },
+        {
+          "issued_at": "2013-08-26T12:00:00",
+          "valid_at": "2013-08-26T18:00:00",
+          "actual_surge_mm": 114.908,
+          "predicted_surge_mm": 95.436
+        },
+        {
+          "issued_at": "2013-08-26T13:00:00",
+          "valid_at": "2013-08-26T19:00:00",
+          "actual_surge_mm": 128.238,
+          "predicted_surge_mm": 71.318
+        },
+        {
+          "issued_at": "2013-08-26T14:00:00",
+          "valid_at": "2013-08-26T20:00:00",
+          "actual_surge_mm": 100.106,
+          "predicted_surge_mm": 39.911
+        },
+        {
+          "issued_at": "2013-08-26T15:00:00",
+          "valid_at": "2013-08-26T21:00:00",
+          "actual_surge_mm": 80.645,
+          "predicted_surge_mm": 17.878
+        },
+        {
+          "issued_at": "2013-08-26T16:00:00",
+          "valid_at": "2013-08-26T22:00:00",
+          "actual_surge_mm": 71.389,
+          "predicted_surge_mm": 9.772
+        },
+        {
+          "issued_at": "2013-08-26T17:00:00",
+          "valid_at": "2013-08-26T23:00:00",
+          "actual_surge_mm": 66.149,
+          "predicted_surge_mm": 30.927
+        },
+        {
+          "issued_at": "2013-08-26T18:00:00",
+          "valid_at": "2013-08-27T00:00:00",
+          "actual_surge_mm": 46.306,
+          "predicted_surge_mm": 68.678
+        },
+        {
+          "issued_at": "2013-08-26T19:00:00",
+          "valid_at": "2013-08-27T01:00:00",
+          "actual_surge_mm": 54.011,
+          "predicted_surge_mm": 95.51
+        },
+        {
+          "issued_at": "2013-08-26T20:00:00",
+          "valid_at": "2013-08-27T02:00:00",
+          "actual_surge_mm": 45.089,
+          "predicted_surge_mm": 95.404
+        },
+        {
+          "issued_at": "2013-08-26T21:00:00",
+          "valid_at": "2013-08-27T03:00:00",
+          "actual_surge_mm": 46.052,
+          "predicted_surge_mm": 95.407
+        },
+        {
+          "issued_at": "2013-08-26T22:00:00",
+          "valid_at": "2013-08-27T04:00:00",
+          "actual_surge_mm": 72.445,
+          "predicted_surge_mm": 97.991
+        },
+        {
+          "issued_at": "2013-08-26T23:00:00",
+          "valid_at": "2013-08-27T05:00:00",
+          "actual_surge_mm": 83.061,
+          "predicted_surge_mm": 94.611
+        },
+        {
+          "issued_at": "2013-08-27T00:00:00",
+          "valid_at": "2013-08-27T06:00:00",
+          "actual_surge_mm": 96.699,
+          "predicted_surge_mm": 80.661
+        },
+        {
+          "issued_at": "2013-08-27T01:00:00",
+          "valid_at": "2013-08-27T07:00:00",
+          "actual_surge_mm": 89.773,
+          "predicted_surge_mm": 67.931
+        },
+        {
+          "issued_at": "2013-08-27T02:00:00",
+          "valid_at": "2013-08-27T08:00:00",
+          "actual_surge_mm": 81.225,
+          "predicted_surge_mm": 40.537
+        },
+        {
+          "issued_at": "2013-08-27T03:00:00",
+          "valid_at": "2013-08-27T09:00:00",
+          "actual_surge_mm": 68.945,
+          "predicted_surge_mm": 23.461
+        },
+        {
+          "issued_at": "2013-08-27T04:00:00",
+          "valid_at": "2013-08-27T10:00:00",
+          "actual_surge_mm": 49.013,
+          "predicted_surge_mm": 32.602
+        },
+        {
+          "issued_at": "2013-08-27T05:00:00",
+          "valid_at": "2013-08-27T11:00:00",
+          "actual_surge_mm": 68.358,
+          "predicted_surge_mm": 48.784
+        },
+        {
+          "issued_at": "2013-08-27T06:00:00",
+          "valid_at": "2013-08-27T12:00:00",
+          "actual_surge_mm": 76.493,
+          "predicted_surge_mm": 72.996
+        },
+        {
+          "issued_at": "2013-08-27T07:00:00",
+          "valid_at": "2013-08-27T13:00:00",
+          "actual_surge_mm": 74.655,
+          "predicted_surge_mm": 74.448
+        },
+        {
+          "issued_at": "2013-08-27T08:00:00",
+          "valid_at": "2013-08-27T14:00:00",
+          "actual_surge_mm": 66.739,
+          "predicted_surge_mm": 79.094
+        },
+        {
+          "issued_at": "2013-08-27T09:00:00",
+          "valid_at": "2013-08-27T15:00:00",
+          "actual_surge_mm": 65.749,
+          "predicted_surge_mm": 64.346
+        },
+        {
+          "issued_at": "2013-08-27T10:00:00",
+          "valid_at": "2013-08-27T16:00:00",
+          "actual_surge_mm": 67.799,
+          "predicted_surge_mm": 55.673
+        },
+        {
+          "issued_at": "2013-08-27T11:00:00",
+          "valid_at": "2013-08-27T17:00:00",
+          "actual_surge_mm": 89.275,
+          "predicted_surge_mm": 79.582
+        },
+        {
+          "issued_at": "2013-08-27T12:00:00",
+          "valid_at": "2013-08-27T18:00:00",
+          "actual_surge_mm": 138.7,
+          "predicted_surge_mm": 92.452
+        },
+        {
+          "issued_at": "2013-08-27T13:00:00",
+          "valid_at": "2013-08-27T19:00:00",
+          "actual_surge_mm": 171.462,
+          "predicted_surge_mm": 99.253
+        },
+        {
+          "issued_at": "2013-08-27T14:00:00",
+          "valid_at": "2013-08-27T20:00:00",
+          "actual_surge_mm": 168.39,
+          "predicted_surge_mm": 83.958
+        },
+        {
+          "issued_at": "2013-08-27T15:00:00",
+          "valid_at": "2013-08-27T21:00:00",
+          "actual_surge_mm": 146.636,
+          "predicted_surge_mm": 69.935
+        },
+        {
+          "issued_at": "2013-08-27T16:00:00",
+          "valid_at": "2013-08-27T22:00:00",
+          "actual_surge_mm": 133.128,
+          "predicted_surge_mm": 57.42
+        },
+        {
+          "issued_at": "2013-08-27T17:00:00",
+          "valid_at": "2013-08-27T23:00:00",
+          "actual_surge_mm": 133.18,
+          "predicted_surge_mm": 55.046
+        },
+        {
+          "issued_at": "2013-08-27T18:00:00",
+          "valid_at": "2013-08-28T00:00:00",
+          "actual_surge_mm": 98.954,
+          "predicted_surge_mm": 82.922
+        },
+        {
+          "issued_at": "2013-08-27T19:00:00",
+          "valid_at": "2013-08-28T01:00:00",
+          "actual_surge_mm": 79.647,
+          "predicted_surge_mm": 116.633
+        },
+        {
+          "issued_at": "2013-08-27T20:00:00",
+          "valid_at": "2013-08-28T02:00:00",
+          "actual_surge_mm": 68.624,
+          "predicted_surge_mm": 126.105
+        },
+        {
+          "issued_at": "2013-08-27T21:00:00",
+          "valid_at": "2013-08-28T03:00:00",
+          "actual_surge_mm": 82.736,
+          "predicted_surge_mm": 117.342
+        },
+        {
+          "issued_at": "2013-08-27T22:00:00",
+          "valid_at": "2013-08-28T04:00:00",
+          "actual_surge_mm": 80.346,
+          "predicted_surge_mm": 125.947
+        },
+        {
+          "issued_at": "2013-08-27T23:00:00",
+          "valid_at": "2013-08-28T05:00:00",
+          "actual_surge_mm": 111.145,
+          "predicted_surge_mm": 149.87
+        },
+        {
+          "issued_at": "2013-08-28T00:00:00",
+          "valid_at": "2013-08-28T06:00:00",
+          "actual_surge_mm": 120.903,
+          "predicted_surge_mm": 129.963
+        },
+        {
+          "issued_at": "2013-08-28T01:00:00",
+          "valid_at": "2013-08-28T07:00:00",
+          "actual_surge_mm": 127.134,
+          "predicted_surge_mm": 113.128
+        },
+        {
+          "issued_at": "2013-08-28T02:00:00",
+          "valid_at": "2013-08-28T08:00:00",
+          "actual_surge_mm": 131.24,
+          "predicted_surge_mm": 102.034
+        },
+        {
+          "issued_at": "2013-08-28T03:00:00",
+          "valid_at": "2013-08-28T09:00:00",
+          "actual_surge_mm": 128.149,
+          "predicted_surge_mm": 98.846
+        },
+        {
+          "issued_at": "2013-08-28T04:00:00",
+          "valid_at": "2013-08-28T10:00:00",
+          "actual_surge_mm": 112.905,
+          "predicted_surge_mm": 88.315
+        },
+        {
+          "issued_at": "2013-08-28T05:00:00",
+          "valid_at": "2013-08-28T11:00:00",
+          "actual_surge_mm": 80.384,
+          "predicted_surge_mm": 97.445
+        },
+        {
+          "issued_at": "2013-08-28T06:00:00",
+          "valid_at": "2013-08-28T12:00:00",
+          "actual_surge_mm": 78.643,
+          "predicted_surge_mm": 104.944
+        },
+        {
+          "issued_at": "2013-08-28T07:00:00",
+          "valid_at": "2013-08-28T13:00:00",
+          "actual_surge_mm": 52.672,
+          "predicted_surge_mm": 102.838
+        },
+        {
+          "issued_at": "2013-08-28T08:00:00",
+          "valid_at": "2013-08-28T14:00:00",
+          "actual_surge_mm": 62.783,
+          "predicted_surge_mm": 105.674
+        },
+        {
+          "issued_at": "2013-08-28T09:00:00",
+          "valid_at": "2013-08-28T15:00:00",
+          "actual_surge_mm": 80.1,
+          "predicted_surge_mm": 95.95
+        },
+        {
+          "issued_at": "2013-08-28T10:00:00",
+          "valid_at": "2013-08-28T16:00:00",
+          "actual_surge_mm": 97.792,
+          "predicted_surge_mm": 88.054
+        },
+        {
+          "issued_at": "2013-08-28T11:00:00",
+          "valid_at": "2013-08-28T17:00:00",
+          "actual_surge_mm": 117.561,
+          "predicted_surge_mm": 76.626
+        },
+        {
+          "issued_at": "2013-08-28T12:00:00",
+          "valid_at": "2013-08-28T18:00:00",
+          "actual_surge_mm": 121.918,
+          "predicted_surge_mm": 111.552
+        },
+        {
+          "issued_at": "2013-08-28T13:00:00",
+          "valid_at": "2013-08-28T19:00:00",
+          "actual_surge_mm": 136.416,
+          "predicted_surge_mm": 109.802
+        },
+        {
+          "issued_at": "2013-08-28T14:00:00",
+          "valid_at": "2013-08-28T20:00:00",
+          "actual_surge_mm": 153.311,
+          "predicted_surge_mm": 125.248
+        },
+        {
+          "issued_at": "2013-08-28T15:00:00",
+          "valid_at": "2013-08-28T21:00:00",
+          "actual_surge_mm": 151.847,
+          "predicted_surge_mm": 127.73
+        },
+        {
+          "issued_at": "2013-08-28T16:00:00",
+          "valid_at": "2013-08-28T22:00:00",
+          "actual_surge_mm": 126.463,
+          "predicted_surge_mm": 124.416
+        },
+        {
+          "issued_at": "2013-08-28T17:00:00",
+          "valid_at": "2013-08-28T23:00:00",
+          "actual_surge_mm": 92.494,
+          "predicted_surge_mm": 112.564
+        },
+        {
+          "issued_at": "2013-08-28T18:00:00",
+          "valid_at": "2013-08-29T00:00:00",
+          "actual_surge_mm": 98.804,
+          "predicted_surge_mm": 83.35
+        },
+        {
+          "issued_at": "2013-08-28T19:00:00",
+          "valid_at": "2013-08-29T01:00:00",
+          "actual_surge_mm": 114.529,
+          "predicted_surge_mm": 87.042
+        },
+        {
+          "issued_at": "2013-08-28T20:00:00",
+          "valid_at": "2013-08-29T02:00:00",
+          "actual_surge_mm": 106.973,
+          "predicted_surge_mm": 97.089
+        },
+        {
+          "issued_at": "2013-08-28T21:00:00",
+          "valid_at": "2013-08-29T03:00:00",
+          "actual_surge_mm": 109.625,
+          "predicted_surge_mm": 119.354
+        },
+        {
+          "issued_at": "2013-08-28T22:00:00",
+          "valid_at": "2013-08-29T04:00:00",
+          "actual_surge_mm": 113.497,
+          "predicted_surge_mm": 103.308
+        },
+        {
+          "issued_at": "2013-08-28T23:00:00",
+          "valid_at": "2013-08-29T05:00:00",
+          "actual_surge_mm": 66.646,
+          "predicted_surge_mm": 115.958
+        },
+        {
+          "issued_at": "2013-08-29T00:00:00",
+          "valid_at": "2013-08-29T06:00:00",
+          "actual_surge_mm": 112.703,
+          "predicted_surge_mm": 140.815
+        },
+        {
+          "issued_at": "2013-08-29T01:00:00",
+          "valid_at": "2013-08-29T07:00:00",
+          "actual_surge_mm": 108.835,
+          "predicted_surge_mm": 168.445
+        },
+        {
+          "issued_at": "2013-08-29T02:00:00",
+          "valid_at": "2013-08-29T08:00:00",
+          "actual_surge_mm": 147.044,
+          "predicted_surge_mm": 162.536
+        },
+        {
+          "issued_at": "2013-08-29T03:00:00",
+          "valid_at": "2013-08-29T09:00:00",
+          "actual_surge_mm": 162.208,
+          "predicted_surge_mm": 162.603
+        },
+        {
+          "issued_at": "2013-08-29T04:00:00",
+          "valid_at": "2013-08-29T10:00:00",
+          "actual_surge_mm": 120.495,
+          "predicted_surge_mm": 142.192
+        },
+        {
+          "issued_at": "2013-08-29T05:00:00",
+          "valid_at": "2013-08-29T11:00:00",
+          "actual_surge_mm": 88.234,
+          "predicted_surge_mm": 87.162
+        },
+        {
+          "issued_at": "2013-08-29T06:00:00",
+          "valid_at": "2013-08-29T12:00:00",
+          "actual_surge_mm": 39.421,
+          "predicted_surge_mm": 96.958
+        },
+        {
+          "issued_at": "2013-08-29T07:00:00",
+          "valid_at": "2013-08-29T13:00:00",
+          "actual_surge_mm": 44.995,
+          "predicted_surge_mm": 76.93
+        },
+        {
+          "issued_at": "2013-08-29T08:00:00",
+          "valid_at": "2013-08-29T14:00:00",
+          "actual_surge_mm": 47.879,
+          "predicted_surge_mm": 99.865
+        },
+        {
+          "issued_at": "2013-08-29T09:00:00",
+          "valid_at": "2013-08-29T15:00:00",
+          "actual_surge_mm": 30.8,
+          "predicted_surge_mm": 122.011
+        },
+        {
+          "issued_at": "2013-08-29T10:00:00",
+          "valid_at": "2013-08-29T16:00:00",
+          "actual_surge_mm": 12.014,
+          "predicted_surge_mm": 93.922
+        },
+        {
+          "issued_at": "2013-08-29T11:00:00",
+          "valid_at": "2013-08-29T17:00:00",
+          "actual_surge_mm": 2.759,
+          "predicted_surge_mm": 67.268
+        },
+        {
+          "issued_at": "2013-08-29T12:00:00",
+          "valid_at": "2013-08-29T18:00:00",
+          "actual_surge_mm": 6.924,
+          "predicted_surge_mm": 45.384
+        },
+        {
+          "issued_at": "2013-08-29T13:00:00",
+          "valid_at": "2013-08-29T19:00:00",
+          "actual_surge_mm": 24.751,
+          "predicted_surge_mm": 64.588
+        },
+        {
+          "issued_at": "2013-08-29T14:00:00",
+          "valid_at": "2013-08-29T20:00:00",
+          "actual_surge_mm": 56.045,
+          "predicted_surge_mm": 57.22
+        },
+        {
+          "issued_at": "2013-08-29T15:00:00",
+          "valid_at": "2013-08-29T21:00:00",
+          "actual_surge_mm": 88.016,
+          "predicted_surge_mm": 57.856
+        },
+        {
+          "issued_at": "2013-08-29T16:00:00",
+          "valid_at": "2013-08-29T22:00:00",
+          "actual_surge_mm": 112.018,
+          "predicted_surge_mm": 27.194
+        },
+        {
+          "issued_at": "2013-08-29T17:00:00",
+          "valid_at": "2013-08-29T23:00:00",
+          "actual_surge_mm": 101.628,
+          "predicted_surge_mm": 9.655
+        },
+        {
+          "issued_at": "2013-08-29T18:00:00",
+          "valid_at": "2013-08-30T00:00:00",
+          "actual_surge_mm": 57.966,
+          "predicted_surge_mm": 4.085
+        },
+        {
+          "issued_at": "2013-08-29T19:00:00",
+          "valid_at": "2013-08-30T01:00:00",
+          "actual_surge_mm": 62.325,
+          "predicted_surge_mm": 2.064
+        },
+        {
+          "issued_at": "2013-08-29T20:00:00",
+          "valid_at": "2013-08-30T02:00:00",
+          "actual_surge_mm": 65.488,
+          "predicted_surge_mm": 20.404
+        },
+        {
+          "issued_at": "2013-08-29T21:00:00",
+          "valid_at": "2013-08-30T03:00:00",
+          "actual_surge_mm": 30.174,
+          "predicted_surge_mm": 45.8
+        },
+        {
+          "issued_at": "2013-08-29T22:00:00",
+          "valid_at": "2013-08-30T04:00:00",
+          "actual_surge_mm": 5.597,
+          "predicted_surge_mm": 72.981
+        },
+        {
+          "issued_at": "2013-08-29T23:00:00",
+          "valid_at": "2013-08-30T05:00:00",
+          "actual_surge_mm": 3.316,
+          "predicted_surge_mm": 45.799
+        },
+        {
+          "issued_at": "2013-08-30T00:00:00",
+          "valid_at": "2013-08-30T06:00:00",
+          "actual_surge_mm": -41.454,
+          "predicted_surge_mm": 15.25
+        },
+        {
+          "issued_at": "2013-08-30T01:00:00",
+          "valid_at": "2013-08-30T07:00:00",
+          "actual_surge_mm": -36.551,
+          "predicted_surge_mm": 29.803
+        },
+        {
+          "issued_at": "2013-08-30T02:00:00",
+          "valid_at": "2013-08-30T08:00:00",
+          "actual_surge_mm": -17.672,
+          "predicted_surge_mm": 57.142
+        },
+        {
+          "issued_at": "2013-08-30T03:00:00",
+          "valid_at": "2013-08-30T09:00:00",
+          "actual_surge_mm": 13.633,
+          "predicted_surge_mm": 50.637
+        },
+        {
+          "issued_at": "2013-08-30T04:00:00",
+          "valid_at": "2013-08-30T10:00:00",
+          "actual_surge_mm": 27.165,
+          "predicted_surge_mm": 59.983
+        },
+        {
+          "issued_at": "2013-08-30T05:00:00",
+          "valid_at": "2013-08-30T11:00:00",
+          "actual_surge_mm": 54.756,
+          "predicted_surge_mm": 54.979
+        },
+        {
+          "issued_at": "2013-08-30T06:00:00",
+          "valid_at": "2013-08-30T12:00:00",
+          "actual_surge_mm": 64.304,
+          "predicted_surge_mm": 29.656
+        },
+        {
+          "issued_at": "2013-08-30T07:00:00",
+          "valid_at": "2013-08-30T13:00:00",
+          "actual_surge_mm": 46.372,
+          "predicted_surge_mm": -9.942
+        },
+        {
+          "issued_at": "2013-08-30T08:00:00",
+          "valid_at": "2013-08-30T14:00:00",
+          "actual_surge_mm": 31.204,
+          "predicted_surge_mm": -22.716
+        },
+        {
+          "issued_at": "2013-08-30T09:00:00",
+          "valid_at": "2013-08-30T15:00:00",
+          "actual_surge_mm": 30.194,
+          "predicted_surge_mm": -20.451
+        },
+        {
+          "issued_at": "2013-08-30T10:00:00",
+          "valid_at": "2013-08-30T16:00:00",
+          "actual_surge_mm": 33.053,
+          "predicted_surge_mm": -25.015
+        },
+        {
+          "issued_at": "2013-08-30T11:00:00",
+          "valid_at": "2013-08-30T17:00:00",
+          "actual_surge_mm": 17.779,
+          "predicted_surge_mm": -12.413
+        },
+        {
+          "issued_at": "2013-08-30T12:00:00",
+          "valid_at": "2013-08-30T18:00:00",
+          "actual_surge_mm": 6.246,
+          "predicted_surge_mm": -18.635
+        },
+        {
+          "issued_at": "2013-08-30T13:00:00",
+          "valid_at": "2013-08-30T19:00:00",
+          "actual_surge_mm": 1.207,
+          "predicted_surge_mm": -30.282
+        },
+        {
+          "issued_at": "2013-08-30T14:00:00",
+          "valid_at": "2013-08-30T20:00:00",
+          "actual_surge_mm": 6.128,
+          "predicted_surge_mm": -16.361
+        },
+        {
+          "issued_at": "2013-08-30T15:00:00",
+          "valid_at": "2013-08-30T21:00:00",
+          "actual_surge_mm": 12.018,
+          "predicted_surge_mm": 11.379
+        },
+        {
+          "issued_at": "2013-08-30T16:00:00",
+          "valid_at": "2013-08-30T22:00:00",
+          "actual_surge_mm": 32.27,
+          "predicted_surge_mm": 45.499
+        },
+        {
+          "issued_at": "2013-08-30T17:00:00",
+          "valid_at": "2013-08-30T23:00:00",
+          "actual_surge_mm": 64.838,
+          "predicted_surge_mm": 47.455
+        },
+        {
+          "issued_at": "2013-08-30T18:00:00",
+          "valid_at": "2013-08-31T00:00:00",
+          "actual_surge_mm": 103.929,
+          "predicted_surge_mm": 38.829
+        },
+        {
+          "issued_at": "2013-08-30T19:00:00",
+          "valid_at": "2013-08-31T01:00:00",
+          "actual_surge_mm": 107.883,
+          "predicted_surge_mm": 31.411
+        },
+        {
+          "issued_at": "2013-08-30T20:00:00",
+          "valid_at": "2013-08-31T02:00:00",
+          "actual_surge_mm": 89.064,
+          "predicted_surge_mm": 24.626
+        },
+        {
+          "issued_at": "2013-08-30T21:00:00",
+          "valid_at": "2013-08-31T03:00:00",
+          "actual_surge_mm": 68.167,
+          "predicted_surge_mm": 9.424
+        },
+        {
+          "issued_at": "2013-08-30T22:00:00",
+          "valid_at": "2013-08-31T04:00:00",
+          "actual_surge_mm": 73.527,
+          "predicted_surge_mm": 8.679
+        },
+        {
+          "issued_at": "2013-08-30T23:00:00",
+          "valid_at": "2013-08-31T05:00:00",
+          "actual_surge_mm": 45.564,
+          "predicted_surge_mm": 27.18
+        },
+        {
+          "issued_at": "2013-08-31T00:00:00",
+          "valid_at": "2013-08-31T06:00:00",
+          "actual_surge_mm": 43.488,
+          "predicted_surge_mm": 29.641
+        },
+        {
+          "issued_at": "2013-08-31T01:00:00",
+          "valid_at": "2013-08-31T07:00:00",
+          "actual_surge_mm": 16.673,
+          "predicted_surge_mm": 15.434
+        },
+        {
+          "issued_at": "2013-08-31T02:00:00",
+          "valid_at": "2013-08-31T08:00:00",
+          "actual_surge_mm": 39.776,
+          "predicted_surge_mm": 8.673
+        }
+      ]
+    }
+  ]
+}

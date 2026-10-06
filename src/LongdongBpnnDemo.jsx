@@ -8,43 +8,65 @@ const formatTaiwan = value => new Intl.DateTimeFormat('zh-TW', {
 }).format(new Date(value));
 
 export default function LongdongBpnnDemo({ stationId, eventName }) {
-  const [payload, setPayload] = useState(null);
-  const [loadError, setLoadError] = useState('');
+  const [loaded, setLoaded] = useState(null);
   const event = String(eventName || '').toLowerCase();
-  const isSinlaku = event.includes('sinlaku') || event.includes('辛樂克');
-  const isLongdong = !stationId || canonicalStationId(stationId) === 'C4A02';
+  const selectedStation = !stationId || canonicalStationId(stationId) === 'C4A02' ? 'longdong' : canonicalStationId(stationId) === 'C4U01' ? 'suao' : '';
+  const storm = [
+    { key: 'sinlaku', match: /sinlaku|辛樂克/i, name: '2008 辛樂克（Sinlaku）' },
+    { key: 'haitang', match: /haitang|海棠/i, name: '2005 海棠（Haitang）' },
+    { key: 'jangmi', match: /jangmi|薔蜜|薔薇/i, name: '2008 薔蜜（Jangmi）' },
+    { key: 'talim', match: /talim|潭美/i, name: '2005 潭美（Talim）', suaoOnly: true },
+    { key: 'kaemi', match: /kaemi|凱米/i, name: '2006 凱米（Kaemi）', suaoOnly: true },
+    { key: 'kong-rey', match: /kong.?rey|康芮/i, name: '2013 康芮（Kong-rey）', suaoOnly: true },
+  ].find(item => item.match.test(event) && (item.suaoOnly ? selectedStation === 'suao' : true));
+  const isLongdong = selectedStation === 'longdong';
+  const file = selectedStation === 'suao' ? `suao-${storm?.key}-predictions.json` : `${storm?.key}-predictions.json`;
+  const requestKey = storm && selectedStation ? `${selectedStation}:${storm.key}` : '';
+  const payload = loaded?.key === requestKey ? loaded.data : null;
+  const loadError = loaded?.key === requestKey ? loaded.error || '' : '';
 
   useEffect(() => {
-    if (!isSinlaku || !isLongdong) return undefined;
+    if (!requestKey || !selectedStation) return undefined;
     const controller = new AbortController();
-    fetch('/data/bpnn/sinlaku-predictions.json', { signal: controller.signal, cache: 'no-cache' })
+    fetch(`/data/bpnn/${file}`, { signal: controller.signal, cache: 'no-cache' })
       .then(response => {
         if (!response.ok) throw new Error(`曲線資料讀取失敗（${response.status}）`);
         return response.json();
       })
-      .then(data => { if (!controller.signal.aborted) { setPayload(data); setLoadError(''); } })
-      .catch(error => { if (!controller.signal.aborted) setLoadError(error.message); });
+      .then(data => { if (!controller.signal.aborted) setLoaded({ key: requestKey, data }); })
+      .catch(error => { if (!controller.signal.aborted) setLoaded({ key: requestKey, error: error.message }); });
     return () => controller.abort();
-  }, [isSinlaku, isLongdong]);
+  }, [file, requestKey, selectedStation]);
 
   const results = payload?.results || [];
-  if (!isSinlaku || !isLongdong) return null;
+  if (!storm || !selectedStation) return null;
+
+  const normalizedResults = (payload?.results || []).map(result => {
+    if (payload.units === 'mm' && result.points[0]?.actual_surge_mm != null) return result;
+    if (payload.units === 'm') return {
+      ...result,
+      metrics: { rmse_mm: result.metrics.rmse_m * 1000, mae_mm: result.metrics.mae_m * 1000, r2: result.metrics.r2, count: result.metrics.count },
+      points: result.points.filter(point => point.actual_surge != null && point.predicted_surge != null).map(point => ({
+        issued_at: point.issued_at,
+        valid_at: point.time,
+        actual_surge_mm: point.actual_surge * 1000,
+        predicted_surge_mm: point.predicted_surge * 1000,
+      })),
+    };
+    return result;
+  });
 
   return <section aria-labelledby="bpnn-demo-title" style={panel}>
-    <h4 id="bpnn-demo-title" style={{ marginTop: 0 }}>2008 辛樂克（Sinlaku）· 龍洞 BPNN 歷史重建</h4>
-    <p>以龍洞站 2008 實測潮位與辛樂克歷史路徑重建 24 小時輸入，再套用匯出的五模型集成權重。顯示 +1、+3、+6 小時預測與對應時刻的增水估算。</p>
+    <h4 id="bpnn-demo-title" style={{ marginTop: 0 }}>{storm.name} · {isLongdong ? '龍洞' : '蘇澳'} BPNN 逐時測試</h4>
+    <p>{isLongdong ? '以龍洞逐時潮位和颱風歷史路徑重建 24 小時輸入，再套用匯出的五模型集成權重。' : '以蘇澳逐時資料按同一個 24 小時、192→8→1 BPNN 架構重新訓練五模型集成，整個測試颱風未納入訓練。'} 顯示 +1、+3、+6 小時預測與對應時刻的增水估算。</p>
     {loadError && <p role="alert" style={{ color: '#b91c1c' }}>{loadError}</p>}
     {!results.length && !loadError && <p role="status">正在載入 BPNN 曲線…</p>}
-    {results.length === 3 && <>
-      {results.map(result => <LeadForecast key={result.lead_hours} result={result} />)}
+    {normalizedResults.length === 3 && <>
+      {normalizedResults.map(result => <LeadForecast key={result.lead_hours} result={result} />)}
       <details style={{ marginTop: 14 }}>
-        <summary>資料來源與重建方式</summary>
-        <ul>
-          <li><a href="https://ocean.cwa.gov.tw/V2/data_interface/datasets" target="_blank" rel="noreferrer">中央氣象署海象資料下載</a>：龍洞站 2008 年逐 6 分鐘實測潮位，模型取每小時整點值。</li>
-          <li><a href="https://www.ncei.noaa.gov/products/international-best-track-archive" target="_blank" rel="noreferrer">NOAA IBTrACS</a>：辛樂克歷史路徑、風速與氣壓。</li>
-          <li>天文潮由 2001–2016 年官方實測潮位以十個主要分潮進行穩健調和擬合，並為各年分別估計基準；擬合時排除 2008 年 9 月 7 日至 18 日。官方未提供本次使用的 2008 年逐 6 分鐘天文潮檔。</li>
-          <li>暴潮增水定義為實測潮位減重建天文潮。這是公開資料的歷史推論重建，並非原始測試集預測，也不是即時預報。</li>
-        </ul>
+        <summary>模型與資料說明</summary>
+        <p>{payload?.validation === 'held-out-event; station-specific retraining, not exported Longdong weights' ? `蘇澳模型以 ${payload.training_events} 個其他颱風事件訓練，保留本次颱風作為獨立測試；訓練窗數：${payload.training_samples}。` : '龍洞使用匯出的五模型集成權重；輸入依可取得的 CWA 小時潮位和 NOAA 路徑歷史重建。'}</p>
+        <p>曲線是歷史逐時測試重建，不是即時預報；增水為實測潮位減天文潮，單位 mm。</p>
       </details>
     </>}
   </section>;

@@ -58,7 +58,7 @@ STATIONS = {
         "units": {1: 32, 3: 32, 6: 64}, "filters": {1: (32, 32), 3: (32, 32), 6: (16, 32)},
         "dropout": {1: .1, 3: .1, 6: .2}, "lr": {1: .003, 3: .003, 6: .001},
         "loss": {1: "huber", 3: "mse", 6: "mse"},
-        "tests": ["2005Talim s", "2006Kaemi s", "2013KONG-REY s"],
+        "tests": ["2005Talim s", "2006Kaemi s", "2013KONG-REY s", "2008Sinlaku s"],
         "events": {"talim": (2005, "TALIM"), "kaemi": (2006, "KAEMI"), "kong-rey": (2013, "KONG-REY"), "sinlaku": (2008, "SINLAKU")},
         "name": "蘇澳",
     },
@@ -239,7 +239,10 @@ def main():
     OUTPUT.mkdir(parents=True, exist_ok=True)
     MODEL_OUTPUT.mkdir(parents=True, exist_ok=True)
     track = read_tracks()
+    station_filter = {value.strip().lower() for value in os.environ.get("CNN_LSTM_STATIONS", "").split(",") if value.strip()}
     for key, station in STATIONS.items():
+        if station_filter and key not in station_filter:
+            continue
         print(f"{station['name']}: read public hourly tide data", flush=True)
         hourly, years = read_water(station["station_id"])
         water = tide_separate(hourly, station["lat"])
@@ -283,6 +286,7 @@ def main():
         outputs = []
         for horizon in [1, 3, 6]:
             window = build_windows(master, station, horizon)
+            available_test_events = [event for event in test_names if event in set(window["test_event"])]
             print(f"{station['name']} +{horizon}h: train={len(window['X_train'])}, test={len(window['X_test'])}", flush=True)
             pred, actual, metrics, model = train_one(key, station, horizon, window)
             model_path = MODEL_OUTPUT / f"{key}-{horizon}h.keras"
@@ -292,7 +296,7 @@ def main():
                 points.append({"event": event, "time": stamp, "actual_cm": round(float(a / 10), 4), "prediction_cm": round(float(p / 10), 4)})
             # Matched-time line plot for individual event values is handled in component;
             # save bundled records so all test events remain independently inspectable.
-            for event in test_names:
+            for event in available_test_events:
                 subset = [p for p in points if p["event"] == event]
                 if not subset:
                     continue
@@ -309,7 +313,8 @@ def main():
                 filename = f"{key}-{slug}-{horizon}h.png"
                 plt.savefig(OUTPUT / filename, dpi=160)
                 plt.close()
-            outputs.append({"lead_hours": horizon, "metrics": metrics, "test_events": test_names, "points": points,
+            outputs.append({"lead_hours": horizon, "metrics": metrics, "test_events": available_test_events, "points": points,
+                            "unavailable_test_events": [event for event in test_names if event not in available_test_events],
                             "training_samples": int(len(window["X_train"])), "architecture": {"conv1_filters": station["filters"] if isinstance(station["filters"], tuple) else station["filters"][horizon][0], "conv2_filters": station["filters"] if isinstance(station["filters"], tuple) else station["filters"][horizon][1], "lstm_units": station["units"][horizon], "lookback_hours": LOOKBACK, "epochs": EPOCHS, "batch_size": BATCH, "notebook_batch_size": 8}})
             print(f"{station['name']} +{horizon}h metrics: {metrics}", flush=True)
         payload = {"station": station["station"], "station_name": station["name"], "units": "cm", "model": "CNN-LSTM", "training_status": "retrained", "data_sources": {"tide": "CWA historical station archives (minute-00 hourly records)", "track": "NOAA IBTrACS best-track, interpolated hourly with PCHIP"}, "tide_method": "UTide annual harmonic separation fitted to each calendar year; output is observed water level minus astronomical tide.", "split_method": "Held-out storm-event split; no event appears in both train and test.", "tide_years": years, "results": outputs}

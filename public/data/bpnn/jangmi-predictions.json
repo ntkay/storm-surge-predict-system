@@ -1,0 +1,1600 @@
+{
+  "event_id": "200815",
+  "event_name": "2008 薔蜜 Jangmi",
+  "station": "C4A02",
+  "station_id": "1226",
+  "units": "mm",
+  "mode": "historical-bpnn-reconstruction",
+  "validation": "reconstructed-features; original held-out storm, not original test rows",
+  "issue_window": {
+    "start": "2008-09-27T02:00:00+08:00",
+    "end_exclusive": "2008-10-01T03:00:00+08:00"
+  },
+  "inputs": {
+    "hourly_observation_count": 8600,
+    "track_fix_count": 93,
+    "harmonic_tide_fit": {
+      "training_samples": 125629,
+      "fit_rmse_cm_all_years": 14.20960145444274,
+      "fit_rmse_cm_2008_excluding_event": 14.353985702145717,
+      "annual_observation_years": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016
+      ],
+      "constituents": [
+        "M2",
+        "S2",
+        "N2",
+        "K2",
+        "K1",
+        "O1",
+        "P1",
+        "Q1",
+        "M4",
+        "MS4"
+      ]
+    }
+  },
+  "assumptions": [
+    "CWA Longdong hourly observations use the minute-00 reading from the archived six-minute record; source values are converted from mm to cm for model inputs.",
+    "Astronomical tide is reconstructed from annual CWA hourly records with a robust ten-constituent harmonic fit; data within five days of the event are excluded from the fit.",
+    "NOAA IBTrACS best-track wind, pressure, and position use the latest fix at or before each issue hour, with missing values carried forward for no more than six hours.",
+    "Inputs use the exported 24-hour window, saved feature statistics and temporal weights, and five-run BPNN ensemble. This is a historical reconstruction, not a live forecast or exact reproduction of original test rows."
+  ],
+  "sources": [
+    {
+      "title": "CWA Ocean Data Download - Longdong historical tide observations",
+      "url": "https://ocean.cwa.gov.tw/V2/data_interface/datasets"
+    },
+    {
+      "title": "NOAA IBTrACS best-track archive",
+      "url": "https://www.ncei.noaa.gov/products/international-best-track-archive"
+    }
+  ],
+  "results": [
+    {
+      "lead_hours": 1,
+      "weights_sha256": "9494e80444c1d28f739527af17c1caed53eed34fd65a329c9e2377624a24140e",
+      "metrics": {
+        "count": 55,
+        "rmse_mm": 230.8887964312138,
+        "mae_mm": 194.40551728314173,
+        "r2": -5.867656573440288
+      },
+      "points": [
+        {
+          "issued_at": "2008-09-27T19:00:00+08:00",
+          "valid_at": "2008-09-27T20:00:00+08:00",
+          "actual_surge_mm": 45.591,
+          "predicted_surge_mm": 5.569,
+          "distance_km": 554.0,
+          "wind_m_s": 72.02,
+          "pressure_hpa": 918.0
+        },
+        {
+          "issued_at": "2008-09-27T20:00:00+08:00",
+          "valid_at": "2008-09-27T21:00:00+08:00",
+          "actual_surge_mm": 55.719,
+          "predicted_surge_mm": 3.542,
+          "distance_km": 492.6,
+          "wind_m_s": 59.16,
+          "pressure_hpa": 905.0
+        },
+        {
+          "issued_at": "2008-09-28T22:00:00+08:00",
+          "valid_at": "2008-09-28T23:00:00+08:00",
+          "actual_surge_mm": 89.377,
+          "predicted_surge_mm": 454.784,
+          "distance_km": 112.7,
+          "wind_m_s": 43.73,
+          "pressure_hpa": 950.0
+        },
+        {
+          "issued_at": "2008-09-28T23:00:00+08:00",
+          "valid_at": "2008-09-29T00:00:00+08:00",
+          "actual_surge_mm": 84.318,
+          "predicted_surge_mm": 327.89,
+          "distance_km": 93.6,
+          "wind_m_s": 38.58,
+          "pressure_hpa": 960.0
+        },
+        {
+          "issued_at": "2008-09-29T00:00:00+08:00",
+          "valid_at": "2008-09-29T01:00:00+08:00",
+          "actual_surge_mm": 182.906,
+          "predicted_surge_mm": 393.12,
+          "distance_km": 93.6,
+          "wind_m_s": 38.58,
+          "pressure_hpa": 960.0
+        },
+        {
+          "issued_at": "2008-09-29T01:00:00+08:00",
+          "valid_at": "2008-09-29T02:00:00+08:00",
+          "actual_surge_mm": 132.378,
+          "predicted_surge_mm": 179.633,
+          "distance_km": 93.6,
+          "wind_m_s": 38.58,
+          "pressure_hpa": 960.0
+        },
+        {
+          "issued_at": "2008-09-29T02:00:00+08:00",
+          "valid_at": "2008-09-29T03:00:00+08:00",
+          "actual_surge_mm": 98.044,
+          "predicted_surge_mm": 237.973,
+          "distance_km": 70.6,
+          "wind_m_s": 33.44,
+          "pressure_hpa": 970.0
+        },
+        {
+          "issued_at": "2008-09-29T03:00:00+08:00",
+          "valid_at": "2008-09-29T04:00:00+08:00",
+          "actual_surge_mm": 14.798,
+          "predicted_surge_mm": 228.072,
+          "distance_km": 70.6,
+          "wind_m_s": 33.44,
+          "pressure_hpa": 970.0
+        },
+        {
+          "issued_at": "2008-09-29T04:00:00+08:00",
+          "valid_at": "2008-09-29T05:00:00+08:00",
+          "actual_surge_mm": -31.715,
+          "predicted_surge_mm": 93.107,
+          "distance_km": 70.6,
+          "wind_m_s": 33.44,
+          "pressure_hpa": 970.0
+        },
+        {
+          "issued_at": "2008-09-29T05:00:00+08:00",
+          "valid_at": "2008-09-29T06:00:00+08:00",
+          "actual_surge_mm": -77.472,
+          "predicted_surge_mm": -12.647,
+          "distance_km": 73.2,
+          "wind_m_s": 34.98,
+          "pressure_hpa": 973.0
+        },
+        {
+          "issued_at": "2008-09-29T06:00:00+08:00",
+          "valid_at": "2008-09-29T07:00:00+08:00",
+          "actual_surge_mm": -153.929,
+          "predicted_surge_mm": -28.868,
+          "distance_km": 73.2,
+          "wind_m_s": 34.98,
+          "pressure_hpa": 973.0
+        },
+        {
+          "issued_at": "2008-09-29T07:00:00+08:00",
+          "valid_at": "2008-09-29T08:00:00+08:00",
+          "actual_surge_mm": -182.341,
+          "predicted_surge_mm": -41.224,
+          "distance_km": 73.2,
+          "wind_m_s": 34.98,
+          "pressure_hpa": 973.0
+        },
+        {
+          "issued_at": "2008-09-29T08:00:00+08:00",
+          "valid_at": "2008-09-29T09:00:00+08:00",
+          "actual_surge_mm": -211.229,
+          "predicted_surge_mm": 8.346,
+          "distance_km": 99.4,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 985.0
+        },
+        {
+          "issued_at": "2008-09-29T09:00:00+08:00",
+          "valid_at": "2008-09-29T10:00:00+08:00",
+          "actual_surge_mm": -168.724,
+          "predicted_surge_mm": -64.033,
+          "distance_km": 99.4,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 985.0
+        },
+        {
+          "issued_at": "2008-09-29T10:00:00+08:00",
+          "valid_at": "2008-09-29T11:00:00+08:00",
+          "actual_surge_mm": -113.714,
+          "predicted_surge_mm": -95.213,
+          "distance_km": 99.4,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 985.0
+        },
+        {
+          "issued_at": "2008-09-29T11:00:00+08:00",
+          "valid_at": "2008-09-29T12:00:00+08:00",
+          "actual_surge_mm": -71.483,
+          "predicted_surge_mm": 20.201,
+          "distance_km": 132.7,
+          "wind_m_s": 29.84,
+          "pressure_hpa": 980.0
+        },
+        {
+          "issued_at": "2008-09-29T12:00:00+08:00",
+          "valid_at": "2008-09-29T13:00:00+08:00",
+          "actual_surge_mm": -78.45,
+          "predicted_surge_mm": 80.834,
+          "distance_km": 132.7,
+          "wind_m_s": 29.84,
+          "pressure_hpa": 980.0
+        },
+        {
+          "issued_at": "2008-09-29T13:00:00+08:00",
+          "valid_at": "2008-09-29T14:00:00+08:00",
+          "actual_surge_mm": -29.408,
+          "predicted_surge_mm": 6.325,
+          "distance_km": 132.7,
+          "wind_m_s": 29.84,
+          "pressure_hpa": 980.0
+        },
+        {
+          "issued_at": "2008-09-29T14:00:00+08:00",
+          "valid_at": "2008-09-29T15:00:00+08:00",
+          "actual_surge_mm": -15.231,
+          "predicted_surge_mm": -67.684,
+          "distance_km": 161.5,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 990.0
+        },
+        {
+          "issued_at": "2008-09-29T15:00:00+08:00",
+          "valid_at": "2008-09-29T16:00:00+08:00",
+          "actual_surge_mm": -22.1,
+          "predicted_surge_mm": -29.104,
+          "distance_km": 161.5,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 990.0
+        },
+        {
+          "issued_at": "2008-09-29T16:00:00+08:00",
+          "valid_at": "2008-09-29T17:00:00+08:00",
+          "actual_surge_mm": -49.926,
+          "predicted_surge_mm": -32.384,
+          "distance_km": 161.5,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 990.0
+        },
+        {
+          "issued_at": "2008-09-29T17:00:00+08:00",
+          "valid_at": "2008-09-29T18:00:00+08:00",
+          "actual_surge_mm": -79.535,
+          "predicted_surge_mm": -37.303,
+          "distance_km": 201.6,
+          "wind_m_s": 27.27,
+          "pressure_hpa": 984.0
+        },
+        {
+          "issued_at": "2008-09-29T18:00:00+08:00",
+          "valid_at": "2008-09-29T19:00:00+08:00",
+          "actual_surge_mm": -62.505,
+          "predicted_surge_mm": -22.498,
+          "distance_km": 201.6,
+          "wind_m_s": 27.27,
+          "pressure_hpa": 984.0
+        },
+        {
+          "issued_at": "2008-09-29T19:00:00+08:00",
+          "valid_at": "2008-09-29T20:00:00+08:00",
+          "actual_surge_mm": -4.127,
+          "predicted_surge_mm": 18.29,
+          "distance_km": 201.6,
+          "wind_m_s": 27.27,
+          "pressure_hpa": 984.0
+        },
+        {
+          "issued_at": "2008-09-29T20:00:00+08:00",
+          "valid_at": "2008-09-29T21:00:00+08:00",
+          "actual_surge_mm": -58.42,
+          "predicted_surge_mm": 105.265,
+          "distance_km": 233.9,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-29T21:00:00+08:00",
+          "valid_at": "2008-09-29T22:00:00+08:00",
+          "actual_surge_mm": -100.356,
+          "predicted_surge_mm": 96.168,
+          "distance_km": 233.9,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-29T22:00:00+08:00",
+          "valid_at": "2008-09-29T23:00:00+08:00",
+          "actual_surge_mm": -83.197,
+          "predicted_surge_mm": 55.406,
+          "distance_km": 233.9,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-29T23:00:00+08:00",
+          "valid_at": "2008-09-30T00:00:00+08:00",
+          "actual_surge_mm": -94.248,
+          "predicted_surge_mm": 51.483,
+          "distance_km": 271.4,
+          "wind_m_s": 24.69,
+          "pressure_hpa": 987.0
+        },
+        {
+          "issued_at": "2008-09-30T00:00:00+08:00",
+          "valid_at": "2008-09-30T01:00:00+08:00",
+          "actual_surge_mm": -131.166,
+          "predicted_surge_mm": 26.206,
+          "distance_km": 271.4,
+          "wind_m_s": 24.69,
+          "pressure_hpa": 987.0
+        },
+        {
+          "issued_at": "2008-09-30T01:00:00+08:00",
+          "valid_at": "2008-09-30T02:00:00+08:00",
+          "actual_surge_mm": -148.958,
+          "predicted_surge_mm": -11.206,
+          "distance_km": 271.4,
+          "wind_m_s": 24.69,
+          "pressure_hpa": 987.0
+        },
+        {
+          "issued_at": "2008-09-30T02:00:00+08:00",
+          "valid_at": "2008-09-30T03:00:00+08:00",
+          "actual_surge_mm": -147.532,
+          "predicted_surge_mm": -44.697,
+          "distance_km": 313.1,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-30T03:00:00+08:00",
+          "valid_at": "2008-09-30T04:00:00+08:00",
+          "actual_surge_mm": -145.937,
+          "predicted_surge_mm": -46.324,
+          "distance_km": 313.1,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-30T04:00:00+08:00",
+          "valid_at": "2008-09-30T05:00:00+08:00",
+          "actual_surge_mm": -162.474,
+          "predicted_surge_mm": -4.327,
+          "distance_km": 313.1,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-30T05:00:00+08:00",
+          "valid_at": "2008-09-30T06:00:00+08:00",
+          "actual_surge_mm": -172.201,
+          "predicted_surge_mm": 9.096,
+          "distance_km": 381.6,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 989.0
+        },
+        {
+          "issued_at": "2008-09-30T06:00:00+08:00",
+          "valid_at": "2008-09-30T07:00:00+08:00",
+          "actual_surge_mm": -201.733,
+          "predicted_surge_mm": 53.361,
+          "distance_km": 381.6,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 989.0
+        },
+        {
+          "issued_at": "2008-09-30T07:00:00+08:00",
+          "valid_at": "2008-09-30T08:00:00+08:00",
+          "actual_surge_mm": -207.912,
+          "predicted_surge_mm": 50.009,
+          "distance_km": 381.6,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 989.0
+        },
+        {
+          "issued_at": "2008-09-30T08:00:00+08:00",
+          "valid_at": "2008-09-30T09:00:00+08:00",
+          "actual_surge_mm": -173.281,
+          "predicted_surge_mm": 54.072,
+          "distance_km": 446.2,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T09:00:00+08:00",
+          "valid_at": "2008-09-30T10:00:00+08:00",
+          "actual_surge_mm": -132.895,
+          "predicted_surge_mm": 82.977,
+          "distance_km": 446.2,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T10:00:00+08:00",
+          "valid_at": "2008-09-30T11:00:00+08:00",
+          "actual_surge_mm": -118.688,
+          "predicted_surge_mm": 119.632,
+          "distance_km": 446.2,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T11:00:00+08:00",
+          "valid_at": "2008-09-30T12:00:00+08:00",
+          "actual_surge_mm": -107.482,
+          "predicted_surge_mm": 136.145,
+          "distance_km": 513.2,
+          "wind_m_s": 22.12,
+          "pressure_hpa": 991.0
+        },
+        {
+          "issued_at": "2008-09-30T12:00:00+08:00",
+          "valid_at": "2008-09-30T13:00:00+08:00",
+          "actual_surge_mm": -104.349,
+          "predicted_surge_mm": 148.425,
+          "distance_km": 513.2,
+          "wind_m_s": 22.12,
+          "pressure_hpa": 991.0
+        },
+        {
+          "issued_at": "2008-09-30T13:00:00+08:00",
+          "valid_at": "2008-09-30T14:00:00+08:00",
+          "actual_surge_mm": -89.995,
+          "predicted_surge_mm": 151.112,
+          "distance_km": 513.2,
+          "wind_m_s": 22.12,
+          "pressure_hpa": 991.0
+        },
+        {
+          "issued_at": "2008-09-30T14:00:00+08:00",
+          "valid_at": "2008-09-30T15:00:00+08:00",
+          "actual_surge_mm": -29.781,
+          "predicted_surge_mm": 196.097,
+          "distance_km": 581.7,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T15:00:00+08:00",
+          "valid_at": "2008-09-30T16:00:00+08:00",
+          "actual_surge_mm": 11.575,
+          "predicted_surge_mm": 253.031,
+          "distance_km": 581.7,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T16:00:00+08:00",
+          "valid_at": "2008-09-30T17:00:00+08:00",
+          "actual_surge_mm": -3.903,
+          "predicted_surge_mm": 268.417,
+          "distance_km": 581.7,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T17:00:00+08:00",
+          "valid_at": "2008-09-30T18:00:00+08:00",
+          "actual_surge_mm": -27.977,
+          "predicted_surge_mm": 255.429,
+          "distance_km": 645.2,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 993.0
+        },
+        {
+          "issued_at": "2008-09-30T18:00:00+08:00",
+          "valid_at": "2008-09-30T19:00:00+08:00",
+          "actual_surge_mm": -83.299,
+          "predicted_surge_mm": 274.899,
+          "distance_km": 645.2,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 993.0
+        },
+        {
+          "issued_at": "2008-09-30T19:00:00+08:00",
+          "valid_at": "2008-09-30T20:00:00+08:00",
+          "actual_surge_mm": -115.221,
+          "predicted_surge_mm": 304.921,
+          "distance_km": 645.2,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 993.0
+        },
+        {
+          "issued_at": "2008-09-30T20:00:00+08:00",
+          "valid_at": "2008-09-30T21:00:00+08:00",
+          "actual_surge_mm": -117.508,
+          "predicted_surge_mm": 315.327,
+          "distance_km": 704.1,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-09-30T21:00:00+08:00",
+          "valid_at": "2008-09-30T22:00:00+08:00",
+          "actual_surge_mm": -128.983,
+          "predicted_surge_mm": 291.287,
+          "distance_km": 704.1,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-09-30T22:00:00+08:00",
+          "valid_at": "2008-09-30T23:00:00+08:00",
+          "actual_surge_mm": -122.175,
+          "predicted_surge_mm": 283.249,
+          "distance_km": 704.1,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-09-30T23:00:00+08:00",
+          "valid_at": "2008-10-01T00:00:00+08:00",
+          "actual_surge_mm": -105.405,
+          "predicted_surge_mm": 293.375,
+          "distance_km": 759.2,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-10-01T00:00:00+08:00",
+          "valid_at": "2008-10-01T01:00:00+08:00",
+          "actual_surge_mm": -135.532,
+          "predicted_surge_mm": 271.424,
+          "distance_km": 759.2,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-10-01T01:00:00+08:00",
+          "valid_at": "2008-10-01T02:00:00+08:00",
+          "actual_surge_mm": -175.133,
+          "predicted_surge_mm": 262.734,
+          "distance_km": 759.2,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-10-01T02:00:00+08:00",
+          "valid_at": "2008-10-01T03:00:00+08:00",
+          "actual_surge_mm": -142.074,
+          "predicted_surge_mm": 254.268,
+          "distance_km": 832.7,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        }
+      ]
+    },
+    {
+      "lead_hours": 3,
+      "weights_sha256": "5dd0ca7d8dcbc389d607d828748f184297de8faae91cf34662970705e0b61ffb",
+      "metrics": {
+        "count": 55,
+        "rmse_mm": 380.27645025113947,
+        "mae_mm": 324.667250529441,
+        "r2": -16.44918668455423
+      },
+      "points": [
+        {
+          "issued_at": "2008-09-27T20:00:00+08:00",
+          "valid_at": "2008-09-27T23:00:00+08:00",
+          "actual_surge_mm": 125.723,
+          "predicted_surge_mm": 13.655,
+          "distance_km": 492.6,
+          "wind_m_s": 59.16,
+          "pressure_hpa": 905.0
+        },
+        {
+          "issued_at": "2008-09-27T21:00:00+08:00",
+          "valid_at": "2008-09-28T00:00:00+08:00",
+          "actual_surge_mm": 193.994,
+          "predicted_surge_mm": -70.542,
+          "distance_km": 492.6,
+          "wind_m_s": 59.16,
+          "pressure_hpa": 905.0
+        },
+        {
+          "issued_at": "2008-09-28T22:00:00+08:00",
+          "valid_at": "2008-09-29T01:00:00+08:00",
+          "actual_surge_mm": 182.906,
+          "predicted_surge_mm": 926.948,
+          "distance_km": 112.7,
+          "wind_m_s": 43.73,
+          "pressure_hpa": 950.0
+        },
+        {
+          "issued_at": "2008-09-28T23:00:00+08:00",
+          "valid_at": "2008-09-29T02:00:00+08:00",
+          "actual_surge_mm": 132.378,
+          "predicted_surge_mm": 669.555,
+          "distance_km": 93.6,
+          "wind_m_s": 38.58,
+          "pressure_hpa": 960.0
+        },
+        {
+          "issued_at": "2008-09-29T00:00:00+08:00",
+          "valid_at": "2008-09-29T03:00:00+08:00",
+          "actual_surge_mm": 98.044,
+          "predicted_surge_mm": 605.648,
+          "distance_km": 93.6,
+          "wind_m_s": 38.58,
+          "pressure_hpa": 960.0
+        },
+        {
+          "issued_at": "2008-09-29T01:00:00+08:00",
+          "valid_at": "2008-09-29T04:00:00+08:00",
+          "actual_surge_mm": 14.798,
+          "predicted_surge_mm": 522.032,
+          "distance_km": 93.6,
+          "wind_m_s": 38.58,
+          "pressure_hpa": 960.0
+        },
+        {
+          "issued_at": "2008-09-29T02:00:00+08:00",
+          "valid_at": "2008-09-29T05:00:00+08:00",
+          "actual_surge_mm": -31.715,
+          "predicted_surge_mm": 489.594,
+          "distance_km": 70.6,
+          "wind_m_s": 33.44,
+          "pressure_hpa": 970.0
+        },
+        {
+          "issued_at": "2008-09-29T03:00:00+08:00",
+          "valid_at": "2008-09-29T06:00:00+08:00",
+          "actual_surge_mm": -77.472,
+          "predicted_surge_mm": 320.74,
+          "distance_km": 70.6,
+          "wind_m_s": 33.44,
+          "pressure_hpa": 970.0
+        },
+        {
+          "issued_at": "2008-09-29T04:00:00+08:00",
+          "valid_at": "2008-09-29T07:00:00+08:00",
+          "actual_surge_mm": -153.929,
+          "predicted_surge_mm": 275.553,
+          "distance_km": 70.6,
+          "wind_m_s": 33.44,
+          "pressure_hpa": 970.0
+        },
+        {
+          "issued_at": "2008-09-29T05:00:00+08:00",
+          "valid_at": "2008-09-29T08:00:00+08:00",
+          "actual_surge_mm": -182.341,
+          "predicted_surge_mm": 203.291,
+          "distance_km": 73.2,
+          "wind_m_s": 34.98,
+          "pressure_hpa": 973.0
+        },
+        {
+          "issued_at": "2008-09-29T06:00:00+08:00",
+          "valid_at": "2008-09-29T09:00:00+08:00",
+          "actual_surge_mm": -211.229,
+          "predicted_surge_mm": 130.108,
+          "distance_km": 73.2,
+          "wind_m_s": 34.98,
+          "pressure_hpa": 973.0
+        },
+        {
+          "issued_at": "2008-09-29T07:00:00+08:00",
+          "valid_at": "2008-09-29T10:00:00+08:00",
+          "actual_surge_mm": -168.724,
+          "predicted_surge_mm": 73.759,
+          "distance_km": 73.2,
+          "wind_m_s": 34.98,
+          "pressure_hpa": 973.0
+        },
+        {
+          "issued_at": "2008-09-29T08:00:00+08:00",
+          "valid_at": "2008-09-29T11:00:00+08:00",
+          "actual_surge_mm": -113.714,
+          "predicted_surge_mm": 38.907,
+          "distance_km": 99.4,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 985.0
+        },
+        {
+          "issued_at": "2008-09-29T09:00:00+08:00",
+          "valid_at": "2008-09-29T12:00:00+08:00",
+          "actual_surge_mm": -71.483,
+          "predicted_surge_mm": 100.077,
+          "distance_km": 99.4,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 985.0
+        },
+        {
+          "issued_at": "2008-09-29T10:00:00+08:00",
+          "valid_at": "2008-09-29T13:00:00+08:00",
+          "actual_surge_mm": -78.45,
+          "predicted_surge_mm": 121.619,
+          "distance_km": 99.4,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 985.0
+        },
+        {
+          "issued_at": "2008-09-29T11:00:00+08:00",
+          "valid_at": "2008-09-29T14:00:00+08:00",
+          "actual_surge_mm": -29.408,
+          "predicted_surge_mm": 184.212,
+          "distance_km": 132.7,
+          "wind_m_s": 29.84,
+          "pressure_hpa": 980.0
+        },
+        {
+          "issued_at": "2008-09-29T12:00:00+08:00",
+          "valid_at": "2008-09-29T15:00:00+08:00",
+          "actual_surge_mm": -15.231,
+          "predicted_surge_mm": 116.045,
+          "distance_km": 132.7,
+          "wind_m_s": 29.84,
+          "pressure_hpa": 980.0
+        },
+        {
+          "issued_at": "2008-09-29T13:00:00+08:00",
+          "valid_at": "2008-09-29T16:00:00+08:00",
+          "actual_surge_mm": -22.1,
+          "predicted_surge_mm": 73.52,
+          "distance_km": 132.7,
+          "wind_m_s": 29.84,
+          "pressure_hpa": 980.0
+        },
+        {
+          "issued_at": "2008-09-29T14:00:00+08:00",
+          "valid_at": "2008-09-29T17:00:00+08:00",
+          "actual_surge_mm": -49.926,
+          "predicted_surge_mm": -4.573,
+          "distance_km": 161.5,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 990.0
+        },
+        {
+          "issued_at": "2008-09-29T15:00:00+08:00",
+          "valid_at": "2008-09-29T18:00:00+08:00",
+          "actual_surge_mm": -79.535,
+          "predicted_surge_mm": 41.973,
+          "distance_km": 161.5,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 990.0
+        },
+        {
+          "issued_at": "2008-09-29T16:00:00+08:00",
+          "valid_at": "2008-09-29T19:00:00+08:00",
+          "actual_surge_mm": -62.505,
+          "predicted_surge_mm": 69.167,
+          "distance_km": 161.5,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 990.0
+        },
+        {
+          "issued_at": "2008-09-29T17:00:00+08:00",
+          "valid_at": "2008-09-29T20:00:00+08:00",
+          "actual_surge_mm": -4.127,
+          "predicted_surge_mm": 124.232,
+          "distance_km": 201.6,
+          "wind_m_s": 27.27,
+          "pressure_hpa": 984.0
+        },
+        {
+          "issued_at": "2008-09-29T18:00:00+08:00",
+          "valid_at": "2008-09-29T21:00:00+08:00",
+          "actual_surge_mm": -58.42,
+          "predicted_surge_mm": 152.17,
+          "distance_km": 201.6,
+          "wind_m_s": 27.27,
+          "pressure_hpa": 984.0
+        },
+        {
+          "issued_at": "2008-09-29T19:00:00+08:00",
+          "valid_at": "2008-09-29T22:00:00+08:00",
+          "actual_surge_mm": -100.356,
+          "predicted_surge_mm": 135.034,
+          "distance_km": 201.6,
+          "wind_m_s": 27.27,
+          "pressure_hpa": 984.0
+        },
+        {
+          "issued_at": "2008-09-29T20:00:00+08:00",
+          "valid_at": "2008-09-29T23:00:00+08:00",
+          "actual_surge_mm": -83.197,
+          "predicted_surge_mm": 173.443,
+          "distance_km": 233.9,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-29T21:00:00+08:00",
+          "valid_at": "2008-09-30T00:00:00+08:00",
+          "actual_surge_mm": -94.248,
+          "predicted_surge_mm": 167.52,
+          "distance_km": 233.9,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-29T22:00:00+08:00",
+          "valid_at": "2008-09-30T01:00:00+08:00",
+          "actual_surge_mm": -131.166,
+          "predicted_surge_mm": 125.106,
+          "distance_km": 233.9,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-29T23:00:00+08:00",
+          "valid_at": "2008-09-30T02:00:00+08:00",
+          "actual_surge_mm": -148.958,
+          "predicted_surge_mm": 115.801,
+          "distance_km": 271.4,
+          "wind_m_s": 24.69,
+          "pressure_hpa": 987.0
+        },
+        {
+          "issued_at": "2008-09-30T00:00:00+08:00",
+          "valid_at": "2008-09-30T03:00:00+08:00",
+          "actual_surge_mm": -147.532,
+          "predicted_surge_mm": 70.443,
+          "distance_km": 271.4,
+          "wind_m_s": 24.69,
+          "pressure_hpa": 987.0
+        },
+        {
+          "issued_at": "2008-09-30T01:00:00+08:00",
+          "valid_at": "2008-09-30T04:00:00+08:00",
+          "actual_surge_mm": -145.937,
+          "predicted_surge_mm": -24.271,
+          "distance_km": 271.4,
+          "wind_m_s": 24.69,
+          "pressure_hpa": 987.0
+        },
+        {
+          "issued_at": "2008-09-30T02:00:00+08:00",
+          "valid_at": "2008-09-30T05:00:00+08:00",
+          "actual_surge_mm": -162.474,
+          "predicted_surge_mm": -42.585,
+          "distance_km": 313.1,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-30T03:00:00+08:00",
+          "valid_at": "2008-09-30T06:00:00+08:00",
+          "actual_surge_mm": -172.201,
+          "predicted_surge_mm": 23.725,
+          "distance_km": 313.1,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-30T04:00:00+08:00",
+          "valid_at": "2008-09-30T07:00:00+08:00",
+          "actual_surge_mm": -201.733,
+          "predicted_surge_mm": 120.713,
+          "distance_km": 313.1,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-30T05:00:00+08:00",
+          "valid_at": "2008-09-30T08:00:00+08:00",
+          "actual_surge_mm": -207.912,
+          "predicted_surge_mm": 194.331,
+          "distance_km": 381.6,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 989.0
+        },
+        {
+          "issued_at": "2008-09-30T06:00:00+08:00",
+          "valid_at": "2008-09-30T09:00:00+08:00",
+          "actual_surge_mm": -173.281,
+          "predicted_surge_mm": 195.103,
+          "distance_km": 381.6,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 989.0
+        },
+        {
+          "issued_at": "2008-09-30T07:00:00+08:00",
+          "valid_at": "2008-09-30T10:00:00+08:00",
+          "actual_surge_mm": -132.895,
+          "predicted_surge_mm": 119.288,
+          "distance_km": 381.6,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 989.0
+        },
+        {
+          "issued_at": "2008-09-30T08:00:00+08:00",
+          "valid_at": "2008-09-30T11:00:00+08:00",
+          "actual_surge_mm": -118.688,
+          "predicted_surge_mm": 76.566,
+          "distance_km": 446.2,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T09:00:00+08:00",
+          "valid_at": "2008-09-30T12:00:00+08:00",
+          "actual_surge_mm": -107.482,
+          "predicted_surge_mm": 70.041,
+          "distance_km": 446.2,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T10:00:00+08:00",
+          "valid_at": "2008-09-30T13:00:00+08:00",
+          "actual_surge_mm": -104.349,
+          "predicted_surge_mm": 133.448,
+          "distance_km": 446.2,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T11:00:00+08:00",
+          "valid_at": "2008-09-30T14:00:00+08:00",
+          "actual_surge_mm": -89.995,
+          "predicted_surge_mm": 120.306,
+          "distance_km": 513.2,
+          "wind_m_s": 22.12,
+          "pressure_hpa": 991.0
+        },
+        {
+          "issued_at": "2008-09-30T12:00:00+08:00",
+          "valid_at": "2008-09-30T15:00:00+08:00",
+          "actual_surge_mm": -29.781,
+          "predicted_surge_mm": 104.368,
+          "distance_km": 513.2,
+          "wind_m_s": 22.12,
+          "pressure_hpa": 991.0
+        },
+        {
+          "issued_at": "2008-09-30T13:00:00+08:00",
+          "valid_at": "2008-09-30T16:00:00+08:00",
+          "actual_surge_mm": 11.575,
+          "predicted_surge_mm": 30.125,
+          "distance_km": 513.2,
+          "wind_m_s": 22.12,
+          "pressure_hpa": 991.0
+        },
+        {
+          "issued_at": "2008-09-30T14:00:00+08:00",
+          "valid_at": "2008-09-30T17:00:00+08:00",
+          "actual_surge_mm": -3.903,
+          "predicted_surge_mm": 69.991,
+          "distance_km": 581.7,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T15:00:00+08:00",
+          "valid_at": "2008-09-30T18:00:00+08:00",
+          "actual_surge_mm": -27.977,
+          "predicted_surge_mm": 208.142,
+          "distance_km": 581.7,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T16:00:00+08:00",
+          "valid_at": "2008-09-30T19:00:00+08:00",
+          "actual_surge_mm": -83.299,
+          "predicted_surge_mm": 326.727,
+          "distance_km": 581.7,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T17:00:00+08:00",
+          "valid_at": "2008-09-30T20:00:00+08:00",
+          "actual_surge_mm": -115.221,
+          "predicted_surge_mm": 419.208,
+          "distance_km": 645.2,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 993.0
+        },
+        {
+          "issued_at": "2008-09-30T18:00:00+08:00",
+          "valid_at": "2008-09-30T21:00:00+08:00",
+          "actual_surge_mm": -117.508,
+          "predicted_surge_mm": 507.685,
+          "distance_km": 645.2,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 993.0
+        },
+        {
+          "issued_at": "2008-09-30T19:00:00+08:00",
+          "valid_at": "2008-09-30T22:00:00+08:00",
+          "actual_surge_mm": -128.983,
+          "predicted_surge_mm": 489.623,
+          "distance_km": 645.2,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 993.0
+        },
+        {
+          "issued_at": "2008-09-30T20:00:00+08:00",
+          "valid_at": "2008-09-30T23:00:00+08:00",
+          "actual_surge_mm": -122.175,
+          "predicted_surge_mm": 503.547,
+          "distance_km": 704.1,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-09-30T21:00:00+08:00",
+          "valid_at": "2008-10-01T00:00:00+08:00",
+          "actual_surge_mm": -105.405,
+          "predicted_surge_mm": 559.957,
+          "distance_km": 704.1,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-09-30T22:00:00+08:00",
+          "valid_at": "2008-10-01T01:00:00+08:00",
+          "actual_surge_mm": -135.532,
+          "predicted_surge_mm": 559.861,
+          "distance_km": 704.1,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-09-30T23:00:00+08:00",
+          "valid_at": "2008-10-01T02:00:00+08:00",
+          "actual_surge_mm": -175.133,
+          "predicted_surge_mm": 534.92,
+          "distance_km": 759.2,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-10-01T00:00:00+08:00",
+          "valid_at": "2008-10-01T03:00:00+08:00",
+          "actual_surge_mm": -142.074,
+          "predicted_surge_mm": 531.988,
+          "distance_km": 759.2,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-10-01T01:00:00+08:00",
+          "valid_at": "2008-10-01T04:00:00+08:00",
+          "actual_surge_mm": -98.467,
+          "predicted_surge_mm": 482.448,
+          "distance_km": 759.2,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-10-01T02:00:00+08:00",
+          "valid_at": "2008-10-01T05:00:00+08:00",
+          "actual_surge_mm": -99.137,
+          "predicted_surge_mm": 465.305,
+          "distance_km": 832.7,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        }
+      ]
+    },
+    {
+      "lead_hours": 6,
+      "weights_sha256": "c64ecdb78c0e101d751203fa30b40859bb8327c0f4f7709896b311100b046f41",
+      "metrics": {
+        "count": 56,
+        "rmse_mm": 413.07980135064304,
+        "mae_mm": 366.18686734540006,
+        "r2": -19.150790689090222
+      },
+      "points": [
+        {
+          "issued_at": "2008-09-27T19:00:00+08:00",
+          "valid_at": "2008-09-28T01:00:00+08:00",
+          "actual_surge_mm": 188.026,
+          "predicted_surge_mm": 11.843,
+          "distance_km": 554.0,
+          "wind_m_s": 72.02,
+          "pressure_hpa": 918.0
+        },
+        {
+          "issued_at": "2008-09-27T20:00:00+08:00",
+          "valid_at": "2008-09-28T02:00:00+08:00",
+          "actual_surge_mm": 253.195,
+          "predicted_surge_mm": 63.167,
+          "distance_km": 492.6,
+          "wind_m_s": 59.16,
+          "pressure_hpa": 905.0
+        },
+        {
+          "issued_at": "2008-09-27T21:00:00+08:00",
+          "valid_at": "2008-09-28T03:00:00+08:00",
+          "actual_surge_mm": 233.873,
+          "predicted_surge_mm": 43.496,
+          "distance_km": 492.6,
+          "wind_m_s": 59.16,
+          "pressure_hpa": 905.0
+        },
+        {
+          "issued_at": "2008-09-28T22:00:00+08:00",
+          "valid_at": "2008-09-29T04:00:00+08:00",
+          "actual_surge_mm": 14.798,
+          "predicted_surge_mm": 735.368,
+          "distance_km": 112.7,
+          "wind_m_s": 43.73,
+          "pressure_hpa": 950.0
+        },
+        {
+          "issued_at": "2008-09-28T23:00:00+08:00",
+          "valid_at": "2008-09-29T05:00:00+08:00",
+          "actual_surge_mm": -31.715,
+          "predicted_surge_mm": 709.384,
+          "distance_km": 93.6,
+          "wind_m_s": 38.58,
+          "pressure_hpa": 960.0
+        },
+        {
+          "issued_at": "2008-09-29T00:00:00+08:00",
+          "valid_at": "2008-09-29T06:00:00+08:00",
+          "actual_surge_mm": -77.472,
+          "predicted_surge_mm": 559.764,
+          "distance_km": 93.6,
+          "wind_m_s": 38.58,
+          "pressure_hpa": 960.0
+        },
+        {
+          "issued_at": "2008-09-29T01:00:00+08:00",
+          "valid_at": "2008-09-29T07:00:00+08:00",
+          "actual_surge_mm": -153.929,
+          "predicted_surge_mm": 532.104,
+          "distance_km": 93.6,
+          "wind_m_s": 38.58,
+          "pressure_hpa": 960.0
+        },
+        {
+          "issued_at": "2008-09-29T02:00:00+08:00",
+          "valid_at": "2008-09-29T08:00:00+08:00",
+          "actual_surge_mm": -182.341,
+          "predicted_surge_mm": 545.281,
+          "distance_km": 70.6,
+          "wind_m_s": 33.44,
+          "pressure_hpa": 970.0
+        },
+        {
+          "issued_at": "2008-09-29T03:00:00+08:00",
+          "valid_at": "2008-09-29T09:00:00+08:00",
+          "actual_surge_mm": -211.229,
+          "predicted_surge_mm": 434.268,
+          "distance_km": 70.6,
+          "wind_m_s": 33.44,
+          "pressure_hpa": 970.0
+        },
+        {
+          "issued_at": "2008-09-29T04:00:00+08:00",
+          "valid_at": "2008-09-29T10:00:00+08:00",
+          "actual_surge_mm": -168.724,
+          "predicted_surge_mm": 379.758,
+          "distance_km": 70.6,
+          "wind_m_s": 33.44,
+          "pressure_hpa": 970.0
+        },
+        {
+          "issued_at": "2008-09-29T05:00:00+08:00",
+          "valid_at": "2008-09-29T11:00:00+08:00",
+          "actual_surge_mm": -113.714,
+          "predicted_surge_mm": 152.448,
+          "distance_km": 73.2,
+          "wind_m_s": 34.98,
+          "pressure_hpa": 973.0
+        },
+        {
+          "issued_at": "2008-09-29T06:00:00+08:00",
+          "valid_at": "2008-09-29T12:00:00+08:00",
+          "actual_surge_mm": -71.483,
+          "predicted_surge_mm": 171.454,
+          "distance_km": 73.2,
+          "wind_m_s": 34.98,
+          "pressure_hpa": 973.0
+        },
+        {
+          "issued_at": "2008-09-29T07:00:00+08:00",
+          "valid_at": "2008-09-29T13:00:00+08:00",
+          "actual_surge_mm": -78.45,
+          "predicted_surge_mm": 195.665,
+          "distance_km": 73.2,
+          "wind_m_s": 34.98,
+          "pressure_hpa": 973.0
+        },
+        {
+          "issued_at": "2008-09-29T08:00:00+08:00",
+          "valid_at": "2008-09-29T14:00:00+08:00",
+          "actual_surge_mm": -29.408,
+          "predicted_surge_mm": 49.967,
+          "distance_km": 99.4,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 985.0
+        },
+        {
+          "issued_at": "2008-09-29T09:00:00+08:00",
+          "valid_at": "2008-09-29T15:00:00+08:00",
+          "actual_surge_mm": -15.231,
+          "predicted_surge_mm": 28.314,
+          "distance_km": 99.4,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 985.0
+        },
+        {
+          "issued_at": "2008-09-29T10:00:00+08:00",
+          "valid_at": "2008-09-29T16:00:00+08:00",
+          "actual_surge_mm": -22.1,
+          "predicted_surge_mm": 19.717,
+          "distance_km": 99.4,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 985.0
+        },
+        {
+          "issued_at": "2008-09-29T11:00:00+08:00",
+          "valid_at": "2008-09-29T17:00:00+08:00",
+          "actual_surge_mm": -49.926,
+          "predicted_surge_mm": 101.773,
+          "distance_km": 132.7,
+          "wind_m_s": 29.84,
+          "pressure_hpa": 980.0
+        },
+        {
+          "issued_at": "2008-09-29T12:00:00+08:00",
+          "valid_at": "2008-09-29T18:00:00+08:00",
+          "actual_surge_mm": -79.535,
+          "predicted_surge_mm": 129.719,
+          "distance_km": 132.7,
+          "wind_m_s": 29.84,
+          "pressure_hpa": 980.0
+        },
+        {
+          "issued_at": "2008-09-29T13:00:00+08:00",
+          "valid_at": "2008-09-29T19:00:00+08:00",
+          "actual_surge_mm": -62.505,
+          "predicted_surge_mm": 73.273,
+          "distance_km": 132.7,
+          "wind_m_s": 29.84,
+          "pressure_hpa": 980.0
+        },
+        {
+          "issued_at": "2008-09-29T14:00:00+08:00",
+          "valid_at": "2008-09-29T20:00:00+08:00",
+          "actual_surge_mm": -4.127,
+          "predicted_surge_mm": 139.565,
+          "distance_km": 161.5,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 990.0
+        },
+        {
+          "issued_at": "2008-09-29T15:00:00+08:00",
+          "valid_at": "2008-09-29T21:00:00+08:00",
+          "actual_surge_mm": -58.42,
+          "predicted_surge_mm": 334.849,
+          "distance_km": 161.5,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 990.0
+        },
+        {
+          "issued_at": "2008-09-29T16:00:00+08:00",
+          "valid_at": "2008-09-29T22:00:00+08:00",
+          "actual_surge_mm": -100.356,
+          "predicted_surge_mm": 363.408,
+          "distance_km": 161.5,
+          "wind_m_s": 25.72,
+          "pressure_hpa": 990.0
+        },
+        {
+          "issued_at": "2008-09-29T17:00:00+08:00",
+          "valid_at": "2008-09-29T23:00:00+08:00",
+          "actual_surge_mm": -83.197,
+          "predicted_surge_mm": 307.6,
+          "distance_km": 201.6,
+          "wind_m_s": 27.27,
+          "pressure_hpa": 984.0
+        },
+        {
+          "issued_at": "2008-09-29T18:00:00+08:00",
+          "valid_at": "2008-09-30T00:00:00+08:00",
+          "actual_surge_mm": -94.248,
+          "predicted_surge_mm": 296.545,
+          "distance_km": 201.6,
+          "wind_m_s": 27.27,
+          "pressure_hpa": 984.0
+        },
+        {
+          "issued_at": "2008-09-29T19:00:00+08:00",
+          "valid_at": "2008-09-30T01:00:00+08:00",
+          "actual_surge_mm": -131.166,
+          "predicted_surge_mm": 246.952,
+          "distance_km": 201.6,
+          "wind_m_s": 27.27,
+          "pressure_hpa": 984.0
+        },
+        {
+          "issued_at": "2008-09-29T20:00:00+08:00",
+          "valid_at": "2008-09-30T02:00:00+08:00",
+          "actual_surge_mm": -148.958,
+          "predicted_surge_mm": 275.193,
+          "distance_km": 233.9,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-29T21:00:00+08:00",
+          "valid_at": "2008-09-30T03:00:00+08:00",
+          "actual_surge_mm": -147.532,
+          "predicted_surge_mm": 192.125,
+          "distance_km": 233.9,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-29T22:00:00+08:00",
+          "valid_at": "2008-09-30T04:00:00+08:00",
+          "actual_surge_mm": -145.937,
+          "predicted_surge_mm": 34.672,
+          "distance_km": 233.9,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-29T23:00:00+08:00",
+          "valid_at": "2008-09-30T05:00:00+08:00",
+          "actual_surge_mm": -162.474,
+          "predicted_surge_mm": 0.108,
+          "distance_km": 271.4,
+          "wind_m_s": 24.69,
+          "pressure_hpa": 987.0
+        },
+        {
+          "issued_at": "2008-09-30T00:00:00+08:00",
+          "valid_at": "2008-09-30T06:00:00+08:00",
+          "actual_surge_mm": -172.201,
+          "predicted_surge_mm": -0.898,
+          "distance_km": 271.4,
+          "wind_m_s": 24.69,
+          "pressure_hpa": 987.0
+        },
+        {
+          "issued_at": "2008-09-30T01:00:00+08:00",
+          "valid_at": "2008-09-30T07:00:00+08:00",
+          "actual_surge_mm": -201.733,
+          "predicted_surge_mm": 23.433,
+          "distance_km": 271.4,
+          "wind_m_s": 24.69,
+          "pressure_hpa": 987.0
+        },
+        {
+          "issued_at": "2008-09-30T02:00:00+08:00",
+          "valid_at": "2008-09-30T08:00:00+08:00",
+          "actual_surge_mm": -207.912,
+          "predicted_surge_mm": 122.303,
+          "distance_km": 313.1,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-30T03:00:00+08:00",
+          "valid_at": "2008-09-30T09:00:00+08:00",
+          "actual_surge_mm": -173.281,
+          "predicted_surge_mm": 191.312,
+          "distance_km": 313.1,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-30T04:00:00+08:00",
+          "valid_at": "2008-09-30T10:00:00+08:00",
+          "actual_surge_mm": -132.895,
+          "predicted_surge_mm": 214.672,
+          "distance_km": 313.1,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 992.0
+        },
+        {
+          "issued_at": "2008-09-30T05:00:00+08:00",
+          "valid_at": "2008-09-30T11:00:00+08:00",
+          "actual_surge_mm": -118.688,
+          "predicted_surge_mm": 241.556,
+          "distance_km": 381.6,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 989.0
+        },
+        {
+          "issued_at": "2008-09-30T06:00:00+08:00",
+          "valid_at": "2008-09-30T12:00:00+08:00",
+          "actual_surge_mm": -107.482,
+          "predicted_surge_mm": 219.459,
+          "distance_km": 381.6,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 989.0
+        },
+        {
+          "issued_at": "2008-09-30T07:00:00+08:00",
+          "valid_at": "2008-09-30T13:00:00+08:00",
+          "actual_surge_mm": -104.349,
+          "predicted_surge_mm": 196.883,
+          "distance_km": 381.6,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 989.0
+        },
+        {
+          "issued_at": "2008-09-30T08:00:00+08:00",
+          "valid_at": "2008-09-30T14:00:00+08:00",
+          "actual_surge_mm": -89.995,
+          "predicted_surge_mm": 195.143,
+          "distance_km": 446.2,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T09:00:00+08:00",
+          "valid_at": "2008-09-30T15:00:00+08:00",
+          "actual_surge_mm": -29.781,
+          "predicted_surge_mm": 231.561,
+          "distance_km": 446.2,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T10:00:00+08:00",
+          "valid_at": "2008-09-30T16:00:00+08:00",
+          "actual_surge_mm": 11.575,
+          "predicted_surge_mm": 173.077,
+          "distance_km": 446.2,
+          "wind_m_s": 23.15,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T11:00:00+08:00",
+          "valid_at": "2008-09-30T17:00:00+08:00",
+          "actual_surge_mm": -3.903,
+          "predicted_surge_mm": 146.156,
+          "distance_km": 513.2,
+          "wind_m_s": 22.12,
+          "pressure_hpa": 991.0
+        },
+        {
+          "issued_at": "2008-09-30T12:00:00+08:00",
+          "valid_at": "2008-09-30T18:00:00+08:00",
+          "actual_surge_mm": -27.977,
+          "predicted_surge_mm": 152.602,
+          "distance_km": 513.2,
+          "wind_m_s": 22.12,
+          "pressure_hpa": 991.0
+        },
+        {
+          "issued_at": "2008-09-30T13:00:00+08:00",
+          "valid_at": "2008-09-30T19:00:00+08:00",
+          "actual_surge_mm": -83.299,
+          "predicted_surge_mm": 204.43,
+          "distance_km": 513.2,
+          "wind_m_s": 22.12,
+          "pressure_hpa": 991.0
+        },
+        {
+          "issued_at": "2008-09-30T14:00:00+08:00",
+          "valid_at": "2008-09-30T20:00:00+08:00",
+          "actual_surge_mm": -115.221,
+          "predicted_surge_mm": 324.121,
+          "distance_km": 581.7,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T15:00:00+08:00",
+          "valid_at": "2008-09-30T21:00:00+08:00",
+          "actual_surge_mm": -117.508,
+          "predicted_surge_mm": 448.028,
+          "distance_km": 581.7,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T16:00:00+08:00",
+          "valid_at": "2008-09-30T22:00:00+08:00",
+          "actual_surge_mm": -128.983,
+          "predicted_surge_mm": 476.755,
+          "distance_km": 581.7,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 994.0
+        },
+        {
+          "issued_at": "2008-09-30T17:00:00+08:00",
+          "valid_at": "2008-09-30T23:00:00+08:00",
+          "actual_surge_mm": -122.175,
+          "predicted_surge_mm": 531.289,
+          "distance_km": 645.2,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 993.0
+        },
+        {
+          "issued_at": "2008-09-30T18:00:00+08:00",
+          "valid_at": "2008-10-01T00:00:00+08:00",
+          "actual_surge_mm": -105.405,
+          "predicted_surge_mm": 555.107,
+          "distance_km": 645.2,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 993.0
+        },
+        {
+          "issued_at": "2008-09-30T19:00:00+08:00",
+          "valid_at": "2008-10-01T01:00:00+08:00",
+          "actual_surge_mm": -135.532,
+          "predicted_surge_mm": 505.075,
+          "distance_km": 645.2,
+          "wind_m_s": 20.58,
+          "pressure_hpa": 993.0
+        },
+        {
+          "issued_at": "2008-09-30T20:00:00+08:00",
+          "valid_at": "2008-10-01T02:00:00+08:00",
+          "actual_surge_mm": -175.133,
+          "predicted_surge_mm": 451.596,
+          "distance_km": 704.1,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-09-30T21:00:00+08:00",
+          "valid_at": "2008-10-01T03:00:00+08:00",
+          "actual_surge_mm": -142.074,
+          "predicted_surge_mm": 413.074,
+          "distance_km": 704.1,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-09-30T22:00:00+08:00",
+          "valid_at": "2008-10-01T04:00:00+08:00",
+          "actual_surge_mm": -98.467,
+          "predicted_surge_mm": 306.226,
+          "distance_km": 704.1,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-09-30T23:00:00+08:00",
+          "valid_at": "2008-10-01T05:00:00+08:00",
+          "actual_surge_mm": -99.137,
+          "predicted_surge_mm": 274.36,
+          "distance_km": 759.2,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-10-01T00:00:00+08:00",
+          "valid_at": "2008-10-01T06:00:00+08:00",
+          "actual_surge_mm": -101.013,
+          "predicted_surge_mm": 300.002,
+          "distance_km": 759.2,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-10-01T01:00:00+08:00",
+          "valid_at": "2008-10-01T07:00:00+08:00",
+          "actual_surge_mm": -100.385,
+          "predicted_surge_mm": 293.256,
+          "distance_km": 759.2,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        },
+        {
+          "issued_at": "2008-10-01T02:00:00+08:00",
+          "valid_at": "2008-10-01T08:00:00+08:00",
+          "actual_surge_mm": -101.538,
+          "predicted_surge_mm": 356.15,
+          "distance_km": 832.7,
+          "wind_m_s": 18.01,
+          "pressure_hpa": 996.0
+        }
+      ]
+    }
+  ]
+}

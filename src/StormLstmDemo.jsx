@@ -5,9 +5,14 @@ const panel = { background: '#fff', border: '1px solid #93c5fd', borderRadius: 1
 const figures = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 650px), 1fr))', gap: 14 };
 const storms = {
   longdong: [
-    { key: 'sinlaku', match: /sinlaku|辛樂克/i, name: '辛樂克（Sinlaku, 2008）', testId: '200813Sinlaku s' },
+    { key: 'haitang', match: /haitang|海棠/i, name: '海棠（Haitang, 2005）', testId: '2005Haitang s' },
+    { key: 'jangmi', match: /jangmi|薔蜜|薔薇/i, name: '薔蜜（Jangmi, 2008）', testId: '2008Jangmi s' },
+    { key: 'sinlaku', match: /sinlaku|辛樂克/i, name: '辛樂克（Sinlaku, 2008）', testId: '2008Sinlaku s' },
   ],
   suao: [
+    { key: 'talim', match: /talim|潭美/i, name: '潭美（Talim, 2005）', testId: '2005Talim s' },
+    { key: 'kaemi', match: /kaemi|凱米/i, name: '凱米（Kaemi, 2006）', testId: '2006Kaemi s' },
+    { key: 'kong-rey', match: /kong.?rey|康芮/i, name: '康芮（Kong-rey, 2013）', testId: '2013KONG-REY s' },
     { key: 'sinlaku', match: /sinlaku|辛樂克/i, name: '辛樂克（Sinlaku, 2008）', testId: '200813Sinlaku s' },
   ],
 };
@@ -17,10 +22,11 @@ export default function StormLstmDemo({ stationId, eventName }) {
   const station = canonicalId === 'C4A02' ? 'longdong' : canonicalId === 'C4U01' ? 'suao' : '';
   const storm = storms[station]?.find((item) => item.match.test(String(eventName || '')));
   const [training, setTraining] = useState(null);
+  const dataFile = station === 'suao' && storm?.key === 'sinlaku' ? 'suao-sinlaku-legacy.json' : `${station}-retrained.json`;
   useEffect(() => {
     if (!station) return undefined;
     const controller = new AbortController();
-    fetch(`/data/lstm/${station}-retrained.json`, { signal: controller.signal })
+    fetch(`/data/lstm/${dataFile}`, { signal: controller.signal })
       .then((response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         return response.json();
@@ -30,7 +36,7 @@ export default function StormLstmDemo({ stationId, eventName }) {
         if (error.name !== 'AbortError') setTraining(null);
       });
     return () => controller.abort();
-  }, [station]);
+  }, [dataFile, station]);
   if (!storm) return null;
 
   const title = station === 'longdong' ? '龍洞' : '蘇澳';
@@ -61,7 +67,7 @@ export default function StormLstmDemo({ stationId, eventName }) {
     </div>
     <details style={{ marginTop: 12 }}>
       <summary>模型與資料說明</summary>
-      <p>目前顯示辛樂克歷史測試結果，非即時預報。模型為兩層 Conv1D 接 LSTM，使用 24 小時視窗並分別預測 +1、+3、+6 小時。為在本機 CPU 訓練，batch size 設為 128（原 Notebook 為 8），訓練 100 epochs。</p>
+      <p>{station === 'suao' && storm.key === 'sinlaku' ? '辛樂克保留原先以該颱風獨立留出所產生的測試曲線。' : '顯示 Notebook 留出測試颱風的歷史逐時結果。'}非即時預報。模型為兩層 Conv1D 接 LSTM，使用 24 小時視窗並分別預測 +1、+3、+6 小時。為在本機 CPU 訓練，batch size 設為 128（原 Notebook 為 8），訓練 100 epochs。</p>
     </details>
   </section>;
 }

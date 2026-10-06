@@ -76,11 +76,12 @@ def read_tide_archives():
     return observed, sorted({stamp.year for stamp in observed})
 
 
-def harmonic_tide(observed_cm, source_years):
+def harmonic_tide(observed_cm, source_years, excluded_ranges=()):
     """Fit shared tidal constituents and year-specific datums outside Sinlaku."""
     epoch = datetime(2008, 1, 1, tzinfo=TZ)
+    excluded = [(datetime(2008, 9, 7, tzinfo=TZ), datetime(2008, 9, 19, tzinfo=TZ)), *excluded_ranges]
     samples = [(t, v) for t, v in observed_cm.items()
-               if not datetime(2008, 9, 7, tzinfo=TZ) <= t < datetime(2008, 9, 19, tzinfo=TZ)]
+               if not any(start <= t < end for start, end in excluded)]
     hours = np.array([(t - epoch).total_seconds() / 3600 for t, _ in samples], dtype=float)
     values = np.array([v for _, v in samples], dtype=float)
     year_index = {year: index for index, year in enumerate(source_years)}

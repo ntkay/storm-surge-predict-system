@@ -15,8 +15,16 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "public/data/lstm"
 SLUGS = {
-    "longdong": {"200813Sinlaku s": "sinlaku"},
-    "suao": {"200813Sinlaku s": "sinlaku"},
+    "longdong": {
+        "2005Haitang s": "haitang",
+        "2008Jangmi s": "jangmi",
+        "2008Sinlaku s": "sinlaku",
+    },
+    "suao": {
+        "2005Talim s": "talim",
+        "2006Kaemi s": "kaemi",
+        "2013KONG-REY s": "kong-rey",
+    },
 }
 NAMES = {"longdong": "Longdong", "suao": "Suao"}
 

@@ -1,0 +1,3719 @@
+{
+  "event_id": "2005HAITANG",
+  "event_name": "2005 Haitang",
+  "station": "C4U01",
+  "station_id": "1246",
+  "units": "mm",
+  "mode": "suao-bpnn-retrained-historical-test",
+  "validation": "held-out-event; station-specific retraining, not exported Longdong weights",
+  "training_samples": 2000,
+  "training_events": 271,
+  "test_event": "2013Kong-Rey s",
+  "architecture": {
+    "input_hours": 24,
+    "features": [
+      "surgeC_cm",
+      "pressure_hpa",
+      "wind_m_s",
+      "distance_km",
+      "track_dx_deg",
+      "track_dy_deg",
+      "water_cm",
+      "tide_cm"
+    ],
+    "layer_sizes": [
+      192,
+      8,
+      1
+    ],
+    "ensemble_runs": 5,
+    "epochs": 800,
+    "optimizer": "SGD with momentum 0.9"
+  },
+  "results": [
+    {
+      "lead_hours": 1,
+      "model_sha256": "bcd46950092017d10c47da166e2b969640941a5f7e6e4b82543bb307311034a8",
+      "metrics": {
+        "rmse_mm": 37.6780228035473,
+        "mae_mm": 25.096857454500533,
+        "r2": 0.9404255145171361,
+        "count": 205
+      },
+      "points": [
+        {
+          "issued_at": "2005-07-11T19:00:00",
+          "valid_at": "2005-07-11T20:00:00",
+          "actual_surge_mm": -44.655,
+          "predicted_surge_mm": -40.221
+        },
+        {
+          "issued_at": "2005-07-11T20:00:00",
+          "valid_at": "2005-07-11T21:00:00",
+          "actual_surge_mm": -40.793,
+          "predicted_surge_mm": -42.88
+        },
+        {
+          "issued_at": "2005-07-11T21:00:00",
+          "valid_at": "2005-07-11T22:00:00",
+          "actual_surge_mm": -53.143,
+          "predicted_surge_mm": -30.892
+        },
+        {
+          "issued_at": "2005-07-11T22:00:00",
+          "valid_at": "2005-07-11T23:00:00",
+          "actual_surge_mm": -47.89,
+          "predicted_surge_mm": -39.388
+        },
+        {
+          "issued_at": "2005-07-11T23:00:00",
+          "valid_at": "2005-07-12T00:00:00",
+          "actual_surge_mm": -40.255,
+          "predicted_surge_mm": -37.367
+        },
+        {
+          "issued_at": "2005-07-12T00:00:00",
+          "valid_at": "2005-07-12T01:00:00",
+          "actual_surge_mm": -2.198,
+          "predicted_surge_mm": -25.488
+        },
+        {
+          "issued_at": "2005-07-12T01:00:00",
+          "valid_at": "2005-07-12T02:00:00",
+          "actual_surge_mm": -12.662,
+          "predicted_surge_mm": 0.876
+        },
+        {
+          "issued_at": "2005-07-12T02:00:00",
+          "valid_at": "2005-07-12T03:00:00",
+          "actual_surge_mm": -3.942,
+          "predicted_surge_mm": -6.437
+        },
+        {
+          "issued_at": "2005-07-12T03:00:00",
+          "valid_at": "2005-07-12T04:00:00",
+          "actual_surge_mm": 1.429,
+          "predicted_surge_mm": -6.199
+        },
+        {
+          "issued_at": "2005-07-12T04:00:00",
+          "valid_at": "2005-07-12T05:00:00",
+          "actual_surge_mm": 2.743,
+          "predicted_surge_mm": -5.341
+        },
+        {
+          "issued_at": "2005-07-12T05:00:00",
+          "valid_at": "2005-07-12T06:00:00",
+          "actual_surge_mm": -18.299,
+          "predicted_surge_mm": -3.374
+        },
+        {
+          "issued_at": "2005-07-12T06:00:00",
+          "valid_at": "2005-07-12T07:00:00",
+          "actual_surge_mm": 4.172,
+          "predicted_surge_mm": -20.391
+        },
+        {
+          "issued_at": "2005-07-12T07:00:00",
+          "valid_at": "2005-07-12T08:00:00",
+          "actual_surge_mm": 5.936,
+          "predicted_surge_mm": -3.563
+        },
+        {
+          "issued_at": "2005-07-12T08:00:00",
+          "valid_at": "2005-07-12T09:00:00",
+          "actual_surge_mm": -12.424,
+          "predicted_surge_mm": -1.724
+        },
+        {
+          "issued_at": "2005-07-12T09:00:00",
+          "valid_at": "2005-07-12T10:00:00",
+          "actual_surge_mm": -6.614,
+          "predicted_surge_mm": -7.18
+        },
+        {
+          "issued_at": "2005-07-12T10:00:00",
+          "valid_at": "2005-07-12T11:00:00",
+          "actual_surge_mm": 31.865,
+          "predicted_surge_mm": -4.215
+        },
+        {
+          "issued_at": "2005-07-12T11:00:00",
+          "valid_at": "2005-07-12T12:00:00",
+          "actual_surge_mm": 57.295,
+          "predicted_surge_mm": 27.443
+        },
+        {
+          "issued_at": "2005-07-12T12:00:00",
+          "valid_at": "2005-07-12T13:00:00",
+          "actual_surge_mm": 32.506,
+          "predicted_surge_mm": 54.805
+        },
+        {
+          "issued_at": "2005-07-12T13:00:00",
+          "valid_at": "2005-07-12T14:00:00",
+          "actual_surge_mm": 27.563,
+          "predicted_surge_mm": 37.158
+        },
+        {
+          "issued_at": "2005-07-12T14:00:00",
+          "valid_at": "2005-07-12T15:00:00",
+          "actual_surge_mm": 37.455,
+          "predicted_surge_mm": 25.137
+        },
+        {
+          "issued_at": "2005-07-12T15:00:00",
+          "valid_at": "2005-07-12T16:00:00",
+          "actual_surge_mm": 43.985,
+          "predicted_surge_mm": 31.271
+        },
+        {
+          "issued_at": "2005-07-12T16:00:00",
+          "valid_at": "2005-07-12T17:00:00",
+          "actual_surge_mm": 79.164,
+          "predicted_surge_mm": 42.182
+        },
+        {
+          "issued_at": "2005-07-12T17:00:00",
+          "valid_at": "2005-07-12T18:00:00",
+          "actual_surge_mm": 61.131,
+          "predicted_surge_mm": 68.376
+        },
+        {
+          "issued_at": "2005-07-12T18:00:00",
+          "valid_at": "2005-07-12T19:00:00",
+          "actual_surge_mm": 70.327,
+          "predicted_surge_mm": 55.456
+        },
+        {
+          "issued_at": "2005-07-12T19:00:00",
+          "valid_at": "2005-07-12T20:00:00",
+          "actual_surge_mm": 33.71,
+          "predicted_surge_mm": 63.078
+        },
+        {
+          "issued_at": "2005-07-12T20:00:00",
+          "valid_at": "2005-07-12T21:00:00",
+          "actual_surge_mm": 17.695,
+          "predicted_surge_mm": 35.037
+        },
+        {
+          "issued_at": "2005-07-12T21:00:00",
+          "valid_at": "2005-07-12T22:00:00",
+          "actual_surge_mm": -15.804,
+          "predicted_surge_mm": 21.698
+        },
+        {
+          "issued_at": "2005-07-12T22:00:00",
+          "valid_at": "2005-07-12T23:00:00",
+          "actual_surge_mm": 10.342,
+          "predicted_surge_mm": -5.407
+        },
+        {
+          "issued_at": "2005-07-12T23:00:00",
+          "valid_at": "2005-07-13T00:00:00",
+          "actual_surge_mm": 14.252,
+          "predicted_surge_mm": 12.167
+        },
+        {
+          "issued_at": "2005-07-13T00:00:00",
+          "valid_at": "2005-07-13T01:00:00",
+          "actual_surge_mm": 1.651,
+          "predicted_surge_mm": 17.326
+        },
+        {
+          "issued_at": "2005-07-13T01:00:00",
+          "valid_at": "2005-07-13T02:00:00",
+          "actual_surge_mm": 0.24,
+          "predicted_surge_mm": 14.681
+        },
+        {
+          "issued_at": "2005-07-13T02:00:00",
+          "valid_at": "2005-07-13T03:00:00",
+          "actual_surge_mm": 19.52,
+          "predicted_surge_mm": 4.957
+        },
+        {
+          "issued_at": "2005-07-13T03:00:00",
+          "valid_at": "2005-07-13T04:00:00",
+          "actual_surge_mm": 46.761,
+          "predicted_surge_mm": 25.692
+        },
+        {
+          "issued_at": "2005-07-13T04:00:00",
+          "valid_at": "2005-07-13T05:00:00",
+          "actual_surge_mm": 47.236,
+          "predicted_surge_mm": 50.589
+        },
+        {
+          "issued_at": "2005-07-13T05:00:00",
+          "valid_at": "2005-07-13T06:00:00",
+          "actual_surge_mm": 29.466,
+          "predicted_surge_mm": 51.981
+        },
+        {
+          "issued_at": "2005-07-13T06:00:00",
+          "valid_at": "2005-07-13T07:00:00",
+          "actual_surge_mm": 40.421,
+          "predicted_surge_mm": 25.061
+        },
+        {
+          "issued_at": "2005-07-13T07:00:00",
+          "valid_at": "2005-07-13T08:00:00",
+          "actual_surge_mm": 48.632,
+          "predicted_surge_mm": 32.528
+        },
+        {
+          "issued_at": "2005-07-13T08:00:00",
+          "valid_at": "2005-07-13T09:00:00",
+          "actual_surge_mm": 29.372,
+          "predicted_surge_mm": 43.78
+        },
+        {
+          "issued_at": "2005-07-13T09:00:00",
+          "valid_at": "2005-07-13T10:00:00",
+          "actual_surge_mm": 61.155,
+          "predicted_surge_mm": 26.481
+        },
+        {
+          "issued_at": "2005-07-13T10:00:00",
+          "valid_at": "2005-07-13T11:00:00",
+          "actual_surge_mm": 78.176,
+          "predicted_surge_mm": 50.607
+        },
+        {
+          "issued_at": "2005-07-13T11:00:00",
+          "valid_at": "2005-07-13T12:00:00",
+          "actual_surge_mm": 73.504,
+          "predicted_surge_mm": 64.902
+        },
+        {
+          "issued_at": "2005-07-13T12:00:00",
+          "valid_at": "2005-07-13T13:00:00",
+          "actual_surge_mm": 63.939,
+          "predicted_surge_mm": 67.161
+        },
+        {
+          "issued_at": "2005-07-13T13:00:00",
+          "valid_at": "2005-07-13T14:00:00",
+          "actual_surge_mm": 56.27,
+          "predicted_surge_mm": 69.23
+        },
+        {
+          "issued_at": "2005-07-13T14:00:00",
+          "valid_at": "2005-07-13T15:00:00",
+          "actual_surge_mm": 48.923,
+          "predicted_surge_mm": 58.637
+        },
+        {
+          "issued_at": "2005-07-13T15:00:00",
+          "valid_at": "2005-07-13T16:00:00",
+          "actual_surge_mm": 49.737,
+          "predicted_surge_mm": 55.706
+        },
+        {
+          "issued_at": "2005-07-13T16:00:00",
+          "valid_at": "2005-07-13T17:00:00",
+          "actual_surge_mm": 63.465,
+          "predicted_surge_mm": 51.862
+        },
+        {
+          "issued_at": "2005-07-13T17:00:00",
+          "valid_at": "2005-07-13T18:00:00",
+          "actual_surge_mm": 71.689,
+          "predicted_surge_mm": 60.956
+        },
+        {
+          "issued_at": "2005-07-13T18:00:00",
+          "valid_at": "2005-07-13T19:00:00",
+          "actual_surge_mm": 79.071,
+          "predicted_surge_mm": 72.737
+        },
+        {
+          "issued_at": "2005-07-13T19:00:00",
+          "valid_at": "2005-07-13T20:00:00",
+          "actual_surge_mm": 79.254,
+          "predicted_surge_mm": 83.217
+        },
+        {
+          "issued_at": "2005-07-13T20:00:00",
+          "valid_at": "2005-07-13T21:00:00",
+          "actual_surge_mm": 51.93,
+          "predicted_surge_mm": 79.255
+        },
+        {
+          "issued_at": "2005-07-13T21:00:00",
+          "valid_at": "2005-07-13T22:00:00",
+          "actual_surge_mm": 30.969,
+          "predicted_surge_mm": 55.903
+        },
+        {
+          "issued_at": "2005-07-13T22:00:00",
+          "valid_at": "2005-07-13T23:00:00",
+          "actual_surge_mm": 28.537,
+          "predicted_surge_mm": 37.346
+        },
+        {
+          "issued_at": "2005-07-13T23:00:00",
+          "valid_at": "2005-07-14T00:00:00",
+          "actual_surge_mm": -1.166,
+          "predicted_surge_mm": 31.782
+        },
+        {
+          "issued_at": "2005-07-14T00:00:00",
+          "valid_at": "2005-07-14T01:00:00",
+          "actual_surge_mm": -6.946,
+          "predicted_surge_mm": 9.021
+        },
+        {
+          "issued_at": "2005-07-14T01:00:00",
+          "valid_at": "2005-07-14T02:00:00",
+          "actual_surge_mm": 1.137,
+          "predicted_surge_mm": 4.424
+        },
+        {
+          "issued_at": "2005-07-14T02:00:00",
+          "valid_at": "2005-07-14T03:00:00",
+          "actual_surge_mm": -8.171,
+          "predicted_surge_mm": 6.81
+        },
+        {
+          "issued_at": "2005-07-14T03:00:00",
+          "valid_at": "2005-07-14T04:00:00",
+          "actual_surge_mm": 20.776,
+          "predicted_surge_mm": 2.021
+        },
+        {
+          "issued_at": "2005-07-14T04:00:00",
+          "valid_at": "2005-07-14T05:00:00",
+          "actual_surge_mm": 8.308,
+          "predicted_surge_mm": 29.862
+        },
+        {
+          "issued_at": "2005-07-14T05:00:00",
+          "valid_at": "2005-07-14T06:00:00",
+          "actual_surge_mm": 9.244,
+          "predicted_surge_mm": 17.223
+        },
+        {
+          "issued_at": "2005-07-14T06:00:00",
+          "valid_at": "2005-07-14T07:00:00",
+          "actual_surge_mm": 32.327,
+          "predicted_surge_mm": 13.955
+        },
+        {
+          "issued_at": "2005-07-14T07:00:00",
+          "valid_at": "2005-07-14T08:00:00",
+          "actual_surge_mm": 45.414,
+          "predicted_surge_mm": 31.694
+        },
+        {
+          "issued_at": "2005-07-14T08:00:00",
+          "valid_at": "2005-07-14T09:00:00",
+          "actual_surge_mm": 69.18,
+          "predicted_surge_mm": 40.699
+        },
+        {
+          "issued_at": "2005-07-14T09:00:00",
+          "valid_at": "2005-07-14T10:00:00",
+          "actual_surge_mm": 52.141,
+          "predicted_surge_mm": 56.379
+        },
+        {
+          "issued_at": "2005-07-14T10:00:00",
+          "valid_at": "2005-07-14T11:00:00",
+          "actual_surge_mm": 49.944,
+          "predicted_surge_mm": 44.442
+        },
+        {
+          "issued_at": "2005-07-14T11:00:00",
+          "valid_at": "2005-07-14T12:00:00",
+          "actual_surge_mm": 49.129,
+          "predicted_surge_mm": 36.985
+        },
+        {
+          "issued_at": "2005-07-14T12:00:00",
+          "valid_at": "2005-07-14T13:00:00",
+          "actual_surge_mm": 30.375,
+          "predicted_surge_mm": 40.912
+        },
+        {
+          "issued_at": "2005-07-14T13:00:00",
+          "valid_at": "2005-07-14T14:00:00",
+          "actual_surge_mm": 24.29,
+          "predicted_surge_mm": 29.149
+        },
+        {
+          "issued_at": "2005-07-14T14:00:00",
+          "valid_at": "2005-07-14T15:00:00",
+          "actual_surge_mm": 44.726,
+          "predicted_surge_mm": 24.609
+        },
+        {
+          "issued_at": "2005-07-14T15:00:00",
+          "valid_at": "2005-07-14T16:00:00",
+          "actual_surge_mm": 44.015,
+          "predicted_surge_mm": 44.342
+        },
+        {
+          "issued_at": "2005-07-14T16:00:00",
+          "valid_at": "2005-07-14T17:00:00",
+          "actual_surge_mm": 59.209,
+          "predicted_surge_mm": 53.314
+        },
+        {
+          "issued_at": "2005-07-14T17:00:00",
+          "valid_at": "2005-07-14T18:00:00",
+          "actual_surge_mm": 47.999,
+          "predicted_surge_mm": 70.291
+        },
+        {
+          "issued_at": "2005-07-14T18:00:00",
+          "valid_at": "2005-07-14T19:00:00",
+          "actual_surge_mm": 55.951,
+          "predicted_surge_mm": 56.053
+        },
+        {
+          "issued_at": "2005-07-14T19:00:00",
+          "valid_at": "2005-07-14T20:00:00",
+          "actual_surge_mm": 70.046,
+          "predicted_surge_mm": 66.473
+        },
+        {
+          "issued_at": "2005-07-14T20:00:00",
+          "valid_at": "2005-07-14T21:00:00",
+          "actual_surge_mm": 37.457,
+          "predicted_surge_mm": 71.209
+        },
+        {
+          "issued_at": "2005-07-14T21:00:00",
+          "valid_at": "2005-07-14T22:00:00",
+          "actual_surge_mm": 25.258,
+          "predicted_surge_mm": 38.512
+        },
+        {
+          "issued_at": "2005-07-14T22:00:00",
+          "valid_at": "2005-07-14T23:00:00",
+          "actual_surge_mm": 38.367,
+          "predicted_surge_mm": 20.557
+        },
+        {
+          "issued_at": "2005-07-14T23:00:00",
+          "valid_at": "2005-07-15T00:00:00",
+          "actual_surge_mm": 11.159,
+          "predicted_surge_mm": 34.52
+        },
+        {
+          "issued_at": "2005-07-15T00:00:00",
+          "valid_at": "2005-07-15T01:00:00",
+          "actual_surge_mm": 1.966,
+          "predicted_surge_mm": 15.387
+        },
+        {
+          "issued_at": "2005-07-15T01:00:00",
+          "valid_at": "2005-07-15T02:00:00",
+          "actual_surge_mm": -17.383,
+          "predicted_surge_mm": 2.951
+        },
+        {
+          "issued_at": "2005-07-15T02:00:00",
+          "valid_at": "2005-07-15T03:00:00",
+          "actual_surge_mm": -4.447,
+          "predicted_surge_mm": -16.799
+        },
+        {
+          "issued_at": "2005-07-15T03:00:00",
+          "valid_at": "2005-07-15T04:00:00",
+          "actual_surge_mm": -9.924,
+          "predicted_surge_mm": -6.983
+        },
+        {
+          "issued_at": "2005-07-15T04:00:00",
+          "valid_at": "2005-07-15T05:00:00",
+          "actual_surge_mm": -8.312,
+          "predicted_surge_mm": -3.773
+        },
+        {
+          "issued_at": "2005-07-15T05:00:00",
+          "valid_at": "2005-07-15T06:00:00",
+          "actual_surge_mm": 3.801,
+          "predicted_surge_mm": 4.121
+        },
+        {
+          "issued_at": "2005-07-15T06:00:00",
+          "valid_at": "2005-07-15T07:00:00",
+          "actual_surge_mm": 23.636,
+          "predicted_surge_mm": 9.945
+        },
+        {
+          "issued_at": "2005-07-15T07:00:00",
+          "valid_at": "2005-07-15T08:00:00",
+          "actual_surge_mm": 41.859,
+          "predicted_surge_mm": 26.019
+        },
+        {
+          "issued_at": "2005-07-15T08:00:00",
+          "valid_at": "2005-07-15T09:00:00",
+          "actual_surge_mm": 53.087,
+          "predicted_surge_mm": 37.967
+        },
+        {
+          "issued_at": "2005-07-15T09:00:00",
+          "valid_at": "2005-07-15T10:00:00",
+          "actual_surge_mm": 57.481,
+          "predicted_surge_mm": 45.531
+        },
+        {
+          "issued_at": "2005-07-15T10:00:00",
+          "valid_at": "2005-07-15T11:00:00",
+          "actual_surge_mm": 39.33,
+          "predicted_surge_mm": 48.552
+        },
+        {
+          "issued_at": "2005-07-15T11:00:00",
+          "valid_at": "2005-07-15T12:00:00",
+          "actual_surge_mm": 35.349,
+          "predicted_surge_mm": 35.617
+        },
+        {
+          "issued_at": "2005-07-15T12:00:00",
+          "valid_at": "2005-07-15T13:00:00",
+          "actual_surge_mm": 59.239,
+          "predicted_surge_mm": 25.696
+        },
+        {
+          "issued_at": "2005-07-15T13:00:00",
+          "valid_at": "2005-07-15T14:00:00",
+          "actual_surge_mm": 46.154,
+          "predicted_surge_mm": 52.614
+        },
+        {
+          "issued_at": "2005-07-15T14:00:00",
+          "valid_at": "2005-07-15T15:00:00",
+          "actual_surge_mm": 63.804,
+          "predicted_surge_mm": 41.816
+        },
+        {
+          "issued_at": "2005-07-15T15:00:00",
+          "valid_at": "2005-07-15T16:00:00",
+          "actual_surge_mm": 55.774,
+          "predicted_surge_mm": 54.536
+        },
+        {
+          "issued_at": "2005-07-15T16:00:00",
+          "valid_at": "2005-07-15T17:00:00",
+          "actual_surge_mm": 57.418,
+          "predicted_surge_mm": 57.818
+        },
+        {
+          "issued_at": "2005-07-15T17:00:00",
+          "valid_at": "2005-07-15T18:00:00",
+          "actual_surge_mm": 63.158,
+          "predicted_surge_mm": 66.808
+        },
+        {
+          "issued_at": "2005-07-15T18:00:00",
+          "valid_at": "2005-07-15T19:00:00",
+          "actual_surge_mm": 61.302,
+          "predicted_surge_mm": 76.434
+        },
+        {
+          "issued_at": "2005-07-15T19:00:00",
+          "valid_at": "2005-07-15T20:00:00",
+          "actual_surge_mm": 55.784,
+          "predicted_surge_mm": 78.885
+        },
+        {
+          "issued_at": "2005-07-15T20:00:00",
+          "valid_at": "2005-07-15T21:00:00",
+          "actual_surge_mm": 38.842,
+          "predicted_surge_mm": 70.036
+        },
+        {
+          "issued_at": "2005-07-15T21:00:00",
+          "valid_at": "2005-07-15T22:00:00",
+          "actual_surge_mm": 55.121,
+          "predicted_surge_mm": 57.281
+        },
+        {
+          "issued_at": "2005-07-15T22:00:00",
+          "valid_at": "2005-07-15T23:00:00",
+          "actual_surge_mm": 43.047,
+          "predicted_surge_mm": 58.278
+        },
+        {
+          "issued_at": "2005-07-15T23:00:00",
+          "valid_at": "2005-07-16T00:00:00",
+          "actual_surge_mm": 18.366,
+          "predicted_surge_mm": 54.258
+        },
+        {
+          "issued_at": "2005-07-16T00:00:00",
+          "valid_at": "2005-07-16T01:00:00",
+          "actual_surge_mm": 30.163,
+          "predicted_surge_mm": 27.729
+        },
+        {
+          "issued_at": "2005-07-16T01:00:00",
+          "valid_at": "2005-07-16T02:00:00",
+          "actual_surge_mm": 10.395,
+          "predicted_surge_mm": 38.896
+        },
+        {
+          "issued_at": "2005-07-16T02:00:00",
+          "valid_at": "2005-07-16T03:00:00",
+          "actual_surge_mm": 34.67,
+          "predicted_surge_mm": 19.843
+        },
+        {
+          "issued_at": "2005-07-16T03:00:00",
+          "valid_at": "2005-07-16T04:00:00",
+          "actual_surge_mm": 61.99,
+          "predicted_surge_mm": 36.564
+        },
+        {
+          "issued_at": "2005-07-16T04:00:00",
+          "valid_at": "2005-07-16T05:00:00",
+          "actual_surge_mm": 35.303,
+          "predicted_surge_mm": 62.953
+        },
+        {
+          "issued_at": "2005-07-16T05:00:00",
+          "valid_at": "2005-07-16T06:00:00",
+          "actual_surge_mm": 61.596,
+          "predicted_surge_mm": 43.829
+        },
+        {
+          "issued_at": "2005-07-16T06:00:00",
+          "valid_at": "2005-07-16T07:00:00",
+          "actual_surge_mm": 95.828,
+          "predicted_surge_mm": 66.369
+        },
+        {
+          "issued_at": "2005-07-16T07:00:00",
+          "valid_at": "2005-07-16T08:00:00",
+          "actual_surge_mm": 121.625,
+          "predicted_surge_mm": 99.941
+        },
+        {
+          "issued_at": "2005-07-16T08:00:00",
+          "valid_at": "2005-07-16T09:00:00",
+          "actual_surge_mm": 104.913,
+          "predicted_surge_mm": 127.521
+        },
+        {
+          "issued_at": "2005-07-16T09:00:00",
+          "valid_at": "2005-07-16T10:00:00",
+          "actual_surge_mm": 98.933,
+          "predicted_surge_mm": 112.698
+        },
+        {
+          "issued_at": "2005-07-16T10:00:00",
+          "valid_at": "2005-07-16T11:00:00",
+          "actual_surge_mm": 75.815,
+          "predicted_surge_mm": 93.911
+        },
+        {
+          "issued_at": "2005-07-16T11:00:00",
+          "valid_at": "2005-07-16T12:00:00",
+          "actual_surge_mm": 57.722,
+          "predicted_surge_mm": 79.906
+        },
+        {
+          "issued_at": "2005-07-16T12:00:00",
+          "valid_at": "2005-07-16T13:00:00",
+          "actual_surge_mm": 57.447,
+          "predicted_surge_mm": 72.906
+        },
+        {
+          "issued_at": "2005-07-16T13:00:00",
+          "valid_at": "2005-07-16T14:00:00",
+          "actual_surge_mm": 71.71,
+          "predicted_surge_mm": 74.142
+        },
+        {
+          "issued_at": "2005-07-16T14:00:00",
+          "valid_at": "2005-07-16T15:00:00",
+          "actual_surge_mm": 101.468,
+          "predicted_surge_mm": 89.513
+        },
+        {
+          "issued_at": "2005-07-16T15:00:00",
+          "valid_at": "2005-07-16T16:00:00",
+          "actual_surge_mm": 107.348,
+          "predicted_surge_mm": 114.933
+        },
+        {
+          "issued_at": "2005-07-16T16:00:00",
+          "valid_at": "2005-07-16T17:00:00",
+          "actual_surge_mm": 90.666,
+          "predicted_surge_mm": 127.219
+        },
+        {
+          "issued_at": "2005-07-16T17:00:00",
+          "valid_at": "2005-07-16T18:00:00",
+          "actual_surge_mm": 88.957,
+          "predicted_surge_mm": 114.538
+        },
+        {
+          "issued_at": "2005-07-16T18:00:00",
+          "valid_at": "2005-07-16T19:00:00",
+          "actual_surge_mm": 104.083,
+          "predicted_surge_mm": 111.027
+        },
+        {
+          "issued_at": "2005-07-16T19:00:00",
+          "valid_at": "2005-07-16T20:00:00",
+          "actual_surge_mm": 105.16,
+          "predicted_surge_mm": 124.662
+        },
+        {
+          "issued_at": "2005-07-16T20:00:00",
+          "valid_at": "2005-07-16T21:00:00",
+          "actual_surge_mm": 138.61,
+          "predicted_surge_mm": 130.169
+        },
+        {
+          "issued_at": "2005-07-16T21:00:00",
+          "valid_at": "2005-07-16T22:00:00",
+          "actual_surge_mm": 104.816,
+          "predicted_surge_mm": 139.061
+        },
+        {
+          "issued_at": "2005-07-16T22:00:00",
+          "valid_at": "2005-07-16T23:00:00",
+          "actual_surge_mm": 97.474,
+          "predicted_surge_mm": 102.717
+        },
+        {
+          "issued_at": "2005-07-16T23:00:00",
+          "valid_at": "2005-07-17T00:00:00",
+          "actual_surge_mm": 99.152,
+          "predicted_surge_mm": 93.585
+        },
+        {
+          "issued_at": "2005-07-17T00:00:00",
+          "valid_at": "2005-07-17T01:00:00",
+          "actual_surge_mm": 122.399,
+          "predicted_surge_mm": 102.337
+        },
+        {
+          "issued_at": "2005-07-17T01:00:00",
+          "valid_at": "2005-07-17T02:00:00",
+          "actual_surge_mm": 96.374,
+          "predicted_surge_mm": 128.112
+        },
+        {
+          "issued_at": "2005-07-17T02:00:00",
+          "valid_at": "2005-07-17T03:00:00",
+          "actual_surge_mm": 138.434,
+          "predicted_surge_mm": 121.014
+        },
+        {
+          "issued_at": "2005-07-17T03:00:00",
+          "valid_at": "2005-07-17T04:00:00",
+          "actual_surge_mm": 146.868,
+          "predicted_surge_mm": 143.125
+        },
+        {
+          "issued_at": "2005-07-17T04:00:00",
+          "valid_at": "2005-07-17T05:00:00",
+          "actual_surge_mm": 153.405,
+          "predicted_surge_mm": 154.545
+        },
+        {
+          "issued_at": "2005-07-17T05:00:00",
+          "valid_at": "2005-07-17T06:00:00",
+          "actual_surge_mm": 151.754,
+          "predicted_surge_mm": 159.262
+        },
+        {
+          "issued_at": "2005-07-17T06:00:00",
+          "valid_at": "2005-07-17T07:00:00",
+          "actual_surge_mm": 189.938,
+          "predicted_surge_mm": 169.187
+        },
+        {
+          "issued_at": "2005-07-17T07:00:00",
+          "valid_at": "2005-07-17T08:00:00",
+          "actual_surge_mm": 166.846,
+          "predicted_surge_mm": 214.185
+        },
+        {
+          "issued_at": "2005-07-17T08:00:00",
+          "valid_at": "2005-07-17T09:00:00",
+          "actual_surge_mm": 214.464,
+          "predicted_surge_mm": 198.701
+        },
+        {
+          "issued_at": "2005-07-17T09:00:00",
+          "valid_at": "2005-07-17T10:00:00",
+          "actual_surge_mm": 222.223,
+          "predicted_surge_mm": 222.824
+        },
+        {
+          "issued_at": "2005-07-17T10:00:00",
+          "valid_at": "2005-07-17T11:00:00",
+          "actual_surge_mm": 192.27,
+          "predicted_surge_mm": 224.172
+        },
+        {
+          "issued_at": "2005-07-17T11:00:00",
+          "valid_at": "2005-07-17T12:00:00",
+          "actual_surge_mm": 108.6,
+          "predicted_surge_mm": 190.933
+        },
+        {
+          "issued_at": "2005-07-17T12:00:00",
+          "valid_at": "2005-07-17T13:00:00",
+          "actual_surge_mm": 118.13,
+          "predicted_surge_mm": 123.601
+        },
+        {
+          "issued_at": "2005-07-17T13:00:00",
+          "valid_at": "2005-07-17T14:00:00",
+          "actual_surge_mm": 240.939,
+          "predicted_surge_mm": 125.086
+        },
+        {
+          "issued_at": "2005-07-17T14:00:00",
+          "valid_at": "2005-07-17T15:00:00",
+          "actual_surge_mm": 223.465,
+          "predicted_surge_mm": 235.186
+        },
+        {
+          "issued_at": "2005-07-17T15:00:00",
+          "valid_at": "2005-07-17T16:00:00",
+          "actual_surge_mm": 184.292,
+          "predicted_surge_mm": 245.028
+        },
+        {
+          "issued_at": "2005-07-17T16:00:00",
+          "valid_at": "2005-07-17T17:00:00",
+          "actual_surge_mm": 238.858,
+          "predicted_surge_mm": 202.955
+        },
+        {
+          "issued_at": "2005-07-17T17:00:00",
+          "valid_at": "2005-07-17T18:00:00",
+          "actual_surge_mm": 228.465,
+          "predicted_surge_mm": 235.554
+        },
+        {
+          "issued_at": "2005-07-17T18:00:00",
+          "valid_at": "2005-07-17T19:00:00",
+          "actual_surge_mm": 311.344,
+          "predicted_surge_mm": 214.481
+        },
+        {
+          "issued_at": "2005-07-17T19:00:00",
+          "valid_at": "2005-07-17T20:00:00",
+          "actual_surge_mm": 331.154,
+          "predicted_surge_mm": 303.492
+        },
+        {
+          "issued_at": "2005-07-17T20:00:00",
+          "valid_at": "2005-07-17T21:00:00",
+          "actual_surge_mm": 276.159,
+          "predicted_surge_mm": 318.071
+        },
+        {
+          "issued_at": "2005-07-17T21:00:00",
+          "valid_at": "2005-07-17T22:00:00",
+          "actual_surge_mm": 290.482,
+          "predicted_surge_mm": 281.196
+        },
+        {
+          "issued_at": "2005-07-17T22:00:00",
+          "valid_at": "2005-07-17T23:00:00",
+          "actual_surge_mm": 317.706,
+          "predicted_surge_mm": 270.52
+        },
+        {
+          "issued_at": "2005-07-17T23:00:00",
+          "valid_at": "2005-07-18T00:00:00",
+          "actual_surge_mm": 446.777,
+          "predicted_surge_mm": 299.807
+        },
+        {
+          "issued_at": "2005-07-18T00:00:00",
+          "valid_at": "2005-07-18T01:00:00",
+          "actual_surge_mm": 372.796,
+          "predicted_surge_mm": 429.397
+        },
+        {
+          "issued_at": "2005-07-18T01:00:00",
+          "valid_at": "2005-07-18T02:00:00",
+          "actual_surge_mm": 428.072,
+          "predicted_surge_mm": 395.75
+        },
+        {
+          "issued_at": "2005-07-18T02:00:00",
+          "valid_at": "2005-07-18T03:00:00",
+          "actual_surge_mm": 540.114,
+          "predicted_surge_mm": 431.67
+        },
+        {
+          "issued_at": "2005-07-18T03:00:00",
+          "valid_at": "2005-07-18T04:00:00",
+          "actual_surge_mm": 614.376,
+          "predicted_surge_mm": 540.191
+        },
+        {
+          "issued_at": "2005-07-18T04:00:00",
+          "valid_at": "2005-07-18T05:00:00",
+          "actual_surge_mm": 583.459,
+          "predicted_surge_mm": 587.48
+        },
+        {
+          "issued_at": "2005-07-18T05:00:00",
+          "valid_at": "2005-07-18T06:00:00",
+          "actual_surge_mm": 704.934,
+          "predicted_surge_mm": 597.664
+        },
+        {
+          "issued_at": "2005-07-18T06:00:00",
+          "valid_at": "2005-07-18T07:00:00",
+          "actual_surge_mm": 710.757,
+          "predicted_surge_mm": 684.291
+        },
+        {
+          "issued_at": "2005-07-18T07:00:00",
+          "valid_at": "2005-07-18T08:00:00",
+          "actual_surge_mm": 701.575,
+          "predicted_surge_mm": 696.809
+        },
+        {
+          "issued_at": "2005-07-18T08:00:00",
+          "valid_at": "2005-07-18T09:00:00",
+          "actual_surge_mm": 602.093,
+          "predicted_surge_mm": 689.777
+        },
+        {
+          "issued_at": "2005-07-18T09:00:00",
+          "valid_at": "2005-07-18T10:00:00",
+          "actual_surge_mm": 669.359,
+          "predicted_surge_mm": 571.597
+        },
+        {
+          "issued_at": "2005-07-18T10:00:00",
+          "valid_at": "2005-07-18T11:00:00",
+          "actual_surge_mm": 531.277,
+          "predicted_surge_mm": 629.123
+        },
+        {
+          "issued_at": "2005-07-18T11:00:00",
+          "valid_at": "2005-07-18T12:00:00",
+          "actual_surge_mm": 491.516,
+          "predicted_surge_mm": 539.976
+        },
+        {
+          "issued_at": "2005-07-18T12:00:00",
+          "valid_at": "2005-07-18T13:00:00",
+          "actual_surge_mm": 574.18,
+          "predicted_surge_mm": 491.991
+        },
+        {
+          "issued_at": "2005-07-18T13:00:00",
+          "valid_at": "2005-07-18T14:00:00",
+          "actual_surge_mm": 431.107,
+          "predicted_surge_mm": 567.926
+        },
+        {
+          "issued_at": "2005-07-18T14:00:00",
+          "valid_at": "2005-07-18T15:00:00",
+          "actual_surge_mm": 396.078,
+          "predicted_surge_mm": 440.952
+        },
+        {
+          "issued_at": "2005-07-18T15:00:00",
+          "valid_at": "2005-07-18T16:00:00",
+          "actual_surge_mm": 397.286,
+          "predicted_surge_mm": 396.204
+        },
+        {
+          "issued_at": "2005-07-18T16:00:00",
+          "valid_at": "2005-07-18T17:00:00",
+          "actual_surge_mm": 276.414,
+          "predicted_surge_mm": 423.199
+        },
+        {
+          "issued_at": "2005-07-18T17:00:00",
+          "valid_at": "2005-07-18T18:00:00",
+          "actual_surge_mm": 277.974,
+          "predicted_surge_mm": 263.912
+        },
+        {
+          "issued_at": "2005-07-18T18:00:00",
+          "valid_at": "2005-07-18T19:00:00",
+          "actual_surge_mm": 224.418,
+          "predicted_surge_mm": 264.584
+        },
+        {
+          "issued_at": "2005-07-18T19:00:00",
+          "valid_at": "2005-07-18T20:00:00",
+          "actual_surge_mm": 263.538,
+          "predicted_surge_mm": 185.764
+        },
+        {
+          "issued_at": "2005-07-18T20:00:00",
+          "valid_at": "2005-07-18T21:00:00",
+          "actual_surge_mm": 162.751,
+          "predicted_surge_mm": 237.962
+        },
+        {
+          "issued_at": "2005-07-18T21:00:00",
+          "valid_at": "2005-07-18T22:00:00",
+          "actual_surge_mm": 205.794,
+          "predicted_surge_mm": 128.186
+        },
+        {
+          "issued_at": "2005-07-18T22:00:00",
+          "valid_at": "2005-07-18T23:00:00",
+          "actual_surge_mm": 174.517,
+          "predicted_surge_mm": 172.687
+        },
+        {
+          "issued_at": "2005-07-18T23:00:00",
+          "valid_at": "2005-07-19T00:00:00",
+          "actual_surge_mm": 215.552,
+          "predicted_surge_mm": 160.358
+        },
+        {
+          "issued_at": "2005-07-19T00:00:00",
+          "valid_at": "2005-07-19T01:00:00",
+          "actual_surge_mm": 139.244,
+          "predicted_surge_mm": 186.168
+        },
+        {
+          "issued_at": "2005-07-19T01:00:00",
+          "valid_at": "2005-07-19T02:00:00",
+          "actual_surge_mm": 119.308,
+          "predicted_surge_mm": 148.085
+        },
+        {
+          "issued_at": "2005-07-19T02:00:00",
+          "valid_at": "2005-07-19T03:00:00",
+          "actual_surge_mm": 127.126,
+          "predicted_surge_mm": 123.163
+        },
+        {
+          "issued_at": "2005-07-19T03:00:00",
+          "valid_at": "2005-07-19T04:00:00",
+          "actual_surge_mm": 191.949,
+          "predicted_surge_mm": 92.592
+        },
+        {
+          "issued_at": "2005-07-19T04:00:00",
+          "valid_at": "2005-07-19T05:00:00",
+          "actual_surge_mm": 75.347,
+          "predicted_surge_mm": 199.836
+        },
+        {
+          "issued_at": "2005-07-19T05:00:00",
+          "valid_at": "2005-07-19T06:00:00",
+          "actual_surge_mm": 101.609,
+          "predicted_surge_mm": 90.809
+        },
+        {
+          "issued_at": "2005-07-19T06:00:00",
+          "valid_at": "2005-07-19T07:00:00",
+          "actual_surge_mm": 77.957,
+          "predicted_surge_mm": 100.865
+        },
+        {
+          "issued_at": "2005-07-19T07:00:00",
+          "valid_at": "2005-07-19T08:00:00",
+          "actual_surge_mm": 115.394,
+          "predicted_surge_mm": 100.084
+        },
+        {
+          "issued_at": "2005-07-19T08:00:00",
+          "valid_at": "2005-07-19T09:00:00",
+          "actual_surge_mm": 70.146,
+          "predicted_surge_mm": 133.177
+        },
+        {
+          "issued_at": "2005-07-19T09:00:00",
+          "valid_at": "2005-07-19T10:00:00",
+          "actual_surge_mm": 94.326,
+          "predicted_surge_mm": 82.907
+        },
+        {
+          "issued_at": "2005-07-19T10:00:00",
+          "valid_at": "2005-07-19T11:00:00",
+          "actual_surge_mm": 109.879,
+          "predicted_surge_mm": 107.092
+        },
+        {
+          "issued_at": "2005-07-19T11:00:00",
+          "valid_at": "2005-07-19T12:00:00",
+          "actual_surge_mm": 69.649,
+          "predicted_surge_mm": 109.377
+        },
+        {
+          "issued_at": "2005-07-19T12:00:00",
+          "valid_at": "2005-07-19T13:00:00",
+          "actual_surge_mm": 88.413,
+          "predicted_surge_mm": 91.352
+        },
+        {
+          "issued_at": "2005-07-19T13:00:00",
+          "valid_at": "2005-07-19T14:00:00",
+          "actual_surge_mm": 79.846,
+          "predicted_surge_mm": 75.852
+        },
+        {
+          "issued_at": "2005-07-19T14:00:00",
+          "valid_at": "2005-07-19T15:00:00",
+          "actual_surge_mm": 111.491,
+          "predicted_surge_mm": 81.89
+        },
+        {
+          "issued_at": "2005-07-19T15:00:00",
+          "valid_at": "2005-07-19T16:00:00",
+          "actual_surge_mm": 32.482,
+          "predicted_surge_mm": 87.294
+        },
+        {
+          "issued_at": "2005-07-19T16:00:00",
+          "valid_at": "2005-07-19T17:00:00",
+          "actual_surge_mm": 63.698,
+          "predicted_surge_mm": 48.646
+        },
+        {
+          "issued_at": "2005-07-19T17:00:00",
+          "valid_at": "2005-07-19T18:00:00",
+          "actual_surge_mm": 39.528,
+          "predicted_surge_mm": 47.87
+        },
+        {
+          "issued_at": "2005-07-19T18:00:00",
+          "valid_at": "2005-07-19T19:00:00",
+          "actual_surge_mm": 43.289,
+          "predicted_surge_mm": 43.819
+        },
+        {
+          "issued_at": "2005-07-19T19:00:00",
+          "valid_at": "2005-07-19T20:00:00",
+          "actual_surge_mm": 21.376,
+          "predicted_surge_mm": 31.544
+        },
+        {
+          "issued_at": "2005-07-19T20:00:00",
+          "valid_at": "2005-07-19T21:00:00",
+          "actual_surge_mm": 22.155,
+          "predicted_surge_mm": 33.941
+        },
+        {
+          "issued_at": "2005-07-19T21:00:00",
+          "valid_at": "2005-07-19T22:00:00",
+          "actual_surge_mm": -11.519,
+          "predicted_surge_mm": 30.864
+        },
+        {
+          "issued_at": "2005-07-19T22:00:00",
+          "valid_at": "2005-07-19T23:00:00",
+          "actual_surge_mm": 8.283,
+          "predicted_surge_mm": 10.172
+        },
+        {
+          "issued_at": "2005-07-19T23:00:00",
+          "valid_at": "2005-07-20T00:00:00",
+          "actual_surge_mm": -17.472,
+          "predicted_surge_mm": 16.103
+        },
+        {
+          "issued_at": "2005-07-20T00:00:00",
+          "valid_at": "2005-07-20T01:00:00",
+          "actual_surge_mm": -35.652,
+          "predicted_surge_mm": 1.174
+        },
+        {
+          "issued_at": "2005-07-20T01:00:00",
+          "valid_at": "2005-07-20T02:00:00",
+          "actual_surge_mm": -31.249,
+          "predicted_surge_mm": -4.417
+        },
+        {
+          "issued_at": "2005-07-20T02:00:00",
+          "valid_at": "2005-07-20T03:00:00",
+          "actual_surge_mm": -55.329,
+          "predicted_surge_mm": -8.202
+        },
+        {
+          "issued_at": "2005-07-20T03:00:00",
+          "valid_at": "2005-07-20T04:00:00",
+          "actual_surge_mm": -51.803,
+          "predicted_surge_mm": -44.806
+        },
+        {
+          "issued_at": "2005-07-20T04:00:00",
+          "valid_at": "2005-07-20T05:00:00",
+          "actual_surge_mm": -63.455,
+          "predicted_surge_mm": -38.036
+        },
+        {
+          "issued_at": "2005-07-20T05:00:00",
+          "valid_at": "2005-07-20T06:00:00",
+          "actual_surge_mm": -34.298,
+          "predicted_surge_mm": -55.969
+        },
+        {
+          "issued_at": "2005-07-20T06:00:00",
+          "valid_at": "2005-07-20T07:00:00",
+          "actual_surge_mm": -70.113,
+          "predicted_surge_mm": -30.884
+        },
+        {
+          "issued_at": "2005-07-20T07:00:00",
+          "valid_at": "2005-07-20T08:00:00",
+          "actual_surge_mm": -47.656,
+          "predicted_surge_mm": -56.42
+        }
+      ]
+    },
+    {
+      "lead_hours": 3,
+      "model_sha256": "d5bce2e4475b5795f07292259c8456ab9bfd751e37e6cdbedfc28df98b3cbbc6",
+      "metrics": {
+        "rmse_mm": 56.07784733576196,
+        "mae_mm": 38.72276561932246,
+        "r2": 0.8680938420507013,
+        "count": 203
+      },
+      "points": [
+        {
+          "issued_at": "2005-07-11T19:00:00",
+          "valid_at": "2005-07-11T22:00:00",
+          "actual_surge_mm": -53.143,
+          "predicted_surge_mm": -18.057
+        },
+        {
+          "issued_at": "2005-07-11T20:00:00",
+          "valid_at": "2005-07-11T23:00:00",
+          "actual_surge_mm": -47.89,
+          "predicted_surge_mm": -11.988
+        },
+        {
+          "issued_at": "2005-07-11T21:00:00",
+          "valid_at": "2005-07-12T00:00:00",
+          "actual_surge_mm": -40.255,
+          "predicted_surge_mm": 3.6
+        },
+        {
+          "issued_at": "2005-07-11T22:00:00",
+          "valid_at": "2005-07-12T01:00:00",
+          "actual_surge_mm": -2.198,
+          "predicted_surge_mm": -15.93
+        },
+        {
+          "issued_at": "2005-07-11T23:00:00",
+          "valid_at": "2005-07-12T02:00:00",
+          "actual_surge_mm": -12.662,
+          "predicted_surge_mm": -30.672
+        },
+        {
+          "issued_at": "2005-07-12T00:00:00",
+          "valid_at": "2005-07-12T03:00:00",
+          "actual_surge_mm": -3.942,
+          "predicted_surge_mm": -23.878
+        },
+        {
+          "issued_at": "2005-07-12T01:00:00",
+          "valid_at": "2005-07-12T04:00:00",
+          "actual_surge_mm": 1.429,
+          "predicted_surge_mm": -2.362
+        },
+        {
+          "issued_at": "2005-07-12T02:00:00",
+          "valid_at": "2005-07-12T05:00:00",
+          "actual_surge_mm": 2.743,
+          "predicted_surge_mm": -28.08
+        },
+        {
+          "issued_at": "2005-07-12T03:00:00",
+          "valid_at": "2005-07-12T06:00:00",
+          "actual_surge_mm": -18.299,
+          "predicted_surge_mm": -25.941
+        },
+        {
+          "issued_at": "2005-07-12T04:00:00",
+          "valid_at": "2005-07-12T07:00:00",
+          "actual_surge_mm": 4.172,
+          "predicted_surge_mm": -29.42
+        },
+        {
+          "issued_at": "2005-07-12T05:00:00",
+          "valid_at": "2005-07-12T08:00:00",
+          "actual_surge_mm": 5.936,
+          "predicted_surge_mm": -32.622
+        },
+        {
+          "issued_at": "2005-07-12T06:00:00",
+          "valid_at": "2005-07-12T09:00:00",
+          "actual_surge_mm": -12.424,
+          "predicted_surge_mm": -39.113
+        },
+        {
+          "issued_at": "2005-07-12T07:00:00",
+          "valid_at": "2005-07-12T10:00:00",
+          "actual_surge_mm": -6.614,
+          "predicted_surge_mm": -3.002
+        },
+        {
+          "issued_at": "2005-07-12T08:00:00",
+          "valid_at": "2005-07-12T11:00:00",
+          "actual_surge_mm": 31.865,
+          "predicted_surge_mm": 11.978
+        },
+        {
+          "issued_at": "2005-07-12T09:00:00",
+          "valid_at": "2005-07-12T12:00:00",
+          "actual_surge_mm": 57.295,
+          "predicted_surge_mm": 8.293
+        },
+        {
+          "issued_at": "2005-07-12T10:00:00",
+          "valid_at": "2005-07-12T13:00:00",
+          "actual_surge_mm": 32.506,
+          "predicted_surge_mm": 21.93
+        },
+        {
+          "issued_at": "2005-07-12T11:00:00",
+          "valid_at": "2005-07-12T14:00:00",
+          "actual_surge_mm": 27.563,
+          "predicted_surge_mm": 50.453
+        },
+        {
+          "issued_at": "2005-07-12T12:00:00",
+          "valid_at": "2005-07-12T15:00:00",
+          "actual_surge_mm": 37.455,
+          "predicted_surge_mm": 61.195
+        },
+        {
+          "issued_at": "2005-07-12T13:00:00",
+          "valid_at": "2005-07-12T16:00:00",
+          "actual_surge_mm": 43.985,
+          "predicted_surge_mm": 42.677
+        },
+        {
+          "issued_at": "2005-07-12T14:00:00",
+          "valid_at": "2005-07-12T17:00:00",
+          "actual_surge_mm": 79.164,
+          "predicted_surge_mm": 34.068
+        },
+        {
+          "issued_at": "2005-07-12T15:00:00",
+          "valid_at": "2005-07-12T18:00:00",
+          "actual_surge_mm": 61.131,
+          "predicted_surge_mm": 31.457
+        },
+        {
+          "issued_at": "2005-07-12T16:00:00",
+          "valid_at": "2005-07-12T19:00:00",
+          "actual_surge_mm": 70.327,
+          "predicted_surge_mm": 30.399
+        },
+        {
+          "issued_at": "2005-07-12T17:00:00",
+          "valid_at": "2005-07-12T20:00:00",
+          "actual_surge_mm": 33.71,
+          "predicted_surge_mm": 58.962
+        },
+        {
+          "issued_at": "2005-07-12T18:00:00",
+          "valid_at": "2005-07-12T21:00:00",
+          "actual_surge_mm": 17.695,
+          "predicted_surge_mm": 54.467
+        },
+        {
+          "issued_at": "2005-07-12T19:00:00",
+          "valid_at": "2005-07-12T22:00:00",
+          "actual_surge_mm": -15.804,
+          "predicted_surge_mm": 64.605
+        },
+        {
+          "issued_at": "2005-07-12T20:00:00",
+          "valid_at": "2005-07-12T23:00:00",
+          "actual_surge_mm": 10.342,
+          "predicted_surge_mm": 35.892
+        },
+        {
+          "issued_at": "2005-07-12T21:00:00",
+          "valid_at": "2005-07-13T00:00:00",
+          "actual_surge_mm": 14.252,
+          "predicted_surge_mm": 27.157
+        },
+        {
+          "issued_at": "2005-07-12T22:00:00",
+          "valid_at": "2005-07-13T01:00:00",
+          "actual_surge_mm": 1.651,
+          "predicted_surge_mm": 10.765
+        },
+        {
+          "issued_at": "2005-07-12T23:00:00",
+          "valid_at": "2005-07-13T02:00:00",
+          "actual_surge_mm": 0.24,
+          "predicted_surge_mm": 23.663
+        },
+        {
+          "issued_at": "2005-07-13T00:00:00",
+          "valid_at": "2005-07-13T03:00:00",
+          "actual_surge_mm": 19.52,
+          "predicted_surge_mm": 24.594
+        },
+        {
+          "issued_at": "2005-07-13T01:00:00",
+          "valid_at": "2005-07-13T04:00:00",
+          "actual_surge_mm": 46.761,
+          "predicted_surge_mm": 15.589
+        },
+        {
+          "issued_at": "2005-07-13T02:00:00",
+          "valid_at": "2005-07-13T05:00:00",
+          "actual_surge_mm": 47.236,
+          "predicted_surge_mm": 11.647
+        },
+        {
+          "issued_at": "2005-07-13T03:00:00",
+          "valid_at": "2005-07-13T06:00:00",
+          "actual_surge_mm": 29.466,
+          "predicted_surge_mm": 22.391
+        },
+        {
+          "issued_at": "2005-07-13T04:00:00",
+          "valid_at": "2005-07-13T07:00:00",
+          "actual_surge_mm": 40.421,
+          "predicted_surge_mm": 46.084
+        },
+        {
+          "issued_at": "2005-07-13T05:00:00",
+          "valid_at": "2005-07-13T08:00:00",
+          "actual_surge_mm": 48.632,
+          "predicted_surge_mm": 51.183
+        },
+        {
+          "issued_at": "2005-07-13T06:00:00",
+          "valid_at": "2005-07-13T09:00:00",
+          "actual_surge_mm": 29.372,
+          "predicted_surge_mm": 12.773
+        },
+        {
+          "issued_at": "2005-07-13T07:00:00",
+          "valid_at": "2005-07-13T10:00:00",
+          "actual_surge_mm": 61.155,
+          "predicted_surge_mm": 13.159
+        },
+        {
+          "issued_at": "2005-07-13T08:00:00",
+          "valid_at": "2005-07-13T11:00:00",
+          "actual_surge_mm": 78.176,
+          "predicted_surge_mm": 33.367
+        },
+        {
+          "issued_at": "2005-07-13T09:00:00",
+          "valid_at": "2005-07-13T12:00:00",
+          "actual_surge_mm": 73.504,
+          "predicted_surge_mm": 32.698
+        },
+        {
+          "issued_at": "2005-07-13T10:00:00",
+          "valid_at": "2005-07-13T13:00:00",
+          "actual_surge_mm": 63.939,
+          "predicted_surge_mm": 65.427
+        },
+        {
+          "issued_at": "2005-07-13T11:00:00",
+          "valid_at": "2005-07-13T14:00:00",
+          "actual_surge_mm": 56.27,
+          "predicted_surge_mm": 78.585
+        },
+        {
+          "issued_at": "2005-07-13T12:00:00",
+          "valid_at": "2005-07-13T15:00:00",
+          "actual_surge_mm": 48.923,
+          "predicted_surge_mm": 77.076
+        },
+        {
+          "issued_at": "2005-07-13T13:00:00",
+          "valid_at": "2005-07-13T16:00:00",
+          "actual_surge_mm": 49.737,
+          "predicted_surge_mm": 71.875
+        },
+        {
+          "issued_at": "2005-07-13T14:00:00",
+          "valid_at": "2005-07-13T17:00:00",
+          "actual_surge_mm": 63.465,
+          "predicted_surge_mm": 79.395
+        },
+        {
+          "issued_at": "2005-07-13T15:00:00",
+          "valid_at": "2005-07-13T18:00:00",
+          "actual_surge_mm": 71.689,
+          "predicted_surge_mm": 66.316
+        },
+        {
+          "issued_at": "2005-07-13T16:00:00",
+          "valid_at": "2005-07-13T19:00:00",
+          "actual_surge_mm": 79.071,
+          "predicted_surge_mm": 64.727
+        },
+        {
+          "issued_at": "2005-07-13T17:00:00",
+          "valid_at": "2005-07-13T20:00:00",
+          "actual_surge_mm": 79.254,
+          "predicted_surge_mm": 78.108
+        },
+        {
+          "issued_at": "2005-07-13T18:00:00",
+          "valid_at": "2005-07-13T21:00:00",
+          "actual_surge_mm": 51.93,
+          "predicted_surge_mm": 71.917
+        },
+        {
+          "issued_at": "2005-07-13T19:00:00",
+          "valid_at": "2005-07-13T22:00:00",
+          "actual_surge_mm": 30.969,
+          "predicted_surge_mm": 76.028
+        },
+        {
+          "issued_at": "2005-07-13T20:00:00",
+          "valid_at": "2005-07-13T23:00:00",
+          "actual_surge_mm": 28.537,
+          "predicted_surge_mm": 88.571
+        },
+        {
+          "issued_at": "2005-07-13T21:00:00",
+          "valid_at": "2005-07-14T00:00:00",
+          "actual_surge_mm": -1.166,
+          "predicted_surge_mm": 67.954
+        },
+        {
+          "issued_at": "2005-07-13T22:00:00",
+          "valid_at": "2005-07-14T01:00:00",
+          "actual_surge_mm": -6.946,
+          "predicted_surge_mm": 38.073
+        },
+        {
+          "issued_at": "2005-07-13T23:00:00",
+          "valid_at": "2005-07-14T02:00:00",
+          "actual_surge_mm": 1.137,
+          "predicted_surge_mm": 25.165
+        },
+        {
+          "issued_at": "2005-07-14T00:00:00",
+          "valid_at": "2005-07-14T03:00:00",
+          "actual_surge_mm": -8.171,
+          "predicted_surge_mm": 4.915
+        },
+        {
+          "issued_at": "2005-07-14T01:00:00",
+          "valid_at": "2005-07-14T04:00:00",
+          "actual_surge_mm": 20.776,
+          "predicted_surge_mm": 11.035
+        },
+        {
+          "issued_at": "2005-07-14T02:00:00",
+          "valid_at": "2005-07-14T05:00:00",
+          "actual_surge_mm": 8.308,
+          "predicted_surge_mm": 13.683
+        },
+        {
+          "issued_at": "2005-07-14T03:00:00",
+          "valid_at": "2005-07-14T06:00:00",
+          "actual_surge_mm": 9.244,
+          "predicted_surge_mm": 3.168
+        },
+        {
+          "issued_at": "2005-07-14T04:00:00",
+          "valid_at": "2005-07-14T07:00:00",
+          "actual_surge_mm": 32.327,
+          "predicted_surge_mm": 35.803
+        },
+        {
+          "issued_at": "2005-07-14T05:00:00",
+          "valid_at": "2005-07-14T08:00:00",
+          "actual_surge_mm": 45.414,
+          "predicted_surge_mm": 29.413
+        },
+        {
+          "issued_at": "2005-07-14T06:00:00",
+          "valid_at": "2005-07-14T09:00:00",
+          "actual_surge_mm": 69.18,
+          "predicted_surge_mm": 18.803
+        },
+        {
+          "issued_at": "2005-07-14T07:00:00",
+          "valid_at": "2005-07-14T10:00:00",
+          "actual_surge_mm": 52.141,
+          "predicted_surge_mm": 32.046
+        },
+        {
+          "issued_at": "2005-07-14T08:00:00",
+          "valid_at": "2005-07-14T11:00:00",
+          "actual_surge_mm": 49.944,
+          "predicted_surge_mm": 40.979
+        },
+        {
+          "issued_at": "2005-07-14T09:00:00",
+          "valid_at": "2005-07-14T12:00:00",
+          "actual_surge_mm": 49.129,
+          "predicted_surge_mm": 51.253
+        },
+        {
+          "issued_at": "2005-07-14T10:00:00",
+          "valid_at": "2005-07-14T13:00:00",
+          "actual_surge_mm": 30.375,
+          "predicted_surge_mm": 38.211
+        },
+        {
+          "issued_at": "2005-07-14T11:00:00",
+          "valid_at": "2005-07-14T14:00:00",
+          "actual_surge_mm": 24.29,
+          "predicted_surge_mm": 39.547
+        },
+        {
+          "issued_at": "2005-07-14T12:00:00",
+          "valid_at": "2005-07-14T15:00:00",
+          "actual_surge_mm": 44.726,
+          "predicted_surge_mm": 41.354
+        },
+        {
+          "issued_at": "2005-07-14T13:00:00",
+          "valid_at": "2005-07-14T16:00:00",
+          "actual_surge_mm": 44.015,
+          "predicted_surge_mm": 35.863
+        },
+        {
+          "issued_at": "2005-07-14T14:00:00",
+          "valid_at": "2005-07-14T17:00:00",
+          "actual_surge_mm": 59.209,
+          "predicted_surge_mm": 37.936
+        },
+        {
+          "issued_at": "2005-07-14T15:00:00",
+          "valid_at": "2005-07-14T18:00:00",
+          "actual_surge_mm": 47.999,
+          "predicted_surge_mm": 55.952
+        },
+        {
+          "issued_at": "2005-07-14T16:00:00",
+          "valid_at": "2005-07-14T19:00:00",
+          "actual_surge_mm": 55.951,
+          "predicted_surge_mm": 68.339
+        },
+        {
+          "issued_at": "2005-07-14T17:00:00",
+          "valid_at": "2005-07-14T20:00:00",
+          "actual_surge_mm": 70.046,
+          "predicted_surge_mm": 75.377
+        },
+        {
+          "issued_at": "2005-07-14T18:00:00",
+          "valid_at": "2005-07-14T21:00:00",
+          "actual_surge_mm": 37.457,
+          "predicted_surge_mm": 55.124
+        },
+        {
+          "issued_at": "2005-07-14T19:00:00",
+          "valid_at": "2005-07-14T22:00:00",
+          "actual_surge_mm": 25.258,
+          "predicted_surge_mm": 57.098
+        },
+        {
+          "issued_at": "2005-07-14T20:00:00",
+          "valid_at": "2005-07-14T23:00:00",
+          "actual_surge_mm": 38.367,
+          "predicted_surge_mm": 60.234
+        },
+        {
+          "issued_at": "2005-07-14T21:00:00",
+          "valid_at": "2005-07-15T00:00:00",
+          "actual_surge_mm": 11.159,
+          "predicted_surge_mm": 31.602
+        },
+        {
+          "issued_at": "2005-07-14T22:00:00",
+          "valid_at": "2005-07-15T01:00:00",
+          "actual_surge_mm": 1.966,
+          "predicted_surge_mm": 12.459
+        },
+        {
+          "issued_at": "2005-07-14T23:00:00",
+          "valid_at": "2005-07-15T02:00:00",
+          "actual_surge_mm": -17.383,
+          "predicted_surge_mm": 24.394
+        },
+        {
+          "issued_at": "2005-07-15T00:00:00",
+          "valid_at": "2005-07-15T03:00:00",
+          "actual_surge_mm": -4.447,
+          "predicted_surge_mm": 1.705
+        },
+        {
+          "issued_at": "2005-07-15T01:00:00",
+          "valid_at": "2005-07-15T04:00:00",
+          "actual_surge_mm": -9.924,
+          "predicted_surge_mm": 0.627
+        },
+        {
+          "issued_at": "2005-07-15T02:00:00",
+          "valid_at": "2005-07-15T05:00:00",
+          "actual_surge_mm": -8.312,
+          "predicted_surge_mm": -2.359
+        },
+        {
+          "issued_at": "2005-07-15T03:00:00",
+          "valid_at": "2005-07-15T06:00:00",
+          "actual_surge_mm": 3.801,
+          "predicted_surge_mm": 14.863
+        },
+        {
+          "issued_at": "2005-07-15T04:00:00",
+          "valid_at": "2005-07-15T07:00:00",
+          "actual_surge_mm": 23.636,
+          "predicted_surge_mm": 13.047
+        },
+        {
+          "issued_at": "2005-07-15T05:00:00",
+          "valid_at": "2005-07-15T08:00:00",
+          "actual_surge_mm": 41.859,
+          "predicted_surge_mm": 17.413
+        },
+        {
+          "issued_at": "2005-07-15T06:00:00",
+          "valid_at": "2005-07-15T09:00:00",
+          "actual_surge_mm": 53.087,
+          "predicted_surge_mm": 23.654
+        },
+        {
+          "issued_at": "2005-07-15T07:00:00",
+          "valid_at": "2005-07-15T10:00:00",
+          "actual_surge_mm": 57.481,
+          "predicted_surge_mm": 24.031
+        },
+        {
+          "issued_at": "2005-07-15T08:00:00",
+          "valid_at": "2005-07-15T11:00:00",
+          "actual_surge_mm": 39.33,
+          "predicted_surge_mm": 33.719
+        },
+        {
+          "issued_at": "2005-07-15T09:00:00",
+          "valid_at": "2005-07-15T12:00:00",
+          "actual_surge_mm": 35.349,
+          "predicted_surge_mm": 39.304
+        },
+        {
+          "issued_at": "2005-07-15T10:00:00",
+          "valid_at": "2005-07-15T13:00:00",
+          "actual_surge_mm": 59.239,
+          "predicted_surge_mm": 38.807
+        },
+        {
+          "issued_at": "2005-07-15T11:00:00",
+          "valid_at": "2005-07-15T14:00:00",
+          "actual_surge_mm": 46.154,
+          "predicted_surge_mm": 16.412
+        },
+        {
+          "issued_at": "2005-07-15T12:00:00",
+          "valid_at": "2005-07-15T15:00:00",
+          "actual_surge_mm": 63.804,
+          "predicted_surge_mm": 12.446
+        },
+        {
+          "issued_at": "2005-07-15T13:00:00",
+          "valid_at": "2005-07-15T16:00:00",
+          "actual_surge_mm": 55.774,
+          "predicted_surge_mm": 51.815
+        },
+        {
+          "issued_at": "2005-07-15T14:00:00",
+          "valid_at": "2005-07-15T17:00:00",
+          "actual_surge_mm": 57.418,
+          "predicted_surge_mm": 52.059
+        },
+        {
+          "issued_at": "2005-07-15T15:00:00",
+          "valid_at": "2005-07-15T18:00:00",
+          "actual_surge_mm": 63.158,
+          "predicted_surge_mm": 69.059
+        },
+        {
+          "issued_at": "2005-07-15T16:00:00",
+          "valid_at": "2005-07-15T19:00:00",
+          "actual_surge_mm": 61.302,
+          "predicted_surge_mm": 73.128
+        },
+        {
+          "issued_at": "2005-07-15T17:00:00",
+          "valid_at": "2005-07-15T20:00:00",
+          "actual_surge_mm": 55.784,
+          "predicted_surge_mm": 80.537
+        },
+        {
+          "issued_at": "2005-07-15T18:00:00",
+          "valid_at": "2005-07-15T21:00:00",
+          "actual_surge_mm": 38.842,
+          "predicted_surge_mm": 75.604
+        },
+        {
+          "issued_at": "2005-07-15T19:00:00",
+          "valid_at": "2005-07-15T22:00:00",
+          "actual_surge_mm": 55.121,
+          "predicted_surge_mm": 66.364
+        },
+        {
+          "issued_at": "2005-07-15T20:00:00",
+          "valid_at": "2005-07-15T23:00:00",
+          "actual_surge_mm": 43.047,
+          "predicted_surge_mm": 78.81
+        },
+        {
+          "issued_at": "2005-07-15T21:00:00",
+          "valid_at": "2005-07-16T00:00:00",
+          "actual_surge_mm": 18.366,
+          "predicted_surge_mm": 48.25
+        },
+        {
+          "issued_at": "2005-07-15T22:00:00",
+          "valid_at": "2005-07-16T01:00:00",
+          "actual_surge_mm": 30.163,
+          "predicted_surge_mm": 52.496
+        },
+        {
+          "issued_at": "2005-07-15T23:00:00",
+          "valid_at": "2005-07-16T02:00:00",
+          "actual_surge_mm": 10.395,
+          "predicted_surge_mm": 35.282
+        },
+        {
+          "issued_at": "2005-07-16T00:00:00",
+          "valid_at": "2005-07-16T03:00:00",
+          "actual_surge_mm": 34.67,
+          "predicted_surge_mm": 15.84
+        },
+        {
+          "issued_at": "2005-07-16T01:00:00",
+          "valid_at": "2005-07-16T04:00:00",
+          "actual_surge_mm": 61.99,
+          "predicted_surge_mm": 35.615
+        },
+        {
+          "issued_at": "2005-07-16T02:00:00",
+          "valid_at": "2005-07-16T05:00:00",
+          "actual_surge_mm": 35.303,
+          "predicted_surge_mm": 18.746
+        },
+        {
+          "issued_at": "2005-07-16T03:00:00",
+          "valid_at": "2005-07-16T06:00:00",
+          "actual_surge_mm": 61.596,
+          "predicted_surge_mm": 54.245
+        },
+        {
+          "issued_at": "2005-07-16T04:00:00",
+          "valid_at": "2005-07-16T07:00:00",
+          "actual_surge_mm": 95.828,
+          "predicted_surge_mm": 71.614
+        },
+        {
+          "issued_at": "2005-07-16T05:00:00",
+          "valid_at": "2005-07-16T08:00:00",
+          "actual_surge_mm": 121.625,
+          "predicted_surge_mm": 45.447
+        },
+        {
+          "issued_at": "2005-07-16T06:00:00",
+          "valid_at": "2005-07-16T09:00:00",
+          "actual_surge_mm": 104.913,
+          "predicted_surge_mm": 77.978
+        },
+        {
+          "issued_at": "2005-07-16T07:00:00",
+          "valid_at": "2005-07-16T10:00:00",
+          "actual_surge_mm": 98.933,
+          "predicted_surge_mm": 100.0
+        },
+        {
+          "issued_at": "2005-07-16T08:00:00",
+          "valid_at": "2005-07-16T11:00:00",
+          "actual_surge_mm": 75.815,
+          "predicted_surge_mm": 127.355
+        },
+        {
+          "issued_at": "2005-07-16T09:00:00",
+          "valid_at": "2005-07-16T12:00:00",
+          "actual_surge_mm": 57.722,
+          "predicted_surge_mm": 108.765
+        },
+        {
+          "issued_at": "2005-07-16T10:00:00",
+          "valid_at": "2005-07-16T13:00:00",
+          "actual_surge_mm": 57.447,
+          "predicted_surge_mm": 106.579
+        },
+        {
+          "issued_at": "2005-07-16T11:00:00",
+          "valid_at": "2005-07-16T14:00:00",
+          "actual_surge_mm": 71.71,
+          "predicted_surge_mm": 73.484
+        },
+        {
+          "issued_at": "2005-07-16T12:00:00",
+          "valid_at": "2005-07-16T15:00:00",
+          "actual_surge_mm": 101.468,
+          "predicted_surge_mm": 61.993
+        },
+        {
+          "issued_at": "2005-07-16T13:00:00",
+          "valid_at": "2005-07-16T16:00:00",
+          "actual_surge_mm": 107.348,
+          "predicted_surge_mm": 87.193
+        },
+        {
+          "issued_at": "2005-07-16T14:00:00",
+          "valid_at": "2005-07-16T17:00:00",
+          "actual_surge_mm": 90.666,
+          "predicted_surge_mm": 114.321
+        },
+        {
+          "issued_at": "2005-07-16T15:00:00",
+          "valid_at": "2005-07-16T18:00:00",
+          "actual_surge_mm": 88.957,
+          "predicted_surge_mm": 157.982
+        },
+        {
+          "issued_at": "2005-07-16T16:00:00",
+          "valid_at": "2005-07-16T19:00:00",
+          "actual_surge_mm": 104.083,
+          "predicted_surge_mm": 151.912
+        },
+        {
+          "issued_at": "2005-07-16T17:00:00",
+          "valid_at": "2005-07-16T20:00:00",
+          "actual_surge_mm": 105.16,
+          "predicted_surge_mm": 112.144
+        },
+        {
+          "issued_at": "2005-07-16T18:00:00",
+          "valid_at": "2005-07-16T21:00:00",
+          "actual_surge_mm": 138.61,
+          "predicted_surge_mm": 112.636
+        },
+        {
+          "issued_at": "2005-07-16T19:00:00",
+          "valid_at": "2005-07-16T22:00:00",
+          "actual_surge_mm": 104.816,
+          "predicted_surge_mm": 119.807
+        },
+        {
+          "issued_at": "2005-07-16T20:00:00",
+          "valid_at": "2005-07-16T23:00:00",
+          "actual_surge_mm": 97.474,
+          "predicted_surge_mm": 117.668
+        },
+        {
+          "issued_at": "2005-07-16T21:00:00",
+          "valid_at": "2005-07-17T00:00:00",
+          "actual_surge_mm": 99.152,
+          "predicted_surge_mm": 142.446
+        },
+        {
+          "issued_at": "2005-07-16T22:00:00",
+          "valid_at": "2005-07-17T01:00:00",
+          "actual_surge_mm": 122.399,
+          "predicted_surge_mm": 106.416
+        },
+        {
+          "issued_at": "2005-07-16T23:00:00",
+          "valid_at": "2005-07-17T02:00:00",
+          "actual_surge_mm": 96.374,
+          "predicted_surge_mm": 88.578
+        },
+        {
+          "issued_at": "2005-07-17T00:00:00",
+          "valid_at": "2005-07-17T03:00:00",
+          "actual_surge_mm": 138.434,
+          "predicted_surge_mm": 100.338
+        },
+        {
+          "issued_at": "2005-07-17T01:00:00",
+          "valid_at": "2005-07-17T04:00:00",
+          "actual_surge_mm": 146.868,
+          "predicted_surge_mm": 135.888
+        },
+        {
+          "issued_at": "2005-07-17T02:00:00",
+          "valid_at": "2005-07-17T05:00:00",
+          "actual_surge_mm": 153.405,
+          "predicted_surge_mm": 112.874
+        },
+        {
+          "issued_at": "2005-07-17T03:00:00",
+          "valid_at": "2005-07-17T06:00:00",
+          "actual_surge_mm": 151.754,
+          "predicted_surge_mm": 159.485
+        },
+        {
+          "issued_at": "2005-07-17T04:00:00",
+          "valid_at": "2005-07-17T07:00:00",
+          "actual_surge_mm": 189.938,
+          "predicted_surge_mm": 176.272
+        },
+        {
+          "issued_at": "2005-07-17T05:00:00",
+          "valid_at": "2005-07-17T08:00:00",
+          "actual_surge_mm": 166.846,
+          "predicted_surge_mm": 165.466
+        },
+        {
+          "issued_at": "2005-07-17T06:00:00",
+          "valid_at": "2005-07-17T09:00:00",
+          "actual_surge_mm": 214.464,
+          "predicted_surge_mm": 154.862
+        },
+        {
+          "issued_at": "2005-07-17T07:00:00",
+          "valid_at": "2005-07-17T10:00:00",
+          "actual_surge_mm": 222.223,
+          "predicted_surge_mm": 186.057
+        },
+        {
+          "issued_at": "2005-07-17T08:00:00",
+          "valid_at": "2005-07-17T11:00:00",
+          "actual_surge_mm": 192.27,
+          "predicted_surge_mm": 183.166
+        },
+        {
+          "issued_at": "2005-07-17T09:00:00",
+          "valid_at": "2005-07-17T12:00:00",
+          "actual_surge_mm": 108.6,
+          "predicted_surge_mm": 221.472
+        },
+        {
+          "issued_at": "2005-07-17T10:00:00",
+          "valid_at": "2005-07-17T13:00:00",
+          "actual_surge_mm": 118.13,
+          "predicted_surge_mm": 230.76
+        },
+        {
+          "issued_at": "2005-07-17T11:00:00",
+          "valid_at": "2005-07-17T14:00:00",
+          "actual_surge_mm": 240.939,
+          "predicted_surge_mm": 191.876
+        },
+        {
+          "issued_at": "2005-07-17T12:00:00",
+          "valid_at": "2005-07-17T15:00:00",
+          "actual_surge_mm": 223.465,
+          "predicted_surge_mm": 132.781
+        },
+        {
+          "issued_at": "2005-07-17T13:00:00",
+          "valid_at": "2005-07-17T16:00:00",
+          "actual_surge_mm": 184.292,
+          "predicted_surge_mm": 124.018
+        },
+        {
+          "issued_at": "2005-07-17T14:00:00",
+          "valid_at": "2005-07-17T17:00:00",
+          "actual_surge_mm": 238.858,
+          "predicted_surge_mm": 232.555
+        },
+        {
+          "issued_at": "2005-07-17T15:00:00",
+          "valid_at": "2005-07-17T18:00:00",
+          "actual_surge_mm": 228.465,
+          "predicted_surge_mm": 218.81
+        },
+        {
+          "issued_at": "2005-07-17T16:00:00",
+          "valid_at": "2005-07-17T19:00:00",
+          "actual_surge_mm": 311.344,
+          "predicted_surge_mm": 189.879
+        },
+        {
+          "issued_at": "2005-07-17T17:00:00",
+          "valid_at": "2005-07-17T20:00:00",
+          "actual_surge_mm": 331.154,
+          "predicted_surge_mm": 212.262
+        },
+        {
+          "issued_at": "2005-07-17T18:00:00",
+          "valid_at": "2005-07-17T21:00:00",
+          "actual_surge_mm": 276.159,
+          "predicted_surge_mm": 197.429
+        },
+        {
+          "issued_at": "2005-07-17T19:00:00",
+          "valid_at": "2005-07-17T22:00:00",
+          "actual_surge_mm": 290.482,
+          "predicted_surge_mm": 224.214
+        },
+        {
+          "issued_at": "2005-07-17T20:00:00",
+          "valid_at": "2005-07-17T23:00:00",
+          "actual_surge_mm": 317.706,
+          "predicted_surge_mm": 270.656
+        },
+        {
+          "issued_at": "2005-07-17T21:00:00",
+          "valid_at": "2005-07-18T00:00:00",
+          "actual_surge_mm": 446.777,
+          "predicted_surge_mm": 258.83
+        },
+        {
+          "issued_at": "2005-07-17T22:00:00",
+          "valid_at": "2005-07-18T01:00:00",
+          "actual_surge_mm": 372.796,
+          "predicted_surge_mm": 291.335
+        },
+        {
+          "issued_at": "2005-07-17T23:00:00",
+          "valid_at": "2005-07-18T02:00:00",
+          "actual_surge_mm": 428.072,
+          "predicted_surge_mm": 281.137
+        },
+        {
+          "issued_at": "2005-07-18T00:00:00",
+          "valid_at": "2005-07-18T03:00:00",
+          "actual_surge_mm": 540.114,
+          "predicted_surge_mm": 407.366
+        },
+        {
+          "issued_at": "2005-07-18T01:00:00",
+          "valid_at": "2005-07-18T04:00:00",
+          "actual_surge_mm": 614.376,
+          "predicted_surge_mm": 374.895
+        },
+        {
+          "issued_at": "2005-07-18T02:00:00",
+          "valid_at": "2005-07-18T05:00:00",
+          "actual_surge_mm": 583.459,
+          "predicted_surge_mm": 431.551
+        },
+        {
+          "issued_at": "2005-07-18T03:00:00",
+          "valid_at": "2005-07-18T06:00:00",
+          "actual_surge_mm": 704.934,
+          "predicted_surge_mm": 520.388
+        },
+        {
+          "issued_at": "2005-07-18T04:00:00",
+          "valid_at": "2005-07-18T07:00:00",
+          "actual_surge_mm": 710.757,
+          "predicted_surge_mm": 550.974
+        },
+        {
+          "issued_at": "2005-07-18T05:00:00",
+          "valid_at": "2005-07-18T08:00:00",
+          "actual_surge_mm": 701.575,
+          "predicted_surge_mm": 510.543
+        },
+        {
+          "issued_at": "2005-07-18T06:00:00",
+          "valid_at": "2005-07-18T09:00:00",
+          "actual_surge_mm": 602.093,
+          "predicted_surge_mm": 579.133
+        },
+        {
+          "issued_at": "2005-07-18T07:00:00",
+          "valid_at": "2005-07-18T10:00:00",
+          "actual_surge_mm": 669.359,
+          "predicted_surge_mm": 620.792
+        },
+        {
+          "issued_at": "2005-07-18T08:00:00",
+          "valid_at": "2005-07-18T11:00:00",
+          "actual_surge_mm": 531.277,
+          "predicted_surge_mm": 574.501
+        },
+        {
+          "issued_at": "2005-07-18T09:00:00",
+          "valid_at": "2005-07-18T12:00:00",
+          "actual_surge_mm": 491.516,
+          "predicted_surge_mm": 479.241
+        },
+        {
+          "issued_at": "2005-07-18T10:00:00",
+          "valid_at": "2005-07-18T13:00:00",
+          "actual_surge_mm": 574.18,
+          "predicted_surge_mm": 545.538
+        },
+        {
+          "issued_at": "2005-07-18T11:00:00",
+          "valid_at": "2005-07-18T14:00:00",
+          "actual_surge_mm": 431.107,
+          "predicted_surge_mm": 488.217
+        },
+        {
+          "issued_at": "2005-07-18T12:00:00",
+          "valid_at": "2005-07-18T15:00:00",
+          "actual_surge_mm": 396.078,
+          "predicted_surge_mm": 454.604
+        },
+        {
+          "issued_at": "2005-07-18T13:00:00",
+          "valid_at": "2005-07-18T16:00:00",
+          "actual_surge_mm": 397.286,
+          "predicted_surge_mm": 538.862
+        },
+        {
+          "issued_at": "2005-07-18T14:00:00",
+          "valid_at": "2005-07-18T17:00:00",
+          "actual_surge_mm": 276.414,
+          "predicted_surge_mm": 443.199
+        },
+        {
+          "issued_at": "2005-07-18T15:00:00",
+          "valid_at": "2005-07-18T18:00:00",
+          "actual_surge_mm": 277.974,
+          "predicted_surge_mm": 401.005
+        },
+        {
+          "issued_at": "2005-07-18T16:00:00",
+          "valid_at": "2005-07-18T19:00:00",
+          "actual_surge_mm": 224.418,
+          "predicted_surge_mm": 387.731
+        },
+        {
+          "issued_at": "2005-07-18T17:00:00",
+          "valid_at": "2005-07-18T20:00:00",
+          "actual_surge_mm": 263.538,
+          "predicted_surge_mm": 294.986
+        },
+        {
+          "issued_at": "2005-07-18T18:00:00",
+          "valid_at": "2005-07-18T21:00:00",
+          "actual_surge_mm": 162.751,
+          "predicted_surge_mm": 223.384
+        },
+        {
+          "issued_at": "2005-07-18T19:00:00",
+          "valid_at": "2005-07-18T22:00:00",
+          "actual_surge_mm": 205.794,
+          "predicted_surge_mm": 167.445
+        },
+        {
+          "issued_at": "2005-07-18T20:00:00",
+          "valid_at": "2005-07-18T23:00:00",
+          "actual_surge_mm": 174.517,
+          "predicted_surge_mm": 211.468
+        },
+        {
+          "issued_at": "2005-07-18T21:00:00",
+          "valid_at": "2005-07-19T00:00:00",
+          "actual_surge_mm": 215.552,
+          "predicted_surge_mm": 187.209
+        },
+        {
+          "issued_at": "2005-07-18T22:00:00",
+          "valid_at": "2005-07-19T01:00:00",
+          "actual_surge_mm": 139.244,
+          "predicted_surge_mm": 162.569
+        },
+        {
+          "issued_at": "2005-07-18T23:00:00",
+          "valid_at": "2005-07-19T02:00:00",
+          "actual_surge_mm": 119.308,
+          "predicted_surge_mm": 180.44
+        },
+        {
+          "issued_at": "2005-07-19T00:00:00",
+          "valid_at": "2005-07-19T03:00:00",
+          "actual_surge_mm": 127.126,
+          "predicted_surge_mm": 186.543
+        },
+        {
+          "issued_at": "2005-07-19T01:00:00",
+          "valid_at": "2005-07-19T04:00:00",
+          "actual_surge_mm": 191.949,
+          "predicted_surge_mm": 186.107
+        },
+        {
+          "issued_at": "2005-07-19T02:00:00",
+          "valid_at": "2005-07-19T05:00:00",
+          "actual_surge_mm": 75.347,
+          "predicted_surge_mm": 74.448
+        },
+        {
+          "issued_at": "2005-07-19T03:00:00",
+          "valid_at": "2005-07-19T06:00:00",
+          "actual_surge_mm": 101.609,
+          "predicted_surge_mm": 154.384
+        },
+        {
+          "issued_at": "2005-07-19T04:00:00",
+          "valid_at": "2005-07-19T07:00:00",
+          "actual_surge_mm": 77.957,
+          "predicted_surge_mm": 183.727
+        },
+        {
+          "issued_at": "2005-07-19T05:00:00",
+          "valid_at": "2005-07-19T08:00:00",
+          "actual_surge_mm": 115.394,
+          "predicted_surge_mm": 82.28
+        },
+        {
+          "issued_at": "2005-07-19T06:00:00",
+          "valid_at": "2005-07-19T09:00:00",
+          "actual_surge_mm": 70.146,
+          "predicted_surge_mm": 118.26
+        },
+        {
+          "issued_at": "2005-07-19T07:00:00",
+          "valid_at": "2005-07-19T10:00:00",
+          "actual_surge_mm": 94.326,
+          "predicted_surge_mm": 109.787
+        },
+        {
+          "issued_at": "2005-07-19T08:00:00",
+          "valid_at": "2005-07-19T11:00:00",
+          "actual_surge_mm": 109.879,
+          "predicted_surge_mm": 126.584
+        },
+        {
+          "issued_at": "2005-07-19T09:00:00",
+          "valid_at": "2005-07-19T12:00:00",
+          "actual_surge_mm": 69.649,
+          "predicted_surge_mm": 87.396
+        },
+        {
+          "issued_at": "2005-07-19T10:00:00",
+          "valid_at": "2005-07-19T13:00:00",
+          "actual_surge_mm": 88.413,
+          "predicted_surge_mm": 125.645
+        },
+        {
+          "issued_at": "2005-07-19T11:00:00",
+          "valid_at": "2005-07-19T14:00:00",
+          "actual_surge_mm": 79.846,
+          "predicted_surge_mm": 137.656
+        },
+        {
+          "issued_at": "2005-07-19T12:00:00",
+          "valid_at": "2005-07-19T15:00:00",
+          "actual_surge_mm": 111.491,
+          "predicted_surge_mm": 48.061
+        },
+        {
+          "issued_at": "2005-07-19T13:00:00",
+          "valid_at": "2005-07-19T16:00:00",
+          "actual_surge_mm": 32.482,
+          "predicted_surge_mm": 113.45
+        },
+        {
+          "issued_at": "2005-07-19T14:00:00",
+          "valid_at": "2005-07-19T17:00:00",
+          "actual_surge_mm": 63.698,
+          "predicted_surge_mm": 60.004
+        },
+        {
+          "issued_at": "2005-07-19T15:00:00",
+          "valid_at": "2005-07-19T18:00:00",
+          "actual_surge_mm": 39.528,
+          "predicted_surge_mm": 96.658
+        },
+        {
+          "issued_at": "2005-07-19T16:00:00",
+          "valid_at": "2005-07-19T19:00:00",
+          "actual_surge_mm": 43.289,
+          "predicted_surge_mm": 29.111
+        },
+        {
+          "issued_at": "2005-07-19T17:00:00",
+          "valid_at": "2005-07-19T20:00:00",
+          "actual_surge_mm": 21.376,
+          "predicted_surge_mm": 69.567
+        },
+        {
+          "issued_at": "2005-07-19T18:00:00",
+          "valid_at": "2005-07-19T21:00:00",
+          "actual_surge_mm": 22.155,
+          "predicted_surge_mm": 68.327
+        },
+        {
+          "issued_at": "2005-07-19T19:00:00",
+          "valid_at": "2005-07-19T22:00:00",
+          "actual_surge_mm": -11.519,
+          "predicted_surge_mm": 58.822
+        },
+        {
+          "issued_at": "2005-07-19T20:00:00",
+          "valid_at": "2005-07-19T23:00:00",
+          "actual_surge_mm": 8.283,
+          "predicted_surge_mm": 52.839
+        },
+        {
+          "issued_at": "2005-07-19T21:00:00",
+          "valid_at": "2005-07-20T00:00:00",
+          "actual_surge_mm": -17.472,
+          "predicted_surge_mm": 71.679
+        },
+        {
+          "issued_at": "2005-07-19T22:00:00",
+          "valid_at": "2005-07-20T01:00:00",
+          "actual_surge_mm": -35.652,
+          "predicted_surge_mm": 14.143
+        },
+        {
+          "issued_at": "2005-07-19T23:00:00",
+          "valid_at": "2005-07-20T02:00:00",
+          "actual_surge_mm": -31.249,
+          "predicted_surge_mm": 17.158
+        },
+        {
+          "issued_at": "2005-07-20T00:00:00",
+          "valid_at": "2005-07-20T03:00:00",
+          "actual_surge_mm": -55.329,
+          "predicted_surge_mm": 3.808
+        },
+        {
+          "issued_at": "2005-07-20T01:00:00",
+          "valid_at": "2005-07-20T04:00:00",
+          "actual_surge_mm": -51.803,
+          "predicted_surge_mm": -2.671
+        },
+        {
+          "issued_at": "2005-07-20T02:00:00",
+          "valid_at": "2005-07-20T05:00:00",
+          "actual_surge_mm": -63.455,
+          "predicted_surge_mm": -32.641
+        },
+        {
+          "issued_at": "2005-07-20T03:00:00",
+          "valid_at": "2005-07-20T06:00:00",
+          "actual_surge_mm": -34.298,
+          "predicted_surge_mm": -65.55
+        },
+        {
+          "issued_at": "2005-07-20T04:00:00",
+          "valid_at": "2005-07-20T07:00:00",
+          "actual_surge_mm": -70.113,
+          "predicted_surge_mm": -51.265
+        },
+        {
+          "issued_at": "2005-07-20T05:00:00",
+          "valid_at": "2005-07-20T08:00:00",
+          "actual_surge_mm": -47.656,
+          "predicted_surge_mm": -58.172
+        }
+      ]
+    },
+    {
+      "lead_hours": 6,
+      "model_sha256": "f14479428af965ae116966c20a533a5cb5f5c7b651c19607f78556d817fb8a57",
+      "metrics": {
+        "rmse_mm": 79.58304296410294,
+        "mae_mm": 50.08905541535021,
+        "r2": 0.7342044317917267,
+        "count": 200
+      },
+      "points": [
+        {
+          "issued_at": "2005-07-11T19:00:00",
+          "valid_at": "2005-07-12T01:00:00",
+          "actual_surge_mm": -2.198,
+          "predicted_surge_mm": 22.868
+        },
+        {
+          "issued_at": "2005-07-11T20:00:00",
+          "valid_at": "2005-07-12T02:00:00",
+          "actual_surge_mm": -12.662,
+          "predicted_surge_mm": 21.596
+        },
+        {
+          "issued_at": "2005-07-11T21:00:00",
+          "valid_at": "2005-07-12T03:00:00",
+          "actual_surge_mm": -3.942,
+          "predicted_surge_mm": 19.839
+        },
+        {
+          "issued_at": "2005-07-11T22:00:00",
+          "valid_at": "2005-07-12T04:00:00",
+          "actual_surge_mm": 1.429,
+          "predicted_surge_mm": -1.852
+        },
+        {
+          "issued_at": "2005-07-11T23:00:00",
+          "valid_at": "2005-07-12T05:00:00",
+          "actual_surge_mm": 2.743,
+          "predicted_surge_mm": -15.255
+        },
+        {
+          "issued_at": "2005-07-12T00:00:00",
+          "valid_at": "2005-07-12T06:00:00",
+          "actual_surge_mm": -18.299,
+          "predicted_surge_mm": -19.812
+        },
+        {
+          "issued_at": "2005-07-12T01:00:00",
+          "valid_at": "2005-07-12T07:00:00",
+          "actual_surge_mm": 4.172,
+          "predicted_surge_mm": -18.013
+        },
+        {
+          "issued_at": "2005-07-12T02:00:00",
+          "valid_at": "2005-07-12T08:00:00",
+          "actual_surge_mm": 5.936,
+          "predicted_surge_mm": -38.115
+        },
+        {
+          "issued_at": "2005-07-12T03:00:00",
+          "valid_at": "2005-07-12T09:00:00",
+          "actual_surge_mm": -12.424,
+          "predicted_surge_mm": -47.163
+        },
+        {
+          "issued_at": "2005-07-12T04:00:00",
+          "valid_at": "2005-07-12T10:00:00",
+          "actual_surge_mm": -6.614,
+          "predicted_surge_mm": -30.933
+        },
+        {
+          "issued_at": "2005-07-12T05:00:00",
+          "valid_at": "2005-07-12T11:00:00",
+          "actual_surge_mm": 31.865,
+          "predicted_surge_mm": -21.001
+        },
+        {
+          "issued_at": "2005-07-12T06:00:00",
+          "valid_at": "2005-07-12T12:00:00",
+          "actual_surge_mm": 57.295,
+          "predicted_surge_mm": -8.452
+        },
+        {
+          "issued_at": "2005-07-12T07:00:00",
+          "valid_at": "2005-07-12T13:00:00",
+          "actual_surge_mm": 32.506,
+          "predicted_surge_mm": 18.923
+        },
+        {
+          "issued_at": "2005-07-12T08:00:00",
+          "valid_at": "2005-07-12T14:00:00",
+          "actual_surge_mm": 27.563,
+          "predicted_surge_mm": 39.393
+        },
+        {
+          "issued_at": "2005-07-12T09:00:00",
+          "valid_at": "2005-07-12T15:00:00",
+          "actual_surge_mm": 37.455,
+          "predicted_surge_mm": 27.982
+        },
+        {
+          "issued_at": "2005-07-12T10:00:00",
+          "valid_at": "2005-07-12T16:00:00",
+          "actual_surge_mm": 43.985,
+          "predicted_surge_mm": 35.005
+        },
+        {
+          "issued_at": "2005-07-12T11:00:00",
+          "valid_at": "2005-07-12T17:00:00",
+          "actual_surge_mm": 79.164,
+          "predicted_surge_mm": 44.726
+        },
+        {
+          "issued_at": "2005-07-12T12:00:00",
+          "valid_at": "2005-07-12T18:00:00",
+          "actual_surge_mm": 61.131,
+          "predicted_surge_mm": 55.24
+        },
+        {
+          "issued_at": "2005-07-12T13:00:00",
+          "valid_at": "2005-07-12T19:00:00",
+          "actual_surge_mm": 70.327,
+          "predicted_surge_mm": 36.571
+        },
+        {
+          "issued_at": "2005-07-12T14:00:00",
+          "valid_at": "2005-07-12T20:00:00",
+          "actual_surge_mm": 33.71,
+          "predicted_surge_mm": 36.476
+        },
+        {
+          "issued_at": "2005-07-12T15:00:00",
+          "valid_at": "2005-07-12T21:00:00",
+          "actual_surge_mm": 17.695,
+          "predicted_surge_mm": 34.95
+        },
+        {
+          "issued_at": "2005-07-12T16:00:00",
+          "valid_at": "2005-07-12T22:00:00",
+          "actual_surge_mm": -15.804,
+          "predicted_surge_mm": 30.252
+        },
+        {
+          "issued_at": "2005-07-12T17:00:00",
+          "valid_at": "2005-07-12T23:00:00",
+          "actual_surge_mm": 10.342,
+          "predicted_surge_mm": 41.21
+        },
+        {
+          "issued_at": "2005-07-12T18:00:00",
+          "valid_at": "2005-07-13T00:00:00",
+          "actual_surge_mm": 14.252,
+          "predicted_surge_mm": 56.128
+        },
+        {
+          "issued_at": "2005-07-12T19:00:00",
+          "valid_at": "2005-07-13T01:00:00",
+          "actual_surge_mm": 1.651,
+          "predicted_surge_mm": 74.726
+        },
+        {
+          "issued_at": "2005-07-12T20:00:00",
+          "valid_at": "2005-07-13T02:00:00",
+          "actual_surge_mm": 0.24,
+          "predicted_surge_mm": 58.052
+        },
+        {
+          "issued_at": "2005-07-12T21:00:00",
+          "valid_at": "2005-07-13T03:00:00",
+          "actual_surge_mm": 19.52,
+          "predicted_surge_mm": 54.144
+        },
+        {
+          "issued_at": "2005-07-12T22:00:00",
+          "valid_at": "2005-07-13T04:00:00",
+          "actual_surge_mm": 46.761,
+          "predicted_surge_mm": 44.049
+        },
+        {
+          "issued_at": "2005-07-12T23:00:00",
+          "valid_at": "2005-07-13T05:00:00",
+          "actual_surge_mm": 47.236,
+          "predicted_surge_mm": 41.946
+        },
+        {
+          "issued_at": "2005-07-13T00:00:00",
+          "valid_at": "2005-07-13T06:00:00",
+          "actual_surge_mm": 29.466,
+          "predicted_surge_mm": 36.481
+        },
+        {
+          "issued_at": "2005-07-13T01:00:00",
+          "valid_at": "2005-07-13T07:00:00",
+          "actual_surge_mm": 40.421,
+          "predicted_surge_mm": 25.013
+        },
+        {
+          "issued_at": "2005-07-13T02:00:00",
+          "valid_at": "2005-07-13T08:00:00",
+          "actual_surge_mm": 48.632,
+          "predicted_surge_mm": 26.97
+        },
+        {
+          "issued_at": "2005-07-13T03:00:00",
+          "valid_at": "2005-07-13T09:00:00",
+          "actual_surge_mm": 29.372,
+          "predicted_surge_mm": 15.192
+        },
+        {
+          "issued_at": "2005-07-13T04:00:00",
+          "valid_at": "2005-07-13T10:00:00",
+          "actual_surge_mm": 61.155,
+          "predicted_surge_mm": 20.444
+        },
+        {
+          "issued_at": "2005-07-13T05:00:00",
+          "valid_at": "2005-07-13T11:00:00",
+          "actual_surge_mm": 78.176,
+          "predicted_surge_mm": 19.644
+        },
+        {
+          "issued_at": "2005-07-13T06:00:00",
+          "valid_at": "2005-07-13T12:00:00",
+          "actual_surge_mm": 73.504,
+          "predicted_surge_mm": 16.021
+        },
+        {
+          "issued_at": "2005-07-13T07:00:00",
+          "valid_at": "2005-07-13T13:00:00",
+          "actual_surge_mm": 63.939,
+          "predicted_surge_mm": 28.406
+        },
+        {
+          "issued_at": "2005-07-13T08:00:00",
+          "valid_at": "2005-07-13T14:00:00",
+          "actual_surge_mm": 56.27,
+          "predicted_surge_mm": 50.153
+        },
+        {
+          "issued_at": "2005-07-13T09:00:00",
+          "valid_at": "2005-07-13T15:00:00",
+          "actual_surge_mm": 48.923,
+          "predicted_surge_mm": 45.044
+        },
+        {
+          "issued_at": "2005-07-13T10:00:00",
+          "valid_at": "2005-07-13T16:00:00",
+          "actual_surge_mm": 49.737,
+          "predicted_surge_mm": 60.008
+        },
+        {
+          "issued_at": "2005-07-13T11:00:00",
+          "valid_at": "2005-07-13T17:00:00",
+          "actual_surge_mm": 63.465,
+          "predicted_surge_mm": 86.377
+        },
+        {
+          "issued_at": "2005-07-13T12:00:00",
+          "valid_at": "2005-07-13T18:00:00",
+          "actual_surge_mm": 71.689,
+          "predicted_surge_mm": 91.46
+        },
+        {
+          "issued_at": "2005-07-13T13:00:00",
+          "valid_at": "2005-07-13T19:00:00",
+          "actual_surge_mm": 79.071,
+          "predicted_surge_mm": 95.417
+        },
+        {
+          "issued_at": "2005-07-13T14:00:00",
+          "valid_at": "2005-07-13T20:00:00",
+          "actual_surge_mm": 79.254,
+          "predicted_surge_mm": 86.97
+        },
+        {
+          "issued_at": "2005-07-13T15:00:00",
+          "valid_at": "2005-07-13T21:00:00",
+          "actual_surge_mm": 51.93,
+          "predicted_surge_mm": 79.077
+        },
+        {
+          "issued_at": "2005-07-13T16:00:00",
+          "valid_at": "2005-07-13T22:00:00",
+          "actual_surge_mm": 30.969,
+          "predicted_surge_mm": 56.569
+        },
+        {
+          "issued_at": "2005-07-13T17:00:00",
+          "valid_at": "2005-07-13T23:00:00",
+          "actual_surge_mm": 28.537,
+          "predicted_surge_mm": 68.748
+        },
+        {
+          "issued_at": "2005-07-13T18:00:00",
+          "valid_at": "2005-07-14T00:00:00",
+          "actual_surge_mm": -1.166,
+          "predicted_surge_mm": 56.75
+        },
+        {
+          "issued_at": "2005-07-13T19:00:00",
+          "valid_at": "2005-07-14T01:00:00",
+          "actual_surge_mm": -6.946,
+          "predicted_surge_mm": 57.288
+        },
+        {
+          "issued_at": "2005-07-13T20:00:00",
+          "valid_at": "2005-07-14T02:00:00",
+          "actual_surge_mm": 1.137,
+          "predicted_surge_mm": 53.988
+        },
+        {
+          "issued_at": "2005-07-13T21:00:00",
+          "valid_at": "2005-07-14T03:00:00",
+          "actual_surge_mm": -8.171,
+          "predicted_surge_mm": 54.7
+        },
+        {
+          "issued_at": "2005-07-13T22:00:00",
+          "valid_at": "2005-07-14T04:00:00",
+          "actual_surge_mm": 20.776,
+          "predicted_surge_mm": 43.202
+        },
+        {
+          "issued_at": "2005-07-13T23:00:00",
+          "valid_at": "2005-07-14T05:00:00",
+          "actual_surge_mm": 8.308,
+          "predicted_surge_mm": 38.78
+        },
+        {
+          "issued_at": "2005-07-14T00:00:00",
+          "valid_at": "2005-07-14T06:00:00",
+          "actual_surge_mm": 9.244,
+          "predicted_surge_mm": 27.418
+        },
+        {
+          "issued_at": "2005-07-14T01:00:00",
+          "valid_at": "2005-07-14T07:00:00",
+          "actual_surge_mm": 32.327,
+          "predicted_surge_mm": 25.29
+        },
+        {
+          "issued_at": "2005-07-14T02:00:00",
+          "valid_at": "2005-07-14T08:00:00",
+          "actual_surge_mm": 45.414,
+          "predicted_surge_mm": 24.729
+        },
+        {
+          "issued_at": "2005-07-14T03:00:00",
+          "valid_at": "2005-07-14T09:00:00",
+          "actual_surge_mm": 69.18,
+          "predicted_surge_mm": 12.374
+        },
+        {
+          "issued_at": "2005-07-14T04:00:00",
+          "valid_at": "2005-07-14T10:00:00",
+          "actual_surge_mm": 52.141,
+          "predicted_surge_mm": 18.213
+        },
+        {
+          "issued_at": "2005-07-14T05:00:00",
+          "valid_at": "2005-07-14T11:00:00",
+          "actual_surge_mm": 49.944,
+          "predicted_surge_mm": 20.552
+        },
+        {
+          "issued_at": "2005-07-14T06:00:00",
+          "valid_at": "2005-07-14T12:00:00",
+          "actual_surge_mm": 49.129,
+          "predicted_surge_mm": 11.503
+        },
+        {
+          "issued_at": "2005-07-14T07:00:00",
+          "valid_at": "2005-07-14T13:00:00",
+          "actual_surge_mm": 30.375,
+          "predicted_surge_mm": 15.108
+        },
+        {
+          "issued_at": "2005-07-14T08:00:00",
+          "valid_at": "2005-07-14T14:00:00",
+          "actual_surge_mm": 24.29,
+          "predicted_surge_mm": 22.183
+        },
+        {
+          "issued_at": "2005-07-14T09:00:00",
+          "valid_at": "2005-07-14T15:00:00",
+          "actual_surge_mm": 44.726,
+          "predicted_surge_mm": 22.961
+        },
+        {
+          "issued_at": "2005-07-14T10:00:00",
+          "valid_at": "2005-07-14T16:00:00",
+          "actual_surge_mm": 44.015,
+          "predicted_surge_mm": 24.166
+        },
+        {
+          "issued_at": "2005-07-14T11:00:00",
+          "valid_at": "2005-07-14T17:00:00",
+          "actual_surge_mm": 59.209,
+          "predicted_surge_mm": 41.441
+        },
+        {
+          "issued_at": "2005-07-14T12:00:00",
+          "valid_at": "2005-07-14T18:00:00",
+          "actual_surge_mm": 47.999,
+          "predicted_surge_mm": 57.693
+        },
+        {
+          "issued_at": "2005-07-14T13:00:00",
+          "valid_at": "2005-07-14T19:00:00",
+          "actual_surge_mm": 55.951,
+          "predicted_surge_mm": 63.958
+        },
+        {
+          "issued_at": "2005-07-14T14:00:00",
+          "valid_at": "2005-07-14T20:00:00",
+          "actual_surge_mm": 70.046,
+          "predicted_surge_mm": 64.365
+        },
+        {
+          "issued_at": "2005-07-14T15:00:00",
+          "valid_at": "2005-07-14T21:00:00",
+          "actual_surge_mm": 37.457,
+          "predicted_surge_mm": 66.974
+        },
+        {
+          "issued_at": "2005-07-14T16:00:00",
+          "valid_at": "2005-07-14T22:00:00",
+          "actual_surge_mm": 25.258,
+          "predicted_surge_mm": 66.843
+        },
+        {
+          "issued_at": "2005-07-14T17:00:00",
+          "valid_at": "2005-07-14T23:00:00",
+          "actual_surge_mm": 38.367,
+          "predicted_surge_mm": 57.732
+        },
+        {
+          "issued_at": "2005-07-14T18:00:00",
+          "valid_at": "2005-07-15T00:00:00",
+          "actual_surge_mm": 11.159,
+          "predicted_surge_mm": 40.324
+        },
+        {
+          "issued_at": "2005-07-14T19:00:00",
+          "valid_at": "2005-07-15T01:00:00",
+          "actual_surge_mm": 1.966,
+          "predicted_surge_mm": 26.904
+        },
+        {
+          "issued_at": "2005-07-14T20:00:00",
+          "valid_at": "2005-07-15T02:00:00",
+          "actual_surge_mm": -17.383,
+          "predicted_surge_mm": 26.506
+        },
+        {
+          "issued_at": "2005-07-14T21:00:00",
+          "valid_at": "2005-07-15T03:00:00",
+          "actual_surge_mm": -4.447,
+          "predicted_surge_mm": 8.484
+        },
+        {
+          "issued_at": "2005-07-14T22:00:00",
+          "valid_at": "2005-07-15T04:00:00",
+          "actual_surge_mm": -9.924,
+          "predicted_surge_mm": 6.688
+        },
+        {
+          "issued_at": "2005-07-14T23:00:00",
+          "valid_at": "2005-07-15T05:00:00",
+          "actual_surge_mm": -8.312,
+          "predicted_surge_mm": 22.013
+        },
+        {
+          "issued_at": "2005-07-15T00:00:00",
+          "valid_at": "2005-07-15T06:00:00",
+          "actual_surge_mm": 3.801,
+          "predicted_surge_mm": 17.634
+        },
+        {
+          "issued_at": "2005-07-15T01:00:00",
+          "valid_at": "2005-07-15T07:00:00",
+          "actual_surge_mm": 23.636,
+          "predicted_surge_mm": 10.783
+        },
+        {
+          "issued_at": "2005-07-15T02:00:00",
+          "valid_at": "2005-07-15T08:00:00",
+          "actual_surge_mm": 41.859,
+          "predicted_surge_mm": 15.736
+        },
+        {
+          "issued_at": "2005-07-15T03:00:00",
+          "valid_at": "2005-07-15T09:00:00",
+          "actual_surge_mm": 53.087,
+          "predicted_surge_mm": 20.727
+        },
+        {
+          "issued_at": "2005-07-15T04:00:00",
+          "valid_at": "2005-07-15T10:00:00",
+          "actual_surge_mm": 57.481,
+          "predicted_surge_mm": 21.157
+        },
+        {
+          "issued_at": "2005-07-15T05:00:00",
+          "valid_at": "2005-07-15T11:00:00",
+          "actual_surge_mm": 39.33,
+          "predicted_surge_mm": 13.563
+        },
+        {
+          "issued_at": "2005-07-15T06:00:00",
+          "valid_at": "2005-07-15T12:00:00",
+          "actual_surge_mm": 35.349,
+          "predicted_surge_mm": 19.288
+        },
+        {
+          "issued_at": "2005-07-15T07:00:00",
+          "valid_at": "2005-07-15T13:00:00",
+          "actual_surge_mm": 59.239,
+          "predicted_surge_mm": 14.278
+        },
+        {
+          "issued_at": "2005-07-15T08:00:00",
+          "valid_at": "2005-07-15T14:00:00",
+          "actual_surge_mm": 46.154,
+          "predicted_surge_mm": 7.702
+        },
+        {
+          "issued_at": "2005-07-15T09:00:00",
+          "valid_at": "2005-07-15T15:00:00",
+          "actual_surge_mm": 63.804,
+          "predicted_surge_mm": 19.755
+        },
+        {
+          "issued_at": "2005-07-15T10:00:00",
+          "valid_at": "2005-07-15T16:00:00",
+          "actual_surge_mm": 55.774,
+          "predicted_surge_mm": 38.049
+        },
+        {
+          "issued_at": "2005-07-15T11:00:00",
+          "valid_at": "2005-07-15T17:00:00",
+          "actual_surge_mm": 57.418,
+          "predicted_surge_mm": 32.162
+        },
+        {
+          "issued_at": "2005-07-15T12:00:00",
+          "valid_at": "2005-07-15T18:00:00",
+          "actual_surge_mm": 63.158,
+          "predicted_surge_mm": 41.6
+        },
+        {
+          "issued_at": "2005-07-15T13:00:00",
+          "valid_at": "2005-07-15T19:00:00",
+          "actual_surge_mm": 61.302,
+          "predicted_surge_mm": 65.018
+        },
+        {
+          "issued_at": "2005-07-15T14:00:00",
+          "valid_at": "2005-07-15T20:00:00",
+          "actual_surge_mm": 55.784,
+          "predicted_surge_mm": 71.466
+        },
+        {
+          "issued_at": "2005-07-15T15:00:00",
+          "valid_at": "2005-07-15T21:00:00",
+          "actual_surge_mm": 38.842,
+          "predicted_surge_mm": 76.068
+        },
+        {
+          "issued_at": "2005-07-15T16:00:00",
+          "valid_at": "2005-07-15T22:00:00",
+          "actual_surge_mm": 55.121,
+          "predicted_surge_mm": 72.63
+        },
+        {
+          "issued_at": "2005-07-15T17:00:00",
+          "valid_at": "2005-07-15T23:00:00",
+          "actual_surge_mm": 43.047,
+          "predicted_surge_mm": 75.667
+        },
+        {
+          "issued_at": "2005-07-15T18:00:00",
+          "valid_at": "2005-07-16T00:00:00",
+          "actual_surge_mm": 18.366,
+          "predicted_surge_mm": 61.425
+        },
+        {
+          "issued_at": "2005-07-15T19:00:00",
+          "valid_at": "2005-07-16T01:00:00",
+          "actual_surge_mm": 30.163,
+          "predicted_surge_mm": 47.595
+        },
+        {
+          "issued_at": "2005-07-15T20:00:00",
+          "valid_at": "2005-07-16T02:00:00",
+          "actual_surge_mm": 10.395,
+          "predicted_surge_mm": 49.491
+        },
+        {
+          "issued_at": "2005-07-15T21:00:00",
+          "valid_at": "2005-07-16T03:00:00",
+          "actual_surge_mm": 34.67,
+          "predicted_surge_mm": 36.961
+        },
+        {
+          "issued_at": "2005-07-15T22:00:00",
+          "valid_at": "2005-07-16T04:00:00",
+          "actual_surge_mm": 61.99,
+          "predicted_surge_mm": 40.065
+        },
+        {
+          "issued_at": "2005-07-15T23:00:00",
+          "valid_at": "2005-07-16T05:00:00",
+          "actual_surge_mm": 35.303,
+          "predicted_surge_mm": 32.861
+        },
+        {
+          "issued_at": "2005-07-16T00:00:00",
+          "valid_at": "2005-07-16T06:00:00",
+          "actual_surge_mm": 61.596,
+          "predicted_surge_mm": 26.032
+        },
+        {
+          "issued_at": "2005-07-16T01:00:00",
+          "valid_at": "2005-07-16T07:00:00",
+          "actual_surge_mm": 95.828,
+          "predicted_surge_mm": 43.726
+        },
+        {
+          "issued_at": "2005-07-16T02:00:00",
+          "valid_at": "2005-07-16T08:00:00",
+          "actual_surge_mm": 121.625,
+          "predicted_surge_mm": 38.568
+        },
+        {
+          "issued_at": "2005-07-16T03:00:00",
+          "valid_at": "2005-07-16T09:00:00",
+          "actual_surge_mm": 104.913,
+          "predicted_surge_mm": 54.305
+        },
+        {
+          "issued_at": "2005-07-16T04:00:00",
+          "valid_at": "2005-07-16T10:00:00",
+          "actual_surge_mm": 98.933,
+          "predicted_surge_mm": 82.001
+        },
+        {
+          "issued_at": "2005-07-16T05:00:00",
+          "valid_at": "2005-07-16T11:00:00",
+          "actual_surge_mm": 75.815,
+          "predicted_surge_mm": 59.266
+        },
+        {
+          "issued_at": "2005-07-16T06:00:00",
+          "valid_at": "2005-07-16T12:00:00",
+          "actual_surge_mm": 57.722,
+          "predicted_surge_mm": 66.256
+        },
+        {
+          "issued_at": "2005-07-16T07:00:00",
+          "valid_at": "2005-07-16T13:00:00",
+          "actual_surge_mm": 57.447,
+          "predicted_surge_mm": 94.447
+        },
+        {
+          "issued_at": "2005-07-16T08:00:00",
+          "valid_at": "2005-07-16T14:00:00",
+          "actual_surge_mm": 71.71,
+          "predicted_surge_mm": 110.997
+        },
+        {
+          "issued_at": "2005-07-16T09:00:00",
+          "valid_at": "2005-07-16T15:00:00",
+          "actual_surge_mm": 101.468,
+          "predicted_surge_mm": 123.671
+        },
+        {
+          "issued_at": "2005-07-16T10:00:00",
+          "valid_at": "2005-07-16T16:00:00",
+          "actual_surge_mm": 107.348,
+          "predicted_surge_mm": 143.082
+        },
+        {
+          "issued_at": "2005-07-16T11:00:00",
+          "valid_at": "2005-07-16T17:00:00",
+          "actual_surge_mm": 90.666,
+          "predicted_surge_mm": 134.903
+        },
+        {
+          "issued_at": "2005-07-16T12:00:00",
+          "valid_at": "2005-07-16T18:00:00",
+          "actual_surge_mm": 88.957,
+          "predicted_surge_mm": 103.504
+        },
+        {
+          "issued_at": "2005-07-16T13:00:00",
+          "valid_at": "2005-07-16T19:00:00",
+          "actual_surge_mm": 104.083,
+          "predicted_surge_mm": 108.225
+        },
+        {
+          "issued_at": "2005-07-16T14:00:00",
+          "valid_at": "2005-07-16T20:00:00",
+          "actual_surge_mm": 105.16,
+          "predicted_surge_mm": 111.204
+        },
+        {
+          "issued_at": "2005-07-16T15:00:00",
+          "valid_at": "2005-07-16T21:00:00",
+          "actual_surge_mm": 138.61,
+          "predicted_surge_mm": 139.036
+        },
+        {
+          "issued_at": "2005-07-16T16:00:00",
+          "valid_at": "2005-07-16T22:00:00",
+          "actual_surge_mm": 104.816,
+          "predicted_surge_mm": 142.91
+        },
+        {
+          "issued_at": "2005-07-16T17:00:00",
+          "valid_at": "2005-07-16T23:00:00",
+          "actual_surge_mm": 97.474,
+          "predicted_surge_mm": 116.188
+        },
+        {
+          "issued_at": "2005-07-16T18:00:00",
+          "valid_at": "2005-07-17T00:00:00",
+          "actual_surge_mm": 99.152,
+          "predicted_surge_mm": 91.289
+        },
+        {
+          "issued_at": "2005-07-16T19:00:00",
+          "valid_at": "2005-07-17T01:00:00",
+          "actual_surge_mm": 122.399,
+          "predicted_surge_mm": 105.986
+        },
+        {
+          "issued_at": "2005-07-16T20:00:00",
+          "valid_at": "2005-07-17T02:00:00",
+          "actual_surge_mm": 96.374,
+          "predicted_surge_mm": 101.95
+        },
+        {
+          "issued_at": "2005-07-16T21:00:00",
+          "valid_at": "2005-07-17T03:00:00",
+          "actual_surge_mm": 138.434,
+          "predicted_surge_mm": 126.634
+        },
+        {
+          "issued_at": "2005-07-16T22:00:00",
+          "valid_at": "2005-07-17T04:00:00",
+          "actual_surge_mm": 146.868,
+          "predicted_surge_mm": 125.274
+        },
+        {
+          "issued_at": "2005-07-16T23:00:00",
+          "valid_at": "2005-07-17T05:00:00",
+          "actual_surge_mm": 153.405,
+          "predicted_surge_mm": 115.368
+        },
+        {
+          "issued_at": "2005-07-17T00:00:00",
+          "valid_at": "2005-07-17T06:00:00",
+          "actual_surge_mm": 151.754,
+          "predicted_surge_mm": 119.822
+        },
+        {
+          "issued_at": "2005-07-17T01:00:00",
+          "valid_at": "2005-07-17T07:00:00",
+          "actual_surge_mm": 189.938,
+          "predicted_surge_mm": 157.517
+        },
+        {
+          "issued_at": "2005-07-17T02:00:00",
+          "valid_at": "2005-07-17T08:00:00",
+          "actual_surge_mm": 166.846,
+          "predicted_surge_mm": 155.174
+        },
+        {
+          "issued_at": "2005-07-17T03:00:00",
+          "valid_at": "2005-07-17T09:00:00",
+          "actual_surge_mm": 214.464,
+          "predicted_surge_mm": 167.184
+        },
+        {
+          "issued_at": "2005-07-17T04:00:00",
+          "valid_at": "2005-07-17T10:00:00",
+          "actual_surge_mm": 222.223,
+          "predicted_surge_mm": 195.241
+        },
+        {
+          "issued_at": "2005-07-17T05:00:00",
+          "valid_at": "2005-07-17T11:00:00",
+          "actual_surge_mm": 192.27,
+          "predicted_surge_mm": 167.33
+        },
+        {
+          "issued_at": "2005-07-17T06:00:00",
+          "valid_at": "2005-07-17T12:00:00",
+          "actual_surge_mm": 108.6,
+          "predicted_surge_mm": 156.81
+        },
+        {
+          "issued_at": "2005-07-17T07:00:00",
+          "valid_at": "2005-07-17T13:00:00",
+          "actual_surge_mm": 118.13,
+          "predicted_surge_mm": 161.47
+        },
+        {
+          "issued_at": "2005-07-17T08:00:00",
+          "valid_at": "2005-07-17T14:00:00",
+          "actual_surge_mm": 240.939,
+          "predicted_surge_mm": 178.518
+        },
+        {
+          "issued_at": "2005-07-17T09:00:00",
+          "valid_at": "2005-07-17T15:00:00",
+          "actual_surge_mm": 223.465,
+          "predicted_surge_mm": 217.622
+        },
+        {
+          "issued_at": "2005-07-17T10:00:00",
+          "valid_at": "2005-07-17T16:00:00",
+          "actual_surge_mm": 184.292,
+          "predicted_surge_mm": 253.741
+        },
+        {
+          "issued_at": "2005-07-17T11:00:00",
+          "valid_at": "2005-07-17T17:00:00",
+          "actual_surge_mm": 238.858,
+          "predicted_surge_mm": 218.204
+        },
+        {
+          "issued_at": "2005-07-17T12:00:00",
+          "valid_at": "2005-07-17T18:00:00",
+          "actual_surge_mm": 228.465,
+          "predicted_surge_mm": 184.481
+        },
+        {
+          "issued_at": "2005-07-17T13:00:00",
+          "valid_at": "2005-07-17T19:00:00",
+          "actual_surge_mm": 311.344,
+          "predicted_surge_mm": 171.122
+        },
+        {
+          "issued_at": "2005-07-17T14:00:00",
+          "valid_at": "2005-07-17T20:00:00",
+          "actual_surge_mm": 331.154,
+          "predicted_surge_mm": 251.307
+        },
+        {
+          "issued_at": "2005-07-17T15:00:00",
+          "valid_at": "2005-07-17T21:00:00",
+          "actual_surge_mm": 276.159,
+          "predicted_surge_mm": 224.24
+        },
+        {
+          "issued_at": "2005-07-17T16:00:00",
+          "valid_at": "2005-07-17T22:00:00",
+          "actual_surge_mm": 290.482,
+          "predicted_surge_mm": 197.929
+        },
+        {
+          "issued_at": "2005-07-17T17:00:00",
+          "valid_at": "2005-07-17T23:00:00",
+          "actual_surge_mm": 317.706,
+          "predicted_surge_mm": 215.727
+        },
+        {
+          "issued_at": "2005-07-17T18:00:00",
+          "valid_at": "2005-07-18T00:00:00",
+          "actual_surge_mm": 446.777,
+          "predicted_surge_mm": 225.951
+        },
+        {
+          "issued_at": "2005-07-17T19:00:00",
+          "valid_at": "2005-07-18T01:00:00",
+          "actual_surge_mm": 372.796,
+          "predicted_surge_mm": 305.54
+        },
+        {
+          "issued_at": "2005-07-17T20:00:00",
+          "valid_at": "2005-07-18T02:00:00",
+          "actual_surge_mm": 428.072,
+          "predicted_surge_mm": 316.141
+        },
+        {
+          "issued_at": "2005-07-17T21:00:00",
+          "valid_at": "2005-07-18T03:00:00",
+          "actual_surge_mm": 540.114,
+          "predicted_surge_mm": 268.85
+        },
+        {
+          "issued_at": "2005-07-17T22:00:00",
+          "valid_at": "2005-07-18T04:00:00",
+          "actual_surge_mm": 614.376,
+          "predicted_surge_mm": 273.82
+        },
+        {
+          "issued_at": "2005-07-17T23:00:00",
+          "valid_at": "2005-07-18T05:00:00",
+          "actual_surge_mm": 583.459,
+          "predicted_surge_mm": 313.143
+        },
+        {
+          "issued_at": "2005-07-18T00:00:00",
+          "valid_at": "2005-07-18T06:00:00",
+          "actual_surge_mm": 704.934,
+          "predicted_surge_mm": 419.318
+        },
+        {
+          "issued_at": "2005-07-18T01:00:00",
+          "valid_at": "2005-07-18T07:00:00",
+          "actual_surge_mm": 710.757,
+          "predicted_surge_mm": 395.27
+        },
+        {
+          "issued_at": "2005-07-18T02:00:00",
+          "valid_at": "2005-07-18T08:00:00",
+          "actual_surge_mm": 701.575,
+          "predicted_surge_mm": 426.318
+        },
+        {
+          "issued_at": "2005-07-18T03:00:00",
+          "valid_at": "2005-07-18T09:00:00",
+          "actual_surge_mm": 602.093,
+          "predicted_surge_mm": 527.041
+        },
+        {
+          "issued_at": "2005-07-18T04:00:00",
+          "valid_at": "2005-07-18T10:00:00",
+          "actual_surge_mm": 669.359,
+          "predicted_surge_mm": 577.979
+        },
+        {
+          "issued_at": "2005-07-18T05:00:00",
+          "valid_at": "2005-07-18T11:00:00",
+          "actual_surge_mm": 531.277,
+          "predicted_surge_mm": 547.468
+        },
+        {
+          "issued_at": "2005-07-18T06:00:00",
+          "valid_at": "2005-07-18T12:00:00",
+          "actual_surge_mm": 491.516,
+          "predicted_surge_mm": 568.973
+        },
+        {
+          "issued_at": "2005-07-18T07:00:00",
+          "valid_at": "2005-07-18T13:00:00",
+          "actual_surge_mm": 574.18,
+          "predicted_surge_mm": 639.501
+        },
+        {
+          "issued_at": "2005-07-18T08:00:00",
+          "valid_at": "2005-07-18T14:00:00",
+          "actual_surge_mm": 431.107,
+          "predicted_surge_mm": 612.053
+        },
+        {
+          "issued_at": "2005-07-18T09:00:00",
+          "valid_at": "2005-07-18T15:00:00",
+          "actual_surge_mm": 396.078,
+          "predicted_surge_mm": 548.83
+        },
+        {
+          "issued_at": "2005-07-18T10:00:00",
+          "valid_at": "2005-07-18T16:00:00",
+          "actual_surge_mm": 397.286,
+          "predicted_surge_mm": 567.645
+        },
+        {
+          "issued_at": "2005-07-18T11:00:00",
+          "valid_at": "2005-07-18T17:00:00",
+          "actual_surge_mm": 276.414,
+          "predicted_surge_mm": 534.042
+        },
+        {
+          "issued_at": "2005-07-18T12:00:00",
+          "valid_at": "2005-07-18T18:00:00",
+          "actual_surge_mm": 277.974,
+          "predicted_surge_mm": 449.169
+        },
+        {
+          "issued_at": "2005-07-18T13:00:00",
+          "valid_at": "2005-07-18T19:00:00",
+          "actual_surge_mm": 224.418,
+          "predicted_surge_mm": 542.601
+        },
+        {
+          "issued_at": "2005-07-18T14:00:00",
+          "valid_at": "2005-07-18T20:00:00",
+          "actual_surge_mm": 263.538,
+          "predicted_surge_mm": 345.162
+        },
+        {
+          "issued_at": "2005-07-18T15:00:00",
+          "valid_at": "2005-07-18T21:00:00",
+          "actual_surge_mm": 162.751,
+          "predicted_surge_mm": 322.859
+        },
+        {
+          "issued_at": "2005-07-18T16:00:00",
+          "valid_at": "2005-07-18T22:00:00",
+          "actual_surge_mm": 205.794,
+          "predicted_surge_mm": 285.77
+        },
+        {
+          "issued_at": "2005-07-18T17:00:00",
+          "valid_at": "2005-07-18T23:00:00",
+          "actual_surge_mm": 174.517,
+          "predicted_surge_mm": 167.45
+        },
+        {
+          "issued_at": "2005-07-18T18:00:00",
+          "valid_at": "2005-07-19T00:00:00",
+          "actual_surge_mm": 215.552,
+          "predicted_surge_mm": 162.223
+        },
+        {
+          "issued_at": "2005-07-18T19:00:00",
+          "valid_at": "2005-07-19T01:00:00",
+          "actual_surge_mm": 139.244,
+          "predicted_surge_mm": 160.748
+        },
+        {
+          "issued_at": "2005-07-18T20:00:00",
+          "valid_at": "2005-07-19T02:00:00",
+          "actual_surge_mm": 119.308,
+          "predicted_surge_mm": 194.117
+        },
+        {
+          "issued_at": "2005-07-18T21:00:00",
+          "valid_at": "2005-07-19T03:00:00",
+          "actual_surge_mm": 127.126,
+          "predicted_surge_mm": 158.104
+        },
+        {
+          "issued_at": "2005-07-18T22:00:00",
+          "valid_at": "2005-07-19T04:00:00",
+          "actual_surge_mm": 191.949,
+          "predicted_surge_mm": 215.658
+        },
+        {
+          "issued_at": "2005-07-18T23:00:00",
+          "valid_at": "2005-07-19T05:00:00",
+          "actual_surge_mm": 75.347,
+          "predicted_surge_mm": 161.278
+        },
+        {
+          "issued_at": "2005-07-19T00:00:00",
+          "valid_at": "2005-07-19T06:00:00",
+          "actual_surge_mm": 101.609,
+          "predicted_surge_mm": 257.426
+        },
+        {
+          "issued_at": "2005-07-19T01:00:00",
+          "valid_at": "2005-07-19T07:00:00",
+          "actual_surge_mm": 77.957,
+          "predicted_surge_mm": 239.84
+        },
+        {
+          "issued_at": "2005-07-19T02:00:00",
+          "valid_at": "2005-07-19T08:00:00",
+          "actual_surge_mm": 115.394,
+          "predicted_surge_mm": 138.431
+        },
+        {
+          "issued_at": "2005-07-19T03:00:00",
+          "valid_at": "2005-07-19T09:00:00",
+          "actual_surge_mm": 70.146,
+          "predicted_surge_mm": 151.492
+        },
+        {
+          "issued_at": "2005-07-19T04:00:00",
+          "valid_at": "2005-07-19T10:00:00",
+          "actual_surge_mm": 94.326,
+          "predicted_surge_mm": 221.376
+        },
+        {
+          "issued_at": "2005-07-19T05:00:00",
+          "valid_at": "2005-07-19T11:00:00",
+          "actual_surge_mm": 109.879,
+          "predicted_surge_mm": 83.244
+        },
+        {
+          "issued_at": "2005-07-19T06:00:00",
+          "valid_at": "2005-07-19T12:00:00",
+          "actual_surge_mm": 69.649,
+          "predicted_surge_mm": 57.845
+        },
+        {
+          "issued_at": "2005-07-19T07:00:00",
+          "valid_at": "2005-07-19T13:00:00",
+          "actual_surge_mm": 88.413,
+          "predicted_surge_mm": 113.908
+        },
+        {
+          "issued_at": "2005-07-19T08:00:00",
+          "valid_at": "2005-07-19T14:00:00",
+          "actual_surge_mm": 79.846,
+          "predicted_surge_mm": 114.461
+        },
+        {
+          "issued_at": "2005-07-19T09:00:00",
+          "valid_at": "2005-07-19T15:00:00",
+          "actual_surge_mm": 111.491,
+          "predicted_surge_mm": 96.247
+        },
+        {
+          "issued_at": "2005-07-19T10:00:00",
+          "valid_at": "2005-07-19T16:00:00",
+          "actual_surge_mm": 32.482,
+          "predicted_surge_mm": 112.15
+        },
+        {
+          "issued_at": "2005-07-19T11:00:00",
+          "valid_at": "2005-07-19T17:00:00",
+          "actual_surge_mm": 63.698,
+          "predicted_surge_mm": 100.887
+        },
+        {
+          "issued_at": "2005-07-19T12:00:00",
+          "valid_at": "2005-07-19T18:00:00",
+          "actual_surge_mm": 39.528,
+          "predicted_surge_mm": 33.537
+        },
+        {
+          "issued_at": "2005-07-19T13:00:00",
+          "valid_at": "2005-07-19T19:00:00",
+          "actual_surge_mm": 43.289,
+          "predicted_surge_mm": 29.327
+        },
+        {
+          "issued_at": "2005-07-19T14:00:00",
+          "valid_at": "2005-07-19T20:00:00",
+          "actual_surge_mm": 21.376,
+          "predicted_surge_mm": -1.222
+        },
+        {
+          "issued_at": "2005-07-19T15:00:00",
+          "valid_at": "2005-07-19T21:00:00",
+          "actual_surge_mm": 22.155,
+          "predicted_surge_mm": 35.024
+        },
+        {
+          "issued_at": "2005-07-19T16:00:00",
+          "valid_at": "2005-07-19T22:00:00",
+          "actual_surge_mm": -11.519,
+          "predicted_surge_mm": 28.208
+        },
+        {
+          "issued_at": "2005-07-19T17:00:00",
+          "valid_at": "2005-07-19T23:00:00",
+          "actual_surge_mm": 8.283,
+          "predicted_surge_mm": 42.362
+        },
+        {
+          "issued_at": "2005-07-19T18:00:00",
+          "valid_at": "2005-07-20T00:00:00",
+          "actual_surge_mm": -17.472,
+          "predicted_surge_mm": 37.423
+        },
+        {
+          "issued_at": "2005-07-19T19:00:00",
+          "valid_at": "2005-07-20T01:00:00",
+          "actual_surge_mm": -35.652,
+          "predicted_surge_mm": 40.892
+        },
+        {
+          "issued_at": "2005-07-19T20:00:00",
+          "valid_at": "2005-07-20T02:00:00",
+          "actual_surge_mm": -31.249,
+          "predicted_surge_mm": 47.307
+        },
+        {
+          "issued_at": "2005-07-19T21:00:00",
+          "valid_at": "2005-07-20T03:00:00",
+          "actual_surge_mm": -55.329,
+          "predicted_surge_mm": 27.703
+        },
+        {
+          "issued_at": "2005-07-19T22:00:00",
+          "valid_at": "2005-07-20T04:00:00",
+          "actual_surge_mm": -51.803,
+          "predicted_surge_mm": 23.785
+        },
+        {
+          "issued_at": "2005-07-19T23:00:00",
+          "valid_at": "2005-07-20T05:00:00",
+          "actual_surge_mm": -63.455,
+          "predicted_surge_mm": 3.749
+        },
+        {
+          "issued_at": "2005-07-20T00:00:00",
+          "valid_at": "2005-07-20T06:00:00",
+          "actual_surge_mm": -34.298,
+          "predicted_surge_mm": 4.123
+        },
+        {
+          "issued_at": "2005-07-20T01:00:00",
+          "valid_at": "2005-07-20T07:00:00",
+          "actual_surge_mm": -70.113,
+          "predicted_surge_mm": -2.022
+        },
+        {
+          "issued_at": "2005-07-20T02:00:00",
+          "valid_at": "2005-07-20T08:00:00",
+          "actual_surge_mm": -47.656,
+          "predicted_surge_mm": -37.682
+        }
+      ]
+    }
+  ]
+}

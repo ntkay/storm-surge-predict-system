@@ -5,7 +5,7 @@ import StormLstmDemo from './StormLstmDemo.jsx';
 
 const date = time => new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Taipei', dateStyle: 'short', timeStyle: 'short' }).format(new Date(time));
 export default function ModelSurgePanel({ stationId, start, end, eventName }) {
-  const isStaticBpnnDemo = /sinlaku|辛樂克/i.test(eventName || '');
+  const isStaticBpnnDemo = /sinlaku|辛樂克|haitang|海棠|jangmi|薔蜜|薔薇|talim|潭美|kaemi|凱米|kong.?rey|康芮/i.test(eventName || '');
   const [result, setResult] = useState(null);
   const key = stationId && start && end ? `${stationId}|${start}|${end}` : '';
   const current = result?.key === key ? result : null;
