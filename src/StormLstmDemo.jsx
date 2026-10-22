@@ -4,6 +4,7 @@ import { landWarningTimes, parseTaiwanTime, sixHourTicks } from './typhoonWarnin
 
 const panel = { background: '#fff', border: '1px solid #93c5fd', borderRadius: 12, padding: 20, marginBottom: 20 };
 const figures = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 650px), 1fr))', gap: 14 };
+const metricGrid = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 10, margin: '12px 0' };
 const storms = {
   longdong: [
     { key: 'haitang', match: /haitang|海棠/i, name: '海棠（Haitang, 2005）', testId: '2005Haitang s' },
@@ -58,16 +59,23 @@ export default function StormLstmDemo({ stationId, eventName }) {
             forecast_issue_at: new Date(parseTaiwanTime(point.time) - lead * 60 * 60 * 1000).toISOString(),
           }))
           .filter(point => parseTaiwanTime(point.forecast_issue_at) >= warningStart);
-        const actual = eventPoints.map((point) => point.observed_tide_cm);
-        const predicted = eventPoints.map((point) => point.predicted_tide_cm);
+        const validPoints = eventPoints.filter(point => Number.isFinite(point.observed_tide_cm) && Number.isFinite(point.predicted_tide_cm));
+        const actual = validPoints.map((point) => point.observed_tide_cm);
+        const predicted = validPoints.map((point) => point.predicted_tide_cm);
         const eventMae = actual.length ? actual.reduce((sum, value, i) => sum + Math.abs(value - predicted[i]), 0) / actual.length : null;
         const eventRmse = actual.length ? Math.sqrt(actual.reduce((sum, value, i) => sum + (value - predicted[i]) ** 2, 0) / actual.length) : null;
         const eventMean = actual.length ? actual.reduce((sum, value) => sum + value, 0) / actual.length : 0;
         const eventDenom = actual.reduce((sum, value) => sum + (value - eventMean) ** 2, 0);
         const eventR2 = eventDenom ? 1 - actual.reduce((sum, value, i) => sum + (predicted[i] - value) ** 2, 0) / eventDenom : null;
         return <figure key={lead} style={{ margin: 0 }}>
-          <figcaption style={{ fontWeight: 700, marginBottom: 6 }}>+{lead} 小時 · LSTM {units[index]} 單元{eventRmse !== null ? ` · 本颱風 RMSE ${eventRmse.toFixed(2)} cm / MAE ${eventMae.toFixed(2)} cm / R² ${eventR2?.toFixed(3) ?? '—'}` : ''}</figcaption>
-          <ForecastChart points={eventPoints} station={title} storm={storm.name} lead={lead} warningStart={warningStart} />
+          <figcaption style={{ fontWeight: 700, marginBottom: 6 }}>+{lead} 小時 · LSTM {units[index]} 單元</figcaption>
+          <div style={metricGrid}>
+            <Metric label="RMSE" value={eventRmse === null ? '—' : `${eventRmse.toFixed(2)} cm`} />
+            <Metric label="MAE" value={eventMae === null ? '—' : `${eventMae.toFixed(2)} cm`} />
+            <Metric label="R²" value={eventR2 === null ? '—' : eventR2.toFixed(3)} />
+            <Metric label="有效時點" value={`${validPoints.length}`} />
+          </div>
+          <ForecastChart points={validPoints} station={title} storm={storm.name} lead={lead} warningStart={warningStart} />
         </figure>;
       })}
     </div>
@@ -76,6 +84,10 @@ export default function StormLstmDemo({ stationId, eventName }) {
       <p>{station === 'suao' && storm.key === 'sinlaku' ? '辛樂克保留原先以該颱風獨立留出所產生的測試曲線。' : '顯示 Notebook 留出測試颱風的歷史逐時結果。'}非即時預報。模型為兩層 Conv1D 接 LSTM，使用 24 小時視窗並分別預測 +1、+3、+6 小時。為在本機 CPU 訓練，batch size 設為 128（原 Notebook 為 8），訓練 100 epochs。圖中以有效時間減去預測時距還原起報時間，只保留陸警發布後的起報樣本。</p>
     </details>
   </section>;
+}
+
+function Metric({ label, value }) {
+  return <div style={{ padding: 12, borderRadius: 8, background: '#f1f5f9' }}><div>{label}</div><strong style={{ display: 'block', marginTop: 5, fontSize: 20 }}>{value}</strong></div>;
 }
 
 function ForecastChart({ points, station, storm, lead, warningStart }) {
