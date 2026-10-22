@@ -133,20 +133,23 @@ function ForecastChart({ result, warningStart }) {
   const lowValue = Math.min(0, ...values), highValue = Math.max(0, ...values);
   const padding = Math.max((highValue - lowValue) * 0.1, 20);
   const low = lowValue - padding, high = highValue + padding;
-  const left = 70, right = 920, top = 24, bottom = 290;
   const start = warningStart ?? parseTaiwanTime(points[0].issued_at), end = parseTaiwanTime(points.at(-1).issued_at);
+  const sixHours = 6 * 60 * 60 * 1000;
+  const intervalCount = Math.max(1, Math.ceil((end - start) / sixHours));
+  const left = 70, right = left + intervalCount * 82, top = 24, bottom = 290;
+  const svgWidth = right + 24;
   const x = time => left + (parseTaiwanTime(time) - start) / Math.max(end - start, 1) * (right - left);
   const y = value => bottom - (value - low) / (high - low) * (bottom - top);
   const pathFor = key => points.map((point, index) => `${index ? 'L' : 'M'}${x(point.issued_at).toFixed(1)},${y(point[key]).toFixed(1)}`).join(' ');
   const ticks = Array.from({ length: 5 }, (_, i) => low + (high - low) * i / 4);
-  const dateTicks = Array.from({ length: 6 }, (_, i) => new Date(start + (end - start) * i / 5).toISOString());
+  const dateTicks = Array.from({ length: Math.floor((end - start) / sixHours) + 1 }, (_, i) => new Date(start + i * sixHours).toISOString());
   return <figure style={{ margin: '20px 0' }}>
     <figcaption style={{ fontWeight: 700, marginBottom: 8 }}>Sinlaku | BPNN | 24 小時滑動視窗 | +{result.lead_hours}h | mm</figcaption>
     <div style={{ display: 'flex', gap: 18, flexWrap: 'wrap', marginBottom: 8 }}>
       <span style={{ color: '#1769aa' }}>━━ 實測／重建增水</span><span style={{ color: '#dc2626' }}>┄┄ BPNN 預測</span>
     </div>
     <div style={{ overflowX: 'auto' }}>
-      <svg viewBox="0 0 960 350" style={{ width: '100%', minWidth: 720, display: 'block' }} role="img" aria-label={`辛樂克龍洞 +${result.lead_hours} 小時 BPNN 預測與實測增水曲線，單位毫米`}>
+      <svg viewBox={`0 0 ${svgWidth} 350`} style={{ width: `${svgWidth}px`, maxWidth: 'none', display: 'block' }} role="img" aria-label={`辛樂克龍洞 +${result.lead_hours} 小時 BPNN 預測與實測增水曲線，單位毫米；時間軸每六小時標示`}>
         <text x="14" y="18" fontSize="13">暴潮增水 (mm)</text>
         {ticks.map((value, index) => <g key={index}>
           <line x1={left} x2={right} y1={y(value)} y2={y(value)} stroke="#dbe3ec" />
@@ -154,8 +157,8 @@ function ForecastChart({ result, warningStart }) {
         </g>)}
         <line x1={left} x2={right} y1={y(0)} y2={y(0)} stroke="#64748b" strokeDasharray="4 4" />
         <rect x={left} y={top} width={right - left} height={bottom - top} fill="none" stroke="#94a3b8" />
-        {dateTicks.map((time, index) => <text key={index} x={x(time)} y="313" textAnchor="middle" fontSize="11" fill="#475569">{formatTaiwan(time)}</text>)}
-        <text x={(left + right) / 2} y="340" textAnchor="middle" fontSize="13" fill="#334155">預報發布時間（臺灣時間）</text>
+        {dateTicks.map((time, index) => <g key={index}><line x1={x(time)} x2={x(time)} y1={top} y2={bottom} stroke="#edf1f5" /><text x={x(time)} y="313" textAnchor="middle" fontSize="10" fill="#475569">{formatTaiwan(time)}</text></g>)}
+        <text x={(left + right) / 2} y="340" textAnchor="middle" fontSize="13" fill="#334155">預報發布時間（臺灣時間；每 6 小時標示）</text>
         <path d={pathFor('actual_surge_mm')} fill="none" stroke="#1769aa" strokeWidth="2.3" />
         <path d={pathFor('predicted_surge_mm')} fill="none" stroke="#dc2626" strokeWidth="2.3" strokeDasharray="8 5" />
       </svg>
