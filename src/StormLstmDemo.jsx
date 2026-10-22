@@ -1,5 +1,4 @@
 import { canonicalStationId } from '../shared/tideStations.js';
-import { useEffect, useState } from 'react';
 import { landWarningTimes, parseTaiwanTime, sixHourTicks } from './typhoonWarningTimes.js';
 
 const panel = { background: '#fff', border: '1px solid #93c5fd', borderRadius: 12, padding: 20, marginBottom: 20 };
@@ -19,26 +18,10 @@ const storms = {
   ],
 };
 
-export default function StormLstmDemo({ stationId, eventName }) {
+export default function StormLstmDemo({ stationId, eventName, training, sharedIssueTimes }) {
   const canonicalId = canonicalStationId(stationId);
   const station = canonicalId === 'C4A02' ? 'longdong' : canonicalId === 'C4U01' ? 'suao' : '';
   const storm = storms[station]?.find((item) => item.match.test(String(eventName || '')));
-  const [training, setTraining] = useState(null);
-  const dataFile = station === 'suao' && storm?.key === 'sinlaku' ? 'suao-sinlaku-legacy.json' : `${station}-retrained.json`;
-  useEffect(() => {
-    if (!station) return undefined;
-    const controller = new AbortController();
-    fetch(`/data/lstm/${dataFile}`, { signal: controller.signal })
-      .then((response) => {
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return response.json();
-      })
-      .then(setTraining)
-      .catch((error) => {
-        if (error.name !== 'AbortError') setTraining(null);
-      });
-    return () => controller.abort();
-  }, [dataFile, station]);
   if (!storm) return null;
 
   const title = station === 'longdong' ? '龍洞' : '蘇澳';
@@ -53,12 +36,13 @@ export default function StormLstmDemo({ stationId, eventName }) {
       {[1, 3, 6].map((lead, index) => {
         const result = training?.results.find((row) => row.lead_hours === lead);
         const fullEventPoints = result?.points.filter((point) => point.event === storm.testId) || [];
+        const commonTimes = new Set(sharedIssueTimes?.[lead] || []);
         const eventPoints = fullEventPoints
           .map(point => ({
             ...point,
             forecast_issue_at: new Date(parseTaiwanTime(point.time) - lead * 60 * 60 * 1000).toISOString(),
           }))
-          .filter(point => parseTaiwanTime(point.forecast_issue_at) >= warningStart);
+          .filter(point => parseTaiwanTime(point.forecast_issue_at) >= warningStart && commonTimes.has(parseTaiwanTime(point.forecast_issue_at)));
         const validPoints = eventPoints.filter(point => Number.isFinite(point.observed_tide_cm) && Number.isFinite(point.predicted_tide_cm));
         const actual = validPoints.map((point) => point.observed_tide_cm);
         const predicted = validPoints.map((point) => point.predicted_tide_cm);
@@ -75,7 +59,7 @@ export default function StormLstmDemo({ stationId, eventName }) {
             <Metric label="R²" value={eventR2 === null ? '—' : eventR2.toFixed(3)} />
             <Metric label="有效時點" value={`${validPoints.length}`} />
           </div>
-          <ForecastChart points={validPoints} station={title} storm={storm.name} lead={lead} warningStart={warningStart} />
+          <ForecastChart points={validPoints} station={title} storm={storm.name} lead={lead} warningStart={warningStart} sharedEnd={sharedIssueTimes?.[lead]?.at(-1)} />
         </figure>;
       })}
     </div>
@@ -90,13 +74,13 @@ function Metric({ label, value }) {
   return <div style={{ padding: 12, borderRadius: 8, background: '#f1f5f9' }}><div>{label}</div><strong style={{ display: 'block', marginTop: 5, fontSize: 20 }}>{value}</strong></div>;
 }
 
-function ForecastChart({ points, station, storm, lead, warningStart }) {
+function ForecastChart({ points, station, storm, lead, warningStart, sharedEnd }) {
   if (!points.length) return <p>陸上警報發布後沒有可繪製的測試點。</p>;
   const left = 55, top = 18, bottom = 245;
   const min = Math.min(0, ...points.flatMap(point => [point.observed_tide_cm, point.predicted_tide_cm]));
   const max = Math.max(0, ...points.flatMap(point => [point.observed_tide_cm, point.predicted_tide_cm]));
   const pad = Math.max((max - min) * 0.1, 1), low = min - pad, high = max + pad;
-  const start = warningStart, end = Math.max(parseTaiwanTime(points.at(-1).forecast_issue_at), start + 3600000);
+  const start = warningStart, end = Math.max(sharedEnd ?? parseTaiwanTime(points.at(-1).forecast_issue_at), start + 3600000);
   const sixHours = 6 * 60 * 60 * 1000;
   const intervalCount = Math.max(1, Math.ceil((end - start) / sixHours));
   const right = left + intervalCount * 82, svgWidth = right + 24;

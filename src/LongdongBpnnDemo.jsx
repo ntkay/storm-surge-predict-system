@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { canonicalStationId } from '../shared/tideStations.js';
 import { landWarningTimes, parseTaiwanTime, sixHourTicks } from './typhoonWarningTimes.js';
 
@@ -7,8 +6,7 @@ const cell = { padding: 9, borderBottom: '1px solid #e2e8f0', textAlign: 'right'
 const formatTaiwan = value => new Intl.DateTimeFormat('zh-TW', {
   timeZone: 'Asia/Taipei', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
 }).format(new Date(value));
-export default function LongdongBpnnDemo({ stationId, eventName }) {
-  const [loaded, setLoaded] = useState(null);
+export default function LongdongBpnnDemo({ stationId, eventName, payload, sharedIssueTimes }) {
   const event = String(eventName || '').toLowerCase();
   const selectedStation = !stationId || canonicalStationId(stationId) === 'C4A02' ? 'longdong' : canonicalStationId(stationId) === 'C4U01' ? 'suao' : '';
   const storm = [
@@ -20,29 +18,12 @@ export default function LongdongBpnnDemo({ stationId, eventName }) {
     { key: 'kong-rey', match: /kong.?rey|康芮/i, name: '2013 康芮（Kong-rey）', suaoOnly: true },
   ].find(item => item.match.test(event) && (item.suaoOnly ? selectedStation === 'suao' : true));
   const isLongdong = selectedStation === 'longdong';
-  const file = selectedStation === 'suao' ? `suao-${storm?.key}-predictions.json` : `${storm?.key}-predictions.json`;
-  const requestKey = storm && selectedStation ? `${selectedStation}:${storm.key}` : '';
-  const payload = loaded?.key === requestKey ? loaded.data : null;
-  const loadError = loaded?.key === requestKey ? loaded.error || '' : '';
-
-  useEffect(() => {
-    if (!requestKey || !selectedStation) return undefined;
-    const controller = new AbortController();
-    fetch(`/data/bpnn/${file}`, { signal: controller.signal, cache: 'no-cache' })
-      .then(response => {
-        if (!response.ok) throw new Error(`曲線資料讀取失敗（${response.status}）`);
-        return response.json();
-      })
-      .then(data => { if (!controller.signal.aborted) setLoaded({ key: requestKey, data }); })
-      .catch(error => { if (!controller.signal.aborted) setLoaded({ key: requestKey, error: error.message }); });
-    return () => controller.abort();
-  }, [file, requestKey, selectedStation]);
-
   const results = payload?.results || [];
   if (!storm || !selectedStation) return null;
 
   const normalizedResults = (payload?.results || []).map(result => {
     const warningStart = Date.parse(landWarningTimes[storm.key]);
+    const commonTimes = new Set(sharedIssueTimes?.[result.lead_hours] || []);
     const sourcePoints = result.points
       .filter(point => point.observed_tide_cm != null && point.predicted_tide_cm != null)
       .map(point => {
@@ -54,7 +35,7 @@ export default function LongdongBpnnDemo({ stationId, eventName }) {
         };
       });
     const points = Number.isFinite(warningStart)
-      ? sourcePoints.filter(point => parseTaiwanTime(point.issued_at) >= warningStart)
+      ? sourcePoints.filter(point => parseTaiwanTime(point.issued_at) >= warningStart && commonTimes.has(parseTaiwanTime(point.issued_at)))
       : sourcePoints;
     const errors = points.map(point => point.predicted_tide_cm - point.observed_tide_cm);
     const actualMean = points.length ? points.reduce((sum, point) => sum + point.observed_tide_cm, 0) / points.length : 0;
@@ -75,20 +56,19 @@ export default function LongdongBpnnDemo({ stationId, eventName }) {
   return <section aria-labelledby="bpnn-demo-title" style={panel}>
     <h4 id="bpnn-demo-title" style={{ marginTop: 0 }}>{storm.name} · {isLongdong ? '龍洞' : '蘇澳'} BPNN 逐時測試</h4>
     <p>{isLongdong ? '以龍洞逐時潮位和颱風歷史路徑重建 24 小時輸入，再套用匯出的五模型集成權重。' : '以蘇澳逐時資料按同一個 24 小時、192→8→1 BPNN 架構重新訓練五模型集成，整個測試颱風未納入訓練。'} 顯示 +1、+3、+6 小時的實測潮位及模型預測潮位；模型預測值已加回同時刻的天文潮基準。本圖與誤差統計自{storm.name}陸上颱風警報發布後開始。</p>
-    {loadError && <p role="alert" style={{ color: '#b91c1c' }}>{loadError}</p>}
-    {!results.length && !loadError && <p role="status">正在載入 BPNN 曲線…</p>}
+    {!results.length && <p role="status">正在載入 BPNN 曲線…</p>}
     {normalizedResults.length === 3 && <>
-      {normalizedResults.map(result => <LeadForecast key={result.lead_hours} result={result} warningStart={Date.parse(landWarningTimes[storm.key])} stormName={storm.name} stationName={isLongdong ? '龍洞' : '蘇澳'} />)}
+      {normalizedResults.map(result => <LeadForecast key={result.lead_hours} result={result} warningStart={Date.parse(landWarningTimes[storm.key])} sharedEnd={sharedIssueTimes?.[result.lead_hours]?.at(-1)} stormName={storm.name} stationName={isLongdong ? '龍洞' : '蘇澳'} />)}
       <details style={{ marginTop: 14 }}>
         <summary>模型與資料說明</summary>
         <p>{payload?.validation === 'held-out-event; station-specific retraining, not exported Longdong weights' ? `蘇澳模型以 ${payload.training_events} 個其他颱風事件訓練，保留本次颱風作為獨立測試；訓練窗數：${payload.training_samples}。` : '龍洞使用匯出的五模型集成權重；輸入依可取得的 CWA 小時潮位和 NOAA 路徑歷史重建。'}</p>
-        <p>曲線是歷史逐時測試或重建結果，不是即時預報；圖表只呈現 CWA 實測潮位與模型預測潮位，單位為 cm。</p>
+        <p>BPNN 與 CNN-LSTM 僅保留兩者都有有效值的共同起報時點，因此同一預報時距的曲線起訖時間一致、統計樣本也可直接比較。曲線是歷史逐時測試或重建結果，不是即時預報；圖表只呈現 CWA 實測潮位與模型預測潮位，單位為 cm。</p>
       </details>
     </>}
   </section>;
 }
 
-function LeadForecast({ result, warningStart, stormName, stationName }) {
+function LeadForecast({ result, warningStart, sharedEnd, stormName, stationName }) {
   return <section aria-label={`+${result.lead_hours} 小時預測`} style={{ borderTop: '1px solid #e2e8f0', paddingTop: 14, marginTop: 14 }}>
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(130px,1fr))', gap: 10, margin: '12px 0' }}>
       <Metric label="RMSE" value={`${result.metrics.rmse_cm.toFixed(2)} cm`} />
@@ -96,7 +76,7 @@ function LeadForecast({ result, warningStart, stormName, stationName }) {
       <Metric label="R²" value={result.metrics.r2.toFixed(3)} />
       <Metric label="有效時點" value={`${result.metrics.count}`} />
     </div>
-    <ForecastChart result={result} warningStart={warningStart} stormName={stormName} stationName={stationName} />
+    <ForecastChart result={result} warningStart={warningStart} sharedEnd={sharedEnd} stormName={stormName} stationName={stationName} />
     <details style={{ marginTop: 10 }}>
       <summary>查看逐時資料表（{result.points.length} 筆）</summary>
       <div style={{ overflow: 'auto', maxHeight: 420, marginTop: 10 }}>
@@ -120,13 +100,14 @@ function Metric({ label, value }) {
   return <div style={{ padding: 12, borderRadius: 8, background: '#f1f5f9' }}><div>{label}</div><strong style={{ display: 'block', marginTop: 5, fontSize: 20 }}>{value}</strong></div>;
 }
 
-function ForecastChart({ result, warningStart, stormName, stationName }) {
+function ForecastChart({ result, warningStart, sharedEnd, stormName, stationName }) {
   const points = result.points;
+  if (!points.length) return <p>此預報時距沒有兩種模型共同的有效時點。</p>;
   const values = points.flatMap(point => [point.observed_tide_cm, point.predicted_tide_cm]);
   const lowValue = Math.min(0, ...values), highValue = Math.max(0, ...values);
   const padding = Math.max((highValue - lowValue) * 0.1, 5);
   const low = lowValue - padding, high = highValue + padding;
-  const start = warningStart ?? parseTaiwanTime(points[0].issued_at), end = parseTaiwanTime(points.at(-1).issued_at);
+  const start = warningStart ?? parseTaiwanTime(points[0].issued_at), end = sharedEnd ?? parseTaiwanTime(points.at(-1).issued_at);
   const sixHours = 6 * 60 * 60 * 1000;
   const intervalCount = Math.max(1, Math.ceil((end - start) / sixHours));
   const left = 70, right = left + intervalCount * 82, top = 24, bottom = 290;
