@@ -23,7 +23,7 @@ export default function LongdongBpnnDemo({ stationId, eventName, payload, shared
 
   const normalizedResults = (payload?.results || []).map(result => {
     const warningStart = Date.parse(landWarningTimes[storm.key]);
-    const commonTimes = new Set(sharedIssueTimes?.[result.lead_hours] || []);
+    const commonTimes = sharedIssueTimes ? new Set(sharedIssueTimes[result.lead_hours] || []) : null;
     const sourcePoints = result.points
       .filter(point => point.observed_tide_cm != null && point.predicted_tide_cm != null)
       .map(point => {
@@ -35,7 +35,7 @@ export default function LongdongBpnnDemo({ stationId, eventName, payload, shared
         };
       });
     const points = Number.isFinite(warningStart)
-      ? sourcePoints.filter(point => parseTaiwanTime(point.issued_at) >= warningStart && commonTimes.has(parseTaiwanTime(point.issued_at)))
+      ? sourcePoints.filter(point => parseTaiwanTime(point.issued_at) >= warningStart && (!commonTimes || commonTimes.has(parseTaiwanTime(point.issued_at))))
       : sourcePoints;
     const errors = points.map(point => point.predicted_tide_cm - point.observed_tide_cm);
     const actualMean = points.length ? points.reduce((sum, point) => sum + point.observed_tide_cm, 0) / points.length : 0;
@@ -62,7 +62,8 @@ export default function LongdongBpnnDemo({ stationId, eventName, payload, shared
       <details style={{ marginTop: 14 }}>
         <summary>模型與資料說明</summary>
         <p>{payload?.validation === 'held-out-event; station-specific retraining, not exported Longdong weights' ? `蘇澳模型以 ${payload.training_events} 個其他颱風事件訓練，保留本次颱風作為獨立測試；訓練窗數：${payload.training_samples}。` : '龍洞使用匯出的五模型集成權重；輸入依可取得的 CWA 小時潮位和 NOAA 路徑歷史重建。'}</p>
-        <p>BPNN 與 CNN-LSTM 僅保留兩者都有有效值的共同起報時點，因此同一預報時距的曲線起訖時間一致、統計樣本也可直接比較。曲線是歷史逐時測試或重建結果，不是即時預報；圖表只呈現 CWA 實測潮位與模型預測潮位，單位為 cm。</p>
+        {sharedIssueTimes && <p>BPNN 與 CNN-LSTM 僅保留兩者都有有效值的共同起報時點，因此同一預報時距的曲線起訖時間一致、統計樣本也可直接比較。</p>}
+        <p>曲線是歷史逐時測試或重建結果，不是即時預報；圖表只呈現 CWA 實測潮位與模型預測潮位，單位為 cm。</p>
       </details>
     </>}
   </section>;

@@ -22,25 +22,33 @@ export default function ModelSurgePanel({ stationId, eventName }) {
   const suaoStorm = Boolean(event);
   const available = station === 'C4A02' ? longdongStorm : station === 'C4U01' && suaoStorm;
   const stationKey = station === 'C4A02' ? 'longdong' : 'suao';
+  const hasLstmModel = stationKey === 'longdong' || ['talim', 'kaemi', 'kong-rey', 'sinlaku'].includes(stormKey);
   const lstmFile = stationKey === 'suao' && stormKey === 'sinlaku' ? 'suao-sinlaku-legacy.json' : `${stationKey}-retrained.json`;
-  const bpnnFile = stationKey === 'suao' && stormKey === 'sinlaku' ? 'suao-sinlaku-predictions.json' : event?.bpnn;
+  const bpnnFile = stationKey === 'suao' && stormKey === 'sinlaku'
+    ? 'suao-sinlaku-predictions.json'
+    : stationKey === 'suao' && event?.bpnn && !event.bpnn.startsWith('suao-')
+      ? `suao-${event.bpnn}`
+      : event?.bpnn;
   const requestKey = available ? `${stationKey}:${stormKey}` : '';
   const [loaded, setLoaded] = useState(null);
 
   useEffect(() => {
     if (!requestKey) return undefined;
     const controller = new AbortController();
-    Promise.all([
-      fetch(`/data/bpnn/${bpnnFile}`, { signal: controller.signal, cache: 'no-cache' }).then(response => {
+    const bpnnRequest = fetch(`/data/bpnn/${bpnnFile}`, { signal: controller.signal, cache: 'no-cache' }).then(response => {
         if (!response.ok) throw new Error(`BPNN 資料讀取失敗（${response.status}）`);
         return response.json();
-      }),
-      fetch(`/data/lstm/${lstmFile}`, { signal: controller.signal, cache: 'no-cache' }).then(response => {
+      });
+    const lstmRequest = hasLstmModel ? fetch(`/data/lstm/${lstmFile}`, { signal: controller.signal, cache: 'no-cache' }).then(response => {
         if (!response.ok) throw new Error(`LSTM 資料讀取失敗（${response.status}）`);
         return response.json();
-      }),
-    ]).then(([bpnn, lstm]) => {
+      }) : Promise.resolve(null);
+    Promise.all([bpnnRequest, lstmRequest]).then(([bpnn, lstm]) => {
       if (controller.signal.aborted) return;
+      if (!lstm) {
+        setLoaded({ key: requestKey, bpnn, lstm: null, sharedIssueTimes: null });
+        return;
+      }
       const warningStart = Date.parse(landWarningTimes[stormKey]);
       const testId = stationKey === 'suao' && stormKey === 'sinlaku' ? '200813Sinlaku s' : event.testId;
       const sharedIssueTimes = Object.fromEntries([1, 3, 6].map(lead => {
@@ -62,17 +70,17 @@ export default function ModelSurgePanel({ stationId, eventName }) {
       if (!controller.signal.aborted) setLoaded({ key: requestKey, error: error.message });
     });
     return () => controller.abort();
-  }, [bpnnFile, event, lstmFile, requestKey, stationKey, stormKey]);
+  }, [bpnnFile, event, hasLstmModel, lstmFile, requestKey, stationKey, stormKey]);
 
   const data = loaded?.key === requestKey ? loaded : null;
   return <section aria-labelledby="model-tide-title" style={{ borderTop: '3px solid #cbd5e1', padding: 24, borderRadius: 16, background: '#f5f3ff', marginTop: 24 }}>
     <h3 id="model-tide-title" style={{ color: '#6d28d9', fontSize: 24, marginTop: 0 }}>實測與模型預測潮位曲線</h3>
     {available ? <>
-      {!data && <p role="status">正在同步 BPNN 與 LSTM 的共同預測時段…</p>}
+      {!data && <p role="status">{hasLstmModel ? '正在同步 BPNN 與 LSTM 的共同預測時段…' : '正在載入 BPNN 測試資料…'}</p>}
       {data?.error && <p role="alert">{data.error}</p>}
       {data?.sharedIssueTimes && ![1, 3, 6].some(lead => data.sharedIssueTimes[lead].length) && <p role="status">這組事件與測站沒有兩種模型共同的有效預測時點。</p>}
       {data?.bpnn && <>
-        <StormLstmDemo stationId={stationId} eventName={eventName} training={data.lstm} sharedIssueTimes={data.sharedIssueTimes} />
+        {data.lstm && <StormLstmDemo stationId={stationId} eventName={eventName} training={data.lstm} sharedIssueTimes={data.sharedIssueTimes} />}
         <LongdongBpnnDemo stationId={stationId} eventName={eventName} payload={data.bpnn} sharedIssueTimes={data.sharedIssueTimes} />
       </>}
     </> : <p role="status">目前沒有此颱風與測站組合的 BPNN 或 CNN-LSTM 潮位預測曲線。</p>}
