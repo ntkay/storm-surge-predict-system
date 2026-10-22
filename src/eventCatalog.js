@@ -18,7 +18,7 @@ const modelTestStorms = new Set([
   '2008:SINLAKU', '2008:JANGMI', '2013:KONG-REY',
 ]);
 const modelTestChineseNames = {
-  HAITANG: '海棠', TALIM: '潭美', KAEMI: '凱米',
+  HAITANG: '海棠', TALIM: '泰利', KAEMI: '凱米',
   SINLAKU: '辛樂克', JANGMI: '薔蜜', 'KONG-REY': '康芮',
 };
 
