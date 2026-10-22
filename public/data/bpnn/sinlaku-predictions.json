@@ -88,7 +88,10 @@
           "predicted_surge_mm": 93.679,
           "distance_km": 437.5,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 32.5,
+          "predicted_tide_cm": 21.1051,
+          "astronomical_tide_cm": 13.5657
         },
         {
           "issued_at": "2008-09-12T01:00:00+08:00",
@@ -97,7 +100,10 @@
           "predicted_surge_mm": 79.708,
           "distance_km": 437.5,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 35.0,
+          "predicted_tide_cm": 26.0842,
+          "astronomical_tide_cm": 19.2574
         },
         {
           "issued_at": "2008-09-12T02:00:00+08:00",
@@ -106,7 +112,10 @@
           "predicted_surge_mm": 47.852,
           "distance_km": 420.7,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 40.9,
+          "predicted_tide_cm": 28.9783,
+          "astronomical_tide_cm": 24.8585
         },
         {
           "issued_at": "2008-09-12T03:00:00+08:00",
@@ -115,7 +124,10 @@
           "predicted_surge_mm": 118.921,
           "distance_km": 420.7,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 42.2,
+          "predicted_tide_cm": 38.8553,
+          "astronomical_tide_cm": 27.2866
         },
         {
           "issued_at": "2008-09-12T04:00:00+08:00",
@@ -124,7 +136,10 @@
           "predicted_surge_mm": 155.557,
           "distance_km": 420.7,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 41.5,
+          "predicted_tide_cm": 40.4881,
+          "astronomical_tide_cm": 24.9096
         },
         {
           "issued_at": "2008-09-12T05:00:00+08:00",
@@ -133,7 +148,10 @@
           "predicted_surge_mm": 178.625,
           "distance_km": 397.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 32.7,
+          "predicted_tide_cm": 36.0567,
+          "astronomical_tide_cm": 17.7706
         },
         {
           "issued_at": "2008-09-12T06:00:00+08:00",
@@ -142,7 +160,10 @@
           "predicted_surge_mm": 130.132,
           "distance_km": 397.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 23.7,
+          "predicted_tide_cm": 20.6342,
+          "astronomical_tide_cm": 6.835
         },
         {
           "issued_at": "2008-09-12T07:00:00+08:00",
@@ -151,7 +172,10 @@
           "predicted_surge_mm": 204.002,
           "distance_km": 397.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 12.4,
+          "predicted_tide_cm": 14.6257,
+          "astronomical_tide_cm": -6.7482
         },
         {
           "issued_at": "2008-09-12T08:00:00+08:00",
@@ -160,7 +184,10 @@
           "predicted_surge_mm": 225.835,
           "distance_km": 366.2,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 2.2,
+          "predicted_tide_cm": 1.9375,
+          "astronomical_tide_cm": -21.6053
         },
         {
           "issued_at": "2008-09-12T09:00:00+08:00",
@@ -169,7 +196,10 @@
           "predicted_surge_mm": 291.266,
           "distance_km": 366.2,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": -10.3,
+          "predicted_tide_cm": -5.5447,
+          "astronomical_tide_cm": -35.5425
         },
         {
           "issued_at": "2008-09-12T10:00:00+08:00",
@@ -178,7 +208,10 @@
           "predicted_surge_mm": 291.172,
           "distance_km": 366.2,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": -18.9,
+          "predicted_tide_cm": -15.3734,
+          "astronomical_tide_cm": -45.3727
         },
         {
           "issued_at": "2008-09-12T11:00:00+08:00",
@@ -187,7 +220,10 @@
           "predicted_surge_mm": 273.012,
           "distance_km": 328.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": -23.2,
+          "predicted_tide_cm": -19.5277,
+          "astronomical_tide_cm": -47.8711
         },
         {
           "issued_at": "2008-09-12T12:00:00+08:00",
@@ -196,7 +232,10 @@
           "predicted_surge_mm": 282.411,
           "distance_km": 328.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": -17.2,
+          "predicted_tide_cm": -12.0183,
+          "astronomical_tide_cm": -41.4758
         },
         {
           "issued_at": "2008-09-12T13:00:00+08:00",
@@ -205,7 +244,10 @@
           "predicted_surge_mm": 304.132,
           "distance_km": 328.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": -5.2,
+          "predicted_tide_cm": 4.1272,
+          "astronomical_tide_cm": -27.4777
         },
         {
           "issued_at": "2008-09-12T14:00:00+08:00",
@@ -214,7 +256,10 @@
           "predicted_surge_mm": 291.853,
           "distance_km": 283.1,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 6.9,
+          "predicted_tide_cm": 20.3852,
+          "astronomical_tide_cm": -9.6598
         },
         {
           "issued_at": "2008-09-12T15:00:00+08:00",
@@ -223,7 +268,10 @@
           "predicted_surge_mm": 249.952,
           "distance_km": 283.1,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 36.1,
+          "predicted_tide_cm": 32.7685,
+          "astronomical_tide_cm": 7.4697
         },
         {
           "issued_at": "2008-09-12T16:00:00+08:00",
@@ -232,7 +280,10 @@
           "predicted_surge_mm": 427.827,
           "distance_km": 283.1,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 41.6,
+          "predicted_tide_cm": 63.0956,
+          "astronomical_tide_cm": 20.5978
         },
         {
           "issued_at": "2008-09-12T17:00:00+08:00",
@@ -241,7 +292,10 @@
           "predicted_surge_mm": 304.545,
           "distance_km": 260.6,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 46.9,
+          "predicted_tide_cm": 58.0803,
+          "astronomical_tide_cm": 28.4032
         },
         {
           "issued_at": "2008-09-12T18:00:00+08:00",
@@ -250,7 +304,10 @@
           "predicted_surge_mm": 336.55,
           "distance_km": 260.6,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 49.9,
+          "predicted_tide_cm": 63.4613,
+          "astronomical_tide_cm": 31.0071
         },
         {
           "issued_at": "2008-09-12T19:00:00+08:00",
@@ -259,7 +316,10 @@
           "predicted_surge_mm": 286.409,
           "distance_km": 260.6,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 48.2,
+          "predicted_tide_cm": 55.9787,
+          "astronomical_tide_cm": 29.0017
         },
         {
           "issued_at": "2008-09-12T20:00:00+08:00",
@@ -268,7 +328,10 @@
           "predicted_surge_mm": 282.913,
           "distance_km": 223.2,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 49.2,
+          "predicted_tide_cm": 49.2481,
+          "astronomical_tide_cm": 23.1521
         },
         {
           "issued_at": "2008-09-12T21:00:00+08:00",
@@ -277,7 +340,10 @@
           "predicted_surge_mm": 392.408,
           "distance_km": 223.2,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 43.0,
+          "predicted_tide_cm": 51.5292,
+          "astronomical_tide_cm": 14.9458
         },
         {
           "issued_at": "2008-09-12T22:00:00+08:00",
@@ -286,7 +352,10 @@
           "predicted_surge_mm": 396.756,
           "distance_km": 223.2,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 40.5,
+          "predicted_tide_cm": 43.9384,
+          "astronomical_tide_cm": 7.0939
         },
         {
           "issued_at": "2008-09-12T23:00:00+08:00",
@@ -295,7 +364,10 @@
           "predicted_surge_mm": 453.959,
           "distance_km": 200.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 36.9,
+          "predicted_tide_cm": 45.7534,
+          "astronomical_tide_cm": 2.956
         },
         {
           "issued_at": "2008-09-13T00:00:00+08:00",
@@ -304,7 +376,10 @@
           "predicted_surge_mm": 413.953,
           "distance_km": 200.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 42.3,
+          "predicted_tide_cm": 44.2026,
+          "astronomical_tide_cm": 4.8611
         },
         {
           "issued_at": "2008-09-13T01:00:00+08:00",
@@ -313,7 +388,10 @@
           "predicted_surge_mm": 451.079,
           "distance_km": 200.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 51.9,
+          "predicted_tide_cm": 56.1558,
+          "astronomical_tide_cm": 12.483
         },
         {
           "issued_at": "2008-09-13T02:00:00+08:00",
@@ -322,7 +400,10 @@
           "predicted_surge_mm": 396.499,
           "distance_km": 185.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 57.1,
+          "predicted_tide_cm": 61.3555,
+          "astronomical_tide_cm": 22.645
         },
         {
           "issued_at": "2008-09-13T03:00:00+08:00",
@@ -331,7 +412,10 @@
           "predicted_surge_mm": 375.409,
           "distance_km": 185.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 64.1,
+          "predicted_tide_cm": 67.8305,
+          "astronomical_tide_cm": 30.8797
         },
         {
           "issued_at": "2008-09-13T04:00:00+08:00",
@@ -340,7 +424,10 @@
           "predicted_surge_mm": 357.584,
           "distance_km": 185.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 79.0,
+          "predicted_tide_cm": 69.1497,
+          "astronomical_tide_cm": 33.6668
         },
         {
           "issued_at": "2008-09-13T05:00:00+08:00",
@@ -349,7 +436,10 @@
           "predicted_surge_mm": 481.81,
           "distance_km": 163.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 68.0,
+          "predicted_tide_cm": 78.0508,
+          "astronomical_tide_cm": 29.7813
         },
         {
           "issued_at": "2008-09-13T06:00:00+08:00",
@@ -358,7 +448,10 @@
           "predicted_surge_mm": 402.641,
           "distance_km": 163.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 55.5,
+          "predicted_tide_cm": 60.7396,
+          "astronomical_tide_cm": 20.0364
         },
         {
           "issued_at": "2008-09-13T07:00:00+08:00",
@@ -367,7 +460,10 @@
           "predicted_surge_mm": 418.827,
           "distance_km": 163.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 48.0,
+          "predicted_tide_cm": 48.5967,
+          "astronomical_tide_cm": 6.1044
         },
         {
           "issued_at": "2008-09-13T08:00:00+08:00",
@@ -376,7 +472,10 @@
           "predicted_surge_mm": 485.245,
           "distance_km": 142.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 32.9,
+          "predicted_tide_cm": 38.7504,
+          "astronomical_tide_cm": -10.272
         },
         {
           "issued_at": "2008-09-13T09:00:00+08:00",
@@ -385,7 +484,10 @@
           "predicted_surge_mm": 464.855,
           "distance_km": 142.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 21.5,
+          "predicted_tide_cm": 19.6411,
+          "astronomical_tide_cm": -27.0372
         },
         {
           "issued_at": "2008-09-13T10:00:00+08:00",
@@ -394,7 +496,10 @@
           "predicted_surge_mm": 540.378,
           "distance_km": 142.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 5.0,
+          "predicted_tide_cm": 12.7808,
+          "astronomical_tide_cm": -41.1849
         },
         {
           "issued_at": "2008-09-13T11:00:00+08:00",
@@ -403,7 +508,10 @@
           "predicted_surge_mm": 478.247,
           "distance_km": 121.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": -4.0,
+          "predicted_tide_cm": -1.2227,
+          "astronomical_tide_cm": -48.9445
         },
         {
           "issued_at": "2008-09-13T12:00:00+08:00",
@@ -412,7 +520,10 @@
           "predicted_surge_mm": 510.789,
           "distance_km": 121.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": -2.0,
+          "predicted_tide_cm": 3.899,
+          "astronomical_tide_cm": -47.2776
         },
         {
           "issued_at": "2008-09-13T13:00:00+08:00",
@@ -421,7 +532,10 @@
           "predicted_surge_mm": 471.225,
           "distance_km": 121.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 15.5,
+          "predicted_tide_cm": 11.6694,
+          "astronomical_tide_cm": -35.7986
         },
         {
           "issued_at": "2008-09-13T14:00:00+08:00",
@@ -430,7 +544,10 @@
           "predicted_surge_mm": 510.043,
           "distance_km": 106.4,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 39.4,
+          "predicted_tide_cm": 33.8986,
+          "astronomical_tide_cm": -17.5494
         },
         {
           "issued_at": "2008-09-13T15:00:00+08:00",
@@ -439,7 +556,10 @@
           "predicted_surge_mm": 571.716,
           "distance_km": 106.4,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 64.0,
+          "predicted_tide_cm": 59.7172,
+          "astronomical_tide_cm": 2.1989
         },
         {
           "issued_at": "2008-09-13T16:00:00+08:00",
@@ -448,7 +568,10 @@
           "predicted_surge_mm": 613.029,
           "distance_km": 106.4,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 74.1,
+          "predicted_tide_cm": 79.8596,
+          "astronomical_tide_cm": 18.3897
         },
         {
           "issued_at": "2008-09-13T17:00:00+08:00",
@@ -457,7 +580,10 @@
           "predicted_surge_mm": 549.103,
           "distance_km": 97.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 63.9,
+          "predicted_tide_cm": 83.108,
+          "astronomical_tide_cm": 28.169
         },
         {
           "issued_at": "2008-09-13T18:00:00+08:00",
@@ -466,7 +592,10 @@
           "predicted_surge_mm": 432.828,
           "distance_km": 97.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 66.7,
+          "predicted_tide_cm": 74.403,
+          "astronomical_tide_cm": 31.2
         },
         {
           "issued_at": "2008-09-13T19:00:00+08:00",
@@ -475,7 +604,10 @@
           "predicted_surge_mm": 472.58,
           "distance_km": 97.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 60.2,
+          "predicted_tide_cm": 75.5253,
+          "astronomical_tide_cm": 28.5691
         },
         {
           "issued_at": "2008-09-13T20:00:00+08:00",
@@ -484,7 +616,10 @@
           "predicted_surge_mm": 419.505,
           "distance_km": 82.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 53.5,
+          "predicted_tide_cm": 62.8352,
+          "astronomical_tide_cm": 21.641
         },
         {
           "issued_at": "2008-09-13T21:00:00+08:00",
@@ -493,7 +628,10 @@
           "predicted_surge_mm": 494.059,
           "distance_km": 82.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 46.6,
+          "predicted_tide_cm": 59.9688,
+          "astronomical_tide_cm": 11.9424
         },
         {
           "issued_at": "2008-09-13T22:00:00+08:00",
@@ -502,7 +640,10 @@
           "predicted_surge_mm": 471.235,
           "distance_km": 82.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 45.6,
+          "predicted_tide_cm": 47.0422,
+          "astronomical_tide_cm": 1.8442
         },
         {
           "issued_at": "2008-09-13T23:00:00+08:00",
@@ -511,7 +652,10 @@
           "predicted_surge_mm": 570.979,
           "distance_km": 58.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 51.7,
+          "predicted_tide_cm": 49.7592,
+          "astronomical_tide_cm": -5.2002
         },
         {
           "issued_at": "2008-09-14T00:00:00+08:00",
@@ -520,7 +664,10 @@
           "predicted_surge_mm": 682.759,
           "distance_km": 58.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 53.3,
+          "predicted_tide_cm": 60.5478,
+          "astronomical_tide_cm": -5.7825
         },
         {
           "issued_at": "2008-09-14T01:00:00+08:00",
@@ -529,7 +676,10 @@
           "predicted_surge_mm": 610.717,
           "distance_km": 58.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 60.9,
+          "predicted_tide_cm": 61.0091,
+          "astronomical_tide_cm": 1.4357
         },
         {
           "issued_at": "2008-09-14T02:00:00+08:00",
@@ -538,7 +688,10 @@
           "predicted_surge_mm": 522.044,
           "distance_km": 44.2,
           "wind_m_s": 41.16,
-          "pressure_hpa": 960.0
+          "pressure_hpa": 960.0,
+          "observed_tide_cm": 61.8,
+          "predicted_tide_cm": 65.5535,
+          "astronomical_tide_cm": 14.3797
         },
         {
           "issued_at": "2008-09-14T03:00:00+08:00",
@@ -547,7 +700,10 @@
           "predicted_surge_mm": 428.58,
           "distance_km": 44.2,
           "wind_m_s": 41.16,
-          "pressure_hpa": 960.0
+          "pressure_hpa": 960.0,
+          "observed_tide_cm": 69.5,
+          "predicted_tide_cm": 70.3731,
+          "astronomical_tide_cm": 28.1861
         },
         {
           "issued_at": "2008-09-14T04:00:00+08:00",
@@ -556,7 +712,10 @@
           "predicted_surge_mm": 368.999,
           "distance_km": 56.6,
           "wind_m_s": 46.3,
-          "pressure_hpa": 956.0
+          "pressure_hpa": 956.0,
+          "observed_tide_cm": 70.7,
+          "predicted_tide_cm": 74.0777,
+          "astronomical_tide_cm": 37.561
         },
         {
           "issued_at": "2008-09-14T05:00:00+08:00",
@@ -565,7 +724,10 @@
           "predicted_surge_mm": 282.793,
           "distance_km": 67.5,
           "wind_m_s": 38.58,
-          "pressure_hpa": 960.0
+          "pressure_hpa": 960.0,
+          "observed_tide_cm": 64.1,
+          "predicted_tide_cm": 67.4393,
+          "astronomical_tide_cm": 39.2388
         },
         {
           "issued_at": "2008-09-14T06:00:00+08:00",
@@ -574,7 +736,10 @@
           "predicted_surge_mm": 288.802,
           "distance_km": 67.5,
           "wind_m_s": 46.3,
-          "pressure_hpa": 956.0
+          "pressure_hpa": 956.0,
+          "observed_tide_cm": 51.7,
+          "predicted_tide_cm": 62.005,
+          "astronomical_tide_cm": 32.9022
         },
         {
           "issued_at": "2008-09-14T07:00:00+08:00",
@@ -583,7 +748,10 @@
           "predicted_surge_mm": 242.353,
           "distance_km": 67.5,
           "wind_m_s": 46.3,
-          "pressure_hpa": 956.0
+          "pressure_hpa": 956.0,
+          "observed_tide_cm": 36.5,
+          "predicted_tide_cm": 44.8927,
+          "astronomical_tide_cm": 20.2982
         },
         {
           "issued_at": "2008-09-14T08:00:00+08:00",
@@ -592,7 +760,10 @@
           "predicted_surge_mm": 262.46,
           "distance_km": 45.8,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": 26.7,
+          "predicted_tide_cm": 30.1694,
+          "astronomical_tide_cm": 3.7604
         },
         {
           "issued_at": "2008-09-14T09:00:00+08:00",
@@ -601,7 +772,10 @@
           "predicted_surge_mm": 352.808,
           "distance_km": 45.8,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": 21.8,
+          "predicted_tide_cm": 20.4894,
+          "astronomical_tide_cm": -14.4337
         },
         {
           "issued_at": "2008-09-14T10:00:00+08:00",
@@ -610,7 +784,10 @@
           "predicted_surge_mm": 439.407,
           "distance_km": 45.8,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": -13.0,
+          "predicted_tide_cm": 11.3809,
+          "astronomical_tide_cm": -31.5894
         },
         {
           "issued_at": "2008-09-14T11:00:00+08:00",
@@ -619,7 +796,10 @@
           "predicted_surge_mm": 252.553,
           "distance_km": 24.5,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": -27.3,
+          "predicted_tide_cm": -20.1886,
+          "astronomical_tide_cm": -44.0795
         },
         {
           "issued_at": "2008-09-14T12:00:00+08:00",
@@ -628,7 +808,10 @@
           "predicted_surge_mm": 260.673,
           "distance_km": 24.5,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": -34.0,
+          "predicted_tide_cm": -23.3356,
+          "astronomical_tide_cm": -48.0343
         },
         {
           "issued_at": "2008-09-14T13:00:00+08:00",
@@ -637,7 +820,10 @@
           "predicted_surge_mm": 223.427,
           "distance_km": 24.5,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": -26.1,
+          "predicted_tide_cm": -19.9879,
+          "astronomical_tide_cm": -41.2778
         },
         {
           "issued_at": "2008-09-14T14:00:00+08:00",
@@ -646,7 +832,10 @@
           "predicted_surge_mm": 166.199,
           "distance_km": 56.8,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -12.0,
+          "predicted_tide_cm": -9.1265,
+          "astronomical_tide_cm": -25.116
         },
         {
           "issued_at": "2008-09-14T15:00:00+08:00",
@@ -655,7 +844,10 @@
           "predicted_surge_mm": 181.94,
           "distance_km": 56.8,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 3.5,
+          "predicted_tide_cm": 13.5751,
+          "astronomical_tide_cm": -4.3542
         },
         {
           "issued_at": "2008-09-14T16:00:00+08:00",
@@ -664,7 +856,10 @@
           "predicted_surge_mm": 138.906,
           "distance_km": 56.8,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 19.6,
+          "predicted_tide_cm": 28.7152,
+          "astronomical_tide_cm": 14.7874
         },
         {
           "issued_at": "2008-09-14T17:00:00+08:00",
@@ -673,7 +868,10 @@
           "predicted_surge_mm": 111.855,
           "distance_km": 79.7,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 34.5,
+          "predicted_tide_cm": 39.0346,
+          "astronomical_tide_cm": 27.4976
         },
         {
           "issued_at": "2008-09-14T18:00:00+08:00",
@@ -682,7 +880,10 @@
           "predicted_surge_mm": 145.742,
           "distance_km": 79.7,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 41.8,
+          "predicted_tide_cm": 47.2672,
+          "astronomical_tide_cm": 32.0166
         },
         {
           "issued_at": "2008-09-14T19:00:00+08:00",
@@ -691,7 +892,10 @@
           "predicted_surge_mm": 226.967,
           "distance_km": 79.7,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 31.0,
+          "predicted_tide_cm": 52.8092,
+          "astronomical_tide_cm": 29.253
         },
         {
           "issued_at": "2008-09-14T20:00:00+08:00",
@@ -700,7 +904,10 @@
           "predicted_surge_mm": 128.414,
           "distance_km": 88.9,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 21.6,
+          "predicted_tide_cm": 34.7767,
+          "astronomical_tide_cm": 21.2328
         },
         {
           "issued_at": "2008-09-14T21:00:00+08:00",
@@ -709,7 +916,10 @@
           "predicted_surge_mm": 126.155,
           "distance_km": 88.9,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 12.9,
+          "predicted_tide_cm": 22.7734,
+          "astronomical_tide_cm": 10.0017
         },
         {
           "issued_at": "2008-09-14T22:00:00+08:00",
@@ -718,7 +928,10 @@
           "predicted_surge_mm": 105.013,
           "distance_km": 88.9,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 4.7,
+          "predicted_tide_cm": 7.7001,
+          "astronomical_tide_cm": -2.216
         },
         {
           "issued_at": "2008-09-14T23:00:00+08:00",
@@ -727,7 +940,10 @@
           "predicted_surge_mm": 140.406,
           "distance_km": 107.9,
           "wind_m_s": 33.44,
-          "pressure_hpa": 974.0
+          "pressure_hpa": 974.0,
+          "observed_tide_cm": -3.5,
+          "predicted_tide_cm": 0.5253,
+          "astronomical_tide_cm": -12.3274
         },
         {
           "issued_at": "2008-09-15T00:00:00+08:00",
@@ -736,7 +952,10 @@
           "predicted_surge_mm": 207.414,
           "distance_km": 107.9,
           "wind_m_s": 33.44,
-          "pressure_hpa": 974.0
+          "pressure_hpa": 974.0,
+          "observed_tide_cm": -9.9,
+          "predicted_tide_cm": 2.7717,
+          "astronomical_tide_cm": -16.5633
         },
         {
           "issued_at": "2008-09-15T01:00:00+08:00",
@@ -745,7 +964,10 @@
           "predicted_surge_mm": 173.717,
           "distance_km": 107.9,
           "wind_m_s": 33.44,
-          "pressure_hpa": 974.0
+          "pressure_hpa": 974.0,
+          "observed_tide_cm": -3.3,
+          "predicted_tide_cm": 4.016,
+          "astronomical_tide_cm": -12.1194
         },
         {
           "issued_at": "2008-09-15T02:00:00+08:00",
@@ -754,7 +976,10 @@
           "predicted_surge_mm": 143.598,
           "distance_km": 135.7,
           "wind_m_s": 28.29,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 12.7,
+          "predicted_tide_cm": 14.272,
+          "astronomical_tide_cm": 0.7817
         },
         {
           "issued_at": "2008-09-15T03:00:00+08:00",
@@ -763,7 +988,10 @@
           "predicted_surge_mm": 174.147,
           "distance_km": 135.7,
           "wind_m_s": 28.29,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 28.6,
+          "predicted_tide_cm": 35.0997,
+          "astronomical_tide_cm": 18.1942
         },
         {
           "issued_at": "2008-09-15T04:00:00+08:00",
@@ -772,7 +1000,10 @@
           "predicted_surge_mm": 139.931,
           "distance_km": 135.7,
           "wind_m_s": 28.29,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 45.5,
+          "predicted_tide_cm": 47.7801,
+          "astronomical_tide_cm": 34.0097
         },
         {
           "issued_at": "2008-09-15T05:00:00+08:00",
@@ -781,7 +1012,10 @@
           "predicted_surge_mm": 155.402,
           "distance_km": 136.2,
           "wind_m_s": 32.41,
-          "pressure_hpa": 976.0
+          "pressure_hpa": 976.0,
+          "observed_tide_cm": 58.5,
+          "predicted_tide_cm": 58.4398,
+          "astronomical_tide_cm": 42.8646
         },
         {
           "issued_at": "2008-09-15T06:00:00+08:00",
@@ -790,7 +1024,10 @@
           "predicted_surge_mm": 196.284,
           "distance_km": 136.2,
           "wind_m_s": 32.41,
-          "pressure_hpa": 976.0
+          "pressure_hpa": 976.0,
+          "observed_tide_cm": 54.3,
+          "predicted_tide_cm": 62.294,
+          "astronomical_tide_cm": 42.3924
         },
         {
           "issued_at": "2008-09-15T07:00:00+08:00",
@@ -799,7 +1036,10 @@
           "predicted_surge_mm": 133.134,
           "distance_km": 136.2,
           "wind_m_s": 32.41,
-          "pressure_hpa": 976.0
+          "pressure_hpa": 976.0,
+          "observed_tide_cm": 38.4,
+          "predicted_tide_cm": 47.1131,
+          "astronomical_tide_cm": 33.4381
         },
         {
           "issued_at": "2008-09-15T08:00:00+08:00",
@@ -808,7 +1048,10 @@
           "predicted_surge_mm": 112.525,
           "distance_km": 151.8,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 24.5,
+          "predicted_tide_cm": 29.939,
+          "astronomical_tide_cm": 18.5892
         },
         {
           "issued_at": "2008-09-15T09:00:00+08:00",
@@ -817,7 +1060,10 @@
           "predicted_surge_mm": 126.731,
           "distance_km": 151.8,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 8.3,
+          "predicted_tide_cm": 12.7047,
+          "astronomical_tide_cm": 0.6364
         },
         {
           "issued_at": "2008-09-15T10:00:00+08:00",
@@ -826,7 +1072,10 @@
           "predicted_surge_mm": 109.89,
           "distance_km": 151.8,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -11.3,
+          "predicted_tide_cm": -8.348,
+          "astronomical_tide_cm": -17.7616
         },
         {
           "issued_at": "2008-09-15T11:00:00+08:00",
@@ -835,7 +1084,10 @@
           "predicted_surge_mm": 105.632,
           "distance_km": 161.5,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": -30.3,
+          "predicted_tide_cm": -25.3312,
+          "astronomical_tide_cm": -33.4436
         },
         {
           "issued_at": "2008-09-15T12:00:00+08:00",
@@ -844,7 +1096,10 @@
           "predicted_surge_mm": 77.711,
           "distance_km": 161.5,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": -42.2,
+          "predicted_tide_cm": -37.6509,
+          "astronomical_tide_cm": -42.5276
         },
         {
           "issued_at": "2008-09-15T13:00:00+08:00",
@@ -853,7 +1108,10 @@
           "predicted_surge_mm": 58.179,
           "distance_km": 161.5,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": -38.9,
+          "predicted_tide_cm": -38.6058,
+          "astronomical_tide_cm": -41.6278
         },
         {
           "issued_at": "2008-09-15T14:00:00+08:00",
@@ -862,7 +1120,10 @@
           "predicted_surge_mm": 78.081,
           "distance_km": 178.6,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -27.5,
+          "predicted_tide_cm": -24.4577,
+          "astronomical_tide_cm": -29.9766
         },
         {
           "issued_at": "2008-09-15T15:00:00+08:00",
@@ -871,7 +1132,10 @@
           "predicted_surge_mm": 63.529,
           "distance_km": 178.6,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -9.5,
+          "predicted_tide_cm": -5.9533,
+          "astronomical_tide_cm": -10.7131
         },
         {
           "issued_at": "2008-09-15T16:00:00+08:00",
@@ -880,7 +1144,10 @@
           "predicted_surge_mm": 51.345,
           "distance_km": 178.6,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 11.8,
+          "predicted_tide_cm": 14.3279,
+          "astronomical_tide_cm": 10.0314
         },
         {
           "issued_at": "2008-09-15T17:00:00+08:00",
@@ -889,7 +1156,10 @@
           "predicted_surge_mm": 71.711,
           "distance_km": 190.2,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": 28.0,
+          "predicted_tide_cm": 33.0413,
+          "astronomical_tide_cm": 25.9084
         },
         {
           "issued_at": "2008-09-15T18:00:00+08:00",
@@ -898,7 +1168,10 @@
           "predicted_surge_mm": 104.259,
           "distance_km": 190.2,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": 37.2,
+          "predicted_tide_cm": 44.3346,
+          "astronomical_tide_cm": 33.1221
         },
         {
           "issued_at": "2008-09-15T19:00:00+08:00",
@@ -907,7 +1180,10 @@
           "predicted_surge_mm": 170.801,
           "distance_km": 190.2,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": 41.6,
+          "predicted_tide_cm": 49.9525,
+          "astronomical_tide_cm": 31.3844
         },
         {
           "issued_at": "2008-09-15T20:00:00+08:00",
@@ -916,7 +1192,10 @@
           "predicted_surge_mm": 203.682,
           "distance_km": 208.7,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 36.8,
+          "predicted_tide_cm": 44.9959,
+          "astronomical_tide_cm": 22.8098
         },
         {
           "issued_at": "2008-09-15T21:00:00+08:00",
@@ -925,7 +1204,10 @@
           "predicted_surge_mm": 217.691,
           "distance_km": 208.7,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 22.2,
+          "predicted_tide_cm": 33.5161,
+          "astronomical_tide_cm": 10.1404
         },
         {
           "issued_at": "2008-09-15T22:00:00+08:00",
@@ -934,7 +1216,10 @@
           "predicted_surge_mm": 226.559,
           "distance_km": 208.7,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 8.8,
+          "predicted_tide_cm": 19.5005,
+          "astronomical_tide_cm": -4.0885
         },
         {
           "issued_at": "2008-09-15T23:00:00+08:00",
@@ -943,7 +1228,10 @@
           "predicted_surge_mm": 232.999,
           "distance_km": 229.2,
           "wind_m_s": 29.84,
-          "pressure_hpa": 980.0
+          "pressure_hpa": 980.0,
+          "observed_tide_cm": -7.4,
+          "predicted_tide_cm": 6.2981,
+          "astronomical_tide_cm": -17.1221
         },
         {
           "issued_at": "2008-09-16T00:00:00+08:00",
@@ -952,7 +1240,10 @@
           "predicted_surge_mm": 210.768,
           "distance_km": 229.2,
           "wind_m_s": 29.84,
-          "pressure_hpa": 980.0
+          "pressure_hpa": 980.0,
+          "observed_tide_cm": -21.9,
+          "predicted_tide_cm": -4.8389,
+          "astronomical_tide_cm": -25.4539
         },
         {
           "issued_at": "2008-09-16T01:00:00+08:00",
@@ -961,7 +1252,10 @@
           "predicted_surge_mm": 209.963,
           "distance_km": 229.2,
           "wind_m_s": 29.84,
-          "pressure_hpa": 980.0
+          "pressure_hpa": 980.0,
+          "observed_tide_cm": -20.8,
+          "predicted_tide_cm": -5.1557,
+          "astronomical_tide_cm": -25.5278
         },
         {
           "issued_at": "2008-09-16T02:00:00+08:00",
@@ -970,7 +1264,10 @@
           "predicted_surge_mm": 232.443,
           "distance_km": 242.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -6.8,
+          "predicted_tide_cm": 7.1048,
+          "astronomical_tide_cm": -15.703
         },
         {
           "issued_at": "2008-09-16T03:00:00+08:00",
@@ -979,7 +1276,10 @@
           "predicted_surge_mm": 218.038,
           "distance_km": 242.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 12.6,
+          "predicted_tide_cm": 23.7045,
+          "astronomical_tide_cm": 2.0074
         },
         {
           "issued_at": "2008-09-16T04:00:00+08:00",
@@ -988,7 +1288,10 @@
           "predicted_surge_mm": 222.851,
           "distance_km": 242.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 33.6,
+          "predicted_tide_cm": 44.6056,
+          "astronomical_tide_cm": 22.1151
         },
         {
           "issued_at": "2008-09-16T05:00:00+08:00",
@@ -997,7 +1300,10 @@
           "predicted_surge_mm": 263.756,
           "distance_km": 267.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 986.0
+          "pressure_hpa": 986.0,
+          "observed_tide_cm": 47.9,
+          "predicted_tide_cm": 64.8653,
+          "astronomical_tide_cm": 38.0265
         },
         {
           "issued_at": "2008-09-16T06:00:00+08:00",
@@ -1006,7 +1312,10 @@
           "predicted_surge_mm": 277.002,
           "distance_km": 267.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 986.0
+          "pressure_hpa": 986.0,
+          "observed_tide_cm": 54.1,
+          "predicted_tide_cm": 73.4499,
+          "astronomical_tide_cm": 45.0831
         },
         {
           "issued_at": "2008-09-16T07:00:00+08:00",
@@ -1015,7 +1324,10 @@
           "predicted_surge_mm": 277.108,
           "distance_km": 267.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 986.0
+          "pressure_hpa": 986.0,
+          "observed_tide_cm": 53.2,
+          "predicted_tide_cm": 70.6473,
+          "astronomical_tide_cm": 42.2167
         },
         {
           "issued_at": "2008-09-16T08:00:00+08:00",
@@ -1024,7 +1336,10 @@
           "predicted_surge_mm": 288.138,
           "distance_km": 278.9,
           "wind_m_s": 23.15,
-          "pressure_hpa": 990.0
+          "pressure_hpa": 990.0,
+          "observed_tide_cm": 43.0,
+          "predicted_tide_cm": 60.6013,
+          "astronomical_tide_cm": 31.3688
         },
         {
           "issued_at": "2008-09-16T09:00:00+08:00",
@@ -1033,7 +1348,10 @@
           "predicted_surge_mm": 284.446,
           "distance_km": 278.9,
           "wind_m_s": 23.15,
-          "pressure_hpa": 990.0
+          "pressure_hpa": 990.0,
+          "observed_tide_cm": 27.6,
+          "predicted_tide_cm": 43.6975,
+          "astronomical_tide_cm": 15.6515
         },
         {
           "issued_at": "2008-09-16T10:00:00+08:00",
@@ -1042,7 +1360,10 @@
           "predicted_surge_mm": 295.484,
           "distance_km": 278.9,
           "wind_m_s": 23.15,
-          "pressure_hpa": 990.0
+          "pressure_hpa": 990.0,
+          "observed_tide_cm": 8.3,
+          "predicted_tide_cm": 25.897,
+          "astronomical_tide_cm": -1.9864
         },
         {
           "issued_at": "2008-09-16T11:00:00+08:00",
@@ -1051,7 +1372,10 @@
           "predicted_surge_mm": 251.182,
           "distance_km": 291.4,
           "wind_m_s": 22.12,
-          "pressure_hpa": 991.0
+          "pressure_hpa": 991.0,
+          "observed_tide_cm": -11.4,
+          "predicted_tide_cm": 3.3542,
+          "astronomical_tide_cm": -18.7215
         },
         {
           "issued_at": "2008-09-16T12:00:00+08:00",
@@ -1060,7 +1384,10 @@
           "predicted_surge_mm": 245.278,
           "distance_km": 291.4,
           "wind_m_s": 22.12,
-          "pressure_hpa": 991.0
+          "pressure_hpa": 991.0,
+          "observed_tide_cm": -27.6,
+          "predicted_tide_cm": -10.7591,
+          "astronomical_tide_cm": -31.2015
         },
         {
           "issued_at": "2008-09-16T13:00:00+08:00",
@@ -1069,7 +1396,10 @@
           "predicted_surge_mm": 266.174,
           "distance_km": 291.4,
           "wind_m_s": 22.12,
-          "pressure_hpa": 991.0
+          "pressure_hpa": 991.0,
+          "observed_tide_cm": -32.7,
+          "predicted_tide_cm": -13.6158,
+          "astronomical_tide_cm": -35.745
         },
         {
           "issued_at": "2008-09-16T14:00:00+08:00",
@@ -1078,7 +1408,10 @@
           "predicted_surge_mm": 277.36,
           "distance_km": 304.6,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": -24.7,
+          "predicted_tide_cm": -6.451,
+          "astronomical_tide_cm": -29.9654
         },
         {
           "issued_at": "2008-09-16T15:00:00+08:00",
@@ -1087,7 +1420,10 @@
           "predicted_surge_mm": 264.517,
           "distance_km": 304.6,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": -6.3,
+          "predicted_tide_cm": 8.2384,
+          "astronomical_tide_cm": -14.7485
         },
         {
           "issued_at": "2008-09-16T16:00:00+08:00",
@@ -1096,7 +1432,10 @@
           "predicted_surge_mm": 281.051,
           "distance_km": 304.6,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": 13.4,
+          "predicted_tide_cm": 30.9083,
+          "astronomical_tide_cm": 5.2277
         },
         {
           "issued_at": "2008-09-16T17:00:00+08:00",
@@ -1105,7 +1444,10 @@
           "predicted_surge_mm": 254.796,
           "distance_km": 333.4,
           "wind_m_s": 20.58,
-          "pressure_hpa": 993.0
+          "pressure_hpa": 993.0,
+          "observed_tide_cm": 29.9,
+          "predicted_tide_cm": 47.541,
+          "astronomical_tide_cm": 23.2798
         },
         {
           "issued_at": "2008-09-16T18:00:00+08:00",
@@ -1114,7 +1456,10 @@
           "predicted_surge_mm": 266.836,
           "distance_km": 333.4,
           "wind_m_s": 20.58,
-          "pressure_hpa": 993.0
+          "pressure_hpa": 993.0,
+          "observed_tide_cm": 39.3,
+          "predicted_tide_cm": 60.5619,
+          "astronomical_tide_cm": 33.7965
         },
         {
           "issued_at": "2008-09-16T19:00:00+08:00",
@@ -1123,7 +1468,10 @@
           "predicted_surge_mm": 297.263,
           "distance_km": 333.4,
           "wind_m_s": 20.58,
-          "pressure_hpa": 993.0
+          "pressure_hpa": 993.0,
+          "observed_tide_cm": 45.9,
+          "predicted_tide_cm": 65.5748,
+          "astronomical_tide_cm": 34.5217
         },
         {
           "issued_at": "2008-09-16T20:00:00+08:00",
@@ -1132,7 +1480,10 @@
           "predicted_surge_mm": 342.516,
           "distance_km": 363.0,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": 39.3,
+          "predicted_tide_cm": 63.1551,
+          "astronomical_tide_cm": 26.6566
         },
         {
           "issued_at": "2008-09-16T21:00:00+08:00",
@@ -1141,7 +1492,10 @@
           "predicted_surge_mm": 328.816,
           "distance_km": 363.0,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": 25.7,
+          "predicted_tide_cm": 48.6664,
+          "astronomical_tide_cm": 13.2093
         },
         {
           "issued_at": "2008-09-16T22:00:00+08:00",
@@ -1150,7 +1504,10 @@
           "predicted_surge_mm": 341.67,
           "distance_km": 363.0,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": 12.5,
+          "predicted_tide_cm": 33.7069,
+          "astronomical_tide_cm": -2.7068
         },
         {
           "issued_at": "2008-09-16T23:00:00+08:00",
@@ -1159,7 +1516,10 @@
           "predicted_surge_mm": 356.745,
           "distance_km": 386.3,
           "wind_m_s": 20.58,
-          "pressure_hpa": 993.0
+          "pressure_hpa": 993.0,
+          "observed_tide_cm": -8.2,
+          "predicted_tide_cm": 18.8549,
+          "astronomical_tide_cm": -18.3079
         }
       ]
     },
@@ -1180,7 +1540,10 @@
           "predicted_surge_mm": 235.16,
           "distance_km": 437.5,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 40.9,
+          "predicted_tide_cm": 47.7091,
+          "astronomical_tide_cm": 24.8585
         },
         {
           "issued_at": "2008-09-12T01:00:00+08:00",
@@ -1189,7 +1552,10 @@
           "predicted_surge_mm": 70.111,
           "distance_km": 437.5,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 42.2,
+          "predicted_tide_cm": 33.9743,
+          "astronomical_tide_cm": 27.2866
         },
         {
           "issued_at": "2008-09-12T02:00:00+08:00",
@@ -1198,7 +1564,10 @@
           "predicted_surge_mm": -24.6,
           "distance_km": 420.7,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 41.5,
+          "predicted_tide_cm": 22.4724,
+          "astronomical_tide_cm": 24.9096
         },
         {
           "issued_at": "2008-09-12T03:00:00+08:00",
@@ -1207,7 +1576,10 @@
           "predicted_surge_mm": 21.392,
           "distance_km": 420.7,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 32.7,
+          "predicted_tide_cm": 20.3334,
+          "astronomical_tide_cm": 17.7706
         },
         {
           "issued_at": "2008-09-12T04:00:00+08:00",
@@ -1216,7 +1588,10 @@
           "predicted_surge_mm": 254.406,
           "distance_km": 420.7,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 23.7,
+          "predicted_tide_cm": 33.0616,
+          "astronomical_tide_cm": 6.835
         },
         {
           "issued_at": "2008-09-12T05:00:00+08:00",
@@ -1225,7 +1600,10 @@
           "predicted_surge_mm": 385.141,
           "distance_km": 397.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 12.4,
+          "predicted_tide_cm": 32.7396,
+          "astronomical_tide_cm": -6.7482
         },
         {
           "issued_at": "2008-09-12T06:00:00+08:00",
@@ -1234,7 +1612,10 @@
           "predicted_surge_mm": 345.996,
           "distance_km": 397.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 2.2,
+          "predicted_tide_cm": 13.9536,
+          "astronomical_tide_cm": -21.6053
         },
         {
           "issued_at": "2008-09-12T07:00:00+08:00",
@@ -1243,7 +1624,10 @@
           "predicted_surge_mm": 195.479,
           "distance_km": 397.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": -10.3,
+          "predicted_tide_cm": -15.1234,
+          "astronomical_tide_cm": -35.5425
         },
         {
           "issued_at": "2008-09-12T08:00:00+08:00",
@@ -1252,7 +1636,10 @@
           "predicted_surge_mm": 101.886,
           "distance_km": 366.2,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": -18.9,
+          "predicted_tide_cm": -34.302,
+          "astronomical_tide_cm": -45.3727
         },
         {
           "issued_at": "2008-09-12T09:00:00+08:00",
@@ -1261,7 +1648,10 @@
           "predicted_surge_mm": 159.06,
           "distance_km": 366.2,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": -23.2,
+          "predicted_tide_cm": -30.9229,
+          "astronomical_tide_cm": -47.8711
         },
         {
           "issued_at": "2008-09-12T10:00:00+08:00",
@@ -1270,7 +1660,10 @@
           "predicted_surge_mm": 375.233,
           "distance_km": 366.2,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": -17.2,
+          "predicted_tide_cm": -2.7361,
+          "astronomical_tide_cm": -41.4758
         },
         {
           "issued_at": "2008-09-12T11:00:00+08:00",
@@ -1279,7 +1672,10 @@
           "predicted_surge_mm": 451.401,
           "distance_km": 328.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": -5.2,
+          "predicted_tide_cm": 18.8541,
+          "astronomical_tide_cm": -27.4777
         },
         {
           "issued_at": "2008-09-12T12:00:00+08:00",
@@ -1288,7 +1684,10 @@
           "predicted_surge_mm": 460.235,
           "distance_km": 328.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 6.9,
+          "predicted_tide_cm": 37.2234,
+          "astronomical_tide_cm": -9.6598
         },
         {
           "issued_at": "2008-09-12T13:00:00+08:00",
@@ -1297,7 +1696,10 @@
           "predicted_surge_mm": 386.168,
           "distance_km": 328.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 36.1,
+          "predicted_tide_cm": 46.3901,
+          "astronomical_tide_cm": 7.4697
         },
         {
           "issued_at": "2008-09-12T14:00:00+08:00",
@@ -1306,7 +1708,10 @@
           "predicted_surge_mm": 482.942,
           "distance_km": 283.1,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 41.6,
+          "predicted_tide_cm": 68.6071,
+          "astronomical_tide_cm": 20.5978
         },
         {
           "issued_at": "2008-09-12T15:00:00+08:00",
@@ -1315,7 +1720,10 @@
           "predicted_surge_mm": 572.492,
           "distance_km": 283.1,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 46.9,
+          "predicted_tide_cm": 84.875,
+          "astronomical_tide_cm": 28.4032
         },
         {
           "issued_at": "2008-09-12T16:00:00+08:00",
@@ -1324,7 +1732,10 @@
           "predicted_surge_mm": 769.843,
           "distance_km": 283.1,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 49.9,
+          "predicted_tide_cm": 106.7906,
+          "astronomical_tide_cm": 31.0071
         },
         {
           "issued_at": "2008-09-12T17:00:00+08:00",
@@ -1333,7 +1744,10 @@
           "predicted_surge_mm": 758.973,
           "distance_km": 260.6,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 48.2,
+          "predicted_tide_cm": 103.2351,
+          "astronomical_tide_cm": 29.0017
         },
         {
           "issued_at": "2008-09-12T18:00:00+08:00",
@@ -1342,7 +1756,10 @@
           "predicted_surge_mm": 725.256,
           "distance_km": 260.6,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 49.2,
+          "predicted_tide_cm": 93.4824,
+          "astronomical_tide_cm": 23.1521
         },
         {
           "issued_at": "2008-09-12T19:00:00+08:00",
@@ -1351,7 +1768,10 @@
           "predicted_surge_mm": 636.333,
           "distance_km": 260.6,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 43.0,
+          "predicted_tide_cm": 75.9217,
+          "astronomical_tide_cm": 14.9458
         },
         {
           "issued_at": "2008-09-12T20:00:00+08:00",
@@ -1360,7 +1780,10 @@
           "predicted_surge_mm": 619.368,
           "distance_km": 223.2,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 40.5,
+          "predicted_tide_cm": 66.1996,
+          "astronomical_tide_cm": 7.0939
         },
         {
           "issued_at": "2008-09-12T21:00:00+08:00",
@@ -1369,7 +1792,10 @@
           "predicted_surge_mm": 636.389,
           "distance_km": 223.2,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 36.9,
+          "predicted_tide_cm": 63.9964,
+          "astronomical_tide_cm": 2.956
         },
         {
           "issued_at": "2008-09-12T22:00:00+08:00",
@@ -1378,7 +1804,10 @@
           "predicted_surge_mm": 581.52,
           "distance_km": 223.2,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 42.3,
+          "predicted_tide_cm": 60.9593,
+          "astronomical_tide_cm": 4.8611
         },
         {
           "issued_at": "2008-09-12T23:00:00+08:00",
@@ -1387,7 +1816,10 @@
           "predicted_surge_mm": 547.442,
           "distance_km": 200.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 51.9,
+          "predicted_tide_cm": 65.7921,
+          "astronomical_tide_cm": 12.483
         },
         {
           "issued_at": "2008-09-13T00:00:00+08:00",
@@ -1396,7 +1828,10 @@
           "predicted_surge_mm": 440.592,
           "distance_km": 200.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 57.1,
+          "predicted_tide_cm": 65.7648,
+          "astronomical_tide_cm": 22.645
         },
         {
           "issued_at": "2008-09-13T01:00:00+08:00",
@@ -1405,7 +1840,10 @@
           "predicted_surge_mm": 427.65,
           "distance_km": 200.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 64.1,
+          "predicted_tide_cm": 73.0546,
+          "astronomical_tide_cm": 30.8797
         },
         {
           "issued_at": "2008-09-13T02:00:00+08:00",
@@ -1414,7 +1852,10 @@
           "predicted_surge_mm": 365.118,
           "distance_km": 185.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 79.0,
+          "predicted_tide_cm": 69.9031,
+          "astronomical_tide_cm": 33.6668
         },
         {
           "issued_at": "2008-09-13T03:00:00+08:00",
@@ -1423,7 +1864,10 @@
           "predicted_surge_mm": 388.983,
           "distance_km": 185.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 68.0,
+          "predicted_tide_cm": 68.7681,
+          "astronomical_tide_cm": 29.7813
         },
         {
           "issued_at": "2008-09-13T04:00:00+08:00",
@@ -1432,7 +1876,10 @@
           "predicted_surge_mm": 384.743,
           "distance_km": 185.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 55.5,
+          "predicted_tide_cm": 58.9498,
+          "astronomical_tide_cm": 20.0364
         },
         {
           "issued_at": "2008-09-13T05:00:00+08:00",
@@ -1441,7 +1888,10 @@
           "predicted_surge_mm": 418.101,
           "distance_km": 163.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 48.0,
+          "predicted_tide_cm": 48.5241,
+          "astronomical_tide_cm": 6.1044
         },
         {
           "issued_at": "2008-09-13T06:00:00+08:00",
@@ -1450,7 +1900,10 @@
           "predicted_surge_mm": 428.27,
           "distance_km": 163.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 32.9,
+          "predicted_tide_cm": 33.0529,
+          "astronomical_tide_cm": -10.272
         },
         {
           "issued_at": "2008-09-13T07:00:00+08:00",
@@ -1459,7 +1912,10 @@
           "predicted_surge_mm": 422.129,
           "distance_km": 163.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 21.5,
+          "predicted_tide_cm": 15.3685,
+          "astronomical_tide_cm": -27.0372
         },
         {
           "issued_at": "2008-09-13T08:00:00+08:00",
@@ -1468,7 +1924,10 @@
           "predicted_surge_mm": 458.119,
           "distance_km": 142.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 5.0,
+          "predicted_tide_cm": 4.5549,
+          "astronomical_tide_cm": -41.1849
         },
         {
           "issued_at": "2008-09-13T09:00:00+08:00",
@@ -1477,7 +1936,10 @@
           "predicted_surge_mm": 430.709,
           "distance_km": 142.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": -4.0,
+          "predicted_tide_cm": -5.9765,
+          "astronomical_tide_cm": -48.9445
         },
         {
           "issued_at": "2008-09-13T10:00:00+08:00",
@@ -1486,7 +1948,10 @@
           "predicted_surge_mm": 474.607,
           "distance_km": 142.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": -2.0,
+          "predicted_tide_cm": 0.2808,
+          "astronomical_tide_cm": -47.2776
         },
         {
           "issued_at": "2008-09-13T11:00:00+08:00",
@@ -1495,7 +1960,10 @@
           "predicted_surge_mm": 514.318,
           "distance_km": 121.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 15.5,
+          "predicted_tide_cm": 15.9787,
+          "astronomical_tide_cm": -35.7986
         },
         {
           "issued_at": "2008-09-13T12:00:00+08:00",
@@ -1504,7 +1972,10 @@
           "predicted_surge_mm": 458.138,
           "distance_km": 121.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 39.4,
+          "predicted_tide_cm": 28.7081,
+          "astronomical_tide_cm": -17.5494
         },
         {
           "issued_at": "2008-09-13T13:00:00+08:00",
@@ -1513,7 +1984,10 @@
           "predicted_surge_mm": 413.46,
           "distance_km": 121.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 64.0,
+          "predicted_tide_cm": 43.8916,
+          "astronomical_tide_cm": 2.1989
         },
         {
           "issued_at": "2008-09-13T14:00:00+08:00",
@@ -1522,7 +1996,10 @@
           "predicted_surge_mm": 439.871,
           "distance_km": 106.4,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 74.1,
+          "predicted_tide_cm": 62.5438,
+          "astronomical_tide_cm": 18.3897
         },
         {
           "issued_at": "2008-09-13T15:00:00+08:00",
@@ -1531,7 +2008,10 @@
           "predicted_surge_mm": 408.477,
           "distance_km": 106.4,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 63.9,
+          "predicted_tide_cm": 69.0454,
+          "astronomical_tide_cm": 28.169
         },
         {
           "issued_at": "2008-09-13T16:00:00+08:00",
@@ -1540,7 +2020,10 @@
           "predicted_surge_mm": 519.864,
           "distance_km": 106.4,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 66.7,
+          "predicted_tide_cm": 83.1066,
+          "astronomical_tide_cm": 31.2
         },
         {
           "issued_at": "2008-09-13T17:00:00+08:00",
@@ -1549,7 +2032,10 @@
           "predicted_surge_mm": 602.224,
           "distance_km": 97.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 60.2,
+          "predicted_tide_cm": 88.4897,
+          "astronomical_tide_cm": 28.5691
         },
         {
           "issued_at": "2008-09-13T18:00:00+08:00",
@@ -1558,7 +2044,10 @@
           "predicted_surge_mm": 551.604,
           "distance_km": 97.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 53.5,
+          "predicted_tide_cm": 76.0451,
+          "astronomical_tide_cm": 21.641
         },
         {
           "issued_at": "2008-09-13T19:00:00+08:00",
@@ -1567,7 +2056,10 @@
           "predicted_surge_mm": 543.102,
           "distance_km": 97.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 46.6,
+          "predicted_tide_cm": 64.8731,
+          "astronomical_tide_cm": 11.9424
         },
         {
           "issued_at": "2008-09-13T20:00:00+08:00",
@@ -1576,7 +2068,10 @@
           "predicted_surge_mm": 532.721,
           "distance_km": 82.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 45.6,
+          "predicted_tide_cm": 53.1908,
+          "astronomical_tide_cm": 1.8442
         },
         {
           "issued_at": "2008-09-13T21:00:00+08:00",
@@ -1585,7 +2080,10 @@
           "predicted_surge_mm": 563.97,
           "distance_km": 82.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 51.7,
+          "predicted_tide_cm": 49.0583,
+          "astronomical_tide_cm": -5.2002
         },
         {
           "issued_at": "2008-09-13T22:00:00+08:00",
@@ -1594,7 +2092,10 @@
           "predicted_surge_mm": 556.317,
           "distance_km": 82.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 53.3,
+          "predicted_tide_cm": 47.9036,
+          "astronomical_tide_cm": -5.7825
         },
         {
           "issued_at": "2008-09-13T23:00:00+08:00",
@@ -1603,7 +2104,10 @@
           "predicted_surge_mm": 519.678,
           "distance_km": 58.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 60.9,
+          "predicted_tide_cm": 51.9052,
+          "astronomical_tide_cm": 1.4357
         },
         {
           "issued_at": "2008-09-14T00:00:00+08:00",
@@ -1612,7 +2116,10 @@
           "predicted_surge_mm": 412.716,
           "distance_km": 58.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 61.8,
+          "predicted_tide_cm": 54.6207,
+          "astronomical_tide_cm": 14.3797
         },
         {
           "issued_at": "2008-09-14T01:00:00+08:00",
@@ -1621,7 +2128,10 @@
           "predicted_surge_mm": 344.708,
           "distance_km": 58.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 69.5,
+          "predicted_tide_cm": 61.9859,
+          "astronomical_tide_cm": 28.1861
         },
         {
           "issued_at": "2008-09-14T02:00:00+08:00",
@@ -1630,7 +2140,10 @@
           "predicted_surge_mm": 280.857,
           "distance_km": 44.2,
           "wind_m_s": 41.16,
-          "pressure_hpa": 960.0
+          "pressure_hpa": 960.0,
+          "observed_tide_cm": 70.7,
+          "predicted_tide_cm": 65.2635,
+          "astronomical_tide_cm": 37.561
         },
         {
           "issued_at": "2008-09-14T03:00:00+08:00",
@@ -1639,7 +2152,10 @@
           "predicted_surge_mm": 212.197,
           "distance_km": 44.2,
           "wind_m_s": 41.16,
-          "pressure_hpa": 960.0
+          "pressure_hpa": 960.0,
+          "observed_tide_cm": 64.1,
+          "predicted_tide_cm": 60.3797,
+          "astronomical_tide_cm": 39.2388
         },
         {
           "issued_at": "2008-09-14T04:00:00+08:00",
@@ -1648,7 +2164,10 @@
           "predicted_surge_mm": 206.478,
           "distance_km": 56.6,
           "wind_m_s": 46.3,
-          "pressure_hpa": 956.0
+          "pressure_hpa": 956.0,
+          "observed_tide_cm": 51.7,
+          "predicted_tide_cm": 53.7726,
+          "astronomical_tide_cm": 32.9022
         },
         {
           "issued_at": "2008-09-14T05:00:00+08:00",
@@ -1657,7 +2176,10 @@
           "predicted_surge_mm": 226.814,
           "distance_km": 67.5,
           "wind_m_s": 38.58,
-          "pressure_hpa": 960.0
+          "pressure_hpa": 960.0,
+          "observed_tide_cm": 36.5,
+          "predicted_tide_cm": 43.3388,
+          "astronomical_tide_cm": 20.2982
         },
         {
           "issued_at": "2008-09-14T06:00:00+08:00",
@@ -1666,7 +2188,10 @@
           "predicted_surge_mm": 263.213,
           "distance_km": 67.5,
           "wind_m_s": 46.3,
-          "pressure_hpa": 956.0
+          "pressure_hpa": 956.0,
+          "observed_tide_cm": 26.7,
+          "predicted_tide_cm": 30.2447,
+          "astronomical_tide_cm": 3.7604
         },
         {
           "issued_at": "2008-09-14T07:00:00+08:00",
@@ -1675,7 +2200,10 @@
           "predicted_surge_mm": 283.68,
           "distance_km": 67.5,
           "wind_m_s": 46.3,
-          "pressure_hpa": 956.0
+          "pressure_hpa": 956.0,
+          "observed_tide_cm": 21.8,
+          "predicted_tide_cm": 13.5766,
+          "astronomical_tide_cm": -14.4337
         },
         {
           "issued_at": "2008-09-14T08:00:00+08:00",
@@ -1684,7 +2212,10 @@
           "predicted_surge_mm": 308.248,
           "distance_km": 45.8,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": -13.0,
+          "predicted_tide_cm": -1.735,
+          "astronomical_tide_cm": -31.5894
         },
         {
           "issued_at": "2008-09-14T09:00:00+08:00",
@@ -1693,7 +2224,10 @@
           "predicted_surge_mm": 285.239,
           "distance_km": 45.8,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": -27.3,
+          "predicted_tide_cm": -16.92,
+          "astronomical_tide_cm": -44.0795
         },
         {
           "issued_at": "2008-09-14T10:00:00+08:00",
@@ -1702,7 +2236,10 @@
           "predicted_surge_mm": 310.482,
           "distance_km": 45.8,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": -34.0,
+          "predicted_tide_cm": -18.3547,
+          "astronomical_tide_cm": -48.0343
         },
         {
           "issued_at": "2008-09-14T11:00:00+08:00",
@@ -1711,7 +2248,10 @@
           "predicted_surge_mm": 351.988,
           "distance_km": 24.5,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": -26.1,
+          "predicted_tide_cm": -7.1318,
+          "astronomical_tide_cm": -41.2778
         },
         {
           "issued_at": "2008-09-14T12:00:00+08:00",
@@ -1720,7 +2260,10 @@
           "predicted_surge_mm": 254.862,
           "distance_km": 24.5,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": -12.0,
+          "predicted_tide_cm": -0.2602,
+          "astronomical_tide_cm": -25.116
         },
         {
           "issued_at": "2008-09-14T13:00:00+08:00",
@@ -1729,7 +2272,10 @@
           "predicted_surge_mm": 266.766,
           "distance_km": 24.5,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": 3.5,
+          "predicted_tide_cm": 22.0577,
+          "astronomical_tide_cm": -4.3542
         },
         {
           "issued_at": "2008-09-14T14:00:00+08:00",
@@ -1738,7 +2284,10 @@
           "predicted_surge_mm": 174.882,
           "distance_km": 56.8,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 19.6,
+          "predicted_tide_cm": 32.3128,
+          "astronomical_tide_cm": 14.7874
         },
         {
           "issued_at": "2008-09-14T15:00:00+08:00",
@@ -1747,7 +2296,10 @@
           "predicted_surge_mm": 208.331,
           "distance_km": 56.8,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 34.5,
+          "predicted_tide_cm": 48.6822,
+          "astronomical_tide_cm": 27.4976
         },
         {
           "issued_at": "2008-09-14T16:00:00+08:00",
@@ -1756,7 +2308,10 @@
           "predicted_surge_mm": 235.488,
           "distance_km": 56.8,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 41.8,
+          "predicted_tide_cm": 56.2418,
+          "astronomical_tide_cm": 32.0166
         },
         {
           "issued_at": "2008-09-14T17:00:00+08:00",
@@ -1765,7 +2320,10 @@
           "predicted_surge_mm": 244.56,
           "distance_km": 79.7,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 31.0,
+          "predicted_tide_cm": 54.5685,
+          "astronomical_tide_cm": 29.253
         },
         {
           "issued_at": "2008-09-14T18:00:00+08:00",
@@ -1774,7 +2332,10 @@
           "predicted_surge_mm": 297.508,
           "distance_km": 79.7,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 21.6,
+          "predicted_tide_cm": 51.6861,
+          "astronomical_tide_cm": 21.2328
         },
         {
           "issued_at": "2008-09-14T19:00:00+08:00",
@@ -1783,7 +2344,10 @@
           "predicted_surge_mm": 344.386,
           "distance_km": 79.7,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 12.9,
+          "predicted_tide_cm": 44.5965,
+          "astronomical_tide_cm": 10.0017
         },
         {
           "issued_at": "2008-09-14T20:00:00+08:00",
@@ -1792,7 +2356,10 @@
           "predicted_surge_mm": 291.633,
           "distance_km": 88.9,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 4.7,
+          "predicted_tide_cm": 26.3621,
+          "astronomical_tide_cm": -2.216
         },
         {
           "issued_at": "2008-09-14T21:00:00+08:00",
@@ -1801,7 +2368,10 @@
           "predicted_surge_mm": 333.06,
           "distance_km": 88.9,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -3.5,
+          "predicted_tide_cm": 19.7907,
+          "astronomical_tide_cm": -12.3274
         },
         {
           "issued_at": "2008-09-14T22:00:00+08:00",
@@ -1810,7 +2380,10 @@
           "predicted_surge_mm": 298.618,
           "distance_km": 88.9,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -9.9,
+          "predicted_tide_cm": 11.8921,
+          "astronomical_tide_cm": -16.5633
         },
         {
           "issued_at": "2008-09-14T23:00:00+08:00",
@@ -1819,7 +2392,10 @@
           "predicted_surge_mm": 333.244,
           "distance_km": 107.9,
           "wind_m_s": 33.44,
-          "pressure_hpa": 974.0
+          "pressure_hpa": 974.0,
+          "observed_tide_cm": -3.3,
+          "predicted_tide_cm": 19.9687,
+          "astronomical_tide_cm": -12.1194
         },
         {
           "issued_at": "2008-09-15T00:00:00+08:00",
@@ -1828,7 +2404,10 @@
           "predicted_surge_mm": 334.702,
           "distance_km": 107.9,
           "wind_m_s": 33.44,
-          "pressure_hpa": 974.0
+          "pressure_hpa": 974.0,
+          "observed_tide_cm": 12.7,
+          "predicted_tide_cm": 33.3824,
+          "astronomical_tide_cm": 0.7817
         },
         {
           "issued_at": "2008-09-15T01:00:00+08:00",
@@ -1837,7 +2416,10 @@
           "predicted_surge_mm": 202.526,
           "distance_km": 107.9,
           "wind_m_s": 33.44,
-          "pressure_hpa": 974.0
+          "pressure_hpa": 974.0,
+          "observed_tide_cm": 28.6,
+          "predicted_tide_cm": 37.9376,
+          "astronomical_tide_cm": 18.1942
         },
         {
           "issued_at": "2008-09-15T02:00:00+08:00",
@@ -1846,7 +2428,10 @@
           "predicted_surge_mm": 214.194,
           "distance_km": 135.7,
           "wind_m_s": 28.29,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 45.5,
+          "predicted_tide_cm": 55.2064,
+          "astronomical_tide_cm": 34.0097
         },
         {
           "issued_at": "2008-09-15T03:00:00+08:00",
@@ -1855,7 +2440,10 @@
           "predicted_surge_mm": 253.248,
           "distance_km": 135.7,
           "wind_m_s": 28.29,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 58.5,
+          "predicted_tide_cm": 68.2244,
+          "astronomical_tide_cm": 42.8646
         },
         {
           "issued_at": "2008-09-15T04:00:00+08:00",
@@ -1864,7 +2452,10 @@
           "predicted_surge_mm": 197.76,
           "distance_km": 135.7,
           "wind_m_s": 28.29,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 54.3,
+          "predicted_tide_cm": 62.4416,
+          "astronomical_tide_cm": 42.3924
         },
         {
           "issued_at": "2008-09-15T05:00:00+08:00",
@@ -1873,7 +2464,10 @@
           "predicted_surge_mm": 251.047,
           "distance_km": 136.2,
           "wind_m_s": 32.41,
-          "pressure_hpa": 976.0
+          "pressure_hpa": 976.0,
+          "observed_tide_cm": 38.4,
+          "predicted_tide_cm": 58.9044,
+          "astronomical_tide_cm": 33.4381
         },
         {
           "issued_at": "2008-09-15T06:00:00+08:00",
@@ -1882,7 +2476,10 @@
           "predicted_surge_mm": 224.329,
           "distance_km": 136.2,
           "wind_m_s": 32.41,
-          "pressure_hpa": 976.0
+          "pressure_hpa": 976.0,
+          "observed_tide_cm": 24.5,
+          "predicted_tide_cm": 41.1194,
+          "astronomical_tide_cm": 18.5892
         },
         {
           "issued_at": "2008-09-15T07:00:00+08:00",
@@ -1891,7 +2488,10 @@
           "predicted_surge_mm": 179.545,
           "distance_km": 136.2,
           "wind_m_s": 32.41,
-          "pressure_hpa": 976.0
+          "pressure_hpa": 976.0,
+          "observed_tide_cm": 8.3,
+          "predicted_tide_cm": 17.9861,
+          "astronomical_tide_cm": 0.6364
         },
         {
           "issued_at": "2008-09-15T08:00:00+08:00",
@@ -1900,7 +2500,10 @@
           "predicted_surge_mm": 129.243,
           "distance_km": 151.8,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -11.3,
+          "predicted_tide_cm": -6.4127,
+          "astronomical_tide_cm": -17.7616
         },
         {
           "issued_at": "2008-09-15T09:00:00+08:00",
@@ -1909,7 +2512,10 @@
           "predicted_surge_mm": 154.551,
           "distance_km": 151.8,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -30.3,
+          "predicted_tide_cm": -20.4393,
+          "astronomical_tide_cm": -33.4436
         },
         {
           "issued_at": "2008-09-15T10:00:00+08:00",
@@ -1918,7 +2524,10 @@
           "predicted_surge_mm": 141.261,
           "distance_km": 151.8,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -42.2,
+          "predicted_tide_cm": -31.2959,
+          "astronomical_tide_cm": -42.5276
         },
         {
           "issued_at": "2008-09-15T11:00:00+08:00",
@@ -1927,7 +2536,10 @@
           "predicted_surge_mm": 135.941,
           "distance_km": 161.5,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": -38.9,
+          "predicted_tide_cm": -30.8296,
+          "astronomical_tide_cm": -41.6278
         },
         {
           "issued_at": "2008-09-15T12:00:00+08:00",
@@ -1936,7 +2548,10 @@
           "predicted_surge_mm": 112.772,
           "distance_km": 161.5,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": -27.5,
+          "predicted_tide_cm": -20.9886,
+          "astronomical_tide_cm": -29.9766
         },
         {
           "issued_at": "2008-09-15T13:00:00+08:00",
@@ -1945,7 +2560,10 @@
           "predicted_surge_mm": 104.172,
           "distance_km": 161.5,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": -9.5,
+          "predicted_tide_cm": -1.889,
+          "astronomical_tide_cm": -10.7131
         },
         {
           "issued_at": "2008-09-15T14:00:00+08:00",
@@ -1954,7 +2572,10 @@
           "predicted_surge_mm": 112.049,
           "distance_km": 178.6,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 11.8,
+          "predicted_tide_cm": 20.3983,
+          "astronomical_tide_cm": 10.0314
         },
         {
           "issued_at": "2008-09-15T15:00:00+08:00",
@@ -1963,7 +2584,10 @@
           "predicted_surge_mm": 136.857,
           "distance_km": 178.6,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 28.0,
+          "predicted_tide_cm": 39.5559,
+          "astronomical_tide_cm": 25.9084
         },
         {
           "issued_at": "2008-09-15T16:00:00+08:00",
@@ -1972,7 +2596,10 @@
           "predicted_surge_mm": 163.982,
           "distance_km": 178.6,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 37.2,
+          "predicted_tide_cm": 50.3069,
+          "astronomical_tide_cm": 33.1221
         },
         {
           "issued_at": "2008-09-15T17:00:00+08:00",
@@ -1981,7 +2608,10 @@
           "predicted_surge_mm": 190.059,
           "distance_km": 190.2,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": 41.6,
+          "predicted_tide_cm": 51.8783,
+          "astronomical_tide_cm": 31.3844
         },
         {
           "issued_at": "2008-09-15T18:00:00+08:00",
@@ -1990,7 +2620,10 @@
           "predicted_surge_mm": 236.566,
           "distance_km": 190.2,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": 36.8,
+          "predicted_tide_cm": 48.2843,
+          "astronomical_tide_cm": 22.8098
         },
         {
           "issued_at": "2008-09-15T19:00:00+08:00",
@@ -1999,7 +2632,10 @@
           "predicted_surge_mm": 225.389,
           "distance_km": 190.2,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": 22.2,
+          "predicted_tide_cm": 34.2859,
+          "astronomical_tide_cm": 10.1404
         },
         {
           "issued_at": "2008-09-15T20:00:00+08:00",
@@ -2008,7 +2644,10 @@
           "predicted_surge_mm": 191.076,
           "distance_km": 208.7,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 8.8,
+          "predicted_tide_cm": 15.9522,
+          "astronomical_tide_cm": -4.0885
         },
         {
           "issued_at": "2008-09-15T21:00:00+08:00",
@@ -2017,7 +2656,10 @@
           "predicted_surge_mm": 193.409,
           "distance_km": 208.7,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -7.4,
+          "predicted_tide_cm": 2.3391,
+          "astronomical_tide_cm": -17.1221
         },
         {
           "issued_at": "2008-09-15T22:00:00+08:00",
@@ -2026,7 +2668,10 @@
           "predicted_surge_mm": 266.809,
           "distance_km": 208.7,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -21.9,
+          "predicted_tide_cm": 0.7652,
+          "astronomical_tide_cm": -25.4539
         },
         {
           "issued_at": "2008-09-15T23:00:00+08:00",
@@ -2035,7 +2680,10 @@
           "predicted_surge_mm": 306.277,
           "distance_km": 229.2,
           "wind_m_s": 29.84,
-          "pressure_hpa": 980.0
+          "pressure_hpa": 980.0,
+          "observed_tide_cm": -20.8,
+          "predicted_tide_cm": 4.4757,
+          "astronomical_tide_cm": -25.5278
         },
         {
           "issued_at": "2008-09-16T00:00:00+08:00",
@@ -2044,7 +2692,10 @@
           "predicted_surge_mm": 283.33,
           "distance_km": 229.2,
           "wind_m_s": 29.84,
-          "pressure_hpa": 980.0
+          "pressure_hpa": 980.0,
+          "observed_tide_cm": -6.8,
+          "predicted_tide_cm": 12.1935,
+          "astronomical_tide_cm": -15.703
         },
         {
           "issued_at": "2008-09-16T01:00:00+08:00",
@@ -2053,7 +2704,10 @@
           "predicted_surge_mm": 174.362,
           "distance_km": 229.2,
           "wind_m_s": 29.84,
-          "pressure_hpa": 980.0
+          "pressure_hpa": 980.0,
+          "observed_tide_cm": 12.6,
+          "predicted_tide_cm": 19.3369,
+          "astronomical_tide_cm": 2.0074
         },
         {
           "issued_at": "2008-09-16T02:00:00+08:00",
@@ -2062,7 +2716,10 @@
           "predicted_surge_mm": 165.815,
           "distance_km": 242.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 33.6,
+          "predicted_tide_cm": 38.902,
+          "astronomical_tide_cm": 22.1151
         },
         {
           "issued_at": "2008-09-16T03:00:00+08:00",
@@ -2071,7 +2728,10 @@
           "predicted_surge_mm": 216.647,
           "distance_km": 242.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 47.9,
+          "predicted_tide_cm": 60.1544,
+          "astronomical_tide_cm": 38.0265
         },
         {
           "issued_at": "2008-09-16T04:00:00+08:00",
@@ -2080,7 +2740,10 @@
           "predicted_surge_mm": 337.138,
           "distance_km": 242.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 54.1,
+          "predicted_tide_cm": 79.4635,
+          "astronomical_tide_cm": 45.0831
         },
         {
           "issued_at": "2008-09-16T05:00:00+08:00",
@@ -2089,7 +2752,10 @@
           "predicted_surge_mm": 413.552,
           "distance_km": 267.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 986.0
+          "pressure_hpa": 986.0,
+          "observed_tide_cm": 53.2,
+          "predicted_tide_cm": 84.2917,
+          "astronomical_tide_cm": 42.2167
         },
         {
           "issued_at": "2008-09-16T06:00:00+08:00",
@@ -2098,7 +2764,10 @@
           "predicted_surge_mm": 434.445,
           "distance_km": 267.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 986.0
+          "pressure_hpa": 986.0,
+          "observed_tide_cm": 43.0,
+          "predicted_tide_cm": 75.232,
+          "astronomical_tide_cm": 31.3688
         },
         {
           "issued_at": "2008-09-16T07:00:00+08:00",
@@ -2107,7 +2776,10 @@
           "predicted_surge_mm": 389.043,
           "distance_km": 267.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 986.0
+          "pressure_hpa": 986.0,
+          "observed_tide_cm": 27.6,
+          "predicted_tide_cm": 54.1572,
+          "astronomical_tide_cm": 15.6515
         },
         {
           "issued_at": "2008-09-16T08:00:00+08:00",
@@ -2116,7 +2788,10 @@
           "predicted_surge_mm": 344.858,
           "distance_km": 278.9,
           "wind_m_s": 23.15,
-          "pressure_hpa": 990.0
+          "pressure_hpa": 990.0,
+          "observed_tide_cm": 8.3,
+          "predicted_tide_cm": 30.8344,
+          "astronomical_tide_cm": -1.9864
         },
         {
           "issued_at": "2008-09-16T09:00:00+08:00",
@@ -2125,7 +2800,10 @@
           "predicted_surge_mm": 330.525,
           "distance_km": 278.9,
           "wind_m_s": 23.15,
-          "pressure_hpa": 990.0
+          "pressure_hpa": 990.0,
+          "observed_tide_cm": -11.4,
+          "predicted_tide_cm": 11.2885,
+          "astronomical_tide_cm": -18.7215
         },
         {
           "issued_at": "2008-09-16T10:00:00+08:00",
@@ -2134,7 +2812,10 @@
           "predicted_surge_mm": 390.996,
           "distance_km": 278.9,
           "wind_m_s": 23.15,
-          "pressure_hpa": 990.0
+          "pressure_hpa": 990.0,
+          "observed_tide_cm": -27.6,
+          "predicted_tide_cm": 3.8127,
+          "astronomical_tide_cm": -31.2015
         },
         {
           "issued_at": "2008-09-16T11:00:00+08:00",
@@ -2143,7 +2824,10 @@
           "predicted_surge_mm": 402.156,
           "distance_km": 291.4,
           "wind_m_s": 22.12,
-          "pressure_hpa": 991.0
+          "pressure_hpa": 991.0,
+          "observed_tide_cm": -32.7,
+          "predicted_tide_cm": -0.0176,
+          "astronomical_tide_cm": -35.745
         },
         {
           "issued_at": "2008-09-16T12:00:00+08:00",
@@ -2152,7 +2836,10 @@
           "predicted_surge_mm": 354.575,
           "distance_km": 291.4,
           "wind_m_s": 22.12,
-          "pressure_hpa": 991.0
+          "pressure_hpa": 991.0,
+          "observed_tide_cm": -24.7,
+          "predicted_tide_cm": 1.2705,
+          "astronomical_tide_cm": -29.9654
         },
         {
           "issued_at": "2008-09-16T13:00:00+08:00",
@@ -2161,7 +2848,10 @@
           "predicted_surge_mm": 267.337,
           "distance_km": 291.4,
           "wind_m_s": 22.12,
-          "pressure_hpa": 991.0
+          "pressure_hpa": 991.0,
+          "observed_tide_cm": -6.3,
+          "predicted_tide_cm": 8.5204,
+          "astronomical_tide_cm": -14.7485
         },
         {
           "issued_at": "2008-09-16T14:00:00+08:00",
@@ -2170,7 +2860,10 @@
           "predicted_surge_mm": 260.815,
           "distance_km": 304.6,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": 13.4,
+          "predicted_tide_cm": 28.8847,
+          "astronomical_tide_cm": 5.2277
         },
         {
           "issued_at": "2008-09-16T15:00:00+08:00",
@@ -2179,7 +2872,10 @@
           "predicted_surge_mm": 333.062,
           "distance_km": 304.6,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": 29.9,
+          "predicted_tide_cm": 55.3676,
+          "astronomical_tide_cm": 23.2798
         },
         {
           "issued_at": "2008-09-16T16:00:00+08:00",
@@ -2188,7 +2884,10 @@
           "predicted_surge_mm": 464.644,
           "distance_km": 304.6,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": 39.3,
+          "predicted_tide_cm": 80.3427,
+          "astronomical_tide_cm": 33.7965
         },
         {
           "issued_at": "2008-09-16T17:00:00+08:00",
@@ -2197,7 +2896,10 @@
           "predicted_surge_mm": 549.031,
           "distance_km": 333.4,
           "wind_m_s": 20.58,
-          "pressure_hpa": 993.0
+          "pressure_hpa": 993.0,
+          "observed_tide_cm": 45.9,
+          "predicted_tide_cm": 90.7516,
+          "astronomical_tide_cm": 34.5217
         },
         {
           "issued_at": "2008-09-16T18:00:00+08:00",
@@ -2206,7 +2908,10 @@
           "predicted_surge_mm": 589.946,
           "distance_km": 333.4,
           "wind_m_s": 20.58,
-          "pressure_hpa": 993.0
+          "pressure_hpa": 993.0,
+          "observed_tide_cm": 39.3,
+          "predicted_tide_cm": 87.8981,
+          "astronomical_tide_cm": 26.6566
         },
         {
           "issued_at": "2008-09-16T19:00:00+08:00",
@@ -2215,7 +2920,10 @@
           "predicted_surge_mm": 558.143,
           "distance_km": 333.4,
           "wind_m_s": 20.58,
-          "pressure_hpa": 993.0
+          "pressure_hpa": 993.0,
+          "observed_tide_cm": 25.7,
+          "predicted_tide_cm": 71.5991,
+          "astronomical_tide_cm": 13.2093
         },
         {
           "issued_at": "2008-09-16T20:00:00+08:00",
@@ -2224,7 +2932,10 @@
           "predicted_surge_mm": 560.615,
           "distance_km": 363.0,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": 12.5,
+          "predicted_tide_cm": 55.6014,
+          "astronomical_tide_cm": -2.7068
         },
         {
           "issued_at": "2008-09-16T21:00:00+08:00",
@@ -2233,7 +2944,10 @@
           "predicted_surge_mm": 589.092,
           "distance_km": 363.0,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": -8.2,
+          "predicted_tide_cm": 42.0896,
+          "astronomical_tide_cm": -18.3079
         },
         {
           "issued_at": "2008-09-16T22:00:00+08:00",
@@ -2242,7 +2956,10 @@
           "predicted_surge_mm": 618.038,
           "distance_km": 363.0,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": -27.3,
+          "predicted_tide_cm": 31.9645,
+          "astronomical_tide_cm": -30.547
         },
         {
           "issued_at": "2008-09-16T23:00:00+08:00",
@@ -2251,7 +2968,10 @@
           "predicted_surge_mm": 594.673,
           "distance_km": 386.3,
           "wind_m_s": 20.58,
-          "pressure_hpa": 993.0
+          "pressure_hpa": 993.0,
+          "observed_tide_cm": -37.1,
+          "predicted_tide_cm": 23.8243,
+          "astronomical_tide_cm": -35.8917
         }
       ]
     },
@@ -2272,7 +2992,10 @@
           "predicted_surge_mm": 97.559,
           "distance_km": 437.5,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 32.7,
+          "predicted_tide_cm": 27.9501,
+          "astronomical_tide_cm": 17.7706
         },
         {
           "issued_at": "2008-09-12T01:00:00+08:00",
@@ -2281,7 +3004,10 @@
           "predicted_surge_mm": 103.843,
           "distance_km": 437.5,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 23.7,
+          "predicted_tide_cm": 18.0053,
+          "astronomical_tide_cm": 6.835
         },
         {
           "issued_at": "2008-09-12T02:00:00+08:00",
@@ -2290,7 +3016,10 @@
           "predicted_surge_mm": 238.337,
           "distance_km": 420.7,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 12.4,
+          "predicted_tide_cm": 18.0592,
+          "astronomical_tide_cm": -6.7482
         },
         {
           "issued_at": "2008-09-12T03:00:00+08:00",
@@ -2299,7 +3028,10 @@
           "predicted_surge_mm": 307.939,
           "distance_km": 420.7,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 2.2,
+          "predicted_tide_cm": 10.1479,
+          "astronomical_tide_cm": -21.6053
         },
         {
           "issued_at": "2008-09-12T04:00:00+08:00",
@@ -2308,7 +3040,10 @@
           "predicted_surge_mm": 301.671,
           "distance_km": 420.7,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": -10.3,
+          "predicted_tide_cm": -4.5042,
+          "astronomical_tide_cm": -35.5425
         },
         {
           "issued_at": "2008-09-12T05:00:00+08:00",
@@ -2317,7 +3052,10 @@
           "predicted_surge_mm": 188.865,
           "distance_km": 397.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": -18.9,
+          "predicted_tide_cm": -25.6041,
+          "astronomical_tide_cm": -45.3727
         },
         {
           "issued_at": "2008-09-12T06:00:00+08:00",
@@ -2326,7 +3064,10 @@
           "predicted_surge_mm": 86.211,
           "distance_km": 397.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": -23.2,
+          "predicted_tide_cm": -38.2078,
+          "astronomical_tide_cm": -47.8711
         },
         {
           "issued_at": "2008-09-12T07:00:00+08:00",
@@ -2335,7 +3076,10 @@
           "predicted_surge_mm": 119.649,
           "distance_km": 397.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": -17.2,
+          "predicted_tide_cm": -28.2945,
+          "astronomical_tide_cm": -41.4758
         },
         {
           "issued_at": "2008-09-12T08:00:00+08:00",
@@ -2344,7 +3088,10 @@
           "predicted_surge_mm": 191.716,
           "distance_km": 366.2,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": -5.2,
+          "predicted_tide_cm": -7.1144,
+          "astronomical_tide_cm": -27.4777
         },
         {
           "issued_at": "2008-09-12T09:00:00+08:00",
@@ -2353,7 +3100,10 @@
           "predicted_surge_mm": 321.821,
           "distance_km": 366.2,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 6.9,
+          "predicted_tide_cm": 23.382,
+          "astronomical_tide_cm": -9.6598
         },
         {
           "issued_at": "2008-09-12T10:00:00+08:00",
@@ -2362,7 +3112,10 @@
           "predicted_surge_mm": 445.616,
           "distance_km": 366.2,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 36.1,
+          "predicted_tide_cm": 52.3349,
+          "astronomical_tide_cm": 7.4697
         },
         {
           "issued_at": "2008-09-12T11:00:00+08:00",
@@ -2371,7 +3124,10 @@
           "predicted_surge_mm": 543.443,
           "distance_km": 328.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 41.6,
+          "predicted_tide_cm": 74.6572,
+          "astronomical_tide_cm": 20.5978
         },
         {
           "issued_at": "2008-09-12T12:00:00+08:00",
@@ -2380,7 +3136,10 @@
           "predicted_surge_mm": 647.099,
           "distance_km": 328.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 46.9,
+          "predicted_tide_cm": 92.3357,
+          "astronomical_tide_cm": 28.4032
         },
         {
           "issued_at": "2008-09-12T13:00:00+08:00",
@@ -2389,7 +3148,10 @@
           "predicted_surge_mm": 755.836,
           "distance_km": 328.3,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 49.9,
+          "predicted_tide_cm": 105.3899,
+          "astronomical_tide_cm": 31.0071
         },
         {
           "issued_at": "2008-09-12T14:00:00+08:00",
@@ -2398,7 +3160,10 @@
           "predicted_surge_mm": 864.925,
           "distance_km": 283.1,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 48.2,
+          "predicted_tide_cm": 113.8303,
+          "astronomical_tide_cm": 29.0017
         },
         {
           "issued_at": "2008-09-12T15:00:00+08:00",
@@ -2407,7 +3172,10 @@
           "predicted_surge_mm": 881.474,
           "distance_km": 283.1,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 49.2,
+          "predicted_tide_cm": 109.1042,
+          "astronomical_tide_cm": 23.1521
         },
         {
           "issued_at": "2008-09-12T16:00:00+08:00",
@@ -2416,7 +3184,10 @@
           "predicted_surge_mm": 975.52,
           "distance_km": 283.1,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 43.0,
+          "predicted_tide_cm": 109.8404,
+          "astronomical_tide_cm": 14.9458
         },
         {
           "issued_at": "2008-09-12T17:00:00+08:00",
@@ -2425,7 +3196,10 @@
           "predicted_surge_mm": 949.1,
           "distance_km": 260.6,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 40.5,
+          "predicted_tide_cm": 99.1728,
+          "astronomical_tide_cm": 7.0939
         },
         {
           "issued_at": "2008-09-12T18:00:00+08:00",
@@ -2434,7 +3208,10 @@
           "predicted_surge_mm": 903.618,
           "distance_km": 260.6,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 36.9,
+          "predicted_tide_cm": 90.7193,
+          "astronomical_tide_cm": 2.956
         },
         {
           "issued_at": "2008-09-12T19:00:00+08:00",
@@ -2443,7 +3220,10 @@
           "predicted_surge_mm": 810.455,
           "distance_km": 260.6,
           "wind_m_s": 48.87,
-          "pressure_hpa": 940.0
+          "pressure_hpa": 940.0,
+          "observed_tide_cm": 42.3,
+          "predicted_tide_cm": 83.8528,
+          "astronomical_tide_cm": 4.8611
         },
         {
           "issued_at": "2008-09-12T20:00:00+08:00",
@@ -2452,7 +3232,10 @@
           "predicted_surge_mm": 615.279,
           "distance_km": 223.2,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 51.9,
+          "predicted_tide_cm": 72.5758,
+          "astronomical_tide_cm": 12.483
         },
         {
           "issued_at": "2008-09-12T21:00:00+08:00",
@@ -2461,7 +3244,10 @@
           "predicted_surge_mm": 468.655,
           "distance_km": 223.2,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 57.1,
+          "predicted_tide_cm": 68.5711,
+          "astronomical_tide_cm": 22.645
         },
         {
           "issued_at": "2008-09-12T22:00:00+08:00",
@@ -2470,7 +3256,10 @@
           "predicted_surge_mm": 459.79,
           "distance_km": 223.2,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 64.1,
+          "predicted_tide_cm": 76.2686,
+          "astronomical_tide_cm": 30.8797
         },
         {
           "issued_at": "2008-09-12T23:00:00+08:00",
@@ -2479,7 +3268,10 @@
           "predicted_surge_mm": 416.429,
           "distance_km": 200.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 79.0,
+          "predicted_tide_cm": 75.0342,
+          "astronomical_tide_cm": 33.6668
         },
         {
           "issued_at": "2008-09-13T00:00:00+08:00",
@@ -2488,7 +3280,10 @@
           "predicted_surge_mm": 383.975,
           "distance_km": 200.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 68.0,
+          "predicted_tide_cm": 68.2673,
+          "astronomical_tide_cm": 29.7813
         },
         {
           "issued_at": "2008-09-13T01:00:00+08:00",
@@ -2497,7 +3292,10 @@
           "predicted_surge_mm": 379.138,
           "distance_km": 200.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 55.5,
+          "predicted_tide_cm": 58.3893,
+          "astronomical_tide_cm": 20.0364
         },
         {
           "issued_at": "2008-09-13T02:00:00+08:00",
@@ -2506,7 +3304,10 @@
           "predicted_surge_mm": 345.553,
           "distance_km": 185.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 48.0,
+          "predicted_tide_cm": 41.2693,
+          "astronomical_tide_cm": 6.1044
         },
         {
           "issued_at": "2008-09-13T03:00:00+08:00",
@@ -2515,7 +3316,10 @@
           "predicted_surge_mm": 374.193,
           "distance_km": 185.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 32.9,
+          "predicted_tide_cm": 27.6452,
+          "astronomical_tide_cm": -10.272
         },
         {
           "issued_at": "2008-09-13T04:00:00+08:00",
@@ -2524,7 +3328,10 @@
           "predicted_surge_mm": 352.614,
           "distance_km": 185.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 21.5,
+          "predicted_tide_cm": 8.417,
+          "astronomical_tide_cm": -27.0372
         },
         {
           "issued_at": "2008-09-13T05:00:00+08:00",
@@ -2533,7 +3340,10 @@
           "predicted_surge_mm": 319.677,
           "distance_km": 163.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 5.0,
+          "predicted_tide_cm": -9.2893,
+          "astronomical_tide_cm": -41.1849
         },
         {
           "issued_at": "2008-09-13T06:00:00+08:00",
@@ -2542,7 +3352,10 @@
           "predicted_surge_mm": 263.357,
           "distance_km": 163.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": -4.0,
+          "predicted_tide_cm": -22.7117,
+          "astronomical_tide_cm": -48.9445
         },
         {
           "issued_at": "2008-09-13T07:00:00+08:00",
@@ -2551,7 +3364,10 @@
           "predicted_surge_mm": 292.988,
           "distance_km": 163.9,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": -2.0,
+          "predicted_tide_cm": -17.8811,
+          "astronomical_tide_cm": -47.2776
         },
         {
           "issued_at": "2008-09-13T08:00:00+08:00",
@@ -2560,7 +3376,10 @@
           "predicted_surge_mm": 333.972,
           "distance_km": 142.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 15.5,
+          "predicted_tide_cm": -2.0559,
+          "astronomical_tide_cm": -35.7986
         },
         {
           "issued_at": "2008-09-13T09:00:00+08:00",
@@ -2569,7 +3388,10 @@
           "predicted_surge_mm": 354.096,
           "distance_km": 142.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 39.4,
+          "predicted_tide_cm": 18.3039,
+          "astronomical_tide_cm": -17.5494
         },
         {
           "issued_at": "2008-09-13T10:00:00+08:00",
@@ -2578,7 +3400,10 @@
           "predicted_surge_mm": 438.464,
           "distance_km": 142.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 64.0,
+          "predicted_tide_cm": 46.392,
+          "astronomical_tide_cm": 2.1989
         },
         {
           "issued_at": "2008-09-13T11:00:00+08:00",
@@ -2587,7 +3412,10 @@
           "predicted_surge_mm": 481.535,
           "distance_km": 121.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 74.1,
+          "predicted_tide_cm": 66.7102,
+          "astronomical_tide_cm": 18.3897
         },
         {
           "issued_at": "2008-09-13T12:00:00+08:00",
@@ -2596,7 +3424,10 @@
           "predicted_surge_mm": 514.423,
           "distance_km": 121.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 63.9,
+          "predicted_tide_cm": 79.64,
+          "astronomical_tide_cm": 28.169
         },
         {
           "issued_at": "2008-09-13T13:00:00+08:00",
@@ -2605,7 +3436,10 @@
           "predicted_surge_mm": 533.543,
           "distance_km": 121.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 66.7,
+          "predicted_tide_cm": 84.4745,
+          "astronomical_tide_cm": 31.2
         },
         {
           "issued_at": "2008-09-13T14:00:00+08:00",
@@ -2614,7 +3448,10 @@
           "predicted_surge_mm": 621.001,
           "distance_km": 106.4,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 60.2,
+          "predicted_tide_cm": 90.3674,
+          "astronomical_tide_cm": 28.5691
         },
         {
           "issued_at": "2008-09-13T15:00:00+08:00",
@@ -2623,7 +3460,10 @@
           "predicted_surge_mm": 652.731,
           "distance_km": 106.4,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 53.5,
+          "predicted_tide_cm": 86.1578,
+          "astronomical_tide_cm": 21.641
         },
         {
           "issued_at": "2008-09-13T16:00:00+08:00",
@@ -2632,7 +3472,10 @@
           "predicted_surge_mm": 657.308,
           "distance_km": 106.4,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 46.6,
+          "predicted_tide_cm": 76.2937,
+          "astronomical_tide_cm": 11.9424
         },
         {
           "issued_at": "2008-09-13T17:00:00+08:00",
@@ -2641,7 +3484,10 @@
           "predicted_surge_mm": 597.586,
           "distance_km": 97.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 45.6,
+          "predicted_tide_cm": 59.6773,
+          "astronomical_tide_cm": 1.8442
         },
         {
           "issued_at": "2008-09-13T18:00:00+08:00",
@@ -2650,7 +3496,10 @@
           "predicted_surge_mm": 556.925,
           "distance_km": 97.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 51.7,
+          "predicted_tide_cm": 48.3538,
+          "astronomical_tide_cm": -5.2002
         },
         {
           "issued_at": "2008-09-13T19:00:00+08:00",
@@ -2659,7 +3508,10 @@
           "predicted_surge_mm": 543.927,
           "distance_km": 97.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 945.0
+          "pressure_hpa": 945.0,
+          "observed_tide_cm": 53.3,
+          "predicted_tide_cm": 46.6646,
+          "astronomical_tide_cm": -5.7825
         },
         {
           "issued_at": "2008-09-13T20:00:00+08:00",
@@ -2668,7 +3520,10 @@
           "predicted_surge_mm": 500.9,
           "distance_km": 82.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 60.9,
+          "predicted_tide_cm": 50.0274,
+          "astronomical_tide_cm": 1.4357
         },
         {
           "issued_at": "2008-09-13T21:00:00+08:00",
@@ -2677,7 +3532,10 @@
           "predicted_surge_mm": 456.864,
           "distance_km": 82.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 61.8,
+          "predicted_tide_cm": 59.0355,
+          "astronomical_tide_cm": 14.3797
         },
         {
           "issued_at": "2008-09-13T22:00:00+08:00",
@@ -2686,7 +3544,10 @@
           "predicted_surge_mm": 453.525,
           "distance_km": 82.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 69.5,
+          "predicted_tide_cm": 72.8676,
+          "astronomical_tide_cm": 28.1861
         },
         {
           "issued_at": "2008-09-13T23:00:00+08:00",
@@ -2695,7 +3556,10 @@
           "predicted_surge_mm": 435.744,
           "distance_km": 58.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 70.7,
+          "predicted_tide_cm": 80.7522,
+          "astronomical_tide_cm": 37.561
         },
         {
           "issued_at": "2008-09-14T00:00:00+08:00",
@@ -2704,7 +3568,10 @@
           "predicted_surge_mm": 406.66,
           "distance_km": 58.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 64.1,
+          "predicted_tide_cm": 79.826,
+          "astronomical_tide_cm": 39.2388
         },
         {
           "issued_at": "2008-09-14T01:00:00+08:00",
@@ -2713,7 +3580,10 @@
           "predicted_surge_mm": 408.738,
           "distance_km": 58.3,
           "wind_m_s": 46.3,
-          "pressure_hpa": 950.0
+          "pressure_hpa": 950.0,
+          "observed_tide_cm": 51.7,
+          "predicted_tide_cm": 73.9986,
+          "astronomical_tide_cm": 32.9022
         },
         {
           "issued_at": "2008-09-14T02:00:00+08:00",
@@ -2722,7 +3592,10 @@
           "predicted_surge_mm": 316.208,
           "distance_km": 44.2,
           "wind_m_s": 41.16,
-          "pressure_hpa": 960.0
+          "pressure_hpa": 960.0,
+          "observed_tide_cm": 36.5,
+          "predicted_tide_cm": 52.2782,
+          "astronomical_tide_cm": 20.2982
         },
         {
           "issued_at": "2008-09-14T03:00:00+08:00",
@@ -2731,7 +3604,10 @@
           "predicted_surge_mm": 337.945,
           "distance_km": 44.2,
           "wind_m_s": 41.16,
-          "pressure_hpa": 960.0
+          "pressure_hpa": 960.0,
+          "observed_tide_cm": 26.7,
+          "predicted_tide_cm": 37.7179,
+          "astronomical_tide_cm": 3.7604
         },
         {
           "issued_at": "2008-09-14T04:00:00+08:00",
@@ -2740,7 +3616,10 @@
           "predicted_surge_mm": 391.778,
           "distance_km": 56.6,
           "wind_m_s": 46.3,
-          "pressure_hpa": 956.0
+          "pressure_hpa": 956.0,
+          "observed_tide_cm": 21.8,
+          "predicted_tide_cm": 24.3864,
+          "astronomical_tide_cm": -14.4337
         },
         {
           "issued_at": "2008-09-14T05:00:00+08:00",
@@ -2749,7 +3628,10 @@
           "predicted_surge_mm": 389.695,
           "distance_km": 67.5,
           "wind_m_s": 38.58,
-          "pressure_hpa": 960.0
+          "pressure_hpa": 960.0,
+          "observed_tide_cm": -13.0,
+          "predicted_tide_cm": 6.4097,
+          "astronomical_tide_cm": -31.5894
         },
         {
           "issued_at": "2008-09-14T06:00:00+08:00",
@@ -2758,7 +3640,10 @@
           "predicted_surge_mm": 398.844,
           "distance_km": 67.5,
           "wind_m_s": 46.3,
-          "pressure_hpa": 956.0
+          "pressure_hpa": 956.0,
+          "observed_tide_cm": -27.3,
+          "predicted_tide_cm": -5.5595,
+          "astronomical_tide_cm": -44.0795
         },
         {
           "issued_at": "2008-09-14T07:00:00+08:00",
@@ -2767,7 +3652,10 @@
           "predicted_surge_mm": 374.84,
           "distance_km": 67.5,
           "wind_m_s": 46.3,
-          "pressure_hpa": 956.0
+          "pressure_hpa": 956.0,
+          "observed_tide_cm": -34.0,
+          "predicted_tide_cm": -11.9189,
+          "astronomical_tide_cm": -48.0343
         },
         {
           "issued_at": "2008-09-14T08:00:00+08:00",
@@ -2776,7 +3664,10 @@
           "predicted_surge_mm": 356.608,
           "distance_km": 45.8,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": -26.1,
+          "predicted_tide_cm": -6.6698,
+          "astronomical_tide_cm": -41.2778
         },
         {
           "issued_at": "2008-09-14T09:00:00+08:00",
@@ -2785,7 +3676,10 @@
           "predicted_surge_mm": 295.108,
           "distance_km": 45.8,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": -12.0,
+          "predicted_tide_cm": 3.7644,
+          "astronomical_tide_cm": -25.116
         },
         {
           "issued_at": "2008-09-14T10:00:00+08:00",
@@ -2794,7 +3688,10 @@
           "predicted_surge_mm": 276.572,
           "distance_km": 45.8,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": 3.5,
+          "predicted_tide_cm": 23.0383,
+          "astronomical_tide_cm": -4.3542
         },
         {
           "issued_at": "2008-09-14T11:00:00+08:00",
@@ -2803,7 +3700,10 @@
           "predicted_surge_mm": 174.667,
           "distance_km": 24.5,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": 19.6,
+          "predicted_tide_cm": 32.2913,
+          "astronomical_tide_cm": 14.7874
         },
         {
           "issued_at": "2008-09-14T12:00:00+08:00",
@@ -2812,7 +3712,10 @@
           "predicted_surge_mm": 162.183,
           "distance_km": 24.5,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": 34.5,
+          "predicted_tide_cm": 44.0674,
+          "astronomical_tide_cm": 27.4976
         },
         {
           "issued_at": "2008-09-14T13:00:00+08:00",
@@ -2821,7 +3724,10 @@
           "predicted_surge_mm": 218.423,
           "distance_km": 24.5,
           "wind_m_s": 33.44,
-          "pressure_hpa": 975.0
+          "pressure_hpa": 975.0,
+          "observed_tide_cm": 41.8,
+          "predicted_tide_cm": 54.5353,
+          "astronomical_tide_cm": 32.0166
         },
         {
           "issued_at": "2008-09-14T14:00:00+08:00",
@@ -2830,7 +3736,10 @@
           "predicted_surge_mm": 246.295,
           "distance_km": 56.8,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 31.0,
+          "predicted_tide_cm": 54.742,
+          "astronomical_tide_cm": 29.253
         },
         {
           "issued_at": "2008-09-14T15:00:00+08:00",
@@ -2839,7 +3748,10 @@
           "predicted_surge_mm": 352.67,
           "distance_km": 56.8,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 21.6,
+          "predicted_tide_cm": 57.2023,
+          "astronomical_tide_cm": 21.2328
         },
         {
           "issued_at": "2008-09-14T16:00:00+08:00",
@@ -2848,7 +3760,10 @@
           "predicted_surge_mm": 330.552,
           "distance_km": 56.8,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 12.9,
+          "predicted_tide_cm": 43.2131,
+          "astronomical_tide_cm": 10.0017
         },
         {
           "issued_at": "2008-09-14T17:00:00+08:00",
@@ -2857,7 +3772,10 @@
           "predicted_surge_mm": 260.116,
           "distance_km": 79.7,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 4.7,
+          "predicted_tide_cm": 23.2104,
+          "astronomical_tide_cm": -2.216
         },
         {
           "issued_at": "2008-09-14T18:00:00+08:00",
@@ -2866,7 +3784,10 @@
           "predicted_surge_mm": 341.126,
           "distance_km": 79.7,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -3.5,
+          "predicted_tide_cm": 20.5973,
+          "astronomical_tide_cm": -12.3274
         },
         {
           "issued_at": "2008-09-14T19:00:00+08:00",
@@ -2875,7 +3796,10 @@
           "predicted_surge_mm": 316.742,
           "distance_km": 79.7,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -9.9,
+          "predicted_tide_cm": 13.7045,
+          "astronomical_tide_cm": -16.5633
         },
         {
           "issued_at": "2008-09-14T20:00:00+08:00",
@@ -2884,7 +3808,10 @@
           "predicted_surge_mm": 263.416,
           "distance_km": 88.9,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -3.3,
+          "predicted_tide_cm": 12.9859,
+          "astronomical_tide_cm": -12.1194
         },
         {
           "issued_at": "2008-09-14T21:00:00+08:00",
@@ -2893,7 +3820,10 @@
           "predicted_surge_mm": 220.542,
           "distance_km": 88.9,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 12.7,
+          "predicted_tide_cm": 21.9664,
+          "astronomical_tide_cm": 0.7817
         },
         {
           "issued_at": "2008-09-14T22:00:00+08:00",
@@ -2902,7 +3832,10 @@
           "predicted_surge_mm": 178.935,
           "distance_km": 88.9,
           "wind_m_s": 30.87,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 28.6,
+          "predicted_tide_cm": 35.5785,
+          "astronomical_tide_cm": 18.1942
         },
         {
           "issued_at": "2008-09-14T23:00:00+08:00",
@@ -2911,7 +3844,10 @@
           "predicted_surge_mm": 255.524,
           "distance_km": 107.9,
           "wind_m_s": 33.44,
-          "pressure_hpa": 974.0
+          "pressure_hpa": 974.0,
+          "observed_tide_cm": 45.5,
+          "predicted_tide_cm": 59.3394,
+          "astronomical_tide_cm": 34.0097
         },
         {
           "issued_at": "2008-09-15T00:00:00+08:00",
@@ -2920,7 +3856,10 @@
           "predicted_surge_mm": 288.827,
           "distance_km": 107.9,
           "wind_m_s": 33.44,
-          "pressure_hpa": 974.0
+          "pressure_hpa": 974.0,
+          "observed_tide_cm": 58.5,
+          "predicted_tide_cm": 71.7823,
+          "astronomical_tide_cm": 42.8646
         },
         {
           "issued_at": "2008-09-15T01:00:00+08:00",
@@ -2929,7 +3868,10 @@
           "predicted_surge_mm": 232.316,
           "distance_km": 107.9,
           "wind_m_s": 33.44,
-          "pressure_hpa": 974.0
+          "pressure_hpa": 974.0,
+          "observed_tide_cm": 54.3,
+          "predicted_tide_cm": 65.8972,
+          "astronomical_tide_cm": 42.3924
         },
         {
           "issued_at": "2008-09-15T02:00:00+08:00",
@@ -2938,7 +3880,10 @@
           "predicted_surge_mm": 271.924,
           "distance_km": 135.7,
           "wind_m_s": 28.29,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 38.4,
+          "predicted_tide_cm": 60.9921,
+          "astronomical_tide_cm": 33.4381
         },
         {
           "issued_at": "2008-09-15T03:00:00+08:00",
@@ -2947,7 +3892,10 @@
           "predicted_surge_mm": 291.233,
           "distance_km": 135.7,
           "wind_m_s": 28.29,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 24.5,
+          "predicted_tide_cm": 47.8098,
+          "astronomical_tide_cm": 18.5892
         },
         {
           "issued_at": "2008-09-15T04:00:00+08:00",
@@ -2956,7 +3904,10 @@
           "predicted_surge_mm": 167.108,
           "distance_km": 135.7,
           "wind_m_s": 28.29,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 8.3,
+          "predicted_tide_cm": 16.7424,
+          "astronomical_tide_cm": 0.6364
         },
         {
           "issued_at": "2008-09-15T05:00:00+08:00",
@@ -2965,7 +3916,10 @@
           "predicted_surge_mm": 144.562,
           "distance_km": 136.2,
           "wind_m_s": 32.41,
-          "pressure_hpa": 976.0
+          "pressure_hpa": 976.0,
+          "observed_tide_cm": -11.3,
+          "predicted_tide_cm": -4.8808,
+          "astronomical_tide_cm": -17.7616
         },
         {
           "issued_at": "2008-09-15T06:00:00+08:00",
@@ -2974,7 +3928,10 @@
           "predicted_surge_mm": 100.907,
           "distance_km": 136.2,
           "wind_m_s": 32.41,
-          "pressure_hpa": 976.0
+          "pressure_hpa": 976.0,
+          "observed_tide_cm": -30.3,
+          "predicted_tide_cm": -25.8037,
+          "astronomical_tide_cm": -33.4436
         },
         {
           "issued_at": "2008-09-15T07:00:00+08:00",
@@ -2983,7 +3940,10 @@
           "predicted_surge_mm": 78.511,
           "distance_km": 136.2,
           "wind_m_s": 32.41,
-          "pressure_hpa": 976.0
+          "pressure_hpa": 976.0,
+          "observed_tide_cm": -42.2,
+          "predicted_tide_cm": -37.5709,
+          "astronomical_tide_cm": -42.5276
         },
         {
           "issued_at": "2008-09-15T08:00:00+08:00",
@@ -2992,7 +3952,10 @@
           "predicted_surge_mm": 98.899,
           "distance_km": 151.8,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -38.9,
+          "predicted_tide_cm": -34.5338,
+          "astronomical_tide_cm": -41.6278
         },
         {
           "issued_at": "2008-09-15T09:00:00+08:00",
@@ -3001,7 +3964,10 @@
           "predicted_surge_mm": 99.566,
           "distance_km": 151.8,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -27.5,
+          "predicted_tide_cm": -22.3092,
+          "astronomical_tide_cm": -29.9766
         },
         {
           "issued_at": "2008-09-15T10:00:00+08:00",
@@ -3010,7 +3976,10 @@
           "predicted_surge_mm": 29.027,
           "distance_km": 151.8,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -9.5,
+          "predicted_tide_cm": -9.4035,
+          "astronomical_tide_cm": -10.7131
         },
         {
           "issued_at": "2008-09-15T11:00:00+08:00",
@@ -3019,7 +3988,10 @@
           "predicted_surge_mm": 35.331,
           "distance_km": 161.5,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": 11.8,
+          "predicted_tide_cm": 12.7265,
+          "astronomical_tide_cm": 10.0314
         },
         {
           "issued_at": "2008-09-15T12:00:00+08:00",
@@ -3028,7 +4000,10 @@
           "predicted_surge_mm": 11.651,
           "distance_km": 161.5,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": 28.0,
+          "predicted_tide_cm": 27.0353,
+          "astronomical_tide_cm": 25.9084
         },
         {
           "issued_at": "2008-09-15T13:00:00+08:00",
@@ -3037,7 +4012,10 @@
           "predicted_surge_mm": 24.381,
           "distance_km": 161.5,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": 37.2,
+          "predicted_tide_cm": 36.3468,
+          "astronomical_tide_cm": 33.1221
         },
         {
           "issued_at": "2008-09-15T14:00:00+08:00",
@@ -3046,7 +4024,10 @@
           "predicted_surge_mm": 97.776,
           "distance_km": 178.6,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 41.6,
+          "predicted_tide_cm": 42.65,
+          "astronomical_tide_cm": 31.3844
         },
         {
           "issued_at": "2008-09-15T15:00:00+08:00",
@@ -3055,7 +4036,10 @@
           "predicted_surge_mm": 181.689,
           "distance_km": 178.6,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 36.8,
+          "predicted_tide_cm": 42.7966,
+          "astronomical_tide_cm": 22.8098
         },
         {
           "issued_at": "2008-09-15T16:00:00+08:00",
@@ -3064,7 +4048,10 @@
           "predicted_surge_mm": 205.534,
           "distance_km": 178.6,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 22.2,
+          "predicted_tide_cm": 32.3004,
+          "astronomical_tide_cm": 10.1404
         },
         {
           "issued_at": "2008-09-15T17:00:00+08:00",
@@ -3073,7 +4060,10 @@
           "predicted_surge_mm": 221.445,
           "distance_km": 190.2,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": 8.8,
+          "predicted_tide_cm": 18.9891,
+          "astronomical_tide_cm": -4.0885
         },
         {
           "issued_at": "2008-09-15T18:00:00+08:00",
@@ -3082,7 +4072,10 @@
           "predicted_surge_mm": 209.492,
           "distance_km": 190.2,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": -7.4,
+          "predicted_tide_cm": 3.9474,
+          "astronomical_tide_cm": -17.1221
         },
         {
           "issued_at": "2008-09-15T19:00:00+08:00",
@@ -3091,7 +4084,10 @@
           "predicted_surge_mm": 251.129,
           "distance_km": 190.2,
           "wind_m_s": 30.87,
-          "pressure_hpa": 978.0
+          "pressure_hpa": 978.0,
+          "observed_tide_cm": -21.9,
+          "predicted_tide_cm": -0.8028,
+          "astronomical_tide_cm": -25.4539
         },
         {
           "issued_at": "2008-09-15T20:00:00+08:00",
@@ -3100,7 +4096,10 @@
           "predicted_surge_mm": 300.668,
           "distance_km": 208.7,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -20.8,
+          "predicted_tide_cm": 3.9148,
+          "astronomical_tide_cm": -25.5278
         },
         {
           "issued_at": "2008-09-15T21:00:00+08:00",
@@ -3109,7 +4108,10 @@
           "predicted_surge_mm": 330.988,
           "distance_km": 208.7,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": -6.8,
+          "predicted_tide_cm": 16.9593,
+          "astronomical_tide_cm": -15.703
         },
         {
           "issued_at": "2008-09-15T22:00:00+08:00",
@@ -3118,7 +4120,10 @@
           "predicted_surge_mm": 270.306,
           "distance_km": 208.7,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 12.6,
+          "predicted_tide_cm": 28.9313,
+          "astronomical_tide_cm": 2.0074
         },
         {
           "issued_at": "2008-09-15T23:00:00+08:00",
@@ -3127,7 +4132,10 @@
           "predicted_surge_mm": 276.759,
           "distance_km": 229.2,
           "wind_m_s": 29.84,
-          "pressure_hpa": 980.0
+          "pressure_hpa": 980.0,
+          "observed_tide_cm": 33.6,
+          "predicted_tide_cm": 49.9964,
+          "astronomical_tide_cm": 22.1151
         },
         {
           "issued_at": "2008-09-16T00:00:00+08:00",
@@ -3136,7 +4144,10 @@
           "predicted_surge_mm": 239.578,
           "distance_km": 229.2,
           "wind_m_s": 29.84,
-          "pressure_hpa": 980.0
+          "pressure_hpa": 980.0,
+          "observed_tide_cm": 47.9,
+          "predicted_tide_cm": 62.4475,
+          "astronomical_tide_cm": 38.0265
         },
         {
           "issued_at": "2008-09-16T01:00:00+08:00",
@@ -3145,7 +4156,10 @@
           "predicted_surge_mm": 266.888,
           "distance_km": 229.2,
           "wind_m_s": 29.84,
-          "pressure_hpa": 980.0
+          "pressure_hpa": 980.0,
+          "observed_tide_cm": 54.1,
+          "predicted_tide_cm": 72.4385,
+          "astronomical_tide_cm": 45.0831
         },
         {
           "issued_at": "2008-09-16T02:00:00+08:00",
@@ -3154,7 +4168,10 @@
           "predicted_surge_mm": 322.364,
           "distance_km": 242.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 53.2,
+          "predicted_tide_cm": 75.1729,
+          "astronomical_tide_cm": 42.2167
         },
         {
           "issued_at": "2008-09-16T03:00:00+08:00",
@@ -3163,7 +4180,10 @@
           "predicted_surge_mm": 421.143,
           "distance_km": 242.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 43.0,
+          "predicted_tide_cm": 73.9018,
+          "astronomical_tide_cm": 31.3688
         },
         {
           "issued_at": "2008-09-16T04:00:00+08:00",
@@ -3172,7 +4192,10 @@
           "predicted_surge_mm": 423.186,
           "distance_km": 242.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 985.0
+          "pressure_hpa": 985.0,
+          "observed_tide_cm": 27.6,
+          "predicted_tide_cm": 57.5715,
+          "astronomical_tide_cm": 15.6515
         },
         {
           "issued_at": "2008-09-16T05:00:00+08:00",
@@ -3181,7 +4204,10 @@
           "predicted_surge_mm": 408.442,
           "distance_km": 267.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 986.0
+          "pressure_hpa": 986.0,
+          "observed_tide_cm": 8.3,
+          "predicted_tide_cm": 37.1928,
+          "astronomical_tide_cm": -1.9864
         },
         {
           "issued_at": "2008-09-16T06:00:00+08:00",
@@ -3190,7 +4216,10 @@
           "predicted_surge_mm": 336.3,
           "distance_km": 267.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 986.0
+          "pressure_hpa": 986.0,
+          "observed_tide_cm": -11.4,
+          "predicted_tide_cm": 11.866,
+          "astronomical_tide_cm": -18.7215
         },
         {
           "issued_at": "2008-09-16T07:00:00+08:00",
@@ -3199,7 +4228,10 @@
           "predicted_surge_mm": 322.543,
           "distance_km": 267.3,
           "wind_m_s": 25.72,
-          "pressure_hpa": 986.0
+          "pressure_hpa": 986.0,
+          "observed_tide_cm": -27.6,
+          "predicted_tide_cm": -3.0326,
+          "astronomical_tide_cm": -31.2015
         },
         {
           "issued_at": "2008-09-16T08:00:00+08:00",
@@ -3208,7 +4240,10 @@
           "predicted_surge_mm": 334.684,
           "distance_km": 278.9,
           "wind_m_s": 23.15,
-          "pressure_hpa": 990.0
+          "pressure_hpa": 990.0,
+          "observed_tide_cm": -32.7,
+          "predicted_tide_cm": -6.7648,
+          "astronomical_tide_cm": -35.745
         },
         {
           "issued_at": "2008-09-16T09:00:00+08:00",
@@ -3217,7 +4252,10 @@
           "predicted_surge_mm": 350.964,
           "distance_km": 278.9,
           "wind_m_s": 23.15,
-          "pressure_hpa": 990.0
+          "pressure_hpa": 990.0,
+          "observed_tide_cm": -24.7,
+          "predicted_tide_cm": 0.9094,
+          "astronomical_tide_cm": -29.9654
         },
         {
           "issued_at": "2008-09-16T10:00:00+08:00",
@@ -3226,7 +4264,10 @@
           "predicted_surge_mm": 301.977,
           "distance_km": 278.9,
           "wind_m_s": 23.15,
-          "pressure_hpa": 990.0
+          "pressure_hpa": 990.0,
+          "observed_tide_cm": -6.3,
+          "predicted_tide_cm": 11.9844,
+          "astronomical_tide_cm": -14.7485
         },
         {
           "issued_at": "2008-09-16T11:00:00+08:00",
@@ -3235,7 +4276,10 @@
           "predicted_surge_mm": 276.548,
           "distance_km": 291.4,
           "wind_m_s": 22.12,
-          "pressure_hpa": 991.0
+          "pressure_hpa": 991.0,
+          "observed_tide_cm": 13.4,
+          "predicted_tide_cm": 30.458,
+          "astronomical_tide_cm": 5.2277
         },
         {
           "issued_at": "2008-09-16T12:00:00+08:00",
@@ -3244,7 +4288,10 @@
           "predicted_surge_mm": 252.953,
           "distance_km": 291.4,
           "wind_m_s": 22.12,
-          "pressure_hpa": 991.0
+          "pressure_hpa": 991.0,
+          "observed_tide_cm": 29.9,
+          "predicted_tide_cm": 47.3567,
+          "astronomical_tide_cm": 23.2798
         },
         {
           "issued_at": "2008-09-16T13:00:00+08:00",
@@ -3253,7 +4300,10 @@
           "predicted_surge_mm": 291.654,
           "distance_km": 291.4,
           "wind_m_s": 22.12,
-          "pressure_hpa": 991.0
+          "pressure_hpa": 991.0,
+          "observed_tide_cm": 39.3,
+          "predicted_tide_cm": 63.0437,
+          "astronomical_tide_cm": 33.7965
         },
         {
           "issued_at": "2008-09-16T14:00:00+08:00",
@@ -3262,7 +4312,10 @@
           "predicted_surge_mm": 357.391,
           "distance_km": 304.6,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": 45.9,
+          "predicted_tide_cm": 71.5876,
+          "astronomical_tide_cm": 34.5217
         },
         {
           "issued_at": "2008-09-16T15:00:00+08:00",
@@ -3271,7 +4324,10 @@
           "predicted_surge_mm": 439.718,
           "distance_km": 304.6,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": 39.3,
+          "predicted_tide_cm": 72.8753,
+          "astronomical_tide_cm": 26.6566
         },
         {
           "issued_at": "2008-09-16T16:00:00+08:00",
@@ -3280,7 +4336,10 @@
           "predicted_surge_mm": 465.087,
           "distance_km": 304.6,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": 25.7,
+          "predicted_tide_cm": 62.2935,
+          "astronomical_tide_cm": 13.2093
         },
         {
           "issued_at": "2008-09-16T17:00:00+08:00",
@@ -3289,7 +4348,10 @@
           "predicted_surge_mm": 475.147,
           "distance_km": 333.4,
           "wind_m_s": 20.58,
-          "pressure_hpa": 993.0
+          "pressure_hpa": 993.0,
+          "observed_tide_cm": 12.5,
+          "predicted_tide_cm": 47.0546,
+          "astronomical_tide_cm": -2.7068
         },
         {
           "issued_at": "2008-09-16T18:00:00+08:00",
@@ -3298,7 +4360,10 @@
           "predicted_surge_mm": 451.113,
           "distance_km": 333.4,
           "wind_m_s": 20.58,
-          "pressure_hpa": 993.0
+          "pressure_hpa": 993.0,
+          "observed_tide_cm": -8.2,
+          "predicted_tide_cm": 28.2917,
+          "astronomical_tide_cm": -18.3079
         },
         {
           "issued_at": "2008-09-16T19:00:00+08:00",
@@ -3307,7 +4372,10 @@
           "predicted_surge_mm": 422.648,
           "distance_km": 333.4,
           "wind_m_s": 20.58,
-          "pressure_hpa": 993.0
+          "pressure_hpa": 993.0,
+          "observed_tide_cm": -27.3,
+          "predicted_tide_cm": 12.4255,
+          "astronomical_tide_cm": -30.547
         },
         {
           "issued_at": "2008-09-16T20:00:00+08:00",
@@ -3316,7 +4384,10 @@
           "predicted_surge_mm": 396.062,
           "distance_km": 363.0,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": -37.1,
+          "predicted_tide_cm": 3.9632,
+          "astronomical_tide_cm": -35.8917
         },
         {
           "issued_at": "2008-09-16T21:00:00+08:00",
@@ -3325,7 +4396,10 @@
           "predicted_surge_mm": 364.016,
           "distance_km": 363.0,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": -29.1,
+          "predicted_tide_cm": 5.1285,
+          "astronomical_tide_cm": -31.4848
         },
         {
           "issued_at": "2008-09-16T22:00:00+08:00",
@@ -3334,7 +4408,10 @@
           "predicted_surge_mm": 301.059,
           "distance_km": 363.0,
           "wind_m_s": 20.58,
-          "pressure_hpa": 992.0
+          "pressure_hpa": 992.0,
+          "observed_tide_cm": -11.2,
+          "predicted_tide_cm": 13.4275,
+          "astronomical_tide_cm": -17.1444
         },
         {
           "issued_at": "2008-09-16T23:00:00+08:00",
@@ -3343,7 +4420,10 @@
           "predicted_surge_mm": 284.007,
           "distance_km": 386.3,
           "wind_m_s": 20.58,
-          "pressure_hpa": 993.0
+          "pressure_hpa": 993.0,
+          "observed_tide_cm": 9.2,
+          "predicted_tide_cm": 32.7306,
+          "astronomical_tide_cm": 3.5175
         }
       ]
     }

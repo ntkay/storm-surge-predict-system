@@ -40,777 +40,1110 @@
           "issued_at": "2005-07-16T00:00:00+08:00",
           "time": "2005-07-16T01:00:00+08:00",
           "predicted_surge": 0.15569506293104868,
-          "actual_surge": 0.08099999999999997
+          "actual_surge": 0.08099999999999997,
+          "observed_tide_cm": 32.9,
+          "predicted_tide_cm": 40.3695,
+          "astronomical_tide_cm": 27.0299
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T01:00:00+08:00",
           "time": "2005-07-16T02:00:00+08:00",
           "predicted_surge": 0.09785777495019783,
-          "actual_surge": 0.08400000000000002
+          "actual_surge": 0.08400000000000002,
+          "observed_tide_cm": 32.7,
+          "predicted_tide_cm": 34.0858,
+          "astronomical_tide_cm": 26.7735
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T02:00:00+08:00",
           "time": "2005-07-16T03:00:00+08:00",
           "predicted_surge": 0.096234994280642,
-          "actual_surge": 0.09699999999999999
+          "actual_surge": 0.09699999999999999,
+          "observed_tide_cm": 29.8,
+          "predicted_tide_cm": 29.7235,
+          "astronomical_tide_cm": 22.1395
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T03:00:00+08:00",
           "time": "2005-07-16T04:00:00+08:00",
           "predicted_surge": 0.1243963209854106,
-          "actual_surge": 0.10399999999999998
+          "actual_surge": 0.10399999999999998,
+          "observed_tide_cm": 24.2,
+          "predicted_tide_cm": 26.2396,
+          "astronomical_tide_cm": 13.9912
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T04:00:00+08:00",
           "time": "2005-07-16T05:00:00+08:00",
           "predicted_surge": 0.1681686008741873,
-          "actual_surge": 0.08900000000000001
+          "actual_surge": 0.08900000000000001,
+          "observed_tide_cm": 14.3,
+          "predicted_tide_cm": 22.2169,
+          "astronomical_tide_cm": 3.7651
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T05:00:00+08:00",
           "time": "2005-07-16T06:00:00+08:00",
           "predicted_surge": 0.15966387587908243,
-          "actual_surge": 0.10899999999999999
+          "actual_surge": 0.10899999999999999,
+          "observed_tide_cm": 5.6,
+          "predicted_tide_cm": 10.6664,
+          "astronomical_tide_cm": -7.0395
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T06:00:00+08:00",
           "time": "2005-07-16T07:00:00+08:00",
           "predicted_surge": 0.14053562223434632,
-          "actual_surge": 0.098
+          "actual_surge": 0.098,
+          "observed_tide_cm": -6.8,
+          "predicted_tide_cm": -2.5464,
+          "astronomical_tide_cm": -17.0507
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T07:00:00+08:00",
           "time": "2005-07-16T08:00:00+08:00",
           "predicted_surge": 0.049243785898316274,
-          "actual_surge": 0.11699999999999999
+          "actual_surge": 0.11699999999999999,
+          "observed_tide_cm": -14.5,
+          "predicted_tide_cm": -21.2756,
+          "astronomical_tide_cm": -24.9409
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T08:00:00+08:00",
           "time": "2005-07-16T09:00:00+08:00",
           "predicted_surge": 0.03578918927614591,
-          "actual_surge": 0.12899999999999998
+          "actual_surge": 0.12899999999999998,
+          "observed_tide_cm": -18.6,
+          "predicted_tide_cm": -27.9211,
+          "astronomical_tide_cm": -29.4139
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T09:00:00+08:00",
           "time": "2005-07-16T10:00:00+08:00",
           "predicted_surge": 0.06468447590910904,
-          "actual_surge": 0.11700000000000003
+          "actual_surge": 0.11700000000000003,
+          "observed_tide_cm": -19.9,
+          "predicted_tide_cm": -25.1316,
+          "astronomical_tide_cm": -29.5312
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T10:00:00+08:00",
           "time": "2005-07-16T11:00:00+08:00",
           "predicted_surge": 0.11453297028590921,
-          "actual_surge": 0.11699999999999999
+          "actual_surge": 0.11699999999999999,
+          "observed_tide_cm": -15.2,
+          "predicted_tide_cm": -15.4467,
+          "astronomical_tide_cm": -25.2565
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T11:00:00+08:00",
           "time": "2005-07-16T12:00:00+08:00",
           "predicted_surge": 0.1285770692237224,
-          "actual_surge": 0.10899999999999999
+          "actual_surge": 0.10899999999999999,
+          "observed_tide_cm": -7.5,
+          "predicted_tide_cm": -5.5423,
+          "astronomical_tide_cm": -17.7662
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T12:00:00+08:00",
           "time": "2005-07-16T13:00:00+08:00",
           "predicted_surge": 0.08425182174735532,
-          "actual_surge": 0.102
+          "actual_surge": 0.102,
+          "observed_tide_cm": 1.5,
+          "predicted_tide_cm": -0.2748,
+          "astronomical_tide_cm": -9.1441
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T13:00:00+08:00",
           "time": "2005-07-16T14:00:00+08:00",
           "predicted_surge": 0.03408259173062166,
-          "actual_surge": 0.08900000000000001
+          "actual_surge": 0.08900000000000001,
+          "observed_tide_cm": 9.1,
+          "predicted_tide_cm": 3.6083,
+          "astronomical_tide_cm": -1.5321
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T14:00:00+08:00",
           "time": "2005-07-16T15:00:00+08:00",
           "predicted_surge": 0.028422203835078153,
-          "actual_surge": 0.09300000000000001
+          "actual_surge": 0.09300000000000001,
+          "observed_tide_cm": 15.8,
+          "predicted_tide_cm": 9.3422,
+          "astronomical_tide_cm": 3.7401
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T15:00:00+08:00",
           "time": "2005-07-16T16:00:00+08:00",
           "predicted_surge": 0.037484284178215546,
-          "actual_surge": 0.09299999999999999
+          "actual_surge": 0.09299999999999999,
+          "observed_tide_cm": 19.7,
+          "predicted_tide_cm": 14.1484,
+          "astronomical_tide_cm": 6.4879
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T16:00:00+08:00",
           "time": "2005-07-16T17:00:00+08:00",
           "predicted_surge": 0.08893404641152394,
-          "actual_surge": 0.09699999999999999
+          "actual_surge": 0.09699999999999999,
+          "observed_tide_cm": 21.4,
+          "predicted_tide_cm": 20.5934,
+          "astronomical_tide_cm": 7.3386
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T17:00:00+08:00",
           "time": "2005-07-16T18:00:00+08:00",
           "predicted_surge": 0.07843658594694254,
-          "actual_surge": 0.10399999999999998
+          "actual_surge": 0.10399999999999998,
+          "observed_tide_cm": 20.9,
+          "predicted_tide_cm": 18.3437,
+          "astronomical_tide_cm": 7.1227
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T18:00:00+08:00",
           "time": "2005-07-16T19:00:00+08:00",
           "predicted_surge": 0.046682368733458365,
-          "actual_surge": 0.10799999999999998
+          "actual_surge": 0.10799999999999998,
+          "observed_tide_cm": 18.7,
+          "predicted_tide_cm": 12.5682,
+          "astronomical_tide_cm": 6.5278
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T19:00:00+08:00",
           "time": "2005-07-16T20:00:00+08:00",
           "predicted_surge": 0.008583510187974274,
-          "actual_surge": 0.125
+          "actual_surge": 0.125,
+          "observed_tide_cm": 18.2,
+          "predicted_tide_cm": 6.5584,
+          "astronomical_tide_cm": 6.1973
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T20:00:00+08:00",
           "time": "2005-07-16T21:00:00+08:00",
           "predicted_surge": -0.00747525994519665,
-          "actual_surge": 0.128
+          "actual_surge": 0.128,
+          "observed_tide_cm": 18.6,
+          "predicted_tide_cm": 5.0525,
+          "astronomical_tide_cm": 6.9598
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T21:00:00+08:00",
           "time": "2005-07-16T22:00:00+08:00",
           "predicted_surge": 0.02057368357964626,
-          "actual_surge": 0.137
+          "actual_surge": 0.137,
+          "observed_tide_cm": 22.6,
+          "predicted_tide_cm": 10.9574,
+          "astronomical_tide_cm": 9.7091
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T22:00:00+08:00",
           "time": "2005-07-16T23:00:00+08:00",
           "predicted_surge": 0.07792871656499627,
-          "actual_surge": 0.133
+          "actual_surge": 0.133,
+          "observed_tide_cm": 27.6,
+          "predicted_tide_cm": 22.0929,
+          "astronomical_tide_cm": 14.8176
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T23:00:00+08:00",
           "time": "2005-07-17T00:00:00+08:00",
           "predicted_surge": 0.053365171617100894,
-          "actual_surge": 0.145
+          "actual_surge": 0.145,
+          "observed_tide_cm": 35.0,
+          "predicted_tide_cm": 25.8365,
+          "astronomical_tide_cm": 21.5039
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T00:00:00+08:00",
           "time": "2005-07-17T01:00:00+08:00",
           "predicted_surge": 0.05872969494209869,
-          "actual_surge": 0.134
+          "actual_surge": 0.134,
+          "observed_tide_cm": 39.1,
+          "predicted_tide_cm": 31.573,
+          "astronomical_tide_cm": 27.7741
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T01:00:00+08:00",
           "time": "2005-07-17T02:00:00+08:00",
           "predicted_surge": 0.03332832427583422,
-          "actual_surge": 0.11499999999999996
+          "actual_surge": 0.11499999999999996,
+          "observed_tide_cm": 39.3,
+          "predicted_tide_cm": 31.1328,
+          "astronomical_tide_cm": 31.1672
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T02:00:00+08:00",
           "time": "2005-07-17T03:00:00+08:00",
           "predicted_surge": 0.02827220239404703,
-          "actual_surge": 0.14400000000000002
+          "actual_surge": 0.14400000000000002,
+          "observed_tide_cm": 40.2,
+          "predicted_tide_cm": 28.6272,
+          "astronomical_tide_cm": 29.8835
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T03:00:00+08:00",
           "time": "2005-07-17T04:00:00+08:00",
           "predicted_surge": 0.09079576184179627,
-          "actual_surge": 0.14300000000000002
+          "actual_surge": 0.14300000000000002,
+          "observed_tide_cm": 34.1,
+          "predicted_tide_cm": 28.8796,
+          "astronomical_tide_cm": 23.5389
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T04:00:00+08:00",
           "time": "2005-07-17T05:00:00+08:00",
           "predicted_surge": 0.13587483792503421,
-          "actual_surge": 0.152
+          "actual_surge": 0.152,
+          "observed_tide_cm": 26.4,
+          "predicted_tide_cm": 24.7875,
+          "astronomical_tide_cm": 13.0903
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T05:00:00+08:00",
           "time": "2005-07-17T06:00:00+08:00",
           "predicted_surge": 0.12888827597706706,
-          "actual_surge": 0.157
+          "actual_surge": 0.157,
+          "observed_tide_cm": 15.6,
+          "predicted_tide_cm": 12.7888,
+          "astronomical_tide_cm": 0.1544
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T06:00:00+08:00",
           "time": "2005-07-17T07:00:00+08:00",
           "predicted_surge": 0.10181296828441125,
-          "actual_surge": 0.195
+          "actual_surge": 0.195,
+          "observed_tide_cm": 6.0,
+          "predicted_tide_cm": -3.3187,
+          "astronomical_tide_cm": -13.6216
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T07:00:00+08:00",
           "time": "2005-07-17T08:00:00+08:00",
           "predicted_surge": 0.11187109030221423,
-          "actual_surge": 0.22399999999999998
+          "actual_surge": 0.22399999999999998,
+          "observed_tide_cm": -5.0,
+          "predicted_tide_cm": -16.2129,
+          "astronomical_tide_cm": -26.6693
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T08:00:00+08:00",
           "time": "2005-07-17T09:00:00+08:00",
           "predicted_surge": 0.10639303137233788,
-          "actual_surge": 0.218
+          "actual_surge": 0.218,
+          "observed_tide_cm": -17.3,
+          "predicted_tide_cm": -28.4607,
+          "astronomical_tide_cm": -37.2411
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T09:00:00+08:00",
           "time": "2005-07-17T10:00:00+08:00",
           "predicted_surge": 0.13523690292902504,
-          "actual_surge": 0.259
+          "actual_surge": 0.259,
+          "observed_tide_cm": -19.6,
+          "predicted_tide_cm": -31.9763,
+          "astronomical_tide_cm": -43.3739
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T10:00:00+08:00",
           "time": "2005-07-17T11:00:00+08:00",
           "predicted_surge": 0.20703500622478183,
-          "actual_surge": 0.261
+          "actual_surge": 0.261,
+          "observed_tide_cm": -18.9,
+          "predicted_tide_cm": -24.2965,
+          "astronomical_tide_cm": -43.4672
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T11:00:00+08:00",
           "time": "2005-07-17T12:00:00+08:00",
           "predicted_surge": 0.1930988265333014,
-          "actual_surge": 0.256
+          "actual_surge": 0.256,
+          "observed_tide_cm": -12.3,
+          "predicted_tide_cm": -18.5901,
+          "astronomical_tide_cm": -37.2124
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T12:00:00+08:00",
           "time": "2005-07-17T13:00:00+08:00",
           "predicted_surge": 0.21174114172535327,
-          "actual_surge": 0.257
+          "actual_surge": 0.257,
+          "observed_tide_cm": -0.2,
+          "predicted_tide_cm": -4.7259,
+          "astronomical_tide_cm": -26.1177
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T13:00:00+08:00",
           "time": "2005-07-17T14:00:00+08:00",
           "predicted_surge": 0.24832745328246236,
-          "actual_surge": 0.233
+          "actual_surge": 0.233,
+          "observed_tide_cm": 11.4,
+          "predicted_tide_cm": 12.9327,
+          "astronomical_tide_cm": -13.0611
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T14:00:00+08:00",
           "time": "2005-07-17T15:00:00+08:00",
           "predicted_surge": 0.2329376193913571,
-          "actual_surge": 0.23399999999999999
+          "actual_surge": 0.23399999999999999,
+          "observed_tide_cm": 24.7,
+          "predicted_tide_cm": 24.5938,
+          "astronomical_tide_cm": -1.0484
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T15:00:00+08:00",
           "time": "2005-07-17T16:00:00+08:00",
           "predicted_surge": 0.28968434521554237,
-          "actual_surge": 0.239
+          "actual_surge": 0.239,
+          "observed_tide_cm": 35.4,
+          "predicted_tide_cm": 40.4684,
+          "astronomical_tide_cm": 7.9943
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T16:00:00+08:00",
           "time": "2005-07-17T17:00:00+08:00",
           "predicted_surge": 0.3314155005443331,
-          "actual_surge": 0.231
+          "actual_surge": 0.231,
+          "observed_tide_cm": 41.0,
+          "predicted_tide_cm": 51.0416,
+          "astronomical_tide_cm": 13.6115
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T17:00:00+08:00",
           "time": "2005-07-17T18:00:00+08:00",
           "predicted_surge": 0.29911046488911197,
-          "actual_surge": 0.23800000000000004
+          "actual_surge": 0.23800000000000004,
+          "observed_tide_cm": 44.2,
+          "predicted_tide_cm": 50.311,
+          "astronomical_tide_cm": 16.3141
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T18:00:00+08:00",
           "time": "2005-07-17T19:00:00+08:00",
           "predicted_surge": 0.354504154109501,
-          "actual_surge": 0.275
+          "actual_surge": 0.275,
+          "observed_tide_cm": 47.0,
+          "predicted_tide_cm": 54.9504,
+          "astronomical_tide_cm": 16.824
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T19:00:00+08:00",
           "time": "2005-07-17T20:00:00+08:00",
           "predicted_surge": 0.4164699643520753,
-          "actual_surge": 0.36099999999999993
+          "actual_surge": 0.36099999999999993,
+          "observed_tide_cm": 52.8,
+          "predicted_tide_cm": 58.347,
+          "astronomical_tide_cm": 15.7917
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T20:00:00+08:00",
           "time": "2005-07-17T21:00:00+08:00",
           "predicted_surge": 0.4644219794573682,
-          "actual_surge": 0.39199999999999996
+          "actual_surge": 0.39199999999999996,
+          "observed_tide_cm": 52.8,
+          "predicted_tide_cm": 60.0422,
+          "astronomical_tide_cm": 14.1
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T21:00:00+08:00",
           "time": "2005-07-17T22:00:00+08:00",
           "predicted_surge": 0.5084685231129807,
-          "actual_surge": 0.38099999999999995
+          "actual_surge": 0.38099999999999995,
+          "observed_tide_cm": 50.4,
+          "predicted_tide_cm": 63.1469,
+          "astronomical_tide_cm": 13.1723
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T22:00:00+08:00",
           "time": "2005-07-17T23:00:00+08:00",
           "predicted_surge": 0.49113493373214456,
-          "actual_surge": 0.514
+          "actual_surge": 0.514,
+          "observed_tide_cm": 65.9,
+          "predicted_tide_cm": 63.6135,
+          "astronomical_tide_cm": 14.6315
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T23:00:00+08:00",
           "time": "2005-07-18T00:00:00+08:00",
           "predicted_surge": 0.5841456680650614,
-          "actual_surge": 0.519
+          "actual_surge": 0.519,
+          "observed_tide_cm": 71.4,
+          "predicted_tide_cm": 77.9146,
+          "astronomical_tide_cm": 19.2969
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T00:00:00+08:00",
           "time": "2005-07-18T01:00:00+08:00",
           "predicted_surge": 0.5814631111124936,
-          "actual_surge": 0.57
+          "actual_surge": 0.57,
+          "observed_tide_cm": 82.7,
+          "predicted_tide_cm": 83.8463,
+          "astronomical_tide_cm": 26.2636
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T01:00:00+08:00",
           "time": "2005-07-18T02:00:00+08:00",
           "predicted_surge": 0.6665461385393672,
-          "actual_surge": 0.7090000000000001
+          "actual_surge": 0.7090000000000001,
+          "observed_tide_cm": 101.4,
+          "predicted_tide_cm": 97.1546,
+          "astronomical_tide_cm": 32.9312
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T02:00:00+08:00",
           "time": "2005-07-18T03:00:00+08:00",
           "predicted_surge": 0.7576072005959326,
-          "actual_surge": 0.825
+          "actual_surge": 0.825,
+          "observed_tide_cm": 114.5,
+          "predicted_tide_cm": 107.7607,
+          "astronomical_tide_cm": 36.1479
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T03:00:00+08:00",
           "time": "2005-07-18T04:00:00+08:00",
           "predicted_surge": 0.8355981355042215,
-          "actual_surge": 1.0230000000000001
+          "actual_surge": 1.0230000000000001,
+          "observed_tide_cm": 130.9,
+          "predicted_tide_cm": 112.1598,
+          "astronomical_tide_cm": 33.7327
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T04:00:00+08:00",
           "time": "2005-07-18T05:00:00+08:00",
           "predicted_surge": 0.9807676697402334,
-          "actual_surge": 1.0019999999999998
+          "actual_surge": 1.0019999999999998,
+          "observed_tide_cm": 120.6,
+          "predicted_tide_cm": 118.4768,
+          "astronomical_tide_cm": 25.3286
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T05:00:00+08:00",
           "time": "2005-07-18T06:00:00+08:00",
           "predicted_surge": 0.8501748775017086,
-          "actual_surge": 1.1840000000000002
+          "actual_surge": 1.1840000000000002,
+          "observed_tide_cm": 127.2,
+          "predicted_tide_cm": 93.8175,
+          "astronomical_tide_cm": 12.135
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T06:00:00+08:00",
           "time": "2005-07-18T07:00:00+08:00",
           "predicted_surge": 0.9973608802526149,
-          "actual_surge": 0.796
+          "actual_surge": 0.796,
+          "observed_tide_cm": 73.7,
+          "predicted_tide_cm": 93.8361,
+          "astronomical_tide_cm": -3.9991
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T07:00:00+08:00",
           "time": "2005-07-18T08:00:00+08:00",
           "predicted_surge": 0.703659815485244,
-          "actual_surge": 0.779
+          "actual_surge": 0.779,
+          "observed_tide_cm": 55.4,
+          "predicted_tide_cm": 47.866,
+          "astronomical_tide_cm": -21.2117
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T08:00:00+08:00",
           "time": "2005-07-18T09:00:00+08:00",
           "predicted_surge": 0.711549824522496,
-          "actual_surge": 0.9069999999999999
+          "actual_surge": 0.9069999999999999,
+          "observed_tide_cm": 51.3,
+          "predicted_tide_cm": 31.755,
+          "astronomical_tide_cm": -37.5452
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T09:00:00+08:00",
           "time": "2005-07-18T10:00:00+08:00",
           "predicted_surge": 0.7368973090193929,
-          "actual_surge": 0.769
+          "actual_surge": 0.769,
+          "observed_tide_cm": 23.5,
+          "predicted_tide_cm": 20.2897,
+          "astronomical_tide_cm": -50.5643
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T10:00:00+08:00",
           "time": "2005-07-18T11:00:00+08:00",
           "predicted_surge": 0.6239622953114562,
-          "actual_surge": 0.652
+          "actual_surge": 0.652,
+          "observed_tide_cm": 5.0,
+          "predicted_tide_cm": 2.1962,
+          "astronomical_tide_cm": -57.4986
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T11:00:00+08:00",
           "time": "2005-07-18T12:00:00+08:00",
           "predicted_surge": 0.5632951928425431,
-          "actual_surge": 0.775
+          "actual_surge": 0.775,
+          "observed_tide_cm": 19.5,
+          "predicted_tide_cm": -1.6705,
+          "astronomical_tide_cm": -56.255
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T12:00:00+08:00",
           "time": "2005-07-18T13:00:00+08:00",
           "predicted_surge": 0.6941666813799967,
-          "actual_surge": 0.628
+          "actual_surge": 0.628,
+          "observed_tide_cm": 15.6,
+          "predicted_tide_cm": 22.2167,
+          "astronomical_tide_cm": -46.7049
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T13:00:00+08:00",
           "time": "2005-07-18T14:00:00+08:00",
           "predicted_surge": 0.5672947028080026,
-          "actual_surge": 0.7509999999999999
+          "actual_surge": 0.7509999999999999,
+          "observed_tide_cm": 44.4,
+          "predicted_tide_cm": 26.0295,
+          "astronomical_tide_cm": -31.1817
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T14:00:00+08:00",
           "time": "2005-07-18T15:00:00+08:00",
           "predicted_surge": 0.6631883539335631,
-          "actual_surge": 0.449
+          "actual_surge": 0.449,
+          "observed_tide_cm": 33.0,
+          "predicted_tide_cm": 54.4188,
+          "astronomical_tide_cm": -13.6175
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T15:00:00+08:00",
           "time": "2005-07-18T16:00:00+08:00",
           "predicted_surge": 0.4667975725721848,
-          "actual_surge": 0.33699999999999997
+          "actual_surge": 0.33699999999999997,
+          "observed_tide_cm": 39.3,
+          "predicted_tide_cm": 52.2798,
+          "astronomical_tide_cm": 2.1846
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T16:00:00+08:00",
           "time": "2005-07-18T17:00:00+08:00",
           "predicted_surge": 0.3791968970486642,
-          "actual_surge": 0.175
+          "actual_surge": 0.175,
+          "observed_tide_cm": 36.1,
+          "predicted_tide_cm": 56.5197,
+          "astronomical_tide_cm": 13.9617
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T17:00:00+08:00",
           "time": "2005-07-18T18:00:00+08:00",
           "predicted_surge": 0.2976616174851622,
-          "actual_surge": 0.15100000000000002
+          "actual_surge": 0.15100000000000002,
+          "observed_tide_cm": 41.1,
+          "predicted_tide_cm": 55.7662,
+          "astronomical_tide_cm": 21.2279
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T18:00:00+08:00",
           "time": "2005-07-18T19:00:00+08:00",
           "predicted_surge": 0.20055860478947074,
-          "actual_surge": 0.13300000000000003
+          "actual_surge": 0.13300000000000003,
+          "observed_tide_cm": 41.7,
+          "predicted_tide_cm": 48.4559,
+          "astronomical_tide_cm": 24.5074
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T19:00:00+08:00",
           "time": "2005-07-18T20:00:00+08:00",
           "predicted_surge": 0.28268255602197856,
-          "actual_surge": 0.184
+          "actual_surge": 0.184,
+          "observed_tide_cm": 45.4,
+          "predicted_tide_cm": 55.2683,
+          "astronomical_tide_cm": 24.5175
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T20:00:00+08:00",
           "time": "2005-07-18T21:00:00+08:00",
           "predicted_surge": 0.23481579325253507,
-          "actual_surge": 0.172
+          "actual_surge": 0.172,
+          "observed_tide_cm": 40.4,
+          "predicted_tide_cm": 46.6816,
+          "astronomical_tide_cm": 22.0773
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T21:00:00+08:00",
           "time": "2005-07-18T22:00:00+08:00",
           "predicted_surge": 0.27081964327856767,
-          "actual_surge": 0.196
+          "actual_surge": 0.196,
+          "observed_tide_cm": 38.1,
+          "predicted_tide_cm": 45.582,
+          "astronomical_tide_cm": 18.6045
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T22:00:00+08:00",
           "time": "2005-07-18T23:00:00+08:00",
           "predicted_surge": 0.29726178759306193,
-          "actual_surge": 0.19299999999999998
+          "actual_surge": 0.19299999999999998,
+          "observed_tide_cm": 35.3,
+          "predicted_tide_cm": 45.7262,
+          "astronomical_tide_cm": 16.3208
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T23:00:00+08:00",
           "time": "2005-07-19T00:00:00+08:00",
           "predicted_surge": 0.27011496031565135,
-          "actual_surge": 0.17600000000000002
+          "actual_surge": 0.17600000000000002,
+          "observed_tide_cm": 35.6,
+          "predicted_tide_cm": 45.0115,
+          "astronomical_tide_cm": 17.4868
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T00:00:00+08:00",
           "time": "2005-07-19T01:00:00+08:00",
           "predicted_surge": 0.26281314232252395,
-          "actual_surge": 0.21200000000000002
+          "actual_surge": 0.21200000000000002,
+          "observed_tide_cm": 45.1,
+          "predicted_tide_cm": 50.1813,
+          "astronomical_tide_cm": 22.9637
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T01:00:00+08:00",
           "time": "2005-07-19T02:00:00+08:00",
           "predicted_surge": 0.24251683718825814,
-          "actual_surge": 0.16399999999999998
+          "actual_surge": 0.16399999999999998,
+          "observed_tide_cm": 47.5,
+          "predicted_tide_cm": 55.3517,
+          "astronomical_tide_cm": 31.2211
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T02:00:00+08:00",
           "time": "2005-07-19T03:00:00+08:00",
           "predicted_surge": 0.08324922443245322,
-          "actual_surge": 0.06200000000000003
+          "actual_surge": 0.06200000000000003,
+          "observed_tide_cm": 42.6,
+          "predicted_tide_cm": 44.7249,
+          "astronomical_tide_cm": 38.7424
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T03:00:00+08:00",
           "time": "2005-07-19T04:00:00+08:00",
           "predicted_surge": 0.033856433663967775,
-          "actual_surge": 0.013999999999999986
+          "actual_surge": 0.013999999999999986,
+          "observed_tide_cm": 39.1,
+          "predicted_tide_cm": 41.0856,
+          "astronomical_tide_cm": 41.7072
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T04:00:00+08:00",
           "time": "2005-07-19T05:00:00+08:00",
           "predicted_surge": 0.039453661889120153,
-          "actual_surge": -0.010999999999999979
+          "actual_surge": -0.010999999999999979,
+          "observed_tide_cm": 31.8,
+          "predicted_tide_cm": 36.8454,
+          "astronomical_tide_cm": 37.7993
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T05:00:00+08:00",
           "time": "2005-07-19T06:00:00+08:00",
           "predicted_surge": 0.0034037275746488876,
-          "actual_surge": -0.08600000000000002
+          "actual_surge": -0.08600000000000002,
+          "observed_tide_cm": 13.5,
+          "predicted_tide_cm": 22.4404,
+          "astronomical_tide_cm": 26.9337
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T06:00:00+08:00",
           "time": "2005-07-19T07:00:00+08:00",
           "predicted_surge": 0.01171030650051576,
-          "actual_surge": -0.079
+          "actual_surge": -0.079,
+          "observed_tide_cm": -1.1,
+          "predicted_tide_cm": 7.971,
+          "astronomical_tide_cm": 10.6607
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T07:00:00+08:00",
           "time": "2005-07-19T08:00:00+08:00",
           "predicted_surge": -0.006277681853246961,
-          "actual_surge": 0.0009999999999999966
+          "actual_surge": 0.0009999999999999966,
+          "observed_tide_cm": -11.5,
+          "predicted_tide_cm": -12.2278,
+          "astronomical_tide_cm": -8.9084
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T08:00:00+08:00",
           "time": "2005-07-19T09:00:00+08:00",
           "predicted_surge": 0.07239896664676822,
-          "actual_surge": 0.038000000000000006
+          "actual_surge": 0.038000000000000006,
+          "observed_tide_cm": -27.9,
+          "predicted_tide_cm": -24.4601,
+          "astronomical_tide_cm": -29.6025
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T09:00:00+08:00",
           "time": "2005-07-19T10:00:00+08:00",
           "predicted_surge": 0.09275829118186174,
-          "actual_surge": 0.08
+          "actual_surge": 0.08,
+          "observed_tide_cm": -43.8,
+          "predicted_tide_cm": -42.5242,
+          "astronomical_tide_cm": -48.8785
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T10:00:00+08:00",
           "time": "2005-07-19T11:00:00+08:00",
           "predicted_surge": 0.1596370144246591,
-          "actual_surge": 0.055999999999999946
+          "actual_surge": 0.055999999999999946,
+          "observed_tide_cm": -62.0,
+          "predicted_tide_cm": -51.6363,
+          "astronomical_tide_cm": -63.4595
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T11:00:00+08:00",
           "time": "2005-07-19T12:00:00+08:00",
           "predicted_surge": 0.10198370698055677,
-          "actual_surge": 0.040999999999999946
+          "actual_surge": 0.040999999999999946,
+          "observed_tide_cm": -69.9,
+          "predicted_tide_cm": -63.8016,
+          "astronomical_tide_cm": -69.8662
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T12:00:00+08:00",
           "time": "2005-07-19T13:00:00+08:00",
           "predicted_surge": 0.0668124427800483,
-          "actual_surge": 0.055999999999999946
+          "actual_surge": 0.055999999999999946,
+          "observed_tide_cm": -63.2,
+          "predicted_tide_cm": -62.1188,
+          "astronomical_tide_cm": -65.919
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T13:00:00+08:00",
           "time": "2005-07-19T14:00:00+08:00",
           "predicted_surge": 0.03486328255636059,
-          "actual_surge": 0.04800000000000004
+          "actual_surge": 0.04800000000000004,
+          "observed_tide_cm": -48.8,
+          "predicted_tide_cm": -50.1137,
+          "astronomical_tide_cm": -52.198
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T14:00:00+08:00",
           "time": "2005-07-19T15:00:00+08:00",
           "predicted_surge": 0.027012776532685707,
-          "actual_surge": 0.04800000000000001
+          "actual_surge": 0.04800000000000001,
+          "observed_tide_cm": -27.3,
+          "predicted_tide_cm": -29.3987,
+          "astronomical_tide_cm": -32.2111
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T15:00:00+08:00",
           "time": "2005-07-19T16:00:00+08:00",
           "predicted_surge": 0.058886499508264634,
-          "actual_surge": -0.025
+          "actual_surge": -0.025,
+          "observed_tide_cm": -11.3,
+          "predicted_tide_cm": -2.9114,
+          "astronomical_tide_cm": -10.9324
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T16:00:00+08:00",
           "time": "2005-07-19T17:00:00+08:00",
           "predicted_surge": 0.02619898415700127,
-          "actual_surge": -0.079
+          "actual_surge": -0.079,
+          "observed_tide_cm": 4.0,
+          "predicted_tide_cm": 14.5199,
+          "astronomical_tide_cm": 7.3397
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T17:00:00+08:00",
           "time": "2005-07-19T18:00:00+08:00",
           "predicted_surge": 0.022184821334704428,
-          "actual_surge": -0.08199999999999999
+          "actual_surge": -0.08199999999999999,
+          "observed_tide_cm": 17.8,
+          "predicted_tide_cm": 28.2185,
+          "astronomical_tide_cm": 20.3591
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T18:00:00+08:00",
           "time": "2005-07-19T19:00:00+08:00",
           "predicted_surge": 0.015889591223259964,
-          "actual_surge": -0.09899999999999999
+          "actual_surge": -0.09899999999999999,
+          "observed_tide_cm": 23.1,
+          "predicted_tide_cm": 34.589,
+          "astronomical_tide_cm": 27.8321
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T19:00:00+08:00",
           "time": "2005-07-19T20:00:00+08:00",
           "predicted_surge": 0.0038030207672042197,
-          "actual_surge": -0.09099999999999998
+          "actual_surge": -0.09099999999999998,
+          "observed_tide_cm": 25.2,
+          "predicted_tide_cm": 34.6803,
+          "astronomical_tide_cm": 30.4007
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T20:00:00+08:00",
           "time": "2005-07-19T21:00:00+08:00",
           "predicted_surge": -0.005296688869791462,
-          "actual_surge": -0.08099999999999997
+          "actual_surge": -0.08099999999999997,
+          "observed_tide_cm": 23.6,
+          "predicted_tide_cm": 31.1703,
+          "astronomical_tide_cm": 28.9039
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T21:00:00+08:00",
           "time": "2005-07-19T22:00:00+08:00",
           "predicted_surge": 0.010232690466965186,
-          "actual_surge": -0.07299999999999997
+          "actual_surge": -0.07299999999999997,
+          "observed_tide_cm": 19.1,
+          "predicted_tide_cm": 27.4233,
+          "astronomical_tide_cm": 24.5536
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T22:00:00+08:00",
           "time": "2005-07-19T23:00:00+08:00",
           "predicted_surge": -0.016542852375246237,
-          "actual_surge": -0.028000000000000008
+          "actual_surge": -0.028000000000000008,
+          "observed_tide_cm": 17.2,
+          "predicted_tide_cm": 18.3457,
+          "astronomical_tide_cm": 19.5136
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T23:00:00+08:00",
           "time": "2005-07-20T00:00:00+08:00",
           "predicted_surge": -0.016383134516030528,
-          "actual_surge": -0.013999999999999986
+          "actual_surge": -0.013999999999999986,
+          "observed_tide_cm": 15.5,
+          "predicted_tide_cm": 15.2617,
+          "astronomical_tide_cm": 16.7902
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T00:00:00+08:00",
           "time": "2005-07-20T01:00:00+08:00",
           "predicted_surge": -0.026197022113669803,
-          "actual_surge": -0.005
+          "actual_surge": -0.005,
+          "observed_tide_cm": 19.5,
+          "predicted_tide_cm": 17.3803,
+          "astronomical_tide_cm": 18.9418
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T01:00:00+08:00",
           "time": "2005-07-20T02:00:00+08:00",
           "predicted_surge": -0.02185089472972196,
-          "actual_surge": 0.007000000000000029
+          "actual_surge": 0.007000000000000029,
+          "observed_tide_cm": 28.6,
+          "predicted_tide_cm": 25.7149,
+          "astronomical_tide_cm": 26.3502
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T02:00:00+08:00",
           "time": "2005-07-20T03:00:00+08:00",
           "predicted_surge": 0.008919964388055234,
-          "actual_surge": -0.01
+          "actual_surge": -0.01,
+          "observed_tide_cm": 35.9,
+          "predicted_tide_cm": 37.792,
+          "astronomical_tide_cm": 36.4574
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T03:00:00+08:00",
           "time": "2005-07-20T04:00:00+08:00",
           "predicted_surge": 0.024104231251667024,
-          "actual_surge": -0.003999999999999986
+          "actual_surge": -0.003999999999999986,
+          "observed_tide_cm": 42.9,
+          "predicted_tide_cm": 45.7104,
+          "astronomical_tide_cm": 44.7728
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T04:00:00+08:00",
           "time": "2005-07-20T05:00:00+08:00",
           "predicted_surge": 0.010833229457058266,
-          "actual_surge": -0.035
+          "actual_surge": -0.035,
+          "observed_tide_cm": 41.0,
+          "predicted_tide_cm": 45.5833,
+          "astronomical_tide_cm": 47.0654
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T05:00:00+08:00",
           "time": "2005-07-20T06:00:00+08:00",
           "predicted_surge": -0.0057648161403879555,
-          "actual_surge": -0.04
+          "actual_surge": -0.04,
+          "observed_tide_cm": 34.1,
+          "predicted_tide_cm": 37.5235,
+          "astronomical_tide_cm": 41.2266
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T06:00:00+08:00",
           "time": "2005-07-20T07:00:00+08:00",
           "predicted_surge": -0.0178383430306648,
-          "actual_surge": -0.03399999999999999
+          "actual_surge": -0.03399999999999999,
+          "observed_tide_cm": 20.8,
+          "predicted_tide_cm": 22.4162,
+          "astronomical_tide_cm": 27.649
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T07:00:00+08:00",
           "time": "2005-07-20T08:00:00+08:00",
           "predicted_surge": -0.018518392934513198,
-          "actual_surge": -0.037
+          "actual_surge": -0.037,
+          "observed_tide_cm": 1.4,
+          "predicted_tide_cm": 3.2482,
+          "astronomical_tide_cm": 8.2724
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T08:00:00+08:00",
           "time": "2005-07-20T09:00:00+08:00",
           "predicted_surge": -0.009859890445050628,
-          "actual_surge": -0.05100000000000002
+          "actual_surge": -0.05100000000000002,
+          "observed_tide_cm": -22.0,
+          "predicted_tide_cm": -17.886,
+          "astronomical_tide_cm": -14.5216
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T09:00:00+08:00",
           "time": "2005-07-20T10:00:00+08:00",
           "predicted_surge": 0.002363490464841986,
-          "actual_surge": -0.05
+          "actual_surge": -0.05,
+          "observed_tide_cm": -45.3,
+          "predicted_tide_cm": -40.0637,
+          "astronomical_tide_cm": -38.1565
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T10:00:00+08:00",
           "time": "2005-07-20T11:00:00+08:00",
           "predicted_surge": 0.0009968887121241915,
-          "actual_surge": -0.03
+          "actual_surge": -0.03,
+          "observed_tide_cm": -66.2,
+          "predicted_tide_cm": -63.1003,
+          "astronomical_tide_cm": -59.3769
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T11:00:00+08:00",
           "time": "2005-07-20T12:00:00+08:00",
           "predicted_surge": -0.010922115783501923,
-          "actual_surge": -0.012000000000000028
+          "actual_surge": -0.012000000000000028,
+          "observed_tide_cm": -81.2,
+          "predicted_tide_cm": -81.0922,
+          "astronomical_tide_cm": -74.1045
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T12:00:00+08:00",
           "time": "2005-07-20T13:00:00+08:00",
           "predicted_surge": -0.002282091343441413,
-          "actual_surge": -0.02
+          "actual_surge": -0.02,
+          "observed_tide_cm": -86.7,
+          "predicted_tide_cm": -84.9282,
+          "astronomical_tide_cm": -78.4895
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T13:00:00+08:00",
           "time": "2005-07-20T14:00:00+08:00",
           "predicted_surge": -0.01760127770942978,
-          "actual_surge": 0.005
+          "actual_surge": 0.005,
+          "observed_tide_cm": -75.1,
+          "predicted_tide_cm": -77.3601,
+          "astronomical_tide_cm": -70.802
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T14:00:00+08:00",
           "time": "2005-07-20T15:00:00+08:00",
           "predicted_surge": -0.027999546033653056,
-          "actual_surge": -0.011999999999999957
+          "actual_surge": -0.011999999999999957,
+          "observed_tide_cm": -56.9,
+          "predicted_tide_cm": -58.5,
+          "astronomical_tide_cm": -52.7718
         }
       ]
     },
@@ -829,777 +1162,1110 @@
           "issued_at": "2005-07-16T00:00:00+08:00",
           "time": "2005-07-16T03:00:00+08:00",
           "predicted_surge": 0.1601698594880645,
-          "actual_surge": 0.09699999999999999
+          "actual_surge": 0.09699999999999999,
+          "observed_tide_cm": 29.8,
+          "predicted_tide_cm": 36.117,
+          "astronomical_tide_cm": 22.1395
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T01:00:00+08:00",
           "time": "2005-07-16T04:00:00+08:00",
           "predicted_surge": 0.13843202751528733,
-          "actual_surge": 0.10399999999999998
+          "actual_surge": 0.10399999999999998,
+          "observed_tide_cm": 24.2,
+          "predicted_tide_cm": 27.6432,
+          "astronomical_tide_cm": 13.9912
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T02:00:00+08:00",
           "time": "2005-07-16T05:00:00+08:00",
           "predicted_surge": 0.22577976906415934,
-          "actual_surge": 0.08900000000000001
+          "actual_surge": 0.08900000000000001,
+          "observed_tide_cm": 14.3,
+          "predicted_tide_cm": 27.978,
+          "astronomical_tide_cm": 3.7651
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T03:00:00+08:00",
           "time": "2005-07-16T06:00:00+08:00",
           "predicted_surge": 0.19955231776962637,
-          "actual_surge": 0.10899999999999999
+          "actual_surge": 0.10899999999999999,
+          "observed_tide_cm": 5.6,
+          "predicted_tide_cm": 14.6552,
+          "astronomical_tide_cm": -7.0395
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T04:00:00+08:00",
           "time": "2005-07-16T07:00:00+08:00",
           "predicted_surge": 0.22161096694812588,
-          "actual_surge": 0.098
+          "actual_surge": 0.098,
+          "observed_tide_cm": -6.8,
+          "predicted_tide_cm": 5.5611,
+          "astronomical_tide_cm": -17.0507
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T05:00:00+08:00",
           "time": "2005-07-16T08:00:00+08:00",
           "predicted_surge": 0.20568537937131479,
-          "actual_surge": 0.11699999999999999
+          "actual_surge": 0.11699999999999999,
+          "observed_tide_cm": -14.5,
+          "predicted_tide_cm": -5.6315,
+          "astronomical_tide_cm": -24.9409
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T06:00:00+08:00",
           "time": "2005-07-16T09:00:00+08:00",
           "predicted_surge": 0.13106253406292856,
-          "actual_surge": 0.12899999999999998
+          "actual_surge": 0.12899999999999998,
+          "observed_tide_cm": -18.6,
+          "predicted_tide_cm": -18.3937,
+          "astronomical_tide_cm": -29.4139
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T07:00:00+08:00",
           "time": "2005-07-16T10:00:00+08:00",
           "predicted_surge": 0.08539269366574473,
-          "actual_surge": 0.11700000000000003
+          "actual_surge": 0.11700000000000003,
+          "observed_tide_cm": -19.9,
+          "predicted_tide_cm": -23.0607,
+          "astronomical_tide_cm": -29.5312
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T08:00:00+08:00",
           "time": "2005-07-16T11:00:00+08:00",
           "predicted_surge": 0.16241952828251083,
-          "actual_surge": 0.11699999999999999
+          "actual_surge": 0.11699999999999999,
+          "observed_tide_cm": -15.2,
+          "predicted_tide_cm": -10.658,
+          "astronomical_tide_cm": -25.2565
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T09:00:00+08:00",
           "time": "2005-07-16T12:00:00+08:00",
           "predicted_surge": 0.15998543575160176,
-          "actual_surge": 0.10899999999999999
+          "actual_surge": 0.10899999999999999,
+          "observed_tide_cm": -7.5,
+          "predicted_tide_cm": -2.4015,
+          "astronomical_tide_cm": -17.7662
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T10:00:00+08:00",
           "time": "2005-07-16T13:00:00+08:00",
           "predicted_surge": 0.16659133853475666,
-          "actual_surge": 0.102
+          "actual_surge": 0.102,
+          "observed_tide_cm": 1.5,
+          "predicted_tide_cm": 7.9591,
+          "astronomical_tide_cm": -9.1441
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T11:00:00+08:00",
           "time": "2005-07-16T14:00:00+08:00",
           "predicted_surge": 0.14928789430049577,
-          "actual_surge": 0.08900000000000001
+          "actual_surge": 0.08900000000000001,
+          "observed_tide_cm": 9.1,
+          "predicted_tide_cm": 15.1288,
+          "astronomical_tide_cm": -1.5321
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T12:00:00+08:00",
           "time": "2005-07-16T15:00:00+08:00",
           "predicted_surge": 0.06269887417285809,
-          "actual_surge": 0.09300000000000001
+          "actual_surge": 0.09300000000000001,
+          "observed_tide_cm": 15.8,
+          "predicted_tide_cm": 12.7699,
+          "astronomical_tide_cm": 3.7401
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T13:00:00+08:00",
           "time": "2005-07-16T16:00:00+08:00",
           "predicted_surge": 0.06884568930362152,
-          "actual_surge": 0.09299999999999999
+          "actual_surge": 0.09299999999999999,
+          "observed_tide_cm": 19.7,
+          "predicted_tide_cm": 17.2846,
+          "astronomical_tide_cm": 6.4879
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T14:00:00+08:00",
           "time": "2005-07-16T17:00:00+08:00",
           "predicted_surge": 0.11835871240410833,
-          "actual_surge": 0.09699999999999999
+          "actual_surge": 0.09699999999999999,
+          "observed_tide_cm": 21.4,
+          "predicted_tide_cm": 23.5359,
+          "astronomical_tide_cm": 7.3386
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T15:00:00+08:00",
           "time": "2005-07-16T18:00:00+08:00",
           "predicted_surge": 0.1289892255814979,
-          "actual_surge": 0.10399999999999998
+          "actual_surge": 0.10399999999999998,
+          "observed_tide_cm": 20.9,
+          "predicted_tide_cm": 23.3989,
+          "astronomical_tide_cm": 7.1227
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T16:00:00+08:00",
           "time": "2005-07-16T19:00:00+08:00",
           "predicted_surge": 0.14407741711268174,
-          "actual_surge": 0.10799999999999998
+          "actual_surge": 0.10799999999999998,
+          "observed_tide_cm": 18.7,
+          "predicted_tide_cm": 22.3077,
+          "astronomical_tide_cm": 6.5278
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T17:00:00+08:00",
           "time": "2005-07-16T20:00:00+08:00",
           "predicted_surge": 0.10245099241973751,
-          "actual_surge": 0.125
+          "actual_surge": 0.125,
+          "observed_tide_cm": 18.2,
+          "predicted_tide_cm": 15.9451,
+          "astronomical_tide_cm": 6.1973
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T18:00:00+08:00",
           "time": "2005-07-16T21:00:00+08:00",
           "predicted_surge": 0.06625791831854402,
-          "actual_surge": 0.128
+          "actual_surge": 0.128,
+          "observed_tide_cm": 18.6,
+          "predicted_tide_cm": 12.4258,
+          "astronomical_tide_cm": 6.9598
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T19:00:00+08:00",
           "time": "2005-07-16T22:00:00+08:00",
           "predicted_surge": 0.11518656667589884,
-          "actual_surge": 0.137
+          "actual_surge": 0.137,
+          "observed_tide_cm": 22.6,
+          "predicted_tide_cm": 20.4187,
+          "astronomical_tide_cm": 9.7091
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T20:00:00+08:00",
           "time": "2005-07-16T23:00:00+08:00",
           "predicted_surge": 0.12325864026579984,
-          "actual_surge": 0.133
+          "actual_surge": 0.133,
+          "observed_tide_cm": 27.6,
+          "predicted_tide_cm": 26.6259,
+          "astronomical_tide_cm": 14.8176
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T21:00:00+08:00",
           "time": "2005-07-17T00:00:00+08:00",
           "predicted_surge": 0.1047907256074311,
-          "actual_surge": 0.145
+          "actual_surge": 0.145,
+          "observed_tide_cm": 35.0,
+          "predicted_tide_cm": 30.9791,
+          "astronomical_tide_cm": 21.5039
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T22:00:00+08:00",
           "time": "2005-07-17T01:00:00+08:00",
           "predicted_surge": 0.11762202967915414,
-          "actual_surge": 0.134
+          "actual_surge": 0.134,
+          "observed_tide_cm": 39.1,
+          "predicted_tide_cm": 37.4622,
+          "astronomical_tide_cm": 27.7741
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T23:00:00+08:00",
           "time": "2005-07-17T02:00:00+08:00",
           "predicted_surge": 0.10739325313791122,
-          "actual_surge": 0.11499999999999996
+          "actual_surge": 0.11499999999999996,
+          "observed_tide_cm": 39.3,
+          "predicted_tide_cm": 38.5393,
+          "astronomical_tide_cm": 31.1672
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T00:00:00+08:00",
           "time": "2005-07-17T03:00:00+08:00",
           "predicted_surge": 0.1108018161825181,
-          "actual_surge": 0.14400000000000002
+          "actual_surge": 0.14400000000000002,
+          "observed_tide_cm": 40.2,
+          "predicted_tide_cm": 36.8802,
+          "astronomical_tide_cm": 29.8835
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T01:00:00+08:00",
           "time": "2005-07-17T04:00:00+08:00",
           "predicted_surge": 0.18106972803794008,
-          "actual_surge": 0.14300000000000002
+          "actual_surge": 0.14300000000000002,
+          "observed_tide_cm": 34.1,
+          "predicted_tide_cm": 37.907,
+          "astronomical_tide_cm": 23.5389
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T02:00:00+08:00",
           "time": "2005-07-17T05:00:00+08:00",
           "predicted_surge": 0.20736664380628794,
-          "actual_surge": 0.152
+          "actual_surge": 0.152,
+          "observed_tide_cm": 26.4,
+          "predicted_tide_cm": 31.9367,
+          "astronomical_tide_cm": 13.0903
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T03:00:00+08:00",
           "time": "2005-07-17T06:00:00+08:00",
           "predicted_surge": 0.22410407591931766,
-          "actual_surge": 0.157
+          "actual_surge": 0.157,
+          "observed_tide_cm": 15.6,
+          "predicted_tide_cm": 22.3104,
+          "astronomical_tide_cm": 0.1544
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T04:00:00+08:00",
           "time": "2005-07-17T07:00:00+08:00",
           "predicted_surge": 0.22314640188532858,
-          "actual_surge": 0.195
+          "actual_surge": 0.195,
+          "observed_tide_cm": 6.0,
+          "predicted_tide_cm": 8.8146,
+          "astronomical_tide_cm": -13.6216
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T05:00:00+08:00",
           "time": "2005-07-17T08:00:00+08:00",
           "predicted_surge": 0.20383201249472468,
-          "actual_surge": 0.22399999999999998
+          "actual_surge": 0.22399999999999998,
+          "observed_tide_cm": -5.0,
+          "predicted_tide_cm": -7.0168,
+          "astronomical_tide_cm": -26.6693
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T06:00:00+08:00",
           "time": "2005-07-17T09:00:00+08:00",
           "predicted_surge": 0.16483167147122252,
-          "actual_surge": 0.218
+          "actual_surge": 0.218,
+          "observed_tide_cm": -17.3,
+          "predicted_tide_cm": -22.6168,
+          "astronomical_tide_cm": -37.2411
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T07:00:00+08:00",
           "time": "2005-07-17T10:00:00+08:00",
           "predicted_surge": 0.1706768372505761,
-          "actual_surge": 0.259
+          "actual_surge": 0.259,
+          "observed_tide_cm": -19.6,
+          "predicted_tide_cm": -28.4323,
+          "astronomical_tide_cm": -43.3739
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T08:00:00+08:00",
           "time": "2005-07-17T11:00:00+08:00",
           "predicted_surge": 0.16712687501161008,
-          "actual_surge": 0.261
+          "actual_surge": 0.261,
+          "observed_tide_cm": -18.9,
+          "predicted_tide_cm": -28.2873,
+          "astronomical_tide_cm": -43.4672
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T09:00:00+08:00",
           "time": "2005-07-17T12:00:00+08:00",
           "predicted_surge": 0.1472517990893872,
-          "actual_surge": 0.256
+          "actual_surge": 0.256,
+          "observed_tide_cm": -12.3,
+          "predicted_tide_cm": -23.1748,
+          "astronomical_tide_cm": -37.2124
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T10:00:00+08:00",
           "time": "2005-07-17T13:00:00+08:00",
           "predicted_surge": 0.16257787349594416,
-          "actual_surge": 0.257
+          "actual_surge": 0.257,
+          "observed_tide_cm": -0.2,
+          "predicted_tide_cm": -9.6422,
+          "astronomical_tide_cm": -26.1177
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T11:00:00+08:00",
           "time": "2005-07-17T14:00:00+08:00",
           "predicted_surge": 0.22137318394412997,
-          "actual_surge": 0.233
+          "actual_surge": 0.233,
+          "observed_tide_cm": 11.4,
+          "predicted_tide_cm": 10.2373,
+          "astronomical_tide_cm": -13.0611
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T12:00:00+08:00",
           "time": "2005-07-17T15:00:00+08:00",
           "predicted_surge": 0.24856262176063257,
-          "actual_surge": 0.23399999999999999
+          "actual_surge": 0.23399999999999999,
+          "observed_tide_cm": 24.7,
+          "predicted_tide_cm": 26.1563,
+          "astronomical_tide_cm": -1.0484
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T13:00:00+08:00",
           "time": "2005-07-17T16:00:00+08:00",
           "predicted_surge": 0.3355795515297729,
-          "actual_surge": 0.239
+          "actual_surge": 0.239,
+          "observed_tide_cm": 35.4,
+          "predicted_tide_cm": 45.058,
+          "astronomical_tide_cm": 7.9943
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T14:00:00+08:00",
           "time": "2005-07-17T17:00:00+08:00",
           "predicted_surge": 0.3946619892497242,
-          "actual_surge": 0.231
+          "actual_surge": 0.231,
+          "observed_tide_cm": 41.0,
+          "predicted_tide_cm": 57.3662,
+          "astronomical_tide_cm": 13.6115
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T15:00:00+08:00",
           "time": "2005-07-17T18:00:00+08:00",
           "predicted_surge": 0.43368786244369495,
-          "actual_surge": 0.23800000000000004
+          "actual_surge": 0.23800000000000004,
+          "observed_tide_cm": 44.2,
+          "predicted_tide_cm": 63.7688,
+          "astronomical_tide_cm": 16.3141
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T16:00:00+08:00",
           "time": "2005-07-17T19:00:00+08:00",
           "predicted_surge": 0.5040569041051218,
-          "actual_surge": 0.275
+          "actual_surge": 0.275,
+          "observed_tide_cm": 47.0,
+          "predicted_tide_cm": 69.9057,
+          "astronomical_tide_cm": 16.824
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T17:00:00+08:00",
           "time": "2005-07-17T20:00:00+08:00",
           "predicted_surge": 0.5733253416139155,
-          "actual_surge": 0.36099999999999993
+          "actual_surge": 0.36099999999999993,
+          "observed_tide_cm": 52.8,
+          "predicted_tide_cm": 74.0325,
+          "astronomical_tide_cm": 15.7917
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T18:00:00+08:00",
           "time": "2005-07-17T21:00:00+08:00",
           "predicted_surge": 0.5877293174516756,
-          "actual_surge": 0.39199999999999996
+          "actual_surge": 0.39199999999999996,
+          "observed_tide_cm": 52.8,
+          "predicted_tide_cm": 72.3729,
+          "astronomical_tide_cm": 14.1
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T19:00:00+08:00",
           "time": "2005-07-17T22:00:00+08:00",
           "predicted_surge": 0.6349002068487143,
-          "actual_surge": 0.38099999999999995
+          "actual_surge": 0.38099999999999995,
+          "observed_tide_cm": 50.4,
+          "predicted_tide_cm": 75.79,
+          "astronomical_tide_cm": 13.1723
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T20:00:00+08:00",
           "time": "2005-07-17T23:00:00+08:00",
           "predicted_surge": 0.6267325424937569,
-          "actual_surge": 0.514
+          "actual_surge": 0.514,
+          "observed_tide_cm": 65.9,
+          "predicted_tide_cm": 77.1733,
+          "astronomical_tide_cm": 14.6315
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T21:00:00+08:00",
           "time": "2005-07-18T00:00:00+08:00",
           "predicted_surge": 0.610069063039815,
-          "actual_surge": 0.519
+          "actual_surge": 0.519,
+          "observed_tide_cm": 71.4,
+          "predicted_tide_cm": 80.5069,
+          "astronomical_tide_cm": 19.2969
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T22:00:00+08:00",
           "time": "2005-07-18T01:00:00+08:00",
           "predicted_surge": 0.580586225503376,
-          "actual_surge": 0.57
+          "actual_surge": 0.57,
+          "observed_tide_cm": 82.7,
+          "predicted_tide_cm": 83.7586,
+          "astronomical_tide_cm": 26.2636
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T23:00:00+08:00",
           "time": "2005-07-18T02:00:00+08:00",
           "predicted_surge": 0.6661452054905272,
-          "actual_surge": 0.7090000000000001
+          "actual_surge": 0.7090000000000001,
+          "observed_tide_cm": 101.4,
+          "predicted_tide_cm": 97.1145,
+          "astronomical_tide_cm": 32.9312
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T00:00:00+08:00",
           "time": "2005-07-18T03:00:00+08:00",
           "predicted_surge": 0.6572226637258132,
-          "actual_surge": 0.825
+          "actual_surge": 0.825,
+          "observed_tide_cm": 114.5,
+          "predicted_tide_cm": 97.7223,
+          "astronomical_tide_cm": 36.1479
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T01:00:00+08:00",
           "time": "2005-07-18T04:00:00+08:00",
           "predicted_surge": 0.7016191081676004,
-          "actual_surge": 1.0230000000000001
+          "actual_surge": 1.0230000000000001,
+          "observed_tide_cm": 130.9,
+          "predicted_tide_cm": 98.7619,
+          "astronomical_tide_cm": 33.7327
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T02:00:00+08:00",
           "time": "2005-07-18T05:00:00+08:00",
           "predicted_surge": 0.7463068835943759,
-          "actual_surge": 1.0019999999999998
+          "actual_surge": 1.0019999999999998,
+          "observed_tide_cm": 120.6,
+          "predicted_tide_cm": 95.0307,
+          "astronomical_tide_cm": 25.3286
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T03:00:00+08:00",
           "time": "2005-07-18T06:00:00+08:00",
           "predicted_surge": 0.7550263959019826,
-          "actual_surge": 1.1840000000000002
+          "actual_surge": 1.1840000000000002,
+          "observed_tide_cm": 127.2,
+          "predicted_tide_cm": 84.3026,
+          "astronomical_tide_cm": 12.135
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T04:00:00+08:00",
           "time": "2005-07-18T07:00:00+08:00",
           "predicted_surge": 0.789978986076915,
-          "actual_surge": 0.796
+          "actual_surge": 0.796,
+          "observed_tide_cm": 73.7,
+          "predicted_tide_cm": 73.0979,
+          "astronomical_tide_cm": -3.9991
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T05:00:00+08:00",
           "time": "2005-07-18T08:00:00+08:00",
           "predicted_surge": 0.869960450275034,
-          "actual_surge": 0.779
+          "actual_surge": 0.779,
+          "observed_tide_cm": 55.4,
+          "predicted_tide_cm": 64.496,
+          "astronomical_tide_cm": -21.2117
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T06:00:00+08:00",
           "time": "2005-07-18T09:00:00+08:00",
           "predicted_surge": 0.8039253426501587,
-          "actual_surge": 0.9069999999999999
+          "actual_surge": 0.9069999999999999,
+          "observed_tide_cm": 51.3,
+          "predicted_tide_cm": 40.9925,
+          "astronomical_tide_cm": -37.5452
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T07:00:00+08:00",
           "time": "2005-07-18T10:00:00+08:00",
           "predicted_surge": 0.8420474342182607,
-          "actual_surge": 0.769
+          "actual_surge": 0.769,
+          "observed_tide_cm": 23.5,
+          "predicted_tide_cm": 30.8047,
+          "astronomical_tide_cm": -50.5643
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T08:00:00+08:00",
           "time": "2005-07-18T11:00:00+08:00",
           "predicted_surge": 0.789538006100421,
-          "actual_surge": 0.652
+          "actual_surge": 0.652,
+          "observed_tide_cm": 5.0,
+          "predicted_tide_cm": 18.7538,
+          "astronomical_tide_cm": -57.4986
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T09:00:00+08:00",
           "time": "2005-07-18T12:00:00+08:00",
           "predicted_surge": 0.6853381633433002,
-          "actual_surge": 0.775
+          "actual_surge": 0.775,
+          "observed_tide_cm": 19.5,
+          "predicted_tide_cm": 10.5338,
+          "astronomical_tide_cm": -56.255
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T10:00:00+08:00",
           "time": "2005-07-18T13:00:00+08:00",
           "predicted_surge": 0.661987674604947,
-          "actual_surge": 0.628
+          "actual_surge": 0.628,
+          "observed_tide_cm": 15.6,
+          "predicted_tide_cm": 18.9988,
+          "astronomical_tide_cm": -46.7049
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T11:00:00+08:00",
           "time": "2005-07-18T14:00:00+08:00",
           "predicted_surge": 0.684084509895193,
-          "actual_surge": 0.7509999999999999
+          "actual_surge": 0.7509999999999999,
+          "observed_tide_cm": 44.4,
+          "predicted_tide_cm": 37.7085,
+          "astronomical_tide_cm": -31.1817
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T12:00:00+08:00",
           "time": "2005-07-18T15:00:00+08:00",
           "predicted_surge": 0.5928137532750065,
-          "actual_surge": 0.449
+          "actual_surge": 0.449,
+          "observed_tide_cm": 33.0,
+          "predicted_tide_cm": 47.3814,
+          "astronomical_tide_cm": -13.6175
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T13:00:00+08:00",
           "time": "2005-07-18T16:00:00+08:00",
           "predicted_surge": 0.5001286083717449,
-          "actual_surge": 0.33699999999999997
+          "actual_surge": 0.33699999999999997,
+          "observed_tide_cm": 39.3,
+          "predicted_tide_cm": 55.6129,
+          "astronomical_tide_cm": 2.1846
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T14:00:00+08:00",
           "time": "2005-07-18T17:00:00+08:00",
           "predicted_surge": 0.49803812943495407,
-          "actual_surge": 0.175
+          "actual_surge": 0.175,
+          "observed_tide_cm": 36.1,
+          "predicted_tide_cm": 68.4038,
+          "astronomical_tide_cm": 13.9617
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T15:00:00+08:00",
           "time": "2005-07-18T18:00:00+08:00",
           "predicted_surge": 0.5240524071439084,
-          "actual_surge": 0.15100000000000002
+          "actual_surge": 0.15100000000000002,
+          "observed_tide_cm": 41.1,
+          "predicted_tide_cm": 78.4052,
+          "astronomical_tide_cm": 21.2279
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T16:00:00+08:00",
           "time": "2005-07-18T19:00:00+08:00",
           "predicted_surge": 0.36494685614093864,
-          "actual_surge": 0.13300000000000003
+          "actual_surge": 0.13300000000000003,
+          "observed_tide_cm": 41.7,
+          "predicted_tide_cm": 64.8947,
+          "astronomical_tide_cm": 24.5074
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T17:00:00+08:00",
           "time": "2005-07-18T20:00:00+08:00",
           "predicted_surge": 0.4477813866886951,
-          "actual_surge": 0.184
+          "actual_surge": 0.184,
+          "observed_tide_cm": 45.4,
+          "predicted_tide_cm": 71.7781,
+          "astronomical_tide_cm": 24.5175
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T18:00:00+08:00",
           "time": "2005-07-18T21:00:00+08:00",
           "predicted_surge": 0.39344462594771945,
-          "actual_surge": 0.172
+          "actual_surge": 0.172,
+          "observed_tide_cm": 40.4,
+          "predicted_tide_cm": 62.5445,
+          "astronomical_tide_cm": 22.0773
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T19:00:00+08:00",
           "time": "2005-07-18T22:00:00+08:00",
           "predicted_surge": 0.4212409047120615,
-          "actual_surge": 0.196
+          "actual_surge": 0.196,
+          "observed_tide_cm": 38.1,
+          "predicted_tide_cm": 60.6241,
+          "astronomical_tide_cm": 18.6045
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T20:00:00+08:00",
           "time": "2005-07-18T23:00:00+08:00",
           "predicted_surge": 0.499306557374283,
-          "actual_surge": 0.19299999999999998
+          "actual_surge": 0.19299999999999998,
+          "observed_tide_cm": 35.3,
+          "predicted_tide_cm": 65.9307,
+          "astronomical_tide_cm": 16.3208
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T21:00:00+08:00",
           "time": "2005-07-19T00:00:00+08:00",
           "predicted_surge": 0.5708863494156968,
-          "actual_surge": 0.17600000000000002
+          "actual_surge": 0.17600000000000002,
+          "observed_tide_cm": 35.6,
+          "predicted_tide_cm": 75.0886,
+          "astronomical_tide_cm": 17.4868
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T22:00:00+08:00",
           "time": "2005-07-19T01:00:00+08:00",
           "predicted_surge": 0.5700609862265751,
-          "actual_surge": 0.21200000000000002
+          "actual_surge": 0.21200000000000002,
+          "observed_tide_cm": 45.1,
+          "predicted_tide_cm": 80.9061,
+          "astronomical_tide_cm": 22.9637
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T23:00:00+08:00",
           "time": "2005-07-19T02:00:00+08:00",
           "predicted_surge": 0.4792743278080948,
-          "actual_surge": 0.16399999999999998
+          "actual_surge": 0.16399999999999998,
+          "observed_tide_cm": 47.5,
+          "predicted_tide_cm": 79.0274,
+          "astronomical_tide_cm": 31.2211
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T00:00:00+08:00",
           "time": "2005-07-19T03:00:00+08:00",
           "predicted_surge": 0.29453575909803364,
-          "actual_surge": 0.06200000000000003
+          "actual_surge": 0.06200000000000003,
+          "observed_tide_cm": 42.6,
+          "predicted_tide_cm": 65.8536,
+          "astronomical_tide_cm": 38.7424
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T01:00:00+08:00",
           "time": "2005-07-19T04:00:00+08:00",
           "predicted_surge": 0.16471436992951047,
-          "actual_surge": 0.013999999999999986
+          "actual_surge": 0.013999999999999986,
+          "observed_tide_cm": 39.1,
+          "predicted_tide_cm": 54.1714,
+          "astronomical_tide_cm": 41.7072
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T02:00:00+08:00",
           "time": "2005-07-19T05:00:00+08:00",
           "predicted_surge": 0.15720324912832734,
-          "actual_surge": -0.010999999999999979
+          "actual_surge": -0.010999999999999979,
+          "observed_tide_cm": 31.8,
+          "predicted_tide_cm": 48.6203,
+          "astronomical_tide_cm": 37.7993
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T03:00:00+08:00",
           "time": "2005-07-19T06:00:00+08:00",
           "predicted_surge": 0.07906690234676482,
-          "actual_surge": -0.08600000000000002
+          "actual_surge": -0.08600000000000002,
+          "observed_tide_cm": 13.5,
+          "predicted_tide_cm": 30.0067,
+          "astronomical_tide_cm": 26.9337
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T04:00:00+08:00",
           "time": "2005-07-19T07:00:00+08:00",
           "predicted_surge": 0.12491832897313941,
-          "actual_surge": -0.079
+          "actual_surge": -0.079,
+          "observed_tide_cm": -1.1,
+          "predicted_tide_cm": 19.2918,
+          "astronomical_tide_cm": 10.6607
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T05:00:00+08:00",
           "time": "2005-07-19T08:00:00+08:00",
           "predicted_surge": 0.11955089476302543,
-          "actual_surge": 0.0009999999999999966
+          "actual_surge": 0.0009999999999999966,
+          "observed_tide_cm": -11.5,
+          "predicted_tide_cm": 0.3551,
+          "astronomical_tide_cm": -8.9084
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T06:00:00+08:00",
           "time": "2005-07-19T09:00:00+08:00",
           "predicted_surge": 0.15916704278220237,
-          "actual_surge": 0.038000000000000006
+          "actual_surge": 0.038000000000000006,
+          "observed_tide_cm": -27.9,
+          "predicted_tide_cm": -15.7833,
+          "astronomical_tide_cm": -29.6025
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T07:00:00+08:00",
           "time": "2005-07-19T10:00:00+08:00",
           "predicted_surge": 0.12471626220255225,
-          "actual_surge": 0.08
+          "actual_surge": 0.08,
+          "observed_tide_cm": -43.8,
+          "predicted_tide_cm": -39.3284,
+          "astronomical_tide_cm": -48.8785
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T08:00:00+08:00",
           "time": "2005-07-19T11:00:00+08:00",
           "predicted_surge": 0.15349537863290347,
-          "actual_surge": 0.055999999999999946
+          "actual_surge": 0.055999999999999946,
+          "observed_tide_cm": -62.0,
+          "predicted_tide_cm": -52.2505,
+          "astronomical_tide_cm": -63.4595
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T09:00:00+08:00",
           "time": "2005-07-19T12:00:00+08:00",
           "predicted_surge": 0.14342265736280516,
-          "actual_surge": 0.040999999999999946
+          "actual_surge": 0.040999999999999946,
+          "observed_tide_cm": -69.9,
+          "predicted_tide_cm": -59.6577,
+          "astronomical_tide_cm": -69.8662
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T10:00:00+08:00",
           "time": "2005-07-19T13:00:00+08:00",
           "predicted_surge": 0.1304122485254075,
-          "actual_surge": 0.055999999999999946
+          "actual_surge": 0.055999999999999946,
+          "observed_tide_cm": -63.2,
+          "predicted_tide_cm": -55.7588,
+          "astronomical_tide_cm": -65.919
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T11:00:00+08:00",
           "time": "2005-07-19T14:00:00+08:00",
           "predicted_surge": 0.12535281369667256,
-          "actual_surge": 0.04800000000000004
+          "actual_surge": 0.04800000000000004,
+          "observed_tide_cm": -48.8,
+          "predicted_tide_cm": -41.0647,
+          "astronomical_tide_cm": -52.198
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T12:00:00+08:00",
           "time": "2005-07-19T15:00:00+08:00",
           "predicted_surge": 0.09090387158049165,
-          "actual_surge": 0.04800000000000001
+          "actual_surge": 0.04800000000000001,
+          "observed_tide_cm": -27.3,
+          "predicted_tide_cm": -23.0096,
+          "astronomical_tide_cm": -32.2111
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T13:00:00+08:00",
           "time": "2005-07-19T16:00:00+08:00",
           "predicted_surge": 0.10833371817424364,
-          "actual_surge": -0.025
+          "actual_surge": -0.025,
+          "observed_tide_cm": -11.3,
+          "predicted_tide_cm": 2.0334,
+          "astronomical_tide_cm": -10.9324
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T14:00:00+08:00",
           "time": "2005-07-19T17:00:00+08:00",
           "predicted_surge": 0.12057661442267738,
-          "actual_surge": -0.079
+          "actual_surge": -0.079,
+          "observed_tide_cm": 4.0,
+          "predicted_tide_cm": 23.9577,
+          "astronomical_tide_cm": 7.3397
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T15:00:00+08:00",
           "time": "2005-07-19T18:00:00+08:00",
           "predicted_surge": 0.14966692919127583,
-          "actual_surge": -0.08199999999999999
+          "actual_surge": -0.08199999999999999,
+          "observed_tide_cm": 17.8,
+          "predicted_tide_cm": 40.9667,
+          "astronomical_tide_cm": 20.3591
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T16:00:00+08:00",
           "time": "2005-07-19T19:00:00+08:00",
           "predicted_surge": 0.1910295746069705,
-          "actual_surge": -0.09899999999999999
+          "actual_surge": -0.09899999999999999,
+          "observed_tide_cm": 23.1,
+          "predicted_tide_cm": 52.103,
+          "astronomical_tide_cm": 27.8321
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T17:00:00+08:00",
           "time": "2005-07-19T20:00:00+08:00",
           "predicted_surge": 0.19996670871199504,
-          "actual_surge": -0.09099999999999998
+          "actual_surge": -0.09099999999999998,
+          "observed_tide_cm": 25.2,
+          "predicted_tide_cm": 54.2967,
+          "astronomical_tide_cm": 30.4007
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T18:00:00+08:00",
           "time": "2005-07-19T21:00:00+08:00",
           "predicted_surge": 0.1713723636373824,
-          "actual_surge": -0.08099999999999997
+          "actual_surge": -0.08099999999999997,
+          "observed_tide_cm": 23.6,
+          "predicted_tide_cm": 48.8372,
+          "astronomical_tide_cm": 28.9039
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T19:00:00+08:00",
           "time": "2005-07-19T22:00:00+08:00",
           "predicted_surge": 0.14497009844658656,
-          "actual_surge": -0.07299999999999997
+          "actual_surge": -0.07299999999999997,
+          "observed_tide_cm": 19.1,
+          "predicted_tide_cm": 40.897,
+          "astronomical_tide_cm": 24.5536
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T20:00:00+08:00",
           "time": "2005-07-19T23:00:00+08:00",
           "predicted_surge": 0.11702236577259598,
-          "actual_surge": -0.028000000000000008
+          "actual_surge": -0.028000000000000008,
+          "observed_tide_cm": 17.2,
+          "predicted_tide_cm": 31.7022,
+          "astronomical_tide_cm": 19.5136
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T21:00:00+08:00",
           "time": "2005-07-20T00:00:00+08:00",
           "predicted_surge": 0.08489161682695881,
-          "actual_surge": -0.013999999999999986
+          "actual_surge": -0.013999999999999986,
+          "observed_tide_cm": 15.5,
+          "predicted_tide_cm": 25.3892,
+          "astronomical_tide_cm": 16.7902
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T22:00:00+08:00",
           "time": "2005-07-20T01:00:00+08:00",
           "predicted_surge": 0.04271645268079827,
-          "actual_surge": -0.005
+          "actual_surge": -0.005,
+          "observed_tide_cm": 19.5,
+          "predicted_tide_cm": 24.2716,
+          "astronomical_tide_cm": 18.9418
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T23:00:00+08:00",
           "time": "2005-07-20T02:00:00+08:00",
           "predicted_surge": 0.003512026199532332,
-          "actual_surge": 0.007000000000000029
+          "actual_surge": 0.007000000000000029,
+          "observed_tide_cm": 28.6,
+          "predicted_tide_cm": 28.2512,
+          "astronomical_tide_cm": 26.3502
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T00:00:00+08:00",
           "time": "2005-07-20T03:00:00+08:00",
           "predicted_surge": -0.03257826244447509,
-          "actual_surge": -0.01
+          "actual_surge": -0.01,
+          "observed_tide_cm": 35.9,
+          "predicted_tide_cm": 33.6422,
+          "astronomical_tide_cm": 36.4574
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T01:00:00+08:00",
           "time": "2005-07-20T04:00:00+08:00",
           "predicted_surge": -0.03798321335154743,
-          "actual_surge": -0.003999999999999986
+          "actual_surge": -0.003999999999999986,
+          "observed_tide_cm": 42.9,
+          "predicted_tide_cm": 39.5017,
+          "astronomical_tide_cm": 44.7728
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T02:00:00+08:00",
           "time": "2005-07-20T05:00:00+08:00",
           "predicted_surge": 0.0001627535339437644,
-          "actual_surge": -0.035
+          "actual_surge": -0.035,
+          "observed_tide_cm": 41.0,
+          "predicted_tide_cm": 44.5163,
+          "astronomical_tide_cm": 47.0654
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T03:00:00+08:00",
           "time": "2005-07-20T06:00:00+08:00",
           "predicted_surge": -0.004226714937976675,
-          "actual_surge": -0.04
+          "actual_surge": -0.04,
+          "observed_tide_cm": 34.1,
+          "predicted_tide_cm": 37.6773,
+          "astronomical_tide_cm": 41.2266
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T04:00:00+08:00",
           "time": "2005-07-20T07:00:00+08:00",
           "predicted_surge": -0.033370965951426676,
-          "actual_surge": -0.03399999999999999
+          "actual_surge": -0.03399999999999999,
+          "observed_tide_cm": 20.8,
+          "predicted_tide_cm": 20.8629,
+          "astronomical_tide_cm": 27.649
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T05:00:00+08:00",
           "time": "2005-07-20T08:00:00+08:00",
           "predicted_surge": -0.027302237730167767,
-          "actual_surge": -0.037
+          "actual_surge": -0.037,
+          "observed_tide_cm": 1.4,
+          "predicted_tide_cm": 2.3698,
+          "astronomical_tide_cm": 8.2724
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T06:00:00+08:00",
           "time": "2005-07-20T09:00:00+08:00",
           "predicted_surge": -0.03000273303693416,
-          "actual_surge": -0.05100000000000002
+          "actual_surge": -0.05100000000000002,
+          "observed_tide_cm": -22.0,
+          "predicted_tide_cm": -19.9003,
+          "astronomical_tide_cm": -14.5216
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T07:00:00+08:00",
           "time": "2005-07-20T10:00:00+08:00",
           "predicted_surge": -0.026768997701573,
-          "actual_surge": -0.05
+          "actual_surge": -0.05,
+          "observed_tide_cm": -45.3,
+          "predicted_tide_cm": -42.9769,
+          "astronomical_tide_cm": -38.1565
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T08:00:00+08:00",
           "time": "2005-07-20T11:00:00+08:00",
           "predicted_surge": -0.03621005733759021,
-          "actual_surge": -0.03
+          "actual_surge": -0.03,
+          "observed_tide_cm": -66.2,
+          "predicted_tide_cm": -66.821,
+          "astronomical_tide_cm": -59.3769
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T09:00:00+08:00",
           "time": "2005-07-20T12:00:00+08:00",
           "predicted_surge": -0.050578779066274705,
-          "actual_surge": -0.012000000000000028
+          "actual_surge": -0.012000000000000028,
+          "observed_tide_cm": -81.2,
+          "predicted_tide_cm": -85.0579,
+          "astronomical_tide_cm": -74.1045
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T10:00:00+08:00",
           "time": "2005-07-20T13:00:00+08:00",
           "predicted_surge": -0.05896165043129137,
-          "actual_surge": -0.02
+          "actual_surge": -0.02,
+          "observed_tide_cm": -86.7,
+          "predicted_tide_cm": -90.5962,
+          "astronomical_tide_cm": -78.4895
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T11:00:00+08:00",
           "time": "2005-07-20T14:00:00+08:00",
           "predicted_surge": -0.06782554217153827,
-          "actual_surge": 0.005
+          "actual_surge": 0.005,
+          "observed_tide_cm": -75.1,
+          "predicted_tide_cm": -82.3826,
+          "astronomical_tide_cm": -70.802
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T12:00:00+08:00",
           "time": "2005-07-20T15:00:00+08:00",
           "predicted_surge": -0.07134652186885315,
-          "actual_surge": -0.011999999999999957
+          "actual_surge": -0.011999999999999957,
+          "observed_tide_cm": -56.9,
+          "predicted_tide_cm": -62.8347,
+          "astronomical_tide_cm": -52.7718
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T13:00:00+08:00",
           "time": "2005-07-20T16:00:00+08:00",
           "predicted_surge": -0.07626673101079635,
-          "actual_surge": -0.028999999999999984
+          "actual_surge": -0.028999999999999984,
+          "observed_tide_cm": -32.8,
+          "predicted_tide_cm": -37.5267,
+          "astronomical_tide_cm": -29.1653
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T14:00:00+08:00",
           "time": "2005-07-20T17:00:00+08:00",
           "predicted_surge": -0.03797236566940521,
-          "actual_surge": -0.04
+          "actual_surge": -0.04,
+          "observed_tide_cm": -7.2,
+          "predicted_tide_cm": -6.9972,
+          "astronomical_tide_cm": -5.7046
         }
       ]
     },
@@ -1618,777 +2284,1110 @@
           "issued_at": "2005-07-16T00:00:00+08:00",
           "time": "2005-07-16T06:00:00+08:00",
           "predicted_surge": 0.08550669990665646,
-          "actual_surge": 0.10899999999999999
+          "actual_surge": 0.10899999999999999,
+          "observed_tide_cm": 5.6,
+          "predicted_tide_cm": 3.2507,
+          "astronomical_tide_cm": -7.0395
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T01:00:00+08:00",
           "time": "2005-07-16T07:00:00+08:00",
           "predicted_surge": 0.048265684822178336,
-          "actual_surge": 0.098
+          "actual_surge": 0.098,
+          "observed_tide_cm": -6.8,
+          "predicted_tide_cm": -11.7734,
+          "astronomical_tide_cm": -17.0507
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T02:00:00+08:00",
           "time": "2005-07-16T08:00:00+08:00",
           "predicted_surge": 0.055267293822113574,
-          "actual_surge": 0.11699999999999999
+          "actual_surge": 0.11699999999999999,
+          "observed_tide_cm": -14.5,
+          "predicted_tide_cm": -20.6733,
+          "astronomical_tide_cm": -24.9409
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T03:00:00+08:00",
           "time": "2005-07-16T09:00:00+08:00",
           "predicted_surge": -0.03358490905744091,
-          "actual_surge": 0.12899999999999998
+          "actual_surge": 0.12899999999999998,
+          "observed_tide_cm": -18.6,
+          "predicted_tide_cm": -34.8585,
+          "astronomical_tide_cm": -29.4139
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T04:00:00+08:00",
           "time": "2005-07-16T10:00:00+08:00",
           "predicted_surge": 0.056834662029708306,
-          "actual_surge": 0.11700000000000003
+          "actual_surge": 0.11700000000000003,
+          "observed_tide_cm": -19.9,
+          "predicted_tide_cm": -25.9165,
+          "astronomical_tide_cm": -29.5312
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T05:00:00+08:00",
           "time": "2005-07-16T11:00:00+08:00",
           "predicted_surge": 0.1283881456251991,
-          "actual_surge": 0.11699999999999999
+          "actual_surge": 0.11699999999999999,
+          "observed_tide_cm": -15.2,
+          "predicted_tide_cm": -14.0612,
+          "astronomical_tide_cm": -25.2565
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T06:00:00+08:00",
           "time": "2005-07-16T12:00:00+08:00",
           "predicted_surge": 0.1000687717192205,
-          "actual_surge": 0.10899999999999999
+          "actual_surge": 0.10899999999999999,
+          "observed_tide_cm": -7.5,
+          "predicted_tide_cm": -8.3931,
+          "astronomical_tide_cm": -17.7662
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T07:00:00+08:00",
           "time": "2005-07-16T13:00:00+08:00",
           "predicted_surge": 0.10173489174918411,
-          "actual_surge": 0.102
+          "actual_surge": 0.102,
+          "observed_tide_cm": 1.5,
+          "predicted_tide_cm": 1.4735,
+          "astronomical_tide_cm": -9.1441
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T08:00:00+08:00",
           "time": "2005-07-16T14:00:00+08:00",
           "predicted_surge": 0.11943823160461273,
-          "actual_surge": 0.08900000000000001
+          "actual_surge": 0.08900000000000001,
+          "observed_tide_cm": 9.1,
+          "predicted_tide_cm": 12.1438,
+          "astronomical_tide_cm": -1.5321
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T09:00:00+08:00",
           "time": "2005-07-16T15:00:00+08:00",
           "predicted_surge": 0.09367144685807333,
-          "actual_surge": 0.09300000000000001
+          "actual_surge": 0.09300000000000001,
+          "observed_tide_cm": 15.8,
+          "predicted_tide_cm": 15.8671,
+          "astronomical_tide_cm": 3.7401
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T10:00:00+08:00",
           "time": "2005-07-16T16:00:00+08:00",
           "predicted_surge": 0.21049504905824187,
-          "actual_surge": 0.09299999999999999
+          "actual_surge": 0.09299999999999999,
+          "observed_tide_cm": 19.7,
+          "predicted_tide_cm": 31.4495,
+          "astronomical_tide_cm": 6.4879
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T11:00:00+08:00",
           "time": "2005-07-16T17:00:00+08:00",
           "predicted_surge": 0.3176995121536009,
-          "actual_surge": 0.09699999999999999
+          "actual_surge": 0.09699999999999999,
+          "observed_tide_cm": 21.4,
+          "predicted_tide_cm": 43.47,
+          "astronomical_tide_cm": 7.3386
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T12:00:00+08:00",
           "time": "2005-07-16T18:00:00+08:00",
           "predicted_surge": 0.2907288685234483,
-          "actual_surge": 0.10399999999999998
+          "actual_surge": 0.10399999999999998,
+          "observed_tide_cm": 20.9,
+          "predicted_tide_cm": 39.5729,
+          "astronomical_tide_cm": 7.1227
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T13:00:00+08:00",
           "time": "2005-07-16T19:00:00+08:00",
           "predicted_surge": 0.30534801370787146,
-          "actual_surge": 0.10799999999999998
+          "actual_surge": 0.10799999999999998,
+          "observed_tide_cm": 18.7,
+          "predicted_tide_cm": 38.4348,
+          "astronomical_tide_cm": 6.5278
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T14:00:00+08:00",
           "time": "2005-07-16T20:00:00+08:00",
           "predicted_surge": 0.27009247466931513,
-          "actual_surge": 0.125
+          "actual_surge": 0.125,
+          "observed_tide_cm": 18.2,
+          "predicted_tide_cm": 32.7092,
+          "astronomical_tide_cm": 6.1973
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T15:00:00+08:00",
           "time": "2005-07-16T21:00:00+08:00",
           "predicted_surge": 0.20579894897722925,
-          "actual_surge": 0.128
+          "actual_surge": 0.128,
+          "observed_tide_cm": 18.6,
+          "predicted_tide_cm": 26.3799,
+          "astronomical_tide_cm": 6.9598
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T16:00:00+08:00",
           "time": "2005-07-16T22:00:00+08:00",
           "predicted_surge": 0.25824930031852766,
-          "actual_surge": 0.137
+          "actual_surge": 0.137,
+          "observed_tide_cm": 22.6,
+          "predicted_tide_cm": 34.7249,
+          "astronomical_tide_cm": 9.7091
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T17:00:00+08:00",
           "time": "2005-07-16T23:00:00+08:00",
           "predicted_surge": 0.29285876600273963,
-          "actual_surge": 0.133
+          "actual_surge": 0.133,
+          "observed_tide_cm": 27.6,
+          "predicted_tide_cm": 43.5859,
+          "astronomical_tide_cm": 14.8176
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T18:00:00+08:00",
           "time": "2005-07-17T00:00:00+08:00",
           "predicted_surge": 0.20908764951558484,
-          "actual_surge": 0.145
+          "actual_surge": 0.145,
+          "observed_tide_cm": 35.0,
+          "predicted_tide_cm": 41.4088,
+          "astronomical_tide_cm": 21.5039
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T19:00:00+08:00",
           "time": "2005-07-17T01:00:00+08:00",
           "predicted_surge": 0.17343582111447114,
-          "actual_surge": 0.134
+          "actual_surge": 0.134,
+          "observed_tide_cm": 39.1,
+          "predicted_tide_cm": 43.0436,
+          "astronomical_tide_cm": 27.7741
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T20:00:00+08:00",
           "time": "2005-07-17T02:00:00+08:00",
           "predicted_surge": 0.1405155793558817,
-          "actual_surge": 0.11499999999999996
+          "actual_surge": 0.11499999999999996,
+          "observed_tide_cm": 39.3,
+          "predicted_tide_cm": 41.8516,
+          "astronomical_tide_cm": 31.1672
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T21:00:00+08:00",
           "time": "2005-07-17T03:00:00+08:00",
           "predicted_surge": 0.08481884250601755,
-          "actual_surge": 0.14400000000000002
+          "actual_surge": 0.14400000000000002,
+          "observed_tide_cm": 40.2,
+          "predicted_tide_cm": 34.2819,
+          "astronomical_tide_cm": 29.8835
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T22:00:00+08:00",
           "time": "2005-07-17T04:00:00+08:00",
           "predicted_surge": 0.1758313887643123,
-          "actual_surge": 0.14300000000000002
+          "actual_surge": 0.14300000000000002,
+          "observed_tide_cm": 34.1,
+          "predicted_tide_cm": 37.3831,
+          "astronomical_tide_cm": 23.5389
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-16T23:00:00+08:00",
           "time": "2005-07-17T05:00:00+08:00",
           "predicted_surge": 0.24241899279567075,
-          "actual_surge": 0.152
+          "actual_surge": 0.152,
+          "observed_tide_cm": 26.4,
+          "predicted_tide_cm": 35.4419,
+          "astronomical_tide_cm": 13.0903
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T00:00:00+08:00",
           "time": "2005-07-17T06:00:00+08:00",
           "predicted_surge": 0.2059561969985483,
-          "actual_surge": 0.157
+          "actual_surge": 0.157,
+          "observed_tide_cm": 15.6,
+          "predicted_tide_cm": 20.4956,
+          "astronomical_tide_cm": 0.1544
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T01:00:00+08:00",
           "time": "2005-07-17T07:00:00+08:00",
           "predicted_surge": 0.21296477182963827,
-          "actual_surge": 0.195
+          "actual_surge": 0.195,
+          "observed_tide_cm": 6.0,
+          "predicted_tide_cm": 7.7965,
+          "astronomical_tide_cm": -13.6216
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T02:00:00+08:00",
           "time": "2005-07-17T08:00:00+08:00",
           "predicted_surge": 0.20697771563320683,
-          "actual_surge": 0.22399999999999998
+          "actual_surge": 0.22399999999999998,
+          "observed_tide_cm": -5.0,
+          "predicted_tide_cm": -6.7022,
+          "astronomical_tide_cm": -26.6693
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T03:00:00+08:00",
           "time": "2005-07-17T09:00:00+08:00",
           "predicted_surge": 0.1507877654342849,
-          "actual_surge": 0.218
+          "actual_surge": 0.218,
+          "observed_tide_cm": -17.3,
+          "predicted_tide_cm": -24.0212,
+          "astronomical_tide_cm": -37.2411
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T04:00:00+08:00",
           "time": "2005-07-17T10:00:00+08:00",
           "predicted_surge": 0.20316820208854258,
-          "actual_surge": 0.259
+          "actual_surge": 0.259,
+          "observed_tide_cm": -19.6,
+          "predicted_tide_cm": -25.1832,
+          "astronomical_tide_cm": -43.3739
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T05:00:00+08:00",
           "time": "2005-07-17T11:00:00+08:00",
           "predicted_surge": 0.21750473537190906,
-          "actual_surge": 0.261
+          "actual_surge": 0.261,
+          "observed_tide_cm": -18.9,
+          "predicted_tide_cm": -23.2495,
+          "astronomical_tide_cm": -43.4672
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T06:00:00+08:00",
           "time": "2005-07-17T12:00:00+08:00",
           "predicted_surge": 0.1586465238725369,
-          "actual_surge": 0.256
+          "actual_surge": 0.256,
+          "observed_tide_cm": -12.3,
+          "predicted_tide_cm": -22.0353,
+          "astronomical_tide_cm": -37.2124
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T07:00:00+08:00",
           "time": "2005-07-17T13:00:00+08:00",
           "predicted_surge": 0.16949089601513156,
-          "actual_surge": 0.257
+          "actual_surge": 0.257,
+          "observed_tide_cm": -0.2,
+          "predicted_tide_cm": -8.9509,
+          "astronomical_tide_cm": -26.1177
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T08:00:00+08:00",
           "time": "2005-07-17T14:00:00+08:00",
           "predicted_surge": 0.20865770842147868,
-          "actual_surge": 0.233
+          "actual_surge": 0.233,
+          "observed_tide_cm": 11.4,
+          "predicted_tide_cm": 8.9658,
+          "astronomical_tide_cm": -13.0611
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T09:00:00+08:00",
           "time": "2005-07-17T15:00:00+08:00",
           "predicted_surge": 0.23097947011050945,
-          "actual_surge": 0.23399999999999999
+          "actual_surge": 0.23399999999999999,
+          "observed_tide_cm": 24.7,
+          "predicted_tide_cm": 24.3979,
+          "astronomical_tide_cm": -1.0484
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T10:00:00+08:00",
           "time": "2005-07-17T16:00:00+08:00",
           "predicted_surge": 0.33826970206419077,
-          "actual_surge": 0.239
+          "actual_surge": 0.239,
+          "observed_tide_cm": 35.4,
+          "predicted_tide_cm": 45.327,
+          "astronomical_tide_cm": 7.9943
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T11:00:00+08:00",
           "time": "2005-07-17T17:00:00+08:00",
           "predicted_surge": 0.4323822216853876,
-          "actual_surge": 0.231
+          "actual_surge": 0.231,
+          "observed_tide_cm": 41.0,
+          "predicted_tide_cm": 61.1382,
+          "astronomical_tide_cm": 13.6115
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T12:00:00+08:00",
           "time": "2005-07-17T18:00:00+08:00",
           "predicted_surge": 0.45075940431867234,
-          "actual_surge": 0.23800000000000004
+          "actual_surge": 0.23800000000000004,
+          "observed_tide_cm": 44.2,
+          "predicted_tide_cm": 65.4759,
+          "astronomical_tide_cm": 16.3141
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T13:00:00+08:00",
           "time": "2005-07-17T19:00:00+08:00",
           "predicted_surge": 0.5419396787718512,
-          "actual_surge": 0.275
+          "actual_surge": 0.275,
+          "observed_tide_cm": 47.0,
+          "predicted_tide_cm": 73.694,
+          "astronomical_tide_cm": 16.824
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T14:00:00+08:00",
           "time": "2005-07-17T20:00:00+08:00",
           "predicted_surge": 0.608443211776334,
-          "actual_surge": 0.36099999999999993
+          "actual_surge": 0.36099999999999993,
+          "observed_tide_cm": 52.8,
+          "predicted_tide_cm": 77.5443,
+          "astronomical_tide_cm": 15.7917
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T15:00:00+08:00",
           "time": "2005-07-17T21:00:00+08:00",
           "predicted_surge": 0.6209383281620346,
-          "actual_surge": 0.39199999999999996
+          "actual_surge": 0.39199999999999996,
+          "observed_tide_cm": 52.8,
+          "predicted_tide_cm": 75.6938,
+          "astronomical_tide_cm": 14.1
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T16:00:00+08:00",
           "time": "2005-07-17T22:00:00+08:00",
           "predicted_surge": 0.7016589016546353,
-          "actual_surge": 0.38099999999999995
+          "actual_surge": 0.38099999999999995,
+          "observed_tide_cm": 50.4,
+          "predicted_tide_cm": 82.4659,
+          "astronomical_tide_cm": 13.1723
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T17:00:00+08:00",
           "time": "2005-07-17T23:00:00+08:00",
           "predicted_surge": 0.6789273260660911,
-          "actual_surge": 0.514
+          "actual_surge": 0.514,
+          "observed_tide_cm": 65.9,
+          "predicted_tide_cm": 82.3927,
+          "astronomical_tide_cm": 14.6315
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T18:00:00+08:00",
           "time": "2005-07-18T00:00:00+08:00",
           "predicted_surge": 0.620014519897053,
-          "actual_surge": 0.519
+          "actual_surge": 0.519,
+          "observed_tide_cm": 71.4,
+          "predicted_tide_cm": 81.5015,
+          "astronomical_tide_cm": 19.2969
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T19:00:00+08:00",
           "time": "2005-07-18T01:00:00+08:00",
           "predicted_surge": 0.6349994227732587,
-          "actual_surge": 0.57
+          "actual_surge": 0.57,
+          "observed_tide_cm": 82.7,
+          "predicted_tide_cm": 89.1999,
+          "astronomical_tide_cm": 26.2636
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T20:00:00+08:00",
           "time": "2005-07-18T02:00:00+08:00",
           "predicted_surge": 0.5762795985747582,
-          "actual_surge": 0.7090000000000001
+          "actual_surge": 0.7090000000000001,
+          "observed_tide_cm": 101.4,
+          "predicted_tide_cm": 88.128,
+          "astronomical_tide_cm": 32.9312
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T21:00:00+08:00",
           "time": "2005-07-18T03:00:00+08:00",
           "predicted_surge": 0.5630694030215209,
-          "actual_surge": 0.825
+          "actual_surge": 0.825,
+          "observed_tide_cm": 114.5,
+          "predicted_tide_cm": 88.3069,
+          "astronomical_tide_cm": 36.1479
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T22:00:00+08:00",
           "time": "2005-07-18T04:00:00+08:00",
           "predicted_surge": 0.630857015207233,
-          "actual_surge": 1.0230000000000001
+          "actual_surge": 1.0230000000000001,
+          "observed_tide_cm": 130.9,
+          "predicted_tide_cm": 91.6857,
+          "astronomical_tide_cm": 33.7327
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-17T23:00:00+08:00",
           "time": "2005-07-18T05:00:00+08:00",
           "predicted_surge": 0.7079868401743425,
-          "actual_surge": 1.0019999999999998
+          "actual_surge": 1.0019999999999998,
+          "observed_tide_cm": 120.6,
+          "predicted_tide_cm": 91.1987,
+          "astronomical_tide_cm": 25.3286
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T00:00:00+08:00",
           "time": "2005-07-18T06:00:00+08:00",
           "predicted_surge": 0.6503525684174177,
-          "actual_surge": 1.1840000000000002
+          "actual_surge": 1.1840000000000002,
+          "observed_tide_cm": 127.2,
+          "predicted_tide_cm": 73.8353,
+          "astronomical_tide_cm": 12.135
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T01:00:00+08:00",
           "time": "2005-07-18T07:00:00+08:00",
           "predicted_surge": 0.6665537278289494,
-          "actual_surge": 0.796
+          "actual_surge": 0.796,
+          "observed_tide_cm": 73.7,
+          "predicted_tide_cm": 60.7554,
+          "astronomical_tide_cm": -3.9991
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T02:00:00+08:00",
           "time": "2005-07-18T08:00:00+08:00",
           "predicted_surge": 0.6477788345324168,
-          "actual_surge": 0.779
+          "actual_surge": 0.779,
+          "observed_tide_cm": 55.4,
+          "predicted_tide_cm": 42.2779,
+          "astronomical_tide_cm": -21.2117
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T03:00:00+08:00",
           "time": "2005-07-18T09:00:00+08:00",
           "predicted_surge": 0.5595970143935687,
-          "actual_surge": 0.9069999999999999
+          "actual_surge": 0.9069999999999999,
+          "observed_tide_cm": 51.3,
+          "predicted_tide_cm": 16.5597,
+          "astronomical_tide_cm": -37.5452
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T04:00:00+08:00",
           "time": "2005-07-18T10:00:00+08:00",
           "predicted_surge": 0.5304266767471932,
-          "actual_surge": 0.769
+          "actual_surge": 0.769,
+          "observed_tide_cm": 23.5,
+          "predicted_tide_cm": -0.3573,
+          "astronomical_tide_cm": -50.5643
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T05:00:00+08:00",
           "time": "2005-07-18T11:00:00+08:00",
           "predicted_surge": 0.5151230258824573,
-          "actual_surge": 0.652
+          "actual_surge": 0.652,
+          "observed_tide_cm": 5.0,
+          "predicted_tide_cm": -8.6877,
+          "astronomical_tide_cm": -57.4986
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T06:00:00+08:00",
           "time": "2005-07-18T12:00:00+08:00",
           "predicted_surge": 0.4621271622709598,
-          "actual_surge": 0.775
+          "actual_surge": 0.775,
+          "observed_tide_cm": 19.5,
+          "predicted_tide_cm": -11.7873,
+          "astronomical_tide_cm": -56.255
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T07:00:00+08:00",
           "time": "2005-07-18T13:00:00+08:00",
           "predicted_surge": 0.5116535019850739,
-          "actual_surge": 0.628
+          "actual_surge": 0.628,
+          "observed_tide_cm": 15.6,
+          "predicted_tide_cm": 3.9654,
+          "astronomical_tide_cm": -46.7049
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T08:00:00+08:00",
           "time": "2005-07-18T14:00:00+08:00",
           "predicted_surge": 0.5231446580457506,
-          "actual_surge": 0.7509999999999999
+          "actual_surge": 0.7509999999999999,
+          "observed_tide_cm": 44.4,
+          "predicted_tide_cm": 21.6145,
+          "astronomical_tide_cm": -31.1817
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T09:00:00+08:00",
           "time": "2005-07-18T15:00:00+08:00",
           "predicted_surge": 0.5210852103839195,
-          "actual_surge": 0.449
+          "actual_surge": 0.449,
+          "observed_tide_cm": 33.0,
+          "predicted_tide_cm": 40.2085,
+          "astronomical_tide_cm": -13.6175
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T10:00:00+08:00",
           "time": "2005-07-18T16:00:00+08:00",
           "predicted_surge": 0.5032160573032095,
-          "actual_surge": 0.33699999999999997
+          "actual_surge": 0.33699999999999997,
+          "observed_tide_cm": 39.3,
+          "predicted_tide_cm": 55.9216,
+          "astronomical_tide_cm": 2.1846
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T11:00:00+08:00",
           "time": "2005-07-18T17:00:00+08:00",
           "predicted_surge": 0.5301815679891891,
-          "actual_surge": 0.175
+          "actual_surge": 0.175,
+          "observed_tide_cm": 36.1,
+          "predicted_tide_cm": 71.6182,
+          "astronomical_tide_cm": 13.9617
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T12:00:00+08:00",
           "time": "2005-07-18T18:00:00+08:00",
           "predicted_surge": 0.5921287164430185,
-          "actual_surge": 0.15100000000000002
+          "actual_surge": 0.15100000000000002,
+          "observed_tide_cm": 41.1,
+          "predicted_tide_cm": 85.2129,
+          "astronomical_tide_cm": 21.2279
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T13:00:00+08:00",
           "time": "2005-07-18T19:00:00+08:00",
           "predicted_surge": 0.496748469723313,
-          "actual_surge": 0.13300000000000003
+          "actual_surge": 0.13300000000000003,
+          "observed_tide_cm": 41.7,
+          "predicted_tide_cm": 78.0748,
+          "astronomical_tide_cm": 24.5074
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T14:00:00+08:00",
           "time": "2005-07-18T20:00:00+08:00",
           "predicted_surge": 0.5853638461622791,
-          "actual_surge": 0.184
+          "actual_surge": 0.184,
+          "observed_tide_cm": 45.4,
+          "predicted_tide_cm": 85.5364,
+          "astronomical_tide_cm": 24.5175
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T15:00:00+08:00",
           "time": "2005-07-18T21:00:00+08:00",
           "predicted_surge": 0.5827014475142114,
-          "actual_surge": 0.172
+          "actual_surge": 0.172,
+          "observed_tide_cm": 40.4,
+          "predicted_tide_cm": 81.4701,
+          "astronomical_tide_cm": 22.0773
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T16:00:00+08:00",
           "time": "2005-07-18T22:00:00+08:00",
           "predicted_surge": 0.541475522424012,
-          "actual_surge": 0.196
+          "actual_surge": 0.196,
+          "observed_tide_cm": 38.1,
+          "predicted_tide_cm": 72.6476,
+          "astronomical_tide_cm": 18.6045
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T17:00:00+08:00",
           "time": "2005-07-18T23:00:00+08:00",
           "predicted_surge": 0.5083378895741488,
-          "actual_surge": 0.19299999999999998
+          "actual_surge": 0.19299999999999998,
+          "observed_tide_cm": 35.3,
+          "predicted_tide_cm": 66.8338,
+          "astronomical_tide_cm": 16.3208
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T18:00:00+08:00",
           "time": "2005-07-19T00:00:00+08:00",
           "predicted_surge": 0.5516696486604924,
-          "actual_surge": 0.17600000000000002
+          "actual_surge": 0.17600000000000002,
+          "observed_tide_cm": 35.6,
+          "predicted_tide_cm": 73.167,
+          "astronomical_tide_cm": 17.4868
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T19:00:00+08:00",
           "time": "2005-07-19T01:00:00+08:00",
           "predicted_surge": 0.5465334937879802,
-          "actual_surge": 0.21200000000000002
+          "actual_surge": 0.21200000000000002,
+          "observed_tide_cm": 45.1,
+          "predicted_tide_cm": 78.5533,
+          "astronomical_tide_cm": 22.9637
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T20:00:00+08:00",
           "time": "2005-07-19T02:00:00+08:00",
           "predicted_surge": 0.42259810113416646,
-          "actual_surge": 0.16399999999999998
+          "actual_surge": 0.16399999999999998,
+          "observed_tide_cm": 47.5,
+          "predicted_tide_cm": 73.3598,
+          "astronomical_tide_cm": 31.2211
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T21:00:00+08:00",
           "time": "2005-07-19T03:00:00+08:00",
           "predicted_surge": 0.31198736007157385,
-          "actual_surge": 0.06200000000000003
+          "actual_surge": 0.06200000000000003,
+          "observed_tide_cm": 42.6,
+          "predicted_tide_cm": 67.5987,
+          "astronomical_tide_cm": 38.7424
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T22:00:00+08:00",
           "time": "2005-07-19T04:00:00+08:00",
           "predicted_surge": 0.2575735064130045,
-          "actual_surge": 0.013999999999999986
+          "actual_surge": 0.013999999999999986,
+          "observed_tide_cm": 39.1,
+          "predicted_tide_cm": 63.4574,
+          "astronomical_tide_cm": 41.7072
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-18T23:00:00+08:00",
           "time": "2005-07-19T05:00:00+08:00",
           "predicted_surge": 0.08080312752786296,
-          "actual_surge": -0.010999999999999979
+          "actual_surge": -0.010999999999999979,
+          "observed_tide_cm": 31.8,
+          "predicted_tide_cm": 40.9803,
+          "astronomical_tide_cm": 37.7993
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T00:00:00+08:00",
           "time": "2005-07-19T06:00:00+08:00",
           "predicted_surge": 0.08361429725952421,
-          "actual_surge": -0.08600000000000002
+          "actual_surge": -0.08600000000000002,
+          "observed_tide_cm": 13.5,
+          "predicted_tide_cm": 30.4614,
+          "astronomical_tide_cm": 26.9337
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T01:00:00+08:00",
           "time": "2005-07-19T07:00:00+08:00",
           "predicted_surge": 0.10146590901939141,
-          "actual_surge": -0.079
+          "actual_surge": -0.079,
+          "observed_tide_cm": -1.1,
+          "predicted_tide_cm": 16.9466,
+          "astronomical_tide_cm": 10.6607
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T02:00:00+08:00",
           "time": "2005-07-19T08:00:00+08:00",
           "predicted_surge": 0.20034873507328016,
-          "actual_surge": 0.0009999999999999966
+          "actual_surge": 0.0009999999999999966,
+          "observed_tide_cm": -11.5,
+          "predicted_tide_cm": 8.4349,
+          "astronomical_tide_cm": -8.9084
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T03:00:00+08:00",
           "time": "2005-07-19T09:00:00+08:00",
           "predicted_surge": 0.3063054360086847,
-          "actual_surge": 0.038000000000000006
+          "actual_surge": 0.038000000000000006,
+          "observed_tide_cm": -27.9,
+          "predicted_tide_cm": -1.0695,
+          "astronomical_tide_cm": -29.6025
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T04:00:00+08:00",
           "time": "2005-07-19T10:00:00+08:00",
           "predicted_surge": 0.2884809907351595,
-          "actual_surge": 0.08
+          "actual_surge": 0.08,
+          "observed_tide_cm": -43.8,
+          "predicted_tide_cm": -22.9519,
+          "astronomical_tide_cm": -48.8785
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T05:00:00+08:00",
           "time": "2005-07-19T11:00:00+08:00",
           "predicted_surge": 0.2848208746263092,
-          "actual_surge": 0.055999999999999946
+          "actual_surge": 0.055999999999999946,
+          "observed_tide_cm": -62.0,
+          "predicted_tide_cm": -39.1179,
+          "astronomical_tide_cm": -63.4595
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T06:00:00+08:00",
           "time": "2005-07-19T12:00:00+08:00",
           "predicted_surge": 0.20397795995781115,
-          "actual_surge": 0.040999999999999946
+          "actual_surge": 0.040999999999999946,
+          "observed_tide_cm": -69.9,
+          "predicted_tide_cm": -53.6022,
+          "astronomical_tide_cm": -69.8662
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T07:00:00+08:00",
           "time": "2005-07-19T13:00:00+08:00",
           "predicted_surge": 0.1526488052377252,
-          "actual_surge": 0.055999999999999946
+          "actual_surge": 0.055999999999999946,
+          "observed_tide_cm": -63.2,
+          "predicted_tide_cm": -53.5351,
+          "astronomical_tide_cm": -65.919
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T08:00:00+08:00",
           "time": "2005-07-19T14:00:00+08:00",
           "predicted_surge": 0.17167734396351525,
-          "actual_surge": 0.04800000000000004
+          "actual_surge": 0.04800000000000004,
+          "observed_tide_cm": -48.8,
+          "predicted_tide_cm": -36.4323,
+          "astronomical_tide_cm": -52.198
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T09:00:00+08:00",
           "time": "2005-07-19T15:00:00+08:00",
           "predicted_surge": 0.16743433258753862,
-          "actual_surge": 0.04800000000000001
+          "actual_surge": 0.04800000000000001,
+          "observed_tide_cm": -27.3,
+          "predicted_tide_cm": -15.3566,
+          "astronomical_tide_cm": -32.2111
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T10:00:00+08:00",
           "time": "2005-07-19T16:00:00+08:00",
           "predicted_surge": 0.2157367433105249,
-          "actual_surge": -0.025
+          "actual_surge": -0.025,
+          "observed_tide_cm": -11.3,
+          "predicted_tide_cm": 12.7737,
+          "astronomical_tide_cm": -10.9324
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T11:00:00+08:00",
           "time": "2005-07-19T17:00:00+08:00",
           "predicted_surge": 0.22377764283075524,
-          "actual_surge": -0.079
+          "actual_surge": -0.079,
+          "observed_tide_cm": 4.0,
+          "predicted_tide_cm": 34.2778,
+          "astronomical_tide_cm": 7.3397
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T12:00:00+08:00",
           "time": "2005-07-19T18:00:00+08:00",
           "predicted_surge": 0.21274630667923855,
-          "actual_surge": -0.08199999999999999
+          "actual_surge": -0.08199999999999999,
+          "observed_tide_cm": 17.8,
+          "predicted_tide_cm": 47.2746,
+          "astronomical_tide_cm": 20.3591
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T13:00:00+08:00",
           "time": "2005-07-19T19:00:00+08:00",
           "predicted_surge": 0.2214661201288643,
-          "actual_surge": -0.09899999999999999
+          "actual_surge": -0.09899999999999999,
+          "observed_tide_cm": 23.1,
+          "predicted_tide_cm": 55.1466,
+          "astronomical_tide_cm": 27.8321
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T14:00:00+08:00",
           "time": "2005-07-19T20:00:00+08:00",
           "predicted_surge": 0.18213712456270179,
-          "actual_surge": -0.09099999999999998
+          "actual_surge": -0.09099999999999998,
+          "observed_tide_cm": 25.2,
+          "predicted_tide_cm": 52.5137,
+          "astronomical_tide_cm": 30.4007
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T15:00:00+08:00",
           "time": "2005-07-19T21:00:00+08:00",
           "predicted_surge": 0.1566169952397592,
-          "actual_surge": -0.08099999999999997
+          "actual_surge": -0.08099999999999997,
+          "observed_tide_cm": 23.6,
+          "predicted_tide_cm": 47.3617,
+          "astronomical_tide_cm": 28.9039
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T16:00:00+08:00",
           "time": "2005-07-19T22:00:00+08:00",
           "predicted_surge": 0.15496926904994215,
-          "actual_surge": -0.07299999999999997
+          "actual_surge": -0.07299999999999997,
+          "observed_tide_cm": 19.1,
+          "predicted_tide_cm": 41.8969,
+          "astronomical_tide_cm": 24.5536
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T17:00:00+08:00",
           "time": "2005-07-19T23:00:00+08:00",
           "predicted_surge": 0.15277161333874395,
-          "actual_surge": -0.028000000000000008
+          "actual_surge": -0.028000000000000008,
+          "observed_tide_cm": 17.2,
+          "predicted_tide_cm": 35.2772,
+          "astronomical_tide_cm": 19.5136
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T18:00:00+08:00",
           "time": "2005-07-20T00:00:00+08:00",
           "predicted_surge": 0.15718403922745416,
-          "actual_surge": -0.013999999999999986
+          "actual_surge": -0.013999999999999986,
+          "observed_tide_cm": 15.5,
+          "predicted_tide_cm": 32.6184,
+          "astronomical_tide_cm": 16.7902
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T19:00:00+08:00",
           "time": "2005-07-20T01:00:00+08:00",
           "predicted_surge": 0.1577355822004966,
-          "actual_surge": -0.005
+          "actual_surge": -0.005,
+          "observed_tide_cm": 19.5,
+          "predicted_tide_cm": 35.7736,
+          "astronomical_tide_cm": 18.9418
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T20:00:00+08:00",
           "time": "2005-07-20T02:00:00+08:00",
           "predicted_surge": 0.1009498766164881,
-          "actual_surge": 0.007000000000000029
+          "actual_surge": 0.007000000000000029,
+          "observed_tide_cm": 28.6,
+          "predicted_tide_cm": 37.995,
+          "astronomical_tide_cm": 26.3502
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T21:00:00+08:00",
           "time": "2005-07-20T03:00:00+08:00",
           "predicted_surge": 0.010285938513699138,
-          "actual_surge": -0.01
+          "actual_surge": -0.01,
+          "observed_tide_cm": 35.9,
+          "predicted_tide_cm": 37.9286,
+          "astronomical_tide_cm": 36.4574
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T22:00:00+08:00",
           "time": "2005-07-20T04:00:00+08:00",
           "predicted_surge": -0.08740126349832326,
-          "actual_surge": -0.003999999999999986
+          "actual_surge": -0.003999999999999986,
+          "observed_tide_cm": 42.9,
+          "predicted_tide_cm": 34.5599,
+          "astronomical_tide_cm": 44.7728
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-19T23:00:00+08:00",
           "time": "2005-07-20T05:00:00+08:00",
           "predicted_surge": -0.12410560980753257,
-          "actual_surge": -0.035
+          "actual_surge": -0.035,
+          "observed_tide_cm": 41.0,
+          "predicted_tide_cm": 32.0894,
+          "astronomical_tide_cm": 47.0654
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T00:00:00+08:00",
           "time": "2005-07-20T06:00:00+08:00",
           "predicted_surge": -0.15047580552753437,
-          "actual_surge": -0.04
+          "actual_surge": -0.04,
+          "observed_tide_cm": 34.1,
+          "predicted_tide_cm": 23.0524,
+          "astronomical_tide_cm": 41.2266
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T01:00:00+08:00",
           "time": "2005-07-20T07:00:00+08:00",
           "predicted_surge": -0.11514603838326928,
-          "actual_surge": -0.03399999999999999
+          "actual_surge": -0.03399999999999999,
+          "observed_tide_cm": 20.8,
+          "predicted_tide_cm": 12.6854,
+          "astronomical_tide_cm": 27.649
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T02:00:00+08:00",
           "time": "2005-07-20T08:00:00+08:00",
           "predicted_surge": -0.06774902964084424,
-          "actual_surge": -0.037
+          "actual_surge": -0.037,
+          "observed_tide_cm": 1.4,
+          "predicted_tide_cm": -1.6749,
+          "astronomical_tide_cm": 8.2724
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T03:00:00+08:00",
           "time": "2005-07-20T09:00:00+08:00",
           "predicted_surge": -0.026207558111145245,
-          "actual_surge": -0.05100000000000002
+          "actual_surge": -0.05100000000000002,
+          "observed_tide_cm": -22.0,
+          "predicted_tide_cm": -19.5208,
+          "astronomical_tide_cm": -14.5216
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T04:00:00+08:00",
           "time": "2005-07-20T10:00:00+08:00",
           "predicted_surge": -0.006633624634537638,
-          "actual_surge": -0.05
+          "actual_surge": -0.05,
+          "observed_tide_cm": -45.3,
+          "predicted_tide_cm": -40.9634,
+          "astronomical_tide_cm": -38.1565
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T05:00:00+08:00",
           "time": "2005-07-20T11:00:00+08:00",
           "predicted_surge": 0.02989552820855318,
-          "actual_surge": -0.03
+          "actual_surge": -0.03,
+          "observed_tide_cm": -66.2,
+          "predicted_tide_cm": -60.2104,
+          "astronomical_tide_cm": -59.3769
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T06:00:00+08:00",
           "time": "2005-07-20T12:00:00+08:00",
           "predicted_surge": 0.047972465833025765,
-          "actual_surge": -0.012000000000000028
+          "actual_surge": -0.012000000000000028,
+          "observed_tide_cm": -81.2,
+          "predicted_tide_cm": -75.2028,
+          "astronomical_tide_cm": -74.1045
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T07:00:00+08:00",
           "time": "2005-07-20T13:00:00+08:00",
           "predicted_surge": 0.05377304170390025,
-          "actual_surge": -0.02
+          "actual_surge": -0.02,
+          "observed_tide_cm": -86.7,
+          "predicted_tide_cm": -79.3227,
+          "astronomical_tide_cm": -78.4895
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T08:00:00+08:00",
           "time": "2005-07-20T14:00:00+08:00",
           "predicted_surge": 0.06548748545013516,
-          "actual_surge": 0.005
+          "actual_surge": 0.005,
+          "observed_tide_cm": -75.1,
+          "predicted_tide_cm": -69.0513,
+          "astronomical_tide_cm": -70.802
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T09:00:00+08:00",
           "time": "2005-07-20T15:00:00+08:00",
           "predicted_surge": 0.0570559124106089,
-          "actual_surge": -0.011999999999999957
+          "actual_surge": -0.011999999999999957,
+          "observed_tide_cm": -56.9,
+          "predicted_tide_cm": -49.9944,
+          "astronomical_tide_cm": -52.7718
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T10:00:00+08:00",
           "time": "2005-07-20T16:00:00+08:00",
           "predicted_surge": 0.05913529038309913,
-          "actual_surge": -0.028999999999999984
+          "actual_surge": -0.028999999999999984,
+          "observed_tide_cm": -32.8,
+          "predicted_tide_cm": -23.9865,
+          "astronomical_tide_cm": -29.1653
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T11:00:00+08:00",
           "time": "2005-07-20T17:00:00+08:00",
           "predicted_surge": 0.08774554124265492,
-          "actual_surge": -0.04
+          "actual_surge": -0.04,
+          "observed_tide_cm": -7.2,
+          "predicted_tide_cm": 5.5746,
+          "astronomical_tide_cm": -5.7046
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T12:00:00+08:00",
           "time": "2005-07-20T18:00:00+08:00",
           "predicted_surge": 0.12221828266552089,
-          "actual_surge": -0.064
+          "actual_surge": -0.064,
+          "observed_tide_cm": 12.4,
+          "predicted_tide_cm": 31.0218,
+          "astronomical_tide_cm": 13.2674
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T13:00:00+08:00",
           "time": "2005-07-20T19:00:00+08:00",
           "predicted_surge": 0.12810779139633277,
-          "actual_surge": -0.03900000000000002
+          "actual_surge": -0.03900000000000002,
+          "observed_tide_cm": 28.2,
+          "predicted_tide_cm": 44.9108,
+          "astronomical_tide_cm": 25.8686
         },
         {
           "station": "C4A02",
           "issued_at": "2005-07-20T14:00:00+08:00",
           "time": "2005-07-20T20:00:00+08:00",
           "predicted_surge": 0.11127162435672229,
-          "actual_surge": -0.016999999999999956
+          "actual_surge": -0.016999999999999956,
+          "observed_tide_cm": 35.7,
+          "predicted_tide_cm": 48.5272,
+          "astronomical_tide_cm": 32.1513
         }
       ]
     }

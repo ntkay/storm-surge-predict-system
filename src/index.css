@@ -38,3 +38,7 @@ body {
   display: none !important;
   border: none !important;
 }
+
+.satellite-tile {
+  filter: brightness(1.45) contrast(0.88);
+}

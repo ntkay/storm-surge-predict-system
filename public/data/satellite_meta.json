@@ -1,0 +1,13 @@
+{
+  "source": "CWA",
+  "dataset": "O-B0033-003",
+  "productName": "2026-09-19_1930.B13.ASA",
+  "updatedAt": "2026-09-19T19:54:39.283722+08:00",
+  "tileCount": 64,
+  "bounds": {
+    "north": 49.92,
+    "south": 0.0,
+    "east": 151.92,
+    "west": 102.0
+  }
+}

@@ -5,8 +5,6 @@ import { surgeStations } from '../shared/tideStations.js';
 import { recentTyphoons, modelTestTyphoons, trackTime, latestTrackTime } from './eventCatalog.js';
 const series = [
   { key: 'observedTide', label: '實測潮位', color: '#0369a1' },
-  { key: 'predictedTide', label: '天文潮', color: '#7c3aed' },
-  { key: 'surgeAnomaly', label: '暴潮增水', color: '#c2410c' },
 ];
 const box = { background: '#fff', padding: 24, borderRadius: 24, marginBottom: 28, boxShadow: '0 8px 24px #0f172a14' };
 const grid = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(210px,1fr))', gap: 16 };
@@ -43,7 +41,6 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
   const years = [...new Set(events.map((t) => String(t.year)))];
   const choices = events.filter((t) => !year || String(t.year) === year);
   const selected = events.find((t) => t.sid === sid);
-  const isStaticBpnnDemo = Number(selected?.year) === 2008 && String(selected?.name || '').toLowerCase() === 'sinlaku';
   const window = eventWindow(selected, extend ? 1 : 0);
   const start = window?.start, end = window?.end;
   const key = start && end && stationId ? `${sid}|${start}|${end}|${stationId}|${retry}` : '';
@@ -51,7 +48,7 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
   const data = result?.key === key ? result.data : null;
 
   useEffect(() => {
-    if (!key || isStaticBpnnDemo) return;
+      if (!key) return;
     const controller = new AbortController();
     let cancelled = false;
     async function load() {
@@ -73,18 +70,17 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
     }
     load();
     return () => { cancelled = true; controller.abort(); };
-  }, [key, start, end, stationId, isStaticBpnnDemo]);
+  }, [key, start, end, stationId]);
 
   const points = data?.station?.history || [];
-  const paired = points.filter((p) => hasNumber(p.surgeAnomaly));
-  const latest = paired.at(-1) || points.filter((p) => hasNumber(p.observedTide)).at(-1) || points.at(-1);
+  const latest = points.filter((p) => hasNumber(p.observedTide)).at(-1) || points.at(-1);
   const hasTideValues = points.some((point) => series.some((item) => hasNumber(point[item.key])));
   function clear() { setResult(null); setError(''); setLoading(false); }
   return <section style={box} aria-labelledby="event-surge-title">
-    <h2 id="event-surge-title" style={{ color: '#123c66', marginTop: 0 }}>🌊 颱風潮位與暴潮預測</h2>
+    <h2 id="event-surge-title" style={{ color: '#123c66', marginTop: 0 }}>🌊 颱風潮位查詢</h2>
     <section aria-labelledby="tide-section-title" style={{ padding: '20px 0' }}>
     <h3 id="tide-section-title" style={{ color: '#0369a1', fontSize: 24 }}>颱風潮位</h3>
-    <p>先選歷史颱風，再選潮位站，查看該事件期間的實測潮位、天文潮與暴潮增水。所有顯示時間為臺灣時間（UTC+8）。</p>
+    <p>先選歷史颱風，再選潮位站，查看該事件期間的實測潮位與天文潮。所有顯示時間為臺灣時間（UTC+8）。</p>
     {historyLoading && <p role="status">歷史颱風清單讀取中…</p>}
     {historyError && <p role="alert">{historyError}</p>}
     {!historyLoading && !historyError && !events.length && <p>歷史颱風清單沒有資料，請確認 public/data/typhoons.json。</p>}
@@ -105,37 +101,30 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
     {sid && !window && <p role="alert">此颱風沒有有效路徑時間，無法建立事件期間。</p>}
     {window && <p><strong>事件資料期間：</strong>{date(start)} ～ {date(end)}</p>}
     <div style={note}>歷史路徑有資料，不代表潮位來源也涵蓋同一年代。目前採用來源已發布資料的事件交集；未連接歷史潮位庫時，舊颱風可能完全沒有潮位資料。可至 <a href="https://ocean.cwa.gov.tw/V2/data_interface/datasets" target="_blank" rel="noreferrer">中央氣象署海象資料下載</a> 取得歷史觀測，並另備同期間、同基準的天文潮資料。</div>
-    {isStaticBpnnDemo && stationId && <p role="status">辛樂克 BPNN 示範直接顯示曲線，不查詢此處的潮位資料。</p>}
-    {!isStaticBpnnDemo && key && loading && <p role="status">正在查詢所選事件與測站…</p>}
-    {!isStaticBpnnDemo && key && error && <p role="alert" style={{ color: '#b91c1c' }}>{error}</p>}
-    {!isStaticBpnnDemo && key && <button type="button" style={{ ...control, width: 'auto' }} disabled={loading} onClick={() => {clear();setRetry((n) => n+1);}}>重新查詢此事件</button>}
-    {!isStaticBpnnDemo && data && !hasTideValues && <p role="status" style={{ ...note, marginTop: 16 }}>此事件期間沒有可用的歷史潮位資料，已隱藏空白摘要卡與曲線。</p>}
-    {!isStaticBpnnDemo && data && hasTideValues && <>
+    {key && loading && <p role="status">正在查詢所選事件與測站…</p>}
+    {key && error && <p role="alert" style={{ color: '#b91c1c' }}>{error}</p>}
+    {key && <button type="button" style={{ ...control, width: 'auto' }} disabled={loading} onClick={() => {clear();setRetry((n) => n+1);}}>重新查詢此事件</button>}
+    {data && !hasTideValues && <p role="status" style={{ ...note, marginTop: 16 }}>此事件期間沒有可用的歷史潮位資料，已隱藏空白摘要卡與曲線。</p>}
+    {data && hasTideValues && <>
       <div style={note}>
         <strong>{data.station.stationName} · {data.station.datumLabel} · 單位：m</strong><br />
-        來源實測可用期間：{range(data.availability.observation)}<br />
-        來源天文潮可用期間：{range(data.availability.astronomicalTide)}<br />
-        可配對資料期間：{range(data.availability.paired)}<br />
-        本事件：實測 {data.counts.observed} 筆／天文潮 {data.counts.astronomical} 筆／配對 {data.counts.paired} 筆。首末時間不代表連續完整涵蓋。
+        實測潮位資料期間：{range(data.availability.observation)}<br />
+        本事件取得實測潮位 {data.counts.observed} 筆。首末時間不代表連續完整涵蓋。
       </div>
-      <p role="status">{data.status === 'unavailable' ? '所選事件期間無可用潮位資料；不顯示近期潮位替代。' : data.status === 'unpaired' ? '此期間只有部分數列，缺少同時間配對資料，無法計算暴潮增水。' : '顯示事件時間窗內可取得的資料；請留意缺測與來源涵蓋期間。'}</p>
+      <p role="status">{data.status === 'unavailable' ? '所選事件期間無可用潮位資料；不顯示近期潮位替代。' : data.status === 'unpaired' ? '此期間實測潮位與天文潮資料不完整，請留意缺測。' : '顯示事件時間窗內可取得的資料；請留意缺測與來源涵蓋期間。'}</p>
       {data.warnings.map((warning) => <p key={warning} role="alert">{warning}</p>)}
-      <p>指標時間：{date(latest?.time)}（{paired.length ? '事件內最後一筆配對資料' : '事件內可用資料；未配對欄位留空'}）</p>
+      <p>資料時間：{date(latest?.time)}（事件內最後一筆可用潮位資料；缺測欄位留空）</p>
       <div style={grid}>{series.map((s) => <div key={s.key} style={note}><div>{s.label}</div><strong style={{ color: s.color, fontSize: 28 }}>{number(latest?.[s.key])}</strong></div>)}</div>
       <EventChart points={points} start={start} end={end} />
-      <p style={{ lineHeight: 1.8 }}>{data.definition}<br />{data.method}</p>
       <details><summary>檢視事件資料表（{points.length} 個時刻）</summary>
         <div style={{ overflow: 'auto', maxHeight: 420 }}><table style={{ borderCollapse: 'collapse', width: '100%' }}>
-          <thead><tr>{['臺灣時間', '實測潮位 (m)', '天文潮 (m)', '暴潮增水 (m)', '天文潮配對'].map((s) => <th style={cell} key={s}>{s}</th>)}</tr></thead>
-          <tbody>{points.map((p) => <tr key={p.time}><td style={cell}>{date(p.time)}</td>{series.map((s) => <td style={cell} key={s.key}>{number(p[s.key])}</td>)}<td style={cell}>{p.forecastMethod === 'linearInterpolation' ? '線性內插' : p.forecastMethod === 'exact' ? '原始時刻' : '無配對'}</td></tr>)}</tbody>
+          <thead><tr>{['臺灣時間', '實測潮位 (m)'].map((s) => <th style={cell} key={s}>{s}</th>)}</tr></thead>
+          <tbody>{points.map((p) => <tr key={p.time}><td style={cell}>{date(p.time)}</td>{series.map((s) => <td style={cell} key={s.key}>{number(p[s.key])}</td>)}</tr>)}</tbody>
         </table></div>
       </details>
     </>}
     </section>
-    <section aria-labelledby="model-section-title" style={{ borderTop: '3px solid #cbd5e1', padding: 24, borderRadius: 16, background: '#f5f3ff', marginTop: 24 }}>
-      <h3 id="model-section-title" style={{ color: '#6d28d9', fontSize: 24, marginTop: 0 }}>暴潮預測</h3>
-      <ModelSurgePanel stationId={stationId} start={start} end={end} eventName={selected?.nameZh || selected?.name} />
-    </section>
+    {stationId && selected && <ModelSurgePanel stationId={stationId} eventName={selected.nameZh || selected.name} />}
   </section>;
 }
 
@@ -150,7 +139,7 @@ function EventChart({ points, start, end }) {
     <h3>事件期間潮位曲線</h3>
     <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>{series.map((s,i) => <span key={s.key} style={{ color: s.color }}><strong>{['━━','┄┄','····'][i]} {s.label}</strong>（m）</span>)}</div>
     {!values.length ? <p>此事件沒有可繪製資料。</p> : <div style={{ overflowX: 'auto' }}>
-      <svg viewBox="0 0 960 340" style={{ width: '100%', minWidth: 650 }} role="img" aria-label="實測潮位、天文潮與暴潮增水；橫軸臺灣時間，縱軸公尺">
+      <svg viewBox="0 0 960 340" style={{ width: '100%', minWidth: 650 }} role="img" aria-label="實測潮位與天文潮；橫軸臺灣時間，縱軸公尺">
         <text x="10" y="18" fontSize="13">潮位 (m)</text>
         {[0,1,2,3,4].map((i) => { const v=low+(high-low)*i/4;return <g key={i}><line x1="75" x2="875" y1={y(v)} y2={y(v)} stroke="#cbd5e1" /><text x="65" y={y(v)+4} textAnchor="end" fontSize="12">{v.toFixed(2)}</text></g>; })}
         <line x1="75" x2="875" y1={y(0)} y2={y(0)} stroke="#64748b" strokeDasharray="3 4" />
@@ -164,7 +153,7 @@ function EventChart({ points, start, end }) {
             previous=p;
             return `${gap ? 'M' : 'L'}${x(p.time)},${y(p[s.key])}`;
           }).join(' ');
-          return <g key={s.key}><path d={path} fill="none" stroke={s.color} strokeWidth="2.5" strokeDasharray={['','8 4','3 4'][index]} />{valid.map((p) => <circle key={p.time} cx={x(p.time)} cy={y(p[s.key])} r="2.5" fill={s.color}><title>{date(p.time)} · {s.label} {number(p[s.key])}</title></circle>)}</g>;
+          return <g key={s.key}><path d={path} fill="none" stroke={s.color} strokeWidth="2.5" strokeDasharray={index ? '8 4' : ''} />{valid.map((p) => <circle key={p.time} cx={x(p.time)} cy={y(p[s.key])} r="2.5" fill={s.color}><title>{date(p.time)} · {s.label} {number(p[s.key])}</title></circle>)}</g>;
         })}
       </svg>
     </div>}

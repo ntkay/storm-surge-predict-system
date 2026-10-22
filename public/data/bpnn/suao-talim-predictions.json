@@ -45,1051 +45,1576 @@
           "issued_at": "2005-08-26T01:00:00",
           "valid_at": "2005-08-26T02:00:00",
           "actual_surge_mm": 73.644,
-          "predicted_surge_mm": 89.304
+          "predicted_surge_mm": 89.304,
+          "observed_tide_cm": 4.2,
+          "predicted_tide_cm": 5.766,
+          "astronomical_tide_cm": -15.7416
         },
         {
           "issued_at": "2005-08-26T02:00:00",
           "valid_at": "2005-08-26T03:00:00",
           "actual_surge_mm": 71.691,
-          "predicted_surge_mm": 83.158
+          "predicted_surge_mm": 83.158,
+          "observed_tide_cm": -14.9,
+          "predicted_tide_cm": -13.7533,
+          "astronomical_tide_cm": -33.2554
         },
         {
           "issued_at": "2005-08-26T03:00:00",
           "valid_at": "2005-08-26T04:00:00",
           "actual_surge_mm": 64.824,
-          "predicted_surge_mm": 73.138
+          "predicted_surge_mm": 73.138,
+          "observed_tide_cm": -26.8,
+          "predicted_tide_cm": -25.9686,
+          "astronomical_tide_cm": -41.9294
         },
         {
           "issued_at": "2005-08-26T04:00:00",
           "valid_at": "2005-08-26T05:00:00",
           "actual_surge_mm": 62.642,
-          "predicted_surge_mm": 67.539
+          "predicted_surge_mm": 67.539,
+          "observed_tide_cm": -28.5,
+          "predicted_tide_cm": -28.0103,
+          "astronomical_tide_cm": -40.4935
         },
         {
           "issued_at": "2005-08-26T05:00:00",
           "valid_at": "2005-08-26T06:00:00",
           "actual_surge_mm": 62.868,
-          "predicted_surge_mm": 58.531
+          "predicted_surge_mm": 58.531,
+          "observed_tide_cm": -21.0,
+          "predicted_tide_cm": -21.4337,
+          "astronomical_tide_cm": -30.2791
         },
         {
           "issued_at": "2005-08-26T06:00:00",
           "valid_at": "2005-08-26T07:00:00",
           "actual_surge_mm": 75.649,
-          "predicted_surge_mm": 61.958
+          "predicted_surge_mm": 61.958,
+          "observed_tide_cm": -6.4,
+          "predicted_tide_cm": -7.7691,
+          "astronomical_tide_cm": -14.6359
         },
         {
           "issued_at": "2005-08-26T07:00:00",
           "valid_at": "2005-08-26T08:00:00",
           "actual_surge_mm": 73.802,
-          "predicted_surge_mm": 68.165
+          "predicted_surge_mm": 68.165,
+          "observed_tide_cm": 8.4,
+          "predicted_tide_cm": 7.8363,
+          "astronomical_tide_cm": 2.1559
         },
         {
           "issued_at": "2005-08-26T08:00:00",
           "valid_at": "2005-08-26T09:00:00",
           "actual_surge_mm": 71.99,
-          "predicted_surge_mm": 67.016
+          "predicted_surge_mm": 67.016,
+          "observed_tide_cm": 21.2,
+          "predicted_tide_cm": 20.7026,
+          "astronomical_tide_cm": 16.0326
         },
         {
           "issued_at": "2005-08-26T09:00:00",
           "valid_at": "2005-08-26T10:00:00",
           "actual_surge_mm": 81.962,
-          "predicted_surge_mm": 65.614
+          "predicted_surge_mm": 65.614,
+          "observed_tide_cm": 30.6,
+          "predicted_tide_cm": 28.9652,
+          "astronomical_tide_cm": 24.0347
         },
         {
           "issued_at": "2005-08-26T10:00:00",
           "valid_at": "2005-08-26T11:00:00",
           "actual_surge_mm": 91.843,
-          "predicted_surge_mm": 73.719
+          "predicted_surge_mm": 73.719,
+          "observed_tide_cm": 33.8,
+          "predicted_tide_cm": 31.9876,
+          "astronomical_tide_cm": 24.8415
         },
         {
           "issued_at": "2005-08-26T11:00:00",
           "valid_at": "2005-08-26T12:00:00",
           "actual_surge_mm": 86.307,
-          "predicted_surge_mm": 91.755
+          "predicted_surge_mm": 91.755,
+          "observed_tide_cm": 29.2,
+          "predicted_tide_cm": 29.7448,
+          "astronomical_tide_cm": 18.9859
         },
         {
           "issued_at": "2005-08-26T12:00:00",
           "valid_at": "2005-08-26T13:00:00",
           "actual_surge_mm": 104.268,
-          "predicted_surge_mm": 89.221
+          "predicted_surge_mm": 89.221,
+          "observed_tide_cm": 22.7,
+          "predicted_tide_cm": 21.1953,
+          "astronomical_tide_cm": 8.7456
         },
         {
           "issued_at": "2005-08-26T13:00:00",
           "valid_at": "2005-08-26T14:00:00",
           "actual_surge_mm": 111.569,
-          "predicted_surge_mm": 101.303
+          "predicted_surge_mm": 101.303,
+          "observed_tide_cm": 14.3,
+          "predicted_tide_cm": 13.2734,
+          "astronomical_tide_cm": -2.3613
         },
         {
           "issued_at": "2005-08-26T14:00:00",
           "valid_at": "2005-08-26T15:00:00",
           "actual_surge_mm": 113.724,
-          "predicted_surge_mm": 114.389
+          "predicted_surge_mm": 114.389,
+          "observed_tide_cm": 8.2,
+          "predicted_tide_cm": 8.2665,
+          "astronomical_tide_cm": -10.4869
         },
         {
           "issued_at": "2005-08-26T15:00:00",
           "valid_at": "2005-08-26T16:00:00",
           "actual_surge_mm": 96.572,
-          "predicted_surge_mm": 113.784
+          "predicted_surge_mm": 113.784,
+          "observed_tide_cm": 5.7,
+          "predicted_tide_cm": 7.4212,
+          "astronomical_tide_cm": -12.5801
         },
         {
           "issued_at": "2005-08-26T16:00:00",
           "valid_at": "2005-08-26T17:00:00",
           "actual_surge_mm": 52.192,
-          "predicted_surge_mm": 99.385
+          "predicted_surge_mm": 99.385,
+          "observed_tide_cm": 6.9,
+          "predicted_tide_cm": 11.6193,
+          "astronomical_tide_cm": -7.3374
         },
         {
           "issued_at": "2005-08-26T17:00:00",
           "valid_at": "2005-08-26T18:00:00",
           "actual_surge_mm": 71.45,
-          "predicted_surge_mm": 58.002
+          "predicted_surge_mm": 58.002,
+          "observed_tide_cm": 20.0,
+          "predicted_tide_cm": 18.6552,
+          "astronomical_tide_cm": 4.406
         },
         {
           "issued_at": "2005-08-26T18:00:00",
           "valid_at": "2005-08-26T19:00:00",
           "actual_surge_mm": 61.729,
-          "predicted_surge_mm": 71.423
+          "predicted_surge_mm": 71.423,
+          "observed_tide_cm": 33.5,
+          "predicted_tide_cm": 34.4694,
+          "astronomical_tide_cm": 19.988
         },
         {
           "issued_at": "2005-08-26T19:00:00",
           "valid_at": "2005-08-26T20:00:00",
           "actual_surge_mm": 47.167,
-          "predicted_surge_mm": 70.13
+          "predicted_surge_mm": 70.13,
+          "observed_tide_cm": 46.5,
+          "predicted_tide_cm": 48.7963,
+          "astronomical_tide_cm": 35.7493
         },
         {
           "issued_at": "2005-08-26T20:00:00",
           "valid_at": "2005-08-26T21:00:00",
           "actual_surge_mm": 41.967,
-          "predicted_surge_mm": 52.013
+          "predicted_surge_mm": 52.013,
+          "observed_tide_cm": 57.0,
+          "predicted_tide_cm": 58.0046,
+          "astronomical_tide_cm": 48.0133
         },
         {
           "issued_at": "2005-08-26T21:00:00",
           "valid_at": "2005-08-26T22:00:00",
           "actual_surge_mm": 49.218,
-          "predicted_surge_mm": 48.722
+          "predicted_surge_mm": 48.722,
+          "observed_tide_cm": 63.0,
+          "predicted_tide_cm": 62.9504,
+          "astronomical_tide_cm": 53.9037
         },
         {
           "issued_at": "2005-08-26T22:00:00",
           "valid_at": "2005-08-26T23:00:00",
           "actual_surge_mm": 60.186,
-          "predicted_surge_mm": 56.35
+          "predicted_surge_mm": 56.35,
+          "observed_tide_cm": 62.6,
+          "predicted_tide_cm": 62.2164,
+          "astronomical_tide_cm": 51.8773
         },
         {
           "issued_at": "2005-08-26T23:00:00",
           "valid_at": "2005-08-27T00:00:00",
           "actual_surge_mm": 50.687,
-          "predicted_surge_mm": 68.431
+          "predicted_surge_mm": 68.431,
+          "observed_tide_cm": 53.4,
+          "predicted_tide_cm": 55.1744,
+          "astronomical_tide_cm": 41.9947
         },
         {
           "issued_at": "2005-08-27T00:00:00",
           "valid_at": "2005-08-27T01:00:00",
           "actual_surge_mm": 45.503,
-          "predicted_surge_mm": 63.72
+          "predicted_surge_mm": 63.72,
+          "observed_tide_cm": 39.0,
+          "predicted_tide_cm": 40.8217,
+          "astronomical_tide_cm": 25.9453
         },
         {
           "issued_at": "2005-08-27T01:00:00",
           "valid_at": "2005-08-27T02:00:00",
           "actual_surge_mm": 26.58,
-          "predicted_surge_mm": 49.5
+          "predicted_surge_mm": 49.5,
+          "observed_tide_cm": 19.7,
+          "predicted_tide_cm": 21.992,
+          "astronomical_tide_cm": 6.7655
         },
         {
           "issued_at": "2005-08-27T02:00:00",
           "valid_at": "2005-08-27T03:00:00",
           "actual_surge_mm": 21.559,
-          "predicted_surge_mm": 29.954
+          "predicted_surge_mm": 29.954,
+          "observed_tide_cm": 1.2,
+          "predicted_tide_cm": 2.0395,
+          "astronomical_tide_cm": -11.8076
         },
         {
           "issued_at": "2005-08-27T03:00:00",
           "valid_at": "2005-08-27T04:00:00",
           "actual_surge_mm": 44.901,
-          "predicted_surge_mm": 21.595
+          "predicted_surge_mm": 21.595,
+          "observed_tide_cm": -11.6,
+          "predicted_tide_cm": -13.9306,
+          "astronomical_tide_cm": -26.2585
         },
         {
           "issued_at": "2005-08-27T04:00:00",
           "valid_at": "2005-08-27T05:00:00",
           "actual_surge_mm": 54.303,
-          "predicted_surge_mm": 42.53
+          "predicted_surge_mm": 42.53,
+          "observed_tide_cm": -20.1,
+          "predicted_tide_cm": -21.2773,
+          "astronomical_tide_cm": -34.2066
         },
         {
           "issued_at": "2005-08-27T05:00:00",
           "valid_at": "2005-08-27T06:00:00",
           "actual_surge_mm": 22.541,
-          "predicted_surge_mm": 50.302
+          "predicted_surge_mm": 50.302,
+          "observed_tide_cm": -25.9,
+          "predicted_tide_cm": -23.1239,
+          "astronomical_tide_cm": -34.9637
         },
         {
           "issued_at": "2005-08-27T06:00:00",
           "valid_at": "2005-08-27T07:00:00",
           "actual_surge_mm": 14.112,
-          "predicted_surge_mm": 26.086
+          "predicted_surge_mm": 26.086,
+          "observed_tide_cm": -23.2,
+          "predicted_tide_cm": -22.0026,
+          "astronomical_tide_cm": -29.5314
         },
         {
           "issued_at": "2005-08-27T07:00:00",
           "valid_at": "2005-08-27T08:00:00",
           "actual_surge_mm": -10.04,
-          "predicted_surge_mm": 18.102
+          "predicted_surge_mm": 18.102,
+          "observed_tide_cm": -17.9,
+          "predicted_tide_cm": -15.0858,
+          "astronomical_tide_cm": -20.1087
         },
         {
           "issued_at": "2005-08-27T08:00:00",
           "valid_at": "2005-08-27T09:00:00",
           "actual_surge_mm": -8.638,
-          "predicted_surge_mm": -1.132
+          "predicted_surge_mm": -1.132,
+          "observed_tide_cm": -8.4,
+          "predicted_tide_cm": -7.6494,
+          "astronomical_tide_cm": -9.3766
         },
         {
           "issued_at": "2005-08-27T09:00:00",
           "valid_at": "2005-08-27T10:00:00",
           "actual_surge_mm": -21.896,
-          "predicted_surge_mm": 5.887
+          "predicted_surge_mm": 5.887,
+          "observed_tide_cm": -0.8,
+          "predicted_tide_cm": 1.9783,
+          "astronomical_tide_cm": 0.1656
         },
         {
           "issued_at": "2005-08-27T10:00:00",
           "valid_at": "2005-08-27T11:00:00",
           "actual_surge_mm": -23.094,
-          "predicted_surge_mm": -10.996
+          "predicted_surge_mm": -10.996,
+          "observed_tide_cm": 6.0,
+          "predicted_tide_cm": 7.2098,
+          "astronomical_tide_cm": 6.68
         },
         {
           "issued_at": "2005-08-27T11:00:00",
           "valid_at": "2005-08-27T12:00:00",
           "actual_surge_mm": -15.318,
-          "predicted_surge_mm": -12.991
+          "predicted_surge_mm": -12.991,
+          "observed_tide_cm": 10.4,
+          "predicted_tide_cm": 10.6327,
+          "astronomical_tide_cm": 9.2931
         },
         {
           "issued_at": "2005-08-27T12:00:00",
           "valid_at": "2005-08-27T13:00:00",
           "actual_surge_mm": -9.927,
-          "predicted_surge_mm": 0.949
+          "predicted_surge_mm": 0.949,
+          "observed_tide_cm": 11.0,
+          "predicted_tide_cm": 12.0876,
+          "astronomical_tide_cm": 8.2491
         },
         {
           "issued_at": "2005-08-27T13:00:00",
           "valid_at": "2005-08-27T14:00:00",
           "actual_surge_mm": -0.127,
-          "predicted_surge_mm": 8.641
+          "predicted_surge_mm": 8.641,
+          "observed_tide_cm": 9.8,
+          "predicted_tide_cm": 10.6768,
+          "astronomical_tide_cm": 4.8652
         },
         {
           "issued_at": "2005-08-27T14:00:00",
           "valid_at": "2005-08-27T15:00:00",
           "actual_surge_mm": 20.155,
-          "predicted_surge_mm": 12.085
+          "predicted_surge_mm": 12.085,
+          "observed_tide_cm": 9.6,
+          "predicted_tide_cm": 8.793,
+          "astronomical_tide_cm": 1.2049
         },
         {
           "issued_at": "2005-08-27T15:00:00",
           "valid_at": "2005-08-27T16:00:00",
           "actual_surge_mm": 33.053,
-          "predicted_surge_mm": 26.455
+          "predicted_surge_mm": 26.455,
+          "observed_tide_cm": 10.6,
+          "predicted_tide_cm": 9.9402,
+          "astronomical_tide_cm": -0.5254
         },
         {
           "issued_at": "2005-08-27T16:00:00",
           "valid_at": "2005-08-27T17:00:00",
           "actual_surge_mm": 40.874,
-          "predicted_surge_mm": 33.485
+          "predicted_surge_mm": 33.485,
+          "observed_tide_cm": 14.1,
+          "predicted_tide_cm": 13.3611,
+          "astronomical_tide_cm": 1.3138
         },
         {
           "issued_at": "2005-08-27T17:00:00",
           "valid_at": "2005-08-27T18:00:00",
           "actual_surge_mm": 49.911,
-          "predicted_surge_mm": 40.894
+          "predicted_surge_mm": 40.894,
+          "observed_tide_cm": 20.8,
+          "predicted_tide_cm": 19.8983,
+          "astronomical_tide_cm": 7.2596
         },
         {
           "issued_at": "2005-08-27T18:00:00",
           "valid_at": "2005-08-27T19:00:00",
           "actual_surge_mm": 47.026,
-          "predicted_surge_mm": 46.416
+          "predicted_surge_mm": 46.416,
+          "observed_tide_cm": 28.9,
+          "predicted_tide_cm": 28.839,
+          "astronomical_tide_cm": 16.5972
         },
         {
           "issued_at": "2005-08-27T19:00:00",
           "valid_at": "2005-08-27T20:00:00",
           "actual_surge_mm": 43.488,
-          "predicted_surge_mm": 47.986
+          "predicted_surge_mm": 47.986,
+          "observed_tide_cm": 38.4,
+          "predicted_tide_cm": 38.8498,
+          "astronomical_tide_cm": 27.6173
         },
         {
           "issued_at": "2005-08-27T20:00:00",
           "valid_at": "2005-08-27T21:00:00",
           "actual_surge_mm": 5.105,
-          "predicted_surge_mm": 41.337
+          "predicted_surge_mm": 41.337,
+          "observed_tide_cm": 43.8,
+          "predicted_tide_cm": 47.4232,
+          "astronomical_tide_cm": 38.1099
         },
         {
           "issued_at": "2005-08-27T21:00:00",
           "valid_at": "2005-08-27T22:00:00",
           "actual_surge_mm": 16.478,
-          "predicted_surge_mm": 10.074
+          "predicted_surge_mm": 10.074,
+          "observed_tide_cm": 51.4,
+          "predicted_tide_cm": 50.7596,
+          "astronomical_tide_cm": 45.8793
         },
         {
           "issued_at": "2005-08-27T22:00:00",
           "valid_at": "2005-08-27T23:00:00",
           "actual_surge_mm": 11.288,
-          "predicted_surge_mm": 19.287
+          "predicted_surge_mm": 19.287,
+          "observed_tide_cm": 53.4,
+          "predicted_tide_cm": 54.1999,
+          "astronomical_tide_cm": 49.1569
         },
         {
           "issued_at": "2005-08-27T23:00:00",
           "valid_at": "2005-08-28T00:00:00",
           "actual_surge_mm": 5.832,
-          "predicted_surge_mm": 18.121
+          "predicted_surge_mm": 18.121,
+          "observed_tide_cm": 51.0,
+          "predicted_tide_cm": 52.2289,
+          "astronomical_tide_cm": 46.9025
         },
         {
           "issued_at": "2005-08-28T00:00:00",
           "valid_at": "2005-08-28T01:00:00",
           "actual_surge_mm": 15.852,
-          "predicted_surge_mm": 17.211
+          "predicted_surge_mm": 17.211,
+          "observed_tide_cm": 45.6,
+          "predicted_tide_cm": 45.7359,
+          "astronomical_tide_cm": 39.0217
         },
         {
           "issued_at": "2005-08-28T01:00:00",
           "valid_at": "2005-08-28T02:00:00",
           "actual_surge_mm": 2.388,
-          "predicted_surge_mm": 27.324
+          "predicted_surge_mm": 27.324,
+          "observed_tide_cm": 33.6,
+          "predicted_tide_cm": 36.0936,
+          "astronomical_tide_cm": 26.4634
         },
         {
           "issued_at": "2005-08-28T02:00:00",
           "valid_at": "2005-08-28T03:00:00",
           "actual_surge_mm": 24.825,
-          "predicted_surge_mm": 18.182
+          "predicted_surge_mm": 18.182,
+          "observed_tide_cm": 22.0,
+          "predicted_tide_cm": 21.3357,
+          "astronomical_tide_cm": 11.1049
         },
         {
           "issued_at": "2005-08-28T03:00:00",
           "valid_at": "2005-08-28T04:00:00",
           "actual_surge_mm": 24.536,
-          "predicted_surge_mm": 34.824
+          "predicted_surge_mm": 34.824,
+          "observed_tide_cm": 6.9,
+          "predicted_tide_cm": 7.9288,
+          "astronomical_tide_cm": -4.6256
         },
         {
           "issued_at": "2005-08-28T04:00:00",
           "valid_at": "2005-08-28T05:00:00",
           "actual_surge_mm": 27.238,
-          "predicted_surge_mm": 32.991
+          "predicted_surge_mm": 32.991,
+          "observed_tide_cm": -6.6,
+          "predicted_tide_cm": -6.0247,
+          "astronomical_tide_cm": -18.3126
         },
         {
           "issued_at": "2005-08-28T05:00:00",
           "valid_at": "2005-08-28T06:00:00",
           "actual_surge_mm": 11.875,
-          "predicted_surge_mm": 26.721
+          "predicted_surge_mm": 26.721,
+          "observed_tide_cm": -18.5,
+          "predicted_tide_cm": -17.0154,
+          "astronomical_tide_cm": -28.1036
         },
         {
           "issued_at": "2005-08-28T06:00:00",
           "valid_at": "2005-08-28T07:00:00",
           "actual_surge_mm": -13.729,
-          "predicted_surge_mm": 11.648
+          "predicted_surge_mm": 11.648,
+          "observed_tide_cm": -26.9,
+          "predicted_tide_cm": -24.3623,
+          "astronomical_tide_cm": -33.0468
         },
         {
           "issued_at": "2005-08-28T07:00:00",
           "valid_at": "2005-08-28T08:00:00",
           "actual_surge_mm": -33.086,
-          "predicted_surge_mm": -14.249
+          "predicted_surge_mm": -14.249,
+          "observed_tide_cm": -29.9,
+          "predicted_tide_cm": -28.0163,
+          "astronomical_tide_cm": -33.1371
         },
         {
           "issued_at": "2005-08-28T08:00:00",
           "valid_at": "2005-08-28T09:00:00",
           "actual_surge_mm": -26.358,
-          "predicted_surge_mm": -35.172
+          "predicted_surge_mm": -35.172,
+          "observed_tide_cm": -26.1,
+          "predicted_tide_cm": -26.9814,
+          "astronomical_tide_cm": -29.1399
         },
         {
           "issued_at": "2005-08-28T09:00:00",
           "valid_at": "2005-08-28T10:00:00",
           "actual_surge_mm": -6.099,
-          "predicted_surge_mm": -29.028
+          "predicted_surge_mm": -29.028,
+          "observed_tide_cm": -17.9,
+          "predicted_tide_cm": -20.1929,
+          "astronomical_tide_cm": -22.3242
         },
         {
           "issued_at": "2005-08-28T10:00:00",
           "valid_at": "2005-08-28T11:00:00",
           "actual_surge_mm": -19.071,
-          "predicted_surge_mm": -12.824
+          "predicted_surge_mm": -12.824,
+          "observed_tide_cm": -11.2,
+          "predicted_tide_cm": -10.5753,
+          "astronomical_tide_cm": -14.1965
         },
         {
           "issued_at": "2005-08-28T11:00:00",
           "valid_at": "2005-08-28T12:00:00",
           "actual_surge_mm": -6.462,
-          "predicted_surge_mm": -15.22
+          "predicted_surge_mm": -15.22,
+          "observed_tide_cm": -1.6,
+          "predicted_tide_cm": -2.4758,
+          "astronomical_tide_cm": -6.2396
         },
         {
           "issued_at": "2005-08-28T12:00:00",
           "valid_at": "2005-08-28T13:00:00",
           "actual_surge_mm": 19.579,
-          "predicted_surge_mm": -3.502
+          "predicted_surge_mm": -3.502,
+          "observed_tide_cm": 8.0,
+          "predicted_tide_cm": 5.6919,
+          "astronomical_tide_cm": 0.3609
         },
         {
           "issued_at": "2005-08-28T13:00:00",
           "valid_at": "2005-08-28T14:00:00",
           "actual_surge_mm": 8.521,
-          "predicted_surge_mm": 25.493
+          "predicted_surge_mm": 25.493,
+          "observed_tide_cm": 11.7,
+          "predicted_tide_cm": 13.3972,
+          "astronomical_tide_cm": 4.9721
         },
         {
           "issued_at": "2005-08-28T14:00:00",
           "valid_at": "2005-08-28T15:00:00",
           "actual_surge_mm": 54.207,
-          "predicted_surge_mm": 16.694
+          "predicted_surge_mm": 16.694,
+          "observed_tide_cm": 19.3,
+          "predicted_tide_cm": 15.5487,
+          "astronomical_tide_cm": 7.656
         },
         {
           "issued_at": "2005-08-28T15:00:00",
           "valid_at": "2005-08-28T16:00:00",
           "actual_surge_mm": 71.831,
-          "predicted_surge_mm": 52.895
+          "predicted_surge_mm": 52.895,
+          "observed_tide_cm": 23.2,
+          "predicted_tide_cm": 21.3064,
+          "astronomical_tide_cm": 9.1043
         },
         {
           "issued_at": "2005-08-28T16:00:00",
           "valid_at": "2005-08-28T17:00:00",
           "actual_surge_mm": 63.558,
-          "predicted_surge_mm": 71.628
+          "predicted_surge_mm": 71.628,
+          "observed_tide_cm": 24.3,
+          "predicted_tide_cm": 25.107,
+          "astronomical_tide_cm": 10.3647
         },
         {
           "issued_at": "2005-08-28T17:00:00",
           "valid_at": "2005-08-28T18:00:00",
           "actual_surge_mm": 67.706,
-          "predicted_surge_mm": 60.023
+          "predicted_surge_mm": 60.023,
+          "observed_tide_cm": 26.9,
+          "predicted_tide_cm": 26.1317,
+          "astronomical_tide_cm": 12.4653
         },
         {
           "issued_at": "2005-08-28T18:00:00",
           "valid_at": "2005-08-28T19:00:00",
           "actual_surge_mm": 48.813,
-          "predicted_surge_mm": 60.272
+          "predicted_surge_mm": 60.272,
+          "observed_tide_cm": 28.0,
+          "predicted_tide_cm": 29.1459,
+          "astronomical_tide_cm": 16.0878
         },
         {
           "issued_at": "2005-08-28T19:00:00",
           "valid_at": "2005-08-28T20:00:00",
           "actual_surge_mm": 55.362,
-          "predicted_surge_mm": 40.908
+          "predicted_surge_mm": 40.908,
+          "observed_tide_cm": 33.1,
+          "predicted_tide_cm": 31.6546,
+          "astronomical_tide_cm": 21.384
         },
         {
           "issued_at": "2005-08-28T20:00:00",
           "valid_at": "2005-08-28T21:00:00",
           "actual_surge_mm": 40.81,
-          "predicted_surge_mm": 46.088
+          "predicted_surge_mm": 46.088,
+          "observed_tide_cm": 37.5,
+          "predicted_tide_cm": 38.0278,
+          "astronomical_tide_cm": 27.9439
         },
         {
           "issued_at": "2005-08-28T21:00:00",
           "valid_at": "2005-08-28T22:00:00",
           "actual_surge_mm": 37.005,
-          "predicted_surge_mm": 44.942
+          "predicted_surge_mm": 44.942,
+          "observed_tide_cm": 43.2,
+          "predicted_tide_cm": 43.9937,
+          "astronomical_tide_cm": 34.8623
         },
         {
           "issued_at": "2005-08-28T22:00:00",
           "valid_at": "2005-08-28T23:00:00",
           "actual_surge_mm": 37.056,
-          "predicted_surge_mm": 34.994
+          "predicted_surge_mm": 34.994,
+          "observed_tide_cm": 48.2,
+          "predicted_tide_cm": 47.9938,
+          "astronomical_tide_cm": 40.869
         },
         {
           "issued_at": "2005-08-28T23:00:00",
           "valid_at": "2005-08-29T00:00:00",
           "actual_surge_mm": 57.331,
-          "predicted_surge_mm": 43.69
+          "predicted_surge_mm": 43.69,
+          "observed_tide_cm": 53.4,
+          "predicted_tide_cm": 52.0359,
+          "astronomical_tide_cm": 44.5312
         },
         {
           "issued_at": "2005-08-29T00:00:00",
           "valid_at": "2005-08-29T01:00:00",
           "actual_surge_mm": 57.945,
-          "predicted_surge_mm": 64.982
+          "predicted_surge_mm": 64.982,
+          "observed_tide_cm": 54.0,
+          "predicted_tide_cm": 54.7037,
+          "astronomical_tide_cm": 44.54
         },
         {
           "issued_at": "2005-08-29T01:00:00",
           "valid_at": "2005-08-29T02:00:00",
           "actual_surge_mm": 43.177,
-          "predicted_surge_mm": 67.774
+          "predicted_surge_mm": 67.774,
+          "observed_tide_cm": 49.3,
+          "predicted_tide_cm": 51.7597,
+          "astronomical_tide_cm": 40.0469
         },
         {
           "issued_at": "2005-08-29T02:00:00",
           "valid_at": "2005-08-29T03:00:00",
           "actual_surge_mm": 45.204,
-          "predicted_surge_mm": 55.516
+          "predicted_surge_mm": 55.516,
+          "observed_tide_cm": 41.8,
+          "predicted_tide_cm": 42.8312,
+          "astronomical_tide_cm": 30.9514
         },
         {
           "issued_at": "2005-08-29T03:00:00",
           "valid_at": "2005-08-29T04:00:00",
           "actual_surge_mm": 48.265,
-          "predicted_surge_mm": 50.356
+          "predicted_surge_mm": 50.356,
+          "observed_tide_cm": 30.2,
+          "predicted_tide_cm": 30.4091,
+          "astronomical_tide_cm": 18.0248
         },
         {
           "issued_at": "2005-08-29T04:00:00",
           "valid_at": "2005-08-29T05:00:00",
           "actual_surge_mm": 57.079,
-          "predicted_surge_mm": 47.384
+          "predicted_surge_mm": 47.384,
+          "observed_tide_cm": 16.4,
+          "predicted_tide_cm": 15.4305,
+          "astronomical_tide_cm": 2.815
         },
         {
           "issued_at": "2005-08-29T05:00:00",
           "valid_at": "2005-08-29T06:00:00",
           "actual_surge_mm": 33.48,
-          "predicted_surge_mm": 45.373
+          "predicted_surge_mm": 45.373,
+          "observed_tide_cm": -1.2,
+          "predicted_tide_cm": -0.0107,
+          "astronomical_tide_cm": -12.6358
         },
         {
           "issued_at": "2005-08-29T06:00:00",
           "valid_at": "2005-08-29T07:00:00",
           "actual_surge_mm": 19.107,
-          "predicted_surge_mm": 34.696
+          "predicted_surge_mm": 34.696,
+          "observed_tide_cm": -16.2,
+          "predicted_tide_cm": -14.6411,
+          "astronomical_tide_cm": -26.1698
         },
         {
           "issued_at": "2005-08-29T07:00:00",
           "valid_at": "2005-08-29T08:00:00",
           "actual_surge_mm": 0.602,
-          "predicted_surge_mm": 13.831
+          "predicted_surge_mm": 13.831,
+          "observed_tide_cm": -28.0,
+          "predicted_tide_cm": -26.6771,
+          "astronomical_tide_cm": -35.8958
         },
         {
           "issued_at": "2005-08-29T08:00:00",
           "valid_at": "2005-08-29T09:00:00",
           "actual_surge_mm": 5.841,
-          "predicted_surge_mm": 0.814
+          "predicted_surge_mm": 0.814,
+          "observed_tide_cm": -32.3,
+          "predicted_tide_cm": -32.8027,
+          "astronomical_tide_cm": -40.517
         },
         {
           "issued_at": "2005-08-29T09:00:00",
           "valid_at": "2005-08-29T10:00:00",
           "actual_surge_mm": 29.982,
-          "predicted_surge_mm": 8.606
+          "predicted_surge_mm": 8.606,
+          "observed_tide_cm": -29.0,
+          "predicted_tide_cm": -31.1376,
+          "astronomical_tide_cm": -39.5676
         },
         {
           "issued_at": "2005-08-29T10:00:00",
           "valid_at": "2005-08-29T11:00:00",
           "actual_surge_mm": 46.765,
-          "predicted_surge_mm": 26.238
+          "predicted_surge_mm": 26.238,
+          "observed_tide_cm": -21.2,
+          "predicted_tide_cm": -23.2527,
+          "astronomical_tide_cm": -33.5179
         },
         {
           "issued_at": "2005-08-29T11:00:00",
           "valid_at": "2005-08-29T12:00:00",
           "actual_surge_mm": 70.15,
-          "predicted_surge_mm": 51.671
+          "predicted_surge_mm": 51.671,
+          "observed_tide_cm": -8.8,
+          "predicted_tide_cm": -10.6479,
+          "astronomical_tide_cm": -23.7002
         },
         {
           "issued_at": "2005-08-29T12:00:00",
           "valid_at": "2005-08-29T13:00:00",
           "actual_surge_mm": 54.843,
-          "predicted_surge_mm": 76.792
+          "predicted_surge_mm": 76.792,
+          "observed_tide_cm": 1.5,
+          "predicted_tide_cm": 3.6949,
+          "astronomical_tide_cm": -12.0349
         },
         {
           "issued_at": "2005-08-29T13:00:00",
           "valid_at": "2005-08-29T14:00:00",
           "actual_surge_mm": 78.746,
-          "predicted_surge_mm": 65.955
+          "predicted_surge_mm": 65.955,
+          "observed_tide_cm": 15.0,
+          "predicted_tide_cm": 13.7209,
+          "astronomical_tide_cm": -0.6026
         },
         {
           "issued_at": "2005-08-29T14:00:00",
           "valid_at": "2005-08-29T15:00:00",
           "actual_surge_mm": 93.926,
-          "predicted_surge_mm": 83.32
+          "predicted_surge_mm": 83.32,
+          "observed_tide_cm": 25.3,
+          "predicted_tide_cm": 24.2394,
+          "astronomical_tide_cm": 8.8291
         },
         {
           "issued_at": "2005-08-29T15:00:00",
           "valid_at": "2005-08-29T16:00:00",
           "actual_surge_mm": 79.845,
-          "predicted_surge_mm": 91.595
+          "predicted_surge_mm": 91.595,
+          "observed_tide_cm": 29.8,
+          "predicted_tide_cm": 30.975,
+          "astronomical_tide_cm": 15.1885
         },
         {
           "issued_at": "2005-08-29T16:00:00",
           "valid_at": "2005-08-29T17:00:00",
           "actual_surge_mm": 60.524,
-          "predicted_surge_mm": 77.959
+          "predicted_surge_mm": 77.959,
+          "observed_tide_cm": 30.8,
+          "predicted_tide_cm": 32.5435,
+          "astronomical_tide_cm": 18.2958
         },
         {
           "issued_at": "2005-08-29T17:00:00",
           "valid_at": "2005-08-29T18:00:00",
           "actual_surge_mm": 62.495,
-          "predicted_surge_mm": 61.267
+          "predicted_surge_mm": 61.267,
+          "observed_tide_cm": 31.3,
+          "predicted_tide_cm": 31.1772,
+          "astronomical_tide_cm": 18.8359
         },
         {
           "issued_at": "2005-08-29T18:00:00",
           "valid_at": "2005-08-29T19:00:00",
           "actual_surge_mm": 33.585,
-          "predicted_surge_mm": 65.23
+          "predicted_surge_mm": 65.23,
+          "observed_tide_cm": 27.2,
+          "predicted_tide_cm": 30.3645,
+          "astronomical_tide_cm": 18.1298
         },
         {
           "issued_at": "2005-08-29T19:00:00",
           "valid_at": "2005-08-29T20:00:00",
           "actual_surge_mm": 38.826,
-          "predicted_surge_mm": 39.836
+          "predicted_surge_mm": 39.836,
+          "observed_tide_cm": 26.8,
+          "predicted_tide_cm": 26.901,
+          "astronomical_tide_cm": 17.7555
         },
         {
           "issued_at": "2005-08-29T20:00:00",
           "valid_at": "2005-08-29T21:00:00",
           "actual_surge_mm": 41.43,
-          "predicted_surge_mm": 44.761
+          "predicted_surge_mm": 44.761,
+          "observed_tide_cm": 28.2,
+          "predicted_tide_cm": 28.5331,
+          "astronomical_tide_cm": 19.0924
         },
         {
           "issued_at": "2005-08-29T21:00:00",
           "valid_at": "2005-08-29T22:00:00",
           "actual_surge_mm": 55.834,
-          "predicted_surge_mm": 53.499
+          "predicted_surge_mm": 53.499,
+          "observed_tide_cm": 33.5,
+          "predicted_tide_cm": 33.2665,
+          "astronomical_tide_cm": 22.8875
         },
         {
           "issued_at": "2005-08-29T22:00:00",
           "valid_at": "2005-08-29T23:00:00",
           "actual_surge_mm": 73.837,
-          "predicted_surge_mm": 75.446
+          "predicted_surge_mm": 75.446,
+          "observed_tide_cm": 41.2,
+          "predicted_tide_cm": 41.3609,
+          "astronomical_tide_cm": 28.9615
         },
         {
           "issued_at": "2005-08-29T23:00:00",
           "valid_at": "2005-08-30T00:00:00",
           "actual_surge_mm": 89.267,
-          "predicted_surge_mm": 93.421
+          "predicted_surge_mm": 93.421,
+          "observed_tide_cm": 49.6,
+          "predicted_tide_cm": 50.0154,
+          "astronomical_tide_cm": 36.1592
         },
         {
           "issued_at": "2005-08-30T00:00:00",
           "valid_at": "2005-08-30T01:00:00",
           "actual_surge_mm": 83.861,
-          "predicted_surge_mm": 107.326
+          "predicted_surge_mm": 107.326,
+          "observed_tide_cm": 55.6,
+          "predicted_tide_cm": 57.9465,
+          "astronomical_tide_cm": 42.5852
         },
         {
           "issued_at": "2005-08-30T01:00:00",
           "valid_at": "2005-08-30T02:00:00",
           "actual_surge_mm": 96.795,
-          "predicted_surge_mm": 106.56
+          "predicted_surge_mm": 106.56,
+          "observed_tide_cm": 61.1,
+          "predicted_tide_cm": 62.0765,
+          "astronomical_tide_cm": 46.0712
         },
         {
           "issued_at": "2005-08-30T02:00:00",
           "valid_at": "2005-08-30T03:00:00",
           "actual_surge_mm": 84.883,
-          "predicted_surge_mm": 118.245
+          "predicted_surge_mm": 118.245,
+          "observed_tide_cm": 59.5,
+          "predicted_tide_cm": 62.8362,
+          "astronomical_tide_cm": 44.7466
         },
         {
           "issued_at": "2005-08-30T03:00:00",
           "valid_at": "2005-08-30T04:00:00",
           "actual_surge_mm": 117.326,
-          "predicted_surge_mm": 101.079
+          "predicted_surge_mm": 101.079,
+          "observed_tide_cm": 56.3,
+          "predicted_tide_cm": 54.6753,
+          "astronomical_tide_cm": 37.5606
         },
         {
           "issued_at": "2005-08-30T04:00:00",
           "valid_at": "2005-08-30T05:00:00",
           "actual_surge_mm": 106.395,
-          "predicted_surge_mm": 112.522
+          "predicted_surge_mm": 112.522,
+          "observed_tide_cm": 42.7,
+          "predicted_tide_cm": 43.3127,
+          "astronomical_tide_cm": 24.6337
         },
         {
           "issued_at": "2005-08-30T05:00:00",
           "valid_at": "2005-08-30T06:00:00",
           "actual_surge_mm": 104.267,
-          "predicted_surge_mm": 97.176
+          "predicted_surge_mm": 97.176,
+          "observed_tide_cm": 25.4,
+          "predicted_tide_cm": 24.6909,
+          "astronomical_tide_cm": 7.3625
         },
         {
           "issued_at": "2005-08-30T06:00:00",
           "valid_at": "2005-08-30T07:00:00",
           "actual_surge_mm": 75.116,
-          "predicted_surge_mm": 102.565
+          "predicted_surge_mm": 102.565,
+          "observed_tide_cm": 3.5,
+          "predicted_tide_cm": 6.2449,
+          "astronomical_tide_cm": -11.7582
         },
         {
           "issued_at": "2005-08-30T07:00:00",
           "valid_at": "2005-08-30T08:00:00",
           "actual_surge_mm": 79.356,
-          "predicted_surge_mm": 80.275
+          "predicted_surge_mm": 80.275,
+          "observed_tide_cm": -13.8,
+          "predicted_tide_cm": -13.7081,
+          "astronomical_tide_cm": -29.5876
         },
         {
           "issued_at": "2005-08-30T08:00:00",
           "valid_at": "2005-08-30T09:00:00",
           "actual_surge_mm": 64.507,
-          "predicted_surge_mm": 90.259
+          "predicted_surge_mm": 90.259,
+          "observed_tide_cm": -28.6,
+          "predicted_tide_cm": -26.0248,
+          "astronomical_tide_cm": -43.0
         },
         {
           "issued_at": "2005-08-30T09:00:00",
           "valid_at": "2005-08-30T10:00:00",
           "actual_surge_mm": 99.975,
-          "predicted_surge_mm": 76.245
+          "predicted_surge_mm": 76.245,
+          "observed_tide_cm": -31.4,
+          "predicted_tide_cm": -33.773,
+          "astronomical_tide_cm": -49.6096
         },
         {
           "issued_at": "2005-08-30T10:00:00",
           "valid_at": "2005-08-30T11:00:00",
           "actual_surge_mm": 109.031,
-          "predicted_surge_mm": 107.234
+          "predicted_surge_mm": 107.234,
+          "observed_tide_cm": -28.8,
+          "predicted_tide_cm": -28.9797,
+          "astronomical_tide_cm": -48.3591
         },
         {
           "issued_at": "2005-08-30T11:00:00",
           "valid_at": "2005-08-30T12:00:00",
           "actual_surge_mm": 107.554,
-          "predicted_surge_mm": 122.133
+          "predicted_surge_mm": 122.133,
+          "observed_tide_cm": -19.9,
+          "predicted_tide_cm": -18.4421,
+          "astronomical_tide_cm": -39.7867
         },
         {
           "issued_at": "2005-08-30T12:00:00",
           "valid_at": "2005-08-30T13:00:00",
           "actual_surge_mm": 113.358,
-          "predicted_surge_mm": 136.045
+          "predicted_surge_mm": 136.045,
+          "observed_tide_cm": -5.1,
+          "predicted_tide_cm": -2.8313,
+          "astronomical_tide_cm": -25.8862
         },
         {
           "issued_at": "2005-08-30T13:00:00",
           "valid_at": "2005-08-30T14:00:00",
           "actual_surge_mm": 153.796,
-          "predicted_surge_mm": 134.729
+          "predicted_surge_mm": 134.729,
+          "observed_tide_cm": 15.0,
+          "predicted_tide_cm": 13.0933,
+          "astronomical_tide_cm": -9.61
         },
         {
           "issued_at": "2005-08-30T14:00:00",
           "valid_at": "2005-08-30T15:00:00",
           "actual_surge_mm": 161.161,
-          "predicted_surge_mm": 170.655
+          "predicted_surge_mm": 170.655,
+          "observed_tide_cm": 30.2,
+          "predicted_tide_cm": 31.1494,
+          "astronomical_tide_cm": 5.8308
         },
         {
           "issued_at": "2005-08-30T15:00:00",
           "valid_at": "2005-08-30T16:00:00",
           "actual_surge_mm": 143.739,
-          "predicted_surge_mm": 170.492
+          "predicted_surge_mm": 170.492,
+          "observed_tide_cm": 39.0,
+          "predicted_tide_cm": 41.6753,
+          "astronomical_tide_cm": 17.6893
         },
         {
           "issued_at": "2005-08-30T16:00:00",
           "valid_at": "2005-08-30T17:00:00",
           "actual_surge_mm": 166.356,
-          "predicted_surge_mm": 147.057
+          "predicted_surge_mm": 147.057,
+          "observed_tide_cm": 46.7,
+          "predicted_tide_cm": 44.7701,
+          "astronomical_tide_cm": 24.2817
         },
         {
           "issued_at": "2005-08-30T17:00:00",
           "valid_at": "2005-08-30T18:00:00",
           "actual_surge_mm": 178.175,
-          "predicted_surge_mm": 154.331
+          "predicted_surge_mm": 154.331,
+          "observed_tide_cm": 48.0,
+          "predicted_tide_cm": 45.6156,
+          "astronomical_tide_cm": 25.3504
         },
         {
           "issued_at": "2005-08-30T18:00:00",
           "valid_at": "2005-08-30T19:00:00",
           "actual_surge_mm": 193.431,
-          "predicted_surge_mm": 176.869
+          "predicted_surge_mm": 176.869,
+          "observed_tide_cm": 45.5,
+          "predicted_tide_cm": 43.8438,
+          "astronomical_tide_cm": 22.1112
         },
         {
           "issued_at": "2005-08-30T19:00:00",
           "valid_at": "2005-08-30T20:00:00",
           "actual_surge_mm": 158.755,
-          "predicted_surge_mm": 192.19
+          "predicted_surge_mm": 192.19,
+          "observed_tide_cm": 36.4,
+          "predicted_tide_cm": 39.7435,
+          "astronomical_tide_cm": 16.929
         },
         {
           "issued_at": "2005-08-30T20:00:00",
           "valid_at": "2005-08-30T21:00:00",
           "actual_surge_mm": 96.528,
-          "predicted_surge_mm": 179.124
+          "predicted_surge_mm": 179.124,
+          "observed_tide_cm": 26.0,
+          "predicted_tide_cm": 34.2596,
+          "astronomical_tide_cm": 12.6525
         },
         {
           "issued_at": "2005-08-30T21:00:00",
           "valid_at": "2005-08-30T22:00:00",
           "actual_surge_mm": 123.778,
-          "predicted_surge_mm": 114.464
+          "predicted_surge_mm": 114.464,
+          "observed_tide_cm": 28.5,
+          "predicted_tide_cm": 27.5686,
+          "astronomical_tide_cm": 11.7559
         },
         {
           "issued_at": "2005-08-30T22:00:00",
           "valid_at": "2005-08-30T23:00:00",
           "actual_surge_mm": 187.13,
-          "predicted_surge_mm": 135.844
+          "predicted_surge_mm": 135.844,
+          "observed_tide_cm": 39.5,
+          "predicted_tide_cm": 34.3714,
+          "astronomical_tide_cm": 15.5521
         },
         {
           "issued_at": "2005-08-30T23:00:00",
           "valid_at": "2005-08-31T00:00:00",
           "actual_surge_mm": 208.779,
-          "predicted_surge_mm": 188.254
+          "predicted_surge_mm": 188.254,
+          "observed_tide_cm": 50.5,
+          "predicted_tide_cm": 48.4475,
+          "astronomical_tide_cm": 23.7424
         },
         {
           "issued_at": "2005-08-31T00:00:00",
           "valid_at": "2005-08-31T01:00:00",
           "actual_surge_mm": 146.155,
-          "predicted_surge_mm": 225.924
+          "predicted_surge_mm": 225.924,
+          "observed_tide_cm": 55.5,
+          "predicted_tide_cm": 63.4769,
+          "astronomical_tide_cm": 34.4533
         },
         {
           "issued_at": "2005-08-31T01:00:00",
           "valid_at": "2005-08-31T02:00:00",
           "actual_surge_mm": 192.86,
-          "predicted_surge_mm": 173.011
+          "predicted_surge_mm": 173.011,
+          "observed_tide_cm": 71.2,
+          "predicted_tide_cm": 69.2151,
+          "astronomical_tide_cm": 44.7287
         },
         {
           "issued_at": "2005-08-31T02:00:00",
           "valid_at": "2005-08-31T03:00:00",
           "actual_surge_mm": 156.327,
-          "predicted_surge_mm": 214.123
+          "predicted_surge_mm": 214.123,
+          "observed_tide_cm": 74.9,
+          "predicted_tide_cm": 80.6796,
+          "astronomical_tide_cm": 51.2994
         },
         {
           "issued_at": "2005-08-31T03:00:00",
           "valid_at": "2005-08-31T04:00:00",
           "actual_surge_mm": 100.143,
-          "predicted_surge_mm": 186.424
+          "predicted_surge_mm": 186.424,
+          "observed_tide_cm": 69.9,
+          "predicted_tide_cm": 78.5281,
+          "astronomical_tide_cm": 51.4144
         },
         {
           "issued_at": "2005-08-31T04:00:00",
           "valid_at": "2005-08-31T05:00:00",
           "actual_surge_mm": 226.174,
-          "predicted_surge_mm": 121.596
+          "predicted_surge_mm": 121.596,
+          "observed_tide_cm": 74.8,
+          "predicted_tide_cm": 64.3422,
+          "astronomical_tide_cm": 43.56
         },
         {
           "issued_at": "2005-08-31T05:00:00",
           "valid_at": "2005-08-31T06:00:00",
           "actual_surge_mm": 167.015,
-          "predicted_surge_mm": 202.522
+          "predicted_surge_mm": 202.522,
+          "observed_tide_cm": 53.1,
+          "predicted_tide_cm": 56.6507,
+          "astronomical_tide_cm": 27.9426
         },
         {
           "issued_at": "2005-08-31T06:00:00",
           "valid_at": "2005-08-31T07:00:00",
           "actual_surge_mm": 169.09,
-          "predicted_surge_mm": 158.771
+          "predicted_surge_mm": 158.771,
+          "observed_tide_cm": 31.7,
+          "predicted_tide_cm": 30.6681,
+          "astronomical_tide_cm": 6.6277
         },
         {
           "issued_at": "2005-08-31T07:00:00",
           "valid_at": "2005-08-31T08:00:00",
           "actual_surge_mm": 175.579,
-          "predicted_surge_mm": 149.196
+          "predicted_surge_mm": 149.196,
+          "observed_tide_cm": 8.8,
+          "predicted_tide_cm": 6.1617,
+          "astronomical_tide_cm": -16.7583
         },
         {
           "issued_at": "2005-08-31T08:00:00",
           "valid_at": "2005-08-31T09:00:00",
           "actual_surge_mm": 219.017,
-          "predicted_surge_mm": 166.307
+          "predicted_surge_mm": 166.307,
+          "observed_tide_cm": -7.9,
+          "predicted_tide_cm": -13.171,
+          "astronomical_tide_cm": -37.7818
         },
         {
           "issued_at": "2005-08-31T09:00:00",
           "valid_at": "2005-08-31T10:00:00",
           "actual_surge_mm": 298.975,
-          "predicted_surge_mm": 208.294
+          "predicted_surge_mm": 208.294,
+          "observed_tide_cm": -14.3,
+          "predicted_tide_cm": -23.3681,
+          "astronomical_tide_cm": -52.2719
         },
         {
           "issued_at": "2005-08-31T10:00:00",
           "valid_at": "2005-08-31T11:00:00",
           "actual_surge_mm": 193.032,
-          "predicted_surge_mm": 299.0
+          "predicted_surge_mm": 299.0,
+          "observed_tide_cm": -29.7,
+          "predicted_tide_cm": -19.1032,
+          "astronomical_tide_cm": -57.4019
         },
         {
           "issued_at": "2005-08-31T11:00:00",
           "valid_at": "2005-08-31T12:00:00",
           "actual_surge_mm": 307.967,
-          "predicted_surge_mm": 205.633
+          "predicted_surge_mm": 205.633,
+          "observed_tide_cm": -12.7,
+          "predicted_tide_cm": -22.9334,
+          "astronomical_tide_cm": -52.4246
         },
         {
           "issued_at": "2005-08-31T12:00:00",
           "valid_at": "2005-08-31T13:00:00",
           "actual_surge_mm": 268.84,
-          "predicted_surge_mm": 299.124
+          "predicted_surge_mm": 299.124,
+          "observed_tide_cm": -2.5,
+          "predicted_tide_cm": 0.5284,
+          "astronomical_tide_cm": -38.8244
         },
         {
           "issued_at": "2005-08-31T13:00:00",
           "valid_at": "2005-08-31T14:00:00",
           "actual_surge_mm": 321.844,
-          "predicted_surge_mm": 261.968
+          "predicted_surge_mm": 261.968,
+          "observed_tide_cm": 21.9,
+          "predicted_tide_cm": 15.9124,
+          "astronomical_tide_cm": -19.873
         },
         {
           "issued_at": "2005-08-31T14:00:00",
           "valid_at": "2005-08-31T15:00:00",
           "actual_surge_mm": 316.498,
-          "predicted_surge_mm": 316.812
+          "predicted_surge_mm": 316.812,
+          "observed_tide_cm": 40.8,
+          "predicted_tide_cm": 40.8314,
+          "astronomical_tide_cm": 0.2198
         },
         {
           "issued_at": "2005-08-31T15:00:00",
           "valid_at": "2005-08-31T16:00:00",
           "actual_surge_mm": 419.82,
-          "predicted_surge_mm": 341.503
+          "predicted_surge_mm": 341.503,
+          "observed_tide_cm": 66.7,
+          "predicted_tide_cm": 58.8683,
+          "astronomical_tide_cm": 17.2975
         },
         {
           "issued_at": "2005-08-31T16:00:00",
           "valid_at": "2005-08-31T17:00:00",
           "actual_surge_mm": 363.175,
-          "predicted_surge_mm": 398.127
+          "predicted_surge_mm": 398.127,
+          "observed_tide_cm": 70.1,
+          "predicted_tide_cm": 73.5952,
+          "astronomical_tide_cm": 28.1779
         },
         {
           "issued_at": "2005-08-31T17:00:00",
           "valid_at": "2005-08-31T18:00:00",
           "actual_surge_mm": 296.822,
-          "predicted_surge_mm": 378.005
+          "predicted_surge_mm": 378.005,
+          "observed_tide_cm": 65.0,
+          "predicted_tide_cm": 73.1183,
+          "astronomical_tide_cm": 31.3578
         },
         {
           "issued_at": "2005-08-31T18:00:00",
           "valid_at": "2005-08-31T19:00:00",
           "actual_surge_mm": 386.478,
-          "predicted_surge_mm": 299.319
+          "predicted_surge_mm": 299.319,
+          "observed_tide_cm": 68.7,
+          "predicted_tide_cm": 59.9841,
+          "astronomical_tide_cm": 27.3803
         },
         {
           "issued_at": "2005-08-31T19:00:00",
           "valid_at": "2005-08-31T20:00:00",
           "actual_surge_mm": 317.624,
-          "predicted_surge_mm": 355.798
+          "predicted_surge_mm": 355.798,
+          "observed_tide_cm": 52.5,
+          "predicted_tide_cm": 56.3174,
+          "astronomical_tide_cm": 18.7345
         },
         {
           "issued_at": "2005-08-31T20:00:00",
           "valid_at": "2005-08-31T21:00:00",
           "actual_surge_mm": 493.345,
-          "predicted_surge_mm": 330.481
+          "predicted_surge_mm": 330.481,
+          "observed_tide_cm": 60.7,
+          "predicted_tide_cm": 44.4136,
+          "astronomical_tide_cm": 9.2122
         },
         {
           "issued_at": "2005-08-31T21:00:00",
           "valid_at": "2005-08-31T22:00:00",
           "actual_surge_mm": 567.578,
-          "predicted_surge_mm": 478.411
+          "predicted_surge_mm": 478.411,
+          "observed_tide_cm": 62.6,
+          "predicted_tide_cm": 53.6833,
+          "astronomical_tide_cm": 2.8142
         },
         {
           "issued_at": "2005-08-31T22:00:00",
           "valid_at": "2005-08-31T23:00:00",
           "actual_surge_mm": 654.85,
-          "predicted_surge_mm": 562.791
+          "predicted_surge_mm": 562.791,
+          "observed_tide_cm": 72.4,
+          "predicted_tide_cm": 63.1941,
+          "astronomical_tide_cm": 2.5181
         },
         {
           "issued_at": "2005-08-31T23:00:00",
           "valid_at": "2005-09-01T00:00:00",
           "actual_surge_mm": 820.316,
-          "predicted_surge_mm": 641.158
+          "predicted_surge_mm": 641.158,
+          "observed_tide_cm": 97.3,
+          "predicted_tide_cm": 79.3842,
+          "astronomical_tide_cm": 9.3313
         },
         {
           "issued_at": "2005-09-01T00:00:00",
           "valid_at": "2005-09-01T01:00:00",
           "actual_surge_mm": 708.64,
-          "predicted_surge_mm": 781.18
+          "predicted_surge_mm": 781.18,
+          "observed_tide_cm": 100.2,
+          "predicted_tide_cm": 107.454,
+          "astronomical_tide_cm": 21.9657
         },
         {
           "issued_at": "2005-09-01T01:00:00",
           "valid_at": "2005-09-01T02:00:00",
           "actual_surge_mm": 670.066,
-          "predicted_surge_mm": 713.205
+          "predicted_surge_mm": 713.205,
+          "observed_tide_cm": 112.9,
+          "predicted_tide_cm": 117.2139,
+          "astronomical_tide_cm": 37.2117
         },
         {
           "issued_at": "2005-09-01T02:00:00",
           "valid_at": "2005-09-01T03:00:00",
           "actual_surge_mm": 492.546,
-          "predicted_surge_mm": 682.432
+          "predicted_surge_mm": 682.432,
+          "observed_tide_cm": 109.9,
+          "predicted_tide_cm": 128.8886,
+          "astronomical_tide_cm": 50.8238
         },
         {
           "issued_at": "2005-09-01T03:00:00",
           "valid_at": "2005-09-01T04:00:00",
           "actual_surge_mm": 459.511,
-          "predicted_surge_mm": 475.47
+          "predicted_surge_mm": 475.47,
+          "observed_tide_cm": 115.1,
+          "predicted_tide_cm": 116.6959,
+          "astronomical_tide_cm": 58.6097
         },
         {
           "issued_at": "2005-09-01T04:00:00",
           "valid_at": "2005-09-01T05:00:00",
           "actual_surge_mm": 411.046,
-          "predicted_surge_mm": 437.533
+          "predicted_surge_mm": 437.533,
+          "observed_tide_cm": 109.3,
+          "predicted_tide_cm": 111.9487,
+          "astronomical_tide_cm": 57.4578
         },
         {
           "issued_at": "2005-09-01T05:00:00",
           "valid_at": "2005-09-01T06:00:00",
           "actual_surge_mm": 506.915,
-          "predicted_surge_mm": 386.234
+          "predicted_surge_mm": 386.234,
+          "observed_tide_cm": 107.3,
+          "predicted_tide_cm": 95.2319,
+          "astronomical_tide_cm": 46.1377
         },
         {
           "issued_at": "2005-09-01T06:00:00",
           "valid_at": "2005-09-01T07:00:00",
           "actual_surge_mm": 443.256,
-          "predicted_surge_mm": 469.634
+          "predicted_surge_mm": 469.634,
+          "observed_tide_cm": 79.9,
+          "predicted_tide_cm": 82.5378,
+          "astronomical_tide_cm": 25.7542
         },
         {
           "issued_at": "2005-09-01T07:00:00",
           "valid_at": "2005-09-01T08:00:00",
           "actual_surge_mm": 398.695,
-          "predicted_surge_mm": 465.41
+          "predicted_surge_mm": 465.41,
+          "observed_tide_cm": 48.7,
+          "predicted_tide_cm": 55.3715,
+          "astronomical_tide_cm": -0.284
         },
         {
           "issued_at": "2005-09-01T08:00:00",
           "valid_at": "2005-09-01T09:00:00",
           "actual_surge_mm": 300.189,
-          "predicted_surge_mm": 431.355
+          "predicted_surge_mm": 431.355,
+          "observed_tide_cm": 11.8,
+          "predicted_tide_cm": 24.9166,
+          "astronomical_tide_cm": -26.8971
         },
         {
           "issued_at": "2005-09-01T09:00:00",
           "valid_at": "2005-09-01T10:00:00",
           "actual_surge_mm": 226.059,
-          "predicted_surge_mm": 322.835
+          "predicted_surge_mm": 322.835,
+          "observed_tide_cm": -17.5,
+          "predicted_tide_cm": -7.8224,
+          "astronomical_tide_cm": -48.5268
         },
         {
           "issued_at": "2005-09-01T10:00:00",
           "valid_at": "2005-09-01T11:00:00",
           "actual_surge_mm": 157.655,
-          "predicted_surge_mm": 274.847
+          "predicted_surge_mm": 274.847,
+          "observed_tide_cm": -36.6,
+          "predicted_tide_cm": -24.8808,
+          "astronomical_tide_cm": -60.5963
         },
         {
           "issued_at": "2005-09-01T11:00:00",
           "valid_at": "2005-09-01T12:00:00",
           "actual_surge_mm": 48.826,
-          "predicted_surge_mm": 158.101
+          "predicted_surge_mm": 158.101,
+          "observed_tide_cm": -47.6,
+          "predicted_tide_cm": -36.6725,
+          "astronomical_tide_cm": -60.7572
         },
         {
           "issued_at": "2005-09-01T12:00:00",
           "valid_at": "2005-09-01T13:00:00",
           "actual_surge_mm": 40.737,
-          "predicted_surge_mm": 36.761
+          "predicted_surge_mm": 36.761,
+          "observed_tide_cm": -36.8,
+          "predicted_tide_cm": -37.1976,
+          "astronomical_tide_cm": -49.4865
         },
         {
           "issued_at": "2005-09-01T13:00:00",
           "valid_at": "2005-09-01T14:00:00",
           "actual_surge_mm": 21.803,
-          "predicted_surge_mm": -3.432
+          "predicted_surge_mm": -3.432,
+          "observed_tide_cm": -18.7,
+          "predicted_tide_cm": -21.2235,
+          "astronomical_tide_cm": -29.857
         },
         {
           "issued_at": "2005-09-01T14:00:00",
           "valid_at": "2005-09-01T15:00:00",
           "actual_surge_mm": -16.088,
-          "predicted_surge_mm": -33.614
+          "predicted_surge_mm": -33.614,
+          "observed_tide_cm": 0.6,
+          "predicted_tide_cm": -1.1526,
+          "astronomical_tide_cm": -6.6413
         },
         {
           "issued_at": "2005-09-01T15:00:00",
           "valid_at": "2005-09-01T16:00:00",
           "actual_surge_mm": -48.615,
-          "predicted_surge_mm": -64.411
+          "predicted_surge_mm": -64.411,
+          "observed_tide_cm": 17.8,
+          "predicted_tide_cm": 16.2204,
+          "astronomical_tide_cm": 14.9052
         },
         {
           "issued_at": "2005-09-01T16:00:00",
           "valid_at": "2005-09-01T17:00:00",
           "actual_surge_mm": -93.776,
-          "predicted_surge_mm": -100.804
+          "predicted_surge_mm": -100.804,
+          "observed_tide_cm": 26.7,
+          "predicted_tide_cm": 25.9972,
+          "astronomical_tide_cm": 30.2496
         },
         {
           "issued_at": "2005-09-01T17:00:00",
           "valid_at": "2005-09-01T18:00:00",
           "actual_surge_mm": -83.206,
-          "predicted_surge_mm": -124.907
+          "predicted_surge_mm": -124.907,
+          "observed_tide_cm": 32.0,
+          "predicted_tide_cm": 27.8299,
+          "astronomical_tide_cm": 36.5698
         },
         {
           "issued_at": "2005-09-01T18:00:00",
           "valid_at": "2005-09-01T19:00:00",
           "actual_surge_mm": -186.644,
-          "predicted_surge_mm": -90.775
+          "predicted_surge_mm": -90.775,
+          "observed_tide_cm": 16.8,
+          "predicted_tide_cm": 26.3869,
+          "astronomical_tide_cm": 33.4031
         },
         {
           "issued_at": "2005-09-01T19:00:00",
           "valid_at": "2005-09-01T20:00:00",
           "actual_surge_mm": -180.804,
-          "predicted_surge_mm": -170.796
+          "predicted_surge_mm": -170.796,
+          "observed_tide_cm": 5.8,
+          "predicted_tide_cm": 6.8008,
+          "astronomical_tide_cm": 22.8177
         },
         {
           "issued_at": "2005-09-01T20:00:00",
           "valid_at": "2005-09-01T21:00:00",
           "actual_surge_mm": -211.657,
-          "predicted_surge_mm": -174.426
+          "predicted_surge_mm": -174.426,
+          "observed_tide_cm": -11.2,
+          "predicted_tide_cm": -7.4769,
+          "astronomical_tide_cm": 8.9582
         },
         {
           "issued_at": "2005-09-01T21:00:00",
           "valid_at": "2005-09-01T22:00:00",
           "actual_surge_mm": -165.528,
-          "predicted_surge_mm": -205.168
+          "predicted_surge_mm": -205.168,
+          "observed_tide_cm": -17.8,
+          "predicted_tide_cm": -21.764,
+          "astronomical_tide_cm": -3.0599
         },
         {
           "issued_at": "2005-09-01T22:00:00",
           "valid_at": "2005-09-01T23:00:00",
           "actual_surge_mm": -195.88,
-          "predicted_surge_mm": -155.842
+          "predicted_surge_mm": -155.842,
+          "observed_tide_cm": -25.1,
+          "predicted_tide_cm": -21.0962,
+          "astronomical_tide_cm": -8.6653
         },
         {
           "issued_at": "2005-09-01T23:00:00",
           "valid_at": "2005-09-02T00:00:00",
           "actual_surge_mm": -122.075,
-          "predicted_surge_mm": -180.131
+          "predicted_surge_mm": -180.131,
+          "observed_tide_cm": -12.6,
+          "predicted_tide_cm": -18.4056,
+          "astronomical_tide_cm": -5.2627
         },
         {
           "issued_at": "2005-09-02T00:00:00",
           "valid_at": "2005-09-02T01:00:00",
           "actual_surge_mm": -128.598,
-          "predicted_surge_mm": -113.388
+          "predicted_surge_mm": -113.388,
+          "observed_tide_cm": 0.9,
+          "predicted_tide_cm": 2.421,
+          "astronomical_tide_cm": 6.9477
         },
         {
           "issued_at": "2005-09-02T01:00:00",
           "valid_at": "2005-09-02T02:00:00",
           "actual_surge_mm": -57.449,
-          "predicted_surge_mm": -106.714
+          "predicted_surge_mm": -106.714,
+          "observed_tide_cm": 28.0,
+          "predicted_tide_cm": 23.0735,
+          "astronomical_tide_cm": 25.0437
         },
         {
           "issued_at": "2005-09-02T02:00:00",
           "valid_at": "2005-09-02T03:00:00",
           "actual_surge_mm": -10.966,
-          "predicted_surge_mm": -38.523
+          "predicted_surge_mm": -38.523,
+          "observed_tide_cm": 53.5,
+          "predicted_tide_cm": 50.7443,
+          "astronomical_tide_cm": 44.2519
         },
         {
           "issued_at": "2005-09-02T03:00:00",
           "valid_at": "2005-09-02T04:00:00",
           "actual_surge_mm": -11.204,
-          "predicted_surge_mm": -18.119
+          "predicted_surge_mm": -18.119,
+          "observed_tide_cm": 69.7,
+          "predicted_tide_cm": 69.0085,
+          "astronomical_tide_cm": 59.2439
         },
         {
           "issued_at": "2005-09-02T04:00:00",
           "valid_at": "2005-09-02T05:00:00",
           "actual_surge_mm": -11.864,
-          "predicted_surge_mm": -3.317
+          "predicted_surge_mm": -3.317,
+          "observed_tide_cm": 76.5,
+          "predicted_tide_cm": 77.3547,
+          "astronomical_tide_cm": 65.4563
         },
         {
           "issued_at": "2005-09-02T05:00:00",
           "valid_at": "2005-09-02T06:00:00",
           "actual_surge_mm": 2.358,
-          "predicted_surge_mm": -22.139
+          "predicted_surge_mm": -22.139,
+          "observed_tide_cm": 72.7,
+          "predicted_tide_cm": 70.2503,
+          "astronomical_tide_cm": 60.1751
         },
         {
           "issued_at": "2005-09-02T06:00:00",
           "valid_at": "2005-09-02T07:00:00",
           "actual_surge_mm": -25.356,
-          "predicted_surge_mm": -16.521
+          "predicted_surge_mm": -16.521,
+          "observed_tide_cm": 52.5,
+          "predicted_tide_cm": 53.3835,
+          "astronomical_tide_cm": 43.2546
         },
         {
           "issued_at": "2005-09-02T07:00:00",
           "valid_at": "2005-09-02T08:00:00",
           "actual_surge_mm": -19.254,
-          "predicted_surge_mm": -40.679
+          "predicted_surge_mm": -40.679,
+          "observed_tide_cm": 26.3,
+          "predicted_tide_cm": 24.1575,
+          "astronomical_tide_cm": 17.3565
         }
       ]
     },
@@ -1107,1039 +1632,1558 @@
           "issued_at": "2005-08-26T01:00:00",
           "valid_at": "2005-08-26T04:00:00",
           "actual_surge_mm": 64.824,
-          "predicted_surge_mm": 111.187
+          "predicted_surge_mm": 111.187,
+          "observed_tide_cm": -26.8,
+          "predicted_tide_cm": -22.1637,
+          "astronomical_tide_cm": -41.9294
         },
         {
           "issued_at": "2005-08-26T02:00:00",
           "valid_at": "2005-08-26T05:00:00",
           "actual_surge_mm": 62.642,
-          "predicted_surge_mm": 99.847
+          "predicted_surge_mm": 99.847,
+          "observed_tide_cm": -28.5,
+          "predicted_tide_cm": -24.7795,
+          "astronomical_tide_cm": -40.4935
         },
         {
           "issued_at": "2005-08-26T03:00:00",
           "valid_at": "2005-08-26T06:00:00",
           "actual_surge_mm": 62.868,
-          "predicted_surge_mm": 89.775
+          "predicted_surge_mm": 89.775,
+          "observed_tide_cm": -21.0,
+          "predicted_tide_cm": -18.3093,
+          "astronomical_tide_cm": -30.2791
         },
         {
           "issued_at": "2005-08-26T04:00:00",
           "valid_at": "2005-08-26T07:00:00",
           "actual_surge_mm": 75.649,
-          "predicted_surge_mm": 69.216
+          "predicted_surge_mm": 69.216,
+          "observed_tide_cm": -6.4,
+          "predicted_tide_cm": -7.0433,
+          "astronomical_tide_cm": -14.6359
         },
         {
           "issued_at": "2005-08-26T05:00:00",
           "valid_at": "2005-08-26T08:00:00",
           "actual_surge_mm": 73.802,
-          "predicted_surge_mm": 67.494
+          "predicted_surge_mm": 67.494,
+          "observed_tide_cm": 8.4,
+          "predicted_tide_cm": 7.7692,
+          "astronomical_tide_cm": 2.1559
         },
         {
           "issued_at": "2005-08-26T06:00:00",
           "valid_at": "2005-08-26T09:00:00",
           "actual_surge_mm": 71.99,
-          "predicted_surge_mm": 66.854
+          "predicted_surge_mm": 66.854,
+          "observed_tide_cm": 21.2,
+          "predicted_tide_cm": 20.6864,
+          "astronomical_tide_cm": 16.0326
         },
         {
           "issued_at": "2005-08-26T07:00:00",
           "valid_at": "2005-08-26T10:00:00",
           "actual_surge_mm": 81.962,
-          "predicted_surge_mm": 68.122
+          "predicted_surge_mm": 68.122,
+          "observed_tide_cm": 30.6,
+          "predicted_tide_cm": 29.216,
+          "astronomical_tide_cm": 24.0347
         },
         {
           "issued_at": "2005-08-26T08:00:00",
           "valid_at": "2005-08-26T11:00:00",
           "actual_surge_mm": 91.843,
-          "predicted_surge_mm": 72.23
+          "predicted_surge_mm": 72.23,
+          "observed_tide_cm": 33.8,
+          "predicted_tide_cm": 31.8387,
+          "astronomical_tide_cm": 24.8415
         },
         {
           "issued_at": "2005-08-26T09:00:00",
           "valid_at": "2005-08-26T12:00:00",
           "actual_surge_mm": 86.307,
-          "predicted_surge_mm": 75.358
+          "predicted_surge_mm": 75.358,
+          "observed_tide_cm": 29.2,
+          "predicted_tide_cm": 28.1051,
+          "astronomical_tide_cm": 18.9859
         },
         {
           "issued_at": "2005-08-26T10:00:00",
           "valid_at": "2005-08-26T13:00:00",
           "actual_surge_mm": 104.268,
-          "predicted_surge_mm": 91.29
+          "predicted_surge_mm": 91.29,
+          "observed_tide_cm": 22.7,
+          "predicted_tide_cm": 21.4022,
+          "astronomical_tide_cm": 8.7456
         },
         {
           "issued_at": "2005-08-26T11:00:00",
           "valid_at": "2005-08-26T14:00:00",
           "actual_surge_mm": 111.569,
-          "predicted_surge_mm": 101.075
+          "predicted_surge_mm": 101.075,
+          "observed_tide_cm": 14.3,
+          "predicted_tide_cm": 13.2506,
+          "astronomical_tide_cm": -2.3613
         },
         {
           "issued_at": "2005-08-26T12:00:00",
           "valid_at": "2005-08-26T15:00:00",
           "actual_surge_mm": 113.724,
-          "predicted_surge_mm": 90.657
+          "predicted_surge_mm": 90.657,
+          "observed_tide_cm": 8.2,
+          "predicted_tide_cm": 5.8933,
+          "astronomical_tide_cm": -10.4869
         },
         {
           "issued_at": "2005-08-26T13:00:00",
           "valid_at": "2005-08-26T16:00:00",
           "actual_surge_mm": 96.572,
-          "predicted_surge_mm": 94.298
+          "predicted_surge_mm": 94.298,
+          "observed_tide_cm": 5.7,
+          "predicted_tide_cm": 5.4726,
+          "astronomical_tide_cm": -12.5801
         },
         {
           "issued_at": "2005-08-26T14:00:00",
           "valid_at": "2005-08-26T17:00:00",
           "actual_surge_mm": 52.192,
-          "predicted_surge_mm": 91.502
+          "predicted_surge_mm": 91.502,
+          "observed_tide_cm": 6.9,
+          "predicted_tide_cm": 10.831,
+          "astronomical_tide_cm": -7.3374
         },
         {
           "issued_at": "2005-08-26T15:00:00",
           "valid_at": "2005-08-26T18:00:00",
           "actual_surge_mm": 71.45,
-          "predicted_surge_mm": 113.818
+          "predicted_surge_mm": 113.818,
+          "observed_tide_cm": 20.0,
+          "predicted_tide_cm": 24.2368,
+          "astronomical_tide_cm": 4.406
         },
         {
           "issued_at": "2005-08-26T16:00:00",
           "valid_at": "2005-08-26T19:00:00",
           "actual_surge_mm": 61.729,
-          "predicted_surge_mm": 79.543
+          "predicted_surge_mm": 79.543,
+          "observed_tide_cm": 33.5,
+          "predicted_tide_cm": 35.2814,
+          "astronomical_tide_cm": 19.988
         },
         {
           "issued_at": "2005-08-26T17:00:00",
           "valid_at": "2005-08-26T20:00:00",
           "actual_surge_mm": 47.167,
-          "predicted_surge_mm": 46.058
+          "predicted_surge_mm": 46.058,
+          "observed_tide_cm": 46.5,
+          "predicted_tide_cm": 46.3891,
+          "astronomical_tide_cm": 35.7493
         },
         {
           "issued_at": "2005-08-26T18:00:00",
           "valid_at": "2005-08-26T21:00:00",
           "actual_surge_mm": 41.967,
-          "predicted_surge_mm": 68.372
+          "predicted_surge_mm": 68.372,
+          "observed_tide_cm": 57.0,
+          "predicted_tide_cm": 59.6405,
+          "astronomical_tide_cm": 48.0133
         },
         {
           "issued_at": "2005-08-26T19:00:00",
           "valid_at": "2005-08-26T22:00:00",
           "actual_surge_mm": 49.218,
-          "predicted_surge_mm": 67.26
+          "predicted_surge_mm": 67.26,
+          "observed_tide_cm": 63.0,
+          "predicted_tide_cm": 64.8042,
+          "astronomical_tide_cm": 53.9037
         },
         {
           "issued_at": "2005-08-26T20:00:00",
           "valid_at": "2005-08-26T23:00:00",
           "actual_surge_mm": 60.186,
-          "predicted_surge_mm": 66.837
+          "predicted_surge_mm": 66.837,
+          "observed_tide_cm": 62.6,
+          "predicted_tide_cm": 63.2651,
+          "astronomical_tide_cm": 51.8773
         },
         {
           "issued_at": "2005-08-26T21:00:00",
           "valid_at": "2005-08-27T00:00:00",
           "actual_surge_mm": 50.687,
-          "predicted_surge_mm": 64.897
+          "predicted_surge_mm": 64.897,
+          "observed_tide_cm": 53.4,
+          "predicted_tide_cm": 54.821,
+          "astronomical_tide_cm": 41.9947
         },
         {
           "issued_at": "2005-08-26T22:00:00",
           "valid_at": "2005-08-27T01:00:00",
           "actual_surge_mm": 45.503,
-          "predicted_surge_mm": 81.74
+          "predicted_surge_mm": 81.74,
+          "observed_tide_cm": 39.0,
+          "predicted_tide_cm": 42.6237,
+          "astronomical_tide_cm": 25.9453
         },
         {
           "issued_at": "2005-08-26T23:00:00",
           "valid_at": "2005-08-27T02:00:00",
           "actual_surge_mm": 26.58,
-          "predicted_surge_mm": 86.66
+          "predicted_surge_mm": 86.66,
+          "observed_tide_cm": 19.7,
+          "predicted_tide_cm": 25.708,
+          "astronomical_tide_cm": 6.7655
         },
         {
           "issued_at": "2005-08-27T00:00:00",
           "valid_at": "2005-08-27T03:00:00",
           "actual_surge_mm": 21.559,
-          "predicted_surge_mm": 69.408
+          "predicted_surge_mm": 69.408,
+          "observed_tide_cm": 1.2,
+          "predicted_tide_cm": 5.9849,
+          "astronomical_tide_cm": -11.8076
         },
         {
           "issued_at": "2005-08-27T01:00:00",
           "valid_at": "2005-08-27T04:00:00",
           "actual_surge_mm": 44.901,
-          "predicted_surge_mm": 57.932
+          "predicted_surge_mm": 57.932,
+          "observed_tide_cm": -11.6,
+          "predicted_tide_cm": -10.2969,
+          "astronomical_tide_cm": -26.2585
         },
         {
           "issued_at": "2005-08-27T02:00:00",
           "valid_at": "2005-08-27T05:00:00",
           "actual_surge_mm": 54.303,
-          "predicted_surge_mm": 33.644
+          "predicted_surge_mm": 33.644,
+          "observed_tide_cm": -20.1,
+          "predicted_tide_cm": -22.1659,
+          "astronomical_tide_cm": -34.2066
         },
         {
           "issued_at": "2005-08-27T03:00:00",
           "valid_at": "2005-08-27T06:00:00",
           "actual_surge_mm": 22.541,
-          "predicted_surge_mm": 25.924
+          "predicted_surge_mm": 25.924,
+          "observed_tide_cm": -25.9,
+          "predicted_tide_cm": -25.5617,
+          "astronomical_tide_cm": -34.9637
         },
         {
           "issued_at": "2005-08-27T04:00:00",
           "valid_at": "2005-08-27T07:00:00",
           "actual_surge_mm": 14.112,
-          "predicted_surge_mm": 51.472
+          "predicted_surge_mm": 51.472,
+          "observed_tide_cm": -23.2,
+          "predicted_tide_cm": -19.464,
+          "astronomical_tide_cm": -29.5314
         },
         {
           "issued_at": "2005-08-27T05:00:00",
           "valid_at": "2005-08-27T08:00:00",
           "actual_surge_mm": -10.04,
-          "predicted_surge_mm": 58.952
+          "predicted_surge_mm": 58.952,
+          "observed_tide_cm": -17.9,
+          "predicted_tide_cm": -11.0008,
+          "astronomical_tide_cm": -20.1087
         },
         {
           "issued_at": "2005-08-27T06:00:00",
           "valid_at": "2005-08-27T09:00:00",
           "actual_surge_mm": -8.638,
-          "predicted_surge_mm": 36.048
+          "predicted_surge_mm": 36.048,
+          "observed_tide_cm": -8.4,
+          "predicted_tide_cm": -3.9314,
+          "astronomical_tide_cm": -9.3766
         },
         {
           "issued_at": "2005-08-27T07:00:00",
           "valid_at": "2005-08-27T10:00:00",
           "actual_surge_mm": -21.896,
-          "predicted_surge_mm": 31.485
+          "predicted_surge_mm": 31.485,
+          "observed_tide_cm": -0.8,
+          "predicted_tide_cm": 4.5381,
+          "astronomical_tide_cm": 0.1656
         },
         {
           "issued_at": "2005-08-27T08:00:00",
           "valid_at": "2005-08-27T11:00:00",
           "actual_surge_mm": -23.094,
-          "predicted_surge_mm": 17.306
+          "predicted_surge_mm": 17.306,
+          "observed_tide_cm": 6.0,
+          "predicted_tide_cm": 10.04,
+          "astronomical_tide_cm": 6.68
         },
         {
           "issued_at": "2005-08-27T09:00:00",
           "valid_at": "2005-08-27T12:00:00",
           "actual_surge_mm": -15.318,
-          "predicted_surge_mm": 21.28
+          "predicted_surge_mm": 21.28,
+          "observed_tide_cm": 10.4,
+          "predicted_tide_cm": 14.0598,
+          "astronomical_tide_cm": 9.2931
         },
         {
           "issued_at": "2005-08-27T10:00:00",
           "valid_at": "2005-08-27T13:00:00",
           "actual_surge_mm": -9.927,
-          "predicted_surge_mm": 5.611
+          "predicted_surge_mm": 5.611,
+          "observed_tide_cm": 11.0,
+          "predicted_tide_cm": 12.5538,
+          "astronomical_tide_cm": 8.2491
         },
         {
           "issued_at": "2005-08-27T11:00:00",
           "valid_at": "2005-08-27T14:00:00",
           "actual_surge_mm": -0.127,
-          "predicted_surge_mm": 11.06
+          "predicted_surge_mm": 11.06,
+          "observed_tide_cm": 9.8,
+          "predicted_tide_cm": 10.9187,
+          "astronomical_tide_cm": 4.8652
         },
         {
           "issued_at": "2005-08-27T12:00:00",
           "valid_at": "2005-08-27T15:00:00",
           "actual_surge_mm": 20.155,
-          "predicted_surge_mm": 12.8
+          "predicted_surge_mm": 12.8,
+          "observed_tide_cm": 9.6,
+          "predicted_tide_cm": 8.8645,
+          "astronomical_tide_cm": 1.2049
         },
         {
           "issued_at": "2005-08-27T13:00:00",
           "valid_at": "2005-08-27T16:00:00",
           "actual_surge_mm": 33.053,
-          "predicted_surge_mm": 3.174
+          "predicted_surge_mm": 3.174,
+          "observed_tide_cm": 10.6,
+          "predicted_tide_cm": 7.6121,
+          "astronomical_tide_cm": -0.5254
         },
         {
           "issued_at": "2005-08-27T14:00:00",
           "valid_at": "2005-08-27T17:00:00",
           "actual_surge_mm": 40.874,
-          "predicted_surge_mm": -6.673
+          "predicted_surge_mm": -6.673,
+          "observed_tide_cm": 14.1,
+          "predicted_tide_cm": 9.3453,
+          "astronomical_tide_cm": 1.3138
         },
         {
           "issued_at": "2005-08-27T15:00:00",
           "valid_at": "2005-08-27T18:00:00",
           "actual_surge_mm": 49.911,
-          "predicted_surge_mm": 14.755
+          "predicted_surge_mm": 14.755,
+          "observed_tide_cm": 20.8,
+          "predicted_tide_cm": 17.2844,
+          "astronomical_tide_cm": 7.2596
         },
         {
           "issued_at": "2005-08-27T16:00:00",
           "valid_at": "2005-08-27T19:00:00",
           "actual_surge_mm": 47.026,
-          "predicted_surge_mm": 24.35
+          "predicted_surge_mm": 24.35,
+          "observed_tide_cm": 28.9,
+          "predicted_tide_cm": 26.6324,
+          "astronomical_tide_cm": 16.5972
         },
         {
           "issued_at": "2005-08-27T17:00:00",
           "valid_at": "2005-08-27T20:00:00",
           "actual_surge_mm": 43.488,
-          "predicted_surge_mm": 14.658
+          "predicted_surge_mm": 14.658,
+          "observed_tide_cm": 38.4,
+          "predicted_tide_cm": 35.517,
+          "astronomical_tide_cm": 27.6173
         },
         {
           "issued_at": "2005-08-27T18:00:00",
           "valid_at": "2005-08-27T21:00:00",
           "actual_surge_mm": 5.105,
-          "predicted_surge_mm": 16.339
+          "predicted_surge_mm": 16.339,
+          "observed_tide_cm": 43.8,
+          "predicted_tide_cm": 44.9234,
+          "astronomical_tide_cm": 38.1099
         },
         {
           "issued_at": "2005-08-27T19:00:00",
           "valid_at": "2005-08-27T22:00:00",
           "actual_surge_mm": 16.478,
-          "predicted_surge_mm": 20.986
+          "predicted_surge_mm": 20.986,
+          "observed_tide_cm": 51.4,
+          "predicted_tide_cm": 51.8508,
+          "astronomical_tide_cm": 45.8793
         },
         {
           "issued_at": "2005-08-27T20:00:00",
           "valid_at": "2005-08-27T23:00:00",
           "actual_surge_mm": 11.288,
-          "predicted_surge_mm": 25.35
+          "predicted_surge_mm": 25.35,
+          "observed_tide_cm": 53.4,
+          "predicted_tide_cm": 54.8062,
+          "astronomical_tide_cm": 49.1569
         },
         {
           "issued_at": "2005-08-27T21:00:00",
           "valid_at": "2005-08-28T00:00:00",
           "actual_surge_mm": 5.832,
-          "predicted_surge_mm": 4.764
+          "predicted_surge_mm": 4.764,
+          "observed_tide_cm": 51.0,
+          "predicted_tide_cm": 50.8932,
+          "astronomical_tide_cm": 46.9025
         },
         {
           "issued_at": "2005-08-27T22:00:00",
           "valid_at": "2005-08-28T01:00:00",
           "actual_surge_mm": 15.852,
-          "predicted_surge_mm": 24.401
+          "predicted_surge_mm": 24.401,
+          "observed_tide_cm": 45.6,
+          "predicted_tide_cm": 46.4549,
+          "astronomical_tide_cm": 39.0217
         },
         {
           "issued_at": "2005-08-27T23:00:00",
           "valid_at": "2005-08-28T02:00:00",
           "actual_surge_mm": 2.388,
-          "predicted_surge_mm": 25.27
+          "predicted_surge_mm": 25.27,
+          "observed_tide_cm": 33.6,
+          "predicted_tide_cm": 35.8882,
+          "astronomical_tide_cm": 26.4634
         },
         {
           "issued_at": "2005-08-28T00:00:00",
           "valid_at": "2005-08-28T03:00:00",
           "actual_surge_mm": 24.825,
-          "predicted_surge_mm": 30.604
+          "predicted_surge_mm": 30.604,
+          "observed_tide_cm": 22.0,
+          "predicted_tide_cm": 22.5779,
+          "astronomical_tide_cm": 11.1049
         },
         {
           "issued_at": "2005-08-28T01:00:00",
           "valid_at": "2005-08-28T04:00:00",
           "actual_surge_mm": 24.536,
-          "predicted_surge_mm": 51.339
+          "predicted_surge_mm": 51.339,
+          "observed_tide_cm": 6.9,
+          "predicted_tide_cm": 9.5803,
+          "astronomical_tide_cm": -4.6256
         },
         {
           "issued_at": "2005-08-28T02:00:00",
           "valid_at": "2005-08-28T05:00:00",
           "actual_surge_mm": 27.238,
-          "predicted_surge_mm": 45.77
+          "predicted_surge_mm": 45.77,
+          "observed_tide_cm": -6.6,
+          "predicted_tide_cm": -4.7468,
+          "astronomical_tide_cm": -18.3126
         },
         {
           "issued_at": "2005-08-28T03:00:00",
           "valid_at": "2005-08-28T06:00:00",
           "actual_surge_mm": 11.875,
-          "predicted_surge_mm": 47.007
+          "predicted_surge_mm": 47.007,
+          "observed_tide_cm": -18.5,
+          "predicted_tide_cm": -14.9868,
+          "astronomical_tide_cm": -28.1036
         },
         {
           "issued_at": "2005-08-28T04:00:00",
           "valid_at": "2005-08-28T07:00:00",
           "actual_surge_mm": -13.729,
-          "predicted_surge_mm": 32.162
+          "predicted_surge_mm": 32.162,
+          "observed_tide_cm": -26.9,
+          "predicted_tide_cm": -22.3109,
+          "astronomical_tide_cm": -33.0468
         },
         {
           "issued_at": "2005-08-28T05:00:00",
           "valid_at": "2005-08-28T08:00:00",
           "actual_surge_mm": -33.086,
-          "predicted_surge_mm": 25.812
+          "predicted_surge_mm": 25.812,
+          "observed_tide_cm": -29.9,
+          "predicted_tide_cm": -24.0102,
+          "astronomical_tide_cm": -33.1371
         },
         {
           "issued_at": "2005-08-28T06:00:00",
           "valid_at": "2005-08-28T09:00:00",
           "actual_surge_mm": -26.358,
-          "predicted_surge_mm": 8.158
+          "predicted_surge_mm": 8.158,
+          "observed_tide_cm": -26.1,
+          "predicted_tide_cm": -22.6484,
+          "astronomical_tide_cm": -29.1399
         },
         {
           "issued_at": "2005-08-28T07:00:00",
           "valid_at": "2005-08-28T10:00:00",
           "actual_surge_mm": -6.099,
-          "predicted_surge_mm": -22.835
+          "predicted_surge_mm": -22.835,
+          "observed_tide_cm": -17.9,
+          "predicted_tide_cm": -19.5736,
+          "astronomical_tide_cm": -22.3242
         },
         {
           "issued_at": "2005-08-28T08:00:00",
           "valid_at": "2005-08-28T11:00:00",
           "actual_surge_mm": -19.071,
-          "predicted_surge_mm": -37.271
+          "predicted_surge_mm": -37.271,
+          "observed_tide_cm": -11.2,
+          "predicted_tide_cm": -13.02,
+          "astronomical_tide_cm": -14.1965
         },
         {
           "issued_at": "2005-08-28T09:00:00",
           "valid_at": "2005-08-28T12:00:00",
           "actual_surge_mm": -6.462,
-          "predicted_surge_mm": -19.079
+          "predicted_surge_mm": -19.079,
+          "observed_tide_cm": -1.6,
+          "predicted_tide_cm": -2.8617,
+          "astronomical_tide_cm": -6.2396
         },
         {
           "issued_at": "2005-08-28T10:00:00",
           "valid_at": "2005-08-28T13:00:00",
           "actual_surge_mm": 19.579,
-          "predicted_surge_mm": 7.499
+          "predicted_surge_mm": 7.499,
+          "observed_tide_cm": 8.0,
+          "predicted_tide_cm": 6.792,
+          "astronomical_tide_cm": 0.3609
         },
         {
           "issued_at": "2005-08-28T11:00:00",
           "valid_at": "2005-08-28T14:00:00",
           "actual_surge_mm": 8.521,
-          "predicted_surge_mm": -3.976
+          "predicted_surge_mm": -3.976,
+          "observed_tide_cm": 11.7,
+          "predicted_tide_cm": 10.4503,
+          "astronomical_tide_cm": 4.9721
         },
         {
           "issued_at": "2005-08-28T12:00:00",
           "valid_at": "2005-08-28T15:00:00",
           "actual_surge_mm": 54.207,
-          "predicted_surge_mm": 7.108
+          "predicted_surge_mm": 7.108,
+          "observed_tide_cm": 19.3,
+          "predicted_tide_cm": 14.5901,
+          "astronomical_tide_cm": 7.656
         },
         {
           "issued_at": "2005-08-28T13:00:00",
           "valid_at": "2005-08-28T16:00:00",
           "actual_surge_mm": 71.831,
-          "predicted_surge_mm": 31.239
+          "predicted_surge_mm": 31.239,
+          "observed_tide_cm": 23.2,
+          "predicted_tide_cm": 19.1408,
+          "astronomical_tide_cm": 9.1043
         },
         {
           "issued_at": "2005-08-28T14:00:00",
           "valid_at": "2005-08-28T17:00:00",
           "actual_surge_mm": 63.558,
-          "predicted_surge_mm": 9.141
+          "predicted_surge_mm": 9.141,
+          "observed_tide_cm": 24.3,
+          "predicted_tide_cm": 18.8583,
+          "astronomical_tide_cm": 10.3647
         },
         {
           "issued_at": "2005-08-28T15:00:00",
           "valid_at": "2005-08-28T18:00:00",
           "actual_surge_mm": 67.706,
-          "predicted_surge_mm": 40.223
+          "predicted_surge_mm": 40.223,
+          "observed_tide_cm": 26.9,
+          "predicted_tide_cm": 24.1517,
+          "astronomical_tide_cm": 12.4653
         },
         {
           "issued_at": "2005-08-28T16:00:00",
           "valid_at": "2005-08-28T19:00:00",
           "actual_surge_mm": 48.813,
-          "predicted_surge_mm": 41.924
+          "predicted_surge_mm": 41.924,
+          "observed_tide_cm": 28.0,
+          "predicted_tide_cm": 27.3111,
+          "astronomical_tide_cm": 16.0878
         },
         {
           "issued_at": "2005-08-28T17:00:00",
           "valid_at": "2005-08-28T20:00:00",
           "actual_surge_mm": 55.362,
-          "predicted_surge_mm": 32.891
+          "predicted_surge_mm": 32.891,
+          "observed_tide_cm": 33.1,
+          "predicted_tide_cm": 30.8529,
+          "astronomical_tide_cm": 21.384
         },
         {
           "issued_at": "2005-08-28T18:00:00",
           "valid_at": "2005-08-28T21:00:00",
           "actual_surge_mm": 40.81,
-          "predicted_surge_mm": 25.772
+          "predicted_surge_mm": 25.772,
+          "observed_tide_cm": 37.5,
+          "predicted_tide_cm": 35.9962,
+          "astronomical_tide_cm": 27.9439
         },
         {
           "issued_at": "2005-08-28T19:00:00",
           "valid_at": "2005-08-28T22:00:00",
           "actual_surge_mm": 37.005,
-          "predicted_surge_mm": 22.844
+          "predicted_surge_mm": 22.844,
+          "observed_tide_cm": 43.2,
+          "predicted_tide_cm": 41.7839,
+          "astronomical_tide_cm": 34.8623
         },
         {
           "issued_at": "2005-08-28T20:00:00",
           "valid_at": "2005-08-28T23:00:00",
           "actual_surge_mm": 37.056,
-          "predicted_surge_mm": 39.594
+          "predicted_surge_mm": 39.594,
+          "observed_tide_cm": 48.2,
+          "predicted_tide_cm": 48.4538,
+          "astronomical_tide_cm": 40.869
         },
         {
           "issued_at": "2005-08-28T21:00:00",
           "valid_at": "2005-08-29T00:00:00",
           "actual_surge_mm": 57.331,
-          "predicted_surge_mm": 35.903
+          "predicted_surge_mm": 35.903,
+          "observed_tide_cm": 53.4,
+          "predicted_tide_cm": 51.2572,
+          "astronomical_tide_cm": 44.5312
         },
         {
           "issued_at": "2005-08-28T22:00:00",
           "valid_at": "2005-08-29T01:00:00",
           "actual_surge_mm": 57.945,
-          "predicted_surge_mm": 46.131
+          "predicted_surge_mm": 46.131,
+          "observed_tide_cm": 54.0,
+          "predicted_tide_cm": 52.8186,
+          "astronomical_tide_cm": 44.54
         },
         {
           "issued_at": "2005-08-28T23:00:00",
           "valid_at": "2005-08-29T02:00:00",
           "actual_surge_mm": 43.177,
-          "predicted_surge_mm": 50.611
+          "predicted_surge_mm": 50.611,
+          "observed_tide_cm": 49.3,
+          "predicted_tide_cm": 50.0434,
+          "astronomical_tide_cm": 40.0469
         },
         {
           "issued_at": "2005-08-29T00:00:00",
           "valid_at": "2005-08-29T03:00:00",
           "actual_surge_mm": 45.204,
-          "predicted_surge_mm": 73.386
+          "predicted_surge_mm": 73.386,
+          "observed_tide_cm": 41.8,
+          "predicted_tide_cm": 44.6182,
+          "astronomical_tide_cm": 30.9514
         },
         {
           "issued_at": "2005-08-29T01:00:00",
           "valid_at": "2005-08-29T04:00:00",
           "actual_surge_mm": 48.265,
-          "predicted_surge_mm": 76.691
+          "predicted_surge_mm": 76.691,
+          "observed_tide_cm": 30.2,
+          "predicted_tide_cm": 33.0426,
+          "astronomical_tide_cm": 18.0248
         },
         {
           "issued_at": "2005-08-29T02:00:00",
           "valid_at": "2005-08-29T05:00:00",
           "actual_surge_mm": 57.079,
-          "predicted_surge_mm": 59.892
+          "predicted_surge_mm": 59.892,
+          "observed_tide_cm": 16.4,
+          "predicted_tide_cm": 16.6813,
+          "astronomical_tide_cm": 2.815
         },
         {
           "issued_at": "2005-08-29T03:00:00",
           "valid_at": "2005-08-29T06:00:00",
           "actual_surge_mm": 33.48,
-          "predicted_surge_mm": 60.164
+          "predicted_surge_mm": 60.164,
+          "observed_tide_cm": -1.2,
+          "predicted_tide_cm": 1.4684,
+          "astronomical_tide_cm": -12.6358
         },
         {
           "issued_at": "2005-08-29T04:00:00",
           "valid_at": "2005-08-29T07:00:00",
           "actual_surge_mm": 19.107,
-          "predicted_surge_mm": 45.212
+          "predicted_surge_mm": 45.212,
+          "observed_tide_cm": -16.2,
+          "predicted_tide_cm": -13.5895,
+          "astronomical_tide_cm": -26.1698
         },
         {
           "issued_at": "2005-08-29T05:00:00",
           "valid_at": "2005-08-29T08:00:00",
           "actual_surge_mm": 0.602,
-          "predicted_surge_mm": 39.168
+          "predicted_surge_mm": 39.168,
+          "observed_tide_cm": -28.0,
+          "predicted_tide_cm": -24.1434,
+          "astronomical_tide_cm": -35.8958
         },
         {
           "issued_at": "2005-08-29T06:00:00",
           "valid_at": "2005-08-29T09:00:00",
           "actual_surge_mm": 5.841,
-          "predicted_surge_mm": 30.434
+          "predicted_surge_mm": 30.434,
+          "observed_tide_cm": -32.3,
+          "predicted_tide_cm": -29.8407,
+          "astronomical_tide_cm": -40.517
         },
         {
           "issued_at": "2005-08-29T07:00:00",
           "valid_at": "2005-08-29T10:00:00",
           "actual_surge_mm": 29.982,
-          "predicted_surge_mm": 15.092
+          "predicted_surge_mm": 15.092,
+          "observed_tide_cm": -29.0,
+          "predicted_tide_cm": -30.489,
+          "astronomical_tide_cm": -39.5676
         },
         {
           "issued_at": "2005-08-29T08:00:00",
           "valid_at": "2005-08-29T11:00:00",
           "actual_surge_mm": 46.765,
-          "predicted_surge_mm": 0.279
+          "predicted_surge_mm": 0.279,
+          "observed_tide_cm": -21.2,
+          "predicted_tide_cm": -25.8486,
+          "astronomical_tide_cm": -33.5179
         },
         {
           "issued_at": "2005-08-29T09:00:00",
           "valid_at": "2005-08-29T12:00:00",
           "actual_surge_mm": 70.15,
-          "predicted_surge_mm": 16.373
+          "predicted_surge_mm": 16.373,
+          "observed_tide_cm": -8.8,
+          "predicted_tide_cm": -14.1777,
+          "astronomical_tide_cm": -23.7002
         },
         {
           "issued_at": "2005-08-29T10:00:00",
           "valid_at": "2005-08-29T13:00:00",
           "actual_surge_mm": 54.843,
-          "predicted_surge_mm": 48.923
+          "predicted_surge_mm": 48.923,
+          "observed_tide_cm": 1.5,
+          "predicted_tide_cm": 0.908,
+          "astronomical_tide_cm": -12.0349
         },
         {
           "issued_at": "2005-08-29T11:00:00",
           "valid_at": "2005-08-29T14:00:00",
           "actual_surge_mm": 78.746,
-          "predicted_surge_mm": 60.235
+          "predicted_surge_mm": 60.235,
+          "observed_tide_cm": 15.0,
+          "predicted_tide_cm": 13.1489,
+          "astronomical_tide_cm": -0.6026
         },
         {
           "issued_at": "2005-08-29T12:00:00",
           "valid_at": "2005-08-29T15:00:00",
           "actual_surge_mm": 93.926,
-          "predicted_surge_mm": 78.909
+          "predicted_surge_mm": 78.909,
+          "observed_tide_cm": 25.3,
+          "predicted_tide_cm": 23.7983,
+          "astronomical_tide_cm": 8.8291
         },
         {
           "issued_at": "2005-08-29T13:00:00",
           "valid_at": "2005-08-29T16:00:00",
           "actual_surge_mm": 79.845,
-          "predicted_surge_mm": 68.362
+          "predicted_surge_mm": 68.362,
+          "observed_tide_cm": 29.8,
+          "predicted_tide_cm": 28.6517,
+          "astronomical_tide_cm": 15.1885
         },
         {
           "issued_at": "2005-08-29T14:00:00",
           "valid_at": "2005-08-29T17:00:00",
           "actual_surge_mm": 60.524,
-          "predicted_surge_mm": 78.897
+          "predicted_surge_mm": 78.897,
+          "observed_tide_cm": 30.8,
+          "predicted_tide_cm": 32.6373,
+          "astronomical_tide_cm": 18.2958
         },
         {
           "issued_at": "2005-08-29T15:00:00",
           "valid_at": "2005-08-29T18:00:00",
           "actual_surge_mm": 62.495,
-          "predicted_surge_mm": 93.622
+          "predicted_surge_mm": 93.622,
+          "observed_tide_cm": 31.3,
+          "predicted_tide_cm": 34.4127,
+          "astronomical_tide_cm": 18.8359
         },
         {
           "issued_at": "2005-08-29T16:00:00",
           "valid_at": "2005-08-29T19:00:00",
           "actual_surge_mm": 33.585,
-          "predicted_surge_mm": 58.108
+          "predicted_surge_mm": 58.108,
+          "observed_tide_cm": 27.2,
+          "predicted_tide_cm": 29.6523,
+          "astronomical_tide_cm": 18.1298
         },
         {
           "issued_at": "2005-08-29T17:00:00",
           "valid_at": "2005-08-29T20:00:00",
           "actual_surge_mm": 38.826,
-          "predicted_surge_mm": 38.968
+          "predicted_surge_mm": 38.968,
+          "observed_tide_cm": 26.8,
+          "predicted_tide_cm": 26.8142,
+          "astronomical_tide_cm": 17.7555
         },
         {
           "issued_at": "2005-08-29T18:00:00",
           "valid_at": "2005-08-29T21:00:00",
           "actual_surge_mm": 41.43,
-          "predicted_surge_mm": 47.519
+          "predicted_surge_mm": 47.519,
+          "observed_tide_cm": 28.2,
+          "predicted_tide_cm": 28.8089,
+          "astronomical_tide_cm": 19.0924
         },
         {
           "issued_at": "2005-08-29T19:00:00",
           "valid_at": "2005-08-29T22:00:00",
           "actual_surge_mm": 55.834,
-          "predicted_surge_mm": 38.919
+          "predicted_surge_mm": 38.919,
+          "observed_tide_cm": 33.5,
+          "predicted_tide_cm": 31.8085,
+          "astronomical_tide_cm": 22.8875
         },
         {
           "issued_at": "2005-08-29T20:00:00",
           "valid_at": "2005-08-29T23:00:00",
           "actual_surge_mm": 73.837,
-          "predicted_surge_mm": 64.082
+          "predicted_surge_mm": 64.082,
+          "observed_tide_cm": 41.2,
+          "predicted_tide_cm": 40.2245,
+          "astronomical_tide_cm": 28.9615
         },
         {
           "issued_at": "2005-08-29T21:00:00",
           "valid_at": "2005-08-30T00:00:00",
           "actual_surge_mm": 89.267,
-          "predicted_surge_mm": 86.925
+          "predicted_surge_mm": 86.925,
+          "observed_tide_cm": 49.6,
+          "predicted_tide_cm": 49.3658,
+          "astronomical_tide_cm": 36.1592
         },
         {
           "issued_at": "2005-08-29T22:00:00",
           "valid_at": "2005-08-30T01:00:00",
           "actual_surge_mm": 83.861,
-          "predicted_surge_mm": 99.086
+          "predicted_surge_mm": 99.086,
+          "observed_tide_cm": 55.6,
+          "predicted_tide_cm": 57.1225,
+          "astronomical_tide_cm": 42.5852
         },
         {
           "issued_at": "2005-08-29T23:00:00",
           "valid_at": "2005-08-30T02:00:00",
           "actual_surge_mm": 96.795,
-          "predicted_surge_mm": 103.181
+          "predicted_surge_mm": 103.181,
+          "observed_tide_cm": 61.1,
+          "predicted_tide_cm": 61.7386,
+          "astronomical_tide_cm": 46.0712
         },
         {
           "issued_at": "2005-08-30T00:00:00",
           "valid_at": "2005-08-30T03:00:00",
           "actual_surge_mm": 84.883,
-          "predicted_surge_mm": 115.267
+          "predicted_surge_mm": 115.267,
+          "observed_tide_cm": 59.5,
+          "predicted_tide_cm": 62.5384,
+          "astronomical_tide_cm": 44.7466
         },
         {
           "issued_at": "2005-08-30T01:00:00",
           "valid_at": "2005-08-30T04:00:00",
           "actual_surge_mm": 117.326,
-          "predicted_surge_mm": 101.022
+          "predicted_surge_mm": 101.022,
+          "observed_tide_cm": 56.3,
+          "predicted_tide_cm": 54.6696,
+          "astronomical_tide_cm": 37.5606
         },
         {
           "issued_at": "2005-08-30T02:00:00",
           "valid_at": "2005-08-30T05:00:00",
           "actual_surge_mm": 106.395,
-          "predicted_surge_mm": 108.146
+          "predicted_surge_mm": 108.146,
+          "observed_tide_cm": 42.7,
+          "predicted_tide_cm": 42.8751,
+          "astronomical_tide_cm": 24.6337
         },
         {
           "issued_at": "2005-08-30T03:00:00",
           "valid_at": "2005-08-30T06:00:00",
           "actual_surge_mm": 104.267,
-          "predicted_surge_mm": 84.749
+          "predicted_surge_mm": 84.749,
+          "observed_tide_cm": 25.4,
+          "predicted_tide_cm": 23.4482,
+          "astronomical_tide_cm": 7.3625
         },
         {
           "issued_at": "2005-08-30T04:00:00",
           "valid_at": "2005-08-30T07:00:00",
           "actual_surge_mm": 75.116,
-          "predicted_surge_mm": 98.014
+          "predicted_surge_mm": 98.014,
+          "observed_tide_cm": 3.5,
+          "predicted_tide_cm": 5.7898,
+          "astronomical_tide_cm": -11.7582
         },
         {
           "issued_at": "2005-08-30T05:00:00",
           "valid_at": "2005-08-30T08:00:00",
           "actual_surge_mm": 79.356,
-          "predicted_surge_mm": 89.746
+          "predicted_surge_mm": 89.746,
+          "observed_tide_cm": -13.8,
+          "predicted_tide_cm": -12.761,
+          "astronomical_tide_cm": -29.5876
         },
         {
           "issued_at": "2005-08-30T06:00:00",
           "valid_at": "2005-08-30T09:00:00",
           "actual_surge_mm": 64.507,
-          "predicted_surge_mm": 92.782
+          "predicted_surge_mm": 92.782,
+          "observed_tide_cm": -28.6,
+          "predicted_tide_cm": -25.7725,
+          "astronomical_tide_cm": -43.0
         },
         {
           "issued_at": "2005-08-30T07:00:00",
           "valid_at": "2005-08-30T10:00:00",
           "actual_surge_mm": 99.975,
-          "predicted_surge_mm": 98.607
+          "predicted_surge_mm": 98.607,
+          "observed_tide_cm": -31.4,
+          "predicted_tide_cm": -31.5368,
+          "astronomical_tide_cm": -49.6096
         },
         {
           "issued_at": "2005-08-30T08:00:00",
           "valid_at": "2005-08-30T11:00:00",
           "actual_surge_mm": 109.031,
-          "predicted_surge_mm": 123.289
+          "predicted_surge_mm": 123.289,
+          "observed_tide_cm": -28.8,
+          "predicted_tide_cm": -27.3742,
+          "astronomical_tide_cm": -48.3591
         },
         {
           "issued_at": "2005-08-30T09:00:00",
           "valid_at": "2005-08-30T12:00:00",
           "actual_surge_mm": 107.554,
-          "predicted_surge_mm": 120.159
+          "predicted_surge_mm": 120.159,
+          "observed_tide_cm": -19.9,
+          "predicted_tide_cm": -18.6395,
+          "astronomical_tide_cm": -39.7867
         },
         {
           "issued_at": "2005-08-30T10:00:00",
           "valid_at": "2005-08-30T13:00:00",
           "actual_surge_mm": 113.358,
-          "predicted_surge_mm": 127.65
+          "predicted_surge_mm": 127.65,
+          "observed_tide_cm": -5.1,
+          "predicted_tide_cm": -3.6708,
+          "astronomical_tide_cm": -25.8862
         },
         {
           "issued_at": "2005-08-30T11:00:00",
           "valid_at": "2005-08-30T14:00:00",
           "actual_surge_mm": 153.796,
-          "predicted_surge_mm": 141.058
+          "predicted_surge_mm": 141.058,
+          "observed_tide_cm": 15.0,
+          "predicted_tide_cm": 13.7262,
+          "astronomical_tide_cm": -9.61
         },
         {
           "issued_at": "2005-08-30T12:00:00",
           "valid_at": "2005-08-30T15:00:00",
           "actual_surge_mm": 161.161,
-          "predicted_surge_mm": 133.037
+          "predicted_surge_mm": 133.037,
+          "observed_tide_cm": 30.2,
+          "predicted_tide_cm": 27.3876,
+          "astronomical_tide_cm": 5.8308
         },
         {
           "issued_at": "2005-08-30T13:00:00",
           "valid_at": "2005-08-30T16:00:00",
           "actual_surge_mm": 143.739,
-          "predicted_surge_mm": 138.715
+          "predicted_surge_mm": 138.715,
+          "observed_tide_cm": 39.0,
+          "predicted_tide_cm": 38.4976,
+          "astronomical_tide_cm": 17.6893
         },
         {
           "issued_at": "2005-08-30T14:00:00",
           "valid_at": "2005-08-30T17:00:00",
           "actual_surge_mm": 166.356,
-          "predicted_surge_mm": 159.783
+          "predicted_surge_mm": 159.783,
+          "observed_tide_cm": 46.7,
+          "predicted_tide_cm": 46.0427,
+          "astronomical_tide_cm": 24.2817
         },
         {
           "issued_at": "2005-08-30T15:00:00",
           "valid_at": "2005-08-30T18:00:00",
           "actual_surge_mm": 178.175,
-          "predicted_surge_mm": 172.412
+          "predicted_surge_mm": 172.412,
+          "observed_tide_cm": 48.0,
+          "predicted_tide_cm": 47.4237,
+          "astronomical_tide_cm": 25.3504
         },
         {
           "issued_at": "2005-08-30T16:00:00",
           "valid_at": "2005-08-30T19:00:00",
           "actual_surge_mm": 193.431,
-          "predicted_surge_mm": 149.706
+          "predicted_surge_mm": 149.706,
+          "observed_tide_cm": 45.5,
+          "predicted_tide_cm": 41.1275,
+          "astronomical_tide_cm": 22.1112
         },
         {
           "issued_at": "2005-08-30T17:00:00",
           "valid_at": "2005-08-30T20:00:00",
           "actual_surge_mm": 158.755,
-          "predicted_surge_mm": 159.947
+          "predicted_surge_mm": 159.947,
+          "observed_tide_cm": 36.4,
+          "predicted_tide_cm": 36.5192,
+          "astronomical_tide_cm": 16.929
         },
         {
           "issued_at": "2005-08-30T18:00:00",
           "valid_at": "2005-08-30T21:00:00",
           "actual_surge_mm": 96.528,
-          "predicted_surge_mm": 167.809
+          "predicted_surge_mm": 167.809,
+          "observed_tide_cm": 26.0,
+          "predicted_tide_cm": 33.1281,
+          "astronomical_tide_cm": 12.6525
         },
         {
           "issued_at": "2005-08-30T19:00:00",
           "valid_at": "2005-08-30T22:00:00",
           "actual_surge_mm": 123.778,
-          "predicted_surge_mm": 196.391
+          "predicted_surge_mm": 196.391,
+          "observed_tide_cm": 28.5,
+          "predicted_tide_cm": 35.7613,
+          "astronomical_tide_cm": 11.7559
         },
         {
           "issued_at": "2005-08-30T20:00:00",
           "valid_at": "2005-08-30T23:00:00",
           "actual_surge_mm": 187.13,
-          "predicted_surge_mm": 193.823
+          "predicted_surge_mm": 193.823,
+          "observed_tide_cm": 39.5,
+          "predicted_tide_cm": 40.1693,
+          "astronomical_tide_cm": 15.5521
         },
         {
           "issued_at": "2005-08-30T21:00:00",
           "valid_at": "2005-08-31T00:00:00",
           "actual_surge_mm": 208.779,
-          "predicted_surge_mm": 160.813
+          "predicted_surge_mm": 160.813,
+          "observed_tide_cm": 50.5,
+          "predicted_tide_cm": 45.7034,
+          "astronomical_tide_cm": 23.7424
         },
         {
           "issued_at": "2005-08-30T22:00:00",
           "valid_at": "2005-08-31T01:00:00",
           "actual_surge_mm": 146.155,
-          "predicted_surge_mm": 157.849
+          "predicted_surge_mm": 157.849,
+          "observed_tide_cm": 55.5,
+          "predicted_tide_cm": 56.6694,
+          "astronomical_tide_cm": 34.4533
         },
         {
           "issued_at": "2005-08-30T23:00:00",
           "valid_at": "2005-08-31T02:00:00",
           "actual_surge_mm": 192.86,
-          "predicted_surge_mm": 188.125
+          "predicted_surge_mm": 188.125,
+          "observed_tide_cm": 71.2,
+          "predicted_tide_cm": 70.7265,
+          "astronomical_tide_cm": 44.7287
         },
         {
           "issued_at": "2005-08-31T00:00:00",
           "valid_at": "2005-08-31T03:00:00",
           "actual_surge_mm": 156.327,
-          "predicted_surge_mm": 182.145
+          "predicted_surge_mm": 182.145,
+          "observed_tide_cm": 74.9,
+          "predicted_tide_cm": 77.4818,
+          "astronomical_tide_cm": 51.2994
         },
         {
           "issued_at": "2005-08-31T01:00:00",
           "valid_at": "2005-08-31T04:00:00",
           "actual_surge_mm": 100.143,
-          "predicted_surge_mm": 169.122
+          "predicted_surge_mm": 169.122,
+          "observed_tide_cm": 69.9,
+          "predicted_tide_cm": 76.7979,
+          "astronomical_tide_cm": 51.4144
         },
         {
           "issued_at": "2005-08-31T02:00:00",
           "valid_at": "2005-08-31T05:00:00",
           "actual_surge_mm": 226.174,
-          "predicted_surge_mm": 187.874
+          "predicted_surge_mm": 187.874,
+          "observed_tide_cm": 74.8,
+          "predicted_tide_cm": 70.97,
+          "astronomical_tide_cm": 43.56
         },
         {
           "issued_at": "2005-08-31T03:00:00",
           "valid_at": "2005-08-31T06:00:00",
           "actual_surge_mm": 167.015,
-          "predicted_surge_mm": 160.259
+          "predicted_surge_mm": 160.259,
+          "observed_tide_cm": 53.1,
+          "predicted_tide_cm": 52.4244,
+          "astronomical_tide_cm": 27.9426
         },
         {
           "issued_at": "2005-08-31T04:00:00",
           "valid_at": "2005-08-31T07:00:00",
           "actual_surge_mm": 169.09,
-          "predicted_surge_mm": 75.769
+          "predicted_surge_mm": 75.769,
+          "observed_tide_cm": 31.7,
+          "predicted_tide_cm": 22.3679,
+          "astronomical_tide_cm": 6.6277
         },
         {
           "issued_at": "2005-08-31T05:00:00",
           "valid_at": "2005-08-31T08:00:00",
           "actual_surge_mm": 175.579,
-          "predicted_surge_mm": 156.824
+          "predicted_surge_mm": 156.824,
+          "observed_tide_cm": 8.8,
+          "predicted_tide_cm": 6.9245,
+          "astronomical_tide_cm": -16.7583
         },
         {
           "issued_at": "2005-08-31T06:00:00",
           "valid_at": "2005-08-31T09:00:00",
           "actual_surge_mm": 219.017,
-          "predicted_surge_mm": 111.729
+          "predicted_surge_mm": 111.729,
+          "observed_tide_cm": -7.9,
+          "predicted_tide_cm": -18.6288,
+          "astronomical_tide_cm": -37.7818
         },
         {
           "issued_at": "2005-08-31T07:00:00",
           "valid_at": "2005-08-31T10:00:00",
           "actual_surge_mm": 298.975,
-          "predicted_surge_mm": 130.777
+          "predicted_surge_mm": 130.777,
+          "observed_tide_cm": -14.3,
+          "predicted_tide_cm": -31.1198,
+          "astronomical_tide_cm": -52.2719
         },
         {
           "issued_at": "2005-08-31T08:00:00",
           "valid_at": "2005-08-31T11:00:00",
           "actual_surge_mm": 193.032,
-          "predicted_surge_mm": 166.106
+          "predicted_surge_mm": 166.106,
+          "observed_tide_cm": -29.7,
+          "predicted_tide_cm": -32.3926,
+          "astronomical_tide_cm": -57.4019
         },
         {
           "issued_at": "2005-08-31T09:00:00",
           "valid_at": "2005-08-31T12:00:00",
           "actual_surge_mm": 307.967,
-          "predicted_surge_mm": 184.791
+          "predicted_surge_mm": 184.791,
+          "observed_tide_cm": -12.7,
+          "predicted_tide_cm": -25.0176,
+          "astronomical_tide_cm": -52.4246
         },
         {
           "issued_at": "2005-08-31T10:00:00",
           "valid_at": "2005-08-31T13:00:00",
           "actual_surge_mm": 268.84,
-          "predicted_surge_mm": 264.388
+          "predicted_surge_mm": 264.388,
+          "observed_tide_cm": -2.5,
+          "predicted_tide_cm": -2.9452,
+          "astronomical_tide_cm": -38.8244
         },
         {
           "issued_at": "2005-08-31T11:00:00",
           "valid_at": "2005-08-31T14:00:00",
           "actual_surge_mm": 321.844,
-          "predicted_surge_mm": 170.92
+          "predicted_surge_mm": 170.92,
+          "observed_tide_cm": 21.9,
+          "predicted_tide_cm": 6.8076,
+          "astronomical_tide_cm": -19.873
         },
         {
           "issued_at": "2005-08-31T12:00:00",
           "valid_at": "2005-08-31T15:00:00",
           "actual_surge_mm": 316.498,
-          "predicted_surge_mm": 282.212
+          "predicted_surge_mm": 282.212,
+          "observed_tide_cm": 40.8,
+          "predicted_tide_cm": 37.3714,
+          "astronomical_tide_cm": 0.2198
         },
         {
           "issued_at": "2005-08-31T13:00:00",
           "valid_at": "2005-08-31T16:00:00",
           "actual_surge_mm": 419.82,
-          "predicted_surge_mm": 280.351
+          "predicted_surge_mm": 280.351,
+          "observed_tide_cm": 66.7,
+          "predicted_tide_cm": 52.7531,
+          "astronomical_tide_cm": 17.2975
         },
         {
           "issued_at": "2005-08-31T14:00:00",
           "valid_at": "2005-08-31T17:00:00",
           "actual_surge_mm": 363.175,
-          "predicted_surge_mm": 303.607
+          "predicted_surge_mm": 303.607,
+          "observed_tide_cm": 70.1,
+          "predicted_tide_cm": 64.1432,
+          "astronomical_tide_cm": 28.1779
         },
         {
           "issued_at": "2005-08-31T15:00:00",
           "valid_at": "2005-08-31T18:00:00",
           "actual_surge_mm": 296.822,
-          "predicted_surge_mm": 345.082
+          "predicted_surge_mm": 345.082,
+          "observed_tide_cm": 65.0,
+          "predicted_tide_cm": 69.826,
+          "astronomical_tide_cm": 31.3578
         },
         {
           "issued_at": "2005-08-31T16:00:00",
           "valid_at": "2005-08-31T19:00:00",
           "actual_surge_mm": 386.478,
-          "predicted_surge_mm": 403.573
+          "predicted_surge_mm": 403.573,
+          "observed_tide_cm": 68.7,
+          "predicted_tide_cm": 70.4095,
+          "astronomical_tide_cm": 27.3803
         },
         {
           "issued_at": "2005-08-31T17:00:00",
           "valid_at": "2005-08-31T20:00:00",
           "actual_surge_mm": 317.624,
-          "predicted_surge_mm": 407.254
+          "predicted_surge_mm": 407.254,
+          "observed_tide_cm": 52.5,
+          "predicted_tide_cm": 61.463,
+          "astronomical_tide_cm": 18.7345
         },
         {
           "issued_at": "2005-08-31T18:00:00",
           "valid_at": "2005-08-31T21:00:00",
           "actual_surge_mm": 493.345,
-          "predicted_surge_mm": 279.694
+          "predicted_surge_mm": 279.694,
+          "observed_tide_cm": 60.7,
+          "predicted_tide_cm": 39.3349,
+          "astronomical_tide_cm": 9.2122
         },
         {
           "issued_at": "2005-08-31T19:00:00",
           "valid_at": "2005-08-31T22:00:00",
           "actual_surge_mm": 567.578,
-          "predicted_surge_mm": 393.485
+          "predicted_surge_mm": 393.485,
+          "observed_tide_cm": 62.6,
+          "predicted_tide_cm": 45.1907,
+          "astronomical_tide_cm": 2.8142
         },
         {
           "issued_at": "2005-08-31T20:00:00",
           "valid_at": "2005-08-31T23:00:00",
           "actual_surge_mm": 654.85,
-          "predicted_surge_mm": 357.603
+          "predicted_surge_mm": 357.603,
+          "observed_tide_cm": 72.4,
+          "predicted_tide_cm": 42.6753,
+          "astronomical_tide_cm": 2.5181
         },
         {
           "issued_at": "2005-08-31T21:00:00",
           "valid_at": "2005-09-01T00:00:00",
           "actual_surge_mm": 820.316,
-          "predicted_surge_mm": 446.697
+          "predicted_surge_mm": 446.697,
+          "observed_tide_cm": 97.3,
+          "predicted_tide_cm": 59.9381,
+          "astronomical_tide_cm": 9.3313
         },
         {
           "issued_at": "2005-08-31T22:00:00",
           "valid_at": "2005-09-01T01:00:00",
           "actual_surge_mm": 708.64,
-          "predicted_surge_mm": 535.64
+          "predicted_surge_mm": 535.64,
+          "observed_tide_cm": 100.2,
+          "predicted_tide_cm": 82.9,
+          "astronomical_tide_cm": 21.9657
         },
         {
           "issued_at": "2005-08-31T23:00:00",
           "valid_at": "2005-09-01T02:00:00",
           "actual_surge_mm": 670.066,
-          "predicted_surge_mm": 559.469
+          "predicted_surge_mm": 559.469,
+          "observed_tide_cm": 112.9,
+          "predicted_tide_cm": 101.8403,
+          "astronomical_tide_cm": 37.2117
         },
         {
           "issued_at": "2005-09-01T00:00:00",
           "valid_at": "2005-09-01T03:00:00",
           "actual_surge_mm": 492.546,
-          "predicted_surge_mm": 725.781
+          "predicted_surge_mm": 725.781,
+          "observed_tide_cm": 109.9,
+          "predicted_tide_cm": 133.2235,
+          "astronomical_tide_cm": 50.8238
         },
         {
           "issued_at": "2005-09-01T01:00:00",
           "valid_at": "2005-09-01T04:00:00",
           "actual_surge_mm": 459.511,
-          "predicted_surge_mm": 570.809
+          "predicted_surge_mm": 570.809,
+          "observed_tide_cm": 115.1,
+          "predicted_tide_cm": 126.2298,
+          "astronomical_tide_cm": 58.6097
         },
         {
           "issued_at": "2005-09-01T02:00:00",
           "valid_at": "2005-09-01T05:00:00",
           "actual_surge_mm": 411.046,
-          "predicted_surge_mm": 586.037
+          "predicted_surge_mm": 586.037,
+          "observed_tide_cm": 109.3,
+          "predicted_tide_cm": 126.7991,
+          "astronomical_tide_cm": 57.4578
         },
         {
           "issued_at": "2005-09-01T03:00:00",
           "valid_at": "2005-09-01T06:00:00",
           "actual_surge_mm": 506.915,
-          "predicted_surge_mm": 444.849
+          "predicted_surge_mm": 444.849,
+          "observed_tide_cm": 107.3,
+          "predicted_tide_cm": 101.0934,
+          "astronomical_tide_cm": 46.1377
         },
         {
           "issued_at": "2005-09-01T04:00:00",
           "valid_at": "2005-09-01T07:00:00",
           "actual_surge_mm": 443.256,
-          "predicted_surge_mm": 319.989
+          "predicted_surge_mm": 319.989,
+          "observed_tide_cm": 79.9,
+          "predicted_tide_cm": 67.5733,
+          "astronomical_tide_cm": 25.7542
         },
         {
           "issued_at": "2005-09-01T05:00:00",
           "valid_at": "2005-09-01T08:00:00",
           "actual_surge_mm": 398.695,
-          "predicted_surge_mm": 376.67
+          "predicted_surge_mm": 376.67,
+          "observed_tide_cm": 48.7,
+          "predicted_tide_cm": 46.4975,
+          "astronomical_tide_cm": -0.284
         },
         {
           "issued_at": "2005-09-01T06:00:00",
           "valid_at": "2005-09-01T09:00:00",
           "actual_surge_mm": 300.189,
-          "predicted_surge_mm": 424.122
+          "predicted_surge_mm": 424.122,
+          "observed_tide_cm": 11.8,
+          "predicted_tide_cm": 24.1933,
+          "astronomical_tide_cm": -26.8971
         },
         {
           "issued_at": "2005-09-01T07:00:00",
           "valid_at": "2005-09-01T10:00:00",
           "actual_surge_mm": 226.059,
-          "predicted_surge_mm": 548.69
+          "predicted_surge_mm": 548.69,
+          "observed_tide_cm": -17.5,
+          "predicted_tide_cm": 14.7631,
+          "astronomical_tide_cm": -48.5268
         },
         {
           "issued_at": "2005-09-01T08:00:00",
           "valid_at": "2005-09-01T11:00:00",
           "actual_surge_mm": 157.655,
-          "predicted_surge_mm": 399.985
+          "predicted_surge_mm": 399.985,
+          "observed_tide_cm": -36.6,
+          "predicted_tide_cm": -12.367,
+          "astronomical_tide_cm": -60.5963
         },
         {
           "issued_at": "2005-09-01T09:00:00",
           "valid_at": "2005-09-01T12:00:00",
           "actual_surge_mm": 48.826,
-          "predicted_surge_mm": 385.151
+          "predicted_surge_mm": 385.151,
+          "observed_tide_cm": -47.6,
+          "predicted_tide_cm": -13.9675,
+          "astronomical_tide_cm": -60.7572
         },
         {
           "issued_at": "2005-09-01T10:00:00",
           "valid_at": "2005-09-01T13:00:00",
           "actual_surge_mm": 40.737,
-          "predicted_surge_mm": 245.37
+          "predicted_surge_mm": 245.37,
+          "observed_tide_cm": -36.8,
+          "predicted_tide_cm": -16.3367,
+          "astronomical_tide_cm": -49.4865
         },
         {
           "issued_at": "2005-09-01T11:00:00",
           "valid_at": "2005-09-01T14:00:00",
           "actual_surge_mm": 21.803,
-          "predicted_surge_mm": 120.765
+          "predicted_surge_mm": 120.765,
+          "observed_tide_cm": -18.7,
+          "predicted_tide_cm": -8.8038,
+          "astronomical_tide_cm": -29.857
         },
         {
           "issued_at": "2005-09-01T12:00:00",
           "valid_at": "2005-09-01T15:00:00",
           "actual_surge_mm": -16.088,
-          "predicted_surge_mm": 19.352
+          "predicted_surge_mm": 19.352,
+          "observed_tide_cm": 0.6,
+          "predicted_tide_cm": 4.144,
+          "astronomical_tide_cm": -6.6413
         },
         {
           "issued_at": "2005-09-01T13:00:00",
           "valid_at": "2005-09-01T16:00:00",
           "actual_surge_mm": -48.615,
-          "predicted_surge_mm": -41.57
+          "predicted_surge_mm": -41.57,
+          "observed_tide_cm": 17.8,
+          "predicted_tide_cm": 18.5045,
+          "astronomical_tide_cm": 14.9052
         },
         {
           "issued_at": "2005-09-01T14:00:00",
           "valid_at": "2005-09-01T17:00:00",
           "actual_surge_mm": -93.776,
-          "predicted_surge_mm": -28.076
+          "predicted_surge_mm": -28.076,
+          "observed_tide_cm": 26.7,
+          "predicted_tide_cm": 33.27,
+          "astronomical_tide_cm": 30.2496
         },
         {
           "issued_at": "2005-09-01T15:00:00",
           "valid_at": "2005-09-01T18:00:00",
           "actual_surge_mm": -83.206,
-          "predicted_surge_mm": -100.853
+          "predicted_surge_mm": -100.853,
+          "observed_tide_cm": 32.0,
+          "predicted_tide_cm": 30.2353,
+          "astronomical_tide_cm": 36.5698
         },
         {
           "issued_at": "2005-09-01T16:00:00",
           "valid_at": "2005-09-01T19:00:00",
           "actual_surge_mm": -186.644,
-          "predicted_surge_mm": -84.727
+          "predicted_surge_mm": -84.727,
+          "observed_tide_cm": 16.8,
+          "predicted_tide_cm": 26.9917,
+          "astronomical_tide_cm": 33.4031
         },
         {
           "issued_at": "2005-09-01T17:00:00",
           "valid_at": "2005-09-01T20:00:00",
           "actual_surge_mm": -180.804,
-          "predicted_surge_mm": -62.37
+          "predicted_surge_mm": -62.37,
+          "observed_tide_cm": 5.8,
+          "predicted_tide_cm": 17.6434,
+          "astronomical_tide_cm": 22.8177
         },
         {
           "issued_at": "2005-09-01T18:00:00",
           "valid_at": "2005-09-01T21:00:00",
           "actual_surge_mm": -211.657,
-          "predicted_surge_mm": -51.658
+          "predicted_surge_mm": -51.658,
+          "observed_tide_cm": -11.2,
+          "predicted_tide_cm": 4.7999,
+          "astronomical_tide_cm": 8.9582
         },
         {
           "issued_at": "2005-09-01T19:00:00",
           "valid_at": "2005-09-01T22:00:00",
           "actual_surge_mm": -165.528,
-          "predicted_surge_mm": -112.828
+          "predicted_surge_mm": -112.828,
+          "observed_tide_cm": -17.8,
+          "predicted_tide_cm": -12.53,
+          "astronomical_tide_cm": -3.0599
         },
         {
           "issued_at": "2005-09-01T20:00:00",
           "valid_at": "2005-09-01T23:00:00",
           "actual_surge_mm": -195.88,
-          "predicted_surge_mm": -135.655
+          "predicted_surge_mm": -135.655,
+          "observed_tide_cm": -25.1,
+          "predicted_tide_cm": -19.0775,
+          "astronomical_tide_cm": -8.6653
         },
         {
           "issued_at": "2005-09-01T21:00:00",
           "valid_at": "2005-09-02T00:00:00",
           "actual_surge_mm": -122.075,
-          "predicted_surge_mm": -145.211
+          "predicted_surge_mm": -145.211,
+          "observed_tide_cm": -12.6,
+          "predicted_tide_cm": -14.9136,
+          "astronomical_tide_cm": -5.2627
         },
         {
           "issued_at": "2005-09-01T22:00:00",
           "valid_at": "2005-09-02T01:00:00",
           "actual_surge_mm": -128.598,
-          "predicted_surge_mm": -137.099
+          "predicted_surge_mm": -137.099,
+          "observed_tide_cm": 0.9,
+          "predicted_tide_cm": 0.0499,
+          "astronomical_tide_cm": 6.9477
         },
         {
           "issued_at": "2005-09-01T23:00:00",
           "valid_at": "2005-09-02T02:00:00",
           "actual_surge_mm": -57.449,
-          "predicted_surge_mm": -138.093
+          "predicted_surge_mm": -138.093,
+          "observed_tide_cm": 28.0,
+          "predicted_tide_cm": 19.9356,
+          "astronomical_tide_cm": 25.0437
         },
         {
           "issued_at": "2005-09-02T00:00:00",
           "valid_at": "2005-09-02T03:00:00",
           "actual_surge_mm": -10.966,
-          "predicted_surge_mm": -74.837
+          "predicted_surge_mm": -74.837,
+          "observed_tide_cm": 53.5,
+          "predicted_tide_cm": 47.1129,
+          "astronomical_tide_cm": 44.2519
         },
         {
           "issued_at": "2005-09-02T01:00:00",
           "valid_at": "2005-09-02T04:00:00",
           "actual_surge_mm": -11.204,
-          "predicted_surge_mm": -61.794
+          "predicted_surge_mm": -61.794,
+          "observed_tide_cm": 69.7,
+          "predicted_tide_cm": 64.641,
+          "astronomical_tide_cm": 59.2439
         },
         {
           "issued_at": "2005-09-02T02:00:00",
           "valid_at": "2005-09-02T05:00:00",
           "actual_surge_mm": -11.864,
-          "predicted_surge_mm": -11.819
+          "predicted_surge_mm": -11.819,
+          "observed_tide_cm": 76.5,
+          "predicted_tide_cm": 76.5045,
+          "astronomical_tide_cm": 65.4563
         },
         {
           "issued_at": "2005-09-02T03:00:00",
           "valid_at": "2005-09-02T06:00:00",
           "actual_surge_mm": 2.358,
-          "predicted_surge_mm": 37.413
+          "predicted_surge_mm": 37.413,
+          "observed_tide_cm": 72.7,
+          "predicted_tide_cm": 76.2055,
+          "astronomical_tide_cm": 60.1751
         },
         {
           "issued_at": "2005-09-02T04:00:00",
           "valid_at": "2005-09-02T07:00:00",
           "actual_surge_mm": -25.356,
-          "predicted_surge_mm": 41.886
+          "predicted_surge_mm": 41.886,
+          "observed_tide_cm": 52.5,
+          "predicted_tide_cm": 59.2242,
+          "astronomical_tide_cm": 43.2546
         },
         {
           "issued_at": "2005-09-02T05:00:00",
           "valid_at": "2005-09-02T08:00:00",
           "actual_surge_mm": -19.254,
-          "predicted_surge_mm": -11.281
+          "predicted_surge_mm": -11.281,
+          "observed_tide_cm": 26.3,
+          "predicted_tide_cm": 27.0973,
+          "astronomical_tide_cm": 17.3565
         }
       ]
     },
@@ -2157,1021 +3201,1531 @@
           "issued_at": "2005-08-26T01:00:00",
           "valid_at": "2005-08-26T07:00:00",
           "actual_surge_mm": 75.649,
-          "predicted_surge_mm": 74.891
+          "predicted_surge_mm": 74.891,
+          "observed_tide_cm": -6.4,
+          "predicted_tide_cm": -6.4758,
+          "astronomical_tide_cm": -14.6359
         },
         {
           "issued_at": "2005-08-26T02:00:00",
           "valid_at": "2005-08-26T08:00:00",
           "actual_surge_mm": 73.802,
-          "predicted_surge_mm": 62.246
+          "predicted_surge_mm": 62.246,
+          "observed_tide_cm": 8.4,
+          "predicted_tide_cm": 7.2444,
+          "astronomical_tide_cm": 2.1559
         },
         {
           "issued_at": "2005-08-26T03:00:00",
           "valid_at": "2005-08-26T09:00:00",
           "actual_surge_mm": 71.99,
-          "predicted_surge_mm": 59.005
+          "predicted_surge_mm": 59.005,
+          "observed_tide_cm": 21.2,
+          "predicted_tide_cm": 19.9015,
+          "astronomical_tide_cm": 16.0326
         },
         {
           "issued_at": "2005-08-26T04:00:00",
           "valid_at": "2005-08-26T10:00:00",
           "actual_surge_mm": 81.962,
-          "predicted_surge_mm": 52.399
+          "predicted_surge_mm": 52.399,
+          "observed_tide_cm": 30.6,
+          "predicted_tide_cm": 27.6437,
+          "astronomical_tide_cm": 24.0347
         },
         {
           "issued_at": "2005-08-26T05:00:00",
           "valid_at": "2005-08-26T11:00:00",
           "actual_surge_mm": 91.843,
-          "predicted_surge_mm": 47.711
+          "predicted_surge_mm": 47.711,
+          "observed_tide_cm": 33.8,
+          "predicted_tide_cm": 29.3868,
+          "astronomical_tide_cm": 24.8415
         },
         {
           "issued_at": "2005-08-26T06:00:00",
           "valid_at": "2005-08-26T12:00:00",
           "actual_surge_mm": 86.307,
-          "predicted_surge_mm": 55.921
+          "predicted_surge_mm": 55.921,
+          "observed_tide_cm": 29.2,
+          "predicted_tide_cm": 26.1614,
+          "astronomical_tide_cm": 18.9859
         },
         {
           "issued_at": "2005-08-26T07:00:00",
           "valid_at": "2005-08-26T13:00:00",
           "actual_surge_mm": 104.268,
-          "predicted_surge_mm": 64.256
+          "predicted_surge_mm": 64.256,
+          "observed_tide_cm": 22.7,
+          "predicted_tide_cm": 18.6988,
+          "astronomical_tide_cm": 8.7456
         },
         {
           "issued_at": "2005-08-26T08:00:00",
           "valid_at": "2005-08-26T14:00:00",
           "actual_surge_mm": 111.569,
-          "predicted_surge_mm": 85.477
+          "predicted_surge_mm": 85.477,
+          "observed_tide_cm": 14.3,
+          "predicted_tide_cm": 11.6908,
+          "astronomical_tide_cm": -2.3613
         },
         {
           "issued_at": "2005-08-26T09:00:00",
           "valid_at": "2005-08-26T15:00:00",
           "actual_surge_mm": 113.724,
-          "predicted_surge_mm": 88.787
+          "predicted_surge_mm": 88.787,
+          "observed_tide_cm": 8.2,
+          "predicted_tide_cm": 5.7063,
+          "astronomical_tide_cm": -10.4869
         },
         {
           "issued_at": "2005-08-26T10:00:00",
           "valid_at": "2005-08-26T16:00:00",
           "actual_surge_mm": 96.572,
-          "predicted_surge_mm": 95.406
+          "predicted_surge_mm": 95.406,
+          "observed_tide_cm": 5.7,
+          "predicted_tide_cm": 5.5834,
+          "astronomical_tide_cm": -12.5801
         },
         {
           "issued_at": "2005-08-26T11:00:00",
           "valid_at": "2005-08-26T17:00:00",
           "actual_surge_mm": 52.192,
-          "predicted_surge_mm": 96.608
+          "predicted_surge_mm": 96.608,
+          "observed_tide_cm": 6.9,
+          "predicted_tide_cm": 11.3416,
+          "astronomical_tide_cm": -7.3374
         },
         {
           "issued_at": "2005-08-26T12:00:00",
           "valid_at": "2005-08-26T18:00:00",
           "actual_surge_mm": 71.45,
-          "predicted_surge_mm": 90.793
+          "predicted_surge_mm": 90.793,
+          "observed_tide_cm": 20.0,
+          "predicted_tide_cm": 21.9343,
+          "astronomical_tide_cm": 4.406
         },
         {
           "issued_at": "2005-08-26T13:00:00",
           "valid_at": "2005-08-26T19:00:00",
           "actual_surge_mm": 61.729,
-          "predicted_surge_mm": 81.509
+          "predicted_surge_mm": 81.509,
+          "observed_tide_cm": 33.5,
+          "predicted_tide_cm": 35.478,
+          "astronomical_tide_cm": 19.988
         },
         {
           "issued_at": "2005-08-26T14:00:00",
           "valid_at": "2005-08-26T20:00:00",
           "actual_surge_mm": 47.167,
-          "predicted_surge_mm": 88.038
+          "predicted_surge_mm": 88.038,
+          "observed_tide_cm": 46.5,
+          "predicted_tide_cm": 50.5871,
+          "astronomical_tide_cm": 35.7493
         },
         {
           "issued_at": "2005-08-26T15:00:00",
           "valid_at": "2005-08-26T21:00:00",
           "actual_surge_mm": 41.967,
-          "predicted_surge_mm": 79.3
+          "predicted_surge_mm": 79.3,
+          "observed_tide_cm": 57.0,
+          "predicted_tide_cm": 60.7333,
+          "astronomical_tide_cm": 48.0133
         },
         {
           "issued_at": "2005-08-26T16:00:00",
           "valid_at": "2005-08-26T22:00:00",
           "actual_surge_mm": 49.218,
-          "predicted_surge_mm": 72.735
+          "predicted_surge_mm": 72.735,
+          "observed_tide_cm": 63.0,
+          "predicted_tide_cm": 65.3517,
+          "astronomical_tide_cm": 53.9037
         },
         {
           "issued_at": "2005-08-26T17:00:00",
           "valid_at": "2005-08-26T23:00:00",
           "actual_surge_mm": 60.186,
-          "predicted_surge_mm": 51.723
+          "predicted_surge_mm": 51.723,
+          "observed_tide_cm": 62.6,
+          "predicted_tide_cm": 61.7537,
+          "astronomical_tide_cm": 51.8773
         },
         {
           "issued_at": "2005-08-26T18:00:00",
           "valid_at": "2005-08-27T00:00:00",
           "actual_surge_mm": 50.687,
-          "predicted_surge_mm": 66.376
+          "predicted_surge_mm": 66.376,
+          "observed_tide_cm": 53.4,
+          "predicted_tide_cm": 54.9689,
+          "astronomical_tide_cm": 41.9947
         },
         {
           "issued_at": "2005-08-26T19:00:00",
           "valid_at": "2005-08-27T01:00:00",
           "actual_surge_mm": 45.503,
-          "predicted_surge_mm": 75.961
+          "predicted_surge_mm": 75.961,
+          "observed_tide_cm": 39.0,
+          "predicted_tide_cm": 42.0458,
+          "astronomical_tide_cm": 25.9453
         },
         {
           "issued_at": "2005-08-26T20:00:00",
           "valid_at": "2005-08-27T02:00:00",
           "actual_surge_mm": 26.58,
-          "predicted_surge_mm": 74.775
+          "predicted_surge_mm": 74.775,
+          "observed_tide_cm": 19.7,
+          "predicted_tide_cm": 24.5195,
+          "astronomical_tide_cm": 6.7655
         },
         {
           "issued_at": "2005-08-26T21:00:00",
           "valid_at": "2005-08-27T03:00:00",
           "actual_surge_mm": 21.559,
-          "predicted_surge_mm": 70.305
+          "predicted_surge_mm": 70.305,
+          "observed_tide_cm": 1.2,
+          "predicted_tide_cm": 6.0746,
+          "astronomical_tide_cm": -11.8076
         },
         {
           "issued_at": "2005-08-26T22:00:00",
           "valid_at": "2005-08-27T04:00:00",
           "actual_surge_mm": 44.901,
-          "predicted_surge_mm": 60.172
+          "predicted_surge_mm": 60.172,
+          "observed_tide_cm": -11.6,
+          "predicted_tide_cm": -10.0729,
+          "astronomical_tide_cm": -26.2585
         },
         {
           "issued_at": "2005-08-26T23:00:00",
           "valid_at": "2005-08-27T05:00:00",
           "actual_surge_mm": 54.303,
-          "predicted_surge_mm": 50.065
+          "predicted_surge_mm": 50.065,
+          "observed_tide_cm": -20.1,
+          "predicted_tide_cm": -20.5238,
+          "astronomical_tide_cm": -34.2066
         },
         {
           "issued_at": "2005-08-27T00:00:00",
           "valid_at": "2005-08-27T06:00:00",
           "actual_surge_mm": 22.541,
-          "predicted_surge_mm": 35.924
+          "predicted_surge_mm": 35.924,
+          "observed_tide_cm": -25.9,
+          "predicted_tide_cm": -24.5617,
+          "astronomical_tide_cm": -34.9637
         },
         {
           "issued_at": "2005-08-27T01:00:00",
           "valid_at": "2005-08-27T07:00:00",
           "actual_surge_mm": 14.112,
-          "predicted_surge_mm": 35.455
+          "predicted_surge_mm": 35.455,
+          "observed_tide_cm": -23.2,
+          "predicted_tide_cm": -21.0657,
+          "astronomical_tide_cm": -29.5314
         },
         {
           "issued_at": "2005-08-27T02:00:00",
           "valid_at": "2005-08-27T08:00:00",
           "actual_surge_mm": -10.04,
-          "predicted_surge_mm": 25.783
+          "predicted_surge_mm": 25.783,
+          "observed_tide_cm": -17.9,
+          "predicted_tide_cm": -14.3177,
+          "astronomical_tide_cm": -20.1087
         },
         {
           "issued_at": "2005-08-27T03:00:00",
           "valid_at": "2005-08-27T09:00:00",
           "actual_surge_mm": -8.638,
-          "predicted_surge_mm": 21.864
+          "predicted_surge_mm": 21.864,
+          "observed_tide_cm": -8.4,
+          "predicted_tide_cm": -5.3498,
+          "astronomical_tide_cm": -9.3766
         },
         {
           "issued_at": "2005-08-27T04:00:00",
           "valid_at": "2005-08-27T10:00:00",
           "actual_surge_mm": -21.896,
-          "predicted_surge_mm": 39.68
+          "predicted_surge_mm": 39.68,
+          "observed_tide_cm": -0.8,
+          "predicted_tide_cm": 5.3576,
+          "astronomical_tide_cm": 0.1656
         },
         {
           "issued_at": "2005-08-27T05:00:00",
           "valid_at": "2005-08-27T11:00:00",
           "actual_surge_mm": -23.094,
-          "predicted_surge_mm": 55.581
+          "predicted_surge_mm": 55.581,
+          "observed_tide_cm": 6.0,
+          "predicted_tide_cm": 13.8675,
+          "astronomical_tide_cm": 6.68
         },
         {
           "issued_at": "2005-08-27T06:00:00",
           "valid_at": "2005-08-27T12:00:00",
           "actual_surge_mm": -15.318,
-          "predicted_surge_mm": 47.102
+          "predicted_surge_mm": 47.102,
+          "observed_tide_cm": 10.4,
+          "predicted_tide_cm": 16.642,
+          "astronomical_tide_cm": 9.2931
         },
         {
           "issued_at": "2005-08-27T07:00:00",
           "valid_at": "2005-08-27T13:00:00",
           "actual_surge_mm": -9.927,
-          "predicted_surge_mm": 47.329
+          "predicted_surge_mm": 47.329,
+          "observed_tide_cm": 11.0,
+          "predicted_tide_cm": 16.7256,
+          "astronomical_tide_cm": 8.2491
         },
         {
           "issued_at": "2005-08-27T08:00:00",
           "valid_at": "2005-08-27T14:00:00",
           "actual_surge_mm": -0.127,
-          "predicted_surge_mm": 49.764
+          "predicted_surge_mm": 49.764,
+          "observed_tide_cm": 9.8,
+          "predicted_tide_cm": 14.7891,
+          "astronomical_tide_cm": 4.8652
         },
         {
           "issued_at": "2005-08-27T09:00:00",
           "valid_at": "2005-08-27T15:00:00",
           "actual_surge_mm": 20.155,
-          "predicted_surge_mm": 48.718
+          "predicted_surge_mm": 48.718,
+          "observed_tide_cm": 9.6,
+          "predicted_tide_cm": 12.4563,
+          "astronomical_tide_cm": 1.2049
         },
         {
           "issued_at": "2005-08-27T10:00:00",
           "valid_at": "2005-08-27T16:00:00",
           "actual_surge_mm": 33.053,
-          "predicted_surge_mm": 41.999
+          "predicted_surge_mm": 41.999,
+          "observed_tide_cm": 10.6,
+          "predicted_tide_cm": 11.4946,
+          "astronomical_tide_cm": -0.5254
         },
         {
           "issued_at": "2005-08-27T11:00:00",
           "valid_at": "2005-08-27T17:00:00",
           "actual_surge_mm": 40.874,
-          "predicted_surge_mm": 27.373
+          "predicted_surge_mm": 27.373,
+          "observed_tide_cm": 14.1,
+          "predicted_tide_cm": 12.7499,
+          "astronomical_tide_cm": 1.3138
         },
         {
           "issued_at": "2005-08-27T12:00:00",
           "valid_at": "2005-08-27T18:00:00",
           "actual_surge_mm": 49.911,
-          "predicted_surge_mm": 16.208
+          "predicted_surge_mm": 16.208,
+          "observed_tide_cm": 20.8,
+          "predicted_tide_cm": 17.4297,
+          "astronomical_tide_cm": 7.2596
         },
         {
           "issued_at": "2005-08-27T13:00:00",
           "valid_at": "2005-08-27T19:00:00",
           "actual_surge_mm": 47.026,
-          "predicted_surge_mm": -0.151
+          "predicted_surge_mm": -0.151,
+          "observed_tide_cm": 28.9,
+          "predicted_tide_cm": 24.1823,
+          "astronomical_tide_cm": 16.5972
         },
         {
           "issued_at": "2005-08-27T14:00:00",
           "valid_at": "2005-08-27T20:00:00",
           "actual_surge_mm": 43.488,
-          "predicted_surge_mm": -9.681
+          "predicted_surge_mm": -9.681,
+          "observed_tide_cm": 38.4,
+          "predicted_tide_cm": 33.0831,
+          "astronomical_tide_cm": 27.6173
         },
         {
           "issued_at": "2005-08-27T15:00:00",
           "valid_at": "2005-08-27T21:00:00",
           "actual_surge_mm": 5.105,
-          "predicted_surge_mm": -5.042
+          "predicted_surge_mm": -5.042,
+          "observed_tide_cm": 43.8,
+          "predicted_tide_cm": 42.7853,
+          "astronomical_tide_cm": 38.1099
         },
         {
           "issued_at": "2005-08-27T16:00:00",
           "valid_at": "2005-08-27T22:00:00",
           "actual_surge_mm": 16.478,
-          "predicted_surge_mm": 2.075
+          "predicted_surge_mm": 2.075,
+          "observed_tide_cm": 51.4,
+          "predicted_tide_cm": 49.9597,
+          "astronomical_tide_cm": 45.8793
         },
         {
           "issued_at": "2005-08-27T17:00:00",
           "valid_at": "2005-08-27T23:00:00",
           "actual_surge_mm": 11.288,
-          "predicted_surge_mm": -1.667
+          "predicted_surge_mm": -1.667,
+          "observed_tide_cm": 53.4,
+          "predicted_tide_cm": 52.1045,
+          "astronomical_tide_cm": 49.1569
         },
         {
           "issued_at": "2005-08-27T18:00:00",
           "valid_at": "2005-08-28T00:00:00",
           "actual_surge_mm": 5.832,
-          "predicted_surge_mm": 17.835
+          "predicted_surge_mm": 17.835,
+          "observed_tide_cm": 51.0,
+          "predicted_tide_cm": 52.2003,
+          "astronomical_tide_cm": 46.9025
         },
         {
           "issued_at": "2005-08-27T19:00:00",
           "valid_at": "2005-08-28T01:00:00",
           "actual_surge_mm": 15.852,
-          "predicted_surge_mm": 28.339
+          "predicted_surge_mm": 28.339,
+          "observed_tide_cm": 45.6,
+          "predicted_tide_cm": 46.8487,
+          "astronomical_tide_cm": 39.0217
         },
         {
           "issued_at": "2005-08-27T20:00:00",
           "valid_at": "2005-08-28T02:00:00",
           "actual_surge_mm": 2.388,
-          "predicted_surge_mm": 28.584
+          "predicted_surge_mm": 28.584,
+          "observed_tide_cm": 33.6,
+          "predicted_tide_cm": 36.2196,
+          "astronomical_tide_cm": 26.4634
         },
         {
           "issued_at": "2005-08-27T21:00:00",
           "valid_at": "2005-08-28T03:00:00",
           "actual_surge_mm": 24.825,
-          "predicted_surge_mm": 17.819
+          "predicted_surge_mm": 17.819,
+          "observed_tide_cm": 22.0,
+          "predicted_tide_cm": 21.2994,
+          "astronomical_tide_cm": 11.1049
         },
         {
           "issued_at": "2005-08-27T22:00:00",
           "valid_at": "2005-08-28T04:00:00",
           "actual_surge_mm": 24.536,
-          "predicted_surge_mm": 34.542
+          "predicted_surge_mm": 34.542,
+          "observed_tide_cm": 6.9,
+          "predicted_tide_cm": 7.9006,
+          "astronomical_tide_cm": -4.6256
         },
         {
           "issued_at": "2005-08-27T23:00:00",
           "valid_at": "2005-08-28T05:00:00",
           "actual_surge_mm": 27.238,
-          "predicted_surge_mm": 51.421
+          "predicted_surge_mm": 51.421,
+          "observed_tide_cm": -6.6,
+          "predicted_tide_cm": -4.1817,
+          "astronomical_tide_cm": -18.3126
         },
         {
           "issued_at": "2005-08-28T00:00:00",
           "valid_at": "2005-08-28T06:00:00",
           "actual_surge_mm": 11.875,
-          "predicted_surge_mm": 41.327
+          "predicted_surge_mm": 41.327,
+          "observed_tide_cm": -18.5,
+          "predicted_tide_cm": -15.5548,
+          "astronomical_tide_cm": -28.1036
         },
         {
           "issued_at": "2005-08-28T01:00:00",
           "valid_at": "2005-08-28T07:00:00",
           "actual_surge_mm": -13.729,
-          "predicted_surge_mm": 41.922
+          "predicted_surge_mm": 41.922,
+          "observed_tide_cm": -26.9,
+          "predicted_tide_cm": -21.3349,
+          "astronomical_tide_cm": -33.0468
         },
         {
           "issued_at": "2005-08-28T02:00:00",
           "valid_at": "2005-08-28T08:00:00",
           "actual_surge_mm": -33.086,
-          "predicted_surge_mm": 22.264
+          "predicted_surge_mm": 22.264,
+          "observed_tide_cm": -29.9,
+          "predicted_tide_cm": -24.365,
+          "astronomical_tide_cm": -33.1371
         },
         {
           "issued_at": "2005-08-28T03:00:00",
           "valid_at": "2005-08-28T09:00:00",
           "actual_surge_mm": -26.358,
-          "predicted_surge_mm": 15.754
+          "predicted_surge_mm": 15.754,
+          "observed_tide_cm": -26.1,
+          "predicted_tide_cm": -21.8888,
+          "astronomical_tide_cm": -29.1399
         },
         {
           "issued_at": "2005-08-28T04:00:00",
           "valid_at": "2005-08-28T10:00:00",
           "actual_surge_mm": -6.099,
-          "predicted_surge_mm": 1.313
+          "predicted_surge_mm": 1.313,
+          "observed_tide_cm": -17.9,
+          "predicted_tide_cm": -17.1588,
+          "astronomical_tide_cm": -22.3242
         },
         {
           "issued_at": "2005-08-28T05:00:00",
           "valid_at": "2005-08-28T11:00:00",
           "actual_surge_mm": -19.071,
-          "predicted_surge_mm": 7.515
+          "predicted_surge_mm": 7.515,
+          "observed_tide_cm": -11.2,
+          "predicted_tide_cm": -8.5414,
+          "astronomical_tide_cm": -14.1965
         },
         {
           "issued_at": "2005-08-28T06:00:00",
           "valid_at": "2005-08-28T12:00:00",
           "actual_surge_mm": -6.462,
-          "predicted_surge_mm": 6.796
+          "predicted_surge_mm": 6.796,
+          "observed_tide_cm": -1.6,
+          "predicted_tide_cm": -0.2742,
+          "astronomical_tide_cm": -6.2396
         },
         {
           "issued_at": "2005-08-28T07:00:00",
           "valid_at": "2005-08-28T13:00:00",
           "actual_surge_mm": 19.579,
-          "predicted_surge_mm": 8.006
+          "predicted_surge_mm": 8.006,
+          "observed_tide_cm": 8.0,
+          "predicted_tide_cm": 6.8427,
+          "astronomical_tide_cm": 0.3609
         },
         {
           "issued_at": "2005-08-28T08:00:00",
           "valid_at": "2005-08-28T14:00:00",
           "actual_surge_mm": 8.521,
-          "predicted_surge_mm": 4.605
+          "predicted_surge_mm": 4.605,
+          "observed_tide_cm": 11.7,
+          "predicted_tide_cm": 11.3084,
+          "astronomical_tide_cm": 4.9721
         },
         {
           "issued_at": "2005-08-28T09:00:00",
           "valid_at": "2005-08-28T15:00:00",
           "actual_surge_mm": 54.207,
-          "predicted_surge_mm": 15.497
+          "predicted_surge_mm": 15.497,
+          "observed_tide_cm": 19.3,
+          "predicted_tide_cm": 15.429,
+          "astronomical_tide_cm": 7.656
         },
         {
           "issued_at": "2005-08-28T10:00:00",
           "valid_at": "2005-08-28T16:00:00",
           "actual_surge_mm": 71.831,
-          "predicted_surge_mm": 32.302
+          "predicted_surge_mm": 32.302,
+          "observed_tide_cm": 23.2,
+          "predicted_tide_cm": 19.2471,
+          "astronomical_tide_cm": 9.1043
         },
         {
           "issued_at": "2005-08-28T11:00:00",
           "valid_at": "2005-08-28T17:00:00",
           "actual_surge_mm": 63.558,
-          "predicted_surge_mm": 24.301
+          "predicted_surge_mm": 24.301,
+          "observed_tide_cm": 24.3,
+          "predicted_tide_cm": 20.3743,
+          "astronomical_tide_cm": 10.3647
         },
         {
           "issued_at": "2005-08-28T12:00:00",
           "valid_at": "2005-08-28T18:00:00",
           "actual_surge_mm": 67.706,
-          "predicted_surge_mm": 21.652
+          "predicted_surge_mm": 21.652,
+          "observed_tide_cm": 26.9,
+          "predicted_tide_cm": 22.2946,
+          "astronomical_tide_cm": 12.4653
         },
         {
           "issued_at": "2005-08-28T13:00:00",
           "valid_at": "2005-08-28T19:00:00",
           "actual_surge_mm": 48.813,
-          "predicted_surge_mm": 19.572
+          "predicted_surge_mm": 19.572,
+          "observed_tide_cm": 28.0,
+          "predicted_tide_cm": 25.0759,
+          "astronomical_tide_cm": 16.0878
         },
         {
           "issued_at": "2005-08-28T14:00:00",
           "valid_at": "2005-08-28T20:00:00",
           "actual_surge_mm": 55.362,
-          "predicted_surge_mm": -2.024
+          "predicted_surge_mm": -2.024,
+          "observed_tide_cm": 33.1,
+          "predicted_tide_cm": 27.3614,
+          "astronomical_tide_cm": 21.384
         },
         {
           "issued_at": "2005-08-28T15:00:00",
           "valid_at": "2005-08-28T21:00:00",
           "actual_surge_mm": 40.81,
-          "predicted_surge_mm": -1.493
+          "predicted_surge_mm": -1.493,
+          "observed_tide_cm": 37.5,
+          "predicted_tide_cm": 33.2697,
+          "astronomical_tide_cm": 27.9439
         },
         {
           "issued_at": "2005-08-28T16:00:00",
           "valid_at": "2005-08-28T22:00:00",
           "actual_surge_mm": 37.005,
-          "predicted_surge_mm": 18.448
+          "predicted_surge_mm": 18.448,
+          "observed_tide_cm": 43.2,
+          "predicted_tide_cm": 41.3443,
+          "astronomical_tide_cm": 34.8623
         },
         {
           "issued_at": "2005-08-28T17:00:00",
           "valid_at": "2005-08-28T23:00:00",
           "actual_surge_mm": 37.056,
-          "predicted_surge_mm": 17.895
+          "predicted_surge_mm": 17.895,
+          "observed_tide_cm": 48.2,
+          "predicted_tide_cm": 46.2839,
+          "astronomical_tide_cm": 40.869
         },
         {
           "issued_at": "2005-08-28T18:00:00",
           "valid_at": "2005-08-29T00:00:00",
           "actual_surge_mm": 57.331,
-          "predicted_surge_mm": 20.073
+          "predicted_surge_mm": 20.073,
+          "observed_tide_cm": 53.4,
+          "predicted_tide_cm": 49.6742,
+          "astronomical_tide_cm": 44.5312
         },
         {
           "issued_at": "2005-08-28T19:00:00",
           "valid_at": "2005-08-29T01:00:00",
           "actual_surge_mm": 57.945,
-          "predicted_surge_mm": 29.014
+          "predicted_surge_mm": 29.014,
+          "observed_tide_cm": 54.0,
+          "predicted_tide_cm": 51.1069,
+          "astronomical_tide_cm": 44.54
         },
         {
           "issued_at": "2005-08-28T20:00:00",
           "valid_at": "2005-08-29T02:00:00",
           "actual_surge_mm": 43.177,
-          "predicted_surge_mm": 47.436
+          "predicted_surge_mm": 47.436,
+          "observed_tide_cm": 49.3,
+          "predicted_tide_cm": 49.7259,
+          "astronomical_tide_cm": 40.0469
         },
         {
           "issued_at": "2005-08-28T21:00:00",
           "valid_at": "2005-08-29T03:00:00",
           "actual_surge_mm": 45.204,
-          "predicted_surge_mm": 49.146
+          "predicted_surge_mm": 49.146,
+          "observed_tide_cm": 41.8,
+          "predicted_tide_cm": 42.1942,
+          "astronomical_tide_cm": 30.9514
         },
         {
           "issued_at": "2005-08-28T22:00:00",
           "valid_at": "2005-08-29T04:00:00",
           "actual_surge_mm": 48.265,
-          "predicted_surge_mm": 60.468
+          "predicted_surge_mm": 60.468,
+          "observed_tide_cm": 30.2,
+          "predicted_tide_cm": 31.4203,
+          "astronomical_tide_cm": 18.0248
         },
         {
           "issued_at": "2005-08-28T23:00:00",
           "valid_at": "2005-08-29T05:00:00",
           "actual_surge_mm": 57.079,
-          "predicted_surge_mm": 65.685
+          "predicted_surge_mm": 65.685,
+          "observed_tide_cm": 16.4,
+          "predicted_tide_cm": 17.2606,
+          "astronomical_tide_cm": 2.815
         },
         {
           "issued_at": "2005-08-29T00:00:00",
           "valid_at": "2005-08-29T06:00:00",
           "actual_surge_mm": 33.48,
-          "predicted_surge_mm": 66.513
+          "predicted_surge_mm": 66.513,
+          "observed_tide_cm": -1.2,
+          "predicted_tide_cm": 2.1033,
+          "astronomical_tide_cm": -12.6358
         },
         {
           "issued_at": "2005-08-29T01:00:00",
           "valid_at": "2005-08-29T07:00:00",
           "actual_surge_mm": 19.107,
-          "predicted_surge_mm": 59.661
+          "predicted_surge_mm": 59.661,
+          "observed_tide_cm": -16.2,
+          "predicted_tide_cm": -12.1446,
+          "astronomical_tide_cm": -26.1698
         },
         {
           "issued_at": "2005-08-29T02:00:00",
           "valid_at": "2005-08-29T08:00:00",
           "actual_surge_mm": 0.602,
-          "predicted_surge_mm": 33.186
+          "predicted_surge_mm": 33.186,
+          "observed_tide_cm": -28.0,
+          "predicted_tide_cm": -24.7416,
+          "astronomical_tide_cm": -35.8958
         },
         {
           "issued_at": "2005-08-29T03:00:00",
           "valid_at": "2005-08-29T09:00:00",
           "actual_surge_mm": 5.841,
-          "predicted_surge_mm": 24.538
+          "predicted_surge_mm": 24.538,
+          "observed_tide_cm": -32.3,
+          "predicted_tide_cm": -30.4303,
+          "astronomical_tide_cm": -40.517
         },
         {
           "issued_at": "2005-08-29T04:00:00",
           "valid_at": "2005-08-29T10:00:00",
           "actual_surge_mm": 29.982,
-          "predicted_surge_mm": 25.934
+          "predicted_surge_mm": 25.934,
+          "observed_tide_cm": -29.0,
+          "predicted_tide_cm": -29.4048,
+          "astronomical_tide_cm": -39.5676
         },
         {
           "issued_at": "2005-08-29T05:00:00",
           "valid_at": "2005-08-29T11:00:00",
           "actual_surge_mm": 46.765,
-          "predicted_surge_mm": 38.781
+          "predicted_surge_mm": 38.781,
+          "observed_tide_cm": -21.2,
+          "predicted_tide_cm": -21.9984,
+          "astronomical_tide_cm": -33.5179
         },
         {
           "issued_at": "2005-08-29T06:00:00",
           "valid_at": "2005-08-29T12:00:00",
           "actual_surge_mm": 70.15,
-          "predicted_surge_mm": 37.487
+          "predicted_surge_mm": 37.487,
+          "observed_tide_cm": -8.8,
+          "predicted_tide_cm": -12.0663,
+          "astronomical_tide_cm": -23.7002
         },
         {
           "issued_at": "2005-08-29T07:00:00",
           "valid_at": "2005-08-29T13:00:00",
           "actual_surge_mm": 54.843,
-          "predicted_surge_mm": 56.838
+          "predicted_surge_mm": 56.838,
+          "observed_tide_cm": 1.5,
+          "predicted_tide_cm": 1.6995,
+          "astronomical_tide_cm": -12.0349
         },
         {
           "issued_at": "2005-08-29T08:00:00",
           "valid_at": "2005-08-29T14:00:00",
           "actual_surge_mm": 78.746,
-          "predicted_surge_mm": 54.87
+          "predicted_surge_mm": 54.87,
+          "observed_tide_cm": 15.0,
+          "predicted_tide_cm": 12.6124,
+          "astronomical_tide_cm": -0.6026
         },
         {
           "issued_at": "2005-08-29T09:00:00",
           "valid_at": "2005-08-29T15:00:00",
           "actual_surge_mm": 93.926,
-          "predicted_surge_mm": 60.46
+          "predicted_surge_mm": 60.46,
+          "observed_tide_cm": 25.3,
+          "predicted_tide_cm": 21.9534,
+          "astronomical_tide_cm": 8.8291
         },
         {
           "issued_at": "2005-08-29T10:00:00",
           "valid_at": "2005-08-29T16:00:00",
           "actual_surge_mm": 79.845,
-          "predicted_surge_mm": 84.076
+          "predicted_surge_mm": 84.076,
+          "observed_tide_cm": 29.8,
+          "predicted_tide_cm": 30.2231,
+          "astronomical_tide_cm": 15.1885
         },
         {
           "issued_at": "2005-08-29T11:00:00",
           "valid_at": "2005-08-29T17:00:00",
           "actual_surge_mm": 60.524,
-          "predicted_surge_mm": 77.405
+          "predicted_surge_mm": 77.405,
+          "observed_tide_cm": 30.8,
+          "predicted_tide_cm": 32.4881,
+          "astronomical_tide_cm": 18.2958
         },
         {
           "issued_at": "2005-08-29T12:00:00",
           "valid_at": "2005-08-29T18:00:00",
           "actual_surge_mm": 62.495,
-          "predicted_surge_mm": 78.558
+          "predicted_surge_mm": 78.558,
+          "observed_tide_cm": 31.3,
+          "predicted_tide_cm": 32.9063,
+          "astronomical_tide_cm": 18.8359
         },
         {
           "issued_at": "2005-08-29T13:00:00",
           "valid_at": "2005-08-29T19:00:00",
           "actual_surge_mm": 33.585,
-          "predicted_surge_mm": 61.982
+          "predicted_surge_mm": 61.982,
+          "observed_tide_cm": 27.2,
+          "predicted_tide_cm": 30.0397,
+          "astronomical_tide_cm": 18.1298
         },
         {
           "issued_at": "2005-08-29T14:00:00",
           "valid_at": "2005-08-29T20:00:00",
           "actual_surge_mm": 38.826,
-          "predicted_surge_mm": 62.505
+          "predicted_surge_mm": 62.505,
+          "observed_tide_cm": 26.8,
+          "predicted_tide_cm": 29.1679,
+          "astronomical_tide_cm": 17.7555
         },
         {
           "issued_at": "2005-08-29T15:00:00",
           "valid_at": "2005-08-29T21:00:00",
           "actual_surge_mm": 41.43,
-          "predicted_surge_mm": 67.894
+          "predicted_surge_mm": 67.894,
+          "observed_tide_cm": 28.2,
+          "predicted_tide_cm": 30.8464,
+          "astronomical_tide_cm": 19.0924
         },
         {
           "issued_at": "2005-08-29T16:00:00",
           "valid_at": "2005-08-29T22:00:00",
           "actual_surge_mm": 55.834,
-          "predicted_surge_mm": 75.546
+          "predicted_surge_mm": 75.546,
+          "observed_tide_cm": 33.5,
+          "predicted_tide_cm": 35.4712,
+          "astronomical_tide_cm": 22.8875
         },
         {
           "issued_at": "2005-08-29T17:00:00",
           "valid_at": "2005-08-29T23:00:00",
           "actual_surge_mm": 73.837,
-          "predicted_surge_mm": 69.48
+          "predicted_surge_mm": 69.48,
+          "observed_tide_cm": 41.2,
+          "predicted_tide_cm": 40.7643,
+          "astronomical_tide_cm": 28.9615
         },
         {
           "issued_at": "2005-08-29T18:00:00",
           "valid_at": "2005-08-30T00:00:00",
           "actual_surge_mm": 89.267,
-          "predicted_surge_mm": 86.052
+          "predicted_surge_mm": 86.052,
+          "observed_tide_cm": 49.6,
+          "predicted_tide_cm": 49.2785,
+          "astronomical_tide_cm": 36.1592
         },
         {
           "issued_at": "2005-08-29T19:00:00",
           "valid_at": "2005-08-30T01:00:00",
           "actual_surge_mm": 83.861,
-          "predicted_surge_mm": 76.532
+          "predicted_surge_mm": 76.532,
+          "observed_tide_cm": 55.6,
+          "predicted_tide_cm": 54.8671,
+          "astronomical_tide_cm": 42.5852
         },
         {
           "issued_at": "2005-08-29T20:00:00",
           "valid_at": "2005-08-30T02:00:00",
           "actual_surge_mm": 96.795,
-          "predicted_surge_mm": 80.089
+          "predicted_surge_mm": 80.089,
+          "observed_tide_cm": 61.1,
+          "predicted_tide_cm": 59.4294,
+          "astronomical_tide_cm": 46.0712
         },
         {
           "issued_at": "2005-08-29T21:00:00",
           "valid_at": "2005-08-30T03:00:00",
           "actual_surge_mm": 84.883,
-          "predicted_surge_mm": 97.236
+          "predicted_surge_mm": 97.236,
+          "observed_tide_cm": 59.5,
+          "predicted_tide_cm": 60.7353,
+          "astronomical_tide_cm": 44.7466
         },
         {
           "issued_at": "2005-08-29T22:00:00",
           "valid_at": "2005-08-30T04:00:00",
           "actual_surge_mm": 117.326,
-          "predicted_surge_mm": 105.392
+          "predicted_surge_mm": 105.392,
+          "observed_tide_cm": 56.3,
+          "predicted_tide_cm": 55.1066,
+          "astronomical_tide_cm": 37.5606
         },
         {
           "issued_at": "2005-08-29T23:00:00",
           "valid_at": "2005-08-30T05:00:00",
           "actual_surge_mm": 106.395,
-          "predicted_surge_mm": 111.368
+          "predicted_surge_mm": 111.368,
+          "observed_tide_cm": 42.7,
+          "predicted_tide_cm": 43.1973,
+          "astronomical_tide_cm": 24.6337
         },
         {
           "issued_at": "2005-08-30T00:00:00",
           "valid_at": "2005-08-30T06:00:00",
           "actual_surge_mm": 104.267,
-          "predicted_surge_mm": 91.811
+          "predicted_surge_mm": 91.811,
+          "observed_tide_cm": 25.4,
+          "predicted_tide_cm": 24.1544,
+          "astronomical_tide_cm": 7.3625
         },
         {
           "issued_at": "2005-08-30T01:00:00",
           "valid_at": "2005-08-30T07:00:00",
           "actual_surge_mm": 75.116,
-          "predicted_surge_mm": 75.287
+          "predicted_surge_mm": 75.287,
+          "observed_tide_cm": 3.5,
+          "predicted_tide_cm": 3.5171,
+          "astronomical_tide_cm": -11.7582
         },
         {
           "issued_at": "2005-08-30T02:00:00",
           "valid_at": "2005-08-30T08:00:00",
           "actual_surge_mm": 79.356,
-          "predicted_surge_mm": 62.288
+          "predicted_surge_mm": 62.288,
+          "observed_tide_cm": -13.8,
+          "predicted_tide_cm": -15.5068,
+          "astronomical_tide_cm": -29.5876
         },
         {
           "issued_at": "2005-08-30T03:00:00",
           "valid_at": "2005-08-30T09:00:00",
           "actual_surge_mm": 64.507,
-          "predicted_surge_mm": 63.092
+          "predicted_surge_mm": 63.092,
+          "observed_tide_cm": -28.6,
+          "predicted_tide_cm": -28.7415,
+          "astronomical_tide_cm": -43.0
         },
         {
           "issued_at": "2005-08-30T04:00:00",
           "valid_at": "2005-08-30T10:00:00",
           "actual_surge_mm": 99.975,
-          "predicted_surge_mm": 91.764
+          "predicted_surge_mm": 91.764,
+          "observed_tide_cm": -31.4,
+          "predicted_tide_cm": -32.2211,
+          "astronomical_tide_cm": -49.6096
         },
         {
           "issued_at": "2005-08-30T05:00:00",
           "valid_at": "2005-08-30T11:00:00",
           "actual_surge_mm": 109.031,
-          "predicted_surge_mm": 116.278
+          "predicted_surge_mm": 116.278,
+          "observed_tide_cm": -28.8,
+          "predicted_tide_cm": -28.0753,
+          "astronomical_tide_cm": -48.3591
         },
         {
           "issued_at": "2005-08-30T06:00:00",
           "valid_at": "2005-08-30T12:00:00",
           "actual_surge_mm": 107.554,
-          "predicted_surge_mm": 122.007
+          "predicted_surge_mm": 122.007,
+          "observed_tide_cm": -19.9,
+          "predicted_tide_cm": -18.4547,
+          "astronomical_tide_cm": -39.7867
         },
         {
           "issued_at": "2005-08-30T07:00:00",
           "valid_at": "2005-08-30T13:00:00",
           "actual_surge_mm": 113.358,
-          "predicted_surge_mm": 122.328
+          "predicted_surge_mm": 122.328,
+          "observed_tide_cm": -5.1,
+          "predicted_tide_cm": -4.203,
+          "astronomical_tide_cm": -25.8862
         },
         {
           "issued_at": "2005-08-30T08:00:00",
           "valid_at": "2005-08-30T14:00:00",
           "actual_surge_mm": 153.796,
-          "predicted_surge_mm": 140.736
+          "predicted_surge_mm": 140.736,
+          "observed_tide_cm": 15.0,
+          "predicted_tide_cm": 13.694,
+          "astronomical_tide_cm": -9.61
         },
         {
           "issued_at": "2005-08-30T09:00:00",
           "valid_at": "2005-08-30T15:00:00",
           "actual_surge_mm": 161.161,
-          "predicted_surge_mm": 156.879
+          "predicted_surge_mm": 156.879,
+          "observed_tide_cm": 30.2,
+          "predicted_tide_cm": 29.7718,
+          "astronomical_tide_cm": 5.8308
         },
         {
           "issued_at": "2005-08-30T10:00:00",
           "valid_at": "2005-08-30T16:00:00",
           "actual_surge_mm": 143.739,
-          "predicted_surge_mm": 166.749
+          "predicted_surge_mm": 166.749,
+          "observed_tide_cm": 39.0,
+          "predicted_tide_cm": 41.301,
+          "astronomical_tide_cm": 17.6893
         },
         {
           "issued_at": "2005-08-30T11:00:00",
           "valid_at": "2005-08-30T17:00:00",
           "actual_surge_mm": 166.356,
-          "predicted_surge_mm": 165.65
+          "predicted_surge_mm": 165.65,
+          "observed_tide_cm": 46.7,
+          "predicted_tide_cm": 46.6294,
+          "astronomical_tide_cm": 24.2817
         },
         {
           "issued_at": "2005-08-30T12:00:00",
           "valid_at": "2005-08-30T18:00:00",
           "actual_surge_mm": 178.175,
-          "predicted_surge_mm": 137.591
+          "predicted_surge_mm": 137.591,
+          "observed_tide_cm": 48.0,
+          "predicted_tide_cm": 43.9416,
+          "astronomical_tide_cm": 25.3504
         },
         {
           "issued_at": "2005-08-30T13:00:00",
           "valid_at": "2005-08-30T19:00:00",
           "actual_surge_mm": 193.431,
-          "predicted_surge_mm": 118.18
+          "predicted_surge_mm": 118.18,
+          "observed_tide_cm": 45.5,
+          "predicted_tide_cm": 37.9749,
+          "astronomical_tide_cm": 22.1112
         },
         {
           "issued_at": "2005-08-30T14:00:00",
           "valid_at": "2005-08-30T20:00:00",
           "actual_surge_mm": 158.755,
-          "predicted_surge_mm": 119.974
+          "predicted_surge_mm": 119.974,
+          "observed_tide_cm": 36.4,
+          "predicted_tide_cm": 32.5219,
+          "astronomical_tide_cm": 16.929
         },
         {
           "issued_at": "2005-08-30T15:00:00",
           "valid_at": "2005-08-30T21:00:00",
           "actual_surge_mm": 96.528,
-          "predicted_surge_mm": 154.504
+          "predicted_surge_mm": 154.504,
+          "observed_tide_cm": 26.0,
+          "predicted_tide_cm": 31.7976,
+          "astronomical_tide_cm": 12.6525
         },
         {
           "issued_at": "2005-08-30T16:00:00",
           "valid_at": "2005-08-30T22:00:00",
           "actual_surge_mm": 123.778,
-          "predicted_surge_mm": 153.437
+          "predicted_surge_mm": 153.437,
+          "observed_tide_cm": 28.5,
+          "predicted_tide_cm": 31.4659,
+          "astronomical_tide_cm": 11.7559
         },
         {
           "issued_at": "2005-08-30T17:00:00",
           "valid_at": "2005-08-30T23:00:00",
           "actual_surge_mm": 187.13,
-          "predicted_surge_mm": 192.624
+          "predicted_surge_mm": 192.624,
+          "observed_tide_cm": 39.5,
+          "predicted_tide_cm": 40.0494,
+          "astronomical_tide_cm": 15.5521
         },
         {
           "issued_at": "2005-08-30T18:00:00",
           "valid_at": "2005-08-31T00:00:00",
           "actual_surge_mm": 208.779,
-          "predicted_surge_mm": 204.688
+          "predicted_surge_mm": 204.688,
+          "observed_tide_cm": 50.5,
+          "predicted_tide_cm": 50.0909,
+          "astronomical_tide_cm": 23.7424
         },
         {
           "issued_at": "2005-08-30T19:00:00",
           "valid_at": "2005-08-31T01:00:00",
           "actual_surge_mm": 146.155,
-          "predicted_surge_mm": 217.298
+          "predicted_surge_mm": 217.298,
+          "observed_tide_cm": 55.5,
+          "predicted_tide_cm": 62.6143,
+          "astronomical_tide_cm": 34.4533
         },
         {
           "issued_at": "2005-08-30T20:00:00",
           "valid_at": "2005-08-31T02:00:00",
           "actual_surge_mm": 192.86,
-          "predicted_surge_mm": 190.173
+          "predicted_surge_mm": 190.173,
+          "observed_tide_cm": 71.2,
+          "predicted_tide_cm": 70.9313,
+          "astronomical_tide_cm": 44.7287
         },
         {
           "issued_at": "2005-08-30T21:00:00",
           "valid_at": "2005-08-31T03:00:00",
           "actual_surge_mm": 156.327,
-          "predicted_surge_mm": 151.948
+          "predicted_surge_mm": 151.948,
+          "observed_tide_cm": 74.9,
+          "predicted_tide_cm": 74.4621,
+          "astronomical_tide_cm": 51.2994
         },
         {
           "issued_at": "2005-08-30T22:00:00",
           "valid_at": "2005-08-31T04:00:00",
           "actual_surge_mm": 100.143,
-          "predicted_surge_mm": 180.24
+          "predicted_surge_mm": 180.24,
+          "observed_tide_cm": 69.9,
+          "predicted_tide_cm": 77.9097,
+          "astronomical_tide_cm": 51.4144
         },
         {
           "issued_at": "2005-08-30T23:00:00",
           "valid_at": "2005-08-31T05:00:00",
           "actual_surge_mm": 226.174,
-          "predicted_surge_mm": 219.945
+          "predicted_surge_mm": 219.945,
+          "observed_tide_cm": 74.8,
+          "predicted_tide_cm": 74.1771,
+          "astronomical_tide_cm": 43.56
         },
         {
           "issued_at": "2005-08-31T00:00:00",
           "valid_at": "2005-08-31T06:00:00",
           "actual_surge_mm": 167.015,
-          "predicted_surge_mm": 233.523
+          "predicted_surge_mm": 233.523,
+          "observed_tide_cm": 53.1,
+          "predicted_tide_cm": 59.7508,
+          "astronomical_tide_cm": 27.9426
         },
         {
           "issued_at": "2005-08-31T01:00:00",
           "valid_at": "2005-08-31T07:00:00",
           "actual_surge_mm": 169.09,
-          "predicted_surge_mm": 163.478
+          "predicted_surge_mm": 163.478,
+          "observed_tide_cm": 31.7,
+          "predicted_tide_cm": 31.1388,
+          "astronomical_tide_cm": 6.6277
         },
         {
           "issued_at": "2005-08-31T02:00:00",
           "valid_at": "2005-08-31T08:00:00",
           "actual_surge_mm": 175.579,
-          "predicted_surge_mm": 184.133
+          "predicted_surge_mm": 184.133,
+          "observed_tide_cm": 8.8,
+          "predicted_tide_cm": 9.6554,
+          "astronomical_tide_cm": -16.7583
         },
         {
           "issued_at": "2005-08-31T03:00:00",
           "valid_at": "2005-08-31T09:00:00",
           "actual_surge_mm": 219.017,
-          "predicted_surge_mm": 123.402
+          "predicted_surge_mm": 123.402,
+          "observed_tide_cm": -7.9,
+          "predicted_tide_cm": -17.4615,
+          "astronomical_tide_cm": -37.7818
         },
         {
           "issued_at": "2005-08-31T04:00:00",
           "valid_at": "2005-08-31T10:00:00",
           "actual_surge_mm": 298.975,
-          "predicted_surge_mm": 90.623
+          "predicted_surge_mm": 90.623,
+          "observed_tide_cm": -14.3,
+          "predicted_tide_cm": -35.1352,
+          "astronomical_tide_cm": -52.2719
         },
         {
           "issued_at": "2005-08-31T05:00:00",
           "valid_at": "2005-08-31T11:00:00",
           "actual_surge_mm": 193.032,
-          "predicted_surge_mm": 166.999
+          "predicted_surge_mm": 166.999,
+          "observed_tide_cm": -29.7,
+          "predicted_tide_cm": -32.3033,
+          "astronomical_tide_cm": -57.4019
         },
         {
           "issued_at": "2005-08-31T06:00:00",
           "valid_at": "2005-08-31T12:00:00",
           "actual_surge_mm": 307.967,
-          "predicted_surge_mm": 152.337
+          "predicted_surge_mm": 152.337,
+          "observed_tide_cm": -12.7,
+          "predicted_tide_cm": -28.263,
+          "astronomical_tide_cm": -52.4246
         },
         {
           "issued_at": "2005-08-31T07:00:00",
           "valid_at": "2005-08-31T13:00:00",
           "actual_surge_mm": 268.84,
-          "predicted_surge_mm": 175.95
+          "predicted_surge_mm": 175.95,
+          "observed_tide_cm": -2.5,
+          "predicted_tide_cm": -11.789,
+          "astronomical_tide_cm": -38.8244
         },
         {
           "issued_at": "2005-08-31T08:00:00",
           "valid_at": "2005-08-31T14:00:00",
           "actual_surge_mm": 321.844,
-          "predicted_surge_mm": 206.667
+          "predicted_surge_mm": 206.667,
+          "observed_tide_cm": 21.9,
+          "predicted_tide_cm": 10.3823,
+          "astronomical_tide_cm": -19.873
         },
         {
           "issued_at": "2005-08-31T09:00:00",
           "valid_at": "2005-08-31T15:00:00",
           "actual_surge_mm": 316.498,
-          "predicted_surge_mm": 201.915
+          "predicted_surge_mm": 201.915,
+          "observed_tide_cm": 40.8,
+          "predicted_tide_cm": 29.3417,
+          "astronomical_tide_cm": 0.2198
         },
         {
           "issued_at": "2005-08-31T10:00:00",
           "valid_at": "2005-08-31T16:00:00",
           "actual_surge_mm": 419.82,
-          "predicted_surge_mm": 253.122
+          "predicted_surge_mm": 253.122,
+          "observed_tide_cm": 66.7,
+          "predicted_tide_cm": 50.0302,
+          "astronomical_tide_cm": 17.2975
         },
         {
           "issued_at": "2005-08-31T11:00:00",
           "valid_at": "2005-08-31T17:00:00",
           "actual_surge_mm": 363.175,
-          "predicted_surge_mm": 215.459
+          "predicted_surge_mm": 215.459,
+          "observed_tide_cm": 70.1,
+          "predicted_tide_cm": 55.3284,
+          "astronomical_tide_cm": 28.1779
         },
         {
           "issued_at": "2005-08-31T12:00:00",
           "valid_at": "2005-08-31T18:00:00",
           "actual_surge_mm": 296.822,
-          "predicted_surge_mm": 331.664
+          "predicted_surge_mm": 331.664,
+          "observed_tide_cm": 65.0,
+          "predicted_tide_cm": 68.4842,
+          "astronomical_tide_cm": 31.3578
         },
         {
           "issued_at": "2005-08-31T13:00:00",
           "valid_at": "2005-08-31T19:00:00",
           "actual_surge_mm": 386.478,
-          "predicted_surge_mm": 286.529
+          "predicted_surge_mm": 286.529,
+          "observed_tide_cm": 68.7,
+          "predicted_tide_cm": 58.7051,
+          "astronomical_tide_cm": 27.3803
         },
         {
           "issued_at": "2005-08-31T14:00:00",
           "valid_at": "2005-08-31T20:00:00",
           "actual_surge_mm": 317.624,
-          "predicted_surge_mm": 315.112
+          "predicted_surge_mm": 315.112,
+          "observed_tide_cm": 52.5,
+          "predicted_tide_cm": 52.2488,
+          "astronomical_tide_cm": 18.7345
         },
         {
           "issued_at": "2005-08-31T15:00:00",
           "valid_at": "2005-08-31T21:00:00",
           "actual_surge_mm": 493.345,
-          "predicted_surge_mm": 262.423
+          "predicted_surge_mm": 262.423,
+          "observed_tide_cm": 60.7,
+          "predicted_tide_cm": 37.6078,
+          "astronomical_tide_cm": 9.2122
         },
         {
           "issued_at": "2005-08-31T16:00:00",
           "valid_at": "2005-08-31T22:00:00",
           "actual_surge_mm": 567.578,
-          "predicted_surge_mm": 344.059
+          "predicted_surge_mm": 344.059,
+          "observed_tide_cm": 62.6,
+          "predicted_tide_cm": 40.2481,
+          "astronomical_tide_cm": 2.8142
         },
         {
           "issued_at": "2005-08-31T17:00:00",
           "valid_at": "2005-08-31T23:00:00",
           "actual_surge_mm": 654.85,
-          "predicted_surge_mm": 373.825
+          "predicted_surge_mm": 373.825,
+          "observed_tide_cm": 72.4,
+          "predicted_tide_cm": 44.2975,
+          "astronomical_tide_cm": 2.5181
         },
         {
           "issued_at": "2005-08-31T18:00:00",
           "valid_at": "2005-09-01T00:00:00",
           "actual_surge_mm": 820.316,
-          "predicted_surge_mm": 287.749
+          "predicted_surge_mm": 287.749,
+          "observed_tide_cm": 97.3,
+          "predicted_tide_cm": 44.0433,
+          "astronomical_tide_cm": 9.3313
         },
         {
           "issued_at": "2005-08-31T19:00:00",
           "valid_at": "2005-09-01T01:00:00",
           "actual_surge_mm": 708.64,
-          "predicted_surge_mm": 415.577
+          "predicted_surge_mm": 415.577,
+          "observed_tide_cm": 100.2,
+          "predicted_tide_cm": 70.8937,
+          "astronomical_tide_cm": 21.9657
         },
         {
           "issued_at": "2005-08-31T20:00:00",
           "valid_at": "2005-09-01T02:00:00",
           "actual_surge_mm": 670.066,
-          "predicted_surge_mm": 352.345
+          "predicted_surge_mm": 352.345,
+          "observed_tide_cm": 112.9,
+          "predicted_tide_cm": 81.1279,
+          "astronomical_tide_cm": 37.2117
         },
         {
           "issued_at": "2005-08-31T21:00:00",
           "valid_at": "2005-09-01T03:00:00",
           "actual_surge_mm": 492.546,
-          "predicted_surge_mm": 511.291
+          "predicted_surge_mm": 511.291,
+          "observed_tide_cm": 109.9,
+          "predicted_tide_cm": 111.7745,
+          "astronomical_tide_cm": 50.8238
         },
         {
           "issued_at": "2005-08-31T22:00:00",
           "valid_at": "2005-09-01T04:00:00",
           "actual_surge_mm": 459.511,
-          "predicted_surge_mm": 545.111
+          "predicted_surge_mm": 545.111,
+          "observed_tide_cm": 115.1,
+          "predicted_tide_cm": 123.66,
+          "astronomical_tide_cm": 58.6097
         },
         {
           "issued_at": "2005-08-31T23:00:00",
           "valid_at": "2005-09-01T05:00:00",
           "actual_surge_mm": 411.046,
-          "predicted_surge_mm": 656.93
+          "predicted_surge_mm": 656.93,
+          "observed_tide_cm": 109.3,
+          "predicted_tide_cm": 133.8884,
+          "astronomical_tide_cm": 57.4578
         },
         {
           "issued_at": "2005-09-01T00:00:00",
           "valid_at": "2005-09-01T06:00:00",
           "actual_surge_mm": 506.915,
-          "predicted_surge_mm": 781.496
+          "predicted_surge_mm": 781.496,
+          "observed_tide_cm": 107.3,
+          "predicted_tide_cm": 134.7581,
+          "astronomical_tide_cm": 46.1377
         },
         {
           "issued_at": "2005-09-01T01:00:00",
           "valid_at": "2005-09-01T07:00:00",
           "actual_surge_mm": 443.256,
-          "predicted_surge_mm": 686.738
+          "predicted_surge_mm": 686.738,
+          "observed_tide_cm": 79.9,
+          "predicted_tide_cm": 104.2482,
+          "astronomical_tide_cm": 25.7542
         },
         {
           "issued_at": "2005-09-01T02:00:00",
           "valid_at": "2005-09-01T08:00:00",
           "actual_surge_mm": 398.695,
-          "predicted_surge_mm": 612.926
+          "predicted_surge_mm": 612.926,
+          "observed_tide_cm": 48.7,
+          "predicted_tide_cm": 70.1231,
+          "astronomical_tide_cm": -0.284
         },
         {
           "issued_at": "2005-09-01T03:00:00",
           "valid_at": "2005-09-01T09:00:00",
           "actual_surge_mm": 300.189,
-          "predicted_surge_mm": 489.281
+          "predicted_surge_mm": 489.281,
+          "observed_tide_cm": 11.8,
+          "predicted_tide_cm": 30.7092,
+          "astronomical_tide_cm": -26.8971
         },
         {
           "issued_at": "2005-09-01T04:00:00",
           "valid_at": "2005-09-01T10:00:00",
           "actual_surge_mm": 226.059,
-          "predicted_surge_mm": 435.88
+          "predicted_surge_mm": 435.88,
+          "observed_tide_cm": -17.5,
+          "predicted_tide_cm": 3.4821,
+          "astronomical_tide_cm": -48.5268
         },
         {
           "issued_at": "2005-09-01T05:00:00",
           "valid_at": "2005-09-01T11:00:00",
           "actual_surge_mm": 157.655,
-          "predicted_surge_mm": 347.357
+          "predicted_surge_mm": 347.357,
+          "observed_tide_cm": -36.6,
+          "predicted_tide_cm": -17.6298,
+          "astronomical_tide_cm": -60.5963
         },
         {
           "issued_at": "2005-09-01T06:00:00",
           "valid_at": "2005-09-01T12:00:00",
           "actual_surge_mm": 48.826,
-          "predicted_surge_mm": 474.999
+          "predicted_surge_mm": 474.999,
+          "observed_tide_cm": -47.6,
+          "predicted_tide_cm": -4.9827,
+          "astronomical_tide_cm": -60.7572
         },
         {
           "issued_at": "2005-09-01T07:00:00",
           "valid_at": "2005-09-01T13:00:00",
           "actual_surge_mm": 40.737,
-          "predicted_surge_mm": 399.447
+          "predicted_surge_mm": 399.447,
+          "observed_tide_cm": -36.8,
+          "predicted_tide_cm": -0.929,
+          "astronomical_tide_cm": -49.4865
         },
         {
           "issued_at": "2005-09-01T08:00:00",
           "valid_at": "2005-09-01T14:00:00",
           "actual_surge_mm": 21.803,
-          "predicted_surge_mm": 307.295
+          "predicted_surge_mm": 307.295,
+          "observed_tide_cm": -18.7,
+          "predicted_tide_cm": 9.8492,
+          "astronomical_tide_cm": -29.857
         },
         {
           "issued_at": "2005-09-01T09:00:00",
           "valid_at": "2005-09-01T15:00:00",
           "actual_surge_mm": -16.088,
-          "predicted_surge_mm": 226.076
+          "predicted_surge_mm": 226.076,
+          "observed_tide_cm": 0.6,
+          "predicted_tide_cm": 24.8164,
+          "astronomical_tide_cm": -6.6413
         },
         {
           "issued_at": "2005-09-01T10:00:00",
           "valid_at": "2005-09-01T16:00:00",
           "actual_surge_mm": -48.615,
-          "predicted_surge_mm": 159.491
+          "predicted_surge_mm": 159.491,
+          "observed_tide_cm": 17.8,
+          "predicted_tide_cm": 38.6106,
+          "astronomical_tide_cm": 14.9052
         },
         {
           "issued_at": "2005-09-01T11:00:00",
           "valid_at": "2005-09-01T17:00:00",
           "actual_surge_mm": -93.776,
-          "predicted_surge_mm": 76.502
+          "predicted_surge_mm": 76.502,
+          "observed_tide_cm": 26.7,
+          "predicted_tide_cm": 43.7278,
+          "astronomical_tide_cm": 30.2496
         },
         {
           "issued_at": "2005-09-01T12:00:00",
           "valid_at": "2005-09-01T18:00:00",
           "actual_surge_mm": -83.206,
-          "predicted_surge_mm": 40.751
+          "predicted_surge_mm": 40.751,
+          "observed_tide_cm": 32.0,
+          "predicted_tide_cm": 44.3957,
+          "astronomical_tide_cm": 36.5698
         },
         {
           "issued_at": "2005-09-01T13:00:00",
           "valid_at": "2005-09-01T19:00:00",
           "actual_surge_mm": -186.644,
-          "predicted_surge_mm": 12.555
+          "predicted_surge_mm": 12.555,
+          "observed_tide_cm": 16.8,
+          "predicted_tide_cm": 36.7199,
+          "astronomical_tide_cm": 33.4031
         },
         {
           "issued_at": "2005-09-01T14:00:00",
           "valid_at": "2005-09-01T20:00:00",
           "actual_surge_mm": -180.804,
-          "predicted_surge_mm": -8.524
+          "predicted_surge_mm": -8.524,
+          "observed_tide_cm": 5.8,
+          "predicted_tide_cm": 23.028,
+          "astronomical_tide_cm": 22.8177
         },
         {
           "issued_at": "2005-09-01T15:00:00",
           "valid_at": "2005-09-01T21:00:00",
           "actual_surge_mm": -211.657,
-          "predicted_surge_mm": -49.482
+          "predicted_surge_mm": -49.482,
+          "observed_tide_cm": -11.2,
+          "predicted_tide_cm": 5.0175,
+          "astronomical_tide_cm": 8.9582
         },
         {
           "issued_at": "2005-09-01T16:00:00",
           "valid_at": "2005-09-01T22:00:00",
           "actual_surge_mm": -165.528,
-          "predicted_surge_mm": -32.006
+          "predicted_surge_mm": -32.006,
+          "observed_tide_cm": -17.8,
+          "predicted_tide_cm": -4.4478,
+          "astronomical_tide_cm": -3.0599
         },
         {
           "issued_at": "2005-09-01T17:00:00",
           "valid_at": "2005-09-01T23:00:00",
           "actual_surge_mm": -195.88,
-          "predicted_surge_mm": -39.32
+          "predicted_surge_mm": -39.32,
+          "observed_tide_cm": -25.1,
+          "predicted_tide_cm": -9.444,
+          "astronomical_tide_cm": -8.6653
         },
         {
           "issued_at": "2005-09-01T18:00:00",
           "valid_at": "2005-09-02T00:00:00",
           "actual_surge_mm": -122.075,
-          "predicted_surge_mm": 2.507
+          "predicted_surge_mm": 2.507,
+          "observed_tide_cm": -12.6,
+          "predicted_tide_cm": -0.1418,
+          "astronomical_tide_cm": -5.2627
         },
         {
           "issued_at": "2005-09-01T19:00:00",
           "valid_at": "2005-09-02T01:00:00",
           "actual_surge_mm": -128.598,
-          "predicted_surge_mm": -36.227
+          "predicted_surge_mm": -36.227,
+          "observed_tide_cm": 0.9,
+          "predicted_tide_cm": 10.1371,
+          "astronomical_tide_cm": 6.9477
         },
         {
           "issued_at": "2005-09-01T20:00:00",
           "valid_at": "2005-09-02T02:00:00",
           "actual_surge_mm": -57.449,
-          "predicted_surge_mm": -67.41
+          "predicted_surge_mm": -67.41,
+          "observed_tide_cm": 28.0,
+          "predicted_tide_cm": 27.0039,
+          "astronomical_tide_cm": 25.0437
         },
         {
           "issued_at": "2005-09-01T21:00:00",
           "valid_at": "2005-09-02T03:00:00",
           "actual_surge_mm": -10.966,
-          "predicted_surge_mm": -71.932
+          "predicted_surge_mm": -71.932,
+          "observed_tide_cm": 53.5,
+          "predicted_tide_cm": 47.4034,
+          "astronomical_tide_cm": 44.2519
         },
         {
           "issued_at": "2005-09-01T22:00:00",
           "valid_at": "2005-09-02T04:00:00",
           "actual_surge_mm": -11.204,
-          "predicted_surge_mm": -121.949
+          "predicted_surge_mm": -121.949,
+          "observed_tide_cm": 69.7,
+          "predicted_tide_cm": 58.6255,
+          "astronomical_tide_cm": 59.2439
         },
         {
           "issued_at": "2005-09-01T23:00:00",
           "valid_at": "2005-09-02T05:00:00",
           "actual_surge_mm": -11.864,
-          "predicted_surge_mm": -158.801
+          "predicted_surge_mm": -158.801,
+          "observed_tide_cm": 76.5,
+          "predicted_tide_cm": 61.8063,
+          "astronomical_tide_cm": 65.4563
         },
         {
           "issued_at": "2005-09-02T00:00:00",
           "valid_at": "2005-09-02T06:00:00",
           "actual_surge_mm": 2.358,
-          "predicted_surge_mm": -173.875
+          "predicted_surge_mm": -173.875,
+          "observed_tide_cm": 72.7,
+          "predicted_tide_cm": 55.0767,
+          "astronomical_tide_cm": 60.1751
         },
         {
           "issued_at": "2005-09-02T01:00:00",
           "valid_at": "2005-09-02T07:00:00",
           "actual_surge_mm": -25.356,
-          "predicted_surge_mm": -152.492
+          "predicted_surge_mm": -152.492,
+          "observed_tide_cm": 52.5,
+          "predicted_tide_cm": 39.7864,
+          "astronomical_tide_cm": 43.2546
         },
         {
           "issued_at": "2005-09-02T02:00:00",
           "valid_at": "2005-09-02T08:00:00",
           "actual_surge_mm": -19.254,
-          "predicted_surge_mm": -106.003
+          "predicted_surge_mm": -106.003,
+          "observed_tide_cm": 26.3,
+          "predicted_tide_cm": 17.6251,
+          "astronomical_tide_cm": 17.3565
         }
       ]
     }

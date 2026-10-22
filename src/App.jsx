@@ -451,7 +451,7 @@ function App() {
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
         <header style={headerStyle}>
           <h1 style={{ margin: 0, fontSize: "42px", fontWeight: 800 }}>
-            暴潮預測與颱風資料系統
+            颱風與潮位資訊系統
           </h1>
           <p style={{ margin: "12px 0 0", fontSize: "18px", opacity: 0.92 }}>
             整合中央氣象署即時資料與 近 10 年的 IBTrACS 與已儲存 CWA 路徑資料
@@ -475,9 +475,9 @@ function App() {
             sub="含今年在內近 10 年的西北太平洋資料"
           />
           <InfoCard
-            title="目前風險"
+            title="臺灣颱風風險"
             value={liveCyclone ? liveRisk.label : "無即時資料"}
-            sub="依即時風速與氣壓進行示範判斷"
+            sub={liveCyclone ? liveRisk.basis : "等待中央氣象署即時資料"}
             accent={liveCyclone ? liveRisk.textColor : "#64748b"}
           />
         </section>
@@ -827,7 +827,7 @@ function LiveTyphoonPanel({
           title="移動方向"
           value={latestFix.MovingDirection || "—"}
         />
-        <StatCard title="風險等級" value={risk.label} />
+        <StatCard title="臺灣風險評估" value={risk.label} />
       </div>
 
       <div
@@ -860,6 +860,10 @@ function LiveTyphoonPanel({
         <div>
           網站每 15 分鐘檢查一次。中央氣象署原始熱帶氣旋資料通常約
           6 小時更新一次，因此兩次檢查之間可能仍是同一筆觀測。
+        </div>
+        <div>
+          臺灣風險分級為網站依中央氣象署風力分級概念做的概略評估，
+          並非官方海上／陸上颱風警報或地方淹水警戒；實際防災請依中央氣象署及地方政府公告。
         </div>
       </div>
 
@@ -1341,29 +1345,32 @@ function ErrorMessage({ children }) {
 
 function getRisk(wind, pressure) {
   const safeWind = Number(wind) || 0;
-  const safePressure =
-    Number.isFinite(Number(pressure)) && Number(pressure) > 0
-      ? Number(pressure)
-      : 1010;
+  void pressure; // Pressure is displayed as context, not used to infer local risk.
 
-  if (safeWind >= 45 || safePressure <= 940) {
+  // CWA typhoon intensity convention: strong typhoon begins at 51 m/s;
+  // moderate begins at 32.7 m/s. Pressure is retained as supporting context,
+  // but cannot independently imply a Taiwan warning or local impact.
+  if (safeWind >= 51) {
     return {
-      label: "高風險",
+      label: "高風險｜強烈颱風",
+      basis: `最大風速 ${safeWind.toFixed(1)} m/s，達強烈颱風風力級距`,
       bgColor: "#fee2e2",
       textColor: "#b91c1c",
     };
   }
 
-  if (safeWind >= 35 || safePressure <= 960) {
+  if (safeWind >= 32.7) {
     return {
-      label: "中風險",
+      label: "中風險｜中度颱風",
+      basis: `最大風速 ${safeWind.toFixed(1)} m/s，達中度颱風風力級距`,
       bgColor: "#fef3c7",
       textColor: "#b45309",
     };
   }
 
   return {
-    label: "低風險",
+    label: "低風險｜輕度／未達颱風級",
+    basis: `最大風速 ${safeWind.toFixed(1)} m/s，未達中度颱風風力級距`,
     bgColor: "#dcfce7",
     textColor: "#166534",
   };

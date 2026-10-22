@@ -1,5 +1,5 @@
 import { tideStations, stationAliases, canonicalStationId, chineseStationName, surgeStations } from '../shared/tideStations.js';
-// 按需提供颱風暴潮與天文潮配對資料；前端不定時輪詢。
+// 按需提供颱風事件期間的實測潮位與天文潮資料。
 // generatedAt 是回應產生時間，各站 observationTime 才是資料時間。
 const OBS_DATA_ID = "O-B0075-001";
 const FORECAST_DATA_ID = "F-C0036-001";
@@ -911,7 +911,7 @@ export default async function handler(req, res) {
     const points = new Map();
     for (const r of forecastRecords.filter(inWindow)) {
       const t = timeValue(r.time);
-      points.set(t,{time:new Date(t).toISOString(),observedTide:null,predictedTide:round3(recordValue(r,datum.key)),surgeAnomaly:null,forecastMethod:'exact'});
+      points.set(t,{time:new Date(t).toISOString(),observedTide:null,predictedTide:round3(recordValue(r,datum.key))});
     }
     for (const r of obsRecords.filter(inWindow)) {
       const t = timeValue(r.time);
@@ -919,29 +919,24 @@ export default async function handler(req, res) {
       points.set(t,{
         time:new Date(t).toISOString(), observedTide:round3(r.tideHeight),
         predictedTide:prediction ? round3(prediction.value) : null,
-        surgeAnomaly:prediction ? round3(r.tideHeight-prediction.value) : null,
-        forecastMethod:prediction?.method || null,
-        forecastSourceTimes:prediction?.sourceTimes || (prediction ? [prediction.time] : null),
       });
     }
     const history = [...points.values()].sort((a,b) => timeValue(a.time)-timeValue(b.time));
-    const paired = history.filter((r) => r.surgeAnomaly != null);
-    const allPaired = obsRecords.filter((r) => forecastAtTime(forecastRecords,timeValue(r.time),datum.key));
+    const overlap = history.filter((r) => r.observedTide != null && r.predictedTide != null);
+    const allOverlap = obsRecords.filter((r) => forecastAtTime(forecastRecords,timeValue(r.time),datum.key));
     const observationRange = rangeOf(obsRecords);
     const predictionRange = rangeOf(forecastRecords);
-    const status = !history.length ? 'unavailable' : !paired.length ? 'unpaired' : 'available_subset';
+    const status = !history.length ? 'unavailable' : !overlap.length ? 'unpaired' : 'available_subset';
     return res.status(200).json({
       success:true,generatedAt:new Date().toISOString(),mode:'typhoon-event',
       requested:{start:query.start,end:query.end,station:query.stationId},
       status, units:'m', stations,
       station:{...selected,datum:datum.code,datumLabel:datum.label,history},
-      availability:{observation:observationRange,astronomicalTide:predictionRange,paired:rangeOf(allPaired)},
-      counts:{observed:history.filter((r)=>r.observedTide!=null).length,astronomical:history.filter((r)=>r.predictedTide!=null).length,paired:paired.length},
+      availability:{observation:observationRange,astronomicalTide:predictionRange,overlap:rangeOf(allOverlap)},
+      counts:{observed:history.filter((r)=>r.observedTide!=null).length,astronomical:history.filter((r)=>r.predictedTide!=null).length,overlap:overlap.length},
       fallback:{type:'published-snapshot-only',historicalArchiveConnected:false,
         message:'目前僅連接 CWA 已發布的潮位觀測與天文潮預報資料，未接歷史潮位庫；只顯示與所選事件重疊的資料。缺少資料時保留空值，不用近期資料替代歷史事件。',
         historicalDataUrl:'https://ocean.cwa.gov.tw/V2/data_interface/datasets'},
-      method:'同測站、同基準相減；天文潮以原始時刻或跨度不超過 2 小時的線性內插配對，不外插、不跨基準退回。可用期間為資料首末時間，不保證其中每一時刻都有資料。',
-      definition:'暴潮增水 = 實測潮位 − 天文潮；此殘差也可能包含非颱風因素。',
       sources:{observation:OBS_DATA_ID,astronomicalTide:FORECAST_DATA_ID},warnings,
     });
   } catch {
