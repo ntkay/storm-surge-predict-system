@@ -3,6 +3,11 @@ import { useEffect, useState } from 'react';
 
 const panel = { background: '#fff', border: '1px solid #93c5fd', borderRadius: 12, padding: 20, marginBottom: 20 };
 const figures = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 650px), 1fr))', gap: 14 };
+const sinlakuWarningTime = Date.parse('2008-09-12T05:30:00+08:00');
+const parseTaiwanTime = value => {
+  const text = String(value || '');
+  return Date.parse(/[zZ]|[+-]\d\d:\d\d$/.test(text) ? text : `${text}+08:00`);
+};
 const storms = {
   longdong: [
     { key: 'haitang', match: /haitang|海棠/i, name: '海棠（Haitang, 2005）', testId: '2005Haitang s' },
@@ -43,13 +48,16 @@ export default function StormLstmDemo({ stationId, eventName }) {
   const units = station === 'longdong' ? [16, 16, 32] : [32, 32, 64];
   return <section aria-labelledby="lstm-demo-title" style={panel}>
     <h4 id="lstm-demo-title" style={{ marginTop: 0 }}>{title} · {storm.name} · CNN-LSTM 測試曲線</h4>
-    <p>藍線是實測增水，紅色虛線是 CNN-LSTM 預測；訓練使用 CWA 逐時整點潮位、UTide 年度天文潮分離，以及 NOAA IBTrACS 逐時內插颱風路徑。</p>
+    <p>藍線是實測增水，紅色虛線是 CNN-LSTM 預測；訓練使用 CWA 逐時整點潮位、UTide 年度天文潮分離，以及 NOAA IBTrACS 逐時內插颱風路徑。{storm.key === 'sinlaku' && '辛樂克只顯示 2008/09/12 05:30 陸上颱風警報發布後的預測，警報前資料不納入本圖及誤差統計。'}</p>
     {!training && <p>載入 CNN-LSTM 曲線中…</p>}
     <div style={figures}>
       {[1, 3, 6].map((lead, index) => {
         const src = `/data/lstm/${station}-${storm.key}-${lead}h.png`;
         const result = training?.results.find((row) => row.lead_hours === lead);
-        const eventPoints = result?.points.filter((point) => point.event === storm.testId) || [];
+        const fullEventPoints = result?.points.filter((point) => point.event === storm.testId) || [];
+        const eventPoints = storm.key === 'sinlaku'
+          ? fullEventPoints.filter(point => parseTaiwanTime(point.time) >= sinlakuWarningTime)
+          : fullEventPoints;
         const actual = eventPoints.map((point) => point.actual_cm);
         const predicted = eventPoints.map((point) => point.prediction_cm);
         const eventMae = actual.length ? actual.reduce((sum, value, i) => sum + Math.abs(value - predicted[i]), 0) / actual.length : null;
@@ -59,9 +67,11 @@ export default function StormLstmDemo({ stationId, eventName }) {
         const eventR2 = eventDenom ? 1 - actual.reduce((sum, value, i) => sum + (predicted[i] - value) ** 2, 0) / eventDenom : null;
         return <figure key={lead} style={{ margin: 0 }}>
           <figcaption style={{ fontWeight: 700, marginBottom: 6 }}>+{lead} 小時 · LSTM {units[index]} 單元{eventRmse !== null ? ` · 本颱風 RMSE ${eventRmse.toFixed(2)} cm / MAE ${eventMae.toFixed(2)} cm / R² ${eventR2?.toFixed(3) ?? '—'}` : ''}</figcaption>
-          <a href={src} target="_blank" rel="noreferrer" aria-label={`開啟 ${title} ${storm.name} +${lead} 小時曲線原圖`}>
-            <img src={src} alt={`${title} ${storm.name} +${lead} 小時測試集實測與 CNN-LSTM 預測曲線`} style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 8, border: '1px solid #e2e8f0' }} />
-          </a>
+          {storm.key === 'sinlaku'
+            ? <ForecastChart points={eventPoints} station={title} storm={storm.name} lead={lead} />
+            : <a href={src} target="_blank" rel="noreferrer" aria-label={`開啟 ${title} ${storm.name} +${lead} 小時曲線原圖`}>
+              <img src={src} alt={`${title} ${storm.name} +${lead} 小時測試集實測與 CNN-LSTM 預測曲線`} style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 8, border: '1px solid #e2e8f0' }} />
+            </a>}
         </figure>;
       })}
     </div>
@@ -70,4 +80,32 @@ export default function StormLstmDemo({ stationId, eventName }) {
       <p>{station === 'suao' && storm.key === 'sinlaku' ? '辛樂克保留原先以該颱風獨立留出所產生的測試曲線。' : '顯示 Notebook 留出測試颱風的歷史逐時結果。'}非即時預報。模型為兩層 Conv1D 接 LSTM，使用 24 小時視窗並分別預測 +1、+3、+6 小時。為在本機 CPU 訓練，batch size 設為 128（原 Notebook 為 8），訓練 100 epochs。</p>
     </details>
   </section>;
+}
+
+function ForecastChart({ points, station, storm, lead }) {
+  if (!points.length) return <p>陸上警報發布後沒有可繪製的測試點。</p>;
+  const left = 55, right = 900, top = 18, bottom = 245;
+  const min = Math.min(0, ...points.flatMap(point => [point.actual_cm, point.prediction_cm]));
+  const max = Math.max(0, ...points.flatMap(point => [point.actual_cm, point.prediction_cm]));
+  const pad = Math.max((max - min) * 0.1, 1), low = min - pad, high = max + pad;
+  const start = sinlakuWarningTime, end = Math.max(parseTaiwanTime(points.at(-1).time), start + 3600000);
+  const x = value => left + (parseTaiwanTime(value) - start) / (end - start) * (right - left);
+  const y = value => bottom - (value - low) / (high - low) * (bottom - top);
+  const path = key => points.map((point, index) => `${index ? 'L' : 'M'}${x(point.time).toFixed(1)},${y(point[key]).toFixed(1)}`).join(' ');
+  const ticks = Array.from({ length: 5 }, (_, index) => low + (high - low) * index / 4);
+  const times = Array.from({ length: 6 }, (_, index) => new Date(start + (end - start) * index / 5).toISOString());
+  const formatTime = value => new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Taipei', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date(value));
+  return <div style={{ overflowX: 'auto', border: '1px solid #e2e8f0', borderRadius: 8 }}>
+    <svg viewBox="0 0 960 305" style={{ width: '100%', minWidth: 650, display: 'block' }} role="img" aria-label={`${station} ${storm} +${lead} 小時 CNN-LSTM 預測曲線，自陸上警報發布時間開始`}>
+      <text x="12" y="15" fontSize="12">暴潮增水 (cm)</text>
+      {ticks.map((value, index) => <g key={index}><line x1={left} x2={right} y1={y(value)} y2={y(value)} stroke="#dbe3ec" /><text x={left - 8} y={y(value) + 4} textAnchor="end" fontSize="11" fill="#475569">{value.toFixed(1)}</text></g>)}
+      <line x1={left} x2={right} y1={y(0)} y2={y(0)} stroke="#64748b" strokeDasharray="4 4" />
+      <rect x={left} y={top} width={right - left} height={bottom - top} fill="none" stroke="#94a3b8" />
+      {times.map((time, index) => <text key={index} x={left + (right - left) * index / 5} y="267" textAnchor="middle" fontSize="10" fill="#475569">{formatTime(time)}</text>)}
+      <text x={(left + right) / 2} y="296" textAnchor="middle" fontSize="12" fill="#334155">預測有效時間（臺灣時間；起點為 2008/09/12 05:30 陸上警報）</text>
+      <path d={path('actual_cm')} fill="none" stroke="#1769aa" strokeWidth="2.2" />
+      <path d={path('prediction_cm')} fill="none" stroke="#dc2626" strokeWidth="2.2" strokeDasharray="7 4" />
+      <g transform={`translate(${left + 8},${top + 12})`}><line x1="0" x2="24" y1="0" y2="0" stroke="#1769aa" strokeWidth="2.2" /><text x="30" y="4" fontSize="11">實測增水</text><line x1="125" x2="149" y1="0" y2="0" stroke="#dc2626" strokeWidth="2.2" strokeDasharray="7 4" /><text x="155" y="4" fontSize="11">CNN-LSTM 預測</text></g>
+    </svg>
+  </div>;
 }

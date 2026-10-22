@@ -6,6 +6,11 @@ const cell = { padding: 9, borderBottom: '1px solid #e2e8f0', textAlign: 'right'
 const formatTaiwan = value => new Intl.DateTimeFormat('zh-TW', {
   timeZone: 'Asia/Taipei', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
 }).format(new Date(value));
+const sinlakuWarningTime = Date.parse('2008-09-12T05:30:00+08:00');
+const parseTaiwanTime = value => {
+  const text = String(value || '');
+  return Date.parse(/[zZ]|[+-]\d\d:\d\d$/.test(text) ? text : `${text}+08:00`);
+};
 
 export default function LongdongBpnnDemo({ stationId, eventName }) {
   const [loaded, setLoaded] = useState(null);
@@ -42,8 +47,8 @@ export default function LongdongBpnnDemo({ stationId, eventName }) {
   if (!storm || !selectedStation) return null;
 
   const normalizedResults = (payload?.results || []).map(result => {
-    if (payload.units === 'mm' && result.points[0]?.actual_surge_mm != null) return result;
-    if (payload.units === 'm') return {
+    let normalized = result;
+    if (!(payload.units === 'mm' && result.points[0]?.actual_surge_mm != null) && payload.units === 'm') normalized = {
       ...result,
       metrics: { rmse_mm: result.metrics.rmse_m * 1000, mae_mm: result.metrics.mae_m * 1000, r2: result.metrics.r2, count: result.metrics.count },
       points: result.points.filter(point => point.actual_surge != null && point.predicted_surge != null).map(point => ({
@@ -53,16 +58,34 @@ export default function LongdongBpnnDemo({ stationId, eventName }) {
         predicted_surge_mm: point.predicted_surge * 1000,
       })),
     };
-    return result;
+    const points = storm.key === 'sinlaku'
+      ? normalized.points.filter(point => parseTaiwanTime(point.issued_at) >= sinlakuWarningTime)
+      : normalized.points;
+    if (storm.key !== 'sinlaku') return normalized;
+    const errors = points.map(point => point.predicted_surge_mm - point.actual_surge_mm);
+    const actualMean = points.length ? points.reduce((sum, point) => sum + point.actual_surge_mm, 0) / points.length : 0;
+    const totalSquares = points.reduce((sum, point) => sum + (point.actual_surge_mm - actualMean) ** 2, 0);
+    const residualSquares = errors.reduce((sum, error) => sum + error ** 2, 0);
+    return {
+      ...normalized,
+      points,
+      metrics: {
+        ...normalized.metrics,
+        count: points.length,
+        rmse_mm: points.length ? Math.sqrt(residualSquares / points.length) : 0,
+        mae_mm: points.length ? errors.reduce((sum, error) => sum + Math.abs(error), 0) / points.length : 0,
+        r2: totalSquares ? 1 - residualSquares / totalSquares : 0,
+      },
+    };
   });
 
   return <section aria-labelledby="bpnn-demo-title" style={panel}>
     <h4 id="bpnn-demo-title" style={{ marginTop: 0 }}>{storm.name} · {isLongdong ? '龍洞' : '蘇澳'} BPNN 逐時測試</h4>
-    <p>{isLongdong ? '以龍洞逐時潮位和颱風歷史路徑重建 24 小時輸入，再套用匯出的五模型集成權重。' : '以蘇澳逐時資料按同一個 24 小時、192→8→1 BPNN 架構重新訓練五模型集成，整個測試颱風未納入訓練。'} 顯示 +1、+3、+6 小時預測與對應時刻的增水估算。</p>
+    <p>{isLongdong ? '以龍洞逐時潮位和颱風歷史路徑重建 24 小時輸入，再套用匯出的五模型集成權重。' : '以蘇澳逐時資料按同一個 24 小時、192→8→1 BPNN 架構重新訓練五模型集成，整個測試颱風未納入訓練。'} 顯示 +1、+3、+6 小時預測與對應時刻的增水估算。{storm.key === 'sinlaku' && '辛樂克曲線及誤差統計自 2008/09/12 05:30 陸上颱風警報發布後開始。'}</p>
     {loadError && <p role="alert" style={{ color: '#b91c1c' }}>{loadError}</p>}
     {!results.length && !loadError && <p role="status">正在載入 BPNN 曲線…</p>}
     {normalizedResults.length === 3 && <>
-      {normalizedResults.map(result => <LeadForecast key={result.lead_hours} result={result} />)}
+      {normalizedResults.map(result => <LeadForecast key={result.lead_hours} result={result} warningStart={storm.key === 'sinlaku' ? sinlakuWarningTime : null} />)}
       <details style={{ marginTop: 14 }}>
         <summary>模型與資料說明</summary>
         <p>{payload?.validation === 'held-out-event; station-specific retraining, not exported Longdong weights' ? `蘇澳模型以 ${payload.training_events} 個其他颱風事件訓練，保留本次颱風作為獨立測試；訓練窗數：${payload.training_samples}。` : '龍洞使用匯出的五模型集成權重；輸入依可取得的 CWA 小時潮位和 NOAA 路徑歷史重建。'}</p>
@@ -72,7 +95,7 @@ export default function LongdongBpnnDemo({ stationId, eventName }) {
   </section>;
 }
 
-function LeadForecast({ result }) {
+function LeadForecast({ result, warningStart }) {
   return <section aria-label={`+${result.lead_hours} 小時預測`} style={{ borderTop: '1px solid #e2e8f0', paddingTop: 14, marginTop: 14 }}>
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(130px,1fr))', gap: 10, margin: '12px 0' }}>
       <Metric label="RMSE" value={`${result.metrics.rmse_mm.toFixed(2)} mm`} />
@@ -80,7 +103,7 @@ function LeadForecast({ result }) {
       <Metric label="R²" value={result.metrics.r2.toFixed(3)} />
       <Metric label="有效時點" value={`${result.metrics.count}`} />
     </div>
-    <ForecastChart result={result} />
+    <ForecastChart result={result} warningStart={warningStart} />
     <details style={{ marginTop: 10 }}>
       <summary>查看逐時資料表（{result.points.length} 筆）</summary>
       <div style={{ overflow: 'auto', maxHeight: 420, marginTop: 10 }}>
@@ -104,15 +127,15 @@ function Metric({ label, value }) {
   return <div style={{ padding: 12, borderRadius: 8, background: '#f1f5f9' }}><div>{label}</div><strong style={{ display: 'block', marginTop: 5, fontSize: 20 }}>{value}</strong></div>;
 }
 
-function ForecastChart({ result }) {
+function ForecastChart({ result, warningStart }) {
   const points = result.points;
   const values = points.flatMap(point => [point.actual_surge_mm, point.predicted_surge_mm]);
   const lowValue = Math.min(0, ...values), highValue = Math.max(0, ...values);
   const padding = Math.max((highValue - lowValue) * 0.1, 20);
   const low = lowValue - padding, high = highValue + padding;
   const left = 70, right = 920, top = 24, bottom = 290;
-  const start = Date.parse(points[0].issued_at), end = Date.parse(points.at(-1).issued_at);
-  const x = time => left + (Date.parse(time) - start) / Math.max(end - start, 1) * (right - left);
+  const start = warningStart ?? parseTaiwanTime(points[0].issued_at), end = parseTaiwanTime(points.at(-1).issued_at);
+  const x = time => left + (parseTaiwanTime(time) - start) / Math.max(end - start, 1) * (right - left);
   const y = value => bottom - (value - low) / (high - low) * (bottom - top);
   const pathFor = key => points.map((point, index) => `${index ? 'L' : 'M'}${x(point.issued_at).toFixed(1)},${y(point[key]).toFixed(1)}`).join(' ');
   const ticks = Array.from({ length: 5 }, (_, i) => low + (high - low) * i / 4);
