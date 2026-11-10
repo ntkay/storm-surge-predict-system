@@ -91,7 +91,6 @@ function App() {
 
   const [storedTyphoons, setHistoryTyphoons] = useState([]);
   const [updatedTyphoons, setUpdatedTyphoons] = useState([]);
-  const [catalogStatus, setCatalogStatus] = useState('正在確認最新 NOAA 路徑資料…');
   const historyTyphoons = useMemo(() => mergeTyphoons(storedTyphoons, updatedTyphoons, cwaEvents(cwaTyphoon)), [storedTyphoons, updatedTyphoons, cwaTyphoon]);
   const [historyLoading, setHistoryLoading] = useState(true);
   const [historyError, setHistoryError] = useState("");
@@ -203,9 +202,8 @@ function App() {
         if (!response.ok || !data.success || !Array.isArray(data.typhoons)) throw Error('unavailable');
         if (cancelled) return;
         setUpdatedTyphoons(recentTyphoons(data.typhoons));
-        setCatalogStatus('已取得最新 NOAA 發布批次，並合併上方 CWA 分析路徑。來源資料仍可能落後今天，請以清單最新路徑時間為準。');
       }).catch(() => {
-        if (!cancelled) setCatalogStatus('最新 NOAA 資料讀取失敗：目前使用已儲存資料及 CWA 已取得路徑，無法保證完整更新至今天。');
+        // Keep the saved catalog available when the remote history feed is unavailable.
       });
     return () => { cancelled = true; controller.abort(); };
   }, []);
@@ -513,7 +511,7 @@ function App() {
           showAllPoints
         />
 
-        <EventSurgePanel catalogStatus={catalogStatus} typhoons={historyTyphoons} historyLoading={historyLoading} historyError={historyError} />
+        <EventSurgePanel typhoons={historyTyphoons} historyLoading={historyLoading} historyError={historyError} />
 
         <section style={cardStyle}>
           <div style={{ marginBottom: "20px" }}>

@@ -23,7 +23,7 @@ function eventWindow(typhoon, extend) {
   return { start: new Date(times[0] - extend * 86400000).toISOString(), end: new Date(times.at(-1) + extend * 86400000).toISOString() };
 }
 
-export default function EventSurgePanel({ typhoons, historyLoading, historyError, catalogStatus }) {
+export default function EventSurgePanel({ typhoons, historyLoading, historyError }) {
   const [year, setYear] = useState('');
   const [sid, setSid] = useState('');
   const [stationId, setStationId] = useState('');
@@ -80,12 +80,10 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
     <h2 id="event-surge-title" style={{ color: '#123c66', marginTop: 0 }}>🌊 颱風潮位查詢</h2>
     <section aria-labelledby="tide-section-title" style={{ padding: '20px 0' }}>
     <h3 id="tide-section-title" style={{ color: '#0369a1', fontSize: 24 }}>颱風潮位</h3>
-    <p>先選歷史颱風，再選潮位站，查看該事件期間的實測潮位與天文潮。所有顯示時間為臺灣時間（UTC+8）。</p>
     {historyLoading && <p role="status">歷史颱風清單讀取中…</p>}
     {historyError && <p role="alert">{historyError}</p>}
     {!historyLoading && !historyError && !events.length && <p>歷史颱風清單沒有資料，請確認 public/data/typhoons.json。</p>}
-    <p>清單列出含今年在內近 10 年的颱風，以及模型測試集用到的歷史颱風（2005 海棠、潭美；2006 凱米；2008 辛樂克、薔蜜；2013 康芮）。按路徑時間由新到舊排列；最新路徑時間：{events.length ? date(new Date(latestTrackTime(events[0])).toISOString()) : "—"}。僅顯示來源已收錄路徑，不代表完整涵蓋今天。</p>
-    <p role="status">{catalogStatus}</p>
+    <p>清單列出含今年在內近 10 年的颱風，按路徑時間由新到舊排列；最新路徑時間：{events.length ? date(new Date(latestTrackTime(events[0])).toISOString()) : "—"}。僅顯示來源已收錄路徑，不代表完整涵蓋今天。</p>
     <div style={grid}>
       <label>年份<select style={control} value={year} onChange={(e) => {setYear(e.target.value);setSid('');setStationId('');clear();}}>
         <option value="">近 10 年＋模型測試颱風</option>{years.map((y) => <option key={y}>{y}</option>)}
@@ -100,7 +98,7 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
     <p><label><input type="checkbox" checked={extend} onChange={(e) => {setExtend(e.target.checked);clear();}} /> 路徑起訖時間前後各延伸 24 小時</label></p>
     {sid && !window && <p role="alert">此颱風沒有有效路徑時間，無法建立事件期間。</p>}
     {window && <p><strong>事件資料期間：</strong>{date(start)} ～ {date(end)}</p>}
-    <div style={note}>歷史路徑有資料，不代表潮位來源也涵蓋同一年代。目前採用來源已發布資料的事件交集；未連接歷史潮位庫時，舊颱風可能完全沒有潮位資料。可至 <a href="https://ocean.cwa.gov.tw/V2/data_interface/datasets" target="_blank" rel="noreferrer">中央氣象署海象資料下載</a> 取得歷史觀測，並另備同期間、同基準的天文潮資料。</div>
+    <p>資料來自<a href="https://ocean.cwa.gov.tw/V2/data_interface/datasets" target="_blank" rel="noreferrer">中央氣象署海象資料下載</a>。</p>
     {key && loading && <p role="status">正在查詢所選事件與測站…</p>}
     {key && error && <p role="alert" style={{ color: '#b91c1c' }}>{error}</p>}
     {key && <button type="button" style={{ ...control, width: 'auto' }} disabled={loading} onClick={() => {clear();setRetry((n) => n+1);}}>重新查詢此事件</button>}
