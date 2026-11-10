@@ -668,9 +668,18 @@ function App() {
               風速單位為 kt；部分時段的氣壓或風速可能缺值。
             </p>
 
-            <div style={{ overflowX: "auto" }}>
-              <table style={tableStyle}>
-                <thead>
+            <div
+              style={{
+                maxHeight: 460,
+                overflow: "auto",
+                border: "1px solid #e5e7eb",
+                borderRadius: 8,
+              }}
+              aria-label="歷史路徑明細，可在表格區域內捲動"
+              tabIndex={0}
+            >
+              <table style={{ ...tableStyle, width: "100%" }}>
+                <thead style={{ position: "sticky", top: 0, zIndex: 1 }}>
                   <tr style={{ background: "#eff6ff" }}>
                     <TableHead>時間</TableHead>
                     <TableHead>緯度</TableHead>
