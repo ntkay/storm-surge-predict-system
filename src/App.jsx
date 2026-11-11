@@ -460,17 +460,14 @@ function App() {
           <InfoCard
             title="今日日期"
             value={now.toLocaleDateString("zh-TW")}
-            sub="系統即時更新"
           />
           <InfoCard
             title="目前時間"
             value={now.toLocaleTimeString("zh-TW")}
-            sub="每秒自動刷新"
           />
           <InfoCard
             title="歷史颱風數量"
             value={historyLoading ? "讀取中" : historyTyphoons.length}
-            sub="含今年在內近 10 年的西北太平洋資料"
           />
           <InfoCard
             title="臺灣颱風風險"
@@ -864,14 +861,6 @@ function LiveTyphoonPanel({
           </strong>
         </div>
 
-        <div>
-          網站每 15 分鐘檢查一次。中央氣象署原始熱帶氣旋資料通常約
-          6 小時更新一次，因此兩次檢查之間可能仍是同一筆觀測。
-        </div>
-        <div>
-          臺灣風險分級為網站依中央氣象署風力分級概念做的概略評估，
-          並非官方海上／陸上颱風警報或地方淹水警戒；實際防災請依中央氣象署及地方政府公告。
-        </div>
       </div>
 
     </section>
