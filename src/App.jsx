@@ -3,7 +3,7 @@ import EventSurgePanel from "./EventSurgePanel.jsx";
 import { useEffect, useMemo, useState } from "react";
 import {
   MapContainer,
-  TileLayer,
+  WMSTileLayer,
   Marker,
   Polyline,
   Popup,
@@ -953,8 +953,8 @@ function TyphoonMap({
       <h2 style={sectionTitleStyle}>🌀 {title}</h2>
 
       <div style={satelliteStatusStyle}>
-        <span>OpenStreetMap 地圖底圖</span>
-        <span>© OpenStreetMap contributors · 固定視角：台灣／沖繩／菲律賓／關島／颱風活動區</span>
+        <span>NASA Blue Marble 海底地形底圖</span>
+        <span>無雲地形影像 · 固定視角：台灣／沖繩／菲律賓／關島／颱風活動區</span>
       </div>
 
       {validPath.length > 0 ? (
@@ -1097,11 +1097,15 @@ function TyphoonMap({
           background: "#0b3a67",
         }}
       >
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          noWrap={false}
-          keepBuffer={4}
-          attribution="© OpenStreetMap contributors"
+        <WMSTileLayer
+          url="https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi"
+          layers="BlueMarble_ShadedRelief_Bathymetry"
+          styles="default"
+          format="image/jpeg"
+          transparent={false}
+          version="1.3.0"
+          opacity={1}
+          attribution="NASA GIBS / Blue Marble"
         />
 
         {/* 完整路徑會固定顯示，動畫路徑再疊在上面。 */}
