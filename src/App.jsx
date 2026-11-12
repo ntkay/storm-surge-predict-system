@@ -62,10 +62,14 @@ function getCwaTimeValue(value) {
 function getLiveSystemDisplayName(cyclone) {
   if (!cyclone) return "未命名熱帶系統";
 
-  const name =
-    cyclone.CwaTyphoonName ||
-    cyclone.TyphoonName ||
-    "未命名";
+  const name = typhoonNameZh({
+    name: cyclone.TyphoonName || cyclone.CwaTyphoonName,
+    nameZh: cyclone.CwaTyphoonName,
+    CwaTyNo: cyclone.CwaTyNo,
+    CwaTdNo: cyclone.CwaTdNo,
+  });
+  if (name.startsWith("未命名熱帶系統")) return name;
+  if ((cyclone.CwaTyNo || cyclone.CwaTdNo) && name.startsWith("第")) return name;
 
   if (cyclone.CwaTyNo) {
     return `${name}颱風`;
@@ -514,7 +518,7 @@ function App() {
           <div style={{ marginBottom: "20px" }}>
             <h2 style={sectionTitleStyle}>歷史颱風查詢</h2>
             <p style={sectionSubStyle}>
-              依年份或英文名稱搜尋，點選颱風後地圖與統計會同步更新。
+              依年份或颱風名稱搜尋，點選後地圖與統計會同步更新。
             </p>
           </div>
 
@@ -524,7 +528,7 @@ function App() {
               <input
                 value={historySearch}
                 onChange={(event) => setHistorySearch(event.target.value)}
-                placeholder="例如：BILIS、HAIKUI"
+                placeholder="例如：碧利斯、海葵"
                 style={inputStyle}
               />
             </div>
@@ -810,7 +814,7 @@ function LiveTyphoonPanel({
           </h2>
 
           <p style={{ color: "#64748b", marginBottom: 0 }}>
-            國際名稱：{cyclone.TyphoonName || "—"}　編號：
+            中文名稱：{typhoonNameZh({ name: cyclone.TyphoonName, nameZh: cyclone.CwaTyphoonName, CwaTyNo: cyclone.CwaTyNo, CwaTdNo: cyclone.CwaTdNo })}　編號：
             {cyclone.CwaTyNo || cyclone.CwaTdNo || "—"}
           </p>
         </div>

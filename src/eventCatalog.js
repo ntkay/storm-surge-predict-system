@@ -69,10 +69,18 @@ const chineseStormNames = {
 };
 
 export function typhoonNameZh(event) {
-  if (event?.nameZh) return event.nameZh;
-  const names = String(event?.name || '').toUpperCase().split(':').map((name) => chineseStormNames[name.trim()]);
+  const chineseName = event?.nameZh || event?.CwaTyphoonName;
+  if (chineseName && /[\u3400-\u9fff]/.test(chineseName) && !/^(未命名|無名)/.test(chineseName)) return chineseName;
+  const rawName = event?.name || event?.TyphoonName || event?.CwaTyphoonName || '';
+  if (/[\u3400-\u9fff]/.test(rawName) && !/^(未命名|無名)/.test(rawName)) return rawName;
+  const names = String(rawName).toUpperCase().split(':').map((name) => chineseStormNames[name.trim()]);
   if (names.length && names.every(Boolean)) return names.join('／');
-  return event?.name && !/^(UNKNOWN|UNNAMED|NOT_NAMED|\d*)$/i.test(event.name) ? event.name : '未命名颱風';
+  if (event?.CwaTyNo) return `第${event.CwaTyNo}號颱風`;
+  if (event?.CwaTdNo) return `第${event.CwaTdNo}號熱帶性低氣壓`;
+  const sourceId = String(event?.sid || '');
+  const shortId = sourceId.replace(/\D/g, '').slice(-7);
+  const identifier = shortId ? `，編號 ${shortId}` : '';
+  return event?.year ? `未命名熱帶系統（${event.year}${identifier}）` : `未命名熱帶系統${shortId ? `（編號 ${shortId}）` : ''}`;
 }
 
 export function modelTestTyphoons(data) {
@@ -117,6 +125,6 @@ export function cwaEvents(payload) {
     const rawFix=t.AnalysisData?.Fix;
     const track=(Array.isArray(rawFix)?rawFix:rawFix?[rawFix]:[]).map((p)=>({time:p.DateTime,lat:Number(p.CoordinateLatitude),lon:Number(p.CoordinateLongitude),wind:p.MaxWindSpeed==null?null:Number(p.MaxWindSpeed),pressure:p.Pressure==null?null:Number(p.Pressure)})).filter((p)=>Number.isFinite(trackTime(p.time,'CWA-live')) && Number.isFinite(p.lat) && Number.isFinite(p.lon));
     const year=Number(t.Year) || new Date(trackTime(track.at(-1)?.time,'CWA-live')).getUTCFullYear();
-    return {sid:`CWA-${year}-${t.CwaTyNo || t.CwaTdNo || t.TyphoonName}`,year,name:t.TyphoonName || t.CwaTyphoonName || 'UNKNOWN',nameZh:t.CwaTyphoonName,source:'CWA-live',windUnit:'m/s',track};
+    return {sid:`CWA-${year}-${t.CwaTyNo || t.CwaTdNo || t.TyphoonName}`,year,name:t.TyphoonName || t.CwaTyphoonName || 'UNKNOWN',nameZh:t.CwaTyphoonName,CwaTyNo:t.CwaTyNo,CwaTdNo:t.CwaTdNo,source:'CWA-live',windUnit:'m/s',track};
   }).filter((t)=>t.track.length && Number.isFinite(t.year));
 }

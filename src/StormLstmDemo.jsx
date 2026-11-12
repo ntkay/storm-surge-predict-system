@@ -6,15 +6,15 @@ const figures = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax
 const metricGrid = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: 10, margin: '12px 0' };
 const storms = {
   longdong: [
-    { key: 'haitang', match: /haitang|海棠/i, name: '海棠（Haitang, 2005）', testId: '2005Haitang s' },
-    { key: 'jangmi', match: /jangmi|薔蜜|薔薇/i, name: '薔蜜（Jangmi, 2008）', testId: '2008Jangmi s' },
-    { key: 'sinlaku', match: /sinlaku|辛樂克/i, name: '辛樂克（Sinlaku, 2008）', testId: '2008Sinlaku s' },
+    { key: 'haitang', match: /haitang|海棠/i, name: '海棠（2005）', testId: '2005Haitang s' },
+    { key: 'jangmi', match: /jangmi|薔蜜|薔薇/i, name: '薔蜜（2008）', testId: '2008Jangmi s' },
+    { key: 'sinlaku', match: /sinlaku|辛樂克/i, name: '辛樂克（2008）', testId: '2008Sinlaku s' },
   ],
   suao: [
-    { key: 'talim', match: /talim|泰利|潭美/i, name: '泰利（Talim, 2005）', testId: '2005Talim s' },
-    { key: 'kaemi', match: /kaemi|凱米/i, name: '凱米（Kaemi, 2006）', testId: '2006Kaemi s' },
-    { key: 'kong-rey', match: /kong.?rey|康芮/i, name: '康芮（Kong-rey, 2013）', testId: '2013KONG-REY s' },
-    { key: 'sinlaku', match: /sinlaku|辛樂克/i, name: '辛樂克（Sinlaku, 2008）', testId: '200813Sinlaku s' },
+    { key: 'talim', match: /talim|泰利|潭美/i, name: '泰利（2005）', testId: '2005Talim s' },
+    { key: 'kaemi', match: /kaemi|凱米/i, name: '凱米（2006）', testId: '2006Kaemi s' },
+    { key: 'kong-rey', match: /kong.?rey|康芮/i, name: '康芮（2013）', testId: '2013KONG-REY s' },
+    { key: 'sinlaku', match: /sinlaku|辛樂克/i, name: '辛樂克（2008）', testId: '200813Sinlaku s' },
   ],
 };
 

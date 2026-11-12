@@ -10,12 +10,12 @@ export default function LongdongBpnnDemo({ stationId, eventName, payload, shared
   const event = String(eventName || '').toLowerCase();
   const selectedStation = !stationId || canonicalStationId(stationId) === 'C4A02' ? 'longdong' : canonicalStationId(stationId) === 'C4U01' ? 'suao' : '';
   const storm = [
-    { key: 'sinlaku', match: /sinlaku|辛樂克/i, name: '2008 辛樂克（Sinlaku）' },
-    { key: 'haitang', match: /haitang|海棠/i, name: '2005 海棠（Haitang）' },
-    { key: 'jangmi', match: /jangmi|薔蜜|薔薇/i, name: '2008 薔蜜（Jangmi）' },
-    { key: 'talim', match: /talim|泰利|潭美/i, name: '2005 泰利（Talim）', suaoOnly: true },
-    { key: 'kaemi', match: /kaemi|凱米/i, name: '2006 凱米（Kaemi）', suaoOnly: true },
-    { key: 'kong-rey', match: /kong.?rey|康芮/i, name: '2013 康芮（Kong-rey）', suaoOnly: true },
+    { key: 'sinlaku', match: /sinlaku|辛樂克/i, name: '2008 辛樂克' },
+    { key: 'haitang', match: /haitang|海棠/i, name: '2005 海棠' },
+    { key: 'jangmi', match: /jangmi|薔蜜|薔薇/i, name: '2008 薔蜜' },
+    { key: 'talim', match: /talim|泰利|潭美/i, name: '2005 泰利', suaoOnly: true },
+    { key: 'kaemi', match: /kaemi|凱米/i, name: '2006 凱米', suaoOnly: true },
+    { key: 'kong-rey', match: /kong.?rey|康芮/i, name: '2013 康芮', suaoOnly: true },
   ].find(item => item.match.test(event) && (item.suaoOnly ? selectedStation === 'suao' : true));
   const isLongdong = selectedStation === 'longdong';
   const results = payload?.results || [];
