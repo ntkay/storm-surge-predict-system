@@ -15,6 +15,16 @@ const hasNumber = (value) => typeof value === 'number' && Number.isFinite(value)
 const number = (value) => hasNumber(value) ? `${value > 0 ? '+' : ''}${value.toFixed(3)} m` : '—';
 const date = (value) => value ? new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Taipei', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date(value)) : '—';
 const range = (value) => value ? `${date(value.start)} ～ ${date(value.end)}（${value.count} 筆）` : '無可用資料／來源未取得';
+const modelTestOrder = [
+  '2013:KONG-REY',
+  '2008:JANGMI',
+  '2008:SINLAKU',
+  '2006:KAEMI',
+  '2005:TALIM',
+  '2005:HAITANG',
+];
+const modelTestRank = new Map(modelTestOrder.map((key, index) => [key, index]));
+const stormKey = (event) => `${event.year}:${String(event.name || '').toUpperCase()}`;
 
 function eventWindow(typhoon, extend) {
   if (!typhoon) return null;
@@ -39,7 +49,9 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
     return [...combined.values()].sort((a,b) => latestTrackTime(b)-latestTrackTime(a));
   }, [typhoons]);
   const years = [...new Set(events.map((t) => String(t.year)))];
-  const choices = events.filter((t) => !year || String(t.year) === year);
+  const choices = events
+    .filter((t) => !year || String(t.year) === year)
+    .sort((a, b) => (modelTestRank.get(stormKey(a)) ?? Infinity) - (modelTestRank.get(stormKey(b)) ?? Infinity));
   const selected = events.find((t) => t.sid === sid);
   const window = eventWindow(selected, extend ? 1 : 0);
   const start = window?.start, end = window?.end;
@@ -83,7 +95,7 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
     {historyLoading && <p role="status">歷史颱風清單讀取中…</p>}
     {historyError && <p role="alert">{historyError}</p>}
     {!historyLoading && !historyError && !events.length && <p>歷史颱風清單沒有資料，請確認 public/data/typhoons.json。</p>}
-    <p>清單列出含今年在內近 10 年的颱風，按路徑時間由新到舊排列；最新路徑時間：{events.length ? date(new Date(latestTrackTime(events[0])).toISOString()) : "—"}。僅顯示來源已收錄路徑，不代表完整涵蓋今天。</p>
+    <p>模型測試颱風列於清單最前，其餘為含今年在內近 10 年的颱風，依路徑時間由新到舊排列；最新路徑時間：{events.length ? date(new Date(latestTrackTime(events[0])).toISOString()) : "—"}。僅顯示來源已收錄路徑，不代表完整涵蓋今天。</p>
     <div style={grid}>
       <label>年份<select style={control} value={year} onChange={(e) => {setYear(e.target.value);setSid('');setStationId('');clear();}}>
         <option value="">近 10 年＋模型測試颱風</option>{years.map((y) => <option key={y}>{y}</option>)}
