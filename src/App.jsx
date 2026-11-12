@@ -39,9 +39,14 @@ const MAP_LABELS = [
 const FIXED_MAP_CENTER = [20.5, 134.2];
 const FIXED_MAP_ZOOM = 5;
 
-// Esri World Imagery：使用固定圖磚服務，避免日期影像尚未發布時整張底圖空白。
-const SATELLITE_TILE_URL =
-  "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}";
+// NASA GIBS VIIRS 真彩色衛星影像；若最新日期尚未發布，回退到已確認可用的影像日。
+const GIBS_FALLBACK_DATE = "2025-11-12";
+
+function getGibsDate() {
+  return new Date(Date.now() - 24 * 60 * 60 * 1000)
+    .toISOString()
+    .slice(0, 10);
+}
 
 function normalizePacificLongitude(value) {
   const lon = Number(value);
@@ -881,6 +886,7 @@ function TyphoonMap({
   );
   const [isPlaying, setIsPlaying] = useState(validPath.length > 0);
   const [speed, setSpeed] = useState(1);
+  const [satelliteDate, setSatelliteDate] = useState(getGibsDate);
 
   useEffect(() => {
     if (validPath.length > 0) {
@@ -957,7 +963,7 @@ function TyphoonMap({
       <h2 style={sectionTitleStyle}>🌀 {title}</h2>
 
       <div style={satelliteStatusStyle}>
-        <span>🛰 Esri World Imagery 衛星底圖</span>
+        <span>🛰 NASA GIBS VIIRS 真彩色衛星圖</span>
         <span>固定視角：台灣／沖繩／菲律賓／關島／颱風活動區</span>
       </div>
 
@@ -1102,13 +1108,20 @@ function TyphoonMap({
         }}
       >
         <TileLayer
-          url={SATELLITE_TILE_URL}
+          key={satelliteDate}
+          url={`https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_CorrectedReflectance_TrueColor/default/${satelliteDate}/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg`}
           tileSize={256}
           minZoom={FIXED_MAP_ZOOM}
           maxZoom={FIXED_MAP_ZOOM}
           noWrap={false}
           keepBuffer={4}
-          attribution="Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community"
+          eventHandlers={{
+            tileerror: () =>
+              setSatelliteDate((date) =>
+                date === GIBS_FALLBACK_DATE ? date : GIBS_FALLBACK_DATE
+              ),
+          }}
+          attribution="NASA GIBS / VIIRS"
         />
 
         {/* 完整路徑會固定顯示，動畫路徑再疊在上面。 */}
