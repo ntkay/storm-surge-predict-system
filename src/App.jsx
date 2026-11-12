@@ -3,7 +3,7 @@ import EventSurgePanel from "./EventSurgePanel.jsx";
 import { useEffect, useMemo, useState } from "react";
 import {
   MapContainer,
-  WMSTileLayer,
+  ImageOverlay,
   Marker,
   Polyline,
   Popup,
@@ -38,6 +38,11 @@ const MAP_LABELS = [
 // 範圍主要保留：台灣、沖繩、菲律賓、關島與目前颱風路徑。
 const FIXED_MAP_CENTER = [20.5, 134.2];
 const FIXED_MAP_ZOOM = 5;
+const BLUE_MARBLE_BOUNDS = [
+  [8.6146, 107.1297],
+  [31.5326, 161.2703],
+];
+const BLUE_MARBLE_IMAGE_URL = `${BASE_URL}data/maps/blue-marble-pacific.jpg`;
 
 function normalizePacificLongitude(value) {
   const lon = Number(value);
@@ -1097,15 +1102,11 @@ function TyphoonMap({
           background: "#0b3a67",
         }}
       >
-        <WMSTileLayer
-          url="https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wms.cgi"
-          layers="BlueMarble_ShadedRelief_Bathymetry"
-          styles="default"
-          format="image/jpeg"
-          transparent={false}
-          version="1.3.0"
+        <ImageOverlay
+          url={BLUE_MARBLE_IMAGE_URL}
+          bounds={BLUE_MARBLE_BOUNDS}
           opacity={1}
-          attribution="NASA GIBS / Blue Marble"
+          interactive={false}
         />
 
         {/* 完整路徑會固定顯示，動畫路徑再疊在上面。 */}
