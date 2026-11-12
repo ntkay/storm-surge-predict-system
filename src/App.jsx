@@ -39,9 +39,6 @@ const MAP_LABELS = [
 const FIXED_MAP_CENTER = [20.5, 134.2];
 const FIXED_MAP_ZOOM = 5;
 
-// 固定使用已確認在此地圖範圍內完整有影像的 NASA GIBS VIIRS 日期。
-const GIBS_IMAGE_DATE = "2025-10-13";
-
 function normalizePacificLongitude(value) {
   const lon = Number(value);
   if (!Number.isFinite(lon)) return lon;
@@ -956,8 +953,8 @@ function TyphoonMap({
       <h2 style={sectionTitleStyle}>🌀 {title}</h2>
 
       <div style={satelliteStatusStyle}>
-        <span>🛰 NASA GIBS VIIRS 真彩色衛星圖（{GIBS_IMAGE_DATE}）</span>
-        <span>固定視角：台灣／沖繩／菲律賓／關島／颱風活動區</span>
+        <span>OpenStreetMap 地圖底圖</span>
+        <span>© OpenStreetMap contributors · 固定視角：台灣／沖繩／菲律賓／關島／颱風活動區</span>
       </div>
 
       {validPath.length > 0 ? (
@@ -1101,13 +1098,10 @@ function TyphoonMap({
         }}
       >
         <TileLayer
-          url={`https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_CorrectedReflectance_TrueColor/default/${GIBS_IMAGE_DATE}/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg`}
-          tileSize={256}
-          minZoom={FIXED_MAP_ZOOM}
-          maxZoom={FIXED_MAP_ZOOM}
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           noWrap={false}
           keepBuffer={4}
-          attribution="NASA GIBS / VIIRS"
+          attribution="© OpenStreetMap contributors"
         />
 
         {/* 完整路徑會固定顯示，動畫路徑再疊在上面。 */}
