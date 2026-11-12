@@ -1,4 +1,4 @@
-import { recentTyphoons, mergeTyphoons, cwaEvents, modelTestTyphoons } from "./eventCatalog.js";
+import { recentTyphoons, mergeTyphoons, cwaEvents, modelTestTyphoons, typhoonNameZh } from "./eventCatalog.js";
 import EventSurgePanel from "./EventSurgePanel.jsx";
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -341,6 +341,7 @@ function App() {
         const matchName =
           !keyword ||
           item.name?.toUpperCase().includes(keyword) ||
+          typhoonNameZh(item).includes(historySearch.trim()) ||
           item.sid?.toUpperCase().includes(keyword);
 
         const matchYear =
@@ -574,7 +575,7 @@ function App() {
                         }}
                       >
                         <strong style={{ color: "#123c66" }}>
-                          {typhoon.name || "未命名"}
+                          {typhoonNameZh(typhoon)}
                         </strong>
                         <span style={{ color: "#64748b", fontSize: "13px" }}>
                           {typhoon.year} · {typhoon.sid}
@@ -600,7 +601,7 @@ function App() {
                           已選擇歷史颱風
                         </div>
                         <h3 style={{ margin: "6px 0 0", fontSize: "30px" }}>
-                          {selectedTyphoon.name || "未命名"}（
+                          {typhoonNameZh(selectedTyphoon)}（
                           {selectedTyphoon.year}）
                         </h3>
                       </div>
@@ -645,7 +646,7 @@ function App() {
           key={selectedTyphoon?.sid || "history-empty"}
           title={
             selectedTyphoon
-              ? `${selectedTyphoon.name}（${selectedTyphoon.year}）歷史路徑`
+              ? `${typhoonNameZh(selectedTyphoon)}（${selectedTyphoon.year}）歷史路徑`
               : "歷史颱風路徑"
           }
           path={selectedPath}

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 import ModelSurgePanel from './ModelSurgePanel.jsx';
 import { surgeStations } from '../shared/tideStations.js';
-import { recentTyphoons, modelTestTyphoons, trackTime, latestTrackTime } from './eventCatalog.js';
+import { recentTyphoons, modelTestTyphoons, trackTime, latestTrackTime, typhoonNameZh } from './eventCatalog.js';
 const series = [
   { key: 'observedTide', label: '實測潮位', color: '#0369a1' },
 ];
@@ -101,7 +101,7 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
         <option value="">近 10 年＋模型測試颱風</option>{years.map((y) => <option key={y}>{y}</option>)}
       </select></label>
       <label>1. 選擇颱風<select style={control} value={sid} disabled={historyLoading || !events.length} onChange={(e) => {setSid(e.target.value);setStationId('');clear();}}>
-        <option value="">請選擇颱風</option>{choices.map((t) => <option key={t.sid} value={t.sid}>{t.year} · {t.nameZh || t.name || '未命名'} · {date(new Date(latestTrackTime(t)).toISOString())}</option>)}
+        <option value="">請選擇颱風</option>{choices.map((t) => <option key={t.sid} value={t.sid}>{t.year} · {typhoonNameZh(t)} · {date(new Date(latestTrackTime(t)).toISOString())}</option>)}
       </select></label>
       <label>2. 選擇潮位站<select style={control} value={stationId} disabled={!window} onChange={(e) => {setStationId(e.target.value);clear();}}>
         <option value="">請選擇潮位站</option>{catalog.map((s) => <option key={s.stationId} value={s.stationId}>{s.stationName}</option>)}
@@ -134,7 +134,7 @@ export default function EventSurgePanel({ typhoons, historyLoading, historyError
       </details>
     </>}
     </section>
-    {stationId && selected && <ModelSurgePanel stationId={stationId} eventName={selected.nameZh || selected.name} />}
+    {stationId && selected && <ModelSurgePanel stationId={stationId} eventName={typhoonNameZh(selected)} />}
   </section>;
 }
 
