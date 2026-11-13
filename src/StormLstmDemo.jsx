@@ -27,10 +27,8 @@ export default function StormLstmDemo({ stationId, eventName, training, sharedIs
   const title = station === 'longdong' ? '龍洞' : '蘇澳';
   const units = station === 'longdong' ? [16, 16, 32] : [32, 32, 64];
   const warningStart = Date.parse(landWarningTimes[storm.key]);
-  const warningLabel = new Intl.DateTimeFormat('zh-TW', { timeZone: 'Asia/Taipei', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(warningStart);
   return <section aria-labelledby="lstm-demo-title" style={panel}>
     <h4 id="lstm-demo-title" style={{ marginTop: 0 }}>{title} · {storm.name} · CNN-LSTM 測試曲線</h4>
-    <p>藍線為 CWA 實測潮位，紅色虛線為 CNN-LSTM 預測潮位，兩條曲線皆以 cm 顯示。本颱風曲線及誤差統計僅納入陸上颱風警報發布後、以該時刻起報的預測（{warningLabel}，臺灣時間）；橫軸每 6 小時標示，預測資料仍為逐時。</p>
     {!training && <p>載入 CNN-LSTM 曲線中…</p>}
     <div style={figures}>
       {[1, 3, 6].map((lead, index) => {
