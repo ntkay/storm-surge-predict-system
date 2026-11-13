@@ -80,8 +80,8 @@ export default function ModelSurgePanel({ stationId, eventName }) {
       {data?.error && <p role="alert">{data.error}</p>}
       {data?.sharedIssueTimes && ![1, 3, 6].some(lead => data.sharedIssueTimes[lead].length) && <p role="status">這組事件與測站沒有兩種模型共同的有效預測時點。</p>}
       {data?.bpnn && <>
-        <LongdongBpnnDemo stationId={stationId} eventName={eventName} payload={data.bpnn} sharedIssueTimes={data.sharedIssueTimes} />
         {data.lstm && <StormLstmDemo stationId={stationId} eventName={eventName} training={data.lstm} sharedIssueTimes={data.sharedIssueTimes} />}
+        <LongdongBpnnDemo stationId={stationId} eventName={eventName} payload={data.bpnn} sharedIssueTimes={data.sharedIssueTimes} />
       </>}
     </> : <p role="status">目前沒有此颱風與測站組合的 BPNN 或 CNN-LSTM 潮位預測曲線。</p>}
   </section>;
